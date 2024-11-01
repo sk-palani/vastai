@@ -11,6 +11,7 @@ DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/
 APT_PACKAGES=(
     #"package-1"
     #"package-2"
+    "libmagickwand-dev"
 )
 
 PIP_PACKAGES=(
@@ -19,27 +20,59 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-    "https://github.com/Acly/comfyui-tooling-nodes.git",
-	"https://github.com/BlenderNeko/ComfyUI_Noise.git",
-	"https://github.com/Clybius/ComfyUI-Latent-Modifiers.git",
-	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler.git",
-	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git",
-	"https://github.com/WASasquatch/was-node-suite-comfyui.git",
-	"https://github.com/Xclbr7/ComfyUI-Merlin.git",
-	"https://github.com/chrisgoringe/cg-use-everywhere.git",
-	"https://github.com/city96/ComfyUI-GGUF.git",
-	"https://github.com/city96/ComfyUI-GGUF.git",
-	"https://github.com/digitaljohn/comfyui-propost.git",
-	"https://github.com/giriss/comfy-image-saver.git",
-	"https://github.com/kijai/ComfyUI-Florence2.git",
-	"https://github.com/kijai/ComfyUI-KJNodes.git",
-	"https://github.com/kijai/ComfyUI-segment-anything-2.git",
-	"https://github.com/ltdrdata/ComfyUI-Impact-Pack.git",
-	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git",
-	"https://github.com/spacepxl/ComfyUI-Florence-2.git",
-	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git",
-	"https://github.com/un-seen/comfyui-tensorops.git",
-	"https://github.com/yolain/ComfyUI-Easy-Use.git",
+	"https://github.com/BlenderNeko/ComfyUI_Noise.git"
+	"https://github.com/chrisgoringe/cg-use-everywhere.git"
+	"https://github.com/city96/ComfyUI-GGUF.git"
+	"https://github.com/Clybius/ComfyUI-Latent-Modifiers.git"
+	"https://github.com/digitaljohn/comfyui-propost.git"
+	"https://github.com/giriss/comfy-image-saver.git"
+	"https://github.com/kijai/ComfyUI-Florence2.git"
+	"https://github.com/kijai/ComfyUI-KJNodes.git"
+	"https://github.com/kijai/ComfyUI-segment-anything-2.git"
+	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler.git"
+	"https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
+	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
+	"https://github.com/spacepxl/ComfyUI-Florence-2.git"
+	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
+	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git"
+	"https://github.com/un-seen/comfyui-tensorops.git"
+	"https://github.com/WASasquatch/was-node-suite-comfyui.git"
+	"https://github.com/Xclbr7/ComfyUI-Merlin.git"
+	"https://github.com/yolain/ComfyUI-Easy-Use.git"
+    "https://github.com/Acly/comfyui-tooling-nodes.git"
+    "https://github.com/alexopus/ComfyUI-Image-Saver"
+    "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
+    "https://github.com/BobsBlazed/Bobs_Latent_Optimizer"
+    "https://github.com/chflame163/ComfyUI_LayerStyle"
+    "https://github.com/chibiace/ComfyUI-Chibi-Nodes"
+    "https://github.com/chrisgoringe/cg-image-picker"
+    "https://github.com/crystian/ComfyUI-Crystools"
+    "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/dagthomas/comfyui_dagthomas"
+    "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
+    "https://github.com/evanspearman/ComfyMath"
+    "https://github.com/Fannovel16/ComfyUI-MagickWand"
+    "https://github.com/jamesWalker55/comfyui-various"
+    "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
+    "https://github.com/melMass/comfy_mtb"
+    "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger"
+    "https://github.com/mirabarukaso/ComfyUI_Mira"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/SeargeDP/ComfyUI_Searge_LLM"
+    "https://github.com/SeargeDP/SeargeSDXL"
+    "https://github.com/sipherxyz/comfyui-art-venture"
+    "https://github.com/Smirnov75/ComfyUI-mxToolkit"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+    "https://github.com/Tenney95/ComfyUI-NodeAligner"
+    "https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
+    "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
 )
 
 CHECKPOINT_MODELS=(
