@@ -17,6 +17,7 @@ APT_PACKAGES=(
 PIP_PACKAGES=(
     #"package-1"
     #"package-2"
+    resynthesizer
 )
 
 NODES=(
@@ -73,6 +74,7 @@ NODES=(
     "https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/brayevalerien/ComfyUI-resynthesizer"
 )
 
 CHECKPOINT_MODELS=(
@@ -95,7 +97,7 @@ LORA_MODELS=(
     "https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0/resolve/main/Canopus-LoRA-Flux-UltraRealism.safetensors"
     "https://huggingface.co/XLabs-AI/flux-lora-collection/resolve/main/realism_lora_comfy_converted.safetensors"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors"
-
+    "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors"
 )
 
 ESRGAN_MODELS=(
