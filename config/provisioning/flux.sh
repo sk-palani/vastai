@@ -17,7 +17,7 @@ APT_PACKAGES=(
 PIP_PACKAGES=(
     #"package-1"
     #"package-2"
-    resynthesizer
+    "resynthesizer"
 )
 
 NODES=(
@@ -98,6 +98,7 @@ LORA_MODELS=(
     "https://huggingface.co/XLabs-AI/flux-lora-collection/resolve/main/realism_lora_comfy_converted.safetensors"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors"
     "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors"
+    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -108,6 +109,21 @@ ESRGAN_MODELS=(
 
 CONTROLNET_MODELS=(
 )
+
+
+ULTRALYTICS_SEGS_MODELS=(
+  "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
+  "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8n_v2.pt"
+  "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
+  "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov9c.pt"
+)
+
+ULTRALYTICS_BBOX_MODELS=(
+  "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
+)
+
+
+
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
@@ -154,6 +170,12 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm" \
+        "${ULTRALYTICS_SEGS_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox" \
+        "${ULTRALYTICS_BBOX_MODELS[@]}"
     provisioning_print_end
 }
 
@@ -283,3 +305,5 @@ function provisioning_download() {
 }
 
 provisioning_start
+
+
