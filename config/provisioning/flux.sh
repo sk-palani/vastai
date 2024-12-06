@@ -170,12 +170,8 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm" \
-        "${ULTRALYTICS_SEGS_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox" \
-        "${ULTRALYTICS_BBOX_MODELS[@]}"
+
+
     provisioning_print_end
 }
 
