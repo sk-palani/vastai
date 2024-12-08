@@ -75,6 +75,11 @@ NODES=(
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/yolain/ComfyUI-Easy-Use"
     "https://github.com/brayevalerien/ComfyUI-resynthesizer"
+    "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    "https://github.com/jags111/efficiency-nodes-comfyui"
+    "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
+    "https://github.com/digitaljohn/comfyui-propost"
+    "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
 )
 
 CHECKPOINT_MODELS=(
