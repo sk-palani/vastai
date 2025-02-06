@@ -7,6 +7,9 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
 DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
 
+mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm"
+mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
+
 APT_PACKAGES=(
     #"package-1"
     #"package-2"
