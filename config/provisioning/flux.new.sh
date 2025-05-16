@@ -123,6 +123,16 @@ LORA_MODELS=(
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors"
     "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors"
+    "https://civitai.com/models/680953?modelVersionId=762275"
+    "https://civitai.com/models/736344?modelVersionId=824319"
+    "https://civitai.com/models/631986?modelVersionId=706529"
+    "https://civitai.com/models/832683/flux-pro-11-style-lora-extreme-detailer-for-flux-illustrious"
+    "https://civitai.com/models/562866/flux-image-upgrader-detail-maximizer-contrast-fix-for-low-cfg-illustrious-sdxl-sd-15"
+    "https://civitai.com/models/1157318/photorealistic-skin-no-plastic-flux"
+    "https://civitai.com/models/836721/see-through-transparent-clothing-lora-flux"
+    "https://civitai.com/models/890469/ketika-sharma-indian-actress-flux-lora"
+    "https://civitai.com/api/download/models/1099892?type=Model&format=SafeTensor"
+
 )
 
 ESRGAN_MODELS=(
