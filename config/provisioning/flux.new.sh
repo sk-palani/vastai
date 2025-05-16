@@ -146,6 +146,10 @@ LORA_MODELS=(
 
 ESRGAN_MODELS=(
     "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+)
+
+
+UPSCALE_MODELS=(
     "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
     "https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Superscale-SP_178000_G.pth"
@@ -209,11 +213,11 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/style_models" \
         "${STYLE_MODELS[@]}"
     provisioning_get_files \
-        "${COMFYUI_DIR}/models/luts" \
-        "${LUTS[@]}"
-    provisioning_get_files \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/upscale_models" \
+        "${UPSCALE_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/ultralytics/segm" \
         "${ULTRALYTICS_SEGS_MODELS[@]}"
