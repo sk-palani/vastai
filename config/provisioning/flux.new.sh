@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+export PATH=$PATH:/workspace/home/user/.local/bin
+
 source /venv/main/bin/activate
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
