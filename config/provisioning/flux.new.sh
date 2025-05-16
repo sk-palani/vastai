@@ -176,8 +176,8 @@ ULTRALYTICS_BBOX_MODELS=(
 function provisioning_start() {
     provisioning_print_header
     provisioning_get_apt_packages
-#    provisioning_get_nodes
     provisioning_get_pip_packages
+    provisioning_get_nodes
     workflows_dir="${COMFYUI_DIR}/user/default/workflows"
     mkdir -p "${workflows_dir}"
     provisioning_get_files \
@@ -196,32 +196,32 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_files \
+        "${COMFYUI_DIR}/models/vae" \
+        "${VAE_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/clip" \
+        "${CLIP_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/clip_vision" \
+        "${CLIPVISION_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/style_models" \
+        "${STYLE_MODELS[@]}"
+    provisioning_get_files \
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/vae" \
-#        "${VAE_MODELS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/clip" \
-#        "${CLIP_MODELS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/clip_vision" \
-#        "${CLIPVISION_MODELS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/style_models" \
-#        "${STYLE_MODELS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/esrgan" \
-#        "${ESRGAN_MODELS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/ultralytics/segm" \
-#        "${ULTRALYTICS_SEGS_MODELS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/ultralytics/bbox" \
-#        "${ULTRALYTICS_BBOX_MODELS[@]}"
-#    provisioning_get_files \
-#        "${COMFYUI_DIR}/models/unet" \
-#        "${UNET_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/esrgan" \
+        "${ESRGAN_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/ultralytics/segm" \
+        "${ULTRALYTICS_SEGS_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/ultralytics/bbox" \
+        "${ULTRALYTICS_BBOX_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/unet" \
+        "${UNET_MODELS[@]}"
     provisioning_print_end
     echo 'grep trycloud /var/log/supervisor/quicktunnel-*' > "${WORKSPACE}/l"
     chmod +x  "${WORKSPACE}/l"
@@ -336,7 +336,8 @@ function provisioning_download() {
         auth_token="$CIVITAI_TOKEN"
     fi
     if [[ -n $auth_token ]];then
-        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        echo wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget  -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     else
         wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     fi
