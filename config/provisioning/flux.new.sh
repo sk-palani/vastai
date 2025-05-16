@@ -140,6 +140,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -177,11 +178,56 @@ ULTRALYTICS_BBOX_MODELS=(
 
 function provisioning_start() {
     provisioning_print_header
-
+    provisioning_get_apt_packages
+    provisioning_get_pip_packages
+    provisioning_get_nodes
+    workflows_dir="${COMFYUI_DIR}/user/default/workflows"
+    mkdir -p "${workflows_dir}"
+    provisioning_get_files \
+        "${workflows_dir}" \
+        "${WORKFLOWS[@]}"
+    # Get licensed models if HF_TOKEN set & valid
+    if provisioning_has_valid_hf_token; then
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
+    else
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
+        sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' "${workflows_dir}/flux_dev_example.json"
+    fi
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/loras" \
+        "${LORA_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/luts" \
+        "${LUTS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/vae" \
+        "${VAE_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/clip" \
+        "${CLIP_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/clip_vision" \
+        "${CLIPVISION_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/style_models" \
+        "${STYLE_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/esrgan" \
+        "${ESRGAN_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/upscale_models" \
         "${UPSCALE_MODELS[@]}"
-
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/ultralytics/segm" \
+        "${ULTRALYTICS_SEGS_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/ultralytics/bbox" \
+        "${ULTRALYTICS_BBOX_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/unet" \
+        "${UNET_MODELS[@]}"
     provisioning_print_end
     echo 'grep trycloud /var/log/supervisor/quicktunnel-*' > "${WORKSPACE}/l"
     chmod +x  "${WORKSPACE}/l"
