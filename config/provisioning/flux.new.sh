@@ -87,11 +87,11 @@ CLIPVISION_MODELS=(
     "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors"
 )
 
-STYLE_MODELS(
+STYLE_MODELS=(
   "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors"
 )
 
-LUTS(
+LUTS=(
   "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20%20-%20Gold%20200.cube"
   "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20%20-%20Kodacrome%2064.cube"
   "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Agfa%20Optima.cube"
