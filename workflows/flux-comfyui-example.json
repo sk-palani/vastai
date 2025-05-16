@@ -1,18 +1,20 @@
 {
+  "id": "197ff338-d921-49fd-bf25-76b9355b01ff",
+  "revision": 0,
   "last_node_id": 45,
   "last_link_id": 83,
   "nodes": [
     {
       "id": 16,
       "type": "KSamplerSelect",
-      "pos": {
-        "0": 525,
-        "1": 351
-      },
-      "size": {
-        "0": 220,
-        "1": 60
-      },
+      "pos": [
+        525,
+        351
+      ],
+      "size": [
+        220,
+        60
+      ],
       "flags": {},
       "order": 0,
       "mode": 0,
@@ -23,12 +25,14 @@
           "type": "SAMPLER",
           "links": [
             19
-          ],
-          "shape": 3
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "KSamplerSelect"
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "KSamplerSelect",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "euler"
@@ -37,14 +41,14 @@
     {
       "id": 13,
       "type": "SamplerCustomAdvanced",
-      "pos": {
-        "0": 819,
-        "1": 216
-      },
-      "size": {
-        "0": 360,
-        "1": 110
-      },
+      "pos": [
+        819,
+        216
+      ],
+      "size": [
+        360,
+        110
+      ],
       "flags": {},
       "order": 13,
       "mode": 0,
@@ -52,66 +56,63 @@
         {
           "name": "noise",
           "type": "NOISE",
-          "link": 37,
-          "slot_index": 0
+          "link": 37
         },
         {
           "name": "guider",
           "type": "GUIDER",
-          "link": 30,
-          "slot_index": 1
+          "link": 30
         },
         {
           "name": "sampler",
           "type": "SAMPLER",
-          "link": 19,
-          "slot_index": 2
+          "link": 19
         },
         {
           "name": "sigmas",
           "type": "SIGMAS",
-          "link": 20,
-          "slot_index": 3
+          "link": 20
         },
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 83,
-          "slot_index": 4
+          "link": 83
         }
       ],
       "outputs": [
         {
           "name": "output",
           "type": "LATENT",
+          "slot_index": 0,
           "links": [
             24
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         },
         {
           "name": "denoised_output",
           "type": "LATENT",
-          "links": null,
-          "shape": 3
+          "links": null
         }
       ],
       "properties": {
-        "Node name for S&R": "SamplerCustomAdvanced"
-      }
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
     },
     {
       "id": 22,
       "type": "BasicGuider",
-      "pos": {
-        "0": 525,
-        "1": 234
-      },
-      "size": {
-        "0": 220,
-        "1": 50
-      },
+      "pos": [
+        525,
+        234
+      ],
+      "size": [
+        220,
+        50
+      ],
       "flags": {},
       "order": 12,
       "mode": 0,
@@ -119,42 +120,43 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 78,
-          "slot_index": 0
+          "link": 78
         },
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 68,
-          "slot_index": 1
+          "link": 68
         }
       ],
       "outputs": [
         {
           "name": "GUIDER",
           "type": "GUIDER",
+          "slot_index": 0,
           "links": [
             30
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "BasicGuider"
-      }
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "BasicGuider",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
     },
     {
       "id": 8,
       "type": "VAEDecode",
-      "pos": {
-        "0": 1206.7891845703125,
-        "1": 215
-      },
-      "size": {
-        "0": 210,
-        "1": 50
-      },
+      "pos": [
+        1206.7891845703125,
+        215
+      ],
+      "size": [
+        210,
+        50
+      ],
       "flags": {},
       "order": 14,
       "mode": 0,
@@ -174,28 +176,32 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             9,
             71
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "VAEDecode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
     },
     {
       "id": 25,
       "type": "RandomNoise",
-      "pos": {
-        "0": 388,
-        "1": 74
-      },
-      "size": {
-        "0": 370,
-        "1": 100
-      },
+      "pos": [
+        388,
+        74
+      ],
+      "size": [
+        370,
+        100
+      ],
       "flags": {},
       "order": 1,
       "mode": 0,
@@ -206,33 +212,35 @@
           "type": "NOISE",
           "links": [
             37
-          ],
-          "shape": 3
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "RandomNoise"
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "RandomNoise",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
-        903686492044138,
+        797767245069303,
         "randomize"
       ]
     },
     {
       "id": 38,
       "type": "CLIPAttentionMultiply",
-      "pos": {
-        "0": -2070,
-        "1": 250
-      },
-      "size": {
-        "0": 270,
-        "1": 130
-      },
+      "pos": [
+        -2070,
+        250
+      ],
+      "size": [
+        270,
+        130
+      ],
       "flags": {
         "collapsed": false
       },
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -245,15 +253,17 @@
         {
           "name": "CLIP",
           "type": "CLIP",
+          "slot_index": 0,
           "links": [
             72
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPAttentionMultiply"
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "CLIPAttentionMultiply",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         1.2,
@@ -265,84 +275,278 @@
       "bgcolor": "#b8954d"
     },
     {
-      "id": 11,
-      "type": "DualCLIPLoader",
-      "pos": {
-        "0": -2430,
-        "1": 250
-      },
-      "size": {
-        "0": 320,
-        "1": 110
-      },
+      "id": 10,
+      "type": "VAELoader",
+      "pos": [
+        824,
+        534
+      ],
+      "size": [
+        360,
+        60
+      ],
       "flags": {},
       "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            73
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DualCLIPLoader"
-      },
-      "widgets_values": [
-        "t5xxl_fp16.safetensors",
-        "clip_l.safetensors",
-        "flux"
-      ]
-    },
-    {
-      "id": 10,
-      "type": "VAELoader",
-      "pos": {
-        "0": 824,
-        "1": 534
-      },
-      "size": {
-        "0": 360,
-        "1": 60
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
           "name": "VAE",
           "type": "VAE",
+          "slot_index": 0,
           "links": [
             12
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "VAELoader"
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "VAELoader",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "ae.safetensors"
       ]
     },
     {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -1058,
+        295
+      ],
+      "size": [
+        1286.60009765625,
+        222.85601806640625
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "CLIPTextEncode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "In a captivating outdoor photo of a gorgeous sexy South Indian adulthood v1dhya5 desiespresso woman , ,Blue ethnic print kurta with see-through sleeves and jeans, fashion photography, dynamic pose, facing viewer  , the subject is portrayed at 35 years of age with hazelnut brown eyes and long, dark hair. Extremely beautiful face with (black bindi:1.4) (busty:1.2), plunging neckline and (cleavage:1.2),, Perfect Eyes,(From Front:1.2),The woman stands at an average height of 5'6'' and weighs approximately 150 lbs, boasting an athletic figure characterized by measurements of a 35-inch bust, (28-inch waist:1.4), and 35-inch hips, highlighting her hourglass silhouette, wide hips, narrow waist, and thick thighs. The woman is beautifully dressed with visible jewelry adorning her neck and a tasteful ensemble that showcases her figure in an alluring yet sophisticated manner. Minimal makeup emphasizes her striking features: sharp black eyeliner accentuating her eyes and  matte warm brown lipstick on her sensual lips. The woman wears a radiant expression, exuding happiness and gratitude as she gazes out at the viewer with confidence and poise. In this portrait, there is an emphasis on the realistic representation of the subject's body type, including (large breast:1.4) size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal (sagging breasts:0.8), (subtle cleavage:1.3)., a high-resolution photograph of a young woman with a dark skin tone and long, dark brown hair cascading over her shoulders, she has a slender yet curvaceous physique with prominent cheekbones and full, pink lips, her facial features are delicate, with large, almond-shaped eyes, full lips, and a slight blush on her cheeks, she wears a simple, black, off-the-shoulder top with a high neckline and cleavage cutout, accentuating her modest bust, around her neck, she accessorizes with a gold chain necklace and matching earrings, very temperamental english girl,Street photography,Canon lens,Gauss blur,misty misty glass window,behind the glass window stands an elegant short hair Oriental girl,side,delicate makeup,light spot,blur,night scene,double exposure,bright lights,simple autumn fashion suit,turtleneck sweater,long thin coat,confidence,blurred face,indistinct,light and dark contrast,"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 37,
+      "type": "FluxGuidance",
+      "pos": [
+        256,
+        296
+      ],
+      "size": [
+        211.60000610351562,
+        60
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            68
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "FluxGuidance",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        3.5
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        1442,
+        215
+      ],
+      "size": [
+        210,
+        270
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "SaveImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "SaveImage",
+      "pos": [
+        1441,
+        -18
+      ],
+      "size": [
+        210,
+        131.14292907714844
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 71
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "SaveImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "BasicScheduler",
+      "pos": [
+        506,
+        527
+      ],
+      "size": [
+        260,
+        110
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "BasicScheduler",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "simple",
+        20,
+        1
+      ]
+    },
+    {
+      "id": 45,
+      "type": "EmptyLatentImage",
+      "pos": [
+        499,
+        697
+      ],
+      "size": [
+        286.93963623046875,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            83
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "EmptyLatentImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        960,
+        1368,
+        1
+      ]
+    },
+    {
       "id": 34,
       "type": "AV_LoraLoader",
-      "pos": {
-        "0": -1394,
-        "1": 231
-      },
-      "size": {
-        "0": 310,
-        "1": 174
-      },
+      "pos": [
+        -1394,
+        231
+      ],
+      "size": [
+        310,
+        174
+      ],
       "flags": {},
       "order": 9,
       "mode": 0,
@@ -362,22 +566,25 @@
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             78
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "CLIP",
           "type": "CLIP",
+          "slot_index": 1,
           "links": [
             79
-          ],
-          "slot_index": 1
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "AV_LoraLoader"
+        "cnr_id": "comfyui-art-venture",
+        "ver": "fc00f4a094be1ba41d6c7bfcc157fb075d289573",
+        "Node name for S&R": "AV_LoraLoader",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "FLUX-dev-lora-AntiBlur.safetensors",
@@ -388,152 +595,16 @@
       ]
     },
     {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": -1058,
-        "1": 295
-      },
-      "size": {
-        "0": 1286.60009765625,
-        "1": 222.85601806640625
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 79
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            69
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "In a captivating outdoor photo of a gorgeous sexy South Indian adulthood v1dhya5 desiespresso woman , ,Blue ethnic print kurta with see-through sleeves and jeans, fashion photography, dynamic pose, facing viewer  , the subject is portrayed at 35 years of age with hazelnut brown eyes and long, dark hair. Extremely beautiful face with (black bindi:1.4) (busty:1.2), plunging neckline and (cleavage:1.2),, Perfect Eyes,(From Front:1.2),The woman stands at an average height of 5'6'' and weighs approximately 150 lbs, boasting an athletic figure characterized by measurements of a 35-inch bust, (28-inch waist:1.4), and 35-inch hips, highlighting her hourglass silhouette, wide hips, narrow waist, and thick thighs. The woman is beautifully dressed with visible jewelry adorning her neck and a tasteful ensemble that showcases her figure in an alluring yet sophisticated manner. Minimal makeup emphasizes her striking features: sharp black eyeliner accentuating her eyes and  matte warm brown lipstick on her sensual lips. The woman wears a radiant expression, exuding happiness and gratitude as she gazes out at the viewer with confidence and poise. In this portrait, there is an emphasis on the realistic representation of the subject's body type, including (large breast:1.4) size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal (sagging breasts:0.8), (subtle cleavage:1.3)., a high-resolution photograph of a young woman with a dark skin tone and long, dark brown hair cascading over her shoulders, she has a slender yet curvaceous physique with prominent cheekbones and full, pink lips, her facial features are delicate, with large, almond-shaped eyes, full lips, and a slight blush on her cheeks, she wears a simple, black, off-the-shoulder top with a high neckline and cleavage cutout, accentuating her modest bust, around her neck, she accessorizes with a gold chain necklace and matching earrings, very temperamental english girl,Street photography,Canon lens,Gauss blur,misty misty glass window,behind the glass window stands an elegant short hair Oriental girl,side,delicate makeup,light spot,blur,night scene,double exposure,bright lights,simple autumn fashion suit,turtleneck sweater,long thin coat,confidence,blurred face,indistinct,light and dark contrast,"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 37,
-      "type": "FluxGuidance",
-      "pos": {
-        "0": 256,
-        "1": 296
-      },
-      "size": {
-        "0": 211.60000610351562,
-        "1": 60
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 69
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            68
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FluxGuidance"
-      },
-      "widgets_values": [
-        3.5
-      ]
-    },
-    {
-      "id": 9,
-      "type": "SaveImage",
-      "pos": {
-        "0": 1442,
-        "1": 215
-      },
-      "size": {
-        "0": 210,
-        "1": 270
-      },
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 9
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveImage"
-      },
-      "widgets_values": [
-        "ComfyUI"
-      ]
-    },
-    {
-      "id": 39,
-      "type": "SaveImage",
-      "pos": {
-        "0": 1441,
-        "1": -18
-      },
-      "size": {
-        "0": 210,
-        "1": 131.14292907714844
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 71
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveImage"
-      },
-      "widgets_values": [
-        "ComfyUI"
-      ]
-    },
-    {
       "id": 31,
       "type": "AV_LoraLoader",
-      "pos": {
-        "0": -1740,
-        "1": 230
-      },
-      "size": {
-        "0": 310,
-        "1": 174
-      },
+      "pos": [
+        -1740,
+        230
+      ],
+      "size": [
+        310,
+        174
+      ],
       "flags": {},
       "order": 8,
       "mode": 0,
@@ -553,22 +624,25 @@
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             81
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "CLIP",
           "type": "CLIP",
+          "slot_index": 1,
           "links": [
             82
-          ],
-          "slot_index": 1
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "AV_LoraLoader"
+        "cnr_id": "comfyui-art-venture",
+        "ver": "fc00f4a094be1ba41d6c7bfcc157fb075d289573",
+        "Node name for S&R": "AV_LoraLoader",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "Canopus-LoRA-Flux-UltraRealism.safetensors",
@@ -581,14 +655,14 @@
     {
       "id": 12,
       "type": "UNETLoader",
-      "pos": {
-        "0": -2114,
-        "1": 526
-      },
-      "size": {
-        "0": 320,
-        "1": 82
-      },
+      "pos": [
+        -2114,
+        526
+      ],
+      "size": [
+        320,
+        82
+      ],
       "flags": {},
       "order": 4,
       "mode": 0,
@@ -597,96 +671,60 @@
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             38,
             49
-          ],
-          "slot_index": 0,
-          "shape": 3
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "UNETLoader"
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "UNETLoader",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
-        "fluxUnchainedBySCG_fuT516xfp8E4m3fnV11.safetensors",
-        "fp8_e4m3fn"
+        "flux1-dev.safetensors",
+        "default"
       ]
     },
     {
-      "id": 17,
-      "type": "BasicScheduler",
-      "pos": {
-        "0": 506,
-        "1": 527
-      },
-      "size": {
-        "0": 260,
-        "1": 110
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 38,
-          "slot_index": 0
-        }
+      "id": 11,
+      "type": "DualCLIPLoader",
+      "pos": [
+        -2430,
+        250
       ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            20
-          ],
-          "shape": 3
-        }
+      "size": [
+        320,
+        130
       ],
-      "properties": {
-        "Node name for S&R": "BasicScheduler"
-      },
-      "widgets_values": [
-        "simple",
-        20,
-        1
-      ]
-    },
-    {
-      "id": 45,
-      "type": "EmptyLatentImage",
-      "pos": {
-        "0": 499,
-        "1": 697
-      },
-      "size": {
-        "0": 286.93963623046875,
-        "1": 106
-      },
       "flags": {},
       "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
           "links": [
-            83
-          ],
-          "shape": 3,
-          "slot_index": 0
+            73
+          ]
         }
       ],
       "properties": {
-        "Node name for S&R": "EmptyLatentImage"
+        "cnr_id": "comfy-core",
+        "ver": "0.3.32",
+        "Node name for S&R": "DualCLIPLoader",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
-        960,
-        1368,
-        1
+        "t5xxl_fp16.safetensors",
+        "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+        "flux",
+        "default"
       ]
     }
   ],
@@ -853,7 +891,10 @@
         3043.767328779819,
         764.3949029639967
       ]
-    }
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.18.9"
   },
   "version": 0.4
 }

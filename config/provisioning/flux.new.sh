@@ -8,7 +8,7 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
 # Packages are installed after nodes so we can fix them...
 
-DEFAULT_WORKFLOW="https://rawhubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/flux-comfyui-example.json"
 
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm"
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
@@ -105,21 +105,23 @@ STYLE_MODELS=(
 )
 
 LUTS=(
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20%20-%20Gold%20200.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20%20-%20Kodacrome%2064.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Agfa%20Optima.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Agfa%20Ultra%20100.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Cinematic.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Fuji%20Astia.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Hollywood.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Kodachrome.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Moody%20Aqua.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Moody%20Stock.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Polaroid%20Color.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Reversal.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Stylish.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Velvia%20100.cube"
-  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Vibe.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20%20-%20Gold%20200.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20%20-%20Kodacrome%2064.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Agfa%20Optima.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Agfa%20Ultra%20100.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Cinematic.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Fuji%20Astia.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Hollywood.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Kodachrome.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Moody%20Aqua.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Moody%20Stock.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Polaroid%20Color.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Reversal.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Stylish.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Velvia%20100.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Vibe.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Emulation.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/Presetpro%20-%20Fuji%20Film.cube"
 )
 
 UNET_MODELS=(
@@ -136,16 +138,11 @@ LORA_MODELS=(
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors"
     "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors"
-    "https://civitai.com/api/download/models/1099892?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/890469?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/836721?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/1157318?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/562866?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/832683?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/31986?modelVersionId=706529&type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/631986?modelVersionId=706529&type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/736344?modelVersionId=824319&type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/680953?modelVersionId=762275&type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -179,7 +176,7 @@ ULTRALYTICS_BBOX_MODELS=(
 function provisioning_start() {
     provisioning_print_header
     provisioning_get_apt_packages
-    provisioning_get_nodes
+#    provisioning_get_nodes
     provisioning_get_pip_packages
     workflows_dir="${COMFYUI_DIR}/user/default/workflows"
     mkdir -p "${workflows_dir}"
@@ -199,32 +196,32 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_files \
-        "${COMFYUI_DIR}/models/vae" \
-        "${VAE_MODELS[@]}"
-    provisioning_get_files \
-        "${COMFYUI_DIR}/models/clip" \
-        "${CLIP_MODELS[@]}"
-    provisioning_get_files \
-        "${COMFYUI_DIR}/models/clip_vision" \
-        "${CLIPVISION_MODELS[@]}"
-    provisioning_get_files \
-        "${COMFYUI_DIR}/models/style_models" \
-        "${STYLE_MODELS[@]}"
-    provisioning_get_files \
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
-    provisioning_get_files \
-        "${COMFYUI_DIR}/models/esrgan" \
-        "${ESRGAN_MODELS[@]}"
-    provisioning_get_files \
-        "${COMFYUI_DIR}/models/ultralytics/segm" \
-        "${ULTRALYTICS_SEGS_MODELS[@]}"
-    provisioning_get_files \
-        "${COMFYUI_DIR}/models/ultralytics/bbox" \
-        "${ULTRALYTICS_BBOX_MODELS[@]}"
-    provisioning_get_files \
-        "${COMFYUI_DIR}/models/unet" \
-        "${UNET_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/vae" \
+#        "${VAE_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/clip" \
+#        "${CLIP_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/clip_vision" \
+#        "${CLIPVISION_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/style_models" \
+#        "${STYLE_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/esrgan" \
+#        "${ESRGAN_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/ultralytics/segm" \
+#        "${ULTRALYTICS_SEGS_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/ultralytics/bbox" \
+#        "${ULTRALYTICS_BBOX_MODELS[@]}"
+#    provisioning_get_files \
+#        "${COMFYUI_DIR}/models/unet" \
+#        "${UNET_MODELS[@]}"
     provisioning_print_end
     echo 'grep trycloud /var/log/supervisor/quicktunnel-*' > "${WORKSPACE}/l"
     chmod +x  "${WORKSPACE}/l"
@@ -284,7 +281,7 @@ function provisioning_get_files() {
     arr=("$@")
     printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
     for url in "${arr[@]}"; do
-        printf "Downloading: %s\n" "${url}"
+        printf "wget %s\n" "${url}"
         provisioning_download "${url}" "${dir}"
         printf "\n"
     done
