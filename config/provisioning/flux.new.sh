@@ -91,6 +91,23 @@ STYLE_MODELS(
   "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors"
 )
 
+LUTS(
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20%20-%20Gold%20200.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20%20-%20Kodacrome%2064.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Agfa%20Optima.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Agfa%20Ultra%20100.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Cinematic.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Fuji%20Astia.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Hollywood.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Kodachrome.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Moody%20Aqua.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Moody%20Stock.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Polaroid%20Color.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Reversal.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Stylish.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Velvia%20100.cube"
+  "https://rawhubusercontent.com/ai-dock/comfyui/main/assets/Presetpro%20-%20Vibe.cube"
+)
 
 UNET_MODELS=(
     "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8"
@@ -168,6 +185,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/style_models" \
         "${STYLE_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/luts" \
+        "${LUTS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
