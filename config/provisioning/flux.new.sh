@@ -14,14 +14,10 @@ mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm"
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
 
 APT_PACKAGES=(
-    #"package-1"
-    #"package-2"
     "libmagickwand-dev"
 )
 
 PIP_PACKAGES=(
-    #"package-1"
-    #"package-2"
     "resynthesizer"
 )
 
@@ -143,6 +139,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -195,6 +192,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/luts" \
+        "${LUTS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/vae" \
         "${VAE_MODELS[@]}"
