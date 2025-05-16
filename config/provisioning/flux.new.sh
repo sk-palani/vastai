@@ -5,7 +5,7 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
 # Packages are installed after nodes so we can fix them...
 
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
+DEFAULT_WORKFLOW="https://rawhubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
 
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm"
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
@@ -23,71 +23,74 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-    "https://github.com/ltdrdata/ComfyUI-Manager"
+    "https://github.com/Acly/comfyui-tooling-nodes.git"
+    "https://github.com/BadCafeCode/masquerade-nodes-comfyui.git"
     "https://github.com/BlenderNeko/ComfyUI_Noise.git"
+    "https://github.com/BobsBlazed/Bobs_Latent_Optimizer.git"
+    "https://github.com/Clybius/ComfyUI-Latent-Modifiers.git"
+    "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git"
+    "https://github.com/Fannovel16/ComfyUI-MagickWand.git"
+    "https://github.com/Jonseed/ComfyUI-Detail-Daemon.git"
+    "https://github.com/KoreTeknology/ComfyUI-Universal-Styler.git"
+    "https://github.com/SeargeDP/ComfyUI_Searge_LLM.git"
+    "https://github.com/SeargeDP/SeargeSDXL.git"
+    "https://github.com/Smirnov75/ComfyUI-mxToolkit.git"
+    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git"
+    "https://github.com/Tenney95/ComfyUI-NodeAligner.git"
+    "https://github.com/TinyTerra/ComfyUI_tinyterraNodes.git"
+    "https://github.com/WASasquatch/was-node-suite-comfyui.git"
+    "https://github.com/Xclbr7/ComfyUI-Merlin.git"
+    "https://github.com/alexopus/ComfyUI-Image-Saver.git"
+    "https://github.com/brayevalerien/ComfyUI-resynthesizer.git"
+    "https://github.com/chflame163/ComfyUI_LayerStyle.git"
+    "https://github.com/chibiace/ComfyUI-Chibi-Nodes.git"
+    "https://github.com/chrisgoringe/cg-image-picker.git"
     "https://github.com/chrisgoringe/cg-use-everywhere.git"
     "https://github.com/city96/ComfyUI-GGUF.git"
-    "https://github.com/Clybius/ComfyUI-Latent-Modifiers.git"
+    "https://github.com/crystian/ComfyUI-Crystools.git"
+    "https://github.com/cubiq/ComfyUI_essentials.git"
+    "https://github.com/dagthomas/comfyui_dagthomas.git"
     "https://github.com/digitaljohn/comfyui-propost.git"
+    "https://github.com/evanspearman/ComfyMath.git"
     "https://github.com/giriss/comfy-image-saver.git"
+    "https://github.com/jamesWalker55/comfyui-various.git"
+    "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes.git"
     "https://github.com/kijai/ComfyUI-Florence2.git"
     "https://github.com/kijai/ComfyUI-KJNodes.git"
     "https://github.com/kijai/ComfyUI-segment-anything-2.git"
-    "https://github.com/KoreTeknology/ComfyUI-Universal-Styler.git"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
+    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
+    "https://github.com/ltdrdata/ComfyUI-Manager.git"
+    "https://github.com/melMass/comfy_mtb.git"
+    "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger.git"
+    "https://github.com/mirabarukaso/ComfyUI_Mira.git"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
+    "https://github.com/rgthree/rgthree-comfy.git"
+    "https://github.com/sipherxyz/comfyui-art-venture.git"
     "https://github.com/spacepxl/ComfyUI-Florence-2.git"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
-    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git"
     "https://github.com/un-seen/comfyui-tensorops.git"
-    "https://github.com/WASasquatch/was-node-suite-comfyui.git"
-    "https://github.com/Xclbr7/ComfyUI-Merlin.git"
     "https://github.com/yolain/ComfyUI-Easy-Use.git"
-    "https://github.com/Acly/comfyui-tooling-nodes.git"
-    "https://github.com/alexopus/ComfyUI-Image-Saver"
-    "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
-    "https://github.com/BobsBlazed/Bobs_Latent_Optimizer"
-    "https://github.com/chflame163/ComfyUI_LayerStyle"
-    "https://github.com/chibiace/ComfyUI-Chibi-Nodes"
-    "https://github.com/chrisgoringe/cg-image-picker"
-    "https://github.com/crystian/ComfyUI-Crystools"
-    "https://github.com/cubiq/ComfyUI_essentials"
-    "https://github.com/dagthomas/comfyui_dagthomas"
-    "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
-    "https://github.com/evanspearman/ComfyMath"
-    "https://github.com/Fannovel16/ComfyUI-MagickWand"
-    "https://github.com/jamesWalker55/comfyui-various"
-    "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes"
-    "https://github.com/kijai/ComfyUI-KJNodes"
-    "https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
-    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
-    "https://github.com/melMass/comfy_mtb"
-    "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger"
-    "https://github.com/mirabarukaso/ComfyUI_Mira"
-    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
-    "https://github.com/rgthree/rgthree-comfy"
-    "https://github.com/SeargeDP/ComfyUI_Searge_LLM"
-    "https://github.com/SeargeDP/SeargeSDXL"
-    "https://github.com/sipherxyz/comfyui-art-venture"
-    "https://github.com/Smirnov75/ComfyUI-mxToolkit"
-    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
-    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-    "https://github.com/Tenney95/ComfyUI-NodeAligner"
-    "https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
-    "https://github.com/WASasquatch/was-node-suite-comfyui"
-    "https://github.com/yolain/ComfyUI-Easy-Use"
-    "https://github.com/brayevalerien/ComfyUI-resynthesizer"
 )
 
 WORKFLOWS=(
-    "https://gist.githubusercontent.com/robballantyne/f8cb692bdcd89c96c0bd1ec0c969d905/raw/2d969f732d7873f0e1ee23b2625b50f201c722a5/flux_dev_example.json"
+    "https://gisthubusercontent.com/robballantyne/f8cb692bdcd89c96c0bd1ec0c969d905/raw/2d969f732d7873f0e1ee23b2625b50f201c722a5/flux_dev_example.json"
 )
 
 CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
 )
+
+CLIPVISION_MODELS=(
+    "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors"
+)
+
+STYLE_MODELS(
+  "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors"
+)
+
 
 UNET_MODELS=(
     "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8"
@@ -159,6 +162,12 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/clip" \
         "${CLIP_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/clip_vision" \
+        "${CLIPVISION_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/style_models" \
+        "${STYLE_MODELS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
@@ -188,7 +197,7 @@ function provisioning_get_pip_packages() {
 function provisioning_get_nodes() {
     for repo in "${NODES[@]}"; do
         dir="${repo##*/}"
-        path="${COMFYUI_DIR}custom_nodes/${dir}"
+        path="${COMFYUI_DIR}/custom_nodes/${dir}"
         requirements="${path}/requirements.txt"
         if [[ -d $path ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
