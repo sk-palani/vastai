@@ -29,9 +29,12 @@ NODES=(
     "https://github.com/BobsBlazed/Bobs_Latent_Optimizer.git"
     "https://github.com/Clybius/ComfyUI-Latent-Modifiers.git"
     "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git"
+    "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
     "https://github.com/Fannovel16/ComfyUI-MagickWand.git"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/Jonseed/ComfyUI-Detail-Daemon.git"
     "https://github.com/KoreTeknology/ComfyUI-Universal-Styler.git"
+    "https://github.com/Layer-norm/comfyui-lama-remover"
     "https://github.com/SeargeDP/ComfyUI_Searge_LLM.git"
     "https://github.com/SeargeDP/SeargeSDXL.git"
     "https://github.com/Smirnov75/ComfyUI-mxToolkit.git"
@@ -50,9 +53,13 @@ NODES=(
     "https://github.com/crystian/ComfyUI-Crystools.git"
     "https://github.com/cubiq/ComfyUI_essentials.git"
     "https://github.com/dagthomas/comfyui_dagthomas.git"
+    "https://github.com/daxcay/ComfyUI-JDCN"
     "https://github.com/digitaljohn/comfyui-propost.git"
+    "https://github.com/djbielejeski/a-person-mask-generator"
     "https://github.com/evanspearman/ComfyMath.git"
     "https://github.com/giriss/comfy-image-saver.git"
+    "https://github.com/gseth/ControlAltAI-Nodes"
+    "https://github.com/jags111/efficiency-nodes-comfyui"
     "https://github.com/jamesWalker55/comfyui-various.git"
     "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes.git"
     "https://github.com/kijai/ComfyUI-Florence2.git"
@@ -69,8 +76,11 @@ NODES=(
     "https://github.com/sipherxyz/comfyui-art-venture.git"
     "https://github.com/spacepxl/ComfyUI-Florence-2.git"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
+    "https://github.com/thezveroboy/comfyui-random-image-loader"
     "https://github.com/un-seen/comfyui-tensorops.git"
     "https://github.com/yolain/ComfyUI-Easy-Use.git"
+    "https://github.com/yorkane/ComfyUI-KYNode"
+    "https://github.com/za-wa-n-go/ComfyUI_Zwng_Nodes"
 )
 
 WORKFLOWS=(
@@ -132,7 +142,6 @@ LORA_MODELS=(
     "https://civitai.com/models/836721/see-through-transparent-clothing-lora-flux"
     "https://civitai.com/models/890469/ketika-sharma-indian-actress-flux-lora"
     "https://civitai.com/api/download/models/1099892?type=Model&format=SafeTensor"
-
 )
 
 ESRGAN_MODELS=(
@@ -181,8 +190,8 @@ function provisioning_start() {
         sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' "${workflows_dir}/flux_dev_example.json"
     fi
     provisioning_get_files \
-        "${COMFYUI_DIR}/models/unet" \
-        "${UNET_MODELS[@]}"
+        "${COMFYUI_DIR}/models/loras" \
+        "${LORA_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/vae" \
         "${VAE_MODELS[@]}"
@@ -198,15 +207,18 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
-    provisioning_get_models \
+    provisioning_get_files \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
-    provisioning_get_models \
+    provisioning_get_files \
         "${COMFYUI_DIR}/models/ultralytics/segm" \
         "${ULTRALYTICS_SEGS_MODELS[@]}"
-    provisioning_get_models \
+    provisioning_get_files \
         "${COMFYUI_DIR}/models/ultralytics/bbox" \
         "${ULTRALYTICS_BBOX_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/unet" \
+        "${UNET_MODELS[@]}"
     provisioning_print_end
     echo 'grep trycloud /var/log/supervisor/quicktunnel-*' > "${WORKSPACE}/l"
     chmod +x  "${WORKSPACE}/l"
