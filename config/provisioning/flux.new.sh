@@ -122,10 +122,11 @@ LUTS=(
 
 UNET_MODELS=(
     "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8"
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 )
 
 VAE_MODELS=(
-
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
 )
 
 LORA_MODELS=(
@@ -142,7 +143,6 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
-
 
 
 ESRGAN_MODELS=(
@@ -187,14 +187,14 @@ function provisioning_start() {
         "${workflows_dir}" \
         "${WORKFLOWS[@]}"
     # Get licensed models if HF_TOKEN set & valid
-    if provisioning_has_valid_hf_token; then
-        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
-        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
-    else
-        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
-        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
-        sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' "${workflows_dir}/flux_dev_example.json"
-    fi
+#    if provisioning_has_valid_hf_token; then
+#        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
+#        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
+#    else
+#        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
+#        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
+#        sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' "${workflows_dir}/flux_dev_example.json"
+#    fi
     provisioning_get_files \
         "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
