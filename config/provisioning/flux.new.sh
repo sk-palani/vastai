@@ -236,8 +236,9 @@ function provisioning_start() {
 }
 
 function provisioning_get_apt_packages() {
+    sudo apt-get update
     if [[ -n $APT_PACKAGES ]]; then
-            sudo $APT_INSTALL ${APT_PACKAGES[@]}
+            sudo apt install -y  ${APT_PACKAGES[@]}
     fi
 }
 

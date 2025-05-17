@@ -1,0 +1,35 @@
+-- Server - flux.new.sh
+8d4d97e5240ccf14aed8e8fd06da1e59  ./Add_More_details_Flux.safetensors
+e5f7e5df98f5e8ded1d21e0109c5d305  ./BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors
+5306a5d0be96551049bd11e259882714  ./Canopus-LoRA-Flux-UltraRealism.safetensors
+948c2cc35fad9242613bf83fb8c86484  ./FLUX-dev-lora-AntiBlur.safetensors
+ec48f74ed33d583685229fce9a7674e8  ./FLUX-dev-lora-add_details.safetensors
+9c3ca631c43c614392a49c219536b88e  ./XLabsFluxRealism.safetensors
+2ed123e3f004076ecd2a35ec847a8828  ./aidmaRealisticSkin-FLUX-v0.1.safetensors
+0408f8b989fc6fecafe4ef646f38c519  ./breast-size2.safetensors
+9c3ca631c43c614392a49c219536b88e  ./realism_lora.safetensors
+300d6ec19df568f13a747f5aeb6b3214  ./realism_lora_comfy flux_converted.safetensors
+55fb8b0366ce7b0243fbe6f9fb2ef7b5  ./skin tone style v2-step00001500.safetensors
+f33882cf1fe6cef988e77b15fcdece94  ./vidhyas_flux_v1.safetensors
+c26c6602931fefc3120315cb4fc77da4  ./zavy-drkcnmtc-flx-v2.safetensors
+3bcc62c91b55beb6cd463793784d60aa  ./zavy-fnrt-flx.safetensors
+
+
+-- Local (working)
+8d4d97e5240ccf14aed8e8fd06da1e59  Add_More_details_Flux.safetensors
+ea54ccdf8c51e375be0e191ea79ec674  aidmaImageUprader-FLUX-v0.3.safetensors
+2ed123e3f004076ecd2a35ec847a8828  aidmaRealisticSkin-FLUX-v0.1.safetensors
+89e7c05d83fad6e2f70b2a2e7627f19f  aidmaSeeThrough-FLUX-V0.1.safetensors
+a86b80b91238dfaa946f051d7f198959  Anu_Sithara_Flux_Kohya_V1.safetensors
+d7fafc58ddad5614e043d975cd359021  BreastShaper_splendid_droplets_Flux.safetensors
+e5f7e5df98f5e8ded1d21e0109c5d305  BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors
+0408f8b989fc6fecafe4ef646f38c519  breast-size2.safetensors
+ac96c5ebc459ce93a0dbc51289d3230c  breasts_slider_flux_v1.safetensors
+ad0f6ca9fc553257288ff086de092c42  hsn4ts.safetensors
+25a4c3b1cb30ca674a0a436765c580ac  Ketika_Sharma_Flux_Kohya_V1.safetensors
+8b82dadea6ceffd4e3e012d9ccd9bb92  nipplediffusion-dark-f1.safetensors
+344b7446f4672830712e11952eee9267  nipplediffusion-f1.safetensors
+83c01e05f1c0a5839bc8f54e832a7f84  Pokies.safetensors
+d41d8cd98f00b204e9800998ecf8427e  put_loras_here
+f33882cf1fe6cef988e77b15fcdece94  vidhyas_flux_v1.safetensors
+9c3ca631c43c614392a49c219536b88e  Xlabs-AI_flux-RealismLora.safetensors
