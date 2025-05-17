@@ -14,6 +14,9 @@ mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
 
 APT_PACKAGES=(
     "libmagickwand-dev"
+    "axel"
+    "screen"
+    "tree"
 )
 
 PIP_PACKAGES=(
