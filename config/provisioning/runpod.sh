@@ -204,37 +204,37 @@ function provisioning_start() {
         "${WORKSPACE}/ComfyUI/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
 
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/vae" \
         "${VAE_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/clip" \
         "${CLIP_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/clip_vision" \
         "${CLIPVISION_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/style_models" \
         "${STYLE_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/upscale_models" \
         "${UPSCALE_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/ultralytics/segm" \
         "${ULTRALYTICS_SEGS_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/ultralytics/bbox" \
         "${ULTRALYTICS_BBOX_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_print_end
