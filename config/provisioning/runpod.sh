@@ -23,6 +23,9 @@ PIP_PACKAGES=(
     "resynthesizer"
 )
 
+CHECKPOINT_MODELS=(
+)
+
 NODES=(
     "https://github.com/Acly/comfyui-tooling-nodes.git"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui.git"
