@@ -246,6 +246,7 @@ function provisioning_start() {
     chmod +x  "${WORKSPACE}/l"
     provisioning_get_workflows
     provisioning_print_end
+    touch /.noprovisioning
 }
 
 function pip_install() {
@@ -401,8 +402,6 @@ function provisioning_download() {
   fi
 
 }
-
-touch /.noprovisioning
 
 # Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f /.noprovisioning ]]; then
