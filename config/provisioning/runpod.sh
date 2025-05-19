@@ -141,15 +141,15 @@ LORA_MODELS=(
     "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors?&token=${HF_TOKEN}"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?&token=${HF_TOKEN}"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?&token=${HF_TOKEN}"
-    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/712589?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/737992?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/712589?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/737992?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -201,9 +201,9 @@ function provisioning_start() {
     fi
 
     provisioning_print_header
-#    provisioning_get_apt_packages
-#    provisioning_get_pip_packages
-#    provisioning_get_nodes
+    provisioning_get_apt_packages
+    provisioning_get_pip_packages
+    provisioning_get_nodes
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
@@ -389,7 +389,7 @@ function provisioning_download() {
   elif [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
     if [[ -n $CIVITAI_TOKEN ]]; then
         cd "$DEST"
-        axel "$URL&token=${CIVITAI_TOKEN}"
+        axel "$URL"
         cd - > /dev/null
     else
         wget -qnc --content-disposition --show-progress -e dotbytes="$DOTBYTES" -P "$DEST" "$URL"
