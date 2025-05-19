@@ -77,7 +77,6 @@ NODES=(
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
     "https://github.com/rgthree/rgthree-comfy.git"
     "https://github.com/sipherxyz/comfyui-art-venture.git"
-    "https://github.com/spacepxl/ComfyUI-Florence-2.git"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
     "https://github.com/thezveroboy/comfyui-random-image-loader"
     "https://github.com/un-seen/comfyui-tensorops.git"
