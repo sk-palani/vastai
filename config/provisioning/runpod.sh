@@ -71,7 +71,6 @@ NODES=(
     "https://github.com/kijai/ComfyUI-segment-anything-2.git"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
-    "https://github.com/ltdrdata/ComfyUI-Manager.git"
     "https://github.com/melMass/comfy_mtb.git"
     "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger.git"
     "https://github.com/mirabarukaso/ComfyUI_Mira.git"
@@ -403,4 +402,9 @@ function provisioning_download() {
 
 }
 
-provisioning_start
+touch /.noprovisioning
+
+# Allow user to disable provisioning if they started with a script they didn't want
+if [[ ! -f /.noprovisioning ]]; then
+    provisioning_start
+fi
