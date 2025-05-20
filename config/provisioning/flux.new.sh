@@ -15,10 +15,16 @@ mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
 
 APT_PACKAGES=(
     "libmagickwand-dev"
+    "axel"
+    "screen"
+    "tree"
 )
 
 PIP_PACKAGES=(
     "resynthesizer"
+)
+
+CHECKPOINT_MODELS=(
 )
 
 NODES=(
@@ -66,14 +72,12 @@ NODES=(
     "https://github.com/kijai/ComfyUI-segment-anything-2.git"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
-    "https://github.com/ltdrdata/ComfyUI-Manager.git"
     "https://github.com/melMass/comfy_mtb.git"
     "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger.git"
     "https://github.com/mirabarukaso/ComfyUI_Mira.git"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
     "https://github.com/rgthree/rgthree-comfy.git"
     "https://github.com/sipherxyz/comfyui-art-venture.git"
-    "https://github.com/spacepxl/ComfyUI-Florence-2.git"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
     "https://github.com/thezveroboy/comfyui-random-image-loader"
     "https://github.com/un-seen/comfyui-tensorops.git"
@@ -83,7 +87,7 @@ NODES=(
 )
 
 WORKFLOWS=(
-    "https://gisthubusercontent.com/robballantyne/f8cb692bdcd89c96c0bd1ec0c969d905/raw/2d969f732d7873f0e1ee23b2625b50f201c722a5/flux_dev_example.json"
+    "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/flux_dev_example.json"
 )
 
 CLIP_MODELS=(
@@ -130,11 +134,14 @@ VAE_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0/resolve/main/Canopus-LoRA-Flux-UltraRealism.safetensors"
-    "https://huggingface.co/XLabs-AI/flux-lora-collection/resolve/main/realism_lora_comfy_converted.safetensors"
-    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors"
-    "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors"
-    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors"
+    "https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0/resolve/main/Canopus-LoRA-Flux-UltraRealism.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/XLabs-AI/flux-lora-collection/resolve/main/realism_lora_comfy_converted.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/XLabs-AI/flux-RealismLora/resolve/main/lora.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/Fantasyworld/Skin_tone_slider_Flux1.d/resolve/main/Skin_Tone_Slider_flux_v1.safetensors?&token=${HF_TOKEN}"
     "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/712589?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
@@ -179,60 +186,77 @@ ULTRALYTICS_BBOX_MODELS=(
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
+    if [[ ! -d /opt/environments/python ]]; then
+        export MAMBA_BASE=true
+    fi
+    source /opt/ai-dock/etc/environment.sh
+    source /opt/ai-dock/bin/venv-set.sh comfyui
+
+    if provisioning_has_valid_hf_token; then
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
+    else
+        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
+        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
+        sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' /opt/ComfyUI/web/scripts/defaultGraph.js
+    fi
+
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_pip_packages
     provisioning_get_nodes
     workflows_dir="${COMFYUI_DIR}/user/default/workflows"
     mkdir -p "${workflows_dir}"
-    provisioning_get_files \
-        "${workflows_dir}" \
-        "${WORKFLOWS[@]}"
-    # Get licensed models if HF_TOKEN set & valid
-#    if provisioning_has_valid_hf_token; then
-#        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
-#        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
-#    else
-#        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
-#        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
-#        sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' "${workflows_dir}/flux_dev_example.json"
-#    fi
-    provisioning_get_files \
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/ckpt" \
+        "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/vae" \
         "${VAE_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/clip" \
         "${CLIP_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/clip_vision" \
         "${CLIPVISION_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/style_models" \
         "${STYLE_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/upscale_models" \
         "${UPSCALE_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/ultralytics/segm" \
         "${ULTRALYTICS_SEGS_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/ultralytics/bbox" \
         "${ULTRALYTICS_BBOX_MODELS[@]}"
-    provisioning_get_files \
+    provisioning_get_models \
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_print_end
     echo 'grep trycloud /var/log/supervisor/quicktunnel-*' > "${WORKSPACE}/l"
     chmod +x  "${WORKSPACE}/l"
+    provisioning_get_workflows
+    provisioning_print_end
+    touch /workspace/.noprovisioning
+}
+
+function pip_install() {
+    if [[ -z $MAMBA_BASE ]]; then
+            "$COMFYUI_VENV_PIP" install --no-cache-dir "$@"
+        else
+            micromamba run -n comfyui pip install --no-cache-dir "$@"
+        fi
 }
 
 function provisioning_get_apt_packages() {
@@ -271,6 +295,22 @@ function provisioning_get_nodes() {
     done
 }
 
+function provisioning_get_workflows() {
+    for repo in "${WORKFLOWS[@]}"; do
+        dir=$(basename "$repo" .git)
+        path="${COMFYUI_DIR}/user/default/workflows/${dir}"
+        if [[ -d "$path" ]]; then
+            if [[ ${AUTO_UPDATE,,} != "false" ]]; then
+                printf "Updating workflows: %s...\n" "${repo}"
+                ( cd "$path" && git pull )
+            fi
+        else
+            printf "Cloning workflows: %s...\n" "${repo}"
+            git clone "$repo" "$path"
+        fi
+    done
+}
+
 function provisioning_get_default_workflow() {
     if [[ -n $DEFAULT_WORKFLOW ]]; then
         workflow_json=$(curl -s "$DEFAULT_WORKFLOW")
@@ -281,7 +321,7 @@ function provisioning_get_default_workflow() {
     fi
 }
 
-function provisioning_get_files() {
+function provisioning_get_models() {
     if [[ -z $2 ]]; then return 1; fi
 
     dir="$1"
@@ -290,7 +330,7 @@ function provisioning_get_files() {
     arr=("$@")
     printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
     for url in "${arr[@]}"; do
-        printf "wget %s\n" "${url}"
+        printf "Downloading: %s\n" "${url}"
         provisioning_download "${url}" "${dir}"
         printf "\n"
     done
@@ -338,21 +378,31 @@ function provisioning_has_valid_civitai_token() {
 
 # Download from $1 URL to $2 file path
 function provisioning_download() {
-    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
-        auth_token="$HF_TOKEN"
-    elif
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
-    fi
-    if [[ -n $auth_token ]];then
-        echo wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
-        wget  -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+
+  URL="$1"
+  DEST="$2"
+  DOTBYTES="${3:-4M}"
+  AUTH_HEADER=""
+
+  if [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+    [[ -n $HF_TOKEN ]] && AUTH_HEADER="Authorization: Bearer $HF_TOKEN"
+    wget ${AUTH_HEADER:+--header="$AUTH_HEADER"} -qnc --content-disposition --show-progress -e dotbytes="$DOTBYTES" -P "$DEST" "$URL"
+  elif [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+    if [[ -n $CIVITAI_TOKEN ]]; then
+        cd "$DEST"
+        axel "$URL"
+        cd - > /dev/null
     else
-        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget -qnc --content-disposition --show-progress -e dotbytes="$DOTBYTES" -P "$DEST" "$URL"
     fi
+
+  else
+    wget -qnc --content-disposition --show-progress -e dotbytes="$DOTBYTES" -P "$DEST" "$URL"
+  fi
+
 }
 
 # Allow user to disable provisioning if they started with a script they didn't want
-if [[ ! -f /.noprovisioning ]]; then
+if [[ ! -f /workspace/.noprovisioning ]]; then
     provisioning_start
 fi
