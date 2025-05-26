@@ -71,14 +71,12 @@ NODES=(
     "https://github.com/kijai/ComfyUI-segment-anything-2.git"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
-    "https://github.com/ltdrdata/ComfyUI-Manager.git"
     "https://github.com/melMass/comfy_mtb.git"
     "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger.git"
     "https://github.com/mirabarukaso/ComfyUI_Mira.git"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
     "https://github.com/rgthree/rgthree-comfy.git"
     "https://github.com/sipherxyz/comfyui-art-venture.git"
-    "https://github.com/spacepxl/ComfyUI-Florence-2.git"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
     "https://github.com/thezveroboy/comfyui-random-image-loader"
     "https://github.com/un-seen/comfyui-tensorops.git"
@@ -141,16 +139,17 @@ LORA_MODELS=(
     "https://huggingface.co/neuroplus/skin-texture-style-v4d/resolve/main/skin%20texture%20style%20v4d.safetensors?&token=${HF_TOKEN}"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?&token=${HF_TOKEN}"
     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?&token=${HF_TOKEN}"
-    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/712589?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/737992?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/857446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://huggingface.co/XLabs-AI/flux-RealismLora/resolve/main/lora.safetensors?&token=${HF_TOKEN}"
+    "https://huggingface.co/Fantasyworld/Skin_tone_slider_Flux1.d/resolve/main/Skin_Tone_Slider_flux_v1.safetensors?&token=${HF_TOKEN}"
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/712589?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/737992?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -202,9 +201,9 @@ function provisioning_start() {
     fi
 
     provisioning_print_header
-#    provisioning_get_apt_packages
-#    provisioning_get_pip_packages
-#    provisioning_get_nodes
+    provisioning_get_apt_packages
+    provisioning_get_pip_packages
+    provisioning_get_nodes
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
@@ -246,6 +245,7 @@ function provisioning_start() {
     chmod +x  "${WORKSPACE}/l"
     provisioning_get_workflows
     provisioning_print_end
+    touch /workspace/.noprovisioning
 }
 
 function pip_install() {
@@ -390,7 +390,7 @@ function provisioning_download() {
   elif [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
     if [[ -n $CIVITAI_TOKEN ]]; then
         cd "$DEST"
-        axel "$URL&token=${CIVITAI_TOKEN}"
+        axel "$URL"
         cd - > /dev/null
     else
         wget -qnc --content-disposition --show-progress -e dotbytes="$DOTBYTES" -P "$DEST" "$URL"
@@ -402,4 +402,7 @@ function provisioning_download() {
 
 }
 
-provisioning_start
+# Allow user to disable provisioning if they started with a script they didn't want
+if [[ ! -f /workspace/.noprovisioning ]]; then
+    provisioning_start
+fi
