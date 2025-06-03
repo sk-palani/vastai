@@ -405,6 +405,7 @@ function provisioning_download() {
 
 }
 
+provisioning_get_nodes
 provisioning_get_apt_packages
 provisioning_get_pip_packages
 
