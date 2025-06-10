@@ -27,6 +27,7 @@ CHECKPOINT_MODELS=(
 )
 
 NODES=(
+    "https://github.com/yorkane/ComfyUI-KYNode"
     "https://github.com/Acly/comfyui-tooling-nodes.git"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui.git"
     "https://github.com/BlenderNeko/ComfyUI_Noise.git"
@@ -81,7 +82,6 @@ NODES=(
     "https://github.com/thezveroboy/comfyui-random-image-loader"
     "https://github.com/un-seen/comfyui-tensorops.git"
     "https://github.com/yolain/ComfyUI-Easy-Use.git"
-    "https://github.com/yorkane/ComfyUI-KYNode"
     "https://github.com/za-wa-n-go/ComfyUI_Zwng_Nodes"
 )
 
