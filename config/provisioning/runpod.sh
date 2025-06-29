@@ -124,8 +124,9 @@ LUTS=(
 )
 
 UNET_MODELS=(
-    "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8"
+#    "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8"
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+    "https://civitai.com/api/download/models/1756326?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 VAE_MODELS=(
@@ -163,6 +164,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/936132?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/735960?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1909850?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+)
 
 
 ESRGAN_MODELS=(
