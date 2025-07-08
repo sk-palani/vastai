@@ -428,3 +428,4 @@ if [[ ! -f /workspace/.noprovisioning ]]; then
     pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 fi
 
+/opt/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
