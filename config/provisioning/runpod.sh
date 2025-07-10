@@ -86,6 +86,9 @@ NODES=(
     "https://github.com/LevelPixel/ComfyUI-LevelPixel"
 )
 
+#    "https://github.com/yolain/ComfyUI-Easy-Use.git"
+#    "https://github.com/LevelPixel/ComfyUI-LevelPixel"
+
 WORKFLOWS=(
     "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/flux_dev_example.json"
 )
@@ -166,6 +169,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/735960?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1909850?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1969712?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1956947?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -273,6 +277,8 @@ function pip_install() {
 }
 
 function provisioning_get_apt_packages() {
+    sudo ulimit -n 100000
+    ulimit -n 100000
     sudo apt-get update
     if [[ -n $APT_PACKAGES ]]; then
             sudo apt install -y  ${APT_PACKAGES[@]}
