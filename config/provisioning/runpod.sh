@@ -277,8 +277,6 @@ function pip_install() {
 }
 
 function provisioning_get_apt_packages() {
-    sudo ulimit -n 100000
-    ulimit -n 100000
     sudo apt-get update
     if [[ -n $APT_PACKAGES ]]; then
             sudo apt install -y  ${APT_PACKAGES[@]}
