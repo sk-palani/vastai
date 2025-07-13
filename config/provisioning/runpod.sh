@@ -84,6 +84,7 @@ NODES=(
     "https://github.com/LevelPixel/ComfyUI-LevelPixel"
     "https://github.com/shiimizu/ComfyUI-TiledDiffusion"
     "https://github.com/MieMieeeee/ComfyUI-CaptionThis"
+    "https://github.com/kk8bit/kaytool"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
@@ -130,6 +131,7 @@ LUTS=(
 UNET_MODELS=(
 #    "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1756326?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1769925?type=Model&format=SafeTensor&size=pruned&fp=fp8"
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 )
 
@@ -185,6 +187,7 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors"
 )
 
 
@@ -221,9 +224,9 @@ function provisioning_start() {
     fi
 
     provisioning_print_header
-    provisioning_get_apt_packages
-    provisioning_get_pip_packages
-    provisioning_get_nodes
+#    provisioning_get_apt_packages
+#    provisioning_get_pip_packages
+#    provisioning_get_nodes
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
@@ -257,6 +260,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${COMFYUI_DIR}/models/ultralytics/bbox" \
         "${ULTRALYTICS_BBOX_MODELS[@]}"
+    provisioning_get_models \
+        "${COMFYUI_DIR}/models/controlnet" \
+        "${CONTROLNET_MODELS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
