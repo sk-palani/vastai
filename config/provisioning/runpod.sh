@@ -262,12 +262,12 @@ function provisioning_start() {
     provisioning_get_models \
         "${COMFYUI_DIR}/models/ultralytics/bbox" \
         "${ULTRALYTICS_BBOX_MODELS[@]}"
-#    provisioning_get_models \
-#        "${COMFYUI_DIR}/models/controlnet" \
-#        "${CONTROLNET_MODELS[@]}"
-#    provisioning_get_models \
-#        "${COMFYUI_DIR}/models/unet" \
-#        "${UNET_MODELS[@]}"
+    provisioning_get_models \
+        "${COMFYUI_DIR}/models/controlnet" \
+        "${CONTROLNET_MODELS[@]}"
+    provisioning_get_models \
+        "${COMFYUI_DIR}/models/unet" \
+        "${UNET_MODELS[@]}"
     provisioning_print_end
     echo 'grep trycloud /var/log/supervisor/quicktunnel-*' > "${WORKSPACE}/l"
     chmod +x  "${WORKSPACE}/l"
