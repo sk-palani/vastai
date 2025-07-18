@@ -98,6 +98,7 @@ CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
     "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
+    "https://civitai.com/api/download/models/2019009?type=Model&format=SafeTensor&size=pruned&fp=fp32&token=${CIVITAI_TOKEN}"
 )
 
 CLIPVISION_MODELS=(
@@ -131,7 +132,8 @@ LUTS=(
 UNET_MODELS=(
 #    "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1756326?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/1769925?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
+#    "https://civitai.com/api/download/models/1769925?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1479339?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 )
 
