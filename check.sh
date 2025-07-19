@@ -43,18 +43,7 @@ ensure_axel_installed
 
 # Define items: url;filename;checksum
 items=(
-  "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/aidmaRealisticSkin-FLUX-v0.1.safetensors;2ed123e3f004076ecd2a35ec847a8828"
-  "https://civitai.com/api/download/models/857446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/SameFace_Fix.safetensors;27a435104a39d7a0606439aab323a1ad"
-  "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/flux_realism_lora.safetensors;300d6ec19df568f13a747f5aeb6b3214"
-  "https://civitai.com/api/download/models/737992?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/Add_More_details_Flux.safetensors;d82d5667a572c3f4dd89a79e0680039f"
-  "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors;e5f7e5df98f5e8ded1d21e0109c5d305"
-  "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/zavy-fnrt-flx.safetensors;3bcc62c91b55beb6cd463793784d60aa"
-  "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/skin%20tone%20style%20v2-step00001500.safetensors;f1c0fbd070c9b3043bd19ae58f8f452d"
-  "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/zavy-drkcnmtc-flx-v2.safetensors;c26c6602931fefc3120315cb4fc77da4"
-  "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/breast-size2.safetensors;0408f8b989fc6fecafe4ef646f38c519"
-  "https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0/resolve/main/Canopus-LoRA-Flux-UltraRealism.safetensors?token=${HF_TOKEN};Canopus-LoRA-Flux-UltraRealism.safetensors;has"
-
-  "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors;models/unet/flux1-dev.safetensors;ed3246c590d00ae6f1bcf3f77b0e276e"
+   "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors;models/unet/flux1-dev.safetensors;ed3246c590d00ae6f1bcf3f77b0e276e"
 )
 
 VAE_MODELS=(
@@ -63,6 +52,17 @@ VAE_MODELS=(
 
 LORA_MODELS=(
     "https://civitai.com/api/download/models/1115050?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};aidmaFluxProUltra-FLUX-v0.1.safetensors;fef401ec9b0abc74370a0797dca28f5e"
+    "https://huggingface.co/Fantasyworld/Skin_tone_slider_Flux1.d/resolve/main/Skin_Tone_Slider_flux_v1.safetensors?&token=${HF_TOKEN};kin_Tone_Slider_flux_v1.safetensors;fef401ec9b0abc74370a0797dca28f5e"
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/aidmaRealisticSkin-FLUX-v0.1.safetensors;2ed123e3f004076ecd2a35ec847a8828"
+    "https://civitai.com/api/download/models/857446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/SameFace_Fix.safetensors;27a435104a39d7a0606439aab323a1ad"
+    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/flux_realism_lora.safetensors;300d6ec19df568f13a747f5aeb6b3214"
+    "https://civitai.com/api/download/models/737992?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/Add_More_details_Flux.safetensors;d82d5667a572c3f4dd89a79e0680039f"
+    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors;e5f7e5df98f5e8ded1d21e0109c5d305"
+    "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/zavy-fnrt-flx.safetensors;3bcc62c91b55beb6cd463793784d60aa"
+    "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/skin%20tone%20style%20v2-step00001500.safetensors;f1c0fbd070c9b3043bd19ae58f8f452d"
+    "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/zavy-drkcnmtc-flx-v2.safetensors;c26c6602931fefc3120315cb4fc77da4"
+    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};models/loras/breast-size2.safetensors;0408f8b989fc6fecafe4ef646f38c519"
+    "https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0/resolve/main/Canopus-LoRA-Flux-UltraRealism.safetensors?token=${HF_TOKEN};Canopus-LoRA-Flux-UltraRealism.safetensors;has"
 )
 
 function provisioning_start() {
@@ -113,7 +113,6 @@ function provisioning_check_download() {
     fi
   else
     echo "File [${filename}] does not exist. Downloading..."
-    LOCAL_MD5=$(calc_last_mb_md5 "${filename}")
   fi
 
   if [[ $need_download == true ]]; then
@@ -126,6 +125,11 @@ function provisioning_check_download() {
     else
       axel -a -n 8 -o "$filename" "${URL}"
     fi
+  fi
+
+  if [[ $need_download == true ]]; then
+      LOCAL_MD5=$(calc_last_mb_md5 "${filename}")
+      echo "${filename};${FILE};${LOCAL_MD5}" >> output.txt
   fi
 
 
