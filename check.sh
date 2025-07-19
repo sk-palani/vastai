@@ -93,22 +93,32 @@ function provisioning_check_download() {
   mkdir -p "$DEST"
   filename="${DEST}/${FILE}"
 
+  local need_download=true
   if [[ -f "${filename}" ]]; then
     echo "File [${filename}] exists. Verifying checksum..."
     LOCAL_MD5=$(calc_last_mb_md5 "${filename}")
     if [[ "${LOCAL_MD5}" == "${checksum}" ]]; then
       echo "File [${filename}] is up to date. No download needed."
-
+      need_download=false
     else
       rm -rv "${filename}"
       echo "File [${filename}] differs. Re-downloading..."
     fi
   else
     echo "File [${filename}] does not exist. Downloading..."
+    LOCAL_MD5=$(calc_last_mb_md5 "${filename}")
+  fi
 
-#    curl -L -I -v  --create-dirs -O --output-dir "${dir}" -J "$url"
-#    LOCAL_MD5=$(calc_last_mb_md5 "${filename}")
-
+  if [[ $need_download == true ]]; then
+    if [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+      AUTH_HEADER="Authorization: Bearer $HF_TOKEN"
+      echo ${AUTH_HEADER}
+      axel -n 8 -H "${AUTH_HEADER}" -o "$filename" "${URL}"
+    elif [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+      axel -a -n 8 -o "$filename" "${URL}"
+    else
+      axel -a -n 8 -o "$filename" "${URL}"
+    fi
   fi
 
 
@@ -123,15 +133,7 @@ function provisioning_check_download() {
 
   # Download using axel
 
-  if [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
-    AUTH_HEADER="Authorization: Bearer $HF_TOKEN"
-    echo ${AUTH_HEADER}
-    axel -n 8 -H "${AUTH_HEADER}" -o "$filename" "${URL}"
-  elif [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-    axel -a -n 8 -o "$filename" "${URL}"
-  else
-    axel -a -n 8 -o "$filename" "${URL}"
-  fi
+
 #  curl -L -I -v  -O -J "$url"
 
 
