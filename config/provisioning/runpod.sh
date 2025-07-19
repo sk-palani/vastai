@@ -32,6 +32,7 @@ PIP_PACKAGES=(
     "resynthesizer"
     "uvicorn==0.30.6"
     "fastapi==0.115.0"
+    "torchsde==0.2.6"
 )
 
 CHECKPOINT_MODELS=(
