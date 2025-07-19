@@ -447,8 +447,8 @@ function provisioning_download() {
 
 }
 
-#provisioning_get_apt_packages
-#provisioning_get_nodes
+provisioning_get_apt_packages
+provisioning_get_nodes
 provisioning_get_pip_packages
 #provisioning_start
 pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
@@ -459,4 +459,4 @@ if [[ ! -f /workspace/.noprovisioning ]]; then
     pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 fi
 
-/opt/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
+/workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
