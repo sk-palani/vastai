@@ -311,6 +311,7 @@ function provisioning_get_pip_packages() {
 }
 
 function provisioning_get_nodes() {
+    source "${COMFYUI_VENV_DIR}/bin/activate"
     for repo in "${NODES[@]}"; do
         dir="${repo##*/}"
         path="${COMFYUI_DIR}/custom_nodes/${dir}"
