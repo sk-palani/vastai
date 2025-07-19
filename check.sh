@@ -98,7 +98,7 @@ function provisioning_check_download() {
     LOCAL_MD5=$(calc_last_mb_md5 "${filename}")
     if [[ "${LOCAL_MD5}" == "${checksum}" ]]; then
       echo "File [${filename}] is up to date. No download needed."
-      continue
+
     else
       rm -rv "${filename}"
       echo "File [${filename}] differs. Re-downloading..."
