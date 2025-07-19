@@ -1,5 +1,7 @@
 #!/bin/bash
 
+COMFYUI_DIR=${WORKSPACE}/ComfyUI
+
 # Constants
 ONE_HUNDRED_MB=$((100 * 1024 * 1024))
 
