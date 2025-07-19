@@ -62,7 +62,7 @@ VAE_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/1115050?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};aidmaFluxProUltra-FLUX-v0.1.safetensors;1234"
+    "https://civitai.com/api/download/models/1115050?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};aidmaFluxProUltra-FLUX-v0.1.safetensors;fef401ec9b0abc74370a0797dca28f5e"
 )
 
 function provisioning_start() {
