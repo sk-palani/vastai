@@ -101,10 +101,10 @@ function provisioning_check_download() {
       continue
     else
       rm -rv "${filename}"
-      echo "File differs. Re-downloading..."
+      echo "File [${filename}] differs. Re-downloading..."
     fi
   else
-    echo "File does not exist. Downloading..."
+    echo "File [${filename}] does not exist. Downloading..."
 
 #    curl -L -I -v  --create-dirs -O --output-dir "${dir}" -J "$url"
 #    LOCAL_MD5=$(calc_last_mb_md5 "${filename}")
