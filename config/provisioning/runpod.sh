@@ -30,6 +30,7 @@ APT_PACKAGES=(
 
 PIP_PACKAGES=(
     "resynthesizer"
+    "PyYAML==6.0.2"
 )
 
 CHECKPOINT_MODELS=(
