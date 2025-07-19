@@ -449,7 +449,7 @@ function provisioning_download() {
 
 #provisioning_get_apt_packages
 #provisioning_get_nodes
-#provisioning_get_pip_packages
+provisioning_get_pip_packages
 #provisioning_start
 
 # Allow user to disable provisioning if they started with a script they didn't want
