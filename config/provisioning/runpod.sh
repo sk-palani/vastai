@@ -451,6 +451,7 @@ function provisioning_download() {
 #provisioning_get_nodes
 provisioning_get_pip_packages
 #provisioning_start
+pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 
 # Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f /workspace/.noprovisioning ]]; then
