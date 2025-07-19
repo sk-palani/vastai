@@ -4,6 +4,8 @@
 
 # https://github.com/MushroomFleet/Runpod-init
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
+COMFYUI_VENV_DIR=${WORKSPACE}environments/python/comfyui
+mkdir -p "${COMFYUI_VENV_DIR}"
 
 # Packages are installed after nodes so we can fix them...
 
