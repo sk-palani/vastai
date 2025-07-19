@@ -61,10 +61,17 @@ VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors;ae.safetensors;18a7ef7436ed08700d85c408b6809538"
 )
 
+LORA_MODELS=(
+    "https://civitai.com/api/download/models/1115050?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN};aidmaFluxProUltra-FLUX-v0.1.safetensors;1234"
+)
+
 function provisioning_start() {
     provisioning_get_models \
         "${COMFYUI_DIR}/models/vae" \
         "${VAE_MODELS[@]}"
+    provisioning_get_models \
+        "${COMFYUI_DIR}/models/loras" \
+        "${LORA_MODELS[@]}"
 }
 
 function provisioning_get_models() {
