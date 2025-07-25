@@ -478,3 +478,5 @@ if [[ ! -f /workspace/.noprovisioning ]]; then
 fi
 
 #/workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
+
+provisioning_get_default_workflow
