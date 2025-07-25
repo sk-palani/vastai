@@ -7,13 +7,14 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 workflows_dir=${WORKSPACE}/ComfyUI/user/default/workflows
 
 mkdir -p "${WORKSPACE}environments/python/comfyui"
-#cd "${WORKSPACE}environments/python/"
-#/usr/bin/python3 -m venv comfyui
+cd "${WORKSPACE}environments/python/"
+/usr/bin/python3 -m venv comfyui
+
 #/usr/bin/python3 -m venv serviceportal
 #/usr/bin/python3 -m venv api
-#COMFYUI_VENV_DIR=${WORKSPACE}environments/python/comfyui
-#mkdir -p "${COMFYUI_VENV_DIR}"
-#source "${COMFYUI_VENV_DIR}/bin/activate"
+COMFYUI_VENV_DIR=${WORKSPACE}environments/python/comfyui
+mkdir -p "${COMFYUI_VENV_DIR}"
+source "${COMFYUI_VENV_DIR}/bin/activate"
 
 # Packages are installed after nodes so we can fix them...
 
