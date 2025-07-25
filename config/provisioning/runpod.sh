@@ -370,13 +370,13 @@ function provisioning_get_default_workflow() {
             echo "export const defaultGraph = $workflow_json;" > "${workflows_dir}/defaultGraph.js"
             echo "export const defaultGraph = $workflow_json;" > "${COMFYUI_DIR}/web/scripts/defaultGraph.js"
         fi
-        if [[ -f "${workflows_dir}/latest.json" ]]; then
-            workflow_json=$(cat "${workflows_dir}/latest.json")
-            if [[ -n $workflow_json ]]; then
-                echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
-                echo "export const defaultGraph = $workflow_json;" > "${workflows_dir}/defaultGraph.js"
-                echo "export const defaultGraph = $workflow_json;" > "${COMFYUI_DIR}/web/scripts/defaultGraph.js"
-            fi
+    fi
+    if [[ -f "${workflows_dir}/latest.json" ]]; then
+        workflow_json=$(cat "${workflows_dir}/latest.json")
+        if [[ -n $workflow_json ]]; then
+            echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
+            echo "export const defaultGraph = $workflow_json;" > "${workflows_dir}/defaultGraph.js"
+            echo "export const defaultGraph = $workflow_json;" > "${COMFYUI_DIR}/web/scripts/defaultGraph.js"
         fi
     fi
 }
