@@ -4,7 +4,7 @@
 
 # https://github.com/MushroomFleet/Runpod-init
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
-workflows_dir=${WORKSPACE}//user/default/workflows
+workflows_dir=${WORKSPACE}/ComfyUI/user/default/workflows
 
 mkdir -p "${WORKSPACE}environments/python/comfyui"
 #cd "${WORKSPACE}environments/python/"
