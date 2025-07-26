@@ -22,6 +22,7 @@ DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/
 
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm"
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
+mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/sams"
 
 APT_PACKAGES=(
     "libmagickwand-dev"
@@ -228,6 +229,9 @@ ULTRALYTICS_BBOX_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
 )
 
+SAM_MODELS=(
+  "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/sams/sam_vit_b_01ec64.pth"
+)
 
 
 
@@ -280,6 +284,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${COMFYUI_DIR}/models/upscale_models" \
         "${UPSCALE_MODELS[@]}"
+    provisioning_get_models \
+        "${COMFYUI_DIR}/models/sams" \
+        "${SAM_MODELS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/models/ultralytics/segm" \
         "${ULTRALYTICS_SEGS_MODELS[@]}"
@@ -447,7 +454,7 @@ function provisioning_download() {
   DEST="$2"
   DOTBYTES="${3:-4M}"
   AUTH_HEADER=""
-
+  mkdir -p "${DEST}"
   if [[ $URL =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
     [[ -n $HF_TOKEN ]] && AUTH_HEADER="Authorization: Bearer $HF_TOKEN"
     wget ${AUTH_HEADER:+--header="$AUTH_HEADER"} -qnc --content-disposition --show-progress -e dotbytes="$DOTBYTES" -P "$DEST" "$URL"
