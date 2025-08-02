@@ -201,6 +201,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1595505?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/909869?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1121642?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1001942?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -491,5 +492,5 @@ if [[ ! -f /workspace/.noprovisioning ]]; then
 fi
 
 #/workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
-
+opencv-contrib-python
 provisioning_get_default_workflow
