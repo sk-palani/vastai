@@ -198,6 +198,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1351520?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1595505?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/909869?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1121642?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
