@@ -115,9 +115,9 @@ WORKFLOWS=(
 CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
-    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
-    "https://huggingface.co/cyberdelia/FluxTextEnc_VAE/resolve/main/clip_l.safetensors"
-    "https://civitai.com/api/download/models/2019009?type=Model&format=SafeTensor&size=pruned&fp=fp32&token=${CIVITAI_TOKEN}"
+#    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
+#    "https://huggingface.co/cyberdelia/FluxTextEnc_VAE/resolve/main/clip_l.safetensors"
+#    "https://civitai.com/api/download/models/2019009?type=Model&format=SafeTensor&size=pruned&fp=fp32&token=${CIVITAI_TOKEN}"
 )
 
 CLIPVISION_MODELS=(
@@ -206,20 +206,20 @@ LORA_MODELS=(
 
 
 ESRGAN_MODELS=(
-    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+#    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
 )
 
 
 UPSCALE_MODELS=(
-    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
-    "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
+#    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+#    "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
     "https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Superscale-SP_178000_G.pth"
-    "https://huggingface.co/mp3pintyo/upscale/resolve/main/4xNomos2_hq_drct-l.pth&token=${HF_TOKEN}"
+#    "https://huggingface.co/mp3pintyo/upscale/resolve/main/4xNomos2_hq_drct-l.pth&token=${HF_TOKEN}"
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors"
-    "https://civitai.com/api/download/models/1307407?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors"
+#    "https://civitai.com/api/download/models/1307407?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
