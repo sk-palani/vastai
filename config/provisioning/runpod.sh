@@ -115,12 +115,13 @@ WORKFLOWS=(
 CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
-    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors"
+#    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors"
     "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
+    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors"
 
 
-    "https://huggingface.co/cyberdelia/FluxTextEnc_VAE/resolve/main/clip_l.safetensors"
-    "https://civitai.com/api/download/models/2019009?type=Model&format=SafeTensor&size=pruned&fp=fp32&token=${CIVITAI_TOKEN}"
+#    "https://huggingface.co/cyberdelia/FluxTextEnc_VAE/resolve/main/clip_l.safetensors"
+#    "https://civitai.com/api/download/models/2019009?type=Model&format=SafeTensor&size=pruned&fp=fp32&token=${CIVITAI_TOKEN}"
 )
 
 CLIPVISION_MODELS=(
@@ -157,7 +158,7 @@ UNET_MODELS=(
 #    "https://civitai.com/api/download/models/1769925?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1479339?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 #    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-    "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
+#    "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
 )
 
 VAE_MODELS=(
@@ -168,6 +169,8 @@ VAE_MODELS=(
 LORA_MODELS=(
     "https://civitai.com/api/download/models/2009929?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1065360?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2009929?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1065360?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0/resolve/main/Canopus-LoRA-Flux-UltraRealism.safetensors?&token=${HF_TOKEN}"
 #    "https://huggingface.co/XLabs-AI/flux-lora-collection/resolve/main/realism_lora_comfy_converted.safetensors?&token=${HF_TOKEN}"
 #    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors?&token=${HF_TOKEN}"
@@ -176,25 +179,43 @@ LORA_MODELS=(
 #    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?&token=${HF_TOKEN}"
 #    "https://huggingface.co/XLabs-AI/flux-RealismLora/resolve/main/lora.safetensors?&token=${HF_TOKEN}"
 #    "https://huggingface.co/Fantasyworld/Skin_tone_slider_Flux1.d/resolve/main/Skin_Tone_Slider_flux_v1.safetensors?&token=${HF_TOKEN}"
-#    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+
+
+#aidmaRealisticSkin-FLUX-v0.1.safetensors
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+#aidmaRealisticSkin-FLUX-v0.1.safetensors
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#flux_realism_lora.safetensors
+    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/712589?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/737992?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors
+    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/825288?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/893799?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/910095?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#breast-size2.safetensors
+    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1751485?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/984672?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/1115050?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/1188438?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#aidmaImageUprader-FLUX-v0.3.safetensors
+    "https://civitai.com/api/download/models/984672?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    aidmaFluxProUltra-FLUX-v0.1.safetensors
+    "https://civitai.com/api/download/models/1115050?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    aidmaReduxStyle-FLUX-V0.1.safetensors
+    "https://civitai.com/api/download/models/1188438?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1875852?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/857446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#SameFace_Fix.safetensors
+    "https://civitai.com/api/download/models/857446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1633249?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#nosepiercing-pin-right-f1.safetensors
 #    "https://civitai.com/api/download/models/1885706?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#nosepiercing-ring-right-f1.safetensors
 #    "https://civitai.com/api/download/models/1885663?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/824514?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#AntiBlur.safetensors
+    "https://civitai.com/api/download/models/824514?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    aidmaSeeThrough-FLUX-V0.1.safetensors
 #    "https://civitai.com/api/download/models/936132?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/735960?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1909850?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
@@ -208,20 +229,21 @@ LORA_MODELS=(
 #    "https://civitai.com/api/download/models/1595505?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/909869?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1121642?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/1001942?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#Eye_Detail_Flux_Lora_-_Inpainting.safetensors
+    "https://civitai.com/api/download/models/1001942?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    nosepiercing-pin-right-f1.safetensors.0
 #    "https://civitai.com/api/download/models/1885706?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1943855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1553172?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1245565?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/1278791?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/889659?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#expression_helper2.0.safetensors
 #    "https://civitai.com/api/download/models/1023284?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2087149?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2063397?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2086721?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2124636?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/2009929?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    "https://civitai.com/api/download/models/1065360?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
