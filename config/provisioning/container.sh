@@ -26,6 +26,7 @@ APT_PACKAGES=(
 
 PIP_PACKAGES=(
     "resynthesizer"
+    "yaml"
     "uvicorn==0.30.6"
     "fastapi==0.115.0"
     "torchsde==0.2.6"
