@@ -103,6 +103,8 @@ NODES=(
     "https://github.com/kk8bit/kaytool"
     "https://github.com/TTPlanetPig/Comfyui_TTP_Toolset"
     "https://github.com/gseth/ControlAltAI-Nodes"
+    "https://github.com/M1kep/ComfyLiterals"
+    "https://github.com/pamparamm/ComfyUI-ppm"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
