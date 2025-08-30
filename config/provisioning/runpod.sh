@@ -105,6 +105,7 @@ NODES=(
     "https://github.com/gseth/ControlAltAI-Nodes"
     "https://github.com/M1kep/ComfyLiterals"
     "https://github.com/pamparamm/ComfyUI-ppm"
+    "https://github.com/quasiblob/ComfyUI-EsesImageCompare"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
@@ -246,6 +247,8 @@ LORA_MODELS=(
 #    "https://civitai.com/api/download/models/2063397?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2086721?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2124636?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#flux_vividizer.safetensors
+    "https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
