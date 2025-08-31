@@ -263,6 +263,8 @@ LORA_MODELS=(
 #    "https://civitai.com/api/download/models/2124636?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #flux_vividizer.safetensors
     "https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors
+    "https://civitai.com/api/download/models/1612200?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
@@ -283,7 +285,7 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors"
+    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
 #    "https://civitai.com/api/download/models/1307407?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler/resolve/main/diffusion_pytorch_model.safetensors"
 )
