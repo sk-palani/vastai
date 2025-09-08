@@ -297,6 +297,8 @@ ULTRALYTICS_SEGS_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/jags/yolov8_model_segmentation-set/resolve/main/skin_yolov8m-seg_400.pt"
+  https://civitai.com/api/download/models/1324778?type=Model&format=PickleTensor
+
 )
 
 ULTRALYTICS_BBOX_MODELS=(
@@ -565,6 +567,6 @@ if [[ ! -f /workspace/.noprovisioning ]]; then
     pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 fi
 
-#/workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
+/workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
 #opencv-contrib-python
 provisioning_get_default_workflow
