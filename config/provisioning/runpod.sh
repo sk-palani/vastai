@@ -398,7 +398,7 @@ function pip_install() {
 }
 
 function provisioning_get_apt_packages() {
-    sudo apt-get update
+    sudo apt-get update --fix-missing
     if [[ -n $APT_PACKAGES ]]; then
             sudo apt install -y  ${APT_PACKAGES[@]}
     fi
