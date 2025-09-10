@@ -31,6 +31,9 @@ APT_PACKAGES=(
     "tree"
 )
 
+apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
+
+
 PIP_PACKAGES=(
     "resynthesizer"
     "uvicorn==0.30.6"
@@ -297,8 +300,7 @@ ULTRALYTICS_SEGS_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/jags/yolov8_model_segmentation-set/resolve/main/skin_yolov8m-seg_400.pt"
-  https://civitai.com/api/download/models/1324778?type=Model&format=PickleTensor
-
+  "https://civitai.com/api/download/models/1324778?type=Model&format=PickleTensor"
 )
 
 ULTRALYTICS_BBOX_MODELS=(
@@ -344,6 +346,9 @@ function provisioning_start() {
         "${LUTS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/custom_nodes/ComfyUI_essentials.git/fonts/" \
+        "${FONTS[@]}"
+    provisioning_get_models \
+        "${COMFYUI_DIR}/custom_nodes/ComfyUI_essentials/fonts/" \
         "${FONTS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/custom_nodes/ComfyUI-Custom-Scripts.git/web/js/assets/" \
