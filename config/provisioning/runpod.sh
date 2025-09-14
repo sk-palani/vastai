@@ -109,6 +109,7 @@ NODES=(
     "https://github.com/M1kep/ComfyLiterals"
     "https://github.com/pamparamm/ComfyUI-ppm"
     "https://github.com/quasiblob/ComfyUI-EsesImageCompare"
+    "https://github.com/ostris/ComfyUI-Advanced-Vision"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
@@ -132,10 +133,12 @@ CLIP_MODELS=(
 
 CLIPVISION_MODELS=(
     "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors"
+    "https://huggingface.co/ostris/ComfyUI-Advanced-Vision/resolve/main/clip_vision/siglip2_so400m_patch16_512.safetensors"
 )
 
 STYLE_MODELS=(
   "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors"
+  "https://huggingface.co/ostris/Flex.1-alpha-Redux/resolve/main/flex1_redux_siglip2_512.safetensors"
 )
 
 LUTS=(
