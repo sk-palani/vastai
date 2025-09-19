@@ -31,7 +31,7 @@ APT_PACKAGES=(
     "tree"
 )
 
-apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
+#apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
 
 
 PIP_PACKAGES=(
@@ -192,6 +192,10 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1065360?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/2009929?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1065360?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    TW_Makeup.safetensors
+    "https://civitai.com/api/download/models/1086588?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    Premium_Cinematic_Color-Graded_Portrait_Style__Inspired_by_Brandon_Woelfel.safetensors
+    "https://civitai.com/api/download/models/2127531?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://huggingface.co/prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0/resolve/main/Canopus-LoRA-Flux-UltraRealism.safetensors?&token=${HF_TOKEN}"
 #    "https://huggingface.co/XLabs-AI/flux-lora-collection/resolve/main/realism_lora_comfy_converted.safetensors?&token=${HF_TOKEN}"
 #    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-AntiBlur/resolve/main/FLUX-dev-lora-AntiBlur.safetensors?&token=${HF_TOKEN}"
