@@ -110,6 +110,7 @@ NODES=(
     "https://github.com/pamparamm/ComfyUI-ppm"
     "https://github.com/quasiblob/ComfyUI-EsesImageCompare"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
+    "https://github.com/orion4d/ComfyUI_SharpnessPro"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
@@ -180,6 +181,7 @@ UNET_MODELS=(
 #    "https://civitai.com/api/download/models/1479339?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 #    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 #    "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
+#"https://civitai.com/api/download/models/2080064?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
 )
 
 VAE_MODELS=(
