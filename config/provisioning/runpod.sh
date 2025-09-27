@@ -277,6 +277,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors
     "https://civitai.com/api/download/models/1612200?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+# SlickedBackHighPonyTail_Flux.safetensors
+    "https://civitai.com/api/download/models/2252207?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
