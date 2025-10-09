@@ -432,14 +432,28 @@ function pip_install() {
 function provisioning_get_apt_packages() {
     sudo apt-get update --fix-missing
     if [[ -n $APT_PACKAGES ]]; then
-            sudo apt install -y  ${APT_PACKAGES[@]}
+        for package in "${APT_PACKAGES[@]}"; do
+            if ! dpkg -l | grep -qw "$package"; then
+                echo "$package is not installed. Installing now..."
+                sudo apt-get install -y "$package"
+            else
+                echo "$package is already installed."
+            fi
+        done
     fi
 }
 
 function provisioning_get_pip_packages() {
     if [[ -n $PIP_PACKAGES ]]; then
         source "${COMFYUI_VENV_DIR}/bin/activate"
-        pip_install ${PIP_PACKAGES[@]}
+        for package in "${PIP_PACKAGES[@]}"; do
+            if ! pip show "$package" > /dev/null 2>&1; then
+                echo "$package is not installed. Installing now..."
+                pip install "$package"
+            else
+                echo "$package is already installed."
+            fi
+        done
     fi
 }
 
