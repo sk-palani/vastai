@@ -122,6 +122,7 @@ NODES=(
     "https://github.com/quasiblob/ComfyUI-EsesImageCompare"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
     "https://github.com/orion4d/ComfyUI_SharpnessPro"
+    "https://github.com/HECer/ComfyUI-FilePathCreator"
     "https://github.com/sk-palani/ComfyUI_Simpler"
 )
 
