@@ -8,7 +8,18 @@ workflows_dir=${WORKSPACE}/ComfyUI/user/default/workflows
 
 mkdir -p "${WORKSPACE}environments/python/comfyui"
 cd "${WORKSPACE}environments/python/"
-/usr/bin/python3 -m venv comfyui
+
+# Check and install python3.12 python3.12-venv
+# Check if python3.12 and python3.12-venv are installed
+if ! dpkg -l | grep -qw python3.12 || ! dpkg -l | grep -qw python3.12-venv; then
+    echo "python3.12 or python3.12-venv is not installed. Installing now..."
+    sudo apt update && sudo apt install -y python3.12 python3.12-venv
+else
+    echo "python3.12 and python3.12-venv are already installed."
+fi
+
+
+/usr/bin/python3.12 -m venv comfyui
 
 #/usr/bin/python3 -m venv serviceportal
 #/usr/bin/python3 -m venv api
@@ -187,7 +198,8 @@ UNET_MODELS=(
 
 VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
-    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux-vae-bf16.safetensors"
+#    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux-vae-bf16.safetensors"
+#    "https://civitai.com/api/download/models/1749336?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 LORA_MODELS=(
@@ -280,6 +292,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1612200?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 # SlickedBackHighPonyTail_Flux.safetensors
     "https://civitai.com/api/download/models/2252207?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#Detailed_imperfect_skin_faces_and_torso_for_FLUX-000025.safetensors
+    "https://civitai.com/api/download/models/1066446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
