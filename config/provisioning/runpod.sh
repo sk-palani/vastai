@@ -222,9 +222,9 @@ LORA_MODELS=(
 #    "https://huggingface.co/Fantasyworld/Skin_tone_slider_Flux1.d/resolve/main/Skin_Tone_Slider_flux_v1.safetensors?&token=${HF_TOKEN}"
 
 #ILLUSTRATION (FLUX) - V3.1.safetensors
-
     "https://civitai.com/api/download/models/1319198?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-
+#Illustration Comic book_(FLUX)_06.safetensors
+    "https://civitai.com/api/download/models/1815533?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #aidmaRealisticSkin-FLUX-v0.1.safetensors
     "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
