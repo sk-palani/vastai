@@ -295,6 +295,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2252207?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #Detailed_imperfect_skin_faces_and_torso_for_FLUX-000025.safetensors
     "https://civitai.com/api/download/models/1066446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#HASSELBLAD_x2d.safetensors
+    "https://civitai.com/api/download/models/2326452?type=Model&format=SafeTensor&token=${CIVITAI_TOKE}"
 
 )
 
@@ -616,3 +618,5 @@ fi
 /workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
 #opencv-contrib-python
 provisioning_get_default_workflow
+
+## while loop to check queue every 60 seconds
