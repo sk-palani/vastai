@@ -40,6 +40,7 @@ APT_PACKAGES=(
     "axel"
     "screen"
     "tree"
+    "ncdu"
 )
 
 #apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
@@ -188,14 +189,9 @@ MP3=(
 
 
 UNET_MODELS=(
-#    "https://civitai.com/api/download/models/722620?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/1756326?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/1769925?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
-#    "https://civitai.com/api/download/models/1479339?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
-#    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-#    "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
-#"https://civitai.com/api/download/models/2080064?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
-  "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+#   "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
+#  "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 )
 
 VAE_MODELS=(
@@ -297,7 +293,11 @@ LORA_MODELS=(
 #Detailed_imperfect_skin_faces_and_torso_for_FLUX-000025.safetensors
     "https://civitai.com/api/download/models/1066446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #HASSELBLAD_x2d.safetensors
-    "https://civitai.com/api/download/models/2326452?type=Model&format=SafeTensor&token=${CIVITAI_TOKE}"
+    "https://civitai.com/api/download/models/2326452?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#FLUX.1-Turbo-Alpha.safetensors
+    "https://civitai.com/api/download/models/981081?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    "https://huggingface.co/ali-vilab/ACE_Plus/resolve/main/portrait/comfyui_portrait_lora64.safetensors"
 
 )
 
