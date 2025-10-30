@@ -41,6 +41,7 @@ APT_PACKAGES=(
     "screen"
     "tree"
     "ncdu"
+    "sosat"
 )
 
 #apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
@@ -621,3 +622,8 @@ fi
 provisioning_get_default_workflow
 
 ## while loop to check queue every 60 seconds
+
+
+nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:18188 &
+nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:1111 &
+nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
