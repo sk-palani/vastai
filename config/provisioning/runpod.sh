@@ -41,7 +41,7 @@ APT_PACKAGES=(
     "screen"
     "tree"
     "ncdu"
-    "sosat"
+    "socat"
 )
 
 #apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
@@ -299,7 +299,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/981081?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
     "https://huggingface.co/ali-vilab/ACE_Plus/resolve/main/portrait/comfyui_portrait_lora64.safetensors"
-
+#FLUX-_SFW_Busty.safetensors
+  
 )
 
 
@@ -316,6 +317,7 @@ UPSCALE_MODELS=(
     "https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Superscale-SP_178000_G.pth"
     "https://huggingface.co/mp3pintyo/upscale/resolve/main/4xNomos2_hq_drct-l.pth"
     "https://github.com/starinspace/StarinspaceUpscale/releases/download/Models/4xPurePhoto-span.pth"
+    "https://huggingface.co/notkenski/upscalers/resolve/main/1xSkinContrast-High-SuperUltraCompact.pth"
 )
 
 CONTROLNET_MODELS=(
@@ -619,11 +621,11 @@ fi
 
 /workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
 #opencv-contrib-python
-provisioning_get_default_workflow
+#provisioning_get_default_workflow
 
 ## while loop to check queue every 60 seconds
 
 
-nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:18188 &
-nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:1111 &
+nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
+nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
 nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
