@@ -193,6 +193,7 @@ UNET_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 #   "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
 #  "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
+
 )
 
 VAE_MODELS=(
@@ -299,8 +300,13 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/981081?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
     "https://huggingface.co/ali-vilab/ACE_Plus/resolve/main/portrait/comfyui_portrait_lora64.safetensors"
-#FLUX-_SFW_Busty.safetensors
-  
+#FLUX-_SFW_Busty.
+
+    "https://civitai.com/api/download/models/1003317?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    "https://civitai.com/api/download/models/804967?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    "https://civitai.com/api/download/models/1943855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
