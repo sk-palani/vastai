@@ -850,7 +850,7 @@
   "342"  : {
     "inputs"     : {
       "value1" : 0.72,
-      "value2" : 0.56
+      "value2" : 0.76
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
