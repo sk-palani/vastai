@@ -19,19 +19,19 @@ echo "[$LOG_TS] 🎲 Using random seed: $random_seed"
 # --- Identify removable node types ---
 REMOVE_TYPES='["PreviewAny", "ShowText|pysssss"]'
 
-# --- List nodes matching removal types ---
-echo "[$LOG_TS] 🔍 Checking for removable nodes..."
-removable_nodes=$(jq -r --argjson types "$REMOVE_TYPES" '
-  to_entries[]
-  | select(.value.class_type as $ct | $types | index($ct))
-  | .key
-' "$WORKFLOW_FILE")
-
-if [ -n "$removable_nodes" ]; then
-  echo "[$LOG_TS] 🧹 Found nodes to remove: $removable_nodes"
-else
-  echo "[$LOG_TS] ✅ No removable nodes found."
-fi
+## --- List nodes matching removal types ---
+#echo "[$LOG_TS] 🔍 Checking for removable nodes..."
+#removable_nodes=$(jq -r --argjson types "$REMOVE_TYPES" '
+#  to_entries[]
+#  | select(.value.class_type as $ct | $types | index($ct))
+#  | .key
+#' "$WORKFLOW_FILE")
+#
+#if [ -n "$removable_nodes" ]; then
+#  echo "[$LOG_TS] 🧹 Found nodes to remove: $removable_nodes"
+#else
+#  echo "[$LOG_TS] ✅ No removable nodes found."
+#fi
 
 # --- Process workflow: replace numeric seeds & remove unwanted nodes ---
 jq --argjson new_seed "$random_seed" --argjson types "$REMOVE_TYPES" '
