@@ -42,6 +42,7 @@ APT_PACKAGES=(
     "tree"
     "ncdu"
     "socat"
+    "cron"
 )
 
 #apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
@@ -301,12 +302,14 @@ LORA_MODELS=(
 
     "https://huggingface.co/ali-vilab/ACE_Plus/resolve/main/portrait/comfyui_portrait_lora64.safetensors"
 #FLUX-_SFW_Busty.
-
+#Detailed_Hands-000001.safetensors.0
     "https://civitai.com/api/download/models/1003317?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-
+#Hand v2.safetensors
     "https://civitai.com/api/download/models/804967?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-
+#Pandora-RAWr.safetensors
     "https://civitai.com/api/download/models/1943855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#face-detailer.safetensors
+    "https://civitai.com/api/download/models/1875852?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
