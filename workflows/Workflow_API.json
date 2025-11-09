@@ -1740,7 +1740,7 @@
     "inputs"     : {
       "text1"     : "detailed fabric texture",
       "text2"     : [
-        "110",
+        "485",
         0
       ],
       "text3"     : "translucent elements in the intricate outfit with see though sleeves, showing the profile of the 36DD Cup size  bra wearing underneath.",
@@ -1862,7 +1862,7 @@
   },
   "1285" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "+",
       "source"  : [
         "296",
         0
@@ -1875,7 +1875,7 @@
   },
   "1286" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "+",
       "source"  : [
         "293",
         0
@@ -1888,7 +1888,7 @@
   },
   "1287" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "False",
       "source"  : [
         "235",
         0
@@ -1901,7 +1901,7 @@
   },
   "1288" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.8",
       "source"  : [
         "2100",
         0
@@ -1914,7 +1914,7 @@
   },
   "1289" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.54",
       "source"  : [
         "2102",
         0
@@ -1927,7 +1927,7 @@
   },
   "1294" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.1454544",
       "source"  : [
         "622",
         0
@@ -1940,7 +1940,7 @@
   },
   "1295" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0",
       "source"  : [
         "2103",
         0
@@ -1953,7 +1953,7 @@
   },
   "1306" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0",
       "source"  : [
         "1595",
         0
@@ -2050,7 +2050,7 @@
   },
   "1354" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "True",
       "source"  : [
         "124",
         0
@@ -2937,7 +2937,7 @@
   },
   "1869" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.612",
       "source"  : [
         "2541",
         0
@@ -4850,7 +4850,7 @@
   },
   "2226" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "True",
       "source"  : [
         "325",
         0
@@ -4910,7 +4910,7 @@
   },
   "2233" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "388317164217057",
       "source"  : [
         "2240",
         0
@@ -5181,7 +5181,7 @@
   "2257" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.85,
       "strength_clip"  : 0.6,
       "model"          : [
         "2287",
@@ -5247,7 +5247,7 @@
   "2268" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.4,
+      "strength_model" : 1.9,
       "strength_clip"  : 0.8,
       "model"          : [
         "2267",
@@ -6031,7 +6031,7 @@
       ],
       "steps"              : 23,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
       "denoise"            : [
         "2553",
@@ -6677,7 +6677,7 @@
         0
       ],
       "text_b"           : [
-        "25",
+        "484",
         0
       ],
       "text_c"           : [
@@ -6693,7 +6693,7 @@
   "2590" : {
     "inputs"     : {
       "prompt"           : [
-        "516",
+        "515",
         0
       ],
       "camera"           : "Fujifilm X-T5",
@@ -6759,7 +6759,7 @@
         0
       ],
       "text2"     : [
-        "573",
+        "788",
         0
       ],
       "text3"     : [
@@ -7230,7 +7230,7 @@
       "find"    : "image",
       "replace" : "photo",
       "text"    : [
-        "2736",
+        "2734",
         0
       ]
     },

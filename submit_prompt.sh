@@ -1,5 +1,12 @@
 #!/bin/bash
 set -e
+# --- Skip execution if .skip file exists ---
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$SCRIPT_DIR/.skip" ]; then
+  LOG_TS=$(date '+%Y-%m-%d %H:%M:%S')
+  echo "[$LOG_TS] ⚠️  Skip file detected at $SCRIPT_DIR/.skip — skipping execution."
+  exit 0
+fi
 
 # --- Configuration ---
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
