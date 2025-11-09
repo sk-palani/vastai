@@ -33,22 +33,30 @@ REMOVE_TYPES='["PreviewAny", "ShowText|pysssss"]'
 #  echo "[$LOG_TS] ✅ No removable nodes found."
 #fi
 
-# --- Process workflow: replace numeric seeds & remove unwanted nodes ---
-jq --argjson new_seed "$random_seed" --argjson types "$REMOVE_TYPES" '
-  . as $root
-  | walk(
+TMP_FILE="$(mktemp)"
+# --- Replace numeric seeds ---
+jq --argjson new_seed "$random_seed" '
+  walk(
     if type == "object" and has("seed") and (.seed | type) == "number"
     then .seed = $new_seed
     else .
     end
   )
-  | delpaths(
-      [paths
-        | select(.[-2] == "class_type" and (getpath(.) | IN($types[])))
-        | .[0:1]
-      ]
-    )
 ' "$WORKFLOW_FILE" > "$UPDATED_FILE"
+
+# --- Remove unwanted nodes ---
+jq '
+  delpaths(
+    [ paths as $p
+      | select(
+          ($p | last) == "class_type"
+          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|pysssss")
+        )
+      | $p[:-1]
+    ]
+  )
+' "$UPDATED_FILE" > "$TMP_FILE" && mv "$TMP_FILE" "$UPDATED_FILE"
+
 
 echo "[$LOG_TS] 🔄 Updated seeds and removed unwanted nodes in $UPDATED_FILE"
 
