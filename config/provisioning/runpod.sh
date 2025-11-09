@@ -327,6 +327,7 @@ UPSCALE_MODELS=(
     "https://huggingface.co/mp3pintyo/upscale/resolve/main/4xNomos2_hq_drct-l.pth"
     "https://github.com/starinspace/StarinspaceUpscale/releases/download/Models/4xPurePhoto-span.pth"
     "https://huggingface.co/notkenski/upscalers/resolve/main/1xSkinContrast-High-SuperUltraCompact.pth"
+    "https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NickelbackFS_72000_G.pth"
 )
 
 CONTROLNET_MODELS=(
@@ -347,6 +348,8 @@ ULTRALYTICS_SEGS_MODELS=(
 
 ULTRALYTICS_BBOX_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
+  "https://huggingface.co/ashllay/YOLO_Models/resolve/main/bbox/Eyeful_v2-Paired.pt"
+  "https://huggingface.co/ashllay/YOLO_Models/resolve/main/bbox/face_yolov8m.pt"
 )
 
 SAM_MODELS=(

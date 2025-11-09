@@ -859,7 +859,7 @@
   },
   "343"  : {
     "inputs"     : {
-      "value1" : 0.37,
+      "value1" : 0.52,
       "value2" : 0.37
     },
     "class_type" : "SeargeFloatPair",
@@ -1205,7 +1205,7 @@
   },
   "496"  : {
     "inputs"     : {
-      "text" : "fluxenhancer, aidmaimageupgrader"
+      "text" : "aidmafluxproultra, aidmaimageupgrader"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1232,7 +1232,7 @@
   },
   "511"  : {
     "inputs"     : {
-      "text_0" : "The subject is having a seductive facial expression",
+      "text_0" : "The subject is having a loving facial expression",
       "text"   : [
         "2555",
         0
@@ -1290,7 +1290,7 @@
   },
   "516"  : {
     "inputs"     : {
-      "text_0" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen.\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n\ndark pimple marks in the left cheek, tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a seductive facial expression",
+      "text_0" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen.\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n\ndark pimple marks in the left cheek, tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a loving facial expression",
       "text"   : [
         "515",
         0
@@ -1889,7 +1889,7 @@
   },
   "1288" : {
     "inputs"     : {
-      "preview" : "0.8",
+      "preview" : "0.52",
       "source"  : [
         "2100",
         0
@@ -1902,7 +1902,7 @@
   },
   "1289" : {
     "inputs"     : {
-      "preview" : "0.56",
+      "preview" : "0.72",
       "source"  : [
         "2102",
         0
@@ -1915,7 +1915,7 @@
   },
   "1294" : {
     "inputs"     : {
-      "preview" : "0.1454544",
+      "preview" : "0.09454536000000001",
       "source"  : [
         "622",
         0
@@ -2854,7 +2854,7 @@
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
-        "2540",
+        "2290",
         0
       ]
     },
@@ -3738,8 +3738,8 @@
   "2079" : {
     "inputs"     : {
       "invert_mask" : true,
-      "grow"        : 4,
-      "blur"        : 6,
+      "grow"        : 3,
+      "blur"        : 5,
       "mask"        : [
         "2072",
         0
@@ -4472,8 +4472,8 @@
   },
   "2239" : {
     "inputs"     : {
-      "clip_name1" : "t5xxl_fp16.safetensors",
-      "clip_name2" : "clip_l.safetensors",
+      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
     },
@@ -4824,7 +4824,7 @@
   },
   "2275" : {
     "inputs"     : {
-      "lora_name"      : "flux_vividizer.safetensors",
+      "lora_name"      : "aidmaFluxProUltra-FLUX-v0.1.safetensors",
       "strength_model" : 0.4,
       "strength_clip"  : 0,
       "model"          : [
@@ -4935,7 +4935,7 @@
   },
   "2290" : {
     "inputs"     : {
-      "sampler_name" : "euler"
+      "sampler_name" : "euler_ancestral"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
