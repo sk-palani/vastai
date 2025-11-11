@@ -57,7 +57,7 @@ jq '
     [ paths as $p
       | select(
           ($p | last) == "class_type"
-          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|pysssss")
+          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|pysssss" or getpath($p) == "Image Comparer (rgthree)")
         )
       | $p[:-1]
     ]
