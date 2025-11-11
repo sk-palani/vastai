@@ -70,7 +70,7 @@ echo "[$LOG_TS] 🔄 Updated seeds and removed unwanted nodes in $UPDATED_FILE"
 # --- Check queue status ---
 total=$(curl -s "$URL/queue" | jq '[.queue_running, .queue_pending] | add | length')
 
-if [ "$total" -gt 0 ]; then
+if [ "$total" -gt 1 ]; then
   echo "[$LOG_TS] 🚫 Queue not empty (total: $total). Skipping submission."
   echo "[$LOG_TS] === End ==="
   exit 0
