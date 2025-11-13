@@ -1463,7 +1463,7 @@
       "steps"              : 24,
       "cfg"                : 1,
       "sampler_name"       : "euler",
-      "scheduler"          : "simple",
+      "scheduler"          : "beta",
       "denoise"            : 0.42,
       "feather"            : 5,
       "noise_mask"         : true,
@@ -1836,8 +1836,8 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2213",
-        0
+        "2695",
+        1
       ]
     },
     "class_type" : "CLIPTextEncode",
@@ -1857,8 +1857,8 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2213",
-        0
+        "2695",
+        1
       ]
     },
     "class_type" : "CLIPTextEncodeFlux",
@@ -3567,12 +3567,12 @@
   },
   "1899" : {
     "inputs"     : {
-      "max_shift"  : 1.45,
+      "max_shift"  : 1.4,
       "base_shift" : 0.45,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2224",
+        "2695",
         0
       ]
     },
@@ -3593,7 +3593,7 @@
   },
   "1909" : {
     "inputs"     : {
-      "dishonesty_factor" : -0.04,
+      "dishonesty_factor" : -0.03,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4097,8 +4097,8 @@
   },
   "2032" : {
     "inputs"     : {
-      "max_shift"  : 1.15,
-      "base_shift" : 0.5,
+      "max_shift"  : 1.2,
+      "base_shift" : 0.4,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -4595,7 +4595,7 @@
       "x_offset"       : 0,
       "y_offset"       : 0,
       "rotation"       : 0,
-      "opacity"        : 6,
+      "opacity"        : 8,
       "base_image"     : [
         "2066",
         0
@@ -5413,7 +5413,7 @@
   },
   "2239" : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
@@ -5914,7 +5914,7 @@
   },
   "2290" : {
     "inputs"     : {
-      "sampler_name" : "euler_ancestral"
+      "sampler_name" : "euler"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
@@ -6247,7 +6247,7 @@
   },
   "2328" : {
     "inputs"     : {
-      "megapixel"     : "1.9",
+      "megapixel"     : "2.0",
       "divisible_by"  : "64",
       "mode"          : "pad",
       "delta_percent" : 0.5,
@@ -6543,7 +6543,7 @@
   "2362" : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : false,
+      "guide_size_for"     : true,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
@@ -6551,7 +6551,7 @@
       ],
       "steps"              : 23,
       "cfg"                : 1,
-      "sampler_name"       : "euler_ancestral",
+      "sampler_name"       : "euler",
       "scheduler"          : "beta",
       "denoise"            : [
         "2553",
@@ -7504,14 +7504,14 @@
   "2666" : {
     "inputs"     : {
       "detail_amount"      : 0.2,
-      "start"              : 0.5,
+      "start"              : 0.35,
       "end"                : 0.75,
       "bias"               : 0.5,
       "exponent"           : 0.8,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : true,
+      "smooth"             : false,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "1909",
@@ -8369,7 +8369,7 @@
   },
   "2830" : {
     "inputs"     : {
-      "expand"          : 20,
+      "expand"          : 10,
       "tapered_corners" : true,
       "mask"            : [
         "2815",
@@ -8468,7 +8468,7 @@
       ],
       "steps"              : 23,
       "cfg"                : 1,
-      "sampler_name"       : "euler_ancestral",
+      "sampler_name"       : "euler",
       "scheduler"          : "beta",
       "denoise"            : [
         "2843",
