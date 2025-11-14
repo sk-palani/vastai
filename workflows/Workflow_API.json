@@ -946,7 +946,7 @@
   "342"  : {
     "inputs"     : {
       "value1" : 0.72,
-      "value2" : 0.54
+      "value2" : 0.56
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -1699,7 +1699,7 @@
   "623"  : {
     "inputs"     : {
       "value1" : 0.94,
-      "value2" : 0.8
+      "value2" : 0.82
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -2252,7 +2252,7 @@
   },
   "1288" : {
     "inputs"     : {
-      "preview" : "0.8",
+      "preview" : "0.82",
       "source"  : [
         "2100",
         0
@@ -2265,7 +2265,7 @@
   },
   "1289" : {
     "inputs"     : {
-      "preview" : "0.54",
+      "preview" : "0.56",
       "source"  : [
         "2102",
         0
@@ -2936,7 +2936,7 @@
   },
   "1740" : {
     "inputs"     : {
-      "value" : 1.46
+      "value" : 1.47
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -3380,7 +3380,7 @@
   },
   "1869" : {
     "inputs"     : {
-      "preview" : "0.604",
+      "preview" : "0.619",
       "source"  : [
         "2541",
         0
@@ -5475,7 +5475,7 @@
   "2247" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 1,
       "strength_clip"  : 0,
       "model"          : [
         "2287",
@@ -5767,7 +5767,7 @@
     "inputs"     : {
       "lora_name"      : "AntiBlur.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 1.0000000000000002,
+      "strength_clip"  : 1.0,
       "model"          : [
         "2287",
         0
@@ -6247,10 +6247,10 @@
   },
   "2328" : {
     "inputs"     : {
-      "megapixel"     : "2.0",
-      "divisible_by"  : "64",
+      "megapixel"     : "2.1",
+      "divisible_by"  : "8",
       "mode"          : "pad",
-      "delta_percent" : 0.5,
+      "delta_percent" : 1,
       "image"         : [
         "2321",
         0
@@ -6265,7 +6265,7 @@
     "inputs"     : {
       "scheduler" : "beta",
       "steps"     : 18,
-      "denoise"   : 0.26,
+      "denoise"   : 0.27,
       "model"     : [
         "2618",
         0
@@ -6298,7 +6298,7 @@
       "seam_fix_width"      : 64,
       "seam_fix_mask_blur"  : 8,
       "seam_fix_padding"    : 16,
-      "force_uniform_tiles" : false,
+      "force_uniform_tiles" : true,
       "tiled_decode"        : false,
       "image"               : [
         "2165",
@@ -6549,7 +6549,7 @@
         "2212",
         0
       ],
-      "steps"              : 23,
+      "steps"              : 20,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -7064,7 +7064,7 @@
         "2102",
         0
       ],
-      "b"         : 0.95,
+      "b"         : 0.86,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -7105,8 +7105,8 @@
   "2560" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.65,
-      "strength_clip"  : 0.65,
+      "strength_model" : 1,
+      "strength_clip"  : 1,
       "model"          : [
         "2257",
         0
@@ -7118,7 +7118,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "Pandora-RAWr 0.65::0.65"
     }
   },
   "2567" : {
@@ -7591,8 +7591,8 @@
       "brightness" : 0,
       "contrast"   : 0,
       "saturation" : 0,
-      "red"        : 27,
-      "green"      : 17,
+      "red"        : 18,
+      "green"      : 6,
       "blue"       : 0,
       "mode"       : "RGB",
       "image"      : [
@@ -7640,7 +7640,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "Pandora-RAWr 1.0 :: 1.0"
     }
   },
   "2703" : {
