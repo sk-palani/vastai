@@ -31,6 +31,7 @@ source "${COMFYUI_VENV_DIR}/bin/activate"
 
 DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/flux-comfyui-example.json"
 DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/Workflow_API.json"
+CRON_SCRIPT="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/submit_prompt.sh"
 
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm"
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
@@ -313,6 +314,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1875852?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #FC Flux Perfect Busts.safetensors
     "https://civitai.com/api/download/models/1782533?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#d351_Coffee_Krea_Kohya_V1_Unchained_prodigy-000012.safetensors
+    "https://civitai.com/api/download/models/2402710?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -520,6 +523,10 @@ function provisioning_get_workflows() {
 
 function provisioning_get_default_workflow() {
     mkdir -p "${COMFYUI_DIR}/web/scripts"
+    mkdir -p "${COMFYUI_DIR}/scripts"
+    curl -L -o "${COMFYUI_DIR}/scripts/submit_prompt.sh" "${CRON_SCRIPT}"
+    curl -L -o "${COMFYUI_DIR}/scripts/Workflow_API.json" "${DEFAULT_WORKFLOW}"
+
     if [[ -n $DEFAULT_WORKFLOW ]]; then
         workflow_json=$(curl -s "$DEFAULT_WORKFLOW")
         if [[ -n $workflow_json ]]; then
@@ -644,3 +651,12 @@ fi
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
 nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
 nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
+
+JOB="* * * * * ${WORKSPACE}/scripts/submit_prompt.sh >> ${WORKSPACE}/crontab.log"
+
+crontab -l 2>/dev/null | {
+    grep -q "${WORKSPACE}/scripts/submit_prompt.sh" || echo "${JOB}"
+} | crontab -
+
+
+service  cron start
