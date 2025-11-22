@@ -522,10 +522,10 @@ function provisioning_get_workflows() {
 }
 
 function provisioning_get_default_workflow() {
-    mkdir -p "${COMFYUI_DIR}/web/scripts"
-    mkdir -p "${COMFYUI_DIR}/scripts"
-    curl -L -o "${COMFYUI_DIR}/scripts/submit_prompt.sh" "${CRON_SCRIPT}"
-    curl -L -o "${COMFYUI_DIR}/scripts/Workflow_API.json" "${DEFAULT_WORKFLOW}"
+    mkdir -p "${WORKSPACE}/web/scripts"
+    mkdir -p "${WORKSPACE}/scripts"
+    curl -L -o "${WORKSPACE}/scripts/submit_prompt.sh" "${CRON_SCRIPT}"
+    curl -L -o "${WORKSPACE}/scripts/Workflow_API.json" "${DEFAULT_WORKFLOW}"
 
     if [[ -n $DEFAULT_WORKFLOW ]]; then
         workflow_json=$(curl -s "$DEFAULT_WORKFLOW")
