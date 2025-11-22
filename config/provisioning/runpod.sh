@@ -658,5 +658,11 @@ crontab -l 2>/dev/null | {
     grep -q "${WORKSPACE}/scripts/submit_prompt.sh" || echo "${JOB}"
 } | crontab -
 
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
+supervisorctl stop 'jupyter'
+
 
 service  cron start
