@@ -175,6 +175,10 @@
       "pixels" : [
         "2303",
         0
+      ],
+      "vae"    : [
+        "2288",
+        0
       ]
     },
     "class_type" : "VAEEncode",
