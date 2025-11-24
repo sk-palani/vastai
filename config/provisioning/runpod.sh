@@ -665,4 +665,4 @@ supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
 supervisorctl stop 'jupyter'
 
 
-service  cron start
+service  cron start &
