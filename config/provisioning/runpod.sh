@@ -643,7 +643,7 @@ fi
 
 /workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
 #opencv-contrib-python
-#provisioning_get_default_workflow
+provisioning_get_default_workflow
 
 ## while loop to check queue every 60 seconds
 
@@ -658,11 +658,13 @@ crontab -l 2>/dev/null | {
     grep -q "${WORKSPACE}/scripts/submit_prompt.sh" || echo "${JOB}"
 } | crontab -
 
+
+service cron start &
+
+
+
 supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
 supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
 supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
 supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
 supervisorctl stop 'jupyter'
-
-
-service  cron start &
