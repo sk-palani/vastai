@@ -1,7 +1,7 @@
 {
   "25"   : {
     "inputs"     : {
-      "text_0" : "The image shows a person with dark, neatly styled hair in a partial braid, wearing a sleeveless white top. They are positioned in front of a background that features shelves with various decorative items, such as small figurines and framed pictures. The camera angle appears to be slightly tilted downwards, focusing on the person's upper body. The individual is wearing a gold ring on their hand, and their makeup includes defined eyebrows, a glossy smile, and red lipstick. The overall ambiance suggests a casual or personal setting, with the person appearing to be engaged in a moment of interaction or self-expression.",
+      "text_0" : "The image shows a woman standing in front of a glass wall, wearing a red dress with a square neckline and elbow-length sleeves. Her hair is long and wavy, cascading over her shoulders. She is wearing subtle makeup with defined eyeliner, mascara, and a bold red lipstick. The woman's eyes are open, and she has a neutral expression. The background consists of a reflective glass wall, creating a mirrored effect that doubles the visual elements of the image. The overall setting appears to be modern and urban, with a muted, overcast sky visible through the glass.",
       "text"   : [
         "484",
         0
@@ -123,7 +123,7 @@
   },
   "110"  : {
     "inputs"     : {
-      "text_0" : "The person in the photo is wearing a sleeveless white top made of a ribbed fabric. The top appears to have a fitted design, hugging the body closely. The material seems soft and comfortable, likely cotton or a cotton blend. The top has a simple and classic design, suitable for casual or semi-formal occasions.",
+      "text_0" : "The outfit in the photo is a deep red, floor-length dress with a square neckline and short sleeves. The material appears to be a smooth, possibly stretchy fabric, likely made of a blend of cotton and polyester for comfort and flexibility. The fit of the dress is tailored, hugging the body in a structured manner, creating a flattering silhouette.",
       "text"   : [
         "485",
         0
@@ -650,7 +650,7 @@
   },
   "286"  : {
     "inputs"     : {
-      "value" : true
+      "value" : false
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -1232,7 +1232,7 @@
   },
   "511"  : {
     "inputs"     : {
-      "text_0" : "The subject is having a shy facial expression",
+      "text_0" : "The subject is having a pouting facial expression",
       "text"   : [
         "2555",
         0
@@ -1259,7 +1259,7 @@
   },
   "514"  : {
     "inputs"     : {
-      "text_0" : "the subject is portrayed at 15 years of age,  ",
+      "text_0" : "the subject is portrayed at 23 years of age,  ",
       "text"   : [
         "271",
         0
@@ -1290,7 +1290,7 @@
   },
   "516"  : {
     "inputs"     : {
-      "text_0" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a shy facial expression",
+      "text_0" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a pouting facial expression",
       "text"   : [
         "515",
         0
@@ -1381,7 +1381,7 @@
   },
   "570"  : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/Best/IMG_20251125_080747_653.jpg",
+      "text_0" : "Inputs/Next/IMG_20251126_084248_199.jpg",
       "text"   : [
         "1806",
         3
@@ -1406,7 +1406,7 @@
   },
   "573"  : {
     "inputs"     : {
-      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 young girl with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 15 years of age,,The photo shows a person with dark, neatly styled hair in a partial braid, wearing a sleeveless white top. They are positioned in front of a background that features shelves with various decorative items, such as small figurines and framed pictures. The camera angle appears to be slightly tilted downwards, focusing on the person's upper body. The individual is wearing a gold ring on their hand, and their makeup includes defined eyebrows, a glossy smile, and red lipstick. The overall ambiance suggests a casual or personal setting, with the person appearing to be engaged in a moment of interaction or self-expression.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a shy facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors",
+      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 23 years of age,,The photo shows a woman standing in front of a glass wall, wearing a red dress with a square neckline and elbow-length sleeves. Her hair is long and wavy, cascading over her shoulders. She is wearing subtle makeup with defined eyeliner, mascara, and a bold red lipstick. The woman's eyes are open, and she has a neutral expression. The background consists of a reflective glass wall, creating a mirrored effect that doubles the visual elements of the photo. The overall setting appears to be modern and urban, with a muted, overcast sky visible through the glass.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a pouting facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors",
       "text"   : [
         "788",
         0
@@ -1909,7 +1909,7 @@
     },
     "class_type" : "ImageScaleToTotalPixels",
     "_meta"      : {
-      "title" : "Scale Image to Total Pixels"
+      "title" : "ImageScaleToTotalPixels"
     }
   },
   "1281" : {
@@ -2187,12 +2187,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_bclgx_00001_.png&type=temp&subfolder=&rand=0.3828057768376705"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dydvk_00001_.png&type=temp&subfolder=&rand=0.6167302449244433"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_bclgx_00002_.png&type=temp&subfolder=&rand=0.7321589957764025"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dydvk_00002_.png&type=temp&subfolder=&rand=0.09225655521641907"
           }
         ]
       },
@@ -2217,12 +2217,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_hzkmt_00001_.png&type=temp&subfolder=&rand=0.08439812764523191"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ppizi_00001_.png&type=temp&subfolder=&rand=0.3422397216225489"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_hzkmt_00002_.png&type=temp&subfolder=&rand=0.06595918447280269"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ppizi_00002_.png&type=temp&subfolder=&rand=0.40816010930242785"
           }
         ]
       },
@@ -2247,12 +2247,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_roxnq_00001_.png&type=temp&subfolder=&rand=0.9310695957501188"
+            "url"      : "/api/view?filename=rgthree.compare._temp_gjyhy_00001_.png&type=temp&subfolder=&rand=0.2502751219646535"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_roxnq_00002_.png&type=temp&subfolder=&rand=0.08488527174541383"
+            "url"      : "/api/view?filename=rgthree.compare._temp_gjyhy_00002_.png&type=temp&subfolder=&rand=0.6006419618954358"
           }
         ]
       },
@@ -2476,12 +2476,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_xotfc_00001_.png&type=temp&subfolder=&rand=0.7554666489249253"
+            "url"      : "/api/view?filename=rgthree.compare._temp_cxvxc_00001_.png&type=temp&subfolder=&rand=0.03318459017878128"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_xotfc_00002_.png&type=temp&subfolder=&rand=0.20969507621948436"
+            "url"      : "/api/view?filename=rgthree.compare._temp_cxvxc_00002_.png&type=temp&subfolder=&rand=0.013682001004128641"
           }
         ]
       },
@@ -2506,12 +2506,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_dpakf_00001_.png&type=temp&subfolder=&rand=0.5497017305183987"
+            "url"      : "/api/view?filename=rgthree.compare._temp_yxpdl_00001_.png&type=temp&subfolder=&rand=0.5520216030135556"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_dpakf_00002_.png&type=temp&subfolder=&rand=0.745699903999205"
+            "url"      : "/api/view?filename=rgthree.compare._temp_yxpdl_00002_.png&type=temp&subfolder=&rand=0.18225903146127298"
           }
         ]
       },
@@ -2536,12 +2536,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_aqyva_00001_.png&type=temp&subfolder=&rand=0.7449169987489646"
+            "url"      : "/api/view?filename=rgthree.compare._temp_aqyva_00001_.png&type=temp&subfolder=&rand=0.7023575616644507"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_aqyva_00002_.png&type=temp&subfolder=&rand=0.5741247011266893"
+            "url"      : "/api/view?filename=rgthree.compare._temp_aqyva_00002_.png&type=temp&subfolder=&rand=0.09396197715433618"
           }
         ]
       },
@@ -2566,12 +2566,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_dvetf_00001_.png&type=temp&subfolder=&rand=0.1452295682251723"
+            "url"      : "/api/view?filename=rgthree.compare._temp_onkpn_00001_.png&type=temp&subfolder=&rand=0.4359698077660561"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_dvetf_00002_.png&type=temp&subfolder=&rand=0.44600096079198526"
+            "url"      : "/api/view?filename=rgthree.compare._temp_onkpn_00002_.png&type=temp&subfolder=&rand=0.0906330341473428"
           }
         ]
       },
@@ -2596,12 +2596,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_opfxe_00001_.png&type=temp&subfolder=&rand=0.8327299907695406"
+            "url"      : "/api/view?filename=rgthree.compare._temp_yqghz_00001_.png&type=temp&subfolder=&rand=0.7345863516660965"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_opfxe_00002_.png&type=temp&subfolder=&rand=0.3685305159655947"
+            "url"      : "/api/view?filename=rgthree.compare._temp_yqghz_00002_.png&type=temp&subfolder=&rand=0.415421304818957"
           }
         ]
       },
@@ -2669,7 +2669,7 @@
       "ordering_mode"          : "random",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : 166932097808574
+      "seed"                   : -728427055991069
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -2698,7 +2698,7 @@
       "ordering_mode"          : "random",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : 572298060706162
+      "seed"                   : -825064779812975
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -2765,7 +2765,7 @@
   },
   "1815" : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/Best",
+      "text_0" : "Inputs/Next",
       "text"   : [
         "1806",
         2
@@ -2842,7 +2842,7 @@
   },
   "1823" : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/Best/Screenshot_20251125-082254_Threads (1).jpg",
+      "text_0" : "Inputs/Next/IMG_20251126_083104_482.jpg",
       "text"   : [
         "1803",
         3
@@ -2884,7 +2884,7 @@
       "ordering_mode"          : "sequential_by_modified_date",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : -63901014858364
+      "seed"                   : 1122254537135867
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -3236,12 +3236,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_nhprk_00001_.png&type=temp&subfolder=&rand=0.03477680505519576"
+            "url"      : "/api/view?filename=rgthree.compare._temp_zuklh_00001_.png&type=temp&subfolder=&rand=0.8306097832331905"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_nhprk_00002_.png&type=temp&subfolder=&rand=0.4108415042960898"
+            "url"      : "/api/view?filename=rgthree.compare._temp_zuklh_00002_.png&type=temp&subfolder=&rand=0.12445685686261077"
           }
         ]
       },
@@ -3308,7 +3308,7 @@
   },
   "1909" : {
     "inputs"     : {
-      "dishonesty_factor" : -0.02,
+      "dishonesty_factor" : -0.04,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -3638,7 +3638,7 @@
   },
   "1978" : {
     "inputs"     : {
-      "max_shift"  : 1.15,
+      "max_shift"  : 1.5,
       "base_shift" : 0.5,
       "width"      : [
         "445",
@@ -3880,12 +3880,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ejtsb_00001_.png&type=temp&subfolder=&rand=0.0020832569515052413"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ikbsg_00001_.png&type=temp&subfolder=&rand=0.7007851909547227"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ejtsb_00002_.png&type=temp&subfolder=&rand=0.2528404109192718"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ikbsg_00002_.png&type=temp&subfolder=&rand=0.23960276674292924"
           }
         ]
       },
@@ -4193,12 +4193,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_nozlh_00001_.png&type=temp&subfolder=&rand=0.3677760163902446"
+            "url"      : "/api/view?filename=rgthree.compare._temp_rlazs_00001_.png&type=temp&subfolder=&rand=0.02832480915060498"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_nozlh_00002_.png&type=temp&subfolder=&rand=0.6329462092659727"
+            "url"      : "/api/view?filename=rgthree.compare._temp_rlazs_00002_.png&type=temp&subfolder=&rand=0.5921304550560572"
           }
         ]
       },
@@ -4346,12 +4346,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_bdcym_00001_.png&type=temp&subfolder=&rand=0.5528839163741863"
+            "url"      : "/api/view?filename=rgthree.compare._temp_urndt_00001_.png&type=temp&subfolder=&rand=0.44837473431369146"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_bdcym_00002_.png&type=temp&subfolder=&rand=0.22234381335623543"
+            "url"      : "/api/view?filename=rgthree.compare._temp_urndt_00002_.png&type=temp&subfolder=&rand=0.021887645488137042"
           }
         ]
       },
@@ -5091,7 +5091,7 @@
   "2240" : {
     "inputs"     : {
       "mode"       : true,
-      "seed"       : 108436052157589,
+      "seed"       : 384479297671366,
       "fixed_seed" : 0
     },
     "class_type" : "SeedSelector",
@@ -5725,12 +5725,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_tbmsg_00001_.png&type=temp&subfolder=&rand=0.42867152801186514"
+            "url"      : "/api/view?filename=rgthree.compare._temp_kxfgj_00001_.png&type=temp&subfolder=&rand=0.025818970745877134"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_tbmsg_00002_.png&type=temp&subfolder=&rand=0.24987736468041255"
+            "url"      : "/api/view?filename=rgthree.compare._temp_kxfgj_00002_.png&type=temp&subfolder=&rand=0.31824973207013707"
           }
         ]
       },
@@ -5789,7 +5789,7 @@
   },
   "2328" : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : 0.5,
@@ -5973,12 +5973,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kkpqq_00001_.png&type=temp&subfolder=&rand=0.38324918439575284"
+            "url"      : "/api/view?filename=rgthree.compare._temp_pxibu_00001_.png&type=temp&subfolder=&rand=0.42114072001554237"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kkpqq_00002_.png&type=temp&subfolder=&rand=0.7923287357201945"
+            "url"      : "/api/view?filename=rgthree.compare._temp_pxibu_00002_.png&type=temp&subfolder=&rand=0.29104901776194847"
           }
         ]
       },
@@ -6072,7 +6072,7 @@
         "2212",
         0
       ],
-      "steps"              : 12,
+      "steps"              : 21,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -6254,12 +6254,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00001_.png&type=temp&subfolder=&rand=0.6352291772295784"
+            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00001_.png&type=temp&subfolder=&rand=0.2211496324112413"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00002_.png&type=temp&subfolder=&rand=0.4269408421465757"
+            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00002_.png&type=temp&subfolder=&rand=0.22186804952240768"
           }
         ]
       },
@@ -6508,7 +6508,7 @@
         "1955",
         0
       ],
-      "b"         : 0.79,
+      "b"         : 0.62,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6772,7 +6772,7 @@
   },
   "2599" : {
     "inputs"     : {
-      "text_0" : "professionally color-graded RAW photograph, 15 years old  Indian v1dhya5 busty young girl,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, ",
+      "text_0" : "professionally color-graded RAW photograph, 23 years old  Indian v1dhya5 busty woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, ",
       "text"   : [
         "2106",
         0
@@ -6806,7 +6806,7 @@
   },
   "2608" : {
     "inputs"     : {
-      "text_0" : "professionally color-graded RAW photograph, 15 years old  Indian v1dhya5 busty young girl,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, /n_________________________/nA professionally color-graded photograph of Indian v1dhya5 young girl with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 15 years of age,,The photo shows a person with dark, neatly styled hair in a partial braid, wearing a sleeveless white top. They are positioned in front of a background that features shelves with various decorative items, such as small figurines and framed pictures. The camera angle appears to be slightly tilted downwards, focusing on the person's upper body. The individual is wearing a gold ring on their hand, and their makeup includes defined eyebrows, a glossy smile, and red lipstick. The overall ambiance suggests a casual or personal setting, with the person appearing to be engaged in a moment of interaction or self-expression.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a shy facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors/n_________________________/ndetailed fabric texture,The person in the photo is wearing a sleeveless white top made of a ribbed fabric. The top appears to have a fitted design, hugging the body closely. The material seems soft and comfortable, likely cotton or a cotton blend. The top has a simple and classic design, suitable for casual or semi-formal occasions.,slightly translucent elements in the intricate outfit with see though sleeves, showing the profile of the 36DD Cup size  bra wearing underneath.",
+      "text_0" : "professionally color-graded RAW photograph, 23 years old  Indian v1dhya5 busty woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, /n_________________________/nA professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 23 years of age,,The photo shows a woman standing in front of a glass wall, wearing a red dress with a square neckline and elbow-length sleeves. Her hair is long and wavy, cascading over her shoulders. She is wearing subtle makeup with defined eyeliner, mascara, and a bold red lipstick. The woman's eyes are open, and she has a neutral expression. The background consists of a reflective glass wall, creating a mirrored effect that doubles the visual elements of the photo. The overall setting appears to be modern and urban, with a muted, overcast sky visible through the glass.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a pouting facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors/n_________________________/ndetailed fabric texture,The outfit in the photo is a deep red, floor-length dress with a square neckline and short sleeves. The material appears to be a smooth, possibly stretchy fabric, likely made of a blend of cotton and polyester for comfort and flexibility. The fit of the dress is tailored, hugging the body in a structured manner, creating a flattering silhouette.,slightly translucent elements in the intricate outfit with see though sleeves, showing the profile of the 36DD Cup size  bra wearing underneath.",
       "text"   : [
         "2605",
         0
@@ -7268,12 +7268,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ohklp_00001_.png&type=temp&subfolder=&rand=0.12858871060457822"
+            "url"      : "/api/view?filename=rgthree.compare._temp_lxgpn_00001_.png&type=temp&subfolder=&rand=0.8878057190339189"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ohklp_00002_.png&type=temp&subfolder=&rand=0.5142650244684523"
+            "url"      : "/api/view?filename=rgthree.compare._temp_lxgpn_00002_.png&type=temp&subfolder=&rand=0.677581110006607"
           }
         ]
       },
@@ -7359,7 +7359,7 @@
   },
   "2736" : {
     "inputs"     : {
-      "text_0" : "The subject has a joyful expression, with a smile and closed eyes, indicating happiness or contentment. Their hair is styled in a neat braid, with a blue hair tie on one side. They are wearing a sleeveless white top, and a ring on their right hand. The make-up is subtle, with a natural look, enhancing their features gently. Their eyes are slightly narrowed, giving a sense of natural expression, and they have a hint of lipstick on their lips, adding a touch of color. The overall appearance is casual and cheerful, suggesting a relaxed or happy moment.",
+      "text_0" : "The subject in the image has a neutral expression, with her eyes slightly open and her lips closed, giving a calm and composed appearance. Her hair is long and wavy, cascading over her shoulders. She is wearing a simple yet elegant dress in a rich burgundy color, with a square neckline and three-quarter sleeves. The outfit is complemented by minimalistic makeup, with defined eyeliner and mascara enhancing her eyes, and a subtle lipstick that adds a touch of sophistication to her look.",
       "text"   : [
         "2734",
         0
@@ -7429,7 +7429,7 @@
   },
   "2753" : {
     "inputs"     : {
-      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 23 years of age,,The subject is standing with their back to the camera, and their face is not visible in this photo. The hair is long, loose, and appears to be a medium brown color, slightly wavy, and falls down to about the middle of the back. The subject is not wearing any visible jewelry, such as earrings or necklaces. The outfit consists of a white short-sleeve top and a black skirt, along with white socks and white shoes. The overall appearance is casual and suitable for a warm day outdoors.",
+      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 23 years of age,,The subject has a cheerful facial expression with a smile, showing her teeth. Her hair is styled in a neat bun, secured with a blue hairband. She is wearing elegant earrings and a statement necklace. Her outfit is a deep maroon dress with white floral patterns, giving a traditional and stylish look. The makeup is subtle but enhances her features, with a touch of blush and mascara. Her eyes are accentuated with eyeliner, and she has a natural pink lipstick.",
       "text"   : [
         "2754",
         0
@@ -7747,7 +7747,7 @@
   },
   "2893" : {
     "inputs"     : {
-      "clip_name1" : "clip_l.safetensors",
+      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
