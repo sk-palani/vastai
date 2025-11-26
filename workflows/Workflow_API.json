@@ -7244,62 +7244,6 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "2717" : {
-    "inputs"     : {
-      "sam_model"            : "sam_vit_h (2.56GB)",
-      "grounding_dino_model" : "GroundingDINO_SwinT_OGC (694MB)",
-      "threshold"            : 0.6,
-      "detail_method"        : "VITMatte",
-      "detail_erode"         : 6,
-      "detail_dilate"        : 6,
-      "black_point"          : 0.01,
-      "white_point"          : 0.99,
-      "process_detail"       : false,
-      "prompt"               : "watermark",
-      "device"               : "cuda",
-      "max_megapixels"       : 2,
-      "cache_model"          : false,
-      "image"                : [
-        "2165",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: SegmentAnythingUltra V2",
-    "_meta"      : {
-      "title" : "LayerMask: SegmentAnythingUltra V2(Advance)"
-    }
-  },
-  "2719" : {
-    "inputs"     : {
-      "mask_opacity" : 1,
-      "mask_color"   : "255, 0, 227",
-      "pass_through" : false,
-      "image"        : [
-        "2165",
-        0
-      ],
-      "mask"         : [
-        "2717",
-        1
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "2720" : {
-    "inputs"     : {
-      "images" : [
-        "2717",
-        0
-      ]
-    },
-    "class_type" : "PreviewImage",
-    "_meta"      : {
-      "title" : "Preview Image"
-    }
-  },
   "2727" : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
