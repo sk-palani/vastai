@@ -4140,8 +4140,8 @@
   "2079" : {
     "inputs"     : {
       "invert_mask" : true,
-      "grow"        : -6,
-      "blur"        : 5,
+      "grow"        : 6,
+      "blur"        : 10,
       "mask"        : [
         "2072",
         0
@@ -5631,7 +5631,7 @@
   },
   "2328" : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : 0.5,
@@ -7465,7 +7465,7 @@
   },
   "2830" : {
     "inputs"     : {
-      "expand"          : 20,
+      "expand"          : 10,
       "tapered_corners" : true,
       "mask"            : [
         "2815",
@@ -7956,7 +7956,7 @@
   },
   "2893" : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
