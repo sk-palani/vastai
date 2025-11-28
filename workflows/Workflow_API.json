@@ -6122,8 +6122,8 @@
   "2393" : {
     "inputs"     : {
       "scheduler" : "beta",
-      "steps"     : 25,
-      "denoise"   : 0.24,
+      "steps"     : 20,
+      "denoise"   : 0.19,
       "model"     : [
         "2224",
         0
@@ -7545,7 +7545,7 @@
         "2102",
         0
       ],
-      "b"         : 0.95,
+      "b"         : 0.5,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
