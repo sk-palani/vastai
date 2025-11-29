@@ -653,6 +653,7 @@ nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
 nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
 
 # * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
+# * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
 chmod +x ${WORKSPACE}/scripts/submit_prompt.sh
 
 JOB="* * * * * ${WORKSPACE}/scripts/submit_prompt.sh >> ${WORKSPACE}/crontab.log"
