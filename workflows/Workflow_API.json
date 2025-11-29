@@ -1,7 +1,7 @@
 {
   "25"   : {
     "inputs"     : {
-      "text_0" : "The image features a young woman standing confidently in a well-lit room. She is dressed in a stylish beige ensemble consisting of a cropped blazer with gold buttons and matching shorts. She is holding a small beige and brown handbag in her right hand. Her hair is wavy and long, cascading over her shoulders. The background includes a modern, minimalistic design with a marble-patterned wall, a sleek black door, and a vase with pink roses on the left side. The lighting is soft and warm, giving the image a cozy ambiance.",
+      "text_0" : "The photo features a person with long, wavy hair wearing a white sleeveless top, sitting in a dimly lit room. The person is positioned slightly to the right of the frame, with their left arm resting on their knee and their right hand near their chin. They are wearing large hoop earrings and have a contemplative expression, with their eyes slightly downcast. The lighting is soft and creates a moody atmosphere, emphasizing the person's natural features. The background is out of focus, with muted green tones, adding to the intimate and introspective feel of the image.",
       "text"   : [
         "484",
         0
@@ -100,6 +100,31 @@
       "title" : "ConditioningAverage"
     }
   },
+  "53"   : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2906",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "54"   : {
+    "inputs"     : {
+      "conditioning" : [
+        "53",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
   "55"   : {
     "inputs"     : {
       "face_mask"       : true,
@@ -121,9 +146,47 @@
       "title" : "A Person Mask Generator"
     }
   },
+  "88"   : {
+    "inputs"     : {
+      "combined"     : true,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : true,
+      "mask"         : [
+        "898",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "104"  : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : true,
+      "body_mask"       : true,
+      "clothes_mask"    : true,
+      "confidence"      : 0.54,
+      "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
+      "images"          : [
+        "1267",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
   "110"  : {
     "inputs"     : {
-      "text_0" : "The outfit consists of a two-piece set: a short jacket with gold buttons and matching shorts. The jacket is beige with a textured pattern, giving it a sophisticated and elegant look. The shorts are similarly colored and feature gold buttons, matching the jacket. The outfit is accessorized with a small, stylish handbag that is beige with brown accents. The overall style is chic and modern, suitable for a variety of occasions.",
+      "text_0" : "The outfit in the photo is a sleeveless top with a deep neckline. The material appears to be soft and comfortable, possibly cotton or a cotton blend, which is commonly used for casual and everyday wear. The top has a slightly loose fit, providing a relaxed and casual style.",
       "text"   : [
         "485",
         0
@@ -132,6 +195,22 @@
     "class_type" : "ShowText|pysssss",
     "_meta"      : {
       "title" : "Show Text 🐍"
+    }
+  },
+  "113"  : {
+    "inputs"     : {
+      "max_shift"  : 1.35,
+      "base_shift" : 0.15,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2906",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.35::0.50"
     }
   },
   "122"  : {
@@ -756,6 +835,23 @@
       "title" : "Text Concatenate"
     }
   },
+  "313"  : {
+    "inputs"     : {
+      "separator" : ",",
+      "text1"     : [
+        "2011",
+        0
+      ],
+      "text2"     : [
+        "788",
+        0
+      ]
+    },
+    "class_type" : "CR Text Concatenate",
+    "_meta"      : {
+      "title" : "🔤 CR Text Concatenate"
+    }
+  },
   "322"  : {
     "inputs"     : {
       "text"             : [
@@ -881,7 +977,7 @@
   },
   "362"  : {
     "inputs"     : {
-      "value" : 23
+      "value" : 32
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -1230,9 +1326,30 @@
       "title" : "Regex Extract"
     }
   },
+  "506"  : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2012",
+        0
+      ],
+      "t5xxl"    : [
+        "313",
+        0
+      ],
+      "guidance" : 2.3,
+      "clip"     : [
+        "2906",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
   "511"  : {
     "inputs"     : {
-      "text_0" : "The subject is having a shy facial expression",
+      "text_0" : "The subject is having a surprised facial expression",
       "text"   : [
         "2555",
         0
@@ -1259,7 +1376,7 @@
   },
   "514"  : {
     "inputs"     : {
-      "text_0" : "the subject is portrayed at 23 years of age,  ",
+      "text_0" : "the subject is portrayed at 32 years of age,  ",
       "text"   : [
         "271",
         0
@@ -1290,7 +1407,7 @@
   },
   "516"  : {
     "inputs"     : {
-      "text_0" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a shy facial expression",
+      "text_0" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a surprised facial expression",
       "text"   : [
         "515",
         0
@@ -1332,6 +1449,63 @@
     "class_type" : "APersonMaskGenerator",
     "_meta"      : {
       "title" : "A Person Mask Generator"
+    }
+  },
+  "548"  : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : false,
+      "max_size"           : 1024,
+      "seed"               : [
+        "2212",
+        0
+      ],
+      "steps"              : 24,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : 0.42,
+      "feather"            : 5,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 1,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "1267",
+        0
+      ],
+      "segs"               : [
+        "88",
+        0
+      ],
+      "model"              : [
+        "113",
+        0
+      ],
+      "clip"               : [
+        "2906",
+        1
+      ],
+      "vae"                : [
+        "2889",
+        0
+      ],
+      "positive"           : [
+        "506",
+        0
+      ],
+      "negative"           : [
+        "54",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (BG Detailer)"
     }
   },
   "559"  : {
@@ -1381,7 +1555,7 @@
   },
   "570"  : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/IMG_20251126_201536_178.jpg",
+      "text_0" : "Inputs/Next/Best/IMG_20251129_085058_339.jpg",
       "text"   : [
         "1806",
         3
@@ -1406,7 +1580,7 @@
   },
   "573"  : {
     "inputs"     : {
-      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 23 years of age,,The photo features a young woman standing confidently in a well-lit room. She is dressed in a stylish beige ensemble consisting of a cropped blazer with gold buttons and matching shorts. She is holding a small beige and brown handbag in her right hand. Her hair is wavy and long, cascading over her shoulders. The background includes a modern, minimalistic design with a marble-patterned wall, a sleek black door, and a vase with pink roses on the left side. The lighting is soft and warm, giving the photo a cozy ambiance.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a shy facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors",
+      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 32 years of age,,The photo features a person with long, wavy hair wearing a white sleeveless top, sitting in a dimly lit room. The person is positioned slightly to the right of the frame, with their left arm resting on their knee and their right hand near their chin. They are wearing large hoop earrings and have a contemplative expression, with their eyes slightly downcast. The lighting is soft and creates a moody atmosphere, emphasizing the person's natural features. The background is out of focus, with muted green tones, adding to the intimate and introspective feel of the photo.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a surprised facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors",
       "text"   : [
         "788",
         0
@@ -1447,6 +1621,68 @@
       "title" : "Image Save"
     }
   },
+  "588"  : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2655",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "589"  : {
+    "inputs"     : {
+      "conditioning" : [
+        "588",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "599"  : {
+    "inputs"     : {
+      "max_shift"  : 1.45,
+      "base_shift" : 0.5,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2655",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "609"  : {
+    "inputs"     : {
+      "clip_l"   : [
+        "669",
+        0
+      ],
+      "t5xxl"    : [
+        "788",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "2655",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
   "622"  : {
     "inputs"     : {
       "float_value"    : [
@@ -1480,6 +1716,78 @@
     "class_type" : "ShowText|pysssss",
     "_meta"      : {
       "title" : "Show Text 🐍"
+    }
+  },
+  "654"  : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "1930",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 4,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "true",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "548",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "660"  : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "1930",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 4,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "true",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "2713",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "669"  : {
+    "inputs"     : {
+      "text1"     : "Detailed female hands, Diamond ring in one finger. No Nailpolish,",
+      "text2"     : "",
+      "text3"     : "",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
     }
   },
   "731"  : {
@@ -1736,6 +2044,18 @@
       "title" : ">0"
     }
   },
+  "896"  : {
+    "inputs"     : {
+      "mask" : [
+        "898",
+        0
+      ]
+    },
+    "class_type" : "MaskPreview+",
+    "_meta"      : {
+      "title" : "🔧 Mask Preview"
+    }
+  },
   "897"  : {
     "inputs"     : {
       "text1"     : "detailed fabric texture",
@@ -1749,6 +2069,21 @@
     "class_type" : "ttN concat",
     "_meta"      : {
       "title" : "Positive"
+    }
+  },
+  "898"  : {
+    "inputs"     : {
+      "invert_mask" : true,
+      "grow"        : -3,
+      "blur"        : 4,
+      "mask"        : [
+        "104",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
     }
   },
   "931"  : {
@@ -1794,6 +2129,22 @@
       "title" : "Text Find and Replace"
     }
   },
+  "1267" : {
+    "inputs"     : {
+      "any_01" : [
+        "2704",
+        0
+      ],
+      "any_02" : [
+        "1888",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
   "1271" : {
     "inputs"     : {
       "upscale_method" : "lanczos",
@@ -1805,7 +2156,7 @@
     },
     "class_type" : "ImageScaleToTotalPixels",
     "_meta"      : {
-      "title" : "ImageScaleToTotalPixels"
+      "title" : "Scale Image to Total Pixels"
     }
   },
   "1281" : {
@@ -1862,7 +2213,7 @@
   },
   "1285" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "+",
       "source"  : [
         "296",
         0
@@ -1875,7 +2226,7 @@
   },
   "1286" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "+",
       "source"  : [
         "293",
         0
@@ -1888,7 +2239,7 @@
   },
   "1287" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "False",
       "source"  : [
         "235",
         0
@@ -1901,7 +2252,7 @@
   },
   "1288" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.8",
       "source"  : [
         "2100",
         0
@@ -1914,7 +2265,7 @@
   },
   "1289" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.54",
       "source"  : [
         "2102",
         0
@@ -1927,7 +2278,7 @@
   },
   "1294" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.1454544",
       "source"  : [
         "622",
         0
@@ -1940,7 +2291,7 @@
   },
   "1295" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0",
       "source"  : [
         "2103",
         0
@@ -1953,7 +2304,7 @@
   },
   "1306" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0",
       "source"  : [
         "1595",
         0
@@ -2050,7 +2401,7 @@
   },
   "1354" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "True",
       "source"  : [
         "124",
         0
@@ -2083,12 +2434,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_gjpix_00003_.png&type=temp&subfolder=&rand=0.12215014438586236"
+            "url"      : "/api/view?filename=rgthree.compare._temp_fmmld_00001_.png&type=temp&subfolder=&rand=0.2223527693003915"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_gjpix_00004_.png&type=temp&subfolder=&rand=0.4195365678588222"
+            "url"      : "/api/view?filename=rgthree.compare._temp_fmmld_00002_.png&type=temp&subfolder=&rand=0.08811404535727685"
           }
         ]
       },
@@ -2113,12 +2464,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ajzab_00003_.png&type=temp&subfolder=&rand=0.9656367912253343"
+            "url"      : "/api/view?filename=rgthree.compare._temp_aloyj_00001_.png&type=temp&subfolder=&rand=0.7423989253283325"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ajzab_00004_.png&type=temp&subfolder=&rand=0.9282390409864151"
+            "url"      : "/api/view?filename=rgthree.compare._temp_aloyj_00002_.png&type=temp&subfolder=&rand=0.9946133299341805"
           }
         ]
       },
@@ -2143,12 +2494,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_fhxfb_00003_.png&type=temp&subfolder=&rand=0.0389837838822622"
+            "url"      : "/api/view?filename=rgthree.compare._temp_brrdz_00001_.png&type=temp&subfolder=&rand=0.004732068058455163"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_fhxfb_00004_.png&type=temp&subfolder=&rand=0.7307867816556535"
+            "url"      : "/api/view?filename=rgthree.compare._temp_brrdz_00002_.png&type=temp&subfolder=&rand=0.007614029235499364"
           }
         ]
       },
@@ -2341,6 +2692,38 @@
       "title" : "Math Expression 🐍"
     }
   },
+  "1611" : {
+    "inputs"     : {
+      "any_01" : [
+        "2844",
+        0
+      ],
+      "any_02" : [
+        "2362",
+        0
+      ],
+      "any_03" : [
+        "2085",
+        0
+      ],
+      "any_04" : [
+        "548",
+        0
+      ],
+      "any_05" : [
+        "2704",
+        0
+      ],
+      "any_06" : [
+        "1888",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
   "1615" : {
     "inputs"     : {
       "rgthree_comparer" : {
@@ -2348,12 +2731,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kzdyo_00003_.png&type=temp&subfolder=&rand=0.05441417401667625"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ppikk_00001_.png&type=temp&subfolder=&rand=0.4109262993864614"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kzdyo_00004_.png&type=temp&subfolder=&rand=0.23096856969488033"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ppikk_00002_.png&type=temp&subfolder=&rand=0.514740115607409"
           }
         ]
       },
@@ -2378,12 +2761,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_poquf_00003_.png&type=temp&subfolder=&rand=0.7607365096583754"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ubvdb_00001_.png&type=temp&subfolder=&rand=0.4236339253589353"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_poquf_00004_.png&type=temp&subfolder=&rand=0.3951647696674817"
+            "url"      : "/api/view?filename=rgthree.compare._temp_ubvdb_00002_.png&type=temp&subfolder=&rand=0.1074787212356616"
           }
         ]
       },
@@ -2401,6 +2784,36 @@
       "title" : "Image Comparer (rgthree)"
     }
   },
+  "1617" : {
+    "inputs"     : {
+      "rgthree_comparer" : {
+        "images" : [
+          {
+            "name"     : "A",
+            "selected" : true,
+            "url"      : "/api/view?filename=rgthree.compare._temp_aqyva_00001_.png&type=temp&subfolder=&rand=0.3473350599030046"
+          },
+          {
+            "name"     : "B",
+            "selected" : true,
+            "url"      : "/api/view?filename=rgthree.compare._temp_aqyva_00002_.png&type=temp&subfolder=&rand=0.9423390446672538"
+          }
+        ]
+      },
+      "image_a"          : [
+        "2713",
+        0
+      ],
+      "image_b"          : [
+        "1611",
+        0
+      ]
+    },
+    "class_type" : "Image Comparer (rgthree)",
+    "_meta"      : {
+      "title" : "Image Comparer (rgthree)"
+    }
+  },
   "1619" : {
     "inputs"     : {
       "rgthree_comparer" : {
@@ -2408,12 +2821,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_onkpn_00001_.png&type=temp&subfolder=&rand=0.4359698077660561"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dvetf_00001_.png&type=temp&subfolder=&rand=0.15889475209067028"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_onkpn_00002_.png&type=temp&subfolder=&rand=0.0906330341473428"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dvetf_00002_.png&type=temp&subfolder=&rand=0.6705943886346426"
           }
         ]
       },
@@ -2431,6 +2844,36 @@
       "title" : "Image Comparer (rgthree)"
     }
   },
+  "1621" : {
+    "inputs"     : {
+      "rgthree_comparer" : {
+        "images" : [
+          {
+            "name"     : "A",
+            "selected" : true,
+            "url"      : "/api/view?filename=rgthree.compare._temp_xptvh_00001_.png&type=temp&subfolder=&rand=0.5478523657127736"
+          },
+          {
+            "name"     : "B",
+            "selected" : true,
+            "url"      : "/api/view?filename=rgthree.compare._temp_xptvh_00002_.png&type=temp&subfolder=&rand=0.9272173680783864"
+          }
+        ]
+      },
+      "image_a"          : [
+        "548",
+        0
+      ],
+      "image_b"          : [
+        "1267",
+        0
+      ]
+    },
+    "class_type" : "Image Comparer (rgthree)",
+    "_meta"      : {
+      "title" : "Image Comparer (rgthree)"
+    }
+  },
   "1629" : {
     "inputs"     : {
       "rgthree_comparer" : {
@@ -2438,12 +2881,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_eqvgj_00001_.png&type=temp&subfolder=&rand=0.2383275688318316"
+            "url"      : "/api/view?filename=rgthree.compare._temp_sxooc_00001_.png&type=temp&subfolder=&rand=0.3502744117014913"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_eqvgj_00002_.png&type=temp&subfolder=&rand=0.3928999988647932"
+            "url"      : "/api/view?filename=rgthree.compare._temp_sxooc_00002_.png&type=temp&subfolder=&rand=0.41029954864340945"
           }
         ]
       },
@@ -2511,7 +2954,7 @@
       "ordering_mode"          : "random",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : 711525583519288
+      "seed"                   : 767618662820831
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -2540,7 +2983,7 @@
       "ordering_mode"          : "random",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : 140575384637451
+      "seed"                   : 115879333277337
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -2607,7 +3050,7 @@
   },
   "1815" : {
     "inputs"     : {
-      "text_0" : "Inputs/Next",
+      "text_0" : "Inputs/Next/Best",
       "text"   : [
         "1806",
         2
@@ -2684,7 +3127,7 @@
   },
   "1823" : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/IMG_20251126_092210_115.jpg",
+      "text_0" : "Inputs/Next/Best/IMG_20251129_084957_074.jpg",
       "text"   : [
         "1803",
         3
@@ -2726,7 +3169,7 @@
       "ordering_mode"          : "sequential_by_modified_date",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : 443764054606895
+      "seed"                   : 973170790936552
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -2937,7 +3380,7 @@
   },
   "1869" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "0.486",
       "source"  : [
         "2541",
         0
@@ -3078,12 +3521,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_qkpys_00003_.png&type=temp&subfolder=&rand=0.1960848146262021"
+            "url"      : "/api/view?filename=rgthree.compare._temp_aphnp_00001_.png&type=temp&subfolder=&rand=0.16546208228390702"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_qkpys_00004_.png&type=temp&subfolder=&rand=0.4217921402387559"
+            "url"      : "/api/view?filename=rgthree.compare._temp_aphnp_00002_.png&type=temp&subfolder=&rand=0.7893490520164542"
           }
         ]
       },
@@ -3140,8 +3583,8 @@
   },
   "1902" : {
     "inputs"     : {
-      "value1" : 29,
-      "value2" : 43
+      "value1" : 30,
+      "value2" : 42
     },
     "class_type" : "SeargeIntegerPair",
     "_meta"      : {
@@ -3581,6 +4024,32 @@
       "title" : "Math Float"
     }
   },
+  "2011" : {
+    "inputs"     : {
+      "text" : "aidmaimageupgrader"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2012" : {
+    "inputs"     : {
+      "separator" : ",",
+      "text1"     : [
+        "2106",
+        0
+      ],
+      "text2"     : [
+        "2011",
+        0
+      ]
+    },
+    "class_type" : "CR Text Concatenate",
+    "_meta"      : {
+      "title" : "🔤 CR Text Concatenate"
+    }
+  },
   "2022" : {
     "inputs"     : {
       "text1"     : [
@@ -3646,6 +4115,10 @@
     "inputs"     : {
       "any_01" : [
         "2085",
+        0
+      ],
+      "any_02" : [
+        "548",
         0
       ],
       "any_03" : [
@@ -3722,12 +4195,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ealjj_00001_.png&type=temp&subfolder=&rand=0.4265714196376965"
+            "url"      : "/api/view?filename=rgthree.compare._temp_vkpev_00001_.png&type=temp&subfolder=&rand=0.6124172468399948"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ealjj_00002_.png&type=temp&subfolder=&rand=0.15663062386908289"
+            "url"      : "/api/view?filename=rgthree.compare._temp_vkpev_00002_.png&type=temp&subfolder=&rand=0.20199223828292912"
           }
         ]
       },
@@ -3993,6 +4466,10 @@
   },
   "2066" : {
     "inputs"     : {
+      "any_01" : [
+        "548",
+        0
+      ],
       "any_02" : [
         "2704",
         0
@@ -4035,12 +4512,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_myuyk_00001_.png&type=temp&subfolder=&rand=0.3733119989017675"
+            "url"      : "/api/view?filename=rgthree.compare._temp_zcrdq_00001_.png&type=temp&subfolder=&rand=0.7639812382528747"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_myuyk_00002_.png&type=temp&subfolder=&rand=0.7516959466816308"
+            "url"      : "/api/view?filename=rgthree.compare._temp_zcrdq_00002_.png&type=temp&subfolder=&rand=0.9363901775497113"
           }
         ]
       },
@@ -4188,12 +4665,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ikpzv_00001_.png&type=temp&subfolder=&rand=0.17136284156076387"
+            "url"      : "/api/view?filename=rgthree.compare._temp_pazmt_00001_.png&type=temp&subfolder=&rand=0.37602415310975534"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ikpzv_00002_.png&type=temp&subfolder=&rand=0.6353101779206447"
+            "url"      : "/api/view?filename=rgthree.compare._temp_pazmt_00002_.png&type=temp&subfolder=&rand=0.03277910812161078"
           }
         ]
       },
@@ -4523,6 +5000,10 @@
   },
   "2117" : {
     "inputs"     : {
+      "any_01" : [
+        "548",
+        0
+      ],
       "any_02" : [
         "1888",
         0
@@ -4850,7 +5331,7 @@
   },
   "2226" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "True",
       "source"  : [
         "325",
         0
@@ -4910,7 +5391,7 @@
   },
   "2233" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "315745658140192",
       "source"  : [
         "2240",
         0
@@ -4933,7 +5414,7 @@
   "2240" : {
     "inputs"     : {
       "mode"       : true,
-      "seed"       : 5848508205837,
+      "seed"       : 617346826442775,
       "fixed_seed" : 0
     },
     "class_type" : "SeedSelector",
@@ -5222,8 +5703,8 @@
   "2268" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 3.8,
-      "strength_clip"  : 3.8,
+      "strength_model" : 2.8,
+      "strength_clip"  : 1,
       "model"          : [
         "2267",
         0
@@ -5236,6 +5717,44 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "breast-size2"
+    }
+  },
+  "2269" : {
+    "inputs"     : {
+      "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.4,
+      "model"          : [
+        "2270",
+        0
+      ],
+      "clip"           : [
+        "2270",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "fluxenhancer"
+    }
+  },
+  "2270" : {
+    "inputs"     : {
+      "lora_name"      : "AntiBlur.safetensors",
+      "strength_model" : 1,
+      "strength_clip"  : 1.0000000000000002,
+      "model"          : [
+        "2891",
+        0
+      ],
+      "clip"           : [
+        "2890",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA"
     }
   },
   "2273" : {
@@ -5435,14 +5954,14 @@
   "2300" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 3.8,
-      "strength_clip"  : 3.8,
+      "strength_model" : 3.3,
+      "strength_clip"  : 3.3,
       "model"          : [
-        "2694",
+        "2560",
         0
       ],
       "clip"           : [
-        "2694",
+        "2560",
         1
       ]
     },
@@ -5567,12 +6086,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_gqdjx_00003_.png&type=temp&subfolder=&rand=0.34099558640737404"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dalvo_00001_.png&type=temp&subfolder=&rand=0.9435603776081634"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_gqdjx_00004_.png&type=temp&subfolder=&rand=0.864564586311032"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dalvo_00002_.png&type=temp&subfolder=&rand=0.8559101296789363"
           }
         ]
       },
@@ -5632,7 +6151,7 @@
   "2328" : {
     "inputs"     : {
       "megapixel"     : "2.0",
-      "divisible_by"  : "8",
+      "divisible_by"  : "64",
       "mode"          : "pad",
       "delta_percent" : 0.5,
       "image"         : [
@@ -5667,7 +6186,7 @@
         "2212",
         0
       ],
-      "steps"               : 18,
+      "steps"               : 165,
       "cfg"                 : 1,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
@@ -5762,6 +6281,10 @@
         "2085",
         0
       ],
+      "any_03" : [
+        "548",
+        0
+      ],
       "any_04" : [
         "2704",
         0
@@ -5815,12 +6338,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ixayv_00001_.png&type=temp&subfolder=&rand=0.9694367335289011"
+            "url"      : "/api/view?filename=rgthree.compare._temp_bsprx_00001_.png&type=temp&subfolder=&rand=0.9743426342899009"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_ixayv_00002_.png&type=temp&subfolder=&rand=0.6453919955782828"
+            "url"      : "/api/view?filename=rgthree.compare._temp_bsprx_00002_.png&type=temp&subfolder=&rand=0.3061627222304416"
           }
         ]
       },
@@ -5914,7 +6437,7 @@
         "2212",
         0
       ],
-      "steps"              : 21,
+      "steps"              : 17,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -6059,6 +6582,10 @@
   },
   "2384" : {
     "inputs"     : {
+      "any_01" : [
+        "2713",
+        0
+      ],
       "any_02" : [
         "2844",
         0
@@ -6073,6 +6600,10 @@
       ],
       "any_05" : [
         "2085",
+        0
+      ],
+      "any_06" : [
+        "548",
         0
       ],
       "any_07" : [
@@ -6096,12 +6627,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00001_.png&type=temp&subfolder=&rand=0.2211496324112413"
+            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00001_.png&type=temp&subfolder=&rand=0.087810432454006"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00002_.png&type=temp&subfolder=&rand=0.22186804952240768"
+            "url"      : "/api/view?filename=rgthree.compare._temp_kpoeh_00002_.png&type=temp&subfolder=&rand=0.9649924601453101"
           }
         ]
       },
@@ -6395,7 +6926,7 @@
   },
   "2552" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "Inputs/Next/Best",
       "source"  : [
         "2545",
         0
@@ -6508,7 +7039,7 @@
   },
   "2579" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "_29 11 25",
       "source"  : [
         "1936",
         0
@@ -6614,7 +7145,7 @@
   },
   "2599" : {
     "inputs"     : {
-      "text_0" : "professionally color-graded RAW photograph, 23 years old  Indian v1dhya5 busty woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, ",
+      "text_0" : "professionally color-graded RAW photograph, 32 years old  Indian v1dhya5 busty woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, ",
       "text"   : [
         "2106",
         0
@@ -6648,7 +7179,7 @@
   },
   "2608" : {
     "inputs"     : {
-      "text_0" : "professionally color-graded RAW photograph, 23 years old  Indian v1dhya5 busty woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, /n_________________________/nA professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 23 years of age,,The photo shows a person wearing a traditional red and gold saree with a golden blouse, standing in what appears to be a festive or cultural setting. The individual has long, dark hair styled straight, and is wearing a simple gold necklace with a small pendant. They are positioned in the foreground, with their hair and jewelry clearly visible. The background features several other people, some dressed in similar traditional attire, suggesting a gathering or celebration. The camera angle is slightly angled, capturing both the person's upper body and part of their face, with a focus on their upper half.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a happy facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors/n_________________________/ndetailed fabric texture,The outfit in the photo is a traditional Indian saree, which is a long piece of fabric, typically of a single color, draped elegantly around the body. It appears to be made of silk, known for its sheen and smooth texture, which gives it a luxurious and elegant look. The saree has a rich, vibrant red base color with intricate golden patterns woven into it, adding to its opulence. The fit of the saree is designed to drape gracefully around the body, highlighting the wearer's silhouette.,slightly translucent elements in the intricate outfit with see though sleeves, showing the profile of the 36DD Cup size  bra wearing underneath.",
+      "text_0" : "professionally color-graded RAW photograph, 32 years old  Indian v1dhya5 busty woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, /n_________________________/nA professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 32 years of age,,The photo features a person with long, wavy hair wearing a white sleeveless top, sitting in a dimly lit room. The person is positioned slightly to the right of the frame, with their left arm resting on their knee and their right hand near their chin. They are wearing large hoop earrings and have a contemplative expression, with their eyes slightly downcast. The lighting is soft and creates a moody atmosphere, emphasizing the person's natural features. The background is out of focus, with muted green tones, adding to the intimate and introspective feel of the photo.,Photograph of , She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing accentuates her abdomen. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Medium breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,,The subject is having a surprised facial expression. incorporating visible light sources within the scene. shot on Fujifilm X-T5. with highly saturated vivid colors/n_________________________/ndetailed fabric texture,The outfit in the photo is a sleeveless top with a deep neckline. The material appears to be soft and comfortable, possibly cotton or a cotton blend, which is commonly used for casual and everyday wear. The top has a slightly loose fit, providing a relaxed and casual style.,slightly translucent elements in the intricate outfit with see though sleeves, showing the profile of the 36DD Cup size  bra wearing underneath.",
       "text"   : [
         "2605",
         0
@@ -6762,17 +7293,45 @@
       "strength_model" : 0.4,
       "strength_clip"  : 1,
       "model"          : [
-        "2300",
+        "2694",
         0
       ],
       "clip"           : [
-        "2300",
+        "2694",
         1
       ]
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmarealisticskin"
+    }
+  },
+  "2652" : {
+    "inputs"     : {
+      "text" : "aidmaimageupgrader, fluxenhancer, detailed hands, Perfect hand"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2655" : {
+    "inputs"     : {
+      "lora_name"      : "Detailed_Hands-000001.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.4,
+      "model"          : [
+        "2224",
+        0
+      ],
+      "clip"           : [
+        "2213",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "fluxenhancer"
     }
   },
   "2656" : {
@@ -6786,7 +7345,7 @@
   },
   "2666" : {
     "inputs"     : {
-      "detail_amount"      : 0.2,
+      "detail_amount"      : 0.1,
       "start"              : 0.4,
       "end"                : 0.75,
       "bias"               : 0.5,
@@ -6894,11 +7453,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2560",
+        "2300",
         0
       ],
       "clip"           : [
-        "2560",
+        "2300",
         1
       ]
     },
@@ -6950,6 +7509,114 @@
       "title" : "Image List to Image Batch"
     }
   },
+  "2713" : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : true,
+      "max_size"           : 1024,
+      "seed"               : [
+        "2212",
+        0
+      ],
+      "steps"              : 26,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : 0.46,
+      "feather"            : 2,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "1611",
+        0
+      ],
+      "segs"               : [
+        "2714",
+        0
+      ],
+      "model"              : [
+        "599",
+        0
+      ],
+      "clip"               : [
+        "2655",
+        1
+      ],
+      "vae"                : [
+        "2889",
+        0
+      ],
+      "positive"           : [
+        "609",
+        0
+      ],
+      "negative"           : [
+        "589",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (Hands Detailer)"
+    }
+  },
+  "2714" : {
+    "inputs"     : {
+      "combined"     : false,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : false,
+      "mask"         : [
+        "2715",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2715" : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 2,
+      "blur"        : 4,
+      "mask"        : [
+        "2748",
+        1
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "2716" : {
+    "inputs"     : {
+      "mask_opacity" : 0.6,
+      "mask_color"   : "255, 0, 227",
+      "pass_through" : false,
+      "image"        : [
+        "1611",
+        0
+      ],
+      "mask"         : [
+        "2748",
+        1
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
   "2727" : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
@@ -6974,12 +7641,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_yskna_00001_.png&type=temp&subfolder=&rand=0.9791096654918592"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dpgqe_00001_.png&type=temp&subfolder=&rand=0.7540038979194091"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_yskna_00002_.png&type=temp&subfolder=&rand=0.29410792439593936"
+            "url"      : "/api/view?filename=rgthree.compare._temp_dpgqe_00002_.png&type=temp&subfolder=&rand=0.1400848816997362"
           }
         ]
       },
@@ -7019,8 +7686,8 @@
   "2732" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 3.9,
-      "strength_clip"  : 3.9,
+      "strength_model" : 2.8,
+      "strength_clip"  : 1,
       "model"          : [
         "2277",
         0
@@ -7065,7 +7732,7 @@
   },
   "2736" : {
     "inputs"     : {
-      "text_0" : "The subject has a neutral yet confident facial expression, with a slight smile and direct eye contact with the camera. Her hair is styled in loose waves, cascading over her shoulders. She is wearing a stylish outfit consisting of a two-piece suit, featuring a cropped jacket and matching shorts. The jacket is adorned with gold buttons, adding a touch of elegance to the ensemble. The shorts are paired with a matching brown handbag, completing the look. Her makeup is subtle yet elegant, featuring a natural lip color and defined eyeliner. The eyes are accentuated with mascara and a touch of blush, enhancing her overall appearance.",
+      "text_0" : "The subject has a contemplative expression with a slight frown, suggesting she might be deep in thought or feeling a bit melancholic. Her hair is wavy and long, cascading over her shoulders, giving a relaxed and natural look. She is wearing a sleeveless white top that reveals a hint of her décolletage. On her ears, she has large hoop earrings, adding a touch of boldness to her appearance. Her makeup is subtle, with a focus on enhancing her natural features. Her eyes are light brown, and her lips are painted in a soft pink shade, giving her a natural and elegant look.",
       "text"   : [
         "2734",
         0
@@ -7100,6 +7767,25 @@
       "title" : "VAE Decode"
     }
   },
+  "2748" : {
+    "inputs"     : {
+      "mask_bbox_padding" : 30,
+      "resolution"        : 512,
+      "mask_type"         : "original",
+      "mask_expand"       : 8,
+      "rand_seed"         : 88,
+      "detect_thr"        : 0.36,
+      "presence_thr"      : 0.6,
+      "image"             : [
+        "1611",
+        0
+      ]
+    },
+    "class_type" : "MeshGraphormer-DepthMapPreprocessor",
+    "_meta"      : {
+      "title" : "MeshGraphormer Hand Refiner"
+    }
+  },
   "2751" : {
     "inputs"     : {
       "find"    : "woman",
@@ -7116,7 +7802,7 @@
   },
   "2753" : {
     "inputs"     : {
-      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 23 years of age,,The subject has a cheerful facial expression with a smile, showing her teeth. Her hair is styled in a neat bun, secured with a blue hairband. She is wearing elegant earrings and a statement necklace. Her outfit is a deep maroon dress with white floral patterns, giving a traditional and stylish look. The makeup is subtle but enhances her features, with a touch of blush and mascara. Her eyes are accentuated with eyeliner, and she has a natural pink lipstick.",
+      "text_0" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,,the subject is portrayed at 32 years of age,,The subject has a contemplative expression with a slight frown, suggesting she might be deep in thought or feeling a bit melancholic. Her hair is wavy and long, cascading over her shoulders, giving a relaxed and natural look. She is wearing a sleeveless white top that reveals a hint of her décolletage. On her ears, she has large hoop earrings, adding a touch of boldness to her appearance. Her makeup is subtle, with a focus on enhancing her natural features. Her eyes are light brown, and her lips are painted in a soft pink shade, giving her a natural and elegant look.",
       "text"   : [
         "2754",
         0
@@ -7206,6 +7892,10 @@
       ],
       "any_02" : [
         "2085",
+        0
+      ],
+      "any_03" : [
+        "548",
         0
       ],
       "any_04" : [
@@ -7465,7 +8155,7 @@
   },
   "2830" : {
     "inputs"     : {
-      "expand"          : 10,
+      "expand"          : 4,
       "tapered_corners" : true,
       "mask"            : [
         "2815",
@@ -7697,12 +8387,12 @@
           {
             "name"     : "A",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_cpzod_00001_.png&type=temp&subfolder=&rand=0.05196407710151307"
+            "url"      : "/api/view?filename=rgthree.compare._temp_fohkp_00001_.png&type=temp&subfolder=&rand=0.3966713571521331"
           },
           {
             "name"     : "B",
             "selected" : true,
-            "url"      : "/api/view?filename=rgthree.compare._temp_cpzod_00002_.png&type=temp&subfolder=&rand=0.8050027263399738"
+            "url"      : "/api/view?filename=rgthree.compare._temp_fohkp_00002_.png&type=temp&subfolder=&rand=0.048123975783510686"
           }
         ]
       },
@@ -7729,25 +8419,6 @@
       "title" : "Text Multiline"
     }
   },
-  "2863" : {
-    "inputs"     : {
-      "lora_name"      : "FC Flux Perfect Busts.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 1,
-      "model"          : [
-        "2268",
-        0
-      ],
-      "clip"           : [
-        "2268",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
   "2866" : {
     "inputs"     : {
       "model_a" : [
@@ -7755,7 +8426,7 @@
         0
       ],
       "model_b" : [
-        "2863",
+        "2268",
         0
       ],
       "boolean" : [
@@ -7775,7 +8446,7 @@
         1
       ],
       "clip_b"  : [
-        "2863",
+        "2268",
         1
       ],
       "boolean" : [
@@ -7790,7 +8461,7 @@
   },
   "2869" : {
     "inputs"     : {
-      "preview" : "",
+      "preview" : "False",
       "source"  : [
         "241",
         0
@@ -7842,8 +8513,8 @@
   "2881" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 3.2,
-      "strength_clip"  : 3.2,
+      "strength_model" : 2.8,
+      "strength_clip"  : 1,
       "model"          : [
         "2695",
         0
@@ -7855,7 +8526,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "breast-size2"
     }
   },
   "2885" : {
@@ -7890,7 +8561,7 @@
   },
   "2888" : {
     "inputs"     : {
-      "stop_at_clip_layer" : -3,
+      "stop_at_clip_layer" : -2,
       "clip"               : [
         "2893",
         0
@@ -7956,7 +8627,7 @@
   },
   "2893" : {
     "inputs"     : {
-      "clip_name1" : "clip_l.safetensors",
+      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
@@ -7974,6 +8645,25 @@
     "class_type" : "UNETLoader",
     "_meta"      : {
       "title" : "Load Diffusion Model"
+    }
+  },
+  "2906" : {
+    "inputs"     : {
+      "lora_name"      : "Pandora-RAWr.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.65,
+      "model"          : [
+        "2269",
+        0
+      ],
+      "clip"           : [
+        "2269",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
     }
   }
 }
