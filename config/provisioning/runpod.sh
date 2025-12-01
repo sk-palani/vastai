@@ -30,7 +30,7 @@ source "${COMFYUI_VENV_DIR}/bin/activate"
 # Packages are installed after nodes so we can fix them...
 
 DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/flux-comfyui-example.json"
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/Workflow_API.json"
+  DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/Workflow_API.json"
 CRON_SCRIPT="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/submit_prompt.sh"
 
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/segm"
@@ -641,7 +641,7 @@ if [[ ! -f /workspace/.noprovisioning ]]; then
     pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 fi
 
-/workspace/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
+${WORKSPACE}/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
 #opencv-contrib-python
 provisioning_get_default_workflow
 
@@ -654,12 +654,12 @@ nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
 
 # * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
 # * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
-chmod +x ${WORKSPACE}/scripts/submit_prompt.sh
+chmod +x ${WORKSPACE}scripts/submit_prompt.sh
 
-JOB="* * * * * ${WORKSPACE}/scripts/submit_prompt.sh >> ${WORKSPACE}/crontab.log"
+JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log"
 
 crontab -l 2>/dev/null | {
-    grep -q "${WORKSPACE}/scripts/submit_prompt.sh" || echo "${JOB}"
+    grep -q "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
 } | crontab -
 
 
