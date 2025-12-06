@@ -2887,7 +2887,7 @@
   },
   "1945" : {
     "inputs"     : {
-      "text" : ", She is wearing outfit through which the subtle outline of her bra is visible. \n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+      "text" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2962,7 +2962,7 @@
   },
   "1989" : {
     "inputs"     : {
-      "sampler_name" : "euler",
+      "sampler_name" : "euler_ancestral",
       "scheduler"    : "beta",
       "steps"        : 24,
       "denoise"      : [
@@ -3168,7 +3168,7 @@
       ],
       "steps"              : 16,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
       "denoise"            : 0.29,
       "feather"            : 2,
@@ -3506,7 +3506,7 @@
         0
       ],
       "overlay_image"  : [
-        "2081",
+        "2574",
         0
       ],
       "optional_mask"  : [
@@ -3574,7 +3574,7 @@
       ],
       "steps"              : 24,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
       "denoise"            : 0.58,
       "feather"            : 5,
@@ -4946,7 +4946,7 @@
       ],
       "steps"               : 18,
       "cfg"                 : 1,
-      "sampler_name"        : "euler",
+      "sampler_name"        : "euler_ancestral",
       "scheduler"           : "beta",
       "denoise"             : 0.26,
       "mode_type"           : "Linear",
@@ -5161,9 +5161,9 @@
         "2212",
         0
       ],
-      "steps"              : 23,
+      "steps"              : 21,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
       "denoise"            : [
         "2553",
@@ -5379,9 +5379,9 @@
       ],
       "steps"               : 16,
       "cfg"                 : 1,
-      "sampler_name"        : "euler",
+      "sampler_name"        : "euler_ancestral",
       "scheduler"           : "beta",
-      "denoise"             : 0.32,
+      "denoise"             : 0.3,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -5616,12 +5616,12 @@
         "2102",
         0
       ],
-      "b"         : 0.74,
+      "b"         : 0.72,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
     "_meta"      : {
-      "title" : "0.74"
+      "title" : "Math Float"
     }
   },
   "2555" : {
@@ -5690,6 +5690,24 @@
     "class_type" : "InputSelector",
     "_meta"      : {
       "title" : "Input Selector"
+    }
+  },
+  "2574" : {
+    "inputs"     : {
+      "channel"            : "RGB",
+      "black_point"        : 4,
+      "white_point"        : 255,
+      "gray_point"         : 1,
+      "output_black_point" : 0,
+      "output_white_point" : 250,
+      "image"              : [
+        "2081",
+        0
+      ]
+    },
+    "class_type" : "LayerColor: Levels",
+    "_meta"      : {
+      "title" : "LayerColor: Levels"
     }
   },
   "2580" : {
@@ -6908,9 +6926,9 @@
         "2106",
         0
       ],
-      "text2"     : "aidmarealisticskin",
+      "text2"     : "(aidmarealisticskin:0.5)",
       "text3"     : " ",
-      "delimiter" : ","
+      "delimiter" : ""
     },
     "class_type" : "ttN concat",
     "_meta"      : {
@@ -6976,7 +6994,7 @@
   },
   "2892" : {
     "inputs"     : {
-      "sampler_name" : "euler"
+      "sampler_name" : "euler_ancestral"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
