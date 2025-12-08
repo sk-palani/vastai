@@ -1546,7 +1546,7 @@
   "623"  : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.73
+      "value2" : 0.78
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -3858,7 +3858,7 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
       "denoise"            : 0.46,
       "feather"            : 5,
@@ -4817,8 +4817,8 @@
   "2268" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.25,
-      "strength_clip"  : 0.6,
+      "strength_model" : 2,
+      "strength_clip"  : 0.4,
       "model"          : [
         "2903",
         0
