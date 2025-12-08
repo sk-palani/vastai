@@ -15,6 +15,14 @@ WORKFLOW_FILE="$SCRIPT_DIR/Workflow_API.json"
 UPDATED_FILE="$SCRIPT_DIR/Workflow_API_updated.json"
 LOG_TS=$(date '+%Y-%m-%d %H:%M:%S')
 
+# -- Download latest workflow file
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/Workflow_API.json"
+
+wget -O "${WORKFLOW_FILE}" "${DEFAULT_WORKFLOW}"
+echo "Hash : " "$(md5sum ${WORKFLOW_FILE})"
+jq -c . "${WORKFLOW_FILE}" > "${UPDATED_FILE}"
+cp "${UPDATED_FILE}" "${WORKFLOW_FILE}"
+
 echo "[$LOG_TS] === Workflow submission started ==="
 
 # --- Generate random seed (safe range under 2^50) ---
@@ -52,7 +60,7 @@ jq --argjson new_seed "$random_seed" '
 ' "$WORKFLOW_FILE" > "$UPDATED_FILE"
 
 # --- Remove unwanted nodes ---
-jq '
+jq -c '
   delpaths(
     [ paths as $p
       | select(
