@@ -5234,7 +5234,7 @@
   },
   "2328" : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : 0.5,
@@ -7424,40 +7424,65 @@
       "title" : "SameFaceNegatice"
     }
   },
-  "2909" : {
-    "inputs"     : {
-      "mask" : [
-        "2347",
-        0
-      ]
-    },
-    "class_type" : "MaskToImage",
-    "_meta"      : {
-      "title" : "Convert Mask to Image"
-    }
-  },
   "2910" : {
     "inputs"     : {
       "image" : [
-        "2909",
+        "2916",
         0
       ]
     },
     "class_type" : "GetImageSizeAndCount",
     "_meta"      : {
-      "title" : "Get Image Size & Count"
+      "title" : "Image Size"
     }
   },
   "2913" : {
     "inputs"     : {
       "Value" : [
-        "2910",
-        2
+        "2917",
+        0
       ]
     },
     "class_type" : "DF_Int_to_Float",
     "_meta"      : {
       "title" : "Int to Float"
+    }
+  },
+  "2916" : {
+    "inputs"     : {
+      "padding_left"   : 16,
+      "padding_right"  : 16,
+      "padding_top"    : 16,
+      "padding_bottom" : 16,
+      "return_list"    : false,
+      "image"          : [
+        "2345",
+        0
+      ],
+      "mask"           : [
+        "2355",
+        0
+      ]
+    },
+    "class_type" : "Bounded Image Crop with Mask",
+    "_meta"      : {
+      "title" : "Bounded Image Crop"
+    }
+  },
+  "2917" : {
+    "inputs"     : {
+      "a" : [
+        "2910",
+        1
+      ],
+      "b" : [
+        "2910",
+        2
+      ]
+    },
+    "class_type" : "JWIntegerMax",
+    "_meta"      : {
+      "title" : "Max"
     }
   }
 }
