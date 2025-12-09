@@ -2487,7 +2487,7 @@
   },
   "1899" : {
     "inputs"     : {
-      "max_shift"  : 1.45,
+      "max_shift"  : 1.25,
       "base_shift" : 0.45,
       "width"      : [
         "394",
