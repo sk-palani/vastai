@@ -821,7 +821,7 @@
   },
   "362"  : {
     "inputs"     : {
-      "value" : 25
+      "value" : 28
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -1636,7 +1636,7 @@
   },
   "950"  : {
     "inputs"     : {
-      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5 busty and curvy woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, \n"
+      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5 woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,  glossy red lipstick, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, \n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3650,7 +3650,7 @@
   },
   "2164" : {
     "inputs"     : {
-      "text" : "A professionally color-graded RAW photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, "
+      "text" : "A professionally color-graded RAW photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, glossy red lipstick"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4582,7 +4582,7 @@
   },
   "2328" : {
     "inputs"     : {
-      "megapixel"     : "1.9",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : 0.5,
@@ -5874,30 +5874,6 @@
     "class_type" : "JanusProDescribeImage|Mie",
     "_meta"      : {
       "title" : "Janus Pro Describe Image 🐑"
-    }
-  },
-  "2744" : {
-    "inputs"     : {
-      "vae" : [
-        "2889",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "VAE Decode"
-    }
-  },
-  "2745" : {
-    "inputs"     : {
-      "vae" : [
-        "2889",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "VAE Decode"
     }
   },
   "2751" : {
