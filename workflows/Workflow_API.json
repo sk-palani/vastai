@@ -4473,7 +4473,7 @@
   },
   "2317" : {
     "inputs"     : {
-      "text1"     : "masterpiece professional potrait photograph of v1dhya5 indian",
+      "text1"     : "masterpiece professional potrait photograph of dark-skinned v1dhya5 indian",
       "text2"     : [
         "1479",
         0
@@ -6570,7 +6570,7 @@
   },
   "2893" : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "cpu"
