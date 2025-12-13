@@ -51,7 +51,9 @@ APT_PACKAGES=(
 
 
 PIP_PACKAGES=(
-    "resynthesizer"
+    "resynthesizer=1.2"
+    "OpenEXR=3.4.4"
+    "soundfile=0.13.1"
     "uvicorn==0.30.6"
     "fastapi==0.115.0"
     "torchsde==0.2.6"
@@ -144,6 +146,8 @@ CLIP_MODELS=(
 #    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors"
     "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
     "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors"
+#    "https://civitai.com/api/download/models/2439153?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
+#    "https://civitai.com/api/download/models/2474529?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
 
 
 #    "https://huggingface.co/cyberdelia/FluxTextEnc_VAE/resolve/main/clip_l.safetensors"
@@ -194,15 +198,18 @@ MP3=(
 
 UNET_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+#   "https://civitai.com/api/download/models/2440283?type=Model&format=GGUF&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}
+#   "https://civitai.com/api/download/models/2482779?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
+#   "https://civitai.com/api/download/models/2220553?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=${CIVITAI_TOKEN}"
 #   "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
-#  "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
-
+#   "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 )
 
 VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
 #    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux-vae-bf16.safetensors"
 #    "https://civitai.com/api/download/models/1749336?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    "https://civitai.com/api/download/models/2439129?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
 )
 
 LORA_MODELS=(
