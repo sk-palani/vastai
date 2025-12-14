@@ -1338,7 +1338,7 @@
   "623"  : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.76
+      "value2" : 0.78
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -1636,7 +1636,7 @@
   },
   "950"  : {
     "inputs"     : {
-      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5 woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,  glossy red lipstick, detailed natural matte skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring skintone with subtle micro-hairs \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, \n"
+      "text" : "professionally color-graded photograph, __AGE__ Indian v1dhya5 woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,  glossy red lipstick,  visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring skintone with subtle micro-hairs \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus,  "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2871,7 +2871,7 @@
   },
   "1989" : {
     "inputs"     : {
-      "sampler_name" : "lms",
+      "sampler_name" : "heun",
       "scheduler"    : "beta",
       "steps"        : 24,
       "denoise"      : [
@@ -3611,7 +3611,7 @@
   },
   "2164" : {
     "inputs"     : {
-      "text" : "A professionally color-graded RAW photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural matte skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, glossy red lipstick"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural matte skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, glossy red lipstick"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4082,7 +4082,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "2300",
+        "2560",
         0
       ],
       "model2"            : [
@@ -4380,11 +4380,11 @@
       "strength_model" : 2,
       "strength_clip"  : 1,
       "model"          : [
-        "2908",
+        "2560",
         0
       ],
       "clip"           : [
-        "2908",
+        "2560",
         1
       ]
     },
@@ -4851,7 +4851,7 @@
   },
   "2363" : {
     "inputs"     : {
-      "max_shift"  : 1.45,
+      "max_shift"  : 1.2,
       "base_shift" : 0.35,
       "width"      : 1024,
       "height"     : 1024,
@@ -4997,7 +4997,7 @@
     },
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
-      "title" : "1.45::0.45"
+      "title" : "0.45::0.45"
     }
   },
   "2403" : {
@@ -5552,7 +5552,7 @@
     "inputs"     : {
       "lora_name"      : "BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors",
       "strength_model" : 0.4,
-      "strength_clip"  : 0.4,
+      "strength_clip"  : 0.2,
       "model"          : [
         "2694",
         0
@@ -5579,8 +5579,8 @@
   "2666" : {
     "inputs"     : {
       "detail_amount"      : 0.09,
-      "start"              : 0.5,
-      "end"                : 0.75,
+      "start"              : 0.25,
+      "end"                : 0.5,
       "bias"               : 0.5,
       "exponent"           : 0.8,
       "start_offset"       : 0,
@@ -6504,7 +6504,7 @@
   },
   "2888" : {
     "inputs"     : {
-      "stop_at_clip_layer" : -1,
+      "stop_at_clip_layer" : -3,
       "clip"               : [
         "2893",
         0
@@ -6573,7 +6573,7 @@
       "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
-      "device"     : "cpu"
+      "device"     : "default"
     },
     "class_type" : "DualCLIPLoader",
     "_meta"      : {
@@ -6588,25 +6588,6 @@
     "class_type" : "UNETLoader",
     "_meta"      : {
       "title" : "Load Diffusion Model"
-    }
-  },
-  "2908" : {
-    "inputs"     : {
-      "lora_name"      : "SameFace_Fix.safetensors",
-      "strength_model" : -0.6,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "2560",
-        0
-      ],
-      "clip"           : [
-        "2560",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "SameFaceNegatice"
     }
   },
   "2910" : {
@@ -6768,7 +6749,7 @@
       "file_prefix"   : "output",
       "time_format"   : "%d-%m-%Y",
       "output_folder" : "",
-      "filetype"      : "txt"
+      "filetype"      : ""
     },
     "class_type" : "FilePathCreator",
     "_meta"      : {
@@ -6849,6 +6830,32 @@
     "class_type" : "LayerColor: ColorAdapter",
     "_meta"      : {
       "title" : "ColorAdapter"
+    }
+  },
+  "2991" : {
+    "inputs"     : {
+      "lora_name"      : "SameFace_Fix.safetensors",
+      "strength_model" : -0.6,
+      "strength_clip"  : 0.8,
+      "model"          : [
+        "2560",
+        0
+      ],
+      "clip"           : [
+        "2560",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "SameFaceNegative"
+    }
+  },
+  "2992" : {
+    "inputs"     : {},
+    "class_type" : "PreviewImage",
+    "_meta"      : {
+      "title" : "Preview Image"
     }
   }
 }
