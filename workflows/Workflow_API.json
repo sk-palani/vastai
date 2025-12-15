@@ -6850,12 +6850,5 @@
     "_meta"      : {
       "title" : "SameFaceNegative"
     }
-  },
-  "2992" : {
-    "inputs"     : {},
-    "class_type" : "PreviewImage",
-    "_meta"      : {
-      "title" : "Preview Image"
-    }
   }
 }
