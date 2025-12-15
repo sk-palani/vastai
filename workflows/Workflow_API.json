@@ -1246,7 +1246,7 @@
   },
   "560"  : {
     "inputs"     : {
-      "text" : "fluxenhancer,aidmaimageupgrader, d351 d4rk, aidmarealisticskin, aidmafluxproultra, moles, natural blemishes, Rough skin texture, Skin imperfections , "
+      "text" : "aidmarealisticskin,aidmaimageupgrader"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1620,11 +1620,11 @@
         "2403",
         0
       ],
-      "any_03" : [
+      "any_02" : [
         "2362",
         0
       ],
-      "any_04" : [
+      "any_03" : [
         "2988",
         0
       ]
@@ -3650,7 +3650,10 @@
         0
       ],
       "text2"     : "(aidmarealisticskin:0.5)",
-      "text3"     : " ",
+      "text3"     : [
+        "560",
+        0
+      ],
       "delimiter" : ""
     },
     "class_type" : "ttN concat",
@@ -4082,7 +4085,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "2560",
+        "2991",
         0
       ],
       "model2"            : [
@@ -4380,11 +4383,11 @@
       "strength_model" : 2,
       "strength_clip"  : 1,
       "model"          : [
-        "2560",
+        "3000",
         0
       ],
       "clip"           : [
-        "2560",
+        "3000",
         1
       ]
     },
@@ -4785,20 +4788,14 @@
   },
   "2362" : {
     "inputs"     : {
-      "guide_size"         : [
-        "2913",
-        0
-      ],
+      "guide_size"         : 512,
       "guide_size_for"     : false,
-      "max_size"           : [
-        "2913",
-        0
-      ],
+      "max_size"           : 1024,
       "seed"               : [
         "2212",
         0
       ],
-      "steps"              : 24,
+      "steps"              : 28,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -4807,7 +4804,7 @@
         0
       ],
       "feather"            : 2,
-      "noise_mask"         : true,
+      "noise_mask"         : false,
       "force_inpaint"      : true,
       "wildcard"           : "",
       "cycle"              : 2,
@@ -5243,7 +5240,7 @@
         "2102",
         0
       ],
-      "b"         : 0.69,
+      "b"         : 0.8,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6459,11 +6456,11 @@
       "strength_model" : 2.6,
       "strength_clip"  : 1,
       "model"          : [
-        "2695",
+        "3001",
         0
       ],
       "clip"           : [
-        "2695",
+        "3001",
         1
       ]
     },
@@ -6495,7 +6492,7 @@
       ],
       "text2"     : "(aidmarealisticskin:0.5)",
       "text3"     : " ",
-      "delimiter" : ""
+      "delimiter" : ","
     },
     "class_type" : "ttN concat",
     "_meta"      : {
@@ -6849,6 +6846,44 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "SameFaceNegative"
+    }
+  },
+  "3000" : {
+    "inputs"     : {
+      "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
+      "strength_model" : 0.5,
+      "strength_clip"  : 1,
+      "model"          : [
+        "2991",
+        0
+      ],
+      "clip"           : [
+        "2991",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "breast-size2 [3.80::3.80]"
+    }
+  },
+  "3001" : {
+    "inputs"     : {
+      "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
+      "strength_model" : 0.2,
+      "strength_clip"  : 0.6,
+      "model"          : [
+        "2695",
+        0
+      ],
+      "clip"           : [
+        "2695",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidm.80]"
     }
   }
 }
