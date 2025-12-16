@@ -2466,7 +2466,7 @@
   },
   "1893" : {
     "inputs"     : {
-      "expression" : "1.05*(a+c*(b-a))*1.142857143",
+      "expression" : "1.15*(a+c*(b-a))*1.142857143",
       "a"          : [
         "1855",
         0
@@ -3061,7 +3061,7 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.34,
+      "denoise"            : 0.2,
       "feather"            : 2,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -5467,7 +5467,7 @@
         "1955",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 0.5,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5839,7 +5839,7 @@
   },
   "2666" : {
     "inputs"     : {
-      "detail_amount"      : 0.09,
+      "detail_amount"      : 0.06,
       "start"              : 0.25,
       "end"                : 0.5,
       "bias"               : 0.5,
@@ -7175,7 +7175,7 @@
     "inputs"     : {
       "lora_name"      : "SameFace_Fix.safetensors",
       "strength_model" : -0.6,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 1,
       "model"          : [
         "2560",
         0
