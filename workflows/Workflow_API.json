@@ -1965,7 +1965,7 @@
   },
   "1740" : {
     "inputs"     : {
-      "value" : 1.38
+      "value" : 1.4
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -2837,8 +2837,8 @@
   },
   "1978" : {
     "inputs"     : {
-      "max_shift"  : 1.5,
-      "base_shift" : 0.5,
+      "max_shift"  : 1.2,
+      "base_shift" : 0.6,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -2912,6 +2912,243 @@
     "class_type" : "easy mathFloat",
     "_meta"      : {
       "title" : "pass1-denoise"
+    }
+  },
+  "2022" : {
+    "inputs"     : {
+      "text1"     : [
+        "788",
+        0
+      ],
+      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
+      "text3"     : "",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2025" : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "1930",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 4,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "true",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "2040",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "2032" : {
+    "inputs"     : {
+      "max_shift"  : 1.3,
+      "base_shift" : 0.8,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2866",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "2034" : {
+    "inputs"     : {
+      "any_01" : [
+        "2085",
+        0
+      ],
+      "any_03" : [
+        "2704",
+        0
+      ],
+      "any_04" : [
+        "2988",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
+  "2035" : {
+    "inputs"     : {
+      "face_mask"       : false,
+      "background_mask" : false,
+      "hair_mask"       : true,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
+      "images"          : [
+        "2034",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "2036" : {
+    "inputs"     : {
+      "combined"     : true,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : false,
+      "mask"         : [
+        "2037",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2037" : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 2,
+      "blur"        : 4,
+      "mask"        : [
+        "2035",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "2040" : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : false,
+      "max_size"           : 1024,
+      "seed"               : [
+        "2212",
+        0
+      ],
+      "steps"              : 18,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : 0.34,
+      "feather"            : 2,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "2034",
+        0
+      ],
+      "segs"               : [
+        "2036",
+        0
+      ],
+      "model"              : [
+        "2032",
+        0
+      ],
+      "clip"               : [
+        "2867",
+        0
+      ],
+      "vae"                : [
+        "2889",
+        0
+      ],
+      "positive"           : [
+        "2043",
+        0
+      ],
+      "negative"           : [
+        "2045",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (Body Detailer)"
+    }
+  },
+  "2043" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2759",
+        0
+      ],
+      "t5xxl"    : [
+        "2022",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "2867",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "2045" : {
+    "inputs"     : {
+      "conditioning" : [
+        "2046",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2046" : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2867",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
     }
   },
   "2047" : {
@@ -4183,6 +4420,25 @@
       "title" : "Load LoRA"
     }
   },
+  "2268" : {
+    "inputs"     : {
+      "lora_name"      : "breast-size2.safetensors",
+      "strength_model" : 2,
+      "strength_clip"  : 0.4,
+      "model"          : [
+        "2903",
+        0
+      ],
+      "clip"           : [
+        "2903",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "breast-size2 [3.80::3.80]"
+    }
+  },
   "2273" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
@@ -4669,6 +4925,10 @@
   },
   "2345" : {
     "inputs"     : {
+      "any_01" : [
+        "2040",
+        0
+      ],
       "any_02" : [
         "2085",
         0
@@ -4788,7 +5048,7 @@
   },
   "2362" : {
     "inputs"     : {
-      "guide_size"         : 512,
+      "guide_size"         : 768,
       "guide_size_for"     : false,
       "max_size"           : 1024,
       "seed"               : [
@@ -4946,6 +5206,10 @@
       ],
       "any_03" : [
         "2362",
+        0
+      ],
+      "any_04" : [
+        "2040",
         0
       ],
       "any_05" : [
@@ -5911,6 +6175,21 @@
       "title" : "Text Concatenate"
     }
   },
+  "2759" : {
+    "inputs"     : {
+      "text1"     : [
+        "2106",
+        0
+      ],
+      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
+      "text3"     : "smooth midriff,",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
   "2797" : {
     "inputs"     : {
       "any_01" : [
@@ -6412,6 +6691,46 @@
       "title" : "Text Multiline"
     }
   },
+  "2866" : {
+    "inputs"     : {
+      "model_a" : [
+        "2903",
+        0
+      ],
+      "model_b" : [
+        "2268",
+        0
+      ],
+      "boolean" : [
+        "241",
+        0
+      ]
+    },
+    "class_type" : "Model Input Switch",
+    "_meta"      : {
+      "title" : "Model Input Switch"
+    }
+  },
+  "2867" : {
+    "inputs"     : {
+      "clip_a"  : [
+        "2903",
+        1
+      ],
+      "clip_b"  : [
+        "2268",
+        1
+      ],
+      "boolean" : [
+        "241",
+        0
+      ]
+    },
+    "class_type" : "CLIP Input Switch",
+    "_meta"      : {
+      "title" : "CLIP Input Switch"
+    }
+  },
   "2874" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -6585,6 +6904,44 @@
     "class_type" : "UNETLoader",
     "_meta"      : {
       "title" : "Load Diffusion Model"
+    }
+  },
+  "2901" : {
+    "inputs"     : {
+      "lora_name"      : "Pandora-RAWr.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.65,
+      "model"          : [
+        "2891",
+        0
+      ],
+      "clip"           : [
+        "2890",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
+    }
+  },
+  "2903" : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.3,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "2901",
+        0
+      ],
+      "clip"           : [
+        "2901",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmafluxproultra"
     }
   },
   "2910" : {
