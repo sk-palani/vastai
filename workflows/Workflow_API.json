@@ -2466,7 +2466,7 @@
   },
   "1893" : {
     "inputs"     : {
-      "expression" : "1*(a+c*(b-a))*1.142857143",
+      "expression" : "1.05*(a+c*(b-a))*1.142857143",
       "a"          : [
         "1855",
         0
@@ -2853,7 +2853,7 @@
   },
   "1988" : {
     "inputs"     : {
-      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, \n ",
+      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene  setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation,high-end professional camera ,  glamorous , sharp focus on subject, detailed fabric texture,   intricate details, detailed background, \n ",
       "t5xxl"    : [
         "788",
         0
@@ -4057,11 +4057,11 @@
   "2213" : {
     "inputs"     : {
       "clip_a"  : [
-        "2644",
+        "2257",
         1
       ],
       "clip_b"  : [
-        "2276",
+        "2250",
         1
       ],
       "boolean" : [
@@ -4077,11 +4077,11 @@
   "2224" : {
     "inputs"     : {
       "model_a" : [
-        "2254",
+        "2257",
         0
       ],
       "model_b" : [
-        "2276",
+        "2250",
         0
       ],
       "boolean" : [
@@ -4224,12 +4224,12 @@
       "strength_model" : 1,
       "strength_clip"  : 0.2,
       "model"          : [
-        "2891",
+        "2276",
         0
       ],
       "clip"           : [
-        "2890",
-        0
+        "2276",
+        1
       ]
     },
     "class_type" : "LoraLoader",
@@ -4326,7 +4326,7 @@
         0
       ],
       "model2"            : [
-        "2644",
+        "2300",
         0
       ]
     },
@@ -4379,12 +4379,12 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2891",
+        "2254",
         0
       ],
       "clip"           : [
-        "2890",
-        0
+        "2300",
+        1
       ]
     },
     "class_type" : "LoraLoader",
@@ -4407,12 +4407,12 @@
       "strength_model" : 0.8000000000000002,
       "strength_clip"  : 0.8,
       "model"          : [
-        "2250",
+        "2891",
         0
       ],
       "clip"           : [
-        "2250",
-        1
+        "2890",
+        0
       ]
     },
     "class_type" : "LoraLoader",
@@ -4636,14 +4636,14 @@
   "2300" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2,
+      "strength_model" : 2.6,
       "strength_clip"  : 1,
       "model"          : [
-        "3000",
+        "2644",
         0
       ],
       "clip"           : [
-        "3000",
+        "2644",
         1
       ]
     },
@@ -5032,7 +5032,7 @@
         0
       ],
       "t5xxl"    : [
-        "2885",
+        "3005",
         0
       ],
       "guidance" : 3.5,
@@ -5048,23 +5048,23 @@
   },
   "2362" : {
     "inputs"     : {
-      "guide_size"         : 768,
+      "guide_size"         : 1024,
       "guide_size_for"     : false,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
         0
       ],
-      "steps"              : 28,
+      "steps"              : 23,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
       "denoise"            : [
         "2553",
         0
       ],
       "feather"            : 2,
-      "noise_mask"         : false,
+      "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
       "cycle"              : 2,
@@ -5108,8 +5108,8 @@
   },
   "2363" : {
     "inputs"     : {
-      "max_shift"  : 1.2,
-      "base_shift" : 0.35,
+      "max_shift"  : 1.35,
+      "base_shift" : 0.75,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -5533,12 +5533,12 @@
       "strength_model" : 0.82,
       "strength_clip"  : 0.8,
       "model"          : [
-        "2257",
+        "2891",
         0
       ],
       "clip"           : [
-        "2257",
-        1
+        "2890",
+        0
       ]
     },
     "class_type" : "LoraLoader",
@@ -5947,11 +5947,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2300",
+        "3000",
         0
       ],
       "clip"           : [
-        "2300",
+        "3000",
         1
       ]
     },
@@ -6788,21 +6788,6 @@
       "title" : "breast-size2 [3.20::3.20]"
     }
   },
-  "2885" : {
-    "inputs"     : {
-      "text1"     : [
-        "788",
-        0
-      ],
-      "text2"     : "(aidmarealisticskin:0.7)",
-      "text3"     : "",
-      "delimiter" : ""
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "textConcat"
-    }
-  },
   "2886" : {
     "inputs"     : {
       "text1"     : [
@@ -6912,12 +6897,12 @@
       "strength_model" : 0.65,
       "strength_clip"  : 0.65,
       "model"          : [
-        "2891",
+        "3007",
         0
       ],
       "clip"           : [
-        "2890",
-        0
+        "3007",
+        1
       ]
     },
     "class_type" : "LoraLoader",
@@ -7171,7 +7156,7 @@
   },
   "2988" : {
     "inputs"     : {
-      "opacity"         : 70,
+      "opacity"         : 88,
       "image"           : [
         "1888",
         0
@@ -7241,6 +7226,51 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidm.80]"
+    }
+  },
+  "3005" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "2555",
+        0
+      ],
+      "text_b"           : [
+        "249",
+        0
+      ],
+      "text_c"           : [
+        "788",
+        0
+      ],
+      "text_d"           : [
+        "2754",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3007" : {
+    "inputs"     : {
+      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "strength_model" : 0.5,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2891",
+        0
+      ],
+      "clip"           : [
+        "2890",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA ::0.8:0.2"
     }
   }
 }
