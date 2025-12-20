@@ -3860,7 +3860,7 @@
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
-      "delta_percent" : 1,
+      "delta_percent" : 0.25,
       "image"         : [
         "2672",
         0
@@ -4805,7 +4805,7 @@
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
-      "delta_percent" : 0.2,
+      "delta_percent" : 0.15,
       "image"         : [
         "2321",
         0
@@ -5057,7 +5057,7 @@
       ],
       "steps"              : 27,
       "cfg"                : 1,
-      "sampler_name"       : "euler_ancestral",
+      "sampler_name"       : "heun",
       "scheduler"          : "beta",
       "denoise"            : [
         "2553",
@@ -5113,13 +5113,13 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2224",
+        "2292",
         0
       ]
     },
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
-      "title" : "ModelSamplingFlux"
+      "title" : "1.35::0.75"
     }
   },
   "2365" : {
