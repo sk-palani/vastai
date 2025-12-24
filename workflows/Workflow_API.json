@@ -1636,7 +1636,7 @@
   },
   "950"  : {
     "inputs"     : {
-      "text" : "professionally color-graded photograph, __AGE__ Indian v1dhya5 woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,  glossy red lipstick,  visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring skintone with subtle micro-hairs \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus,  "
+      "text" : "professionally color-graded photograph, __AGE__ Indian v1dhya5 woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,  glossy red lipstick,  visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring skintone with subtle micro-hairs \nadorning warm red lipstick ,super realism ,high-end professional camera ,  glamorous , serene  setting,  sharp focus,  "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1882,7 +1882,7 @@
   "1566" : {
     "inputs"     : {
       "any_01" : [
-        "2328",
+        "2321",
         0
       ],
       "any_02" : [
@@ -2466,7 +2466,7 @@
   },
   "1893" : {
     "inputs"     : {
-      "expression" : "1.15*(a+c*(b-a))*1.142857143",
+      "expression" : "1.1*(a+c*(b-a))*1.142857143",
       "a"          : [
         "1855",
         0
@@ -2487,8 +2487,8 @@
   },
   "1899" : {
     "inputs"     : {
-      "max_shift"  : 1,
-      "base_shift" : 0.8,
+      "max_shift"  : 1.45,
+      "base_shift" : 0.45,
       "width"      : [
         "394",
         0
@@ -2520,8 +2520,8 @@
   "1909" : {
     "inputs"     : {
       "dishonesty_factor" : -0.02,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.5,
+      "start_percent"     : 0.5,
+      "end_percent"       : 0.6,
       "sampler"           : [
         "2892",
         0
@@ -2873,7 +2873,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 24,
+      "steps"        : 28,
       "denoise"      : [
         "1999",
         0
@@ -3115,7 +3115,7 @@
         "2022",
         0
       ],
-      "guidance" : 3.4,
+      "guidance" : 3.5,
       "clip"     : [
         "2867",
         0
@@ -3848,7 +3848,7 @@
   },
   "2164" : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural matte skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, glossy red lipstick"
+      "text" : "A professionally color-graded super realism photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural matte skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, glossy red lipstick, "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3860,7 +3860,7 @@
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
-      "delta_percent" : 0.25,
+      "delta_percent" : 0.2,
       "image"         : [
         "2672",
         0
@@ -4326,7 +4326,7 @@
         0
       ],
       "model2"            : [
-        "2300",
+        "2644",
         0
       ]
     },
@@ -4379,7 +4379,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2254",
+        "2300",
         0
       ],
       "clip"           : [
@@ -4423,8 +4423,8 @@
   "2268" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2,
-      "strength_clip"  : 0.4,
+      "strength_model" : 2.8,
+      "strength_clip"  : 1,
       "model"          : [
         "2903",
         0
@@ -4639,7 +4639,7 @@
       "strength_model" : 2.6,
       "strength_clip"  : 1,
       "model"          : [
-        "2644",
+        "2254",
         0
       ],
       "clip"           : [
@@ -4650,25 +4650,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "breast-size2 [3.80::3.80]"
-    }
-  },
-  "2302" : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.7,
-      "strength_clip"  : 0.7,
-      "model"          : [
-        "2245",
-        0
-      ],
-      "clip"           : [
-        "2245",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Realism"
     }
   },
   "2303" : {
@@ -4798,22 +4779,6 @@
     "class_type" : "DetailDaemonSamplerNode",
     "_meta"      : {
       "title" : "Detail Daemon Sampler"
-    }
-  },
-  "2328" : {
-    "inputs"     : {
-      "megapixel"     : "2.0",
-      "divisible_by"  : "8",
-      "mode"          : "pad",
-      "delta_percent" : 0.15,
-      "image"         : [
-        "2321",
-        0
-      ]
-    },
-    "class_type" : "Image_Preparations",
-    "_meta"      : {
-      "title" : "Image Preparations"
     }
   },
   "2331" : {
@@ -5055,7 +5020,7 @@
         "2212",
         0
       ],
-      "steps"              : 27,
+      "steps"              : 21,
       "cfg"                : 1,
       "sampler_name"       : "heun",
       "scheduler"          : "beta",
@@ -5108,8 +5073,8 @@
   },
   "2363" : {
     "inputs"     : {
-      "max_shift"  : 1.35,
-      "base_shift" : 0.75,
+      "max_shift"  : 1.3,
+      "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -5504,7 +5469,7 @@
         "2102",
         0
       ],
-      "b"         : 1,
+      "b"         : 0.66,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5839,7 +5804,7 @@
   },
   "2666" : {
     "inputs"     : {
-      "detail_amount"      : 0.12,
+      "detail_amount"      : 0.1,
       "start"              : 0.25,
       "end"                : 0.5,
       "bias"               : 0.5,
@@ -6045,11 +6010,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2302",
+        "3016",
         0
       ],
       "clip"           : [
-        "2302",
+        "3016",
         1
       ]
     },
@@ -6466,7 +6431,7 @@
     },
     "class_type" : "GrowMask",
     "_meta"      : {
-      "title" : "GrowMask"
+      "title" : "Grow Mask"
     }
   },
   "2833" : {
@@ -6772,8 +6737,8 @@
   "2881" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.6,
-      "strength_clip"  : 1,
+      "strength_model" : 2.8,
+      "strength_clip"  : 2,
       "model"          : [
         "3001",
         0
@@ -7271,6 +7236,25 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA ::0.8:0.2"
+    }
+  },
+  "3016" : {
+    "inputs"     : {
+      "lora_name"      : "Pandora-RAWr.safetensors",
+      "strength_model" : 0.7,
+      "strength_clip"  : 0.7,
+      "model"          : [
+        "2245",
+        0
+      ],
+      "clip"           : [
+        "2245",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Realism"
     }
   }
 }
