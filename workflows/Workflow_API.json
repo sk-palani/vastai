@@ -352,8 +352,7 @@
   },
   "251"  : {
     "inputs"     : {
-      "text_0" : "School Uniform",
-      "text"   : [
+      "text" : [
         "254",
         0
       ]
@@ -367,7 +366,7 @@
     "inputs"     : {
       "join_with"   : ",",
       "string_list" : [
-        "251",
+        "254",
         0
       ]
     },
@@ -837,7 +836,7 @@
       "vignette_intensity"  : 0.010000000000000002,
       "grain_method"        : "filmgrainer",
       "grain_power"         : 0.08,
-      "grain_scale"         : 0.2,
+      "grain_scale"         : 0.6,
       "grain_sat"           : 0.3,
       "filmgrainer_shadows" : 0.15000000000000002,
       "filmgrainer_highs"   : 0.10000000000000002,
@@ -1660,9 +1659,10 @@
   },
   "1271" : {
     "inputs"     : {
-      "upscale_method" : "lanczos",
-      "megapixels"     : 1.5000000000000002,
-      "image"          : [
+      "upscale_method"   : "lanczos",
+      "megapixels"       : 1.5000000000000002,
+      "resolution_steps" : 1,
+      "image"            : [
         "2303",
         0
       ]
@@ -1887,7 +1887,7 @@
         0
       ],
       "any_02" : [
-        "2165",
+        "2672",
         0
       ]
     },
@@ -2521,8 +2521,8 @@
   "1909" : {
     "inputs"     : {
       "dishonesty_factor" : -0.02,
-      "start_percent"     : 0.5,
-      "end_percent"       : 0.6,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.35,
       "sampler"           : [
         "2892",
         0
@@ -3856,22 +3856,6 @@
       "title" : "Text Multiline"
     }
   },
-  "2165" : {
-    "inputs"     : {
-      "megapixel"     : "2.0",
-      "divisible_by"  : "8",
-      "mode"          : "pad",
-      "delta_percent" : 0.2,
-      "image"         : [
-        "2672",
-        0
-      ]
-    },
-    "class_type" : "Image_Preparations",
-    "_meta"      : {
-      "title" : "Image Preparations"
-    }
-  },
   "2178" : {
     "inputs"     : {
       "value" : true
@@ -4822,7 +4806,7 @@
       "force_uniform_tiles" : false,
       "tiled_decode"        : false,
       "image"               : [
-        "2165",
+        "2672",
         0
       ],
       "model"               : [
@@ -5433,7 +5417,7 @@
         "1955",
         0
       ],
-      "b"         : 0.69,
+      "b"         : 0.62,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6771,7 +6755,7 @@
   },
   "2888" : {
     "inputs"     : {
-      "stop_at_clip_layer" : -3,
+      "stop_at_clip_layer" : -1,
       "clip"               : [
         "2893",
         0
@@ -6828,7 +6812,7 @@
   },
   "2892" : {
     "inputs"     : {
-      "sampler_name" : "euler_ancestral"
+      "sampler_name" : "euler"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
@@ -6837,10 +6821,10 @@
   },
   "2893" : {
     "inputs"     : {
-      "clip_name1" : "clip_l.safetensors",
+      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
-      "device"     : "default"
+      "device"     : "cpu"
     },
     "class_type" : "DualCLIPLoader",
     "_meta"      : {
