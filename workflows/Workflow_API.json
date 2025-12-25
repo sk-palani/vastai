@@ -3466,9 +3466,9 @@
       ],
       "steps"              : 19,
       "cfg"                : 1,
-      "sampler_name"       : "euler_ancestral",
+      "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.37,
+      "denoise"            : 0.3,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -6755,7 +6755,7 @@
   },
   "2888" : {
     "inputs"     : {
-      "stop_at_clip_layer" : -1,
+      "stop_at_clip_layer" : -2,
       "clip"               : [
         "2893",
         0
