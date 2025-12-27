@@ -2,6 +2,33 @@
 
 # This file will be sourced in init.sh
 
+
+
+nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
+nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
+nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
+
+# * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
+# * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
+chmod +x ${WORKSPACE}scripts/submit_prompt.sh
+
+JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log"
+
+crontab -l 2>/dev/null | {
+    grep -q "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
+} | crontab -
+
+
+service cron start &
+
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
+supervisorctl stop 'jupyter'
+
+
+
 # https://github.com/MushroomFleet/Runpod-init
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 workflows_dir=${WORKSPACE}/ComfyUI/user/default/workflows
@@ -130,6 +157,7 @@ NODES=(
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
     "https://github.com/orion4d/ComfyUI_SharpnessPro"
     "https://github.com/HECer/ComfyUI-FilePathCreator"
+    "https://github.com/SparknightLLC/ComfyUI-SpectralVAEDetailer"
     "https://github.com/sk-palani/ComfyUI_Simpler"
 )
 
@@ -198,7 +226,10 @@ MP3=(
 
 UNET_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-#   "https://civitai.com/api/download/models/2440283?type=Model&format=GGUF&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}
+#    "https://civitai.com/api/download/models/2157702?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
+#    cyberrealisticFlux_v25.safetensors
+#    "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
+#   "https://civitai.com/api/download/models/2440283?type=Model&format=GGUF&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
 #   "https://civitai.com/api/download/models/2482779?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 #   "https://civitai.com/api/download/models/2220553?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=${CIVITAI_TOKEN}"
 #   "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
@@ -239,6 +270,8 @@ LORA_MODELS=(
 
 #aidmaRealisticSkin-FLUX-v0.1.safetensors
     "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#flux_realism_lora.safetensors
+    "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #flux_realism_lora.safetensors
     "https://civitai.com/api/download/models/706528?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/712589?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
@@ -310,6 +343,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/981081?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
     "https://huggingface.co/ali-vilab/ACE_Plus/resolve/main/portrait/comfyui_portrait_lora64.safetensors"
+
+    "https://huggingface.co/strangerzonehf/Flux-Super-Realism-LoRA/resolve/main/super-realism.safetensors"
 #FLUX-_SFW_Busty.
 #Detailed_Hands-000001.safetensors.0
     "https://civitai.com/api/download/models/1003317?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
@@ -323,6 +358,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1782533?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #d351_Coffee_Krea_Kohya_V1_Unchained_prodigy-000012.safetensors
     "https://civitai.com/api/download/models/2402710?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/1553172?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -653,29 +689,3 @@ ${WORKSPACE}/environments/python/comfyui/bin/python -m pip install -r /workspace
 provisioning_get_default_workflow
 
 ## while loop to check queue every 60 seconds
-
-
-nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
-nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
-nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
-
-# * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
-# * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
-chmod +x ${WORKSPACE}scripts/submit_prompt.sh
-
-JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log"
-
-crontab -l 2>/dev/null | {
-    grep -q "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
-} | crontab -
-
-
-service cron start &
-
-
-
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
-supervisorctl stop 'jupyter'
