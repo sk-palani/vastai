@@ -1,7 +1,7 @@
 {
   "25": {
     "inputs": {
-      "text_0": "{\n  \"background\": \"The photo was taken indoors with a plain white wall in the background, giving a clean and minimalistic look.\",\n  \"camera_angle\": \"The shot was taken from a slightly low angle, focusing on the lower half of the subject's body.\",\n  \"hair_style\": \"The subject has long, dark hair tied back, with a slight part on one side. It appears to be styled in a loose, casual manner.\",\n  \"jewelry\": \"The person is wearing a necklace with a circular pendant and several bracelets on their right wrist.\",\n  \"outfit\": \"The subject is wearing a cropped, short-sleeved orange top and grey pants with a zipper pocket on the right side.\",\n  \"make_up\": \"The subject has a subtle makeup look with defined eyeliner, mascara, and a light pink lipstick.\",\n  \"expression\": \"The facial expression is neutral to slightly friendly, with a gentle smile and direct eye contact.\",\n  \"details_in_background\": \"There are blurred green plants visible on the left side of the image, adding some natural elements to the setting.\",\n  \"idibrain_idata\": \"idibrain.com, 40269207\"\n}",
+      "text_0": "{\n  \"background\": \"The photo appears to be taken outdoors with a soft, blurred effect, suggesting natural sunlight. The background is mostly out of focus, giving emphasis to the subject.\",\n  \"camera_angle\": \"The shot is taken from a slightly low angle, looking up at the subject, which creates a flattering perspective.\",\n  \"hair_style\": \"The subject has long, straight hair, parted down the middle, and styled in a loose, wavy manner.\",\n  \"jewelry\": \"The subject is wearing a gold-colored bangle on each wrist and a delicate necklace. The bangle appears to be gold, and the necklace is small and subtle.\",\n  \"outfit\": \"The subject is wearing a red saree with intricate golden floral patterns on the sleeves, complementing the jewelry and adding to the traditional look.\",\n  \"facial_expression\": \"The subject has a gentle, warm smile, with slightly raised eyebrows and a soft, relaxed expression.\",\n  \"make_up\": \"The subject has a subtle, natural makeup look with a focus on her eyes, which are accentuated with kohl and a hint of a bindi. Her lips are painted with a pinkish-red lipstick.\",\n  \"eyes\": \"The eyes are almond-shaped, framed with mascara, and have a light brown color.\",\n  \"lips\": \"The lips are painted with a pinkish-red lipstick, complementing the overall warm tone of the image.\",\n  \"overall_effect\": \"The overall effect of the image is warm, natural, and vibrant, highlighting the traditional and cultural elements of the attire and jewelry.\"\n}",
       "text": [
         "484",
         0
@@ -102,7 +102,7 @@
   },
   "110": {
     "inputs": {
-      "text_0": "{\n  \"outfit\": {\n    \"top\": {\n      \"color\": \"orange\",\n      \"material\": \"shiny fabric\",\n      \"texture\": \"smooth\"\n    },\n    \"bottom\": {\n      \"color\": \"gray\",\n      \"material\": \"fabric\",\n      \"texture\": \"soft\"\n    },\n    \"accessories\": {\n      \"bracelets\": \"metallic\",\n      \"necklace\": \"black\"\n    }\n  },\n  \"details\": {\n    \"fit\": \"cropped, revealing midriff\",\n    \"style\": \"casual, sporty\"\n  },\n  \"environment\": {\n    \"background\": \"white wall\",\n    \"details\": \"no distinct background elements visible\"\n  }\n}",
+      "text_0": "{\n  \"outfit\": {\n    \"color\": \"Red\",\n    \"material\": \"Cotton or silk\",\n    \"texture\": \"Satin\",\n    \"fit\": \"Sleeveless, draped\"\n  },\n  \"details\": {\n    \"upper\": {\n      \"color\": \"Red and gold\",\n      \"material\": \"Cotton or silk\",\n      \"texture\": \"Leather\",\n      \"details\": \"Patterned\"\n    },\n    \"lower\": {\n      \"color\": \"Red\",\n      \"material\": \"Cotton or silk\",\n      \"texture\": \"Satin\",\n      \"details\": \"Plain\"\n    }\n  }\n}",
       "text": [
         "485",
         0
@@ -919,26 +919,6 @@
       "title": "LayerColor: ColorBalance"
     }
   },
-  "441": {
-    "inputs": {
-      "expand": 1,
-      "incremental_expandrate": 0,
-      "tapered_corners": false,
-      "flip_input": false,
-      "blur_radius": 0,
-      "lerp_alpha": 0,
-      "decay_factor": 0,
-      "fill_holes": false,
-      "mask": [
-        "545",
-        0
-      ]
-    },
-    "class_type": "GrowMaskWithBlur",
-    "_meta": {
-      "title": "Grow Mask With Blur"
-    }
-  },
   "445": {
     "inputs": {
       "image": [
@@ -1177,7 +1157,7 @@
   },
   "511": {
     "inputs": {
-      "text_0": "{\n  \"subject\": {\n    \"expression\": \"The subject is having a aroused facial expression\"\n   }\n}\n    ",
+      "text_0": "{\n  \"subject\": {\n    \"expression\": \"The subject is having a provocative facial expression\"\n   }\n}\n    ",
       "text": [
         "3016",
         0
@@ -1240,27 +1220,6 @@
       "title": "Preview Image"
     }
   },
-  "545": {
-    "inputs": {
-      "face_mask": false,
-      "background_mask": true,
-      "hair_mask": false,
-      "body_mask": false,
-      "clothes_mask": false,
-      "confidence": 0.5,
-      "refine_mask": true,
-      "batch_size": 8,
-      "compute_device": "auto",
-      "images": [
-        "356",
-        0
-      ]
-    },
-    "class_type": "APersonMaskGenerator",
-    "_meta": {
-      "title": "A Person Mask Generator"
-    }
-  },
   "559": {
     "inputs": {
       "text": "aidmafluxproultra, aidmaimageupgrader, sinfully stylish, "
@@ -1308,7 +1267,7 @@
   },
   "570": {
     "inputs": {
-      "text_0": "Inputs/Next/kamna7.jpg",
+      "text_0": "Inputs/Next/janani17.jpg",
       "text": [
         "1806",
         3
@@ -1333,7 +1292,7 @@
   },
   "573": {
     "inputs": {
-      "text_0": "{\n  \"type\": \"professionally color graded photograph\",\n  \"subject\": {\n    \"keyword\": \"Indian v1dhya5 woman\",\n    \"gender\": \"female\",\n    \"appearance\": \"extremely beautiful face\"\n  },\n  \"facial_features\": {\n    \"forehead\": \"black bindi\",\n    \"skin_texture\": [\n      \"natural matte skin\",\n      \"visible pores\",\n      \"soft peach fuzz\",\n      \"tiny vellus hairs\"\n    ],\n    \"skin_characteristics\": [\n      \"faint acne marks\",\n      \"mild unevenness\"\n    ],\n    \"makeup\": {\n      \"lipstick\": \"glossy red\"\n    }\n  },\n  \"lighting\": {\n    \"style\": \"side lighting\",\n    \"effect\": \"illumination of fine facial hairs and skin texture\"\n  },\n  \"color_grading\": {\n    \"quality\": \"professional\"\n  },\n  \"background\": \"The photo was taken indoors with a plain white wall in the background, giving a clean and minimalistic look.\",\n  \"camera_angle\": \"The shot was taken from a slightly low angle, focusing on the lower half of the subject's body.\",\n  \"hair_style\": \"The subject has long, dark hair tied back, with a slight part on one side. It appears to be styled in a loose, casual manner.\",\n  \"jewelry\": \"The person is wearing a necklace with a circular pendant and several bracelets on their right wrist.\",\n  \"outfit\": \"The subject is wearing a cropped, short-sleeved orange top and grey pants with a zipper pocket on the right side.\",\n  \"make_up\": \"The subject has a subtle makeup look with defined eyeliner, mascara, and a light pink lipstick.\",\n  \"expression\": \"The facial expression is neutral to slightly friendly, with a gentle smile and direct eye contact.\",\n  \"details_in_background\": \"There are blurred green plants visible on the left side of the photo, adding some natural elements to the setting.\",\n  \"idibrain_idata\": \"idibrain.com, 40269207\",\n  \"clothing\": {\n    \"outfit\": \"form fitting outfit with subtle bra outline visible\"\n  },\n  \"skin_details\": {\n    \"skin_tone\": \"dark\",\n    \"skin_texture\": \"supple, non oily\",\n    \"micro_details\": \"(visible micro hairs:1.3)\",\n    \"facial_mark\": \"tiny black mole on chin\"\n  },\n  \"hair\": {\n    \"length\": \"long\",\n    \"color\": \"black\",\n    \"texture\": \"curly\",\n    \"details\": \"a few subtle natural gray strands visible\"\n  },\n  \"face_and_expression\": {\n    \"teeth\": \"aligned with one slightly twisted upper canine\",\n    \"character\": \"natural imperfect charm\"\n  },\n  \"accessories\": {\n    \"necklace\": \"pendant necklace with letter V\",\n    \"waist_chain\": \"delicate waist chain\",\n    \"piercing\": \"platinum diamond belly piercing\",\n    \"ring\": \"diamond ring on one finger\"\n  },\n  \"hands\": {\n    \"detail_level\": \"detailed female hands\",\n    \"nails\": \"no nail polish\"\n  }\n}",
+      "text_0": "{\n  \"type\": \"professionally color graded photograph\",\n  \"subject\": {\n    \"keyword\": \"Indian v1dhya5 woman\",\n    \"gender\": \"female\",\n    \"appearance\": \"extremely beautiful face\"\n  },\n  \"facial_features\": {\n    \"forehead\": \"black bindi\",\n    \"skin_texture\": [\n      \"natural matte skin\",\n      \"visible pores\",\n      \"soft peach fuzz\",\n      \"tiny vellus hairs\"\n    ],\n    \"skin_characteristics\": [\n      \"faint acne marks\",\n      \"mild unevenness\"\n    ],\n    \"makeup\": {\n      \"lipstick\": \"glossy red\"\n    }\n  },\n  \"lighting\": {\n    \"style\": \"side lighting\",\n    \"effect\": \"illumination of fine facial hairs and skin texture\"\n  },\n  \"color_grading\": {\n    \"quality\": \"professional\"\n  },\n  \"background\": \"The photo appears to be taken outdoors with a soft, blurred effect, suggesting natural sunlight. The background is mostly out of focus, giving emphasis to the subject.\",\n  \"camera_angle\": \"The shot is taken from a slightly low angle, looking up at the subject, which creates a flattering perspective.\",\n  \"hair_style\": \"The subject has long, straight hair, parted down the middle, and styled in a loose, wavy manner.\",\n  \"jewelry\": \"The subject is wearing a gold-colored bangle on each wrist and a delicate necklace. The bangle appears to be gold, and the necklace is small and subtle.\",\n  \"outfit\": \"The subject is wearing a red saree with intricate golden floral patterns on the sleeves, complementing the jewelry and adding to the traditional look.\",\n  \"facial_expression\": \"The subject has a gentle, warm smile, with slightly raised eyebrows and a soft, relaxed expression.\",\n  \"make_up\": \"The subject has a subtle, natural makeup look with a focus on her eyes, which are accentuated with kohl and a hint of a bindi. Her lips are painted with a pinkish-red lipstick.\",\n  \"eyes\": \"The eyes are almond-shaped, framed with mascara, and have a light brown color.\",\n  \"lips\": \"The lips are painted with a pinkish-red lipstick, complementing the overall warm tone of the photo.\",\n  \"overall_effect\": \"The overall effect of the photo is warm, natural, and vibrant, highlighting the traditional and cultural elements of the attire and jewelry.\",\n  \"clothing\": {\n    \"outfit\": \"form fitting outfit with subtle bra outline visible\"\n  },\n  \"skin_details\": {\n    \"skin_tone\": \"dark\",\n    \"skin_texture\": \"supple, non oily\",\n    \"micro_details\": \"(visible micro hairs:1.3)\",\n    \"facial_mark\": \"tiny black mole on chin\"\n  },\n  \"hair\": {\n    \"length\": \"long\",\n    \"color\": \"black\",\n    \"texture\": \"curly\",\n    \"details\": \"a few subtle natural gray strands visible\"\n  },\n  \"face_and_expression\": {\n    \"teeth\": \"aligned with one slightly twisted upper canine\",\n    \"character\": \"natural imperfect charm\"\n  },\n  \"accessories\": {\n    \"necklace\": \"pendant necklace with letter V\",\n    \"waist_chain\": \"delicate waist chain\",\n    \"piercing\": \"platinum diamond belly piercing\",\n    \"ring\": \"diamond ring on one finger\"\n  },\n  \"hands\": {\n    \"detail_level\": \"detailed female hands\",\n    \"nails\": \"no nail polish\"\n  }\n}",
       "text": [
         "788",
         0
@@ -1794,7 +1753,7 @@
   },
   "1285": {
     "inputs": {
-      "preview": "+",
+      "preview": "",
       "previewMode": null,
       "source": [
         "296",
@@ -1808,7 +1767,7 @@
   },
   "1286": {
     "inputs": {
-      "preview": "+",
+      "preview": "",
       "previewMode": null,
       "source": [
         "293",
@@ -1822,7 +1781,7 @@
   },
   "1287": {
     "inputs": {
-      "preview": "False",
+      "preview": "",
       "previewMode": null,
       "source": [
         "235",
@@ -1836,7 +1795,7 @@
   },
   "1288": {
     "inputs": {
-      "preview": "0.78",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2100",
@@ -1850,7 +1809,7 @@
   },
   "1289": {
     "inputs": {
-      "preview": "0.54",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2102",
@@ -1864,7 +1823,7 @@
   },
   "1294": {
     "inputs": {
-      "preview": "0.14181804",
+      "preview": "",
       "previewMode": null,
       "source": [
         "622",
@@ -1878,7 +1837,7 @@
   },
   "1295": {
     "inputs": {
-      "preview": "0",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2103",
@@ -1892,7 +1851,7 @@
   },
   "1306": {
     "inputs": {
-      "preview": "0",
+      "preview": "",
       "previewMode": null,
       "source": [
         "1595",
@@ -1978,7 +1937,7 @@
   },
   "1354": {
     "inputs": {
-      "preview": "True",
+      "preview": "",
       "previewMode": null,
       "source": [
         "124",
@@ -2012,12 +1971,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ilatp_00051_.png&type=temp&subfolder=&rand=0.39370963053951746"
+            "url": "/api/view?filename=rgthree.compare._temp_cvcup_00003_.png&type=temp&subfolder=&rand=0.036393687909803574"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ilatp_00052_.png&type=temp&subfolder=&rand=0.25750813981109666"
+            "url": "/api/view?filename=rgthree.compare._temp_cvcup_00004_.png&type=temp&subfolder=&rand=0.09482971251604055"
           }
         ]
       },
@@ -2042,12 +2001,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_dyaph_00051_.png&type=temp&subfolder=&rand=0.6649434040873792"
+            "url": "/api/view?filename=rgthree.compare._temp_xduia_00003_.png&type=temp&subfolder=&rand=0.6429446589024203"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_dyaph_00052_.png&type=temp&subfolder=&rand=0.112949963308968"
+            "url": "/api/view?filename=rgthree.compare._temp_xduia_00004_.png&type=temp&subfolder=&rand=0.8136923818687861"
           }
         ]
       },
@@ -2072,12 +2031,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_kiick_00051_.png&type=temp&subfolder=&rand=0.3405836682456508"
+            "url": "/api/view?filename=rgthree.compare._temp_imgfy_00003_.png&type=temp&subfolder=&rand=0.19169465230357163"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_kiick_00052_.png&type=temp&subfolder=&rand=0.9467584554233752"
+            "url": "/api/view?filename=rgthree.compare._temp_imgfy_00004_.png&type=temp&subfolder=&rand=0.35130258330519837"
           }
         ]
       },
@@ -2277,12 +2236,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_mlrxt_00043_.png&type=temp&subfolder=&rand=0.4619611120736571"
+            "url": "/api/view?filename=rgthree.compare._temp_kfhjr_00001_.png&type=temp&subfolder=&rand=0.37179959272939733"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_mlrxt_00044_.png&type=temp&subfolder=&rand=0.5443857664179687"
+            "url": "/api/view?filename=rgthree.compare._temp_kfhjr_00002_.png&type=temp&subfolder=&rand=0.8705560586553306"
           }
         ]
       },
@@ -2307,12 +2266,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_obfei_00051_.png&type=temp&subfolder=&rand=0.6158962845043564"
+            "url": "/api/view?filename=rgthree.compare._temp_chanb_00003_.png&type=temp&subfolder=&rand=0.38609898599550074"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_obfei_00052_.png&type=temp&subfolder=&rand=0.15939513892119572"
+            "url": "/api/view?filename=rgthree.compare._temp_chanb_00004_.png&type=temp&subfolder=&rand=0.9864833746499749"
           }
         ]
       },
@@ -2367,12 +2326,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_bszpm_00045_.png&type=temp&subfolder=&rand=0.3116070154624532"
+            "url": "/api/view?filename=rgthree.compare._temp_fmdnk_00001_.png&type=temp&subfolder=&rand=0.48460945134870514"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_bszpm_00046_.png&type=temp&subfolder=&rand=0.7327647603852138"
+            "url": "/api/view?filename=rgthree.compare._temp_fmdnk_00002_.png&type=temp&subfolder=&rand=0.015829514033210534"
           }
         ]
       },
@@ -2440,7 +2399,7 @@
       "ordering_mode": "random",
       "include_subdirectories": "yes",
       "index": 0,
-      "seed": -1061647668343683
+      "seed": -911917582060428
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -2469,7 +2428,7 @@
       "ordering_mode": "random",
       "include_subdirectories": "yes",
       "index": 0,
-      "seed": 159510339444448
+      "seed": 695358382592777
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -2589,7 +2548,7 @@
   },
   "1823": {
     "inputs": {
-      "text_0": "Inputs/Next/janani2.jpg",
+      "text_0": "Inputs/Next/kalyani5.jpg",
       "text": [
         "1803",
         3
@@ -2628,7 +2587,7 @@
       "ordering_mode": "sequential_by_modified_date",
       "include_subdirectories": "yes",
       "index": 0,
-      "seed": -63042100219703
+      "seed": 787693638808157
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -2839,7 +2798,7 @@
   },
   "1869": {
     "inputs": {
-      "preview": "0.55",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2541",
@@ -2981,12 +2940,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ukzpf_00045_.png&type=temp&subfolder=&rand=0.06351827707304192"
+            "url": "/api/view?filename=rgthree.compare._temp_thpgq_00001_.png&type=temp&subfolder=&rand=0.8146309337560336"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ukzpf_00046_.png&type=temp&subfolder=&rand=0.3733353337971458"
+            "url": "/api/view?filename=rgthree.compare._temp_thpgq_00002_.png&type=temp&subfolder=&rand=0.5218417576696223"
           }
         ]
       },
@@ -3559,12 +3518,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_qybpc_00013_.png&type=temp&subfolder=&rand=0.07363154390751891"
+            "url": "/api/view?filename=rgthree.compare._temp_yqtpm_00001_.png&type=temp&subfolder=&rand=0.7651999725394203"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_qybpc_00014_.png&type=temp&subfolder=&rand=0.7072799624558784"
+            "url": "/api/view?filename=rgthree.compare._temp_yqtpm_00002_.png&type=temp&subfolder=&rand=0.05389068001507291"
           }
         ]
       },
@@ -3968,12 +3927,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_sjxen_00045_.png&type=temp&subfolder=&rand=0.5027258228608767"
+            "url": "/api/view?filename=rgthree.compare._temp_tlcqv_00001_.png&type=temp&subfolder=&rand=0.2671585084382222"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_sjxen_00046_.png&type=temp&subfolder=&rand=0.4812243118113052"
+            "url": "/api/view?filename=rgthree.compare._temp_tlcqv_00002_.png&type=temp&subfolder=&rand=0.7937157282221139"
           }
         ]
       },
@@ -4582,7 +4541,7 @@
   },
   "2226": {
     "inputs": {
-      "preview": "True",
+      "preview": "",
       "previewMode": null,
       "source": [
         "325",
@@ -4643,7 +4602,7 @@
   },
   "2233": {
     "inputs": {
-      "preview": "9204337526807",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2240",
@@ -4667,7 +4626,7 @@
   "2240": {
     "inputs": {
       "mode": true,
-      "seed": 668461406329661,
+      "seed": 276068231070402,
       "fixed_seed": 0
     },
     "class_type": "SeedSelector",
@@ -5282,12 +5241,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_cotdn_00047_.png&type=temp&subfolder=&rand=0.6473015637132542"
+            "url": "/api/view?filename=rgthree.compare._temp_kpplq_00003_.png&type=temp&subfolder=&rand=0.20869477784369195"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_cotdn_00048_.png&type=temp&subfolder=&rand=0.6761334036865448"
+            "url": "/api/view?filename=rgthree.compare._temp_kpplq_00004_.png&type=temp&subfolder=&rand=0.5478609846775809"
           }
         ]
       },
@@ -6070,7 +6029,7 @@
   },
   "2552": {
     "inputs": {
-      "preview": "Inputs/Next/Best",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2545",
@@ -6184,7 +6143,7 @@
   },
   "2579": {
     "inputs": {
-      "preview": "_27-12-2025",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2958",
@@ -6281,7 +6240,7 @@
   },
   "2608": {
     "inputs": {
-      "text_0": "professionally color-graded photograph, 28{28\n28 28 28\"28s28u28b28j28e28c28t28\"28:28 28{28\n28 28 28 28 28\"28a28g28e28\"28:28 28\"28_28_28{28{28 28a28g28e28 28}28}28_28_28\"28\n28 28 28 28}28\n28}28\n28 28 28 28 28 Indian v1dhya5 woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,  glossy red lipstick,  visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring skintone with subtle micro-hairs \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus,  /n_________________________/n{\n  \"type\": \"professionally color graded photograph\",\n  \"subject\": {\n    \"keyword\": \"Indian v1dhya5 woman\",\n    \"gender\": \"female\",\n    \"appearance\": \"extremely beautiful face\"\n  },\n  \"facial_features\": {\n    \"forehead\": \"black bindi\",\n    \"skin_texture\": [\n      \"natural matte skin\",\n      \"visible pores\",\n      \"soft peach fuzz\",\n      \"tiny vellus hairs\"\n    ],\n    \"skin_characteristics\": [\n      \"faint acne marks\",\n      \"mild unevenness\"\n    ],\n    \"makeup\": {\n      \"lipstick\": \"glossy red\"\n    }\n  },\n  \"lighting\": {\n    \"style\": \"side lighting\",\n    \"effect\": \"illumination of fine facial hairs and skin texture\"\n  },\n  \"color_grading\": {\n    \"quality\": \"professional\"\n  },\n  \"background\": \"The photo was taken indoors with a plain white wall in the background, giving a clean and minimalistic look.\",\n  \"camera_angle\": \"The shot was taken from a slightly low angle, focusing on the lower half of the subject's body.\",\n  \"hair_style\": \"The subject has long, dark hair tied back, with a slight part on one side. It appears to be styled in a loose, casual manner.\",\n  \"jewelry\": \"The person is wearing a necklace with a circular pendant and several bracelets on their right wrist.\",\n  \"outfit\": \"The subject is wearing a cropped, short-sleeved orange top and grey pants with a zipper pocket on the right side.\",\n  \"make_up\": \"The subject has a subtle makeup look with defined eyeliner, mascara, and a light pink lipstick.\",\n  \"expression\": \"The facial expression is neutral to slightly friendly, with a gentle smile and direct eye contact.\",\n  \"details_in_background\": \"There are blurred green plants visible on the left side of the photo, adding some natural elements to the setting.\",\n  \"idibrain_idata\": \"idibrain.com, 40269207\",\n  \"clothing\": {\n    \"outfit\": \"form fitting outfit with subtle bra outline visible\"\n  },\n  \"skin_details\": {\n    \"skin_tone\": \"dark\",\n    \"skin_texture\": \"supple, non oily\",\n    \"micro_details\": \"(visible micro hairs:1.3)\",\n    \"facial_mark\": \"tiny black mole on chin\"\n  },\n  \"hair\": {\n    \"length\": \"long\",\n    \"color\": \"black\",\n    \"texture\": \"curly\",\n    \"details\": \"a few subtle natural gray strands visible\"\n  },\n  \"face_and_expression\": {\n    \"teeth\": \"aligned with one slightly twisted upper canine\",\n    \"character\": \"natural imperfect charm\"\n  },\n  \"accessories\": {\n    \"necklace\": \"pendant necklace with letter V\",\n    \"waist_chain\": \"delicate waist chain\",\n    \"piercing\": \"platinum diamond belly piercing\",\n    \"ring\": \"diamond ring on one finger\"\n  },\n  \"hands\": {\n    \"detail_level\": \"detailed female hands\",\n    \"nails\": \"no nail polish\"\n  }\n}/n_________________________/ndetailed fabric texture,{\n  \"outfit\": {\n    \"top\": {\n      \"color\": \"orange\",\n      \"material\": \"shiny fabric\",\n      \"texture\": \"smooth\"\n    },\n    \"bottom\": {\n      \"color\": \"gray\",\n      \"material\": \"fabric\",\n      \"texture\": \"soft\"\n    },\n    \"accessories\": {\n      \"bracelets\": \"metallic\",\n      \"necklace\": \"black\"\n    }\n  },\n  \"details\": {\n    \"fit\": \"cropped, revealing midriff\",\n    \"style\": \"casual, sporty\"\n  },\n  \"environment\": {\n    \"background\": \"white wall\",\n    \"details\": \"no distinct background elements visible\"\n  }\n},slightly translucent elements in the intricate outfit with see though sleeves, showing the profile of the 36DD Cup size  bra wearing underneath.",
+      "text_0": "professionally color-graded photograph, 28{28\n28 28 28\"28s28u28b28j28e28c28t28\"28:28 28{28\n28 28 28 28 28\"28a28g28e28\"28:28 28\"28_28_28{28{28 28a28g28e28 28}28}28_28_28\"28\n28 28 28 28}28\n28}28\n28 28 28 28 28 Indian v1dhya5 woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,  glossy red lipstick,  visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring skintone with subtle micro-hairs \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus,  /n_________________________/n{\n  \"type\": \"professionally color graded photograph\",\n  \"subject\": {\n    \"keyword\": \"Indian v1dhya5 woman\",\n    \"gender\": \"female\",\n    \"appearance\": \"extremely beautiful face\"\n  },\n  \"facial_features\": {\n    \"forehead\": \"black bindi\",\n    \"skin_texture\": [\n      \"natural matte skin\",\n      \"visible pores\",\n      \"soft peach fuzz\",\n      \"tiny vellus hairs\"\n    ],\n    \"skin_characteristics\": [\n      \"faint acne marks\",\n      \"mild unevenness\"\n    ],\n    \"makeup\": {\n      \"lipstick\": \"glossy red\"\n    }\n  },\n  \"lighting\": {\n    \"style\": \"side lighting\",\n    \"effect\": \"illumination of fine facial hairs and skin texture\"\n  },\n  \"color_grading\": {\n    \"quality\": \"professional\"\n  },\n  \"background\": \"The photo appears to be taken outdoors with a soft, blurred effect, suggesting natural sunlight. The background is mostly out of focus, giving emphasis to the subject.\",\n  \"camera_angle\": \"The shot is taken from a slightly low angle, looking up at the subject, which creates a flattering perspective.\",\n  \"hair_style\": \"The subject has long, straight hair, parted down the middle, and styled in a loose, wavy manner.\",\n  \"jewelry\": \"The subject is wearing a gold-colored bangle on each wrist and a delicate necklace. The bangle appears to be gold, and the necklace is small and subtle.\",\n  \"outfit\": \"The subject is wearing a red saree with intricate golden floral patterns on the sleeves, complementing the jewelry and adding to the traditional look.\",\n  \"facial_expression\": \"The subject has a gentle, warm smile, with slightly raised eyebrows and a soft, relaxed expression.\",\n  \"make_up\": \"The subject has a subtle, natural makeup look with a focus on her eyes, which are accentuated with kohl and a hint of a bindi. Her lips are painted with a pinkish-red lipstick.\",\n  \"eyes\": \"The eyes are almond-shaped, framed with mascara, and have a light brown color.\",\n  \"lips\": \"The lips are painted with a pinkish-red lipstick, complementing the overall warm tone of the photo.\",\n  \"overall_effect\": \"The overall effect of the photo is warm, natural, and vibrant, highlighting the traditional and cultural elements of the attire and jewelry.\",\n  \"clothing\": {\n    \"outfit\": \"form fitting outfit with subtle bra outline visible\"\n  },\n  \"skin_details\": {\n    \"skin_tone\": \"dark\",\n    \"skin_texture\": \"supple, non oily\",\n    \"micro_details\": \"(visible micro hairs:1.3)\",\n    \"facial_mark\": \"tiny black mole on chin\"\n  },\n  \"hair\": {\n    \"length\": \"long\",\n    \"color\": \"black\",\n    \"texture\": \"curly\",\n    \"details\": \"a few subtle natural gray strands visible\"\n  },\n  \"face_and_expression\": {\n    \"teeth\": \"aligned with one slightly twisted upper canine\",\n    \"character\": \"natural imperfect charm\"\n  },\n  \"accessories\": {\n    \"necklace\": \"pendant necklace with letter V\",\n    \"waist_chain\": \"delicate waist chain\",\n    \"piercing\": \"platinum diamond belly piercing\",\n    \"ring\": \"diamond ring on one finger\"\n  },\n  \"hands\": {\n    \"detail_level\": \"detailed female hands\",\n    \"nails\": \"no nail polish\"\n  }\n}/n_________________________/ndetailed fabric texture,{\n  \"outfit\": {\n    \"color\": \"Red\",\n    \"material\": \"Cotton or silk\",\n    \"texture\": \"Satin\",\n    \"fit\": \"Sleeveless, draped\"\n  },\n  \"details\": {\n    \"upper\": {\n      \"color\": \"Red and gold\",\n      \"material\": \"Cotton or silk\",\n      \"texture\": \"Leather\",\n      \"details\": \"Patterned\"\n    },\n    \"lower\": {\n      \"color\": \"Red\",\n      \"material\": \"Cotton or silk\",\n      \"texture\": \"Satin\",\n      \"details\": \"Plain\"\n    }\n  }\n},slightly translucent elements in the intricate outfit with see though sleeves, showing the profile of the 36DD Cup size  bra wearing underneath.",
       "text": [
         "2605",
         0
@@ -6569,12 +6528,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_flgit_00045_.png&type=temp&subfolder=&rand=0.9574416140547791"
+            "url": "/api/view?filename=rgthree.compare._temp_pjykt_00001_.png&type=temp&subfolder=&rand=0.2841287147786957"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_flgit_00046_.png&type=temp&subfolder=&rand=0.6272192959125674"
+            "url": "/api/view?filename=rgthree.compare._temp_pjykt_00002_.png&type=temp&subfolder=&rand=0.6080249516346571"
           }
         ]
       },
@@ -6660,7 +6619,7 @@
   },
   "2736": {
     "inputs": {
-      "text_0": "{\n  \"FacialExpression\": \"The subject has a subtle smile and a relaxed expression, with her eyebrows slightly raised and her eyes looking gentle and friendly.\",\n  \"HairStyle\": \"The subject has long, dark brown hair that is styled in a loose, slightly wavy fashion, pulled back and falling over one side of her shoulder.\",\n  \"Jewelry\": \"She is wearing a black necklace with a large circular pendant and a bracelet on her left wrist.\",\n  \"Outfit\": \"The subject is wearing a short-sleeved orange crop top with a small embroidered patch on the chest pocket and a pair of gray pants with button closures.\",\n  \"MakeUp\": \"The subject has light, natural makeup with a focus on her eyebrows and eyes. Her lips are painted in a natural pink shade, and her skin appears lightly toned.\",\n  \"Lipstick\": \"The lips are not visible in this image, but the natural pink lipstick suggests a subtle, everyday look.\"\n}",
+      "text_0": "{\n  \"FacialExpression\": \"The subject has a warm and friendly facial expression, with a slight smile that conveys happiness and friendliness.\",\n  \"HairStyle\": \"The subject's hair is long, straight, and dark brown, styled smoothly and parted down the middle.\",\n  \"Jewelry\": \"The subject is wearing a pair of elegant gold earrings and matching gold bangles on both wrists.\",\n  \"Outfit\": \"The subject is wearing a traditional red saree with intricate patterns on the sleeves, complementing the overall look.\",\n  \"Makeup\": \"The subject has a subtle, natural makeup look with a focus on enhancing the eyes. The eyes are accentuated with eyeliner and mascara, and a light pink lipstick completes the look.\",\n  \"MakeupDetails\": \"The eyes are lined with a light pink or peach-colored pencil to create a subtle highlight.\",\n  \"MakeupDetails\": \"The lips are painted with a natural pink or light pink lipstick that adds a touch of brightness to the overall look.\"\n}",
       "text": [
         "2734",
         0
@@ -7087,7 +7046,7 @@
   },
   "2869": {
     "inputs": {
-      "preview": "False",
+      "preview": "",
       "previewMode": null,
       "source": [
         "241",
@@ -7314,7 +7273,7 @@
   },
   "2904": {
     "inputs": {
-      "preview": "1232",
+      "preview": "",
       "previewMode": null,
       "source": [
         "394",
@@ -7328,7 +7287,7 @@
   },
   "2905": {
     "inputs": {
-      "preview": "1680",
+      "preview": "",
       "previewMode": null,
       "source": [
         "394",
@@ -7387,7 +7346,7 @@
   },
   "2925": {
     "inputs": {
-      "preview": "temp/rgthree.compare._temp_flgit_00030_.png",
+      "preview": "",
       "previewMode": null,
       "source": [
         "1813",
@@ -7439,7 +7398,7 @@
   },
   "2928": {
     "inputs": {
-      "preview": "janani2.jpg",
+      "preview": "",
       "previewMode": null,
       "source": [
         "2927",
@@ -7479,12 +7438,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_mcpcd_00043_.png&type=temp&subfolder=&rand=0.9335040016788496"
+            "url": "/api/view?filename=rgthree.compare._temp_huxst_00001_.png&type=temp&subfolder=&rand=0.32723766486498207"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_mcpcd_00044_.png&type=temp&subfolder=&rand=0.21304032934133776"
+            "url": "/api/view?filename=rgthree.compare._temp_huxst_00002_.png&type=temp&subfolder=&rand=0.020807081470840982"
           }
         ]
       },
@@ -7853,7 +7812,7 @@
   },
   "3013": {
     "inputs": {
-      "text_0": "{\n  \"background\": \"The photo was taken indoors with a plain white wall in the background, giving a clean and minimalistic look.\",\n  \"camera_angle\": \"The shot was taken from a slightly low angle, focusing on the lower half of the subject's body.\",\n  \"hair_style\": \"The subject has long, dark hair tied back, with a slight part on one side. It appears to be styled in a loose, casual manner.\",\n  \"jewelry\": \"The person is wearing a necklace with a circular pendant and several bracelets on their right wrist.\",\n  \"outfit\": \"The subject is wearing a cropped, short-sleeved orange top and grey pants with a zipper pocket on the right side.\",\n  \"make_up\": \"The subject has a subtle makeup look with defined eyeliner, mascara, and a light pink lipstick.\",\n  \"expression\": \"The facial expression is neutral to slightly friendly, with a gentle smile and direct eye contact.\",\n  \"details_in_background\": \"There are blurred green plants visible on the left side of the image, adding some natural elements to the setting.\",\n  \"idibrain_idata\": \"idibrain.com, 40269207\"\n}",
+      "text_0": "{\n  \"background\": \"The photo appears to be taken outdoors with a soft, blurred effect, suggesting natural sunlight. The background is mostly out of focus, giving emphasis to the subject.\",\n  \"camera_angle\": \"The shot is taken from a slightly low angle, looking up at the subject, which creates a flattering perspective.\",\n  \"hair_style\": \"The subject has long, straight hair, parted down the middle, and styled in a loose, wavy manner.\",\n  \"jewelry\": \"The subject is wearing a gold-colored bangle on each wrist and a delicate necklace. The bangle appears to be gold, and the necklace is small and subtle.\",\n  \"outfit\": \"The subject is wearing a red saree with intricate golden floral patterns on the sleeves, complementing the jewelry and adding to the traditional look.\",\n  \"facial_expression\": \"The subject has a gentle, warm smile, with slightly raised eyebrows and a soft, relaxed expression.\",\n  \"make_up\": \"The subject has a subtle, natural makeup look with a focus on her eyes, which are accentuated with kohl and a hint of a bindi. Her lips are painted with a pinkish-red lipstick.\",\n  \"eyes\": \"The eyes are almond-shaped, framed with mascara, and have a light brown color.\",\n  \"lips\": \"The lips are painted with a pinkish-red lipstick, complementing the overall warm tone of the image.\",\n  \"overall_effect\": \"The overall effect of the image is warm, natural, and vibrant, highlighting the traditional and cultural elements of the attire and jewelry.\"\n}",
       "text": [
         "484",
         0
