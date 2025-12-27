@@ -3674,7 +3674,7 @@
   "2213" : {
     "inputs"     : {
       "clip_a"  : [
-        "2694",
+        "2300",
         1
       ],
       "clip_b"  : [
@@ -3939,11 +3939,11 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "3023",
+        "2991",
         0
       ],
       "model2"            : [
-        "2694",
+        "2300",
         0
       ]
     },
@@ -5431,25 +5431,6 @@
       "title" : "LayerColor: AutoAdjust V2"
     }
   },
-  "2694" : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "2300",
-        0
-      ],
-      "clip"           : [
-        "2300",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
   "2695" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -6292,7 +6273,7 @@
     "inputs"     : {
       "lora_name"      : "SameFace_Fix.safetensors",
       "strength_model" : -0.6,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 0.6,
       "model"          : [
         "2560",
         0
@@ -6313,11 +6294,11 @@
       "strength_model" : 0.5,
       "strength_clip"  : 1,
       "model"          : [
-        "3023",
+        "2991",
         0
       ],
       "clip"           : [
-        "3023",
+        "2991",
         1
       ]
     },
@@ -6584,7 +6565,7 @@
         0
       ],
       "json_input_2"   : [
-        "484",
+        "3025",
         0
       ],
       "merge_strategy" : "preserve"
@@ -6611,23 +6592,32 @@
       "title" : "Merge Json"
     }
   },
-  "3023" : {
+  "3024" : {
     "inputs"     : {
-      "lora_name"      : "FluxEmotionsRelease.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "2991",
+      "find"    : "```json",
+      "replace" : "",
+      "text"    : [
+        "484",
         0
-      ],
-      "clip"           : [
-        "2991",
-        1
       ]
     },
-    "class_type" : "LoraLoader",
+    "class_type" : "Text Find and Replace",
     "_meta"      : {
-      "title" : "FluxEmotionsRelease [0.80::0.80]"
+      "title" : "Text Find and Replace"
+    }
+  },
+  "3025" : {
+    "inputs"     : {
+      "find"    : "```",
+      "replace" : "",
+      "text"    : [
+        "3024",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
     }
   }
 }
