@@ -919,6 +919,26 @@
       "title": "LayerColor: ColorBalance"
     }
   },
+  "441": {
+    "inputs": {
+      "expand": 1,
+      "incremental_expandrate": 0,
+      "tapered_corners": false,
+      "flip_input": false,
+      "blur_radius": 0,
+      "lerp_alpha": 0,
+      "decay_factor": 0,
+      "fill_holes": false,
+      "mask": [
+        "545",
+        0
+      ]
+    },
+    "class_type": "GrowMaskWithBlur",
+    "_meta": {
+      "title": "Grow Mask With Blur"
+    }
+  },
   "445": {
     "inputs": {
       "image": [
@@ -1218,6 +1238,27 @@
     "class_type": "PreviewImage",
     "_meta": {
       "title": "Preview Image"
+    }
+  },
+  "545": {
+    "inputs": {
+      "face_mask": false,
+      "background_mask": true,
+      "hair_mask": false,
+      "body_mask": false,
+      "clothes_mask": false,
+      "confidence": 0.5,
+      "refine_mask": true,
+      "batch_size": 9,
+      "compute_device": "auto",
+      "images": [
+        "356",
+        0
+      ]
+    },
+    "class_type": "APersonMaskGenerator",
+    "_meta": {
+      "title": "A Person Mask Generator"
     }
   },
   "559": {
@@ -7637,7 +7678,7 @@
   },
   "3003": {
     "inputs": {
-      "method": "face_parsing",
+      "method": "selfie_multiclass_256x256",
       "confidence": 0.4,
       "crop_multi": 0,
       "mask_components": {
