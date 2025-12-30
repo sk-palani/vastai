@@ -159,6 +159,7 @@ NODES=(
     "https://github.com/HECer/ComfyUI-FilePathCreator"
     "https://github.com/SparknightLLC/ComfyUI-SpectralVAEDetailer"
     "https://github.com/sk-palani/ComfyUI_Simpler"
+    "https://github.com/chrisfreilich/virtuoso-nodes"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
