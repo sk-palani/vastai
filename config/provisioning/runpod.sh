@@ -360,6 +360,7 @@ LORA_MODELS=(
 #d351_Coffee_Krea_Kohya_V1_Unchained_prodigy-000012.safetensors
     "https://civitai.com/api/download/models/2402710?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/1553172?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2554707?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
