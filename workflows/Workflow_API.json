@@ -87,6 +87,27 @@
       "title" : "ConditioningAverage"
     }
   },
+  "55"        : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : false,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
+      "images"          : [
+        "2703",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
   "122"       : {
     "inputs"     : {
       "any" : [
@@ -1810,9 +1831,9 @@
   },
   "1412"      : {
     "inputs"     : {
-      "strength"      : 0.66,
-      "start_percent" : 0.3,
-      "end_percent"   : 0.7,
+      "strength"      : 0.6,
+      "start_percent" : 0,
+      "end_percent"   : 0.6,
       "positive"      : [
         "737",
         0
@@ -2568,10 +2589,16 @@
   },
   "1899"      : {
     "inputs"     : {
-      "max_shift"  : 1.5,
-      "base_shift" : 0.5,
-      "width"      : 1024,
-      "height"     : 1024,
+      "max_shift"  : 1.45,
+      "base_shift" : 0.45,
+      "width"      : [
+        "394",
+        0
+      ],
+      "height"     : [
+        "394",
+        1
+      ],
       "model"      : [
         "2224",
         0
@@ -2964,9 +2991,9 @@
   },
   "1989"      : {
     "inputs"     : {
-      "sampler_name" : "heun",
-      "scheduler"    : "simple",
-      "steps"        : 30,
+      "sampler_name" : "lms",
+      "scheduler"    : "sgm_uniform",
+      "steps"        : 28,
       "denoise"      : [
         "1999",
         0
@@ -3190,6 +3217,27 @@
       "title" : "CLIPTextEncodeFlux"
     }
   },
+  "2072"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : true,
+      "hair_mask"       : true,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.54,
+      "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
+      "images"          : [
+        "2066",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
   "2073"      : {
     "inputs"     : {
       "mask" : [
@@ -3225,8 +3273,8 @@
       "grow"        : -8,
       "blur"        : 5,
       "mask"        : [
-        "3042",
-        1
+        "2072",
+        0
       ]
     },
     "class_type" : "LayerMask: MaskGrow",
@@ -3585,11 +3633,32 @@
       "title" : "Any Switch (rgthree)"
     }
   },
+  "2152"      : {
+    "inputs"     : {
+      "face_mask"       : false,
+      "background_mask" : true,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : false,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
+      "images"          : [
+        "1831",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
   "2153"      : {
     "inputs"     : {
       "mask" : [
-        "3039",
-        1
+        "2152",
+        0
       ]
     },
     "class_type" : "InvertMask",
@@ -3673,13 +3742,34 @@
       "grow"        : 1,
       "blur"        : 0,
       "mask"        : [
-        "3041",
-        1
+        "55",
+        0
       ]
     },
     "class_type" : "LayerMask: MaskGrow",
     "_meta"      : {
       "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "2197"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
+      "images"          : [
+        "1400",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
     }
   },
   "2198"      : {
@@ -3702,8 +3792,8 @@
         0
       ],
       "optional_mask"  : [
-        "3040",
-        1
+        "2197",
+        0
       ]
     },
     "class_type" : "Image Overlay",
@@ -3805,7 +3895,7 @@
   "2213"      : {
     "inputs"     : {
       "clip_a"  : [
-        "2644",
+        "3038",
         1
       ],
       "clip_b"  : [
@@ -3825,7 +3915,7 @@
   "2224"      : {
     "inputs"     : {
       "model_a" : [
-        "2254",
+        "3038",
         0
       ],
       "model_b" : [
@@ -4036,7 +4126,7 @@
         0
       ],
       "model2"            : [
-        "2644",
+        "3007",
         0
       ]
     },
@@ -4243,11 +4333,11 @@
       "strength_model" : 3.2,
       "strength_clip"  : 1,
       "model"          : [
-        "3007",
+        "2908",
         0
       ],
       "clip"           : [
-        "3007",
+        "2908",
         1
       ]
     },
@@ -4516,6 +4606,27 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
+    }
+  },
+  "2355"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "batch_size"      : 2,
+      "compute_device"  : "auto",
+      "images"          : [
+        "2345",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
     }
   },
   "2365"      : {
@@ -4856,7 +4967,7 @@
     "inputs"     : {
       "strings"   : "Inputs/Next/Best\nInputs/Next/best",
       "multiline" : false,
-      "select"    : 1
+      "select"    : 0
     },
     "class_type" : "ImpactStringSelector",
     "_meta"      : {
@@ -5154,25 +5265,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA"
-    }
-  },
-  "2644"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.7,
-      "strength_clip"  : 1,
-      "model"          : [
-        "2300",
-        0
-      ],
-      "clip"           : [
-        "2300",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Flux_Lora_32F_Breasts"
     }
   },
   "2652"      : {
@@ -5544,6 +5636,50 @@
       "title" : "Get Image Size & Count"
     }
   },
+  "2815"      : {
+    "inputs"     : {
+      "face"            : false,
+      "left_eyebrow"    : true,
+      "right_eyebrow"   : true,
+      "left_eye"        : true,
+      "right_eye"       : true,
+      "left_pupil"      : false,
+      "right_pupil"     : false,
+      "lips"            : true,
+      "number_of_faces" : 1,
+      "confidence"      : 0.3,
+      "refine_mask"     : false,
+      "images"          : [
+        "2826",
+        0
+      ]
+    },
+    "class_type" : "APersonFaceLandmarkMaskGenerator",
+    "_meta"      : {
+      "title" : "Face Landmark Mask"
+    }
+  },
+  "2816"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "batch_size"      : 2,
+      "compute_device"  : "auto",
+      "images"          : [
+        "2797",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
   "2818"      : {
     "inputs"     : {
       "mask_opacity" : 0.6,
@@ -5592,8 +5728,8 @@
       "padding"        : 0,
       "blur"           : 0,
       "mask"           : [
-        "3046",
-        1
+        "2816",
+        0
       ],
       "image_optional" : [
         "2797",
@@ -5685,8 +5821,8 @@
         0
       ],
       "mask"           : [
-        "3046",
-        1
+        "2816",
+        0
       ]
     },
     "class_type" : "Bounded Image Crop with Mask",
@@ -5734,8 +5870,8 @@
       "expand"          : 8,
       "tapered_corners" : true,
       "mask"            : [
-        "3047",
-        1
+        "2815",
+        0
       ]
     },
     "class_type" : "GrowMask",
@@ -6014,13 +6150,34 @@
         0
       ],
       "mask"           : [
-        "3038",
-        1
+        "2927",
+        0
       ]
     },
     "class_type" : "Bounded Image Crop with Mask",
     "_meta"      : {
       "title" : "Bounded Image Crop with Mask"
+    }
+  },
+  "2927"      : {
+    "inputs"     : {
+      "face_mask"       : false,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : true,
+      "confidence"      : 0.54,
+      "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
+      "images"          : [
+        "1837",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
     }
   },
   "2929"      : {
@@ -6140,7 +6297,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0,
+      "strength_clip"  : 0.2,
       "model"          : [
         "2891",
         0
@@ -6288,8 +6445,8 @@
       "grow"        : 2,
       "blur"        : 4,
       "mask"        : [
-        "3045",
-        1
+        "2355",
+        0
       ]
     },
     "class_type" : "LayerMask: MaskGrow",
@@ -6364,11 +6521,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2908",
+        "2300",
         0
       ],
       "clip"           : [
-        "2908",
+        "2300",
         1
       ]
     },
@@ -6552,188 +6709,21 @@
   },
   "3038"      : {
     "inputs"     : {
-      "method"          : "human_parts (deeplabv3p)",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          4,
-          5
-        ]
-      },
-      "image"           : [
-        "1837",
+      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
+      "strength_model" : 0.7,
+      "strength_clip"  : 1,
+      "model"          : [
+        "2254",
         0
+      ],
+      "clip"           : [
+        "3007",
+        1
       ]
     },
-    "class_type" : "easy humanSegmentation",
+    "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3039"      : {
-    "inputs"     : {
-      "method"          : "human_parts (deeplabv3p)",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          0
-        ]
-      },
-      "image"           : [
-        "1831",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3040"      : {
-    "inputs"     : {
-      "method"          : "human_parts (deeplabv3p)",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          1,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12
-        ]
-      },
-      "image"           : [
-        "1400",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3041"      : {
-    "inputs"     : {
-      "method"          : "human_parts (deeplabv3p)",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          1,
-          6,
-          8,
-          7,
-          9,
-          10
-        ]
-      },
-      "image"           : [
-        "2703",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3042"      : {
-    "inputs"     : {
-      "method"          : "human_parts (deeplabv3p)",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          1,
-          6,
-          8,
-          7,
-          9,
-          10,
-          0,
-          2,
-          12,
-          11
-        ]
-      },
-      "image"           : [
-        "2066",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3045"      : {
-    "inputs"     : {
-      "method"          : "human_parts (deeplabv3p)",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          1
-        ]
-      },
-      "image"           : [
-        "2345",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3046"      : {
-    "inputs"     : {
-      "method"          : "human_parts (deeplabv3p)",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          1
-        ]
-      },
-      "image"           : [
-        "2797",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3047"      : {
-    "inputs"     : {
-      "method"          : "face_parsing",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          6,
-          7,
-          4,
-          5,
-          10
-        ]
-      },
-      "image"           : [
-        "2826",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
+      "title" : "Flux_Lora_32F_Breasts"
     }
   },
   "2996:506"  : {
