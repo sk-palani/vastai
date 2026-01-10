@@ -1223,11 +1223,11 @@
       "delimiter"        : ",",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "1945",
+        "2555",
         0
       ],
       "text_b"           : [
-        "2555",
+        "1945",
         0
       ]
     },
@@ -1372,7 +1372,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.76
+      "value2" : 0.77
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -1982,6 +1982,10 @@
   },
   "1611"      : {
     "inputs"     : {
+      "any_01" : [
+        "2849",
+        0
+      ],
       "any_02" : [
         "2339",
         0
@@ -2564,7 +2568,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.3*(a+c*(b-a))",
+      "expression" : "1.35*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2906,7 +2910,7 @@
   },
   "1945"      : {
     "inputs"     : {
-      "text" : "She wears a fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n Around her waist is a delicate waist chain, and a platinum diamond belly piercing. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+      "text" : "She wears a fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n Around her waist is a delicate waist chain, and a platinum diamond belly piercing. She is wearing a pendant with letter \"VS\" super-imposed.\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2952,7 +2956,7 @@
         2
       ],
       "model"      : [
-        "2939",
+        "2224",
         0
       ]
     },
@@ -2970,7 +2974,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2936",
+        "2213",
         0
       ]
     },
@@ -3351,16 +3355,16 @@
         "2212",
         0
       ],
-      "steps"              : 26,
+      "steps"              : 28,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
-      "denoise"            : 0.37,
+      "denoise"            : 0.38,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 2,
+      "cycle"              : 1,
       "inpaint_model"      : false,
       "noise_mask_feather" : 20,
       "tiled_encode"       : false,
@@ -4765,6 +4769,10 @@
         "3011",
         0
       ],
+      "any_02" : [
+        "2849",
+        0
+      ],
       "any_03" : [
         "2339",
         0
@@ -4834,7 +4842,7 @@
       ],
       "steps"               : 16,
       "cfg"                 : 1,
-      "sampler_name"        : "euler_ancestral",
+      "sampler_name"        : "euler",
       "scheduler"           : "beta",
       "denoise"             : 0.26,
       "mode_type"           : "Chess",
@@ -5379,9 +5387,9 @@
   },
   "2666"      : {
     "inputs"     : {
-      "detail_amount"      : 0.08,
-      "start"              : 0.33,
-      "end"                : 0.66,
+      "detail_amount"      : 0.1,
+      "start"              : 0.3,
+      "end"                : 0.7,
       "bias"               : 0.5,
       "exponent"           : 0.8,
       "start_offset"       : 0,
@@ -5671,6 +5679,359 @@
     "class_type" : "Text Concatenate",
     "_meta"      : {
       "title" : "Text Concatenate"
+    }
+  },
+  "2797"      : {
+    "inputs"     : {
+      "any_01" : [
+        "2339",
+        0
+      ],
+      "any_02" : [
+        "2065",
+        0
+      ],
+      "any_04" : [
+        "2704",
+        0
+      ],
+      "any_05" : [
+        "1885",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
+  "2814"      : {
+    "inputs"     : {
+      "image" : [
+        "2797",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "2815"      : {
+    "inputs"     : {
+      "face"            : false,
+      "left_eyebrow"    : true,
+      "right_eyebrow"   : true,
+      "left_eye"        : true,
+      "right_eye"       : true,
+      "left_pupil"      : false,
+      "right_pupil"     : false,
+      "lips"            : true,
+      "number_of_faces" : 1,
+      "confidence"      : 0.3,
+      "refine_mask"     : false,
+      "images"          : [
+        "2826",
+        0
+      ]
+    },
+    "class_type" : "APersonFaceLandmarkMaskGenerator",
+    "_meta"      : {
+      "title" : "Face Landmark Mask"
+    }
+  },
+  "2816"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "batch_size"      : 2,
+      "compute_device"  : "auto",
+      "images"          : [
+        "2797",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "2818"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.6,
+      "mask_color"   : "255, 0, 25507",
+      "pass_through" : false,
+      "image"        : [
+        "2826",
+        0
+      ],
+      "mask"         : [
+        "2830",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2819"      : {
+    "inputs"     : {
+      "images" : [
+        "2820",
+        0
+      ]
+    },
+    "class_type" : "PreviewImage",
+    "_meta"      : {
+      "title" : "Preview Image"
+    }
+  },
+  "2820"      : {
+    "inputs"     : {
+      "mask" : [
+        "2830",
+        0
+      ]
+    },
+    "class_type" : "MaskToImage",
+    "_meta"      : {
+      "title" : "Convert Mask to Image"
+    }
+  },
+  "2822"      : {
+    "inputs"     : {
+      "padding"        : 0,
+      "blur"           : 0,
+      "mask"           : [
+        "2816",
+        0
+      ],
+      "image_optional" : [
+        "2797",
+        0
+      ]
+    },
+    "class_type" : "MaskBoundingBox+",
+    "_meta"      : {
+      "title" : "🔧 Mask Bounding Box"
+    }
+  },
+  "2823"      : {
+    "inputs"     : {
+      "images" : [
+        "2824",
+        0
+      ]
+    },
+    "class_type" : "PreviewImage",
+    "_meta"      : {
+      "title" : "Preview Image"
+    }
+  },
+  "2824"      : {
+    "inputs"     : {
+      "overlay_resize" : "None",
+      "resize_method"  : "nearest-exact",
+      "rescale_factor" : 1,
+      "width"          : [
+        "2822",
+        4
+      ],
+      "height"         : [
+        "2822",
+        5
+      ],
+      "x_offset"       : [
+        "2822",
+        2
+      ],
+      "y_offset"       : [
+        "2822",
+        3
+      ],
+      "rotation"       : 0,
+      "opacity"        : 0,
+      "base_image"     : [
+        "2825",
+        0
+      ],
+      "overlay_image"  : [
+        "2820",
+        0
+      ]
+    },
+    "class_type" : "Image Overlay",
+    "_meta"      : {
+      "title" : "Image Overlay"
+    }
+  },
+  "2825"      : {
+    "inputs"     : {
+      "width"  : [
+        "2814",
+        1
+      ],
+      "height" : [
+        "2814",
+        2
+      ],
+      "red"    : 0,
+      "green"  : 0,
+      "blue"   : 0
+    },
+    "class_type" : "Image Blank",
+    "_meta"      : {
+      "title" : "Image Blank"
+    }
+  },
+  "2826"      : {
+    "inputs"     : {
+      "padding_left"   : 0,
+      "padding_right"  : 0,
+      "padding_top"    : 0,
+      "padding_bottom" : 0,
+      "return_list"    : false,
+      "image"          : [
+        "2797",
+        0
+      ],
+      "mask"           : [
+        "2816",
+        0
+      ]
+    },
+    "class_type" : "Bounded Image Crop with Mask",
+    "_meta"      : {
+      "title" : "Bounded Image Crop with Mask"
+    }
+  },
+  "2827"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.58,
+      "mask_color"   : "255, 0, 25507",
+      "pass_through" : false,
+      "image"        : [
+        "2797",
+        0
+      ],
+      "mask"         : [
+        "2829",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2829"      : {
+    "inputs"     : {
+      "red"       : 255,
+      "green"     : 255,
+      "blue"      : 255,
+      "threshold" : 0,
+      "image"     : [
+        "2824",
+        0
+      ]
+    },
+    "class_type" : "MaskFromColor+",
+    "_meta"      : {
+      "title" : "🔧 Mask From Color"
+    }
+  },
+  "2830"      : {
+    "inputs"     : {
+      "expand"          : 8,
+      "tapered_corners" : true,
+      "mask"            : [
+        "2815",
+        0
+      ]
+    },
+    "class_type" : "GrowMask",
+    "_meta"      : {
+      "title" : "Grow Mask"
+    }
+  },
+  "2843"      : {
+    "inputs"     : {
+      "a"         : [
+        "2102",
+        0
+      ],
+      "b"         : 0.62,
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "Math Float"
+    }
+  },
+  "2846"      : {
+    "inputs"     : {
+      "text1"     : [
+        "2754",
+        0
+      ],
+      "text2"     : "Her lips glisten softly with moisture, her eyes luminous and tender, as if holding a quiet breath between them.Red Lipstick, well-defined eyebrows, long eyelashes, (aidmarealisticskin:0.5)",
+      "text3"     : "",
+      "delimiter" : ","
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2847"      : {
+    "inputs"     : {
+      "text1"     : [
+        "2754",
+        0
+      ],
+      "text2"     : "well-defined eyebrows, long eyelashes, , Her lips glisten softly with moisture, her eyes luminous and tender, as if holding a quiet breath between them.",
+      "text3"     : "",
+      "delimiter" : ","
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2849"      : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "1930",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 4,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "true",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "2998:548",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
     }
   },
   "2862"      : {
@@ -5979,7 +6340,7 @@
   },
   "2930"      : {
     "inputs"     : {
-      "brightness_target"   : 0.6,
+      "brightness_target"   : 0.5,
       "cyan_red"            : 0.02,
       "magenta_green"       : 0,
       "yellow_blue"         : 0.05,
@@ -6270,7 +6631,7 @@
   },
   "2970"      : {
     "inputs"     : {
-      "text" : ""
+      "text" : "aidmarealisticskin, moles, natural blemishes,  Skin imperfections , "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -6390,6 +6751,25 @@
       ],
       "mask"         : [
         "2975",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2999"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.3,
+      "mask_color"   : "255, 0, 207",
+      "pass_through" : false,
+      "image"        : [
+        "2797",
+        0
+      ],
+      "mask"         : [
+        "2829",
         0
       ]
     },
@@ -6586,28 +6966,42 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "3031"      : {
+  "3033"      : {
     "inputs"     : {
-      "a"         : [
-        "2102",
+      "value" : 0.2
+    },
+    "class_type" : "PrimitiveFloat",
+    "_meta"      : {
+      "title" : "Float"
+    }
+  },
+  "3034"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "2866",
         0
       ],
-      "b"         : 0.33,
-      "operation" : "multiply"
+      "clip"           : [
+        "2867",
+        0
+      ]
     },
-    "class_type" : "easy mathFloat",
+    "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Math Float"
+      "title" : "aidmarealisticskin"
     }
   },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.3,
+      "max_shift"  : 1.6,
       "base_shift" : 0.45,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2866",
+        "3034",
         0
       ]
     },
@@ -6649,8 +7043,8 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2867",
-        0
+        "3034",
+        1
       ]
     },
     "class_type" : "CLIPTextEncode",
@@ -6704,8 +7098,8 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2867",
-        0
+        "3034",
+        1
       ]
     },
     "class_type" : "CLIPTextEncodeFlux",
@@ -6761,7 +7155,7 @@
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
       "denoise"            : [
-        "3031",
+        "3033",
         0
       ],
       "feather"            : 5,
@@ -6786,8 +7180,8 @@
         0
       ],
       "clip"               : [
-        "2867",
-        0
+        "3034",
+        1
       ],
       "vae"                : [
         "2889",
@@ -6830,7 +7224,7 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.55,
+      "max_shift"  : 1.45,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -7006,6 +7400,205 @@
       ],
       "negative"           : [
         "2996:54",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (BG Detailer)"
+    }
+  },
+  "2998:506"  : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2998:2975",
+        0
+      ],
+      "t5xxl"    : [
+        "2998:2976",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "2291",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "2998:113"  : {
+    "inputs"     : {
+      "max_shift"  : 1.55,
+      "base_shift" : 0.55,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2292",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.35::0.50"
+    }
+  },
+  "2998:88"   : {
+    "inputs"     : {
+      "combined"     : true,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : true,
+      "mask"         : [
+        "2829",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2998:54"   : {
+    "inputs"     : {
+      "conditioning" : [
+        "2998:53",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2998:53"   : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2291",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "2998:2976" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "2847",
+        0
+      ],
+      "text_b"           : [
+        "2998:2973",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "2998:2975" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "2846",
+        0
+      ],
+      "text_b"           : [
+        "2998:2972",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "2998:2972" : {
+    "inputs"     : {
+      "text1"     : "",
+      "text2"     : "",
+      "text3"     : "",
+      "delimiter" : ","
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "Prompt ClipL Additional"
+    }
+  },
+  "2998:2973" : {
+    "inputs"     : {
+      "text1"     : "",
+      "text2"     : "",
+      "text3"     : "",
+      "delimiter" : ","
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "Prompt t5xxl Additional"
+    }
+  },
+  "2998:548"  : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : false,
+      "max_size"           : 1024,
+      "seed"               : [
+        "2212",
+        0
+      ],
+      "steps"              : 23,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : [
+        "2843",
+        0
+      ],
+      "feather"            : 5,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "2797",
+        0
+      ],
+      "segs"               : [
+        "2998:88",
+        0
+      ],
+      "model"              : [
+        "2998:113",
+        0
+      ],
+      "clip"               : [
+        "2291",
+        0
+      ],
+      "vae"                : [
+        "2889",
+        0
+      ],
+      "positive"           : [
+        "2998:506",
+        0
+      ],
+      "negative"           : [
+        "2998:54",
         0
       ]
     },
