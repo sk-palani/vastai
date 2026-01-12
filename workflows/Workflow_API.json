@@ -2454,7 +2454,7 @@
         0
       ],
       "sampler"      : [
-        "2666",
+        "1909",
         0
       ],
       "sigmas"       : [
@@ -4999,7 +4999,7 @@
         "1955",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 0.64,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5389,28 +5389,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "2666"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.08,
-      "start"              : 0.25,
-      "end"                : 0.6,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "1909",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "2669"      : {
