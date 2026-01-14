@@ -808,7 +808,7 @@
       ],
       "blend_opacity" : 11,
       "image"         : [
-        "363",
+        "3040:363",
         0
       ],
       "mask"          : [
@@ -860,35 +860,6 @@
     "class_type" : "easy int",
     "_meta"      : {
       "title" : "Age"
-    }
-  },
-  "363"       : {
-    "inputs"     : {
-      "center_x"            : 0.3,
-      "center_y"            : 0.5,
-      "saturation"          : 0.9,
-      "vignette_intensity"  : 0.010000000000000002,
-      "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.08,
-      "grain_scale"         : 0.4,
-      "grain_sat"           : 0.3,
-      "filmgrainer_shadows" : 0.15000000000000002,
-      "filmgrainer_highs"   : 0.10000000000000002,
-      "blur_strength"       : 1,
-      "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
-      "image"               : [
-        "482",
-        0
-      ],
-      "depth_map"           : [
-        "2727",
-        0
-      ]
-    },
-    "class_type" : "LayerFilter: FilmV2",
-    "_meta"      : {
-      "title" : "LayerFilter: Film V2"
     }
   },
   "389"       : {
@@ -1073,34 +1044,6 @@
     "class_type" : "CM_IntUnaryCondition",
     "_meta"      : {
       "title" : "IntUnaryCondition"
-    }
-  },
-  "478"       : {
-    "inputs"     : {
-      "image" : [
-        "2703",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
-    }
-  },
-  "482"       : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : 0.5,
-      "ratio"          : 0.5,
-      "image"          : [
-        "478",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "484"       : {
@@ -1372,7 +1315,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.72
+      "value2" : 0.76
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -1822,7 +1765,7 @@
   },
   "1405"      : {
     "inputs"     : {
-      "value" : 1.19999
+      "value" : 1.2
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -1929,7 +1872,7 @@
   "1566"      : {
     "inputs"     : {
       "any_01" : [
-        "2321",
+        "3046:363",
         0
       ],
       "any_02" : [
@@ -2040,7 +1983,7 @@
   },
   "1740"      : {
     "inputs"     : {
-      "value" : 1.18
+      "value" : 1.33
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -2568,7 +2511,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "(a+c*(b-a))",
+      "expression" : "1.3*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2589,16 +2532,10 @@
   },
   "1899"      : {
     "inputs"     : {
-      "max_shift"  : 1.5,
-      "base_shift" : 0.5,
-      "width"      : [
-        "445",
-        1
-      ],
-      "height"     : [
-        "445",
-        2
-      ],
+      "max_shift"  : 1.8,
+      "base_shift" : 0.6,
+      "width"      : 1024,
+      "height"     : 1024,
       "model"      : [
         "2224",
         0
@@ -2621,7 +2558,7 @@
   },
   "1909"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.02,
+      "dishonesty_factor" : -0.01,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -2885,23 +2822,6 @@
     "class_type" : "RandomInt",
     "_meta"      : {
       "title" : "Random Int"
-    }
-  },
-  "1942"      : {
-    "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "478",
-        1
-      ],
-      "b"    : [
-        "478",
-        2
-      ]
-    },
-    "class_type" : "ImpactMinMax",
-    "_meta"      : {
-      "title" : "ImpactMinMax"
     }
   },
   "1944"      : {
@@ -3355,7 +3275,7 @@
   "2085"      : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : false,
+      "guide_size_for"     : true,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
@@ -3363,9 +3283,9 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
-      "denoise"            : 0.24,
+      "denoise"            : 0.37,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -3936,7 +3856,7 @@
   "2213"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3007",
+        "2300",
         1
       ],
       "clip_b"  : [
@@ -4163,11 +4083,11 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "2908",
+        "2560",
         0
       ],
       "model2"            : [
-        "3007",
+        "2300",
         0
       ]
     },
@@ -4277,11 +4197,11 @@
       "strength_model" : 0.66,
       "strength_clip"  : 1.0000000000000002,
       "model"          : [
-        "3041",
+        "2262",
         0
       ],
       "clip"           : [
-        "3041",
+        "2262",
         1
       ]
     },
@@ -4393,11 +4313,11 @@
       "strength_model" : 3.2,
       "strength_clip"  : 1,
       "model"          : [
-        "2908",
+        "2644",
         0
       ],
       "clip"           : [
-        "2908",
+        "2644",
         1
       ]
     },
@@ -4488,7 +4408,7 @@
   },
   "2319"      : {
     "inputs"     : {
-      "max_shift"  : 1.15,
+      "max_shift"  : 2,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -4999,7 +4919,7 @@
         "1955",
         0
       ],
-      "b"         : 0.64,
+      "b"         : 0.72,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5341,11 +5261,11 @@
       "strength_model" : 0.7,
       "strength_clip"  : 1,
       "model"          : [
-        "2300",
+        "3007",
         0
       ],
       "clip"           : [
-        "2300",
+        "3007",
         1
       ]
     },
@@ -5529,23 +5449,6 @@
     "class_type" : "LayerMask: MaskGrow",
     "_meta"      : {
       "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "2727"      : {
-    "inputs"     : {
-      "preprocessor" : "DepthAnythingPreprocessor",
-      "resolution"   : [
-        "1942",
-        0
-      ],
-      "image"        : [
-        "2703",
-        0
-      ]
-    },
-    "class_type" : "AIO_Preprocessor",
-    "_meta"      : {
-      "title" : "AIO Aux Preprocessor"
     }
   },
   "2729"      : {
@@ -5764,18 +5667,6 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "2819"      : {
-    "inputs"     : {
-      "images" : [
-        "2820",
-        0
-      ]
-    },
-    "class_type" : "PreviewImage",
-    "_meta"      : {
-      "title" : "Preview Image"
-    }
-  },
   "2820"      : {
     "inputs"     : {
       "mask" : [
@@ -5905,7 +5796,7 @@
         0
       ],
       "mask"         : [
-        "2829",
+        "3048",
         0
       ]
     },
@@ -6231,25 +6122,6 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "2908"      : {
-    "inputs"     : {
-      "lora_name"      : "SameFace_Fix.safetensors",
-      "strength_model" : -0.6,
-      "strength_clip"  : 1,
-      "model"          : [
-        "2560",
-        0
-      ],
-      "clip"           : [
-        "2560",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "SameFaceNegatice"
-    }
-  },
   "2922"      : {
     "inputs"     : {
       "images" : [
@@ -6325,9 +6197,9 @@
   "2930"      : {
     "inputs"     : {
       "brightness_target"   : 0.5,
-      "cyan_red"            : 0.02,
+      "cyan_red"            : 0.01,
       "magenta_green"       : 0,
-      "yellow_blue"         : 0.05,
+      "yellow_blue"         : 0.04,
       "preserve_luminosity" : true,
       "image"               : [
         "2929",
@@ -6404,11 +6276,11 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.21,
       "model"          : [
-        "3040",
+        "2941",
         0
       ],
       "clip"           : [
-        "3040",
+        "2941",
         1
       ]
     },
@@ -6522,12 +6394,12 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.8,
       "model"          : [
-        "3042",
+        "2891",
         0
       ],
       "clip"           : [
-        "3042",
-        1
+        "2890",
+        0
       ]
     },
     "class_type" : "LoraLoader",
@@ -6667,12 +6539,12 @@
         "2102",
         0
       ],
-      "b"         : 1,
+      "b"         : 0.72,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
     "_meta"      : {
-      "title" : "0.72"
+      "title" : "Math Float"
     }
   },
   "2987"      : {
@@ -6753,7 +6625,7 @@
         0
       ],
       "mask"         : [
-        "2829",
+        "3048",
         0
       ]
     },
@@ -6777,11 +6649,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2644",
+        "2560",
         0
       ],
       "clip"           : [
-        "2644",
+        "2560",
         1
       ]
     },
@@ -6846,8 +6718,8 @@
       "crop_multi"      : 0,
       "mask_components" : {
         "__value__" : [
-          14,
-          15
+          15,
+          14
         ]
       },
       "image"           : [
@@ -6956,7 +6828,7 @@
         "2102",
         0
       ],
-      "b"         : 0.33,
+      "b"         : 1,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6996,71 +6868,159 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "3040"      : {
+  "3047"      : {
     "inputs"     : {
-      "lora_name"      : "Cel-Shaded-Animation_V1_FLUX1Dev.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.21,
-      "model"          : [
-        "2941",
-        0
-      ],
-      "clip"           : [
-        "2941",
+      "shape"        : "square",
+      "frames"       : 1,
+      "location_x"   : 0,
+      "location_y"   : 0,
+      "grow"         : 1,
+      "frame_width"  : [
+        "3049",
         1
-      ]
+      ],
+      "frame_height" : [
+        "3049",
+        2
+      ],
+      "shape_width"  : 16,
+      "shape_height" : 32
     },
-    "class_type" : "LoraLoader",
+    "class_type" : "CreateShapeMask",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Create Shape Mask"
     }
   },
-  "3041"      : {
+  "3048"      : {
     "inputs"     : {
-      "lora_name"      : "Cel-Shaded-Animation_V1_FLUX1Dev.safetensors",
-      "strength_model" : 0.66,
-      "strength_clip"  : 1.0000000000000002,
-      "model"          : [
-        "2262",
+      "x"           : 0,
+      "y"           : 0,
+      "operation"   : "or",
+      "destination" : [
+        "2829",
         0
       ],
-      "clip"           : [
-        "2262",
-        1
+      "source"      : [
+        "3047",
+        0
       ]
     },
-    "class_type" : "LoraLoader",
+    "class_type" : "MaskComposite",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "MaskComposite"
     }
   },
-  "3042"      : {
+  "3049"      : {
     "inputs"     : {
-      "lora_name"      : "Cel-Shaded-Animation_V1_FLUX1Dev.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "2891",
-        0
-      ],
-      "clip"           : [
-        "2890",
+      "image" : [
+        "2824",
         0
       ]
     },
-    "class_type" : "LoraLoader",
+    "class_type" : "GetImageSizeAndCount",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3040:478"  : {
+    "inputs"     : {
+      "image" : [
+        "2703",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3040:2727" : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "3040:1942",
+        0
+      ],
+      "image"        : [
+        "2703",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "3040:363"  : {
+    "inputs"     : {
+      "center_x"            : 0.3,
+      "center_y"            : 0.5,
+      "saturation"          : 0.9,
+      "vignette_intensity"  : 0.010000000000000002,
+      "grain_method"        : "filmgrainer",
+      "grain_power"         : 0.08,
+      "grain_scale"         : 0.4,
+      "grain_sat"           : 0.3,
+      "filmgrainer_shadows" : 0.15000000000000002,
+      "filmgrainer_highs"   : 0.10000000000000002,
+      "blur_strength"       : 1,
+      "blur_focus_spread"   : 0.30000000000000004,
+      "focal_depth"         : 0.10000000000000002,
+      "image"               : [
+        "3040:482",
+        0
+      ],
+      "depth_map"           : [
+        "3040:2727",
+        0
+      ]
+    },
+    "class_type" : "LayerFilter: FilmV2",
+    "_meta"      : {
+      "title" : "LayerFilter: Film V2"
+    }
+  },
+  "3040:1942" : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "3040:478",
+        1
+      ],
+      "b"    : [
+        "3040:478",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "3040:482"  : {
+    "inputs"     : {
+      "noise_radius"   : 1,
+      "preserve_edges" : 1,
+      "sharpen"        : 0.5,
+      "ratio"          : 0.5,
+      "image"          : [
+        "3040:478",
+        0
+      ]
+    },
+    "class_type" : "ImageSmartSharpen+",
+    "_meta"      : {
+      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.6,
+      "max_shift"  : 1.2,
       "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2866",
+        "2939",
         0
       ]
     },
@@ -7102,7 +7062,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2867",
+        "2936",
         0
       ]
     },
@@ -7157,7 +7117,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2867",
+        "2936",
         0
       ]
     },
@@ -7209,10 +7169,10 @@
         "2212",
         0
       ],
-      "steps"              : 29,
+      "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "lms",
-      "scheduler"          : "sgm_uniform",
+      "sampler_name"       : "euler_ancestral",
+      "scheduler"          : "simple",
       "denoise"            : [
         "3031",
         0
@@ -7239,7 +7199,7 @@
         0
       ],
       "clip"               : [
-        "2867",
+        "2936",
         0
       ],
       "vae"                : [
@@ -7283,8 +7243,8 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.45,
+      "max_shift"  : 1.5,
+      "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7418,7 +7378,7 @@
       ],
       "steps"              : 34,
       "cfg"                : 1,
-      "sampler_name"       : "lms",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
       "denoise"            : [
         "2983",
@@ -7512,7 +7472,7 @@
       "drop_size"    : 10,
       "contour_fill" : true,
       "mask"         : [
-        "2829",
+        "3048",
         0
       ]
     },
@@ -7822,7 +7782,7 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.42,
+      "denoise"            : 0.56,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -7864,6 +7824,97 @@
     "class_type" : "DetailerForEach",
     "_meta"      : {
       "title" : "Detailer (BG Detailer)"
+    }
+  },
+  "3046:478"  : {
+    "inputs"     : {
+      "image" : [
+        "2321",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3046:2727" : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "3046:1942",
+        0
+      ],
+      "image"        : [
+        "2321",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "3046:363"  : {
+    "inputs"     : {
+      "center_x"            : 0.3,
+      "center_y"            : 0.5,
+      "saturation"          : 0.9,
+      "vignette_intensity"  : 0.010000000000000002,
+      "grain_method"        : "filmgrainer",
+      "grain_power"         : 0.08,
+      "grain_scale"         : 0.6,
+      "grain_sat"           : 0.3,
+      "filmgrainer_shadows" : 0.15000000000000002,
+      "filmgrainer_highs"   : 0.10000000000000002,
+      "blur_strength"       : 1,
+      "blur_focus_spread"   : 0.30000000000000004,
+      "focal_depth"         : 0.10000000000000002,
+      "image"               : [
+        "3046:482",
+        0
+      ],
+      "depth_map"           : [
+        "3046:2727",
+        0
+      ]
+    },
+    "class_type" : "LayerFilter: FilmV2",
+    "_meta"      : {
+      "title" : "LayerFilter: Film V2"
+    }
+  },
+  "3046:1942" : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "3046:478",
+        1
+      ],
+      "b"    : [
+        "3046:478",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "3046:482"  : {
+    "inputs"     : {
+      "noise_radius"   : 1,
+      "preserve_edges" : 1,
+      "sharpen"        : 0.5,
+      "ratio"          : 0.5,
+      "image"          : [
+        "3046:478",
+        0
+      ]
+    },
+    "class_type" : "ImageSmartSharpen+",
+    "_meta"      : {
+      "title" : "🔧 Image Smart Sharpen"
     }
   }
 }
