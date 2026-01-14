@@ -2873,14 +2873,8 @@
     "inputs"     : {
       "max_shift"  : 1.5,
       "base_shift" : 0.5,
-      "width"      : [
-        "445",
-        1
-      ],
-      "height"     : [
-        "445",
-        2
-      ],
+      "width"      : 1024,
+      "height"     : 1024,
       "model"      : [
         "2939",
         0
@@ -2911,9 +2905,9 @@
   },
   "1989"      : {
     "inputs"     : {
-      "sampler_name" : "heun",
-      "scheduler"    : "simple",
-      "steps"        : 28,
+      "sampler_name" : "lms",
+      "scheduler"    : "beta",
+      "steps"        : 30,
       "denoise"      : [
         "1999",
         0
@@ -6108,7 +6102,7 @@
       "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
-      "device"     : "cpu"
+      "device"     : "default"
     },
     "class_type" : "DualCLIPLoader",
     "_meta"      : {
@@ -7214,7 +7208,7 @@
   "2995:548"  : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : false,
+      "guide_size_for"     : true,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
