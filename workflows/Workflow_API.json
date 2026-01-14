@@ -1113,7 +1113,7 @@
   },
   "495"       : {
     "inputs"     : {
-      "text" : " hip chain, waist chain, hands behind the back, crop top overhang,\n\nand light freckles scattered across her cheeks and nose. "
+      "text" : " hip chain, waist chain, hands behind the back, crop top overhang,\n\nand light freckles scattered across her cheeks and nose. \n\n Around her waist is a delicate waist chain, and a platinum diamond belly piercing. She is wearing a pendant with letter \"vS\" super-imposed."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1166,7 +1166,7 @@
       "delimiter"        : ",",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "1945",
+        "3052",
         0
       ],
       "text_b"           : [
@@ -1872,7 +1872,7 @@
   "1566"      : {
     "inputs"     : {
       "any_01" : [
-        "3046:363",
+        "2321",
         0
       ],
       "any_02" : [
@@ -2397,7 +2397,7 @@
         0
       ],
       "sampler"      : [
-        "1909",
+        "2666",
         0
       ],
       "sigmas"       : [
@@ -2558,7 +2558,7 @@
   },
   "1909"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.01,
+      "dishonesty_factor" : -0.02,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -2836,7 +2836,7 @@
   },
   "1945"      : {
     "inputs"     : {
-      "text" : "She wears a fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n Around her waist is a delicate waist chain, and a platinum diamond belly piercing. She is wearing a pendant with letter \"vS\" super-imposed.\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+      "text" : "She wears a fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2911,8 +2911,8 @@
   },
   "1989"      : {
     "inputs"     : {
-      "sampler_name" : "lms",
-      "scheduler"    : "sgm_uniform",
+      "sampler_name" : "heun",
+      "scheduler"    : "simple",
       "steps"        : 28,
       "denoise"      : [
         "1999",
@@ -4430,7 +4430,7 @@
       "fade_shadows"    : 0.2,
       "fade_highlights" : 0,
       "image"           : [
-        "2332",
+        "3046:363",
         0
       ]
     },
@@ -5309,6 +5309,28 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
+    }
+  },
+  "2666"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.08,
+      "start"              : 0.5,
+      "end"                : 0.55,
+      "bias"               : 0.6,
+      "exponent"           : 0.8,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "1909",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
     }
   },
   "2669"      : {
@@ -6521,7 +6543,7 @@
   "2978"      : {
     "inputs"     : {
       "invert_mask" : false,
-      "grow"        : 2,
+      "grow"        : 6,
       "blur"        : 4,
       "mask"        : [
         "2035",
@@ -6922,6 +6944,35 @@
       "title" : "Get Image Size & Count"
     }
   },
+  "3050"      : {
+    "inputs"     : {
+      "text" : "She wears a fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\n\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Prompt Extras"
+    }
+  },
+  "3052"      : {
+    "inputs"     : {
+      "condition"  : [
+        "268",
+        0
+      ],
+      "when_true"  : [
+        "3050",
+        0
+      ],
+      "when_false" : [
+        "1945",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
   "3040:478"  : {
     "inputs"     : {
       "image" : [
@@ -7151,7 +7202,7 @@
   "2995:2973" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
+      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -7172,7 +7223,7 @@
       "steps"              : 26,
       "cfg"                : 1,
       "sampler_name"       : "euler_ancestral",
-      "scheduler"          : "simple",
+      "scheduler"          : "normal",
       "denoise"            : [
         "3031",
         0
@@ -7243,8 +7294,8 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.5,
-      "base_shift" : 0.5,
+      "max_shift"  : 1.2,
+      "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7376,9 +7427,9 @@
         "2212",
         0
       ],
-      "steps"              : 34,
+      "steps"              : 28,
       "cfg"                : 1,
-      "sampler_name"       : "euler_ancestral",
+      "sampler_name"       : "euler",
       "scheduler"          : "beta",
       "denoise"            : [
         "2983",
@@ -7425,6 +7476,97 @@
     "class_type" : "DetailerForEach",
     "_meta"      : {
       "title" : "Detailer (BG Detailer)"
+    }
+  },
+  "3046:478"  : {
+    "inputs"     : {
+      "image" : [
+        "2332",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3046:2727" : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "3046:1942",
+        0
+      ],
+      "image"        : [
+        "2332",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "3046:363"  : {
+    "inputs"     : {
+      "center_x"            : 0.3,
+      "center_y"            : 0.5,
+      "saturation"          : 0.9,
+      "vignette_intensity"  : 0.010000000000000002,
+      "grain_method"        : "filmgrainer",
+      "grain_power"         : 0.08,
+      "grain_scale"         : 0.6,
+      "grain_sat"           : 0.3,
+      "filmgrainer_shadows" : 0.15000000000000002,
+      "filmgrainer_highs"   : 0.10000000000000002,
+      "blur_strength"       : 1,
+      "blur_focus_spread"   : 0.30000000000000004,
+      "focal_depth"         : 0.10000000000000002,
+      "image"               : [
+        "3046:482",
+        0
+      ],
+      "depth_map"           : [
+        "3046:2727",
+        0
+      ]
+    },
+    "class_type" : "LayerFilter: FilmV2",
+    "_meta"      : {
+      "title" : "LayerFilter: Film V2"
+    }
+  },
+  "3046:1942" : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "3046:478",
+        1
+      ],
+      "b"    : [
+        "3046:478",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "3046:482"  : {
+    "inputs"     : {
+      "noise_radius"   : 1,
+      "preserve_edges" : 1,
+      "sharpen"        : 0.5,
+      "ratio"          : 0.5,
+      "image"          : [
+        "3046:478",
+        0
+      ]
+    },
+    "class_type" : "ImageSmartSharpen+",
+    "_meta"      : {
+      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "2998:506"  : {
@@ -7771,9 +7913,9 @@
   },
   "3014:548"  : {
     "inputs"     : {
-      "guide_size"         : 1024,
+      "guide_size"         : 768,
       "guide_size_for"     : false,
-      "max_size"           : 1024,
+      "max_size"           : 768,
       "seed"               : [
         "2212",
         0
@@ -7824,97 +7966,6 @@
     "class_type" : "DetailerForEach",
     "_meta"      : {
       "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "3046:478"  : {
-    "inputs"     : {
-      "image" : [
-        "2321",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
-    }
-  },
-  "3046:2727" : {
-    "inputs"     : {
-      "preprocessor" : "DepthAnythingPreprocessor",
-      "resolution"   : [
-        "3046:1942",
-        0
-      ],
-      "image"        : [
-        "2321",
-        0
-      ]
-    },
-    "class_type" : "AIO_Preprocessor",
-    "_meta"      : {
-      "title" : "AIO Aux Preprocessor"
-    }
-  },
-  "3046:363"  : {
-    "inputs"     : {
-      "center_x"            : 0.3,
-      "center_y"            : 0.5,
-      "saturation"          : 0.9,
-      "vignette_intensity"  : 0.010000000000000002,
-      "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.08,
-      "grain_scale"         : 0.6,
-      "grain_sat"           : 0.3,
-      "filmgrainer_shadows" : 0.15000000000000002,
-      "filmgrainer_highs"   : 0.10000000000000002,
-      "blur_strength"       : 1,
-      "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
-      "image"               : [
-        "3046:482",
-        0
-      ],
-      "depth_map"           : [
-        "3046:2727",
-        0
-      ]
-    },
-    "class_type" : "LayerFilter: FilmV2",
-    "_meta"      : {
-      "title" : "LayerFilter: Film V2"
-    }
-  },
-  "3046:1942" : {
-    "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "3046:478",
-        1
-      ],
-      "b"    : [
-        "3046:478",
-        2
-      ]
-    },
-    "class_type" : "ImpactMinMax",
-    "_meta"      : {
-      "title" : "ImpactMinMax"
-    }
-  },
-  "3046:482"  : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : 0.5,
-      "ratio"          : 0.5,
-      "image"          : [
-        "3046:478",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
     }
   }
 }
