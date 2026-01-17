@@ -1983,7 +1983,7 @@
   },
   "1740"      : {
     "inputs"     : {
-      "value" : 1.33
+      "value" : 1.35
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -2243,7 +2243,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.9",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -2397,7 +2397,7 @@
         0
       ],
       "sampler"      : [
-        "2666",
+        "1909",
         0
       ],
       "sigmas"       : [
@@ -2511,7 +2511,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.3*(a+c*(b-a))",
+      "expression" : "1.0*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2871,10 +2871,16 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.5,
-      "base_shift" : 0.5,
-      "width"      : 1024,
-      "height"     : 1024,
+      "max_shift"  : 1.48,
+      "base_shift" : 0.48,
+      "width"      : [
+        "1927",
+        0
+      ],
+      "height"     : [
+        "1928",
+        0
+      ],
       "model"      : [
         "2939",
         0
@@ -2905,9 +2911,9 @@
   },
   "1989"      : {
     "inputs"     : {
-      "sampler_name" : "lms",
+      "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 30,
+      "steps"        : 25,
       "denoise"      : [
         "1999",
         0
@@ -5270,7 +5276,7 @@
   },
   "2652"      : {
     "inputs"     : {
-      "text" : "aidmaimageupgrader, fluxenhancer, detailed hands, Perfect hand"
+      "text" : "aidmarealisticskin, detailed hands, Perfect hand"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5283,11 +5289,11 @@
       "strength_model" : 0.4,
       "strength_clip"  : 0.4,
       "model"          : [
-        "3030",
+        "3054",
         0
       ],
       "clip"           : [
-        "3030",
+        "3054",
         1
       ]
     },
@@ -5303,28 +5309,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "2666"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.08,
-      "start"              : 0.5,
-      "end"                : 0.55,
-      "bias"               : 0.6,
-      "exponent"           : 0.8,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "1909",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "2669"      : {
@@ -6371,7 +6355,7 @@
         0
       ],
       "model_b" : [
-        "2901",
+        "3058",
         0
       ],
       "boolean" : [
@@ -6391,7 +6375,7 @@
         1
       ],
       "clip_b"  : [
-        "2901",
+        "3058",
         1
       ],
       "boolean" : [
@@ -6503,7 +6487,7 @@
   },
   "2970"      : {
     "inputs"     : {
-      "text" : ""
+      "text" : "aidmarealisticskin, "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -6967,6 +6951,57 @@
       "title" : "Input Selector"
     }
   },
+  "3053"      : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2890",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "CLIP Text Encode (Prompt)"
+    }
+  },
+  "3054"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.65,
+      "model"          : [
+        "3030",
+        0
+      ],
+      "clip"           : [
+        "3030",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
+    }
+  },
+  "3058"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.65,
+      "model"          : [
+        "2901",
+        0
+      ],
+      "clip"           : [
+        "2901",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
+    }
+  },
   "3040:478"  : {
     "inputs"     : {
       "image" : [
@@ -7060,8 +7095,8 @@
   },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.2,
-      "base_shift" : 0.8,
+      "max_shift"  : 1.5,
+      "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7208,7 +7243,7 @@
   "2995:548"  : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : true,
+      "guide_size_for"     : false,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
@@ -7216,8 +7251,8 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "euler_ancestral",
-      "scheduler"          : "normal",
+      "sampler_name"       : "heun",
+      "scheduler"          : "beta",
       "denoise"            : [
         "3031",
         0
@@ -7288,8 +7323,8 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.2,
-      "base_shift" : 0.8,
+      "max_shift"  : 1.4,
+      "base_shift" : 0.6,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7421,7 +7456,7 @@
         "2212",
         0
       ],
-      "steps"              : 28,
+      "steps"              : 21,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -7884,7 +7919,7 @@
   "3014:2972" : {
     "inputs"     : {
       "text1"     : "Detailed female hands, Diamond ring in one finger. No Nailpolish,",
-      "text2"     : "Detailed female hands, Diamond ring in one finger. No Nailpolish,",
+      "text2"     : "female hands, Diamond ring in one finger. No Nailpolish,",
       "text3"     : "",
       "delimiter" : ","
     },
