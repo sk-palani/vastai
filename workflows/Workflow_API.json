@@ -1122,7 +1122,7 @@
   },
   "496"       : {
     "inputs"     : {
-      "text" : "fluxenhancer, aidmaimageupgrader"
+      "text" : "Form Fitting outfit, aidmaimageupgrader"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1315,7 +1315,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.76
+      "value2" : 0.78
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -1594,7 +1594,7 @@
   "931"       : {
     "inputs"     : {
       "any_01" : [
-        "2403",
+        "2365",
         0
       ],
       "any_02" : [
@@ -2243,8 +2243,8 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.9",
-      "divisible_by"  : "8",
+      "megapixel"     : "2.0",
+      "divisible_by"  : "64",
       "mode"          : "pad",
       "delta_percent" : [
         "2532",
@@ -2377,7 +2377,7 @@
         0
       ],
       "latent_image" : [
-        "1989",
+        "3060",
         0
       ]
     },
@@ -2397,7 +2397,7 @@
         0
       ],
       "sampler"      : [
-        "1909",
+        "2666",
         0
       ],
       "sigmas"       : [
@@ -2511,7 +2511,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.0*(a+c*(b-a))",
+      "expression" : "1.3*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2532,10 +2532,16 @@
   },
   "1899"      : {
     "inputs"     : {
-      "max_shift"  : 1.8,
-      "base_shift" : 0.6,
-      "width"      : 1024,
-      "height"     : 1024,
+      "max_shift"  : 1.45,
+      "base_shift" : 0.45,
+      "width"      : [
+        "445",
+        1
+      ],
+      "height"     : [
+        "445",
+        2
+      ],
       "model"      : [
         "2224",
         0
@@ -2836,7 +2842,7 @@
   },
   "1945"      : {
     "inputs"     : {
-      "text" : "She wears a fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2871,15 +2877,15 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.48,
-      "base_shift" : 0.48,
+      "max_shift"  : 1.5,
+      "base_shift" : 0.5,
       "width"      : [
-        "1927",
-        0
+        "445",
+        1
       ],
       "height"     : [
-        "1928",
-        0
+        "445",
+        2
       ],
       "model"      : [
         "2939",
@@ -2946,7 +2952,7 @@
         "2100",
         0
       ],
-      "b"         : 0.49,
+      "b"         : 0.66,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -4766,11 +4772,11 @@
         "2212",
         0
       ],
-      "steps"               : 16,
+      "steps"               : 18,
       "cfg"                 : 1,
       "sampler_name"        : "euler_ancestral",
       "scheduler"           : "beta",
-      "denoise"             : 0.26,
+      "denoise"             : 0.27,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4919,7 +4925,7 @@
         "1955",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 0.42,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -4994,7 +5000,7 @@
   "2560"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.9,
       "strength_clip"  : 1,
       "model"          : [
         "2257",
@@ -5309,6 +5315,28 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
+    }
+  },
+  "2666"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.04,
+      "start"              : 0.25,
+      "end"                : 0.5,
+      "bias"               : 0.6,
+      "exponent"           : 0.8,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : false,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "1909",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
     }
   },
   "2669"      : {
@@ -6197,9 +6225,9 @@
   "2930"      : {
     "inputs"     : {
       "brightness_target"   : 0.5,
-      "cyan_red"            : 0.01,
+      "cyan_red"            : 0.02,
       "magenta_green"       : 0,
-      "yellow_blue"         : 0.04,
+      "yellow_blue"         : 0.03,
       "preserve_luminosity" : true,
       "image"               : [
         "2929",
@@ -6646,7 +6674,7 @@
   "3007"      : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
+      "strength_model" : 0.4,
       "strength_clip"  : 0.1,
       "model"          : [
         "2560",
@@ -6828,7 +6856,7 @@
         "2102",
         0
       ],
-      "b"         : 1,
+      "b"         : 0.56,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6924,7 +6952,7 @@
   },
   "3050"      : {
     "inputs"     : {
-      "text" : "She wears a fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\n\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\n\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -6951,19 +6979,6 @@
       "title" : "Input Selector"
     }
   },
-  "3053"      : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "CLIP Text Encode (Prompt)"
-    }
-  },
   "3054"      : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
@@ -6986,8 +7001,8 @@
   "3058"      : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.65,
-      "strength_clip"  : 0.65,
+      "strength_model" : 0.45,
+      "strength_clip"  : 0.35,
       "model"          : [
         "2901",
         0
@@ -7000,6 +7015,39 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmarealisticskin"
+    }
+  },
+  "3059"      : {
+    "inputs"     : {
+      "opacity"         : 100,
+      "image"           : [
+        "2670",
+        0
+      ],
+      "color_ref_image" : [
+        "2109",
+        0
+      ]
+    },
+    "class_type" : "LayerColor: ColorAdapter",
+    "_meta"      : {
+      "title" : "LayerColor: ColorAdapter"
+    }
+  },
+  "3060"      : {
+    "inputs"     : {
+      "pixels" : [
+        "3059",
+        0
+      ],
+      "vae"    : [
+        "2889",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "VAE Encode"
     }
   },
   "3040:478"  : {
@@ -7100,7 +7148,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2939",
+        "2224",
         0
       ]
     },
@@ -7142,7 +7190,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2936",
+        "2213",
         0
       ]
     },
@@ -7176,7 +7224,7 @@
   "2995:2972" : {
     "inputs"     : {
       "text1"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,\n\nsmooth midriff,low muscle definition, soft natural curves",
-      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,\n\nsmooth midriff,low muscle definition, soft natural curves",
+      "text2"     : "Natural breast shape, \nsmooth midriff,low muscle definition, soft natural curves,  Perfect hand and fingers and nails with pastel nail polish,",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -7197,7 +7245,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2936",
+        "2213",
         0
       ]
     },
@@ -7251,7 +7299,7 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "heun",
+      "sampler_name"       : "euler",
       "scheduler"          : "beta",
       "denoise"            : [
         "3031",
@@ -7279,7 +7327,7 @@
         0
       ],
       "clip"               : [
-        "2936",
+        "2213",
         0
       ],
       "vae"                : [
@@ -7323,8 +7371,8 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.4,
-      "base_shift" : 0.6,
+      "max_shift"  : 1.15,
+      "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7456,7 +7504,7 @@
         "2212",
         0
       ],
-      "steps"              : 21,
+      "steps"              : 25,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
