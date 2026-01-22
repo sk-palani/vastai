@@ -1273,7 +1273,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "2609",
+        "1930",
         0
       ],
       "filename_delimiter"      : "_",
@@ -1315,7 +1315,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.78
+      "value2" : 0.76
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -1872,7 +1872,7 @@
   "1566"      : {
     "inputs"     : {
       "any_01" : [
-        "2321",
+        "3046:363",
         0
       ],
       "any_02" : [
@@ -2244,7 +2244,7 @@
   "1848"      : {
     "inputs"     : {
       "megapixel"     : "2.0",
-      "divisible_by"  : "64",
+      "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
         "2532",
@@ -2377,7 +2377,7 @@
         0
       ],
       "latent_image" : [
-        "3060",
+        "1989",
         0
       ]
     },
@@ -2534,14 +2534,8 @@
     "inputs"     : {
       "max_shift"  : 1.45,
       "base_shift" : 0.45,
-      "width"      : [
-        "445",
-        1
-      ],
-      "height"     : [
-        "445",
-        2
-      ],
+      "width"      : 1024,
+      "height"     : 1024,
       "model"      : [
         "2224",
         0
@@ -2741,7 +2735,7 @@
   },
   "1932"      : {
     "inputs"     : {
-      "text1" : "Detailed_",
+      "text1" : "Generated_",
       "text2" : [
         "1931",
         0
@@ -2919,7 +2913,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 25,
+      "steps"        : 24,
       "denoise"      : [
         "1999",
         0
@@ -2952,7 +2946,7 @@
         "2100",
         0
       ],
-      "b"         : 0.66,
+      "b"         : 0.44,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3862,7 +3856,7 @@
   "2213"      : {
     "inputs"     : {
       "clip_a"  : [
-        "2300",
+        "2644",
         1
       ],
       "clip_b"  : [
@@ -4089,11 +4083,11 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "2560",
+        "2300",
         0
       ],
       "model2"            : [
-        "2300",
+        "2644",
         0
       ]
     },
@@ -4316,14 +4310,14 @@
   "2300"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 3.2,
-      "strength_clip"  : 1,
+      "strength_model" : 2.4,
+      "strength_clip"  : 0,
       "model"          : [
-        "2644",
+        "2560",
         0
       ],
       "clip"           : [
-        "2644",
+        "2560",
         1
       ]
     },
@@ -4426,23 +4420,6 @@
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
       "title" : "ModelSamplingFlux"
-    }
-  },
-  "2321"      : {
-    "inputs"     : {
-      "radius"          : 4,
-      "amount"          : 0.8,
-      "reduce_noise"    : 0.01,
-      "fade_shadows"    : 0.2,
-      "fade_highlights" : 0,
-      "image"           : [
-        "3046:363",
-        0
-      ]
-    },
-    "class_type" : "SmartSharpen",
-    "_meta"      : {
-      "title" : "SharpnessPro · Netteté optimisée"
     }
   },
   "2325"      : {
@@ -4925,7 +4902,7 @@
         "1955",
         0
       ],
-      "b"         : 0.42,
+      "b"         : 0.72,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5000,7 +4977,7 @@
   "2560"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.9,
+      "strength_model" : 1,
       "strength_clip"  : 1,
       "model"          : [
         "2257",
@@ -5319,15 +5296,15 @@
   },
   "2666"      : {
     "inputs"     : {
-      "detail_amount"      : 0.04,
-      "start"              : 0.25,
-      "end"                : 0.5,
-      "bias"               : 0.6,
+      "detail_amount"      : 0.08,
+      "start"              : 0.33,
+      "end"                : 0.66,
+      "bias"               : 0.5,
       "exponent"           : 0.8,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : false,
+      "smooth"             : true,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "1909",
@@ -5879,10 +5856,7 @@
   },
   "2846"      : {
     "inputs"     : {
-      "text1"     : [
-        "2754",
-        0
-      ],
+      "text1"     : "A professionally color-graded RAW close-up photograph of a shy sexy and alluring dark brown almond  skin tone young Indian v1dhya5 woman with extremely beautiful face , photo taken using using a  high-end professional camera , posing glamorously like she is with her lover who is taking the photo,  \n\nThe makeup is minimal but bold and glamorous, featuring black bindi on the forehead and a dramatic eye makeup with dark eyeliner / kohl and mascara, along with defined eyebrows. Her sexy pouty lips are painted a vivid red   . Her lips are narrow, plump, and wet-looking, subtly curved for a sensual appearance., adding a touch of elegance and intensity to their appearance. The skin has a healthy glow, accentuated by subtle matte makeup techniques. ",
       "text2"     : "Her lips glisten softly with moisture, her eyes luminous and tender, as if holding a quiet breath between them.Red Lipstick, well-defined eyebrows, long eyelashes, (aidmarealisticskin:0.5)",
       "text3"     : "",
       "delimiter" : ","
@@ -6567,7 +6541,7 @@
         "2102",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 0.5,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6677,11 +6651,11 @@
       "strength_model" : 0.4,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2560",
+        "2300",
         0
       ],
       "clip"           : [
-        "2560",
+        "2300",
         1
       ]
     },
@@ -6780,8 +6754,8 @@
   "3020"      : {
     "inputs"     : {
       "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 1.2,
-      "strength_clip"  : 0.9,
+      "strength_model" : 1,
+      "strength_clip"  : 1,
       "model"          : [
         "2881",
         0
@@ -7017,37 +6991,13 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "3059"      : {
+  "3071"      : {
     "inputs"     : {
-      "opacity"         : 100,
-      "image"           : [
-        "2670",
-        0
-      ],
-      "color_ref_image" : [
-        "2109",
-        0
-      ]
+      "text" : "A professionally color-graded RAW close-up photograph of a shy sexy and alluring dark brown almond  skin tone young Indian v1dhya5 woman with extremely beautiful face , photo taken using using a  high-end professional camera , posing glamorously like she is with her lover who is taking the photo,  \n\nThe makeup is minimal but bold and glamorous, featuring black bindi on the forehead and a dramatic eye makeup with dark eyeliner / kohl and mascara, along with defined eyebrows. Her sexy pouty lips are painted a vivid red   . Her lips are narrow, plump, and wet-looking, subtly curved for a sensual appearance., adding a touch of elegance and intensity to their appearance. The skin has a healthy glow, accentuated by subtle matte makeup techniques. "
     },
-    "class_type" : "LayerColor: ColorAdapter",
+    "class_type" : "Text Multiline",
     "_meta"      : {
-      "title" : "LayerColor: ColorAdapter"
-    }
-  },
-  "3060"      : {
-    "inputs"     : {
-      "pixels" : [
-        "3059",
-        0
-      ],
-      "vae"    : [
-        "2889",
-        0
-      ]
-    },
-    "class_type" : "VAEEncode",
-    "_meta"      : {
-      "title" : "VAE Encode"
+      "title" : "Text Multiline"
     }
   },
   "3040:478"  : {
@@ -7143,7 +7093,7 @@
   },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.5,
+      "max_shift"  : 1.4,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -7299,7 +7249,7 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "heun",
       "scheduler"          : "beta",
       "denoise"            : [
         "3031",
@@ -7309,7 +7259,7 @@
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 2,
+      "cycle"              : 1,
       "inpaint_model"      : false,
       "noise_mask_feather" : 20,
       "tiled_encode"       : false,
@@ -7371,7 +7321,7 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.15,
+      "max_shift"  : 1.5,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -7454,7 +7404,7 @@
       "delimiter"        : ", ",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "2106",
+        "3071",
         0
       ],
       "text_b"           : [
@@ -7504,9 +7454,9 @@
         "2212",
         0
       ],
-      "steps"              : 25,
+      "steps"              : 34,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "heun",
       "scheduler"          : "beta",
       "denoise"            : [
         "2983",
@@ -7658,7 +7608,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2291",
+        "2213",
         0
       ]
     },
@@ -7674,7 +7624,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2292",
+        "2224",
         0
       ]
     },
@@ -7716,7 +7666,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2291",
+        "2213",
         0
       ]
     },
@@ -7824,7 +7774,7 @@
         0
       ],
       "clip"               : [
-        "2291",
+        "2213",
         0
       ],
       "vae"                : [
@@ -7857,8 +7807,8 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2655",
-        1
+        "2213",
+        0
       ]
     },
     "class_type" : "CLIPTextEncodeFlux",
@@ -7873,7 +7823,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2655",
+        "2224",
         0
       ]
     },
@@ -7915,8 +7865,8 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2655",
-        1
+        "2213",
+        0
       ]
     },
     "class_type" : "CLIPTextEncode",
@@ -8024,8 +7974,8 @@
         0
       ],
       "clip"               : [
-        "2655",
-        1
+        "2213",
+        0
       ],
       "vae"                : [
         "2889",
