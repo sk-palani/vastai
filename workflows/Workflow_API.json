@@ -2615,11 +2615,11 @@
   },
   "1909"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.02,
+      "dishonesty_factor" : -0.01,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
-        "2957",
+        "3031",
         0
       ]
     },
@@ -2985,7 +2985,7 @@
   },
   "1989"      : {
     "inputs"     : {
-      "sampler_name" : "euler",
+      "sampler_name" : "deis",
       "scheduler"    : "beta",
       "steps"        : 26,
       "denoise"      : [
@@ -3020,7 +3020,7 @@
         "2100",
         0
       ],
-      "b"         : 0.46,
+      "b"         : 0.49,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3316,14 +3316,14 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "deis",
       "scheduler"          : "beta",
       "denoise"            : 0.37,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 1,
+      "cycle"              : 2,
       "inpaint_model"      : false,
       "noise_mask_feather" : 20,
       "tiled_encode"       : false,
@@ -4774,7 +4774,7 @@
       ],
       "steps"               : 28,
       "cfg"                 : 1,
-      "sampler_name"        : "heun",
+      "sampler_name"        : "deis",
       "scheduler"           : "beta",
       "denoise"             : 0.26,
       "mode_type"           : "Chess",
@@ -5319,7 +5319,7 @@
   },
   "2666"      : {
     "inputs"     : {
-      "detail_amount"      : 0.08,
+      "detail_amount"      : 0.04,
       "start"              : 0.33,
       "end"                : 0.66,
       "bias"               : 0.5,
@@ -6686,6 +6686,15 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmarealisticskin"
+    }
+  },
+  "3031"      : {
+    "inputs"     : {
+      "sampler_name" : "deis"
+    },
+    "class_type" : "KSamplerSelect",
+    "_meta"      : {
+      "title" : "KSamplerSelect"
     }
   },
   "2996:506"  : {
