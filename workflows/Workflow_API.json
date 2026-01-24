@@ -2619,7 +2619,7 @@
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
-        "3031",
+        "2957",
         0
       ]
     },
@@ -2985,9 +2985,9 @@
   },
   "1989"      : {
     "inputs"     : {
-      "sampler_name" : "deis",
+      "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 26,
+      "steps"        : 24,
       "denoise"      : [
         "1999",
         0
@@ -4327,11 +4327,11 @@
       "strength_model" : 3.2,
       "strength_clip"  : 1,
       "model"          : [
-        "3007",
+        "2908",
         0
       ],
       "clip"           : [
-        "3007",
+        "2908",
         1
       ]
     },
@@ -4455,15 +4455,15 @@
   },
   "2325"      : {
     "inputs"     : {
-      "detail_amount"      : 0.32,
+      "detail_amount"      : 0.12,
       "start"              : 0.2,
-      "end"                : 0.8,
+      "end"                : 0.6,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : false,
+      "smooth"             : true,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "2957",
@@ -4478,7 +4478,7 @@
   "2331"      : {
     "inputs"     : {
       "scheduler" : "beta",
-      "steps"     : 18,
+      "steps"     : 20,
       "denoise"   : 0.26,
       "model"     : [
         "2875",
@@ -4772,9 +4772,9 @@
         "2212",
         0
       ],
-      "steps"               : 28,
+      "steps"               : 12,
       "cfg"                 : 1,
-      "sampler_name"        : "deis",
+      "sampler_name"        : "euler_ancestral",
       "scheduler"           : "beta",
       "denoise"             : 0.26,
       "mode_type"           : "Chess",
@@ -5267,11 +5267,11 @@
       "strength_model" : 0.7,
       "strength_clip"  : 1,
       "model"          : [
-        "2300",
+        "3007",
         0
       ],
       "clip"           : [
-        "2300",
+        "3007",
         1
       ]
     },
@@ -6531,14 +6531,14 @@
   "3007"      : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
+      "strength_model" : 0.42,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2908",
+        "2300",
         0
       ],
       "clip"           : [
-        "2908",
+        "2300",
         1
       ]
     },
@@ -6686,15 +6686,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmarealisticskin"
-    }
-  },
-  "3031"      : {
-    "inputs"     : {
-      "sampler_name" : "deis"
-    },
-    "class_type" : "KSamplerSelect",
-    "_meta"      : {
-      "title" : "KSamplerSelect"
     }
   },
   "2996:506"  : {
@@ -6853,7 +6844,7 @@
         "2212",
         0
       ],
-      "steps"              : 23,
+      "steps"              : 28,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
