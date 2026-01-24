@@ -2615,7 +2615,7 @@
   },
   "1909"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.01,
+      "dishonesty_factor" : -0.02,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -5319,7 +5319,7 @@
   },
   "2666"      : {
     "inputs"     : {
-      "detail_amount"      : 0.04,
+      "detail_amount"      : 0.08,
       "start"              : 0.33,
       "end"                : 0.66,
       "bias"               : 0.5,
