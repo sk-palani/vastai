@@ -2792,7 +2792,7 @@
   },
   "1932"      : {
     "inputs"     : {
-      "text1" : "Detailed_",
+      "text1" : "Generated_",
       "text2" : [
         "1931",
         0
@@ -6174,10 +6174,10 @@
   },
   "2927"      : {
     "inputs"     : {
-      "face_mask"       : false,
+      "face_mask"       : true,
       "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
+      "hair_mask"       : true,
+      "body_mask"       : true,
       "clothes_mask"    : true,
       "confidence"      : 0.54,
       "refine_mask"     : true,
@@ -6217,7 +6217,7 @@
       "cyan_red"            : 0.02,
       "magenta_green"       : 0,
       "yellow_blue"         : 0.05,
-      "preserve_luminosity" : true,
+      "preserve_luminosity" : false,
       "image"               : [
         "2929",
         0
