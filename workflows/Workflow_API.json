@@ -4392,7 +4392,7 @@
   "2300"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.6,
+      "strength_model" : 2.3,
       "strength_clip"  : 0.8,
       "model"          : [
         "2560",
@@ -5310,7 +5310,7 @@
   "2644"      : {
     "inputs"     : {
       "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.7,
+      "strength_model" : 0.5,
       "strength_clip"  : 0.9,
       "model"          : [
         "3007",
@@ -5746,7 +5746,7 @@
         0
       ],
       "mask"         : [
-        "2830",
+        "3045",
         0
       ]
     },
@@ -5770,7 +5770,7 @@
   "2820"      : {
     "inputs"     : {
       "mask" : [
-        "2830",
+        "3045",
         0
       ]
     },
@@ -6764,6 +6764,18 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
+    }
+  },
+  "3045"      : {
+    "inputs"     : {
+      "masks" : [
+        "2830",
+        0
+      ]
+    },
+    "class_type" : "Mask Fill Holes",
+    "_meta"      : {
+      "title" : "Mask Fill Holes"
     }
   },
   "2996:506"  : {
