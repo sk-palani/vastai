@@ -1107,7 +1107,7 @@
     "inputs"     : {
       "question"          : "Describe this photo in essential details concisely with detais about the background, camera angle of the shot, intrinsic details about accesories like glasses, hair style, jewelry and outfit. Also, describe about facial expression including the make-up, eyes and lipstick, avoid mentioning blurred and try to find details in the background. ",
       "seed"              : [
-        "2240",
+        "3049",
         0
       ],
       "temperature"       : 0.6,
@@ -1135,7 +1135,7 @@
     "inputs"     : {
       "question"          : "Describe the outfit in the photo in essential details with detais about the color, material, texture of the materials, fit etc.",
       "seed"              : [
-        "2240",
+        "3049",
         0
       ],
       "temperature"       : 0.6,
@@ -1209,7 +1209,7 @@
       "text"   : "loving \npouting\nshy\nhappy\nvery happy\nsilly\naroused\nflirting\nseductive\nprovocative\nsurprised\nopen mouth",
       "amount" : 1,
       "seed"   : [
-        "2240",
+        "3049",
         0
       ]
     },
@@ -1223,7 +1223,7 @@
       "delimiter"        : ",",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "1945",
+        "3047",
         0
       ],
       "text_b"           : [
@@ -1372,7 +1372,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.72
+      "value2" : 0.62
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -2385,7 +2385,7 @@
   "1858"      : {
     "inputs"     : {
       "noise_seed" : [
-        "2240",
+        "3049",
         0
       ]
     },
@@ -2470,7 +2470,7 @@
         0
       ],
       "sampler"      : [
-        "1909",
+        "2666",
         0
       ],
       "sigmas"       : [
@@ -2607,8 +2607,14 @@
     "inputs"     : {
       "max_shift"  : 1.45,
       "base_shift" : 0.45,
-      "width"      : 1024,
-      "height"     : 1024,
+      "width"      : [
+        "394",
+        0
+      ],
+      "height"     : [
+        "394",
+        1
+      ],
       "model"      : [
         "2224",
         0
@@ -2938,7 +2944,7 @@
   },
   "1945"      : {
     "inputs"     : {
-      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3021,7 +3027,7 @@
         0
       ],
       "noise_seed"   : [
-        "2240",
+        "3049",
         0
       ],
       "model"        : [
@@ -3727,7 +3733,7 @@
   },
   "2164"      : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5 busty and curvy woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5 Voluptuous woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3944,7 +3950,7 @@
   "2212"      : {
     "inputs"     : {
       "input1" : [
-        "2240",
+        "3049",
         0
       ],
       "input2" : 2048
@@ -4010,17 +4016,6 @@
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
       "title" : "Load Upscale Model"
-    }
-  },
-  "2240"      : {
-    "inputs"     : {
-      "mode"       : true,
-      "seed"       : -1,
-      "fixed_seed" : 0
-    },
-    "class_type" : "SeedSelector",
-    "_meta"      : {
-      "title" : "Seed Selector"
     }
   },
   "2245"      : {
@@ -4184,7 +4179,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "2300",
+        "2908",
         0
       ],
       "model2"            : [
@@ -4395,11 +4390,11 @@
       "strength_model" : 2.3,
       "strength_clip"  : 0.8,
       "model"          : [
-        "2560",
+        "2908",
         0
       ],
       "clip"           : [
-        "2560",
+        "2908",
         1
       ]
     },
@@ -4780,8 +4775,8 @@
   "2393"      : {
     "inputs"     : {
       "scheduler" : "beta",
-      "steps"     : 20,
-      "denoise"   : 0.18,
+      "steps"     : 18,
+      "denoise"   : 0.17,
       "model"     : [
         "2224",
         0
@@ -5046,8 +5041,8 @@
   "2560"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 1,
+      "strength_model" : 0.8,
+      "strength_clip"  : 0.8,
       "model"          : [
         "2257",
         0
@@ -5310,14 +5305,14 @@
   "2644"      : {
     "inputs"     : {
       "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.5,
+      "strength_model" : 0.6,
       "strength_clip"  : 0.9,
       "model"          : [
-        "3007",
+        "2300",
         0
       ],
       "clip"           : [
-        "3007",
+        "2300",
         1
       ]
     },
@@ -5339,13 +5334,13 @@
     "inputs"     : {
       "lora_name"      : "Detailed_Hands-000001.safetensors",
       "strength_model" : 0.4,
-      "strength_clip"  : 0.4,
+      "strength_clip"  : 0.6,
       "model"          : [
-        "3030",
+        "3050",
         0
       ],
       "clip"           : [
-        "3030",
+        "3050",
         1
       ]
     },
@@ -5361,6 +5356,28 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
+    }
+  },
+  "2666"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.08,
+      "start"              : 0.33,
+      "end"                : 0.66,
+      "bias"               : 0.5,
+      "exponent"           : 0.8,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "1909",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
     }
   },
   "2669"      : {
@@ -5448,7 +5465,7 @@
   "2695"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 1.5,
       "strength_clip"  : 1,
       "model"          : [
         "2273",
@@ -5562,7 +5579,7 @@
     "inputs"     : {
       "question"          : "Describe the Facial expression of the subject, hair style, jewelry and outfit. Also, describe about  the make-up, eyes and lipstick",
       "seed"              : [
-        "2240",
+        "3049",
         0
       ],
       "temperature"       : 0.6,
@@ -6143,10 +6160,10 @@
   },
   "2893"      : {
     "inputs"     : {
-      "clip_name1" : "clip_l.safetensors",
+      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
-      "device"     : "cpu"
+      "device"     : "default"
     },
     "class_type" : "DualCLIPLoader",
     "_meta"      : {
@@ -6161,6 +6178,25 @@
     "class_type" : "UNETLoader",
     "_meta"      : {
       "title" : "Load Diffusion Model"
+    }
+  },
+  "2908"      : {
+    "inputs"     : {
+      "lora_name"      : "SameFace_Fix.safetensors",
+      "strength_model" : -0.6,
+      "strength_clip"  : 1,
+      "model"          : [
+        "2560",
+        0
+      ],
+      "clip"           : [
+        "2560",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "SameFaceNegatice"
     }
   },
   "2922"      : {
@@ -6552,25 +6588,6 @@
       "title" : "Adjust Saturation"
     }
   },
-  "3007"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.42,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "2300",
-        0
-      ],
-      "clip"           : [
-        "2300",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
   "3011"      : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
@@ -6625,12 +6642,7 @@
       "method"          : "human_parsing_lip",
       "confidence"      : 0.4,
       "crop_multi"      : 0,
-      "mask_components" : {
-        "__value__" : [
-          14,
-          15
-        ]
-      },
+      "mask_components" : "14,15",
       "image"           : [
         "1611",
         0
@@ -6662,7 +6674,7 @@
     "inputs"     : {
       "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
       "strength_model" : 0.7,
-      "strength_clip"  : 1,
+      "strength_clip"  : 0.7,
       "model"          : [
         "2881",
         0
@@ -6714,7 +6726,7 @@
   },
   "3033"      : {
     "inputs"     : {
-      "detail_amount"      : 0.08,
+      "detail_amount"      : 0.03,
       "start"              : 0.33,
       "end"                : 0.66,
       "bias"               : 0.5,
@@ -6776,6 +6788,64 @@
     "class_type" : "Mask Fill Holes",
     "_meta"      : {
       "title" : "Mask Fill Holes"
+    }
+  },
+  "3047"      : {
+    "inputs"     : {
+      "condition"  : [
+        "268",
+        0
+      ],
+      "when_true"  : [
+        "1945",
+        0
+      ],
+      "when_false" : [
+        "3048",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "3048"      : {
+    "inputs"     : {
+      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Prompt Extras"
+    }
+  },
+  "3049"      : {
+    "inputs"     : {
+      "seed"      : -1,
+      "increment" : 0
+    },
+    "class_type" : "Seed Generator (Image Saver)",
+    "_meta"      : {
+      "title" : "Seed Generator (Image Saver)"
+    }
+  },
+  "3050"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "3030",
+        0
+      ],
+      "clip"           : [
+        "3030",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
     }
   },
   "2996:506"  : {
