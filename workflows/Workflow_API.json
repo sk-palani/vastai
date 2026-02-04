@@ -1372,7 +1372,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.65
+      "value2" : 0.64
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -3960,7 +3960,7 @@
   "2213"      : {
     "inputs"     : {
       "clip_a"  : [
-        "2644",
+        "2300",
         1
       ],
       "clip_b"  : [
@@ -3980,7 +3980,7 @@
   "2224"      : {
     "inputs"     : {
       "model_a" : [
-        "2254",
+        "2300",
         0
       ],
       "model_b" : [
@@ -4108,85 +4108,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmarealisticskin"
-    }
-  },
-  "2254"      : {
-    "inputs"     : {
-      "img_in."           : 1,
-      "time_in."          : 1,
-      "guidance_in"       : 1,
-      "vector_in."        : 1,
-      "txt_in."           : 1,
-      "double_blocks.0."  : 1,
-      "double_blocks.1."  : 1,
-      "double_blocks.2."  : 1,
-      "double_blocks.3."  : 1,
-      "double_blocks.4."  : 1,
-      "double_blocks.5."  : 1,
-      "double_blocks.6."  : 1,
-      "double_blocks.7."  : 1,
-      "double_blocks.8."  : 1,
-      "double_blocks.9."  : 1,
-      "double_blocks.10." : 1,
-      "double_blocks.11." : 1,
-      "double_blocks.12." : 1,
-      "double_blocks.13." : 1,
-      "double_blocks.14." : 1,
-      "double_blocks.15." : 1,
-      "double_blocks.16." : 1,
-      "double_blocks.17." : 1,
-      "double_blocks.18." : 1,
-      "single_blocks.0."  : 1,
-      "single_blocks.1."  : 1,
-      "single_blocks.2."  : 1,
-      "single_blocks.3."  : 1,
-      "single_blocks.4."  : 1,
-      "single_blocks.5."  : 1,
-      "single_blocks.6."  : 1,
-      "single_blocks.7."  : 1,
-      "single_blocks.8."  : 1,
-      "single_blocks.9."  : 1,
-      "single_blocks.10." : 1,
-      "single_blocks.11." : 1,
-      "single_blocks.12." : 1,
-      "single_blocks.13." : 1,
-      "single_blocks.14." : 1,
-      "single_blocks.15." : 1,
-      "single_blocks.16." : 1,
-      "single_blocks.17." : 1,
-      "single_blocks.18." : 1,
-      "single_blocks.19." : 0,
-      "single_blocks.20." : 0,
-      "single_blocks.21." : 0,
-      "single_blocks.22." : 0,
-      "single_blocks.23." : 0,
-      "single_blocks.24." : 0,
-      "single_blocks.25." : 0,
-      "single_blocks.26." : 0,
-      "single_blocks.27." : 0,
-      "single_blocks.28." : 0,
-      "single_blocks.29." : 0,
-      "single_blocks.30." : 0,
-      "single_blocks.31." : 0,
-      "single_blocks.32." : 0,
-      "single_blocks.33." : 0,
-      "single_blocks.34." : 0,
-      "single_blocks.35." : 0,
-      "single_blocks.36." : 0,
-      "single_blocks.37." : 0,
-      "final_layer."      : 1,
-      "model1"            : [
-        "2300",
-        0
-      ],
-      "model2"            : [
-        "2644",
-        0
-      ]
-    },
-    "class_type" : "ModelMergeFlux1",
-    "_meta"      : {
-      "title" : "ModelMergeFlux1"
     }
   },
   "2257"      : {
@@ -4384,7 +4305,7 @@
   "2300"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.3,
+      "strength_model" : 1.75,
       "strength_clip"  : 0.8,
       "model"          : [
         "2908",
@@ -4771,9 +4692,9 @@
   },
   "2393"      : {
     "inputs"     : {
-      "scheduler" : "beta",
-      "steps"     : 24,
-      "denoise"   : 0.17,
+      "scheduler" : "sgm_uniform",
+      "steps"     : 10,
+      "denoise"   : 0.1,
       "model"     : [
         "2224",
         0
@@ -4812,8 +4733,8 @@
       ],
       "steps"               : 18,
       "cfg"                 : 1,
-      "sampler_name"        : "heun",
-      "scheduler"           : "beta",
+      "sampler_name"        : "dpmpp_2m",
+      "scheduler"           : "sgm_uniform",
       "denoise"             : 0.26,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
@@ -4852,7 +4773,7 @@
         0
       ],
       "custom_sampler"      : [
-        "3033",
+        "2957",
         0
       ],
       "custom_sigmas"       : [
@@ -5297,25 +5218,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA"
-    }
-  },
-  "2644"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.9,
-      "model"          : [
-        "2300",
-        0
-      ],
-      "clip"           : [
-        "2300",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Flux_Lora_32F_Breasts"
     }
   },
   "2652"      : {
@@ -6053,7 +5955,7 @@
   },
   "2875"      : {
     "inputs"     : {
-      "lora_name"      : "d351_Coffee_Krea_Kohya_V1_Unchained_prodigy-000012.safetensors",
+      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
       "strength_model" : 1,
       "strength_clip"  : 1,
       "model"          : [
@@ -6073,7 +5975,7 @@
   "2881"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.6,
+      "strength_model" : 1.75,
       "strength_clip"  : 1,
       "model"          : [
         "2695",
@@ -6530,7 +6432,7 @@
         "2102",
         0
       ],
-      "b"         : 1,
+      "b"         : 0.75,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6721,28 +6623,6 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "3033"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.2,
-      "start"              : 0.2,
-      "end"                : 0.8,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 0,
-      "sampler"            : [
-        "2957",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
-    }
-  },
   "3038"      : {
     "inputs"     : {
       "any_02" : [
@@ -6868,7 +6748,7 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.5,
+      "max_shift"  : 1.45,
       "base_shift" : 0.45,
       "width"      : 1024,
       "height"     : 1024,
@@ -7001,9 +6881,9 @@
         "2212",
         0
       ],
-      "steps"              : 30,
+      "steps"              : 19,
       "cfg"                : 1,
-      "sampler_name"       : "heun",
+      "sampler_name"       : "euler",
       "scheduler"          : "beta",
       "denoise"            : [
         "2983",
