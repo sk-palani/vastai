@@ -2,7 +2,7 @@
 
 # This file will be sourced in init.sh
 
-
+find "${WORKSPACE}ComfyUI/temp/" -type f -name "*.png" -mmin +10 -delete
 
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
 nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
@@ -158,6 +158,7 @@ NODES=(
     "https://github.com/orion4d/ComfyUI_SharpnessPro"
     "https://github.com/HECer/ComfyUI-FilePathCreator"
     "https://github.com/SparknightLLC/ComfyUI-SpectralVAEDetailer"
+    "https://github.com/tritant/ComfyUI-Advanced-Photo-Grain"
     "https://github.com/sk-palani/ComfyUI_Simpler"
     "https://github.com/chrisfreilich/virtuoso-nodes"
 )
@@ -172,6 +173,7 @@ WORKFLOWS=(
 CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
 #    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors"
     "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
     "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors"
