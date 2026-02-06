@@ -1368,7 +1368,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.64
+      "value2" : 0.72
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -2132,7 +2132,7 @@
   },
   "1813"      : {
     "inputs"     : {
-      "OutputDirectory" : "Inputs/Processed",
+      "OutputDirectory" : "temp",
       "OverwriteFile"   : [
         "124",
         0
@@ -7104,27 +7104,6 @@
       "title" : "Model Patch Torch Settings"
     }
   },
-  "3069"      : {
-    "inputs"     : {
-      "Directory"           : "Inputs/Processed",
-      "FilenamePrefix"      : [
-        "1931",
-        0
-      ],
-      "OpenOutputDirectory" : [
-        "3070",
-        0
-      ],
-      "Images"              : [
-        "1838",
-        0
-      ]
-    },
-    "class_type" : "JDCN_ImageSaver",
-    "_meta"      : {
-      "title" : "JDCN_ImageSaver"
-    }
-  },
   "3070"      : {
     "inputs"     : {
       "boolean" : [
@@ -7135,6 +7114,52 @@
     "class_type" : "Logic NOT",
     "_meta"      : {
       "title" : "NOT"
+    }
+  },
+  "3076"      : {
+    "inputs"     : {
+      "custom_path"     : "Inputs/Processed",
+      "filename_prefix" : [
+        "3079",
+        0
+      ],
+      "timestamp"       : "None",
+      "format"          : "jpg",
+      "quality"         : 100,
+      "preview"         : [
+        "3070",
+        0
+      ],
+      "image"           : [
+        "1837",
+        0
+      ],
+      "tag_text"        : [
+        "788",
+        0
+      ]
+    },
+    "class_type" : "LayerUtility: ImageTaggerSave",
+    "_meta"      : {
+      "title" : "LayerUtility: Image Tagger Save"
+    }
+  },
+  "3079"      : {
+    "inputs"     : {
+      "delimiter"        : "__",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "1931",
+        0
+      ],
+      "text_b"           : [
+        "249",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
     }
   },
   "2995:113"  : {
