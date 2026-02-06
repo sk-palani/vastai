@@ -2,7 +2,7 @@
 
 # This file will be sourced in init.sh
 
-find "${WORKSPACE}ComfyUI/temp/" -type f -name "*.png" -mmin +10 -delete
+
 
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
 nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &

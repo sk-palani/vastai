@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
+find "${WORKSPACE}ComfyUI/temp/" -type f -name "*.png" -mmin +10 -delete
+
 # --- Skip execution if .skip file exists ---
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 if [ -f "$SCRIPT_DIR/.skip" ]; then
