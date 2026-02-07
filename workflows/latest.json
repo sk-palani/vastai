@@ -1,5 +1,5 @@
 {
-  "26"        : {
+  "26"   : {
     "inputs"     : {
       "find"    : "woman",
       "replace" : "young girl",
@@ -13,7 +13,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "30"        : {
+  "30"   : {
     "inputs"     : {
       "text" : "A closeup professional photoshoot analog photograph of a shy and alluring dark-skinned Indian v1dhya5 woman with extremely beautiful face with (black bindi on the forehead:1.2), deep rich complexion with a scattering of freckles across cheeks and nose, \n\nfilm, film grain, kdkpt400, kodak, portra400, \n"
     },
@@ -22,7 +22,7 @@
       "title" : "Text Multiline"
     }
   },
-  "41"        : {
+  "41"   : {
     "inputs"     : {
       "crop"        : "center",
       "clip_vision" : [
@@ -39,7 +39,7 @@
       "title" : "CLIP Vision Encode"
     }
   },
-  "42"        : {
+  "42"   : {
     "inputs"     : {
       "strength"           : 0.48,
       "strength_type"      : "multiply",
@@ -61,7 +61,7 @@
       "title" : "Apply Style Model"
     }
   },
-  "43"        : {
+  "43"   : {
     "inputs"     : {
       "style_model_name" : "flex1_redux_siglip2_512.safetensors"
     },
@@ -70,7 +70,7 @@
       "title" : "Load Style Model"
     }
   },
-  "44"        : {
+  "44"   : {
     "inputs"     : {
       "conditioning_to_strength" : 0.5000000000000001,
       "conditioning_to"          : [
@@ -87,7 +87,7 @@
       "title" : "ConditioningAverage"
     }
   },
-  "55"        : {
+  "55"   : {
     "inputs"     : {
       "face_mask"       : true,
       "background_mask" : false,
@@ -96,6 +96,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.4,
       "refine_mask"     : false,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
         "2703",
         0
@@ -106,26 +108,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "104"       : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : true,
-      "body_mask"       : true,
-      "clothes_mask"    : true,
-      "confidence"      : 0.54,
-      "refine_mask"     : true,
-      "images"          : [
-        "1267",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "122"       : {
+  "122"  : {
     "inputs"     : {
       "any" : [
         "581",
@@ -137,7 +120,7 @@
       "title" : "Is None"
     }
   },
-  "124"       : {
+  "124"  : {
     "inputs"     : {
       "boolean" : [
         "122",
@@ -149,7 +132,7 @@
       "title" : "NOT"
     }
   },
-  "143"       : {
+  "143"  : {
     "inputs"     : {
       "images" : [
         "1831",
@@ -161,7 +144,7 @@
       "title" : "Image to Seed"
     }
   },
-  "146"       : {
+  "146"  : {
     "inputs"     : {
       "expression" : "(a * b / 2 + 32)-((a * b / 2 + 32)%64)",
       "a"          : [
@@ -182,14 +165,10 @@
       "title" : "tile height (Math Expression 🐍)"
     }
   },
-  "154"       : {
+  "154"  : {
     "inputs"     : {
       "pixels" : [
-        "2109",
-        0
-      ],
-      "vae"    : [
-        "2889",
+        "2303",
         0
       ]
     },
@@ -198,7 +177,7 @@
       "title" : "VAE Encode"
     }
   },
-  "193"       : {
+  "193"  : {
     "inputs"     : {
       "comparison" : "a < b",
       "a"          : [
@@ -215,7 +194,7 @@
       "title" : "Orientation P or L"
     }
   },
-  "195"       : {
+  "195"  : {
     "inputs"     : {
       "comparison" : "a == b",
       "a"          : [
@@ -232,7 +211,7 @@
       "title" : "Orientation P or L"
     }
   },
-  "232"       : {
+  "232"  : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -246,7 +225,7 @@
       "title" : "Contains [##]"
     }
   },
-  "233"       : {
+  "233"  : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -260,7 +239,7 @@
       "title" : "Contains [**]"
     }
   },
-  "235"       : {
+  "235"  : {
     "inputs"     : {
       "boolean_a" : [
         "286",
@@ -276,7 +255,7 @@
       "title" : "Logic Comparison OR"
     }
   },
-  "240"       : {
+  "240"  : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -290,7 +269,7 @@
       "title" : "Text Contains [Saree]"
     }
   },
-  "241"       : {
+  "241"  : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -304,7 +283,7 @@
       "title" : "Text Contains [back]"
     }
   },
-  "242"       : {
+  "242"  : {
     "inputs"     : {
       "text_a"  : [
         "247",
@@ -324,7 +303,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "243"       : {
+  "243"  : {
     "inputs"     : {
       "text_a"  : [
         "265",
@@ -344,7 +323,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "244"       : {
+  "244"  : {
     "inputs"     : {
       "value" : "Photo taken from the back of the subject,"
     },
@@ -353,7 +332,7 @@
       "title" : "OnTrue"
     }
   },
-  "245"       : {
+  "245"  : {
     "inputs"     : {
       "string_a"  : [
         "243",
@@ -370,7 +349,7 @@
       "title" : "Concatenate"
     }
   },
-  "247"       : {
+  "247"  : {
     "inputs"     : {
       "value" : "wearing indian saree with intricate details"
     },
@@ -379,7 +358,7 @@
       "title" : "OnTrue"
     }
   },
-  "249"       : {
+  "249"  : {
     "inputs"     : {
       "delimiter"        : ", ",
       "clean_whitespace" : "true",
@@ -401,7 +380,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "251"       : {
+  "251"  : {
     "inputs"     : {
       "text" : [
         "254",
@@ -413,11 +392,11 @@
       "title" : "Show Text [LP]"
     }
   },
-  "252"       : {
+  "252"  : {
     "inputs"     : {
       "join_with"   : ",",
       "string_list" : [
-        "254",
+        "251",
         0
       ]
     },
@@ -426,7 +405,7 @@
       "title" : "String List to String"
     }
   },
-  "253"       : {
+  "253"  : {
     "inputs"     : {
       "string"  : [
         "252",
@@ -440,7 +419,7 @@
       "title" : "Replace"
     }
   },
-  "254"       : {
+  "254"  : {
     "inputs"     : {
       "string"           : [
         "1838",
@@ -458,7 +437,7 @@
       "title" : "Regex Extract"
     }
   },
-  "255"       : {
+  "255"  : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -472,7 +451,7 @@
       "title" : "Text Contains [back]"
     }
   },
-  "258"       : {
+  "258"  : {
     "inputs"     : {
       "text_a"  : [
         "244",
@@ -492,7 +471,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "262"       : {
+  "262"  : {
     "inputs"     : {
       "value" : ""
     },
@@ -501,7 +480,7 @@
       "title" : "On False"
     }
   },
-  "265"       : {
+  "265"  : {
     "inputs"     : {
       "value" : "Photo taken from the side of the subject,"
     },
@@ -510,7 +489,7 @@
       "title" : "OnTrue"
     }
   },
-  "266"       : {
+  "266"  : {
     "inputs"     : {
       "boolean" : true
     },
@@ -519,7 +498,7 @@
       "title" : "Red Lipstick?"
     }
   },
-  "268"       : {
+  "268"  : {
     "inputs"     : {
       "comparison" : "a <= b",
       "a"          : [
@@ -536,7 +515,7 @@
       "title" : "Compare"
     }
   },
-  "271"       : {
+  "271"  : {
     "inputs"     : {
       "string"  : "the subject is portrayed at __{{ age }}__ years of age,  ",
       "find"    : "__{{ age }}__",
@@ -550,7 +529,7 @@
       "title" : "Replace"
     }
   },
-  "272"       : {
+  "272"  : {
     "inputs"     : {
       "string"           : [
         "1838",
@@ -568,7 +547,7 @@
       "title" : "Regex Extract"
     }
   },
-  "275"       : {
+  "275"  : {
     "inputs"     : {
       "comparison" : "a < b",
       "a"          : [
@@ -585,7 +564,7 @@
       "title" : ">0"
     }
   },
-  "277"       : {
+  "277"  : {
     "inputs"     : {
       "value" : 10
     },
@@ -594,7 +573,7 @@
       "title" : "L"
     }
   },
-  "278"       : {
+  "278"  : {
     "inputs"     : {
       "value" : 0
     },
@@ -603,7 +582,7 @@
       "title" : "Zero"
     }
   },
-  "283"       : {
+  "283"  : {
     "inputs"     : {
       "delimiter"        : "",
       "clean_whitespace" : "true",
@@ -621,7 +600,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "284"       : {
+  "284"  : {
     "inputs"     : {
       "value" : "0"
     },
@@ -630,7 +609,7 @@
       "title" : "String"
     }
   },
-  "285"       : {
+  "285"  : {
     "inputs"     : {
       "value" : "+"
     },
@@ -639,7 +618,7 @@
       "title" : "String"
     }
   },
-  "286"       : {
+  "286"  : {
     "inputs"     : {
       "value" : false
     },
@@ -648,7 +627,7 @@
       "title" : "Boolean"
     }
   },
-  "288"       : {
+  "288"  : {
     "inputs"     : {
       "text" : [
         "289",
@@ -660,7 +639,7 @@
       "title" : "Show Text Bridge [LP]"
     }
   },
-  "289"       : {
+  "289"  : {
     "inputs"     : {
       "string"           : [
         "1838",
@@ -678,7 +657,7 @@
       "title" : "Regex Extract"
     }
   },
-  "290"       : {
+  "290"  : {
     "inputs"     : {
       "string" : [
         "296",
@@ -690,7 +669,7 @@
       "title" : "Length"
     }
   },
-  "293"       : {
+  "293"  : {
     "inputs"     : {
       "delimiter"        : "",
       "clean_whitespace" : "true",
@@ -708,7 +687,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "294"       : {
+  "294"  : {
     "inputs"     : {
       "string" : [
         "293",
@@ -720,7 +699,7 @@
       "title" : "Length"
     }
   },
-  "295"       : {
+  "295"  : {
     "inputs"     : {
       "int" : 5
     },
@@ -729,7 +708,7 @@
       "title" : "Int Literal"
     }
   },
-  "296"       : {
+  "296"  : {
     "inputs"     : {
       "delimiter"        : "",
       "clean_whitespace" : "true",
@@ -747,7 +726,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "322"       : {
+  "322"  : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -761,7 +740,7 @@
       "title" : "Contains [sketch]"
     }
   },
-  "325"       : {
+  "325"  : {
     "inputs"     : {
       "boolean" : [
         "322",
@@ -773,7 +752,7 @@
       "title" : "Logic NOT"
     }
   },
-  "331"       : {
+  "331"  : {
     "inputs"     : {
       "select"   : 1,
       "sel_mode" : false,
@@ -799,7 +778,7 @@
       "title" : "Switch (Any)"
     }
   },
-  "334"       : {
+  "334"  : {
     "inputs"     : {
       "value" : 2
     },
@@ -808,7 +787,7 @@
       "title" : "S"
     }
   },
-  "335"       : {
+  "335"  : {
     "inputs"     : {
       "value" : 6
     },
@@ -817,7 +796,7 @@
       "title" : "M"
     }
   },
-  "339"       : {
+  "339"  : {
     "inputs"     : {
       "noise_scale"   : [
         "622",
@@ -838,17 +817,17 @@
       "title" : "Noise Plus Blend"
     }
   },
-  "342"       : {
+  "342"  : {
     "inputs"     : {
       "value1" : 0.72,
-      "value2" : 0.56
+      "value2" : 0.54
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
-      "title" : "0.72::0.56"
+      "title" : "Detailer Denoise (0.56 :: 0.80)"
     }
   },
-  "343"       : {
+  "343"  : {
     "inputs"     : {
       "value1" : 0.52,
       "value2" : 0.37
@@ -858,7 +837,7 @@
       "title" : "Input+DetailerDenoise[0.62,0.56]"
     }
   },
-  "356"       : {
+  "356"  : {
     "inputs"     : {
       "image" : [
         "1848",
@@ -870,16 +849,16 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "362"       : {
+  "362"  : {
     "inputs"     : {
-      "value" : 25
+      "value" : 24
     },
     "class_type" : "easy int",
     "_meta"      : {
       "title" : "Age"
     }
   },
-  "363"       : {
+  "363"  : {
     "inputs"     : {
       "center_x"            : 0.3,
       "center_y"            : 0.5,
@@ -887,7 +866,7 @@
       "vignette_intensity"  : 0.010000000000000002,
       "grain_method"        : "filmgrainer",
       "grain_power"         : 0.08,
-      "grain_scale"         : 0.4,
+      "grain_scale"         : 0.6,
       "grain_sat"           : 0.3,
       "filmgrainer_shadows" : 0.15000000000000002,
       "filmgrainer_highs"   : 0.10000000000000002,
@@ -908,7 +887,7 @@
       "title" : "LayerFilter: Film V2"
     }
   },
-  "389"       : {
+  "389"  : {
     "inputs"     : {
       "expression" : "(a * b / 2 + 32)-((a * b / 2 + 32)%64)",
       "a"          : [
@@ -929,7 +908,7 @@
       "title" : "tile height (Math Expression 🐍)"
     }
   },
-  "394"       : {
+  "394"  : {
     "inputs"     : {
       "image" : [
         "1831",
@@ -941,7 +920,7 @@
       "title" : "🔧 Get Image Size"
     }
   },
-  "405"       : {
+  "405"  : {
     "inputs"     : {
       "text" : "\n(dark pimple marks in the left cheek:0.8), tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3), and her hair is long, curly. She has minimal makeup, with a focus on sharp black eyeliner and nude matte warm brown lipstick on her sexy pouty lips.\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 28-inch waist, and 36-inch hips. Her thighs are thick, and her posture confident yet relaxed. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, cleavage.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
@@ -950,7 +929,7 @@
       "title" : "Prompt Extras"
     }
   },
-  "440"       : {
+  "440"  : {
     "inputs"     : {
       "cyan_red"      : 0.01,
       "magenta_green" : 0,
@@ -965,7 +944,7 @@
       "title" : "LayerColor: ColorBalance"
     }
   },
-  "441"       : {
+  "441"  : {
     "inputs"     : {
       "expand"                 : 1,
       "incremental_expandrate" : 0,
@@ -985,7 +964,7 @@
       "title" : "Grow Mask With Blur"
     }
   },
-  "445"       : {
+  "445"  : {
     "inputs"     : {
       "image" : [
         "356",
@@ -997,7 +976,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "454"       : {
+  "454"  : {
     "inputs"     : {
       "image" : [
         "440",
@@ -1009,7 +988,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "455"       : {
+  "455"  : {
     "inputs"     : {
       "x"           : 0,
       "y"           : 0,
@@ -1028,7 +1007,7 @@
       "title" : "MaskComposite"
     }
   },
-  "456"       : {
+  "456"  : {
     "inputs"     : {
       "shape"        : "square",
       "frames"       : 1,
@@ -1054,7 +1033,7 @@
       "title" : "Create Shape Mask"
     }
   },
-  "457"       : {
+  "457"  : {
     "inputs"     : {
       "red"       : 255,
       "green"     : 0,
@@ -1070,7 +1049,7 @@
       "title" : "🔧 Mask From Color"
     }
   },
-  "459"       : {
+  "459"  : {
     "inputs"     : {
       "mask" : [
         "455",
@@ -1082,7 +1061,7 @@
       "title" : "Convert Mask to Image"
     }
   },
-  "461"       : {
+  "461"  : {
     "inputs"     : {
       "op" : "IsZero",
       "a"  : 1
@@ -1092,7 +1071,7 @@
       "title" : "IntUnaryCondition"
     }
   },
-  "478"       : {
+  "478"  : {
     "inputs"     : {
       "image" : [
         "2703",
@@ -1104,7 +1083,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "482"       : {
+  "482"  : {
     "inputs"     : {
       "noise_radius"   : 1,
       "preserve_edges" : 1,
@@ -1120,11 +1099,11 @@
       "title" : "🔧 Image Smart Sharpen"
     }
   },
-  "484"       : {
+  "484"  : {
     "inputs"     : {
-      "question"          : "Describe this photo in essential details concisely with detais about the background, camera angle of the shot, intrinsic details about accesories like glasses, hair style, jewelry and outfit. Also, describe about facial expression including the make-up, eyes and lipstick, avoid mentioning blurred and try to find details in the background. ",
+      "question"          : "Describe this photo in essential details concisely with detais about the background, camera angle of the shot, intrinsic details about hair style, jewelry and outfit. Also, describe about facial expression including the make-up, eyes and lipstick, avoid mentioning blurred and try to find details in the background. ",
       "seed"              : [
-        "3049",
+        "2240",
         0
       ],
       "temperature"       : 0.6,
@@ -1148,11 +1127,11 @@
       "title" : "Janus Pro Describe Image 🐑"
     }
   },
-  "485"       : {
+  "485"  : {
     "inputs"     : {
       "question"          : "Describe the outfit in the photo in essential details with detais about the color, material, texture of the materials, fit etc.",
       "seed"              : [
-        "3049",
+        "2240",
         0
       ],
       "temperature"       : 0.6,
@@ -1176,7 +1155,7 @@
       "title" : "Janus Pro Describe Image 🐑"
     }
   },
-  "494"       : {
+  "494"  : {
     "inputs"     : {
       "text" : "nude, dark textured large areola and medium-sized  erect nipples,  (nsfw:0.8),   jewelry,\n\n\nnude, dark texture areola and erect nipples,  (nsfw:0.7),  \n\n\nsee-through blouse and saree, deep-cleavage, jewelry, (Hip-Chain:1.2), \n\ncolorful silk saree with expensive hand-made embroidery designs, backless blouse,\n\nsexy heart-shaped clothing cutout in the back revealing buttcrack,\n\nsee-through saree, Floral prints embroidery,    Belly Piercing,\n\nwearing Glasses\n\nSitting on the knees, in front of mirror,  Happy facial expression,colorful lace top with expensive hand-made embroidery designs backless blouse,  \n\nSexy Hip-Chain,Sexy Waist-Chain, Sexy crop-top made of jasmine flowers,\n\nA tattoo of a baby elephant is visible on the left chest area. "
     },
@@ -1185,7 +1164,7 @@
       "title" : "Text Multiline"
     }
   },
-  "495"       : {
+  "495"  : {
     "inputs"     : {
       "text" : " hip chain, waist chain, hands behind the back, crop top overhang,\n\nand light freckles scattered across her cheeks and nose. "
     },
@@ -1194,7 +1173,7 @@
       "title" : "Text Multiline"
     }
   },
-  "496"       : {
+  "496"  : {
     "inputs"     : {
       "text" : "fluxenhancer, aidmaimageupgrader"
     },
@@ -1203,7 +1182,7 @@
       "title" : "Text Multiline"
     }
   },
-  "500"       : {
+  "500"  : {
     "inputs"     : {
       "string"           : [
         "1838",
@@ -1221,12 +1200,12 @@
       "title" : "Regex Extract"
     }
   },
-  "513"       : {
+  "513"  : {
     "inputs"     : {
       "text"   : "loving \npouting\nshy\nhappy\nvery happy\nsilly\naroused\nflirting\nseductive\nprovocative\nsurprised\nopen mouth",
       "amount" : 1,
       "seed"   : [
-        "3049",
+        "2240",
         0
       ]
     },
@@ -1235,12 +1214,12 @@
       "title" : "Text Random Multiline"
     }
   },
-  "515"       : {
+  "515"  : {
     "inputs"     : {
       "delimiter"        : ",",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "3047",
+        "1945",
         0
       ],
       "text_b"           : [
@@ -1253,10 +1232,10 @@
       "title" : "Text Concatenate"
     }
   },
-  "542"       : {
+  "542"  : {
     "inputs"     : {
       "images" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -1265,7 +1244,7 @@
       "title" : "Preview Image"
     }
   },
-  "545"       : {
+  "545"  : {
     "inputs"     : {
       "face_mask"       : false,
       "background_mask" : true,
@@ -1274,6 +1253,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.5,
       "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
         "356",
         0
@@ -1284,7 +1265,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "559"       : {
+  "559"  : {
     "inputs"     : {
       "text" : "aidmafluxproultra, aidmaimageupgrader, sinfully stylish, "
     },
@@ -1293,7 +1274,7 @@
       "title" : "Text Multiline"
     }
   },
-  "560"       : {
+  "560"  : {
     "inputs"     : {
       "text" : "fluxenhancer,aidmaimageupgrader, d351 d4rk, aidmarealisticskin, aidmafluxproultra, moles, natural blemishes, Rough skin texture, Skin imperfections , "
     },
@@ -1302,7 +1283,7 @@
       "title" : "Text Multiline"
     }
   },
-  "564"       : {
+  "564"  : {
     "inputs"     : {
       "model_name" : "deepseek-ai/Janus-Pro-1B"
     },
@@ -1311,7 +1292,7 @@
       "title" : "Janus Pro Model Loader 🐑"
     }
   },
-  "567"       : {
+  "567"  : {
     "inputs"     : {
       "text" : "a professional digital Storybook Illustration art style of a shy and cute dark-skinned Indian v1dhya5 woman with  a extremely beautiful  face with (black bindi on the forehead:1.2), "
     },
@@ -1320,7 +1301,7 @@
       "title" : "Text Multiline"
     }
   },
-  "568"       : {
+  "568"  : {
     "inputs"     : {
       "text" : "A professionally color-graded RAW photograph of a shy sexy and alluring dark brown almond  skin tone Indian v1dhya5 woman with extremely beautiful face  with black bindi on the forehead, , photo taken using using a  high-end professional camera , posing glamorously like she is with her lover who is taking the photo,  \n\nThe makeup is minimal but bold and glamorous, featuring black bindi on the forehead and a dramatic eye makeup with dark eyeliner / kohl and mascara, along with defined eyebrows. Her sexy pouty lips are painted a vivid red   . Her lips are narrow, plump, and wet-looking, subtly curved for a sensual appearance., adding a touch of elegance and intensity to their appearance. The skin has a healthy glow, accentuated by subtle matte makeup techniques. "
     },
@@ -1329,7 +1310,7 @@
       "title" : "Text Multiline"
     }
   },
-  "571"       : {
+  "571"  : {
     "inputs"     : {
       "text1"     : "A dark-skinned Indian v1dhya5 woman with extremely beautiful face with (black bindi on the forehead:1.4), deep rich complexion with a scattering of freckles across cheeks and nose,",
       "text2"     : "nude, dark textured large areola and medium-sized  erect nipples,  (nsfw:0.8),   jewelry",
@@ -1341,7 +1322,7 @@
       "title" : "Positive"
     }
   },
-  "581"       : {
+  "581"  : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -1371,7 +1352,7 @@
       "title" : "Image Save"
     }
   },
-  "622"       : {
+  "622"  : {
     "inputs"     : {
       "float_value"    : [
         "2100",
@@ -1384,47 +1365,17 @@
       "title" : "Float Multiplication"
     }
   },
-  "623"       : {
+  "623"  : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.64
+      "value2" : 0.78
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
-      "title" : "0.92::0.78"
+      "title" : "Input+DetailerDenoise[0.62,0.56]"
     }
   },
-  "654"       : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "1930",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "true",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "2991:548",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "731"       : {
+  "731"  : {
     "inputs"     : {
       "preprocessor" : "DWPreprocessor",
       "resolution"   : [
@@ -1441,7 +1392,7 @@
       "title" : "AIO Aux Preprocessor"
     }
   },
-  "734"       : {
+  "734"  : {
     "inputs"     : {
       "type"        : "openpose",
       "control_net" : [
@@ -1454,7 +1405,7 @@
       "title" : "SetUnionControlNetType"
     }
   },
-  "735"       : {
+  "735"  : {
     "inputs"     : {
       "conditioning" : [
         "736",
@@ -1466,7 +1417,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "736"       : {
+  "736"  : {
     "inputs"     : {
       "text" : "",
       "clip" : [
@@ -1479,7 +1430,7 @@
       "title" : "CLIP Text Encode (Prompt)"
     }
   },
-  "737"       : {
+  "737"  : {
     "inputs"     : {
       "clip_l"   : [
         "2187",
@@ -1500,7 +1451,7 @@
       "title" : "CLIPTextEncodeFlux"
     }
   },
-  "743"       : {
+  "743"  : {
     "inputs"     : {
       "text1"     : [
         "788",
@@ -1515,7 +1466,7 @@
       "title" : "textConcat"
     }
   },
-  "744"       : {
+  "744"  : {
     "inputs"     : {
       "image" : [
         "2109",
@@ -1527,7 +1478,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "764"       : {
+  "764"  : {
     "inputs"     : {
       "mode" : true,
       "a"    : [
@@ -1544,7 +1495,7 @@
       "title" : "ImpactMinMax"
     }
   },
-  "768"       : {
+  "768"  : {
     "inputs"     : {
       "mode"   : "always",
       "volume" : 1,
@@ -1559,7 +1510,7 @@
       "title" : "PlaySound 🐍"
     }
   },
-  "788"       : {
+  "788"  : {
     "inputs"     : {
       "find"    : "image",
       "replace" : "photo",
@@ -1573,7 +1524,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "826"       : {
+  "826"  : {
     "inputs"     : {
       "mask" : [
         "829",
@@ -1585,7 +1536,7 @@
       "title" : "InvertMask"
     }
   },
-  "828"       : {
+  "828"  : {
     "inputs"     : {
       "width"  : 168,
       "height" : 38,
@@ -1598,7 +1549,7 @@
       "title" : "Image Blank"
     }
   },
-  "829"       : {
+  "829"  : {
     "inputs"     : {
       "text"             : [
         "1936",
@@ -1626,7 +1577,7 @@
       "title" : "🔧 Draw Text"
     }
   },
-  "832"       : {
+  "832"  : {
     "inputs"     : {
       "overlay_resize" : "None",
       "resize_method"  : "bilinear",
@@ -1661,7 +1612,7 @@
       "title" : "Image Overlay"
     }
   },
-  "840"       : {
+  "840"  : {
     "inputs"     : {
       "comparison" : "a == b",
       "a"          : [
@@ -1678,7 +1629,7 @@
       "title" : ">0"
     }
   },
-  "897"       : {
+  "897"  : {
     "inputs"     : {
       "text1"     : "detailed fabric texture",
       "text2"     : [
@@ -1693,33 +1644,18 @@
       "title" : "Positive"
     }
   },
-  "898"       : {
-    "inputs"     : {
-      "invert_mask" : true,
-      "grow"        : -5,
-      "blur"        : 4,
-      "mask"        : [
-        "104",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "931"       : {
+  "931"  : {
     "inputs"     : {
       "any_01" : [
         "2403",
         0
       ],
-      "any_02" : [
-        "2339",
+      "any_03" : [
+        "2362",
         0
       ],
-      "any_03" : [
-        "1885",
+      "any_04" : [
+        "1888",
         0
       ]
     },
@@ -1728,16 +1664,16 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "950"       : {
+  "950"  : {
     "inputs"     : {
-      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5  woman with voluptuous body,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen, low muscle definition, soft natural curves  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, \n"
+      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5 busty and curvy woman,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2) ,detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, alluring almond skintone with subtle micro-hairs and soft sheen  \nadorning warm red lipstick ,high-end professional camera ,  glamorous , serene  setting,  sharp focus, detailed fabric texture,   intricate details, detailed background, \n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
     }
   },
-  "953"       : {
+  "953"  : {
     "inputs"     : {
       "find"    : "woman",
       "replace" : "young girl",
@@ -1751,29 +1687,13 @@
       "title" : "Text Find and Replace"
     }
   },
-  "1267"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2704",
-        0
-      ],
-      "any_02" : [
-        "1885",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "1271"      : {
+  "1271" : {
     "inputs"     : {
       "upscale_method"   : "lanczos",
       "megapixels"       : 1.5000000000000002,
       "resolution_steps" : 1,
       "image"            : [
-        "2109",
+        "2303",
         0
       ]
     },
@@ -1782,7 +1702,7 @@
       "title" : "ImageScaleToTotalPixels"
     }
   },
-  "1318"      : {
+  "1318" : {
     "inputs"     : {
       "find"    : "image",
       "replace" : "photo",
@@ -1796,19 +1716,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "1327"      : {
-    "inputs"     : {
-      "images" : [
-        "459",
-        0
-      ]
-    },
-    "class_type" : "PreviewImage",
-    "_meta"      : {
-      "title" : "Preview Image"
-    }
-  },
-  "1331"      : {
+  "1331" : {
     "inputs"     : {
       "image" : [
         "356",
@@ -1820,7 +1728,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "1343"      : {
+  "1343" : {
     "inputs"     : {
       "makeTileable"          : false,
       "context"               : "Directional (vertical, outward)",
@@ -1842,7 +1750,7 @@
       "title" : "Resynthesize"
     }
   },
-  "1344"      : {
+  "1344" : {
     "inputs"     : {
       "makeTileable"          : false,
       "context"               : "Directional (horizontal, outward)",
@@ -1864,7 +1772,7 @@
       "title" : "Resynthesize"
     }
   },
-  "1345"      : {
+  "1345" : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -1875,14 +1783,14 @@
     },
     "class_type" : "Text Contains",
     "_meta"      : {
-      "title" : "Contains [$$]"
+      "title" : "Contains [##]"
     }
   },
-  "1357"      : {
+  "1357" : {
     "inputs"     : {
       "lut_name" : "Presetpro  - Kodacrome 64.cube",
-      "strength" : 0.32,
-      "log"      : false,
+      "strength" : 0.27,
+      "log"      : true,
       "image"    : [
         "931",
         0
@@ -1893,7 +1801,7 @@
       "title" : "ProPostApplyLUT"
     }
   },
-  "1400"      : {
+  "1400" : {
     "inputs"     : {
       "brightness" : 0.93,
       "contrast"   : 1.16,
@@ -1908,7 +1816,7 @@
       "title" : "Brightness Contrast V2"
     }
   },
-  "1405"      : {
+  "1405" : {
     "inputs"     : {
       "value" : 1.2
     },
@@ -1917,7 +1825,7 @@
       "title" : "<<Speed - Accuracy>> (default 0.9)"
     }
   },
-  "1412"      : {
+  "1412" : {
     "inputs"     : {
       "strength"      : 0.6,
       "start_percent" : 0,
@@ -1937,10 +1845,6 @@
       "image"         : [
         "731",
         0
-      ],
-      "vae"           : [
-        "2889",
-        0
       ]
     },
     "class_type" : "ControlNetApplyAdvanced",
@@ -1948,7 +1852,7 @@
       "title" : "Apply ControlNet"
     }
   },
-  "1479"      : {
+  "1479" : {
     "inputs"     : {
       "text" : " , Skin imperfections ,    natural blemishes, Rough skin texture, d351 d4rk, "
     },
@@ -1957,7 +1861,7 @@
       "title" : "Text Multiline"
     }
   },
-  "1495"      : {
+  "1495" : {
     "inputs"     : {
       "images" : [
         "832",
@@ -1969,10 +1873,10 @@
       "title" : "Preview Image"
     }
   },
-  "1496"      : {
+  "1496" : {
     "inputs"     : {
       "images" : [
-        "2339",
+        "2362",
         0
       ]
     },
@@ -1981,7 +1885,7 @@
       "title" : "Preview Image"
     }
   },
-  "1497"      : {
+  "1497" : {
     "inputs"     : {
       "images" : [
         "2158",
@@ -1993,7 +1897,7 @@
       "title" : "Preview Image"
     }
   },
-  "1498"      : {
+  "1498" : {
     "inputs"     : {
       "images" : [
         "2117",
@@ -2005,7 +1909,7 @@
       "title" : "Preview Image"
     }
   },
-  "1517"      : {
+  "1517" : {
     "inputs"     : {
       "clip_name" : "siglip2_so400m_patch16_512.safetensors"
     },
@@ -2014,7 +1918,7 @@
       "title" : "Load Advanced Vision Model"
     }
   },
-  "1566"      : {
+  "1566" : {
     "inputs"     : {
       "any_01" : [
         "2321",
@@ -2023,10 +1927,6 @@
       "any_02" : [
         "2930",
         0
-      ],
-      "any_03" : [
-        "1831",
-        0
       ]
     },
     "class_type" : "Any Switch (rgthree)",
@@ -2034,7 +1934,7 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "1585"      : {
+  "1585" : {
     "inputs"     : {
       "radius"          : 0.7,
       "amount"          : 1.2,
@@ -2051,7 +1951,7 @@
       "title" : "Netteté optimisée"
     }
   },
-  "1595"      : {
+  "1595" : {
     "inputs"     : {
       "expression" : "c*(a-b)",
       "a"          : [
@@ -2072,39 +1972,7 @@
       "title" : "Math Expression 🐍"
     }
   },
-  "1611"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2849",
-        0
-      ],
-      "any_02" : [
-        "2339",
-        0
-      ],
-      "any_03" : [
-        "2065",
-        0
-      ],
-      "any_04" : [
-        "654",
-        0
-      ],
-      "any_05" : [
-        "2704",
-        0
-      ],
-      "any_06" : [
-        "1885",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "1636"      : {
+  "1636" : {
     "inputs"     : {
       "image" : [
         "931",
@@ -2116,7 +1984,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "1637"      : {
+  "1637" : {
     "inputs"     : {
       "value" : 0.56
     },
@@ -2125,7 +1993,7 @@
       "title" : "Color_Correct"
     }
   },
-  "1710"      : {
+  "1710" : {
     "inputs"     : {
       "value" : 1.58
     },
@@ -2134,16 +2002,16 @@
       "title" : "upscale by"
     }
   },
-  "1740"      : {
+  "1740" : {
     "inputs"     : {
-      "value" : 1.34
+      "value" : 1.33
     },
     "class_type" : "easy float",
     "_meta"      : {
       "title" : "upscale by"
     }
   },
-  "1803"      : {
+  "1803" : {
     "inputs"     : {
       "directory_1"            : [
         "2545",
@@ -2161,7 +2029,7 @@
       "title" : "Input Image"
     }
   },
-  "1805"      : {
+  "1805" : {
     "inputs"     : {
       "directory_path"    : "Inputs/Next",
       "patterns"          : "*.jpg|*.png|*.jpeg",
@@ -2172,7 +2040,7 @@
       "title" : "File Counter [LP]"
     }
   },
-  "1806"      : {
+  "1806" : {
     "inputs"     : {
       "directory_1"            : [
         "2545",
@@ -2190,7 +2058,7 @@
       "title" : "Input Image"
     }
   },
-  "1807"      : {
+  "1807" : {
     "inputs"     : {
       "any" : [
         "1803",
@@ -2202,7 +2070,7 @@
       "title" : "Is None"
     }
   },
-  "1812"      : {
+  "1812" : {
     "inputs"     : {
       "boolean" : [
         "1807",
@@ -2214,9 +2082,9 @@
       "title" : "NOT"
     }
   },
-  "1813"      : {
+  "1813" : {
     "inputs"     : {
-      "OutputDirectory" : "temp",
+      "OutputDirectory" : "Inputs/Processed",
       "OverwriteFile"   : [
         "124",
         0
@@ -2231,7 +2099,7 @@
       "title" : "JDCN_FileMover"
     }
   },
-  "1814"      : {
+  "1814" : {
     "inputs"     : {
       "comparison" : "a <= b",
       "a"          : [
@@ -2248,7 +2116,7 @@
       "title" : ">0"
     }
   },
-  "1818"      : {
+  "1818" : {
     "inputs"     : {
       "string_a"  : "Inputs/Next",
       "string_b"  : [
@@ -2262,7 +2130,7 @@
       "title" : "Concatenate"
     }
   },
-  "1819"      : {
+  "1819" : {
     "inputs"     : {
       "condition"  : [
         "1814",
@@ -2282,7 +2150,7 @@
       "title" : "Input Selector"
     }
   },
-  "1820"      : {
+  "1820" : {
     "inputs"     : {
       "OutputDirectory" : [
         "1819",
@@ -2299,7 +2167,7 @@
       "title" : "JDCN_FileMover"
     }
   },
-  "1831"      : {
+  "1831" : {
     "inputs"     : {
       "condition"  : [
         "193",
@@ -2319,7 +2187,7 @@
       "title" : "Input Selector"
     }
   },
-  "1832"      : {
+  "1832" : {
     "inputs"     : {
       "directory_1"            : [
         "2545",
@@ -2337,7 +2205,7 @@
       "title" : "Input Image"
     }
   },
-  "1835"      : {
+  "1835" : {
     "inputs"     : {
       "comparison" : "a <= b",
       "a"          : [
@@ -2354,7 +2222,7 @@
       "title" : ">0"
     }
   },
-  "1837"      : {
+  "1837" : {
     "inputs"     : {
       "condition"  : [
         "1835",
@@ -2374,7 +2242,7 @@
       "title" : "Input Selector"
     }
   },
-  "1838"      : {
+  "1838" : {
     "inputs"     : {
       "condition"  : [
         "1835",
@@ -2394,7 +2262,7 @@
       "title" : "Input Selector"
     }
   },
-  "1848"      : {
+  "1848" : {
     "inputs"     : {
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
@@ -2413,7 +2281,7 @@
       "title" : "Image Preparations"
     }
   },
-  "1855"      : {
+  "1855" : {
     "inputs"     : {
       "expression" : "b+(a-0.46)*(24-b)/(0.72-0.46)",
       "a"          : [
@@ -2434,7 +2302,7 @@
       "title" : "Math Expression 🐍"
     }
   },
-  "1856"      : {
+  "1856" : {
     "inputs"     : {
       "expression" : "c+(a-0.46)*(35-c)/(0.72-0.46)",
       "a"          : [
@@ -2455,17 +2323,17 @@
       "title" : "Math Expression 🐍"
     }
   },
-  "1857"      : {
+  "1857" : {
     "inputs"     : {},
     "class_type" : "DisableNoise",
     "_meta"      : {
       "title" : "DisableNoise"
     }
   },
-  "1858"      : {
+  "1858" : {
     "inputs"     : {
       "noise_seed" : [
-        "3049",
+        "2240",
         0
       ]
     },
@@ -2474,10 +2342,10 @@
       "title" : "RandomNoise"
     }
   },
-  "1859"      : {
+  "1859" : {
     "inputs"     : {
       "model"        : [
-        "3055",
+        "1899",
         0
       ],
       "conditioning" : [
@@ -2490,7 +2358,7 @@
       "title" : "BasicGuider"
     }
   },
-  "1860"      : {
+  "1860" : {
     "inputs"     : {
       "scheduler" : "beta",
       "steps"     : [
@@ -2502,7 +2370,7 @@
         0
       ],
       "model"     : [
-        "3055",
+        "1899",
         0
       ]
     },
@@ -2511,7 +2379,7 @@
       "title" : "BasicScheduler"
     }
   },
-  "1863"      : {
+  "1863" : {
     "inputs"     : {
       "noise"        : [
         "1858",
@@ -2519,10 +2387,6 @@
       ],
       "guider"       : [
         "1859",
-        0
-      ],
-      "sampler"      : [
-        "2957",
         0
       ],
       "sigmas"       : [
@@ -2539,7 +2403,7 @@
       "title" : "Pass02:Sampler1"
     }
   },
-  "1870"      : {
+  "1870" : {
     "inputs"     : {
       "noise"        : [
         "1857",
@@ -2558,7 +2422,7 @@
         1
       ],
       "latent_image" : [
-        "2964",
+        "1871",
         0
       ]
     },
@@ -2567,7 +2431,7 @@
       "title" : "Pass02:Sampler2"
     }
   },
-  "1871"      : {
+  "1871" : {
     "inputs"     : {
       "noise_seed"     : [
         "2212",
@@ -2585,7 +2449,7 @@
       "title" : "🔧 Inject Latent Noise"
     }
   },
-  "1877"      : {
+  "1877" : {
     "inputs"     : {
       "denoise" : [
         "1944",
@@ -2601,7 +2465,7 @@
       "title" : "SplitSigmasDenoise"
     }
   },
-  "1885"      : {
+  "1885" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -2622,7 +2486,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3018",
+        "1888",
         0
       ]
     },
@@ -2631,15 +2495,11 @@
       "title" : "Image Save"
     }
   },
-  "1888"      : {
+  "1888" : {
     "inputs"     : {
       "samples" : [
         "1870",
         1
-      ],
-      "vae"     : [
-        "2889",
-        0
       ]
     },
     "class_type" : "VAEDecode",
@@ -2647,13 +2507,13 @@
       "title" : "VAE Decode"
     }
   },
-  "1889"      : {
+  "1889" : {
     "inputs"     : {
       "mode"   : "always",
       "volume" : 1,
       "file"   : "notify.wav",
       "any"    : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -2662,9 +2522,9 @@
       "title" : "PlaySound 🐍"
     }
   },
-  "1893"      : {
+  "1893" : {
     "inputs"     : {
-      "expression" : "1.21*(a+c*(b-a))",
+      "expression" : "1.3*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2683,7 +2543,29 @@
       "title" : "Math Expression 🐍"
     }
   },
-  "1902"      : {
+  "1899" : {
+    "inputs"     : {
+      "max_shift"  : 0.8,
+      "base_shift" : 0.4,
+      "width"      : [
+        "394",
+        0
+      ],
+      "height"     : [
+        "394",
+        1
+      ],
+      "model"      : [
+        "2224",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.45::0.45"
+    }
+  },
+  "1902" : {
     "inputs"     : {
       "value1" : 28,
       "value2" : 42
@@ -2693,34 +2575,18 @@
       "title" : "Range (31:43)"
     }
   },
-  "1904"      : {
+  "1909" : {
     "inputs"     : {
-      "mask" : [
-        "441",
-        1
-      ]
-    },
-    "class_type" : "MaskPreview+",
-    "_meta"      : {
-      "title" : "🔧 Mask Preview"
-    }
-  },
-  "1909"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.05,
+      "dishonesty_factor" : -0.03,
       "start_percent"     : 0.25,
-      "end_percent"       : 0.5,
-      "sampler"           : [
-        "2957",
-        0
-      ]
+      "end_percent"       : 0.5
     },
     "class_type" : "LyingSigmaSampler",
     "_meta"      : {
       "title" : "Lying Sigma Sampler"
     }
   },
-  "1913"      : {
+  "1913" : {
     "inputs"     : {
       "image" : [
         "1837",
@@ -2732,7 +2598,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "1918"      : {
+  "1918" : {
     "inputs"     : {
       "value" : 0
     },
@@ -2741,7 +2607,7 @@
       "title" : "Zero"
     }
   },
-  "1919"      : {
+  "1919" : {
     "inputs"     : {
       "value" : 0
     },
@@ -2750,7 +2616,7 @@
       "title" : "Zero"
     }
   },
-  "1920"      : {
+  "1920" : {
     "inputs"     : {
       "value" : 1
     },
@@ -2759,7 +2625,7 @@
       "title" : "Zero"
     }
   },
-  "1921"      : {
+  "1921" : {
     "inputs"     : {
       "value" : 20
     },
@@ -2768,7 +2634,7 @@
       "title" : "Zero"
     }
   },
-  "1922"      : {
+  "1922" : {
     "inputs"     : {
       "mode" : true,
       "a"    : [
@@ -2785,7 +2651,7 @@
       "title" : "ImpactMinMax"
     }
   },
-  "1923"      : {
+  "1923" : {
     "inputs"     : {
       "value" : 15
     },
@@ -2794,7 +2660,7 @@
       "title" : "15"
     }
   },
-  "1924"      : {
+  "1924" : {
     "inputs"     : {
       "value" : -268
     },
@@ -2803,7 +2669,7 @@
       "title" : "One"
     }
   },
-  "1925"      : {
+  "1925" : {
     "inputs"     : {
       "value" : 10
     },
@@ -2812,7 +2678,7 @@
       "title" : "Zero"
     }
   },
-  "1926"      : {
+  "1926" : {
     "inputs"     : {
       "value" : 1024
     },
@@ -2821,7 +2687,7 @@
       "title" : "Zero"
     }
   },
-  "1927"      : {
+  "1927" : {
     "inputs"     : {
       "mode" : true,
       "a"    : [
@@ -2838,7 +2704,7 @@
       "title" : "ImpactMinMax"
     }
   },
-  "1928"      : {
+  "1928" : {
     "inputs"     : {
       "mode" : true,
       "a"    : [
@@ -2855,7 +2721,7 @@
       "title" : "ImpactMinMax"
     }
   },
-  "1930"      : {
+  "1930" : {
     "inputs"     : {
       "file_prefix"   : [
         "1932",
@@ -2870,7 +2736,7 @@
       "title" : "File Path Creator"
     }
   },
-  "1931"      : {
+  "1931" : {
     "inputs"     : {
       "int_" : [
         "143",
@@ -2882,9 +2748,9 @@
       "title" : "🔧 CR Integer To String"
     }
   },
-  "1932"      : {
+  "1932" : {
     "inputs"     : {
-      "text1" : "Generated_",
+      "text1" : "Detailed_",
       "text2" : [
         "1931",
         0
@@ -2895,7 +2761,7 @@
       "title" : "Text Combiner 2"
     }
   },
-  "1933"      : {
+  "1933" : {
     "inputs"     : {
       "text1" : "AfterPass02_",
       "text2" : [
@@ -2908,7 +2774,7 @@
       "title" : "Text Combiner 2"
     }
   },
-  "1934"      : {
+  "1934" : {
     "inputs"     : {
       "file_prefix"   : [
         "1933",
@@ -2923,7 +2789,7 @@
       "title" : "File Path Creator"
     }
   },
-  "1936"      : {
+  "1936" : {
     "inputs"     : {
       "file_prefix"   : "",
       "time_format"   : "%-d %-m %y",
@@ -2935,7 +2801,7 @@
       "title" : "File Path Creator"
     }
   },
-  "1937"      : {
+  "1937" : {
     "inputs"     : {
       "a"         : [
         "1636",
@@ -2949,7 +2815,7 @@
       "title" : "Math Int"
     }
   },
-  "1938"      : {
+  "1938" : {
     "inputs"     : {
       "a"         : [
         "1636",
@@ -2963,7 +2829,7 @@
       "title" : "Math Int"
     }
   },
-  "1941"      : {
+  "1941" : {
     "inputs"     : {
       "min" : 1,
       "max" : 10
@@ -2973,7 +2839,7 @@
       "title" : "Random Int"
     }
   },
-  "1942"      : {
+  "1942" : {
     "inputs"     : {
       "mode" : false,
       "a"    : [
@@ -2990,7 +2856,7 @@
       "title" : "ImpactMinMax"
     }
   },
-  "1944"      : {
+  "1944" : {
     "inputs"     : {
       "float_1" : 0.58,
       "float_2" : 0.9992
@@ -3000,16 +2866,16 @@
       "title" : "<<Rough - Smooth>> (default 0.58)"
     }
   },
-  "1945"      : {
+  "1945" : {
     "inputs"     : {
-      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
+      "text" : ", She is wearing outfit through which the subtle outline of her bra is visible. Around her waist is a delicate waist chain, and a platinum diamond belly piercing. She is wearing a pendant with letter \"V\".\n\nShe has an hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Prompt Extras"
     }
   },
-  "1948"      : {
+  "1948" : {
     "inputs"     : {
       "images" : [
         "731",
@@ -3021,7 +2887,7 @@
       "title" : "Preview Image"
     }
   },
-  "1955"      : {
+  "1955" : {
     "inputs"     : {
       "a"         : [
         "2100",
@@ -3035,17 +2901,39 @@
       "title" : "Math Float"
     }
   },
-  "1988"      : {
+  "1978" : {
     "inputs"     : {
-      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\n32F_Cup",
+      "max_shift"  : 1.5,
+      "base_shift" : 0.5,
+      "width"      : [
+        "445",
+        1
+      ],
+      "height"     : [
+        "445",
+        2
+      ],
+      "model"      : [
+        "2881",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "1988" : {
+    "inputs"     : {
+      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, ",
       "t5xxl"    : [
         "788",
         0
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2936",
-        0
+        "2881",
+        1
       ]
     },
     "class_type" : "CLIPTextEncodeFlux",
@@ -3053,21 +2941,21 @@
       "title" : "CLIPTextEncodeFlux"
     }
   },
-  "1989"      : {
+  "1989" : {
     "inputs"     : {
-      "sampler_name" : "euler",
-      "scheduler"    : "beta",
-      "steps"        : 24,
+      "sampler_name" : "heun",
+      "scheduler"    : "simple",
+      "steps"        : 32,
       "denoise"      : [
         "1999",
         0
       ],
       "noise_seed"   : [
-        "3049",
+        "2240",
         0
       ],
       "model"        : [
-        "2939",
+        "1978",
         0
       ],
       "conditioning" : [
@@ -3084,7 +2972,21 @@
       "title" : "Flux Sampler : Pass 01"
     }
   },
-  "1999"      : {
+  "1993" : {
+    "inputs"     : {
+      "tile_size" : 0,
+      "image"     : "none",
+      "latent"    : [
+        "1989",
+        0
+      ]
+    },
+    "class_type" : "ImagePreviewFromLatent+",
+    "_meta"      : {
+      "title" : "🔧 Image Preview From Latent"
+    }
+  },
+  "1999" : {
     "inputs"     : {
       "a"         : [
         "2100",
@@ -3098,23 +3000,71 @@
       "title" : "Math Float"
     }
   },
-  "2011"      : {
+  "2022" : {
     "inputs"     : {
-      "text" : "aidmaimageupgrader"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2034"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2065",
+      "text1"     : [
+        "788",
         0
       ],
-      "any_02" : [
-        "654",
+      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
+      "text3"     : "",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2025" : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "1930",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 4,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "true",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "2040",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "2032" : {
+    "inputs"     : {
+      "max_shift"  : 1.6,
+      "base_shift" : 0.45,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2866",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "2034" : {
+    "inputs"     : {
+      "any_01" : [
+        "2085",
         0
       ],
       "any_03" : [
@@ -3122,7 +3072,7 @@
         0
       ],
       "any_04" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -3131,7 +3081,7 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "2035"      : {
+  "2035" : {
     "inputs"     : {
       "face_mask"       : false,
       "background_mask" : false,
@@ -3140,6 +3090,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.4,
       "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
         "2034",
         0
@@ -3150,7 +3102,138 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2047"      : {
+  "2036" : {
+    "inputs"     : {
+      "combined"     : false,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : false,
+      "mask"         : [
+        "2037",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2037" : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 2,
+      "blur"        : 4,
+      "mask"        : [
+        "2035",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "2040" : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : false,
+      "max_size"           : 1024,
+      "seed"               : [
+        "2212",
+        0
+      ],
+      "steps"              : 16,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : 0.18,
+      "feather"            : 2,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "2034",
+        0
+      ],
+      "segs"               : [
+        "2036",
+        0
+      ],
+      "model"              : [
+        "2032",
+        0
+      ],
+      "clip"               : [
+        "2867",
+        0
+      ],
+      "positive"           : [
+        "2043",
+        0
+      ],
+      "negative"           : [
+        "2045",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (Body Detailer)"
+    }
+  },
+  "2043" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2759",
+        0
+      ],
+      "t5xxl"    : [
+        "2022",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "2867",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "2045" : {
+    "inputs"     : {
+      "conditioning" : [
+        "2046",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2046" : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2867",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "2047" : {
     "inputs"     : {
       "conditioning" : [
         "2048",
@@ -3162,11 +3245,11 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "2048"      : {
+  "2048" : {
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2890",
+        "2213",
         0
       ]
     },
@@ -3175,7 +3258,7 @@
       "title" : "Negative Prompt"
     }
   },
-  "2053"      : {
+  "2053" : {
     "inputs"     : {
       "separator" : ",",
       "text1"     : [
@@ -3192,7 +3275,7 @@
       "title" : "🔤 CR Text Concatenate"
     }
   },
-  "2054"      : {
+  "2054" : {
     "inputs"     : {
       "string_a"  : [
         "788",
@@ -3209,7 +3292,7 @@
       "title" : "Concatenate"
     }
   },
-  "2058"      : {
+  "2058" : {
     "inputs"     : {
       "style_model_name" : "flex1_redux_siglip2_512.safetensors"
     },
@@ -3218,9 +3301,9 @@
       "title" : "Load Style Model"
     }
   },
-  "2060"      : {
+  "2060" : {
     "inputs"     : {
-      "strength"           : 0.8,
+      "strength"           : 0.75,
       "strength_type"      : "multiply",
       "conditioning"       : [
         "2067",
@@ -3240,7 +3323,7 @@
       "title" : "Apply Style Model"
     }
   },
-  "2062"      : {
+  "2062" : {
     "inputs"     : {
       "clip_name" : "siglip2_so400m_patch16_512.safetensors"
     },
@@ -3249,7 +3332,7 @@
       "title" : "Load Advanced Vision Model"
     }
   },
-  "2063"      : {
+  "2063" : {
     "inputs"     : {
       "crop"        : "none",
       "clip_vision" : [
@@ -3266,7 +3349,7 @@
       "title" : "CLIP Vision Encode"
     }
   },
-  "2065"      : {
+  "2065" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -3296,18 +3379,14 @@
       "title" : "Image Save"
     }
   },
-  "2066"      : {
+  "2066" : {
     "inputs"     : {
-      "any_01" : [
-        "654",
-        0
-      ],
       "any_02" : [
         "2704",
         0
       ],
       "any_03" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -3316,7 +3395,7 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "2067"      : {
+  "2067" : {
     "inputs"     : {
       "clip_l"   : [
         "2088",
@@ -3328,7 +3407,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2890",
+        "2213",
         0
       ]
     },
@@ -3337,7 +3416,7 @@
       "title" : "CLIPTextEncodeFlux"
     }
   },
-  "2072"      : {
+  "2072" : {
     "inputs"     : {
       "face_mask"       : true,
       "background_mask" : true,
@@ -3346,6 +3425,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.54,
       "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
         "2066",
         0
@@ -3356,7 +3437,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2073"      : {
+  "2073" : {
     "inputs"     : {
       "mask" : [
         "2079",
@@ -3368,7 +3449,7 @@
       "title" : "🔧 Mask Preview"
     }
   },
-  "2074"      : {
+  "2074" : {
     "inputs"     : {
       "combined"     : true,
       "crop_factor"  : 3,
@@ -3385,7 +3466,36 @@
       "title" : "MASK to SEGS"
     }
   },
-  "2079"      : {
+  "2076" : {
+    "inputs"     : {
+      "overlay_resize" : "None",
+      "resize_method"  : "nearest-exact",
+      "rescale_factor" : 1,
+      "width"          : 512,
+      "height"         : 512,
+      "x_offset"       : 0,
+      "y_offset"       : 0,
+      "rotation"       : 0,
+      "opacity"        : 12,
+      "base_image"     : [
+        "2066",
+        0
+      ],
+      "overlay_image"  : [
+        "2574",
+        0
+      ],
+      "optional_mask"  : [
+        "2080",
+        0
+      ]
+    },
+    "class_type" : "Image Overlay",
+    "_meta"      : {
+      "title" : "Image Overlay"
+    }
+  },
+  "2079" : {
     "inputs"     : {
       "invert_mask" : true,
       "grow"        : -8,
@@ -3400,7 +3510,7 @@
       "title" : "LayerMask: MaskGrow"
     }
   },
-  "2080"      : {
+  "2080" : {
     "inputs"     : {
       "mask" : [
         "2079",
@@ -3412,15 +3522,15 @@
       "title" : "InvertMask"
     }
   },
-  "2081"      : {
+  "2081" : {
     "inputs"     : {
-      "opacity"         : 50,
+      "opacity"         : 100,
       "image"           : [
         "2066",
         0
       ],
       "color_ref_image" : [
-        "3039",
+        "1837",
         0
       ]
     },
@@ -3429,10 +3539,10 @@
       "title" : "LayerColor: ColorAdapter"
     }
   },
-  "2085"      : {
+  "2085" : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : true,
+      "guide_size_for"     : false,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
@@ -3440,9 +3550,9 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "heun",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "beta",
-      "denoise"            : 0.36,
+      "denoise"            : 0.46,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -3453,7 +3563,7 @@
       "tiled_encode"       : false,
       "tiled_decode"       : false,
       "image"              : [
-        "2081",
+        "2076",
         0
       ],
       "segs"               : [
@@ -3466,10 +3576,6 @@
       ],
       "clip"               : [
         "2213",
-        0
-      ],
-      "vae"                : [
-        "2889",
         0
       ],
       "positive"           : [
@@ -3486,14 +3592,14 @@
       "title" : "Detailer (Clothing Detailer)"
     }
   },
-  "2086"      : {
+  "2086" : {
     "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.75,
+      "max_shift"  : 1.8,
+      "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "3055",
+        "2224",
         0
       ]
     },
@@ -3502,7 +3608,7 @@
       "title" : "1.45::0.5"
     }
   },
-  "2088"      : {
+  "2088" : {
     "inputs"     : {
       "separator" : ",",
       "text1"     : [
@@ -3519,7 +3625,7 @@
       "title" : "🔤 CR Text Concatenate"
     }
   },
-  "2100"      : {
+  "2100" : {
     "inputs"     : {
       "condition"  : [
         "232",
@@ -3539,7 +3645,7 @@
       "title" : "Input Selector"
     }
   },
-  "2101"      : {
+  "2101" : {
     "inputs"     : {
       "condition"  : [
         "233",
@@ -3559,7 +3665,7 @@
       "title" : "Input Selector"
     }
   },
-  "2102"      : {
+  "2102" : {
     "inputs"     : {
       "condition"  : [
         "232",
@@ -3579,7 +3685,7 @@
       "title" : "Input Selector"
     }
   },
-  "2103"      : {
+  "2103" : {
     "inputs"     : {
       "condition"  : [
         "1345",
@@ -3599,7 +3705,7 @@
       "title" : "Input Selector"
     }
   },
-  "2104"      : {
+  "2104" : {
     "inputs"     : {
       "condition"  : [
         "840",
@@ -3619,7 +3725,7 @@
       "title" : "Input Selector"
     }
   },
-  "2105"      : {
+  "2105" : {
     "inputs"     : {
       "condition"  : [
         "268",
@@ -3639,7 +3745,7 @@
       "title" : "Input Selector"
     }
   },
-  "2106"      : {
+  "2106" : {
     "inputs"     : {
       "condition"  : [
         "268",
@@ -3659,7 +3765,7 @@
       "title" : "Input Selector"
     }
   },
-  "2108"      : {
+  "2108" : {
     "inputs"     : {
       "condition"  : [
         "235",
@@ -3679,7 +3785,7 @@
       "title" : "Input Selector"
     }
   },
-  "2109"      : {
+  "2109" : {
     "inputs"     : {
       "condition"  : [
         "1345",
@@ -3699,7 +3805,7 @@
       "title" : "Input Selector"
     }
   },
-  "2110"      : {
+  "2110" : {
     "inputs"     : {
       "condition"  : [
         "275",
@@ -3719,7 +3825,7 @@
       "title" : "Input Selector"
     }
   },
-  "2111"      : {
+  "2111" : {
     "inputs"     : {
       "condition"  : [
         "325",
@@ -3739,14 +3845,10 @@
       "title" : "Input Selector"
     }
   },
-  "2117"      : {
+  "2117" : {
     "inputs"     : {
-      "any_01" : [
-        "654",
-        0
-      ],
       "any_02" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -3755,7 +3857,7 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "2152"      : {
+  "2152" : {
     "inputs"     : {
       "face_mask"       : false,
       "background_mask" : true,
@@ -3764,6 +3866,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.4,
       "refine_mask"     : false,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
         "1831",
         0
@@ -3774,7 +3878,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2153"      : {
+  "2153" : {
     "inputs"     : {
       "mask" : [
         "2152",
@@ -3786,7 +3890,7 @@
       "title" : "InvertMask"
     }
   },
-  "2154"      : {
+  "2154" : {
     "inputs"     : {
       "padding_left"   : 32,
       "padding_right"  : 32,
@@ -3807,10 +3911,10 @@
       "title" : "Bounded Image Crop with Mask"
     }
   },
-  "2158"      : {
+  "2158" : {
     "inputs"     : {
       "any_01" : [
-        "2065",
+        "2085",
         0
       ],
       "any_02" : [
@@ -3823,16 +3927,16 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "2164"      : {
+  "2164" : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5 Voluptuous woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5 busty and curvy woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
     }
   },
-  "2178"      : {
+  "2178" : {
     "inputs"     : {
       "value" : false
     },
@@ -3841,14 +3945,14 @@
       "title" : "Boolean"
     }
   },
-  "2187"      : {
+  "2187" : {
     "inputs"     : {
       "text1"     : [
         "2106",
         0
       ],
       "text2"     : "(aidmarealisticskin:0.5)",
-      "text3"     : " (aidmaseethrough:0.55)",
+      "text3"     : " ",
       "delimiter" : ""
     },
     "class_type" : "ttN concat",
@@ -3856,7 +3960,7 @@
       "title" : "textConcat"
     }
   },
-  "2193"      : {
+  "2193" : {
     "inputs"     : {
       "invert_mask" : false,
       "grow"        : 1,
@@ -3871,7 +3975,7 @@
       "title" : "LayerMask: MaskGrow"
     }
   },
-  "2197"      : {
+  "2197" : {
     "inputs"     : {
       "face_mask"       : true,
       "background_mask" : false,
@@ -3880,6 +3984,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.4,
       "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
         "1400",
         0
@@ -3890,7 +3996,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2198"      : {
+  "2198" : {
     "inputs"     : {
       "overlay_resize" : "None",
       "resize_method"  : "nearest-exact",
@@ -3919,7 +4025,7 @@
       "title" : "Image Overlay"
     }
   },
-  "2200"      : {
+  "2200" : {
     "inputs"     : {
       "face_mask"       : false,
       "background_mask" : true,
@@ -3928,6 +4034,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.4,
       "refine_mask"     : false,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
         "1831",
         0
@@ -3938,7 +4046,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2201"      : {
+  "2201" : {
     "inputs"     : {
       "mask" : [
         "2200",
@@ -3950,7 +4058,7 @@
       "title" : "InvertMask"
     }
   },
-  "2202"      : {
+  "2202" : {
     "inputs"     : {
       "padding_left"   : 32,
       "padding_right"  : 32,
@@ -3971,7 +4079,7 @@
       "title" : "Bounded Image Crop with Mask"
     }
   },
-  "2203"      : {
+  "2203" : {
     "inputs"     : {
       "image" : [
         "2202",
@@ -3983,7 +4091,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "2204"      : {
+  "2204" : {
     "inputs"     : {
       "image" : [
         "1831",
@@ -3995,34 +4103,10 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "2205"      : {
-    "inputs"     : {
-      "images" : [
-        "2203",
-        0
-      ]
-    },
-    "class_type" : "PreviewImage",
-    "_meta"      : {
-      "title" : "Preview Image"
-    }
-  },
-  "2206"      : {
-    "inputs"     : {
-      "images" : [
-        "2204",
-        0
-      ]
-    },
-    "class_type" : "PreviewImage",
-    "_meta"      : {
-      "title" : "Preview Image"
-    }
-  },
-  "2212"      : {
+  "2212" : {
     "inputs"     : {
       "input1" : [
-        "3049",
+        "2240",
         0
       ],
       "input2" : 2048
@@ -4032,10 +4116,10 @@
       "title" : "LogicUtil_Bitwise Xor"
     }
   },
-  "2213"      : {
+  "2213" : {
     "inputs"     : {
       "clip_a"  : [
-        "2300",
+        "2644",
         1
       ],
       "clip_b"  : [
@@ -4052,7 +4136,7 @@
       "title" : "CLIP Input Switch"
     }
   },
-  "2224"      : {
+  "2224" : {
     "inputs"     : {
       "model_a" : [
         "2254",
@@ -4072,7 +4156,45 @@
       "title" : "Model Input Switch"
     }
   },
-  "2231"      : {
+  "2228" : {
+    "inputs"     : {
+      "lora_name"      : "MysticXXX-v7.safetensors",
+      "strength_model" : 0.75,
+      "strength_clip"  : 0.75,
+      "model"          : [
+        "2292",
+        0
+      ],
+      "clip"           : [
+        "2291",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA"
+    }
+  },
+  "2229" : {
+    "inputs"     : {
+      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.4,
+      "model"          : [
+        "2228",
+        0
+      ],
+      "clip"           : [
+        "2228",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "d351 d4rk"
+    }
+  },
+  "2231" : {
     "inputs"     : {
       "control_net_name" : "flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
     },
@@ -4081,92 +4203,71 @@
       "title" : "Load ControlNet Model"
     }
   },
-  "2237"      : {
+  "2237" : {
     "inputs"     : {
-      "model_name" : "4x-UltraSharpV2.pth"
+      "model_name" : "4xPurePhoto-Span.pth"
     },
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
       "title" : "Load Upscale Model"
     }
   },
-  "2245"      : {
+  "2240" : {
+    "inputs"     : {
+      "mode"       : true,
+      "seed"       : -1,
+      "fixed_seed" : 0
+    },
+    "class_type" : "SeedSelector",
+    "_meta"      : {
+      "title" : "Seed Selector"
+    }
+  },
+  "2245" : {
+    "inputs"     : {
+      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "strength_model" : 1.0000000000000002,
+      "strength_clip"  : 0.8
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "v1dhya5"
+    }
+  },
+  "2246" : {
+    "inputs"     : {
+      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "strength_model" : 1.0000000000000002,
+      "strength_clip"  : 0.8
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "v1dhya5"
+    }
+  },
+  "2247" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
+      "strength_clip"  : 0
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "v1dhya5"
     }
   },
-  "2246"      : {
+  "2250" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
+      "strength_clip"  : 0.2
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "v1dhya5"
     }
   },
-  "2247"      : {
-    "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 0,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "v1dhya5"
-    }
-  },
-  "2250"      : {
-    "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "v1dhya5"
-    }
-  },
-  "2253"      : {
+  "2253" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 1,
@@ -4185,7 +4286,7 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "2254"      : {
+  "2254" : {
     "inputs"     : {
       "img_in."           : 1,
       "time_in."          : 1,
@@ -4264,26 +4365,65 @@
       "title" : "ModelMergeFlux1"
     }
   },
-  "2257"      : {
+  "2255" : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.1,
+      "lora_name"      : "AntiBlur.safetensors",
+      "strength_model" : 1.5000000000000002,
+      "strength_clip"  : 1.0000000000000002,
       "model"          : [
-        "3058",
+        "2256",
         0
       ],
       "clip"           : [
-        "2890",
-        0
+        "2256",
+        1
       ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA"
+    }
+  },
+  "2256" : {
+    "inputs"     : {
+      "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 1,
+      "model"          : [
+        "2229",
+        0
+      ],
+      "clip"           : [
+        "2229",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA"
+    }
+  },
+  "2257" : {
+    "inputs"     : {
+      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "strength_model" : 0.8,
+      "strength_clip"  : 0.1
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "v1dhya5"
     }
   },
-  "2262"      : {
+  "2258" : {
+    "inputs"     : {
+      "model_name" : "4xPurePhoto-Span.pth"
+    },
+    "class_type" : "UpscaleModelLoader",
+    "_meta"      : {
+      "title" : "Load Upscale Model"
+    }
+  },
+  "2262" : {
     "inputs"     : {
       "lora_name"      : "aidmaFluxProUltra-FLUX-v0.1.safetensors",
       "strength_model" : 0.8000000000000002,
@@ -4302,17 +4442,17 @@
       "title" : "Load LoRA"
     }
   },
-  "2268"      : {
+  "2268" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.7,
-      "strength_clip"  : 1,
+      "strength_model" : 2,
+      "strength_clip"  : 0.4,
       "model"          : [
-        "3029",
+        "2903",
         0
       ],
       "clip"           : [
-        "3029",
+        "2903",
         1
       ]
     },
@@ -4321,86 +4461,32 @@
       "title" : "breast-size2 [3.80::3.80]"
     }
   },
-  "2269"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
-      "strength_model" : 0.4,
-      "strength_clip"  : 0.4,
-      "model"          : [
-        "2270",
-        0
-      ],
-      "clip"           : [
-        "2270",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "fluxenhancer"
-    }
-  },
-  "2270"      : {
-    "inputs"     : {
-      "lora_name"      : "AntiBlur.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 1.0000000000000002,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
-  "2273"      : {
+  "2273" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
+      "strength_clip"  : 0.2
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA ::0.8:0.2"
     }
   },
-  "2275"      : {
+  "2275" : {
     "inputs"     : {
       "lora_name"      : "flux_vividizer.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 1,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
+      "strength_clip"  : 1
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmafluxproultra"
     }
   },
-  "2276"      : {
+  "2276" : {
     "inputs"     : {
       "lora_name"      : "Illustration Comic book_(FLUX)_06.safetensors",
-      "strength_model" : 0.66,
+      "strength_model" : 0.5,
       "strength_clip"  : 1.0000000000000002,
       "model"          : [
         "2262",
@@ -4416,7 +4502,7 @@
       "title" : "Load LoRA"
     }
   },
-  "2277"      : {
+  "2277" : {
     "inputs"     : {
       "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
       "strength_model" : 0.4,
@@ -4435,7 +4521,7 @@
       "title" : "fluxenhancer"
     }
   },
-  "2291"      : {
+  "2291" : {
     "inputs"     : {
       "clip_a"  : [
         "2293",
@@ -4455,7 +4541,7 @@
       "title" : "CLIP Input Switch"
     }
   },
-  "2292"      : {
+  "2292" : {
     "inputs"     : {
       "model_a" : [
         "2293",
@@ -4475,7 +4561,7 @@
       "title" : "Model Input Switch"
     }
   },
-  "2293"      : {
+  "2293" : {
     "inputs"     : {
       "lora_name"      : "ILLUSTRATION (FLUX) - V3.1.safetensors",
       "strength_model" : 0.8,
@@ -4494,7 +4580,7 @@
       "title" : "Load LoRA"
     }
   },
-  "2296"      : {
+  "2296" : {
     "inputs"     : {
       "lora_name"      : "aidmaFluxProUltra-FLUX-v0.1.safetensors",
       "strength_model" : 0.65,
@@ -4513,17 +4599,57 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "2300"      : {
+  "2297" : {
+    "inputs"     : {
+      "clip_a"  : [
+        "2293",
+        1
+      ],
+      "clip_b"  : [
+        "2255",
+        1
+      ],
+      "boolean" : [
+        "322",
+        0
+      ]
+    },
+    "class_type" : "CLIP Input Switch",
+    "_meta"      : {
+      "title" : "CLIP Input Switch"
+    }
+  },
+  "2298" : {
+    "inputs"     : {
+      "model_a" : [
+        "2293",
+        0
+      ],
+      "model_b" : [
+        "2255",
+        0
+      ],
+      "boolean" : [
+        "322",
+        0
+      ]
+    },
+    "class_type" : "Model Input Switch",
+    "_meta"      : {
+      "title" : "Model Input Switch"
+    }
+  },
+  "2300" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 1.75,
-      "strength_clip"  : 0.8,
+      "strength_model" : 3.2,
+      "strength_clip"  : 1,
       "model"          : [
-        "3056",
+        "2694",
         0
       ],
       "clip"           : [
-        "3056",
+        "2694",
         1
       ]
     },
@@ -4532,7 +4658,7 @@
       "title" : "breast-size2 [3.80::3.80]"
     }
   },
-  "2302"      : {
+  "2302" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.7,
@@ -4551,7 +4677,20 @@
       "title" : "Realism"
     }
   },
-  "2304"      : {
+  "2303" : {
+    "inputs"     : {
+      "level"     : 1.2,
+      "src_image" : [
+        "2109",
+        0
+      ]
+    },
+    "class_type" : "ImageSaturation",
+    "_meta"      : {
+      "title" : "Adjust Saturation"
+    }
+  },
+  "2304" : {
     "inputs"     : {
       "text" : "",
       "clip" : [
@@ -4564,7 +4703,7 @@
       "title" : "Negative Prompt"
     }
   },
-  "2305"      : {
+  "2305" : {
     "inputs"     : {
       "conditioning" : [
         "2304",
@@ -4576,7 +4715,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "2316"      : {
+  "2316" : {
     "inputs"     : {
       "clip_l"   : [
         "2106",
@@ -4586,7 +4725,7 @@
         "2317",
         0
       ],
-      "guidance" : 4,
+      "guidance" : 3.5,
       "clip"     : [
         "2875",
         1
@@ -4597,7 +4736,7 @@
       "title" : "CLIPTextEncodeFlux"
     }
   },
-  "2317"      : {
+  "2317" : {
     "inputs"     : {
       "text1"     : "masterpiece professional potrait photograph of v1dhya5 indian",
       "text2"     : [
@@ -4612,9 +4751,9 @@
       "title" : "textConcat"
     }
   },
-  "2319"      : {
+  "2319" : {
     "inputs"     : {
-      "max_shift"  : 1.8,
+      "max_shift"  : 1.15,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -4628,7 +4767,7 @@
       "title" : "ModelSamplingFlux"
     }
   },
-  "2321"      : {
+  "2321" : {
     "inputs"     : {
       "radius"          : 4,
       "amount"          : 0.8,
@@ -4645,11 +4784,29 @@
       "title" : "SharpnessPro · Netteté optimisée"
     }
   },
-  "2331"      : {
+  "2325" : {
+    "inputs"     : {
+      "detail_amount"      : 0.32,
+      "start"              : 0.2,
+      "end"                : 0.8,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : false,
+      "cfg_scale_override" : 1
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
+  "2331" : {
     "inputs"     : {
       "scheduler" : "beta",
-      "steps"     : 20,
-      "denoise"   : 0.18,
+      "steps"     : 18,
+      "denoise"   : 0.26,
       "model"     : [
         "2875",
         0
@@ -4660,18 +4817,18 @@
       "title" : "BasicScheduler"
     }
   },
-  "2332"      : {
+  "2332" : {
     "inputs"     : {
       "upscale_by"          : 1,
       "seed"                : [
         "2212",
         0
       ],
-      "steps"               : 21,
+      "steps"               : 18,
       "cfg"                 : 1,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
-      "denoise"             : 0.17,
+      "denoise"             : 0.26,
       "mode_type"           : "Linear",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4682,10 +4839,10 @@
       "seam_fix_width"      : 64,
       "seam_fix_mask_blur"  : 8,
       "seam_fix_padding"    : 16,
-      "force_uniform_tiles" : true,
+      "force_uniform_tiles" : false,
       "tiled_decode"        : false,
       "image"               : [
-        "3038",
+        "2930",
         0
       ],
       "model"               : [
@@ -4700,16 +4857,12 @@
         "2305",
         0
       ],
-      "vae"                 : [
-        "2889",
-        0
-      ],
       "upscale_model"       : [
-        "2961",
+        "2237",
         0
       ],
       "custom_sampler"      : [
-        "2957",
+        "2325",
         0
       ],
       "custom_sigmas"       : [
@@ -4722,7 +4875,7 @@
       "title" : "Ultimate SD Upscale (Custom Sample)"
     }
   },
-  "2339"      : {
+  "2339" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -4743,7 +4896,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "2996:548",
+        "2362",
         0
       ]
     },
@@ -4752,18 +4905,14 @@
       "title" : "Image Save"
     }
   },
-  "2345"      : {
+  "2345" : {
     "inputs"     : {
       "any_01" : [
-        "2987",
+        "2040",
         0
       ],
       "any_02" : [
-        "2065",
-        0
-      ],
-      "any_03" : [
-        "654",
+        "2085",
         0
       ],
       "any_04" : [
@@ -4771,7 +4920,7 @@
         0
       ],
       "any_05" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -4780,7 +4929,64 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "2355"      : {
+  "2346" : {
+    "inputs"     : {
+      "combined"     : false,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : false,
+      "mask"         : [
+        "2347",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2347" : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 2,
+      "blur"        : 4,
+      "mask"        : [
+        "2355",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "2351" : {
+    "inputs"     : {
+      "conditioning" : [
+        "2352",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2352" : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2213",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "2355" : {
     "inputs"     : {
       "face_mask"       : true,
       "background_mask" : false,
@@ -4789,6 +4995,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.4,
       "refine_mask"     : true,
+      "batch_size"      : 2,
+      "compute_device"  : "auto",
       "images"          : [
         "2345",
         0
@@ -4799,7 +5007,106 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2365"      : {
+  "2361" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2886",
+        0
+      ],
+      "t5xxl"    : [
+        "2885",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "2213",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "2362" : {
+    "inputs"     : {
+      "guide_size"         : [
+        "2913",
+        0
+      ],
+      "guide_size_for"     : false,
+      "max_size"           : [
+        "2913",
+        0
+      ],
+      "seed"               : [
+        "2212",
+        0
+      ],
+      "steps"              : 23,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : [
+        "2553",
+        0
+      ],
+      "feather"            : 2,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "2345",
+        0
+      ],
+      "segs"               : [
+        "2346",
+        0
+      ],
+      "model"              : [
+        "2363",
+        0
+      ],
+      "clip"               : [
+        "2213",
+        0
+      ],
+      "positive"           : [
+        "2361",
+        0
+      ],
+      "negative"           : [
+        "2351",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (Face Detailer) 23 Steps"
+    }
+  },
+  "2363" : {
+    "inputs"     : {
+      "max_shift"  : 1.45,
+      "base_shift" : 0.5,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2224",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "2365" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -4829,7 +5136,7 @@
       "title" : "Image Save"
     }
   },
-  "2371"      : {
+  "2371" : {
     "inputs"     : {
       "text" : "",
       "clip" : [
@@ -4842,7 +5149,7 @@
       "title" : "Negative Prompt"
     }
   },
-  "2372"      : {
+  "2372" : {
     "inputs"     : {
       "conditioning" : [
         "2371",
@@ -4854,7 +5161,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "2377"      : {
+  "2377" : {
     "inputs"     : {
       "clip_l"   : [
         "2106",
@@ -4875,30 +5182,22 @@
       "title" : "CLIPTextEncodeFlux"
     }
   },
-  "2384"      : {
+  "2384" : {
     "inputs"     : {
-      "any_01" : [
-        "3011",
-        0
-      ],
       "any_02" : [
-        "2849",
+        "2844",
         0
       ],
       "any_03" : [
-        "2339",
+        "2362",
         0
       ],
       "any_04" : [
-        "2987",
+        "2040",
         0
       ],
       "any_05" : [
-        "2065",
-        0
-      ],
-      "any_06" : [
-        "654",
+        "2085",
         0
       ],
       "any_07" : [
@@ -4906,7 +5205,7 @@
         0
       ],
       "any_08" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -4915,13 +5214,13 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "2393"      : {
+  "2393" : {
     "inputs"     : {
-      "scheduler" : "sgm_uniform",
-      "steps"     : 10,
-      "denoise"   : 0.1,
+      "scheduler" : "beta",
+      "steps"     : 12,
+      "denoise"   : 0.24,
       "model"     : [
-        "3055",
+        "2224",
         0
       ]
     },
@@ -4930,14 +5229,14 @@
       "title" : "BasicScheduler"
     }
   },
-  "2398"      : {
+  "2398" : {
     "inputs"     : {
       "max_shift"  : 1.45,
       "base_shift" : 0.45,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "3055",
+        "2224",
         0
       ]
     },
@@ -4946,7 +5245,7 @@
       "title" : "ModelSamplingFlux"
     }
   },
-  "2403"      : {
+  "2403" : {
     "inputs"     : {
       "upscale_by"          : [
         "1740",
@@ -4956,11 +5255,11 @@
         "2212",
         0
       ],
-      "steps"               : 18,
-      "cfg"                 : 3,
-      "sampler_name"        : "dpmpp_2m",
-      "scheduler"           : "sgm_uniform",
-      "denoise"             : 0.26,
+      "steps"               : 16,
+      "cfg"                 : 1,
+      "sampler_name"        : "euler",
+      "scheduler"           : "beta",
+      "denoise"             : 0.3,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4989,16 +5288,12 @@
         "2372",
         0
       ],
-      "vae"                 : [
-        "2889",
-        0
-      ],
       "upscale_model"       : [
-        "2961",
+        "2258",
         0
       ],
       "custom_sampler"      : [
-        "2957",
+        "2524",
         0
       ],
       "custom_sigmas"       : [
@@ -5011,7 +5306,7 @@
       "title" : "Ultimate SD Upscale (Custom Sample)"
     }
   },
-  "2404"      : {
+  "2404" : {
     "inputs"     : {
       "text1"     : [
         "788",
@@ -5026,7 +5321,40 @@
       "title" : "textConcat"
     }
   },
-  "2529"      : {
+  "2523" : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.02,
+      "start_percent"     : 0.25000000000000006,
+      "end_percent"       : 0.7500000000000001
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "2524" : {
+    "inputs"     : {
+      "detail_amount"      : 0.12,
+      "start"              : 0.3,
+      "end"                : 0.7,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : false,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "2523",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
+  "2529" : {
     "inputs"     : {
       "expression" : "max(a,b)/min(a,b)",
       "a"          : [
@@ -5043,7 +5371,7 @@
       "title" : "Math Expression 🐍"
     }
   },
-  "2532"      : {
+  "2532" : {
     "inputs"     : {
       "condition"  : [
         "2535",
@@ -5063,7 +5391,7 @@
       "title" : "Input Selector"
     }
   },
-  "2534"      : {
+  "2534" : {
     "inputs"     : {
       "a"         : [
         "2103",
@@ -5077,7 +5405,7 @@
       "title" : "Math Float"
     }
   },
-  "2535"      : {
+  "2535" : {
     "inputs"     : {
       "comparison" : "a >= b",
       "a"          : [
@@ -5094,7 +5422,7 @@
       "title" : "Compare"
     }
   },
-  "2536"      : {
+  "2536" : {
     "inputs"     : {
       "value" : 1.72
     },
@@ -5103,7 +5431,7 @@
       "title" : "Float Constant"
     }
   },
-  "2541"      : {
+  "2541" : {
     "inputs"     : {
       "a"         : [
         "1955",
@@ -5117,7 +5445,7 @@
       "title" : "0.72"
     }
   },
-  "2543"      : {
+  "2543" : {
     "inputs"     : {
       "int_" : [
         "2110",
@@ -5129,7 +5457,7 @@
       "title" : "🔧 CR Integer To String"
     }
   },
-  "2544"      : {
+  "2544" : {
     "inputs"     : {
       "text" : [
         "283",
@@ -5141,7 +5469,7 @@
       "title" : "String to Integer"
     }
   },
-  "2545"      : {
+  "2545" : {
     "inputs"     : {
       "strings"   : "Inputs/Next/Best\nInputs/Next/best",
       "multiline" : false,
@@ -5152,7 +5480,7 @@
       "title" : "String Selector"
     }
   },
-  "2553"      : {
+  "2553" : {
     "inputs"     : {
       "a"         : [
         "2102",
@@ -5166,7 +5494,7 @@
       "title" : "Math Float"
     }
   },
-  "2555"      : {
+  "2555" : {
     "inputs"     : {
       "text1"     : "The subject is having a ",
       "text2"     : [
@@ -5181,11 +5509,11 @@
       "title" : "textConcat"
     }
   },
-  "2560"      : {
+  "2560" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
+      "strength_model" : 1,
+      "strength_clip"  : 1,
       "model"          : [
         "2257",
         0
@@ -5200,7 +5528,7 @@
       "title" : "Pandora-RAWr"
     }
   },
-  "2567"      : {
+  "2567" : {
     "inputs"     : {
       "text"             : [
         "1838",
@@ -5214,7 +5542,7 @@
       "title" : "Contains [TT]"
     }
   },
-  "2570"      : {
+  "2570" : {
     "inputs"     : {
       "condition"  : [
         "2567",
@@ -5234,7 +5562,25 @@
       "title" : "Input Selector"
     }
   },
-  "2580"      : {
+  "2574" : {
+    "inputs"     : {
+      "channel"            : "RGB",
+      "black_point"        : 4,
+      "white_point"        : 255,
+      "gray_point"         : 1,
+      "output_black_point" : 0,
+      "output_white_point" : 250,
+      "image"              : [
+        "2081",
+        0
+      ]
+    },
+    "class_type" : "LayerColor: Levels",
+    "_meta"      : {
+      "title" : "LayerColor: Levels"
+    }
+  },
+  "2580" : {
     "inputs"     : {
       "delimiter"        : ",",
       "clean_whitespace" : "true",
@@ -5256,7 +5602,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "2581"      : {
+  "2581" : {
     "inputs"     : {
       "delimiter"        : ",",
       "clean_whitespace" : "true",
@@ -5278,7 +5624,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "2590"      : {
+  "2590" : {
     "inputs"     : {
       "prompt"           : [
         "515",
@@ -5296,7 +5642,7 @@
       "title" : "Magic Photo Prompter 🪄"
     }
   },
-  "2595"      : {
+  "2595" : {
     "inputs"     : {
       "find"    : "__AGE__",
       "replace" : [
@@ -5313,7 +5659,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "2598"      : {
+  "2598" : {
     "inputs"     : {
       "string"  : "__{{ age }}__ years old ",
       "find"    : "__{{ age }}__",
@@ -5327,7 +5673,7 @@
       "title" : "Replace"
     }
   },
-  "2605"      : {
+  "2605" : {
     "inputs"     : {
       "text1"     : [
         "2106",
@@ -5348,7 +5694,7 @@
       "title" : "Positive"
     }
   },
-  "2609"      : {
+  "2609" : {
     "inputs"     : {
       "file_prefix"   : [
         "2611",
@@ -5363,7 +5709,7 @@
       "title" : "File Path Creator"
     }
   },
-  "2611"      : {
+  "2611" : {
     "inputs"     : {
       "text1" : "Generated_",
       "text2" : [
@@ -5376,7 +5722,7 @@
       "title" : "Text Combiner 2"
     }
   },
-  "2612"      : {
+  "2612" : {
     "inputs"     : {
       "file_prefix"   : [
         "2614",
@@ -5391,7 +5737,7 @@
       "title" : "File Path Creator"
     }
   },
-  "2614"      : {
+  "2614" : {
     "inputs"     : {
       "text1" : "Prompt_",
       "text2" : [
@@ -5404,7 +5750,7 @@
       "title" : "Text Combiner 2"
     }
   },
-  "2615"      : {
+  "2615" : {
     "inputs"     : {
       "path"                    : "./output/[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -5426,7 +5772,7 @@
       "title" : "Save Text File"
     }
   },
-  "2618"      : {
+  "2618" : {
     "inputs"     : {
       "lora_name"      : "BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors",
       "strength_model" : 0.4,
@@ -5445,54 +5791,26 @@
       "title" : "Load LoRA"
     }
   },
-  "2644"      : {
+  "2644" : {
     "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.9,
-      "model"          : [
-        "2300",
-        0
-      ],
-      "clip"           : [
-        "2300",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Flux_Lora_32F_Breasts"
-    }
-  },
-  "2652"      : {
-    "inputs"     : {
-      "text" : "aidmaimageupgrader, fluxenhancer, detailed hands, Perfect hand"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2655"      : {
-    "inputs"     : {
-      "lora_name"      : "Detailed_Hands-000001.safetensors",
+      "lora_name"      : "BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors",
       "strength_model" : 0.4,
-      "strength_clip"  : 0.6,
+      "strength_clip"  : 0.4,
       "model"          : [
-        "3050",
+        "2300",
         0
       ],
       "clip"           : [
-        "3050",
+        "2300",
         1
       ]
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "fluxenhancer"
+      "title" : "aidmarealisticskin"
     }
   },
-  "2656"      : {
+  "2656" : {
     "inputs"     : {
       "text" : "fluxenhancer,aidmaimageupgrader, d351 d4rk, aidmarealisticskin, aidmafluxproultra, slicked back hairstyle:1.2, high ponytail:1.3, pulled back hairstyle:1.2, Skin imperfections , Freckles, moles, natural blemishes, Rough skin texture, "
     },
@@ -5501,17 +5819,17 @@
       "title" : "Text Multiline"
     }
   },
-  "2666"      : {
+  "2666" : {
     "inputs"     : {
-      "detail_amount"      : 0.07,
-      "start"              : 0.33,
-      "end"                : 0.5,
+      "detail_amount"      : 0.13,
+      "start"              : 0.5,
+      "end"                : 0.75,
       "bias"               : 0.5,
-      "exponent"           : 1,
+      "exponent"           : 0.8,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : true,
+      "smooth"             : false,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "1909",
@@ -5523,7 +5841,7 @@
       "title" : "Detail Daemon Sampler"
     }
   },
-  "2669"      : {
+  "2669" : {
     "inputs"     : {
       "image" : [
         "2670",
@@ -5535,14 +5853,10 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "2670"      : {
+  "2670" : {
     "inputs"     : {
       "samples" : [
         "1989",
-        0
-      ],
-      "vae"     : [
-        "2889",
         0
       ]
     },
@@ -5551,7 +5865,7 @@
       "title" : "VAE Decode"
     }
   },
-  "2671"      : {
+  "2671" : {
     "inputs"     : {
       "images" : [
         "832",
@@ -5563,7 +5877,7 @@
       "title" : "Preview Image"
     }
   },
-  "2672"      : {
+  "2672" : {
     "inputs"     : {
       "shadow_brightness"      : 0.88,
       "shadow_saturation"      : 1,
@@ -5585,7 +5899,7 @@
       "title" : "LayerColor: Color of Shadow & Highlight"
     }
   },
-  "2675"      : {
+  "2675" : {
     "inputs"     : {
       "strength"   : 100,
       "brightness" : 0,
@@ -5605,10 +5919,29 @@
       "title" : "LayerColor: AutoAdjust V2"
     }
   },
-  "2695"      : {
+  "2694" : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "2908",
+        0
+      ],
+      "clip"           : [
+        "2908",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
+    }
+  },
+  "2695" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1.5,
+      "strength_model" : 1,
       "strength_clip"  : 1,
       "model"          : [
         "2273",
@@ -5624,10 +5957,10 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "2703"      : {
+  "2703" : {
     "inputs"     : {
       "image" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -5636,7 +5969,7 @@
       "title" : "Image Batch to Image List"
     }
   },
-  "2704"      : {
+  "2704" : {
     "inputs"     : {
       "images" : [
         "339",
@@ -5648,41 +5981,7 @@
       "title" : "Image List to Image Batch"
     }
   },
-  "2715"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
-      "mask"        : [
-        "3015",
-        1
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "2721"      : {
-    "inputs"     : {
-      "lora_name"      : "flux_vividizer.safetensors",
-      "strength_model" : 0.65,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
-  "2727"      : {
+  "2727" : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
       "resolution"   : [
@@ -5699,7 +5998,7 @@
       "title" : "AIO Aux Preprocessor"
     }
   },
-  "2729"      : {
+  "2729" : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
       "strength_model" : 0.6,
@@ -5718,11 +6017,30 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "2734"      : {
+  "2732" : {
+    "inputs"     : {
+      "lora_name"      : "breast-size2.safetensors",
+      "strength_model" : 3.9,
+      "strength_clip"  : 0,
+      "model"          : [
+        "2277",
+        0
+      ],
+      "clip"           : [
+        "2277",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "breast-size2"
+    }
+  },
+  "2734" : {
     "inputs"     : {
       "question"          : "Describe the Facial expression of the subject, hair style, jewelry and outfit. Also, describe about  the make-up, eyes and lipstick",
       "seed"              : [
-        "3049",
+        "2240",
         0
       ],
       "temperature"       : 0.6,
@@ -5746,7 +6064,7 @@
       "title" : "Janus Pro Describe Image 🐑"
     }
   },
-  "2751"      : {
+  "2751" : {
     "inputs"     : {
       "find"    : "woman",
       "replace" : "young girl",
@@ -5760,7 +6078,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "2754"      : {
+  "2754" : {
     "inputs"     : {
       "find"    : "image",
       "replace" : "photo",
@@ -5774,7 +6092,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "2755"      : {
+  "2755" : {
     "inputs"     : {
       "condition"  : [
         "268",
@@ -5794,7 +6112,7 @@
       "title" : "Input Selector"
     }
   },
-  "2756"      : {
+  "2756" : {
     "inputs"     : {
       "delimiter"        : ",",
       "clean_whitespace" : "true",
@@ -5816,18 +6134,29 @@
       "title" : "Text Concatenate"
     }
   },
-  "2797"      : {
+  "2759" : {
+    "inputs"     : {
+      "text1"     : [
+        "2106",
+        0
+      ],
+      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace, (aidmarealisticskin:0.4)",
+      "text3"     : "smooth midriff,",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2797" : {
     "inputs"     : {
       "any_01" : [
-        "2339",
+        "2362",
         0
       ],
       "any_02" : [
-        "2065",
-        0
-      ],
-      "any_03" : [
-        "654",
+        "2085",
         0
       ],
       "any_04" : [
@@ -5835,7 +6164,7 @@
         0
       ],
       "any_05" : [
-        "1885",
+        "1888",
         0
       ]
     },
@@ -5844,7 +6173,7 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "2814"      : {
+  "2814" : {
     "inputs"     : {
       "image" : [
         "2797",
@@ -5856,15 +6185,15 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "2815"      : {
+  "2815" : {
     "inputs"     : {
       "face"            : false,
       "left_eyebrow"    : true,
       "right_eyebrow"   : true,
       "left_eye"        : true,
       "right_eye"       : true,
-      "left_pupil"      : false,
-      "right_pupil"     : false,
+      "left_pupil"      : true,
+      "right_pupil"     : true,
       "lips"            : true,
       "number_of_faces" : 1,
       "confidence"      : 0.3,
@@ -5879,7 +6208,7 @@
       "title" : "Face Landmark Mask"
     }
   },
-  "2816"      : {
+  "2816" : {
     "inputs"     : {
       "face_mask"       : true,
       "background_mask" : false,
@@ -5888,6 +6217,8 @@
       "clothes_mask"    : false,
       "confidence"      : 0.4,
       "refine_mask"     : true,
+      "batch_size"      : 2,
+      "compute_device"  : "auto",
       "images"          : [
         "2797",
         0
@@ -5898,7 +6229,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2818"      : {
+  "2818" : {
     "inputs"     : {
       "mask_opacity" : 0.6,
       "mask_color"   : "255, 0, 25507",
@@ -5908,7 +6239,7 @@
         0
       ],
       "mask"         : [
-        "3045",
+        "2830",
         0
       ]
     },
@@ -5917,7 +6248,7 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "2819"      : {
+  "2819" : {
     "inputs"     : {
       "images" : [
         "2820",
@@ -5929,10 +6260,10 @@
       "title" : "Preview Image"
     }
   },
-  "2820"      : {
+  "2820" : {
     "inputs"     : {
       "mask" : [
-        "3045",
+        "2830",
         0
       ]
     },
@@ -5941,7 +6272,7 @@
       "title" : "Convert Mask to Image"
     }
   },
-  "2822"      : {
+  "2822" : {
     "inputs"     : {
       "padding"        : 0,
       "blur"           : 0,
@@ -5959,7 +6290,7 @@
       "title" : "🔧 Mask Bounding Box"
     }
   },
-  "2823"      : {
+  "2823" : {
     "inputs"     : {
       "images" : [
         "2824",
@@ -5971,7 +6302,7 @@
       "title" : "Preview Image"
     }
   },
-  "2824"      : {
+  "2824" : {
     "inputs"     : {
       "overlay_resize" : "None",
       "resize_method"  : "nearest-exact",
@@ -6008,7 +6339,7 @@
       "title" : "Image Overlay"
     }
   },
-  "2825"      : {
+  "2825" : {
     "inputs"     : {
       "width"  : [
         "2814",
@@ -6027,7 +6358,7 @@
       "title" : "Image Blank"
     }
   },
-  "2826"      : {
+  "2826" : {
     "inputs"     : {
       "padding_left"   : 0,
       "padding_right"  : 0,
@@ -6048,7 +6379,7 @@
       "title" : "Bounded Image Crop with Mask"
     }
   },
-  "2827"      : {
+  "2827" : {
     "inputs"     : {
       "mask_opacity" : 0.58,
       "mask_color"   : "255, 0, 25507",
@@ -6067,7 +6398,7 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "2829"      : {
+  "2829" : {
     "inputs"     : {
       "red"       : 255,
       "green"     : 255,
@@ -6083,9 +6414,9 @@
       "title" : "🔧 Mask From Color"
     }
   },
-  "2830"      : {
+  "2830" : {
     "inputs"     : {
-      "expand"          : 8,
+      "expand"          : 20,
       "tapered_corners" : true,
       "mask"            : [
         "2815",
@@ -6097,13 +6428,75 @@
       "title" : "Grow Mask"
     }
   },
-  "2843"      : {
+  "2833" : {
+    "inputs"     : {
+      "conditioning" : [
+        "2834",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2834" : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2291",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "2838" : {
+    "inputs"     : {
+      "max_shift"  : 1.45,
+      "base_shift" : 0.45,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2292",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "2839" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2846",
+        0
+      ],
+      "t5xxl"    : [
+        "2847",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "2291",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "2843" : {
     "inputs"     : {
       "a"         : [
         "2102",
         0
       ],
-      "b"         : 0.62,
+      "b"         : 0.66,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6111,7 +6504,63 @@
       "title" : "Math Float"
     }
   },
-  "2846"      : {
+  "2844" : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : false,
+      "max_size"           : 1024,
+      "seed"               : [
+        "2212",
+        0
+      ],
+      "steps"              : 20,
+      "cfg"                : 1,
+      "sampler_name"       : "lms",
+      "scheduler"          : "beta",
+      "denoise"            : [
+        "2843",
+        0
+      ],
+      "feather"            : 2,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "2797",
+        0
+      ],
+      "segs"               : [
+        "2854",
+        0
+      ],
+      "model"              : [
+        "2838",
+        0
+      ],
+      "clip"               : [
+        "2291",
+        0
+      ],
+      "positive"           : [
+        "2839",
+        0
+      ],
+      "negative"           : [
+        "2833",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (Face Detailer)"
+    }
+  },
+  "2846" : {
     "inputs"     : {
       "text1"     : [
         "2754",
@@ -6126,13 +6575,13 @@
       "title" : "textConcat"
     }
   },
-  "2847"      : {
+  "2847" : {
     "inputs"     : {
       "text1"     : [
         "2754",
         0
       ],
-      "text2"     : "well-defined eyebrows, long eyelashes, , Her lips glisten softly with moisture, her hazelnut brown detailed eyes, eyes luminous and tender, as if holding a quiet breath between them.",
+      "text2"     : "well-defined eyebrows, long eyelashes, , Her lips glisten softly with moisture, her eyes luminous and tender, as if holding a quiet breath between them.",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -6141,7 +6590,7 @@
       "title" : "textConcat"
     }
   },
-  "2849"      : {
+  "2849" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -6162,7 +6611,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "2998:548",
+        "2844",
         0
       ]
     },
@@ -6171,7 +6620,24 @@
       "title" : "Image Save"
     }
   },
-  "2862"      : {
+  "2854" : {
+    "inputs"     : {
+      "combined"     : true,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : false,
+      "mask"         : [
+        "2829",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2862" : {
     "inputs"     : {
       "text" : "aidmafluxproultra, fluxenhancer, Skin imperfections ,   moles, natural blemishes, Rough skin texture, "
     },
@@ -6180,10 +6646,10 @@
       "title" : "Text Multiline"
     }
   },
-  "2866"      : {
+  "2866" : {
     "inputs"     : {
       "model_a" : [
-        "2952",
+        "2903",
         0
       ],
       "model_b" : [
@@ -6200,11 +6666,11 @@
       "title" : "Model Input Switch"
     }
   },
-  "2867"      : {
+  "2867" : {
     "inputs"     : {
       "clip_a"  : [
-        "2953",
-        0
+        "2903",
+        1
       ],
       "clip_b"  : [
         "2268",
@@ -6220,17 +6686,17 @@
       "title" : "CLIP Input Switch"
     }
   },
-  "2874"      : {
+  "2874" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.65,
       "strength_clip"  : 0.65,
       "model"          : [
-        "2277",
+        "2732",
         0
       ],
       "clip"           : [
-        "2277",
+        "2732",
         1
       ]
     },
@@ -6239,9 +6705,9 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "2875"      : {
+  "2875" : {
     "inputs"     : {
-      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
+      "lora_name"      : "d351_Coffee_Krea_Kohya_V1_Unchained_prodigy-000012.safetensors",
       "strength_model" : 1,
       "strength_clip"  : 1,
       "model"          : [
@@ -6258,10 +6724,10 @@
       "title" : "Load LoRA"
     }
   },
-  "2881"      : {
+  "2881" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 1.8,
+      "strength_model" : 2.6,
       "strength_clip"  : 1,
       "model"          : [
         "2695",
@@ -6277,7 +6743,37 @@
       "title" : "breast-size2 [3.20::3.20]"
     }
   },
-  "2888"      : {
+  "2885" : {
+    "inputs"     : {
+      "text1"     : [
+        "788",
+        0
+      ],
+      "text2"     : "aidmarealisticskin, Skin imperfections,",
+      "text3"     : "",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2886" : {
+    "inputs"     : {
+      "text1"     : [
+        "2106",
+        0
+      ],
+      "text2"     : "(aidmarealisticskin:0.5)",
+      "text3"     : " ",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2888" : {
     "inputs"     : {
       "stop_at_clip_layer" : -3,
       "clip"               : [
@@ -6290,7 +6786,7 @@
       "title" : "CLIP Set Last Layer"
     }
   },
-  "2889"      : {
+  "2889" : {
     "inputs"     : {
       "vae_name" : "ae.safetensors"
     },
@@ -6299,7 +6795,7 @@
       "title" : "FLUX VAE"
     }
   },
-  "2890"      : {
+  "2890" : {
     "inputs"     : {
       "q"    : 1.2,
       "k"    : 1.1,
@@ -6315,7 +6811,7 @@
       "title" : "CLIPAttentionMultiply"
     }
   },
-  "2891"      : {
+  "2891" : {
     "inputs"     : {
       "block_number"         : 4,
       "downscale_factor"     : 2,
@@ -6334,7 +6830,7 @@
       "title" : "PatchModelAddDownscale"
     }
   },
-  "2892"      : {
+  "2892" : {
     "inputs"     : {
       "sampler_name" : "euler_ancestral"
     },
@@ -6343,9 +6839,9 @@
       "title" : "KSamplerSelect"
     }
   },
-  "2893"      : {
+  "2893" : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
@@ -6355,36 +6851,47 @@
       "title" : "DualCLIPLoader"
     }
   },
-  "2894"      : {
+  "2894" : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "default"
+      "weight_dtype" : "fp8_e4m3fn"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
       "title" : "Load Diffusion Model"
     }
   },
-  "2901"      : {
+  "2901" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.65,
-      "strength_clip"  : 0.65,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
+      "strength_clip"  : 0.65
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmarealisticskin"
     }
   },
-  "2908"      : {
+  "2903" : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.2,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "2901",
+        0
+      ],
+      "clip"           : [
+        "2901",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmafluxproultra"
+    }
+  },
+  "2908" : {
     "inputs"     : {
       "lora_name"      : "SameFace_Fix.safetensors",
       "strength_model" : -0.6,
@@ -6403,7 +6910,92 @@
       "title" : "SameFaceNegatice"
     }
   },
-  "2922"      : {
+  "2910" : {
+    "inputs"     : {
+      "image" : [
+        "2916",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Image Size"
+    }
+  },
+  "2913" : {
+    "inputs"     : {
+      "Value" : [
+        "2917",
+        0
+      ]
+    },
+    "class_type" : "DF_Int_to_Float",
+    "_meta"      : {
+      "title" : "Int to Float"
+    }
+  },
+  "2916" : {
+    "inputs"     : {
+      "padding_left"   : 16,
+      "padding_right"  : 16,
+      "padding_top"    : 16,
+      "padding_bottom" : 16,
+      "return_list"    : false,
+      "image"          : [
+        "2345",
+        0
+      ],
+      "mask"           : [
+        "2355",
+        0
+      ]
+    },
+    "class_type" : "Bounded Image Crop with Mask",
+    "_meta"      : {
+      "title" : "Bounded Image Crop"
+    }
+  },
+  "2917" : {
+    "inputs"     : {
+      "a" : [
+        "2910",
+        1
+      ],
+      "b" : [
+        "2910",
+        2
+      ]
+    },
+    "class_type" : "JWIntegerMax",
+    "_meta"      : {
+      "title" : "Max"
+    }
+  },
+  "2918" : {
+    "inputs"     : {
+      "anything"   : [
+        "2891",
+        0
+      ],
+      "anything11" : [
+        "2889",
+        0
+      ],
+      "anything12" : [
+        "2890",
+        0
+      ],
+      "anything13" : [
+        "2892",
+        0
+      ]
+    },
+    "class_type" : "Anything Everywhere",
+    "_meta"      : {
+      "title" : "Anything Everywhere"
+    }
+  },
+  "2922" : {
     "inputs"     : {
       "images" : [
         "2925",
@@ -6415,7 +7007,7 @@
       "title" : "Preview Image"
     }
   },
-  "2925"      : {
+  "2925" : {
     "inputs"     : {
       "padding_left"   : 32,
       "padding_right"  : 32,
@@ -6423,7 +7015,7 @@
       "padding_bottom" : 64,
       "return_list"    : false,
       "image"          : [
-        "1837",
+        "2930",
         0
       ],
       "mask"           : [
@@ -6436,17 +7028,19 @@
       "title" : "Bounded Image Crop with Mask"
     }
   },
-  "2927"      : {
+  "2927" : {
     "inputs"     : {
-      "face_mask"       : true,
+      "face_mask"       : false,
       "background_mask" : false,
-      "hair_mask"       : true,
-      "body_mask"       : true,
+      "hair_mask"       : false,
+      "body_mask"       : false,
       "clothes_mask"    : true,
       "confidence"      : 0.54,
       "refine_mask"     : true,
+      "batch_size"      : 8,
+      "compute_device"  : "auto",
       "images"          : [
-        "1837",
+        "2930",
         0
       ]
     },
@@ -6455,7 +7049,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "2929"      : {
+  "2929" : {
     "inputs"     : {
       "channel"            : "RGB",
       "input_black_point"  : 0,
@@ -6473,13 +7067,13 @@
       "title" : "Levels"
     }
   },
-  "2930"      : {
+  "2930" : {
     "inputs"     : {
       "brightness_target"   : 0.5,
-      "cyan_red"            : 0.02,
+      "cyan_red"            : 0.04,
       "magenta_green"       : 0,
-      "yellow_blue"         : 0.05,
-      "preserve_luminosity" : false,
+      "yellow_blue"         : 0.07,
+      "preserve_luminosity" : true,
       "image"               : [
         "2929",
         0
@@ -6488,1965 +7082,6 @@
     "class_type" : "ColorBalanceAdvanced",
     "_meta"      : {
       "title" : "Color Balance Advanced"
-    }
-  },
-  "2931"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "3020",
-        0
-      ],
-      "clip"           : [
-        "3020",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
-  "2936"      : {
-    "inputs"     : {
-      "clip_a"  : [
-        "2940",
-        1
-      ],
-      "clip_b"  : [
-        "2931",
-        1
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "CLIP Input Switch",
-    "_meta"      : {
-      "title" : "CLIP Input Switch"
-    }
-  },
-  "2939"      : {
-    "inputs"     : {
-      "model_a" : [
-        "2940",
-        0
-      ],
-      "model_b" : [
-        "2931",
-        0
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "Model Input Switch",
-    "_meta"      : {
-      "title" : "Model Input Switch"
-    }
-  },
-  "2940"      : {
-    "inputs"     : {
-      "lora_name"      : "ILLUSTRATION (FLUX) - V3.1.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.21,
-      "model"          : [
-        "2941",
-        0
-      ],
-      "clip"           : [
-        "2941",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
-  "2941"      : {
-    "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA ::0.8:0.2"
-    }
-  },
-  "2945"      : {
-    "inputs"     : {
-      "model_a" : [
-        "2277",
-        0
-      ],
-      "model_b" : [
-        "2874",
-        0
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "Model Input Switch",
-    "_meta"      : {
-      "title" : "Model Input Switch"
-    }
-  },
-  "2946"      : {
-    "inputs"     : {
-      "clip_a"  : [
-        "2277",
-        1
-      ],
-      "clip_b"  : [
-        "2874",
-        1
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "CLIP Input Switch",
-    "_meta"      : {
-      "title" : "CLIP Input Switch"
-    }
-  },
-  "2952"      : {
-    "inputs"     : {
-      "model_a" : [
-        "2954",
-        0
-      ],
-      "model_b" : [
-        "2901",
-        0
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "Model Input Switch",
-    "_meta"      : {
-      "title" : "Model Input Switch"
-    }
-  },
-  "2953"      : {
-    "inputs"     : {
-      "clip_a"  : [
-        "2954",
-        1
-      ],
-      "clip_b"  : [
-        "2901",
-        1
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "CLIP Input Switch",
-    "_meta"      : {
-      "title" : "CLIP Input Switch"
-    }
-  },
-  "2954"      : {
-    "inputs"     : {
-      "lora_name"      : "ILLUSTRATION (FLUX) - V3.1.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
-  "2957"      : {
-    "inputs"     : {
-      "condition"  : [
-        "322",
-        0
-      ],
-      "when_true"  : [
-        "2959",
-        0
-      ],
-      "when_false" : [
-        "2892",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2959"      : {
-    "inputs"     : {
-      "sampler_name" : "euler"
-    },
-    "class_type" : "KSamplerSelect",
-    "_meta"      : {
-      "title" : "KSamplerSelect"
-    }
-  },
-  "2961"      : {
-    "inputs"     : {
-      "condition"  : [
-        "322",
-        0
-      ],
-      "when_true"  : [
-        "2237",
-        0
-      ],
-      "when_false" : [
-        "2963",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2963"      : {
-    "inputs"     : {
-      "model_name" : "4xPurePhoto-Span.pth"
-    },
-    "class_type" : "UpscaleModelLoader",
-    "_meta"      : {
-      "title" : "Load Upscale Model"
-    }
-  },
-  "2964"      : {
-    "inputs"     : {
-      "condition"  : [
-        "322",
-        0
-      ],
-      "when_true"  : [
-        "1863",
-        0
-      ],
-      "when_false" : [
-        "1871",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2970"      : {
-    "inputs"     : {
-      "text" : ""
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2973"      : {
-    "inputs"     : {
-      "text" : "aidmarealisticskin, Skin imperfections,"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2975"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
-      "mask"        : [
-        "2355",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "2978"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
-      "mask"        : [
-        "2035",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "2983"      : {
-    "inputs"     : {
-      "a"         : [
-        "2102",
-        0
-      ],
-      "b"         : 0.75,
-      "operation" : "multiply"
-    },
-    "class_type" : "easy mathFloat",
-    "_meta"      : {
-      "title" : "Math Float"
-    }
-  },
-  "2987"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "1930",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "true",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "2995:548",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "2989"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1267",
-        0
-      ],
-      "mask"         : [
-        "898",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "2993"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "2034",
-        0
-      ],
-      "mask"         : [
-        "2978",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "2997"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "2345",
-        0
-      ],
-      "mask"         : [
-        "2975",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "2999"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "2797",
-        0
-      ],
-      "mask"         : [
-        "2829",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "3003"      : {
-    "inputs"     : {
-      "level" : 1.2
-    },
-    "class_type" : "ImageSaturation",
-    "_meta"      : {
-      "title" : "Adjust Saturation"
-    }
-  },
-  "3011"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "1930",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "true",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "3014:548",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "3013"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1611",
-        0
-      ],
-      "mask"         : [
-        "2715",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "3015"      : {
-    "inputs"     : {
-      "method"          : "human_parsing_lip",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : "14,15",
-      "image"           : [
-        "1611",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3018"      : {
-    "inputs"     : {
-      "opacity"         : 50,
-      "image"           : [
-        "1888",
-        0
-      ],
-      "color_ref_image" : [
-        "2669",
-        0
-      ]
-    },
-    "class_type" : "LayerColor: ColorAdapter",
-    "_meta"      : {
-      "title" : "LayerColor: ColorAdapter"
-    }
-  },
-  "3020"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.7,
-      "strength_clip"  : 0.7,
-      "model"          : [
-        "2881",
-        0
-      ],
-      "clip"           : [
-        "2881",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
-  "3023"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2339",
-        0
-      ],
-      "any_02" : [
-        "2158",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3029"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.7,
-      "strength_clip"  : 1,
-      "model"          : [
-        "2952",
-        0
-      ],
-      "clip"           : [
-        "2953",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "32FF.80]"
-    }
-  },
-  "3030"      : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
-  "3038"      : {
-    "inputs"     : {
-      "any_02" : [
-        "2930",
-        0
-      ],
-      "any_03" : [
-        "1831",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3039"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2930",
-        0
-      ],
-      "any_02" : [
-        "1831",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3045"      : {
-    "inputs"     : {
-      "masks" : [
-        "2830",
-        0
-      ]
-    },
-    "class_type" : "Mask Fill Holes",
-    "_meta"      : {
-      "title" : "Mask Fill Holes"
-    }
-  },
-  "3047"      : {
-    "inputs"     : {
-      "condition"  : [
-        "268",
-        0
-      ],
-      "when_true"  : [
-        "1945",
-        0
-      ],
-      "when_false" : [
-        "3048",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "3048"      : {
-    "inputs"     : {
-      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nHer hands are detailed and natural in appearance, wearing a single diamond ring, with bare nails and no nail polish.\n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Prompt Extras"
-    }
-  },
-  "3049"      : {
-    "inputs"     : {
-      "seed"      : -1,
-      "increment" : 0
-    },
-    "class_type" : "Seed Generator (Image Saver)",
-    "_meta"      : {
-      "title" : "Seed Generator (Image Saver)"
-    }
-  },
-  "3050"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.2,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "3030",
-        0
-      ],
-      "clip"           : [
-        "3030",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
-  "3055"      : {
-    "inputs"     : {
-      "reuse_threshold" : 0.2,
-      "start_percent"   : 0.15,
-      "end_percent"     : 0.95,
-      "verbose"         : false,
-      "model"           : [
-        "2224",
-        0
-      ]
-    },
-    "class_type" : "EasyCache",
-    "_meta"      : {
-      "title" : "EasyCache"
-    }
-  },
-  "3056"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "2908",
-        0
-      ],
-      "clip"           : [
-        "2908",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
-    }
-  },
-  "3058"      : {
-    "inputs"     : {
-      "enable_fp16_accumulation" : false,
-      "model"                    : [
-        "2891",
-        0
-      ]
-    },
-    "class_type" : "ModelPatchTorchSettings",
-    "_meta"      : {
-      "title" : "Model Patch Torch Settings"
-    }
-  },
-  "3070"      : {
-    "inputs"     : {
-      "boolean" : [
-        "124",
-        0
-      ]
-    },
-    "class_type" : "Logic NOT",
-    "_meta"      : {
-      "title" : "NOT"
-    }
-  },
-  "3076"      : {
-    "inputs"     : {
-      "custom_path"     : "Inputs/Processed",
-      "filename_prefix" : [
-        "3108",
-        0
-      ],
-      "timestamp"       : "None",
-      "format"          : "jpg",
-      "quality"         : 100,
-      "preview"         : [
-        "3070",
-        0
-      ],
-      "image"           : [
-        "1837",
-        0
-      ],
-      "tag_text"        : [
-        "3099",
-        0
-      ]
-    },
-    "class_type" : "LayerUtility: ImageTaggerSave",
-    "_meta"      : {
-      "title" : "LayerUtility: Image Tagger Save"
-    }
-  },
-  "3079"      : {
-    "inputs"     : {
-      "delimiter"        : "",
-      "clean_whitespace" : "false",
-      "text_a"           : [
-        "3090",
-        0
-      ],
-      "text_b"           : [
-        "3102",
-        0
-      ],
-      "text_c"           : [
-        "249",
-        0
-      ],
-      "text_d"           : [
-        "3105",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3082"      : {
-    "inputs"     : {
-      "text" : "She wears a form-fitted outfit shaped by real tailoring rather than artificial perfection, with clean elegant lines that follow her silhouette naturally without appearing restrictive. The fabric is smooth and high quality with a subtle sheen, responding organically to light, showing gentle highlights and natural falloff along curves. The design feels structured yet fluid, with minimal, intentional detailing that enhances form without overwhelming it, conveying quiet confidence, poise, and modern feminine sophistication. Color contrast is refined and balanced, drawing the eye without breaking elegance.\n\nHer body is realistically voluptuous with a natural hourglass figure, soft curves, and low muscle definition. Proportions appear balanced and grounded, with full thighs and natural weight distribution. Her bust and cleavage are presented in a believable, age-appropriate way, shaped by gravity and posture rather than idealized symmetry, emphasizing realism over stylization.\n\nShe has dark, supple, non-oily skin with visible micro-hairs and subtle textural variation, including a tiny black mole on her chin. Her hair is long, black, and curly, with a few naturally occurring gray strands visible. Her teeth are aligned, with one slightly twisted upper canine adding an imperfect, human charm.\n\nHer hands are detailed and natural in appearance, wearing a single diamond ring, with bare nails and no nail polish.\n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Prompt Extras"
-    }
-  },
-  "3090"      : {
-    "inputs"     : {
-      "delimiter"        : "",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "1931",
-        0
-      ],
-      "text_b"           : [
-        "3093",
-        0
-      ],
-      "text_c"           : [
-        "293",
-        0
-      ],
-      "text_d"           : [
-        "3094",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3093"      : {
-    "inputs"     : {
-      "value" : "["
-    },
-    "class_type" : "PrimitiveString",
-    "_meta"      : {
-      "title" : "Delim"
-    }
-  },
-  "3094"      : {
-    "inputs"     : {
-      "value" : "]"
-    },
-    "class_type" : "PrimitiveString",
-    "_meta"      : {
-      "title" : "Delim"
-    }
-  },
-  "3099"      : {
-    "inputs"     : {
-      "delimiter"        : "__",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "484",
-        0
-      ],
-      "text_b"           : [
-        "485",
-        0
-      ],
-      "text_c"           : [
-        "2734",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3102"      : {
-    "inputs"     : {
-      "value" : "__"
-    },
-    "class_type" : "PrimitiveString",
-    "_meta"      : {
-      "title" : "Delim"
-    }
-  },
-  "3105"      : {
-    "inputs"     : {
-      "value" : "__"
-    },
-    "class_type" : "PrimitiveString",
-    "_meta"      : {
-      "title" : "Delim"
-    }
-  },
-  "3108"      : {
-    "inputs"     : {
-      "string"  : [
-        "3079",
-        0
-      ],
-      "find"    : "____",
-      "replace" : ""
-    },
-    "class_type" : "StringReplace",
-    "_meta"      : {
-      "title" : "Replace"
-    }
-  },
-  "3110"      : {
-    "inputs"     : {
-      "max_shift"  : 1.2,
-      "base_shift" : 0.45,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3058",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.45::0.45"
-    }
-  },
-  "2995:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.31,
-      "base_shift" : 0.45,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3055",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "2995:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2978",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "2995:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "2995:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2995:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2213",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2995:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2106",
-        0
-      ],
-      "text_b"           : [
-        "2995:2972",
-        0
-      ],
-      "text_c"           : [
-        "2970",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2995:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,\n\nsmooth midriff,low muscle definition, soft natural curves",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "2995:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2995:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "2995:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "2213",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "2995:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
-        0
-      ],
-      "text_b"           : [
-        "2995:2973",
-        0
-      ],
-      "text_c"           : [
-        "2970",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2995:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "2995:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "2212",
-        0
-      ],
-      "steps"              : 21,
-      "cfg"                : 1,
-      "sampler_name"       : "heun",
-      "scheduler"          : "beta",
-      "denoise"            : 0.18,
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "2034",
-        0
-      ],
-      "segs"               : [
-        "2995:88",
-        0
-      ],
-      "model"              : [
-        "2995:113",
-        0
-      ],
-      "clip"               : [
-        "2213",
-        0
-      ],
-      "vae"                : [
-        "2889",
-        0
-      ],
-      "positive"           : [
-        "2995:506",
-        0
-      ],
-      "negative"           : [
-        "2995:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "2996:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2996:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "2996:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "2213",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "2996:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.45,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3055",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "2996:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2975",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "2996:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "2996:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2996:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2213",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2996:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
-        0
-      ],
-      "text_b"           : [
-        "2996:2973",
-        0
-      ],
-      "text_c"           : [
-        "2973",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2996:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2106",
-        0
-      ],
-      "text_b"           : [
-        "2996:2972",
-        0
-      ],
-      "text_c"           : [
-        "2973",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2996:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "skin with uneven texture and variation,\npatchy oil and dryness,\nvisible pores that vary by area,\ntiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\nfaint acne scars and old blemish marks,",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "2996:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "2996:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "2212",
-        0
-      ],
-      "steps"              : 27,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : [
-        "2983",
-        0
-      ],
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "2345",
-        0
-      ],
-      "segs"               : [
-        "2996:88",
-        0
-      ],
-      "model"              : [
-        "2996:113",
-        0
-      ],
-      "clip"               : [
-        "2213",
-        0
-      ],
-      "vae"                : [
-        "2889",
-        0
-      ],
-      "positive"           : [
-        "2996:506",
-        0
-      ],
-      "negative"           : [
-        "2996:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "2998:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2998:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "2998:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "2291",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "2998:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.55,
-      "base_shift" : 0.55,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "2292",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "2998:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2829",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "2998:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "2998:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2998:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2291",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2998:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2847",
-        0
-      ],
-      "text_b"           : [
-        "2998:2973",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2998:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2846",
-        0
-      ],
-      "text_b"           : [
-        "2998:2972",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2998:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "2998:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "2998:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "2212",
-        0
-      ],
-      "steps"              : 23,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : [
-        "2843",
-        0
-      ],
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "2797",
-        0
-      ],
-      "segs"               : [
-        "2998:88",
-        0
-      ],
-      "model"              : [
-        "2998:113",
-        0
-      ],
-      "clip"               : [
-        "2291",
-        0
-      ],
-      "vae"                : [
-        "2889",
-        0
-      ],
-      "positive"           : [
-        "2998:506",
-        0
-      ],
-      "negative"           : [
-        "2998:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "3014:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "3014:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "3014:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "2655",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "3014:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.5,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "2655",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "3014:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2715",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "3014:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "3014:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "3014:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2655",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "3014:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
-        0
-      ],
-      "text_b"           : [
-        "3014:2973",
-        0
-      ],
-      "text_c"           : [
-        "2652",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3014:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_b"           : [
-        "3014:2972",
-        0
-      ],
-      "text_c"           : [
-        "2652",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3014:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "Detailed female hands, Diamond ring in one finger. No Nailpolish,",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "3014:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "3014:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "2212",
-        0
-      ],
-      "steps"              : 23,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : 0.32,
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "1611",
-        0
-      ],
-      "segs"               : [
-        "3014:88",
-        0
-      ],
-      "model"              : [
-        "3014:113",
-        0
-      ],
-      "clip"               : [
-        "2655",
-        1
-      ],
-      "vae"                : [
-        "2889",
-        0
-      ],
-      "positive"           : [
-        "3014:506",
-        0
-      ],
-      "negative"           : [
-        "3014:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "2991:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2991:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "2991:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "2269",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "2991:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.35,
-      "base_shift" : 0.15,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "2269",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "2991:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "898",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "2991:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "2991:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2991:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2269",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2991:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
-        0
-      ],
-      "text_b"           : [
-        "2991:2973",
-        0
-      ],
-      "text_c"           : [
-        "2011",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2991:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2106",
-        0
-      ],
-      "text_b"           : [
-        "2991:2972",
-        0
-      ],
-      "text_c"           : [
-        "2011",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2991:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "2991:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "2991:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "2212",
-        0
-      ],
-      "steps"              : 24,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : 0.42,
-      "feather"            : 6,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 1,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "1267",
-        0
-      ],
-      "segs"               : [
-        "2991:88",
-        0
-      ],
-      "model"              : [
-        "2991:113",
-        0
-      ],
-      "clip"               : [
-        "2269",
-        1
-      ],
-      "vae"                : [
-        "2889",
-        0
-      ],
-      "positive"           : [
-        "2991:506",
-        0
-      ],
-      "negative"           : [
-        "2991:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
     }
   }
 }

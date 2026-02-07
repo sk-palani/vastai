@@ -123,6 +123,7 @@ ULTRALYTICS_SEGS_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8n_v2.pt"
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov9c.pt"
+  "https://huggingface.co/ashllay/YOLO_Models/resolve/e07b01219ff1807e1885015f439d788b038f49bd/bbox/Eyeful_v2-Paired.pt"
 )
 
 ULTRALYTICS_BBOX_MODELS=(
