@@ -792,10 +792,6 @@
       "input4"   : [
         "277",
         0
-      ],
-      "input5"   : [
-        "2957",
-        0
       ]
     },
     "class_type" : "ImpactSwitch",
@@ -4712,6 +4708,10 @@
         "2237",
         0
       ],
+      "custom_sampler"      : [
+        "2957",
+        0
+      ],
       "custom_sigmas"       : [
         "2331",
         0
@@ -4995,6 +4995,10 @@
       ],
       "upscale_model"       : [
         "2961",
+        0
+      ],
+      "custom_sampler"      : [
+        "2957",
         0
       ],
       "custom_sigmas"       : [
