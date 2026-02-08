@@ -2525,6 +2525,10 @@
         "1859",
         0
       ],
+      "sampler"      : [
+        "2957",
+        0
+      ],
       "sigmas"       : [
         "1877",
         0
@@ -2709,7 +2713,11 @@
     "inputs"     : {
       "dishonesty_factor" : -0.03,
       "start_percent"     : 0.25,
-      "end_percent"       : 0.4
+      "end_percent"       : 0.4,
+      "sampler"           : [
+        "2957",
+        0
+      ]
     },
     "class_type" : "LyingSigmaSampler",
     "_meta"      : {
