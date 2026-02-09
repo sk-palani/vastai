@@ -1387,7 +1387,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.64
+      "value2" : 0.68
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -7779,7 +7779,7 @@
   "2996:2972" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "skin with uneven texture and variation,\npatchy oil and dryness,\nvisible pores that vary by area,\ntiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\nfaint acne scars and old blemish marks,",
+      "text2"     : "",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -7809,7 +7809,7 @@
         "2212",
         0
       ],
-      "steps"              : 30,
+      "steps"              : 18,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -8385,7 +8385,7 @@
   "3014:2972" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "Detailed female hands, Diamond ring in one finger. No Nailpolish,",
+      "text2"     : "",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -8397,7 +8397,7 @@
   "3014:2973" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "",
+      "text2"     : "Detailed female hands, Diamond ring in one finger. No Nailpolish,",
       "text3"     : "",
       "delimiter" : ","
     },
