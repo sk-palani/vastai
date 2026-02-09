@@ -1122,7 +1122,7 @@
   },
   "484"       : {
     "inputs"     : {
-      "question"          : "Describe this photo in essential details concisely with detais about the background, camera angle of the shot, intrinsic details about accesories like glasses, hair style, jewelry and outfit. Also, describe about facial expression including the make-up, eyes and lipstick, avoid mentioning blurred and try to find details in the background. ",
+      "question"          : "Describe the image concisely using only clearly visible details. Include the background environment, camera angle and framing, and notable accessories such as glasses, jewelry, hairstyle, and outfit. Describe the subject’s facial expression, including makeup style, eye appearance, and lipstick color or finish. Do not mention image quality, focus, or blur. Avoid speculation and do not infer details that are not visually evident. If the background is minimal, describe its visible elements and setting accurately.",
       "seed"              : [
         "3049",
         0
@@ -1150,7 +1150,7 @@
   },
   "485"       : {
     "inputs"     : {
-      "question"          : "Describe the outfit in the photo in essential details with detais about the color, material, texture of the materials, fit etc.",
+      "question"          : "Describe the outfit in the image using concise, clearly visible details. Include the color palette, materials and fabric types, surface texture, fit and silhouette, and any notable design elements or accessories that are part of the clothing. Avoid speculation and do not infer brands or materials unless they are visually evident.",
       "seed"              : [
         "3049",
         0
@@ -3044,8 +3044,8 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2936",
-        0
+        "3120",
+        1
       ]
     },
     "class_type" : "CLIPTextEncodeFlux",
@@ -3067,7 +3067,7 @@
         0
       ],
       "model"        : [
-        "2939",
+        "3120",
         0
       ],
       "conditioning" : [
@@ -5511,7 +5511,7 @@
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : false,
+      "smooth"             : true,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "1909",
@@ -5720,7 +5720,7 @@
   },
   "2734"      : {
     "inputs"     : {
-      "question"          : "Describe the Facial expression of the subject, hair style, jewelry and outfit. Also, describe about  the make-up, eyes and lipstick",
+      "question"          : "Describe the subject’s facial expression, inferred emotional state, and eye gaze direction based on visible facial cues. Include details about hairstyle, visible jewelry, and outfit. Also describe makeup elements such as eye makeup, eye appearance, and lipstick color or finish. Ground all emotional or gaze interpretations in observable features and avoid speculation beyond what the image reasonably suggests.",
       "seed"              : [
         "3049",
         0
@@ -6615,7 +6615,7 @@
         0
       ],
       "model_b" : [
-        "2901",
+        "3118",
         0
       ],
       "boolean" : [
@@ -6635,7 +6635,7 @@
         1
       ],
       "clip_b"  : [
-        "2901",
+        "3118",
         1
       ],
       "boolean" : [
@@ -7449,6 +7449,44 @@
       "title" : "Replace"
     }
   },
+  "3118"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "2901",
+        0
+      ],
+      "clip"           : [
+        "2901",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
+    }
+  },
+  "3120"      : {
+    "inputs"     : {
+      "lora_name"      : "body_slider_x-000005.safetensors",
+      "strength_model" : 0.9,
+      "strength_clip"  : 0.9,
+      "model"          : [
+        "2939",
+        0
+      ],
+      "clip"           : [
+        "2936",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA"
+    }
+  },
   "2995:113"  : {
     "inputs"     : {
       "max_shift"  : 1.45,
@@ -7456,7 +7494,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2866",
+        "3055",
         0
       ]
     },
@@ -7498,7 +7536,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2867",
+        "2213",
         0
       ]
     },
@@ -7553,7 +7591,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2867",
+        "2213",
         0
       ]
     },
@@ -7609,7 +7647,10 @@
       "cfg"                : 1,
       "sampler_name"       : "dpmpp_2m",
       "scheduler"          : "sgm_uniform",
-      "denoise"            : 0.18,
+      "denoise"            : [
+        "2553",
+        0
+      ],
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -7632,7 +7673,7 @@
         0
       ],
       "clip"               : [
-        "2867",
+        "2213",
         0
       ],
       "vae"                : [
@@ -7665,7 +7706,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2291",
+        "2213",
         0
       ]
     },
@@ -7677,11 +7718,11 @@
   "2996:113"  : {
     "inputs"     : {
       "max_shift"  : 1.45,
-      "base_shift" : 0.45,
+      "base_shift" : 0.7,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2292",
+        "3055",
         0
       ]
     },
@@ -7723,7 +7764,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2291",
+        "2213",
         0
       ]
     },
@@ -7839,7 +7880,7 @@
         0
       ],
       "clip"               : [
-        "2291",
+        "2213",
         0
       ],
       "vae"                : [
