@@ -247,6 +247,8 @@ VAE_MODELS=(
 )
 
 LORA_MODELS=(
+#   body_slider_x-000005.safetensors
+    "https://civitai.com/api/download/models/2554269?type=Model&format=SafeTensor&token=$CIVITAI_TOKEN"
 #   ILLUSTRATION (FLUX) - V3.1.safetensors
     "https://civitai.com/api/download/models/1319198?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #   Pandora-RAWr.safetensors
