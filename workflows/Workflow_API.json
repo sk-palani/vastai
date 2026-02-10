@@ -403,7 +403,8 @@
   },
   "251"       : {
     "inputs"     : {
-      "text" : [
+      "text_0" : "sexy Schoolgirl cosplay",
+      "text"   : [
         "254",
         0
       ]
@@ -4705,7 +4706,7 @@
         0
       ],
       "upscale_model"       : [
-        "2237",
+        "2961",
         0
       ],
       "custom_sampler"      : [
@@ -4917,9 +4918,9 @@
   },
   "2393"      : {
     "inputs"     : {
-      "scheduler" : "sgm_uniform",
-      "steps"     : 10,
-      "denoise"   : 0.1,
+      "scheduler" : "beta",
+      "steps"     : 14,
+      "denoise"   : 0.05,
       "model"     : [
         "3055",
         0
@@ -4957,7 +4958,7 @@
         0
       ],
       "steps"               : 18,
-      "cfg"                 : 3,
+      "cfg"                 : 3.5,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
       "denoise"             : 0.26,
@@ -5109,7 +5110,7 @@
         "1955",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 0.6,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5503,7 +5504,7 @@
   },
   "2666"      : {
     "inputs"     : {
-      "detail_amount"      : 0.06,
+      "detail_amount"      : 0.07,
       "start"              : 0.27,
       "end"                : 0.42,
       "bias"               : 0.5,
@@ -6747,7 +6748,7 @@
   },
   "2970"      : {
     "inputs"     : {
-      "text" : ""
+      "text" : "aidmarealisticskin"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7422,7 +7423,7 @@
   "3114"      : {
     "inputs"     : {
       "max_shift"  : 1.25,
-      "base_shift" : 0.8,
+      "base_shift" : 0.75,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7494,7 +7495,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "3055",
+        "2866",
         0
       ]
     },
@@ -7536,7 +7537,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2213",
+        "2867",
         0
       ]
     },
@@ -7570,7 +7571,7 @@
   "2995:2972" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,\n\nsmooth midriff,low muscle definition, soft natural curves",
+      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n\nsmooth midriff,low muscle definition, soft natural curves",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -7591,7 +7592,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2213",
+        "2867",
         0
       ]
     },
@@ -7625,7 +7626,7 @@
   "2995:2973" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
+      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish ",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -7645,8 +7646,8 @@
       ],
       "steps"              : 17,
       "cfg"                : 1,
-      "sampler_name"       : "dpmpp_2m",
-      "scheduler"          : "sgm_uniform",
+      "sampler_name"       : "euler",
+      "scheduler"          : "karras",
       "denoise"            : [
         "2553",
         0
@@ -7673,7 +7674,7 @@
         0
       ],
       "clip"               : [
-        "2213",
+        "2867",
         0
       ],
       "vae"                : [
@@ -7718,7 +7719,7 @@
   "2996:113"  : {
     "inputs"     : {
       "max_shift"  : 1.45,
-      "base_shift" : 0.7,
+      "base_shift" : 0.45,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7778,7 +7779,7 @@
       "delimiter"        : ", ",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "788",
+        "2754",
         0
       ],
       "text_b"           : [
@@ -7850,10 +7851,10 @@
         "2212",
         0
       ],
-      "steps"              : 18,
+      "steps"              : 19,
       "cfg"                : 1,
       "sampler_name"       : "euler",
-      "scheduler"          : "beta",
+      "scheduler"          : "beta_1_1",
       "denoise"            : [
         "2983",
         0
