@@ -403,8 +403,7 @@
   },
   "251"       : {
     "inputs"     : {
-      "text_0" : "sexy Schoolgirl cosplay",
-      "text"   : [
+      "text" : [
         "254",
         0
       ]
@@ -3327,7 +3326,7 @@
         "2053",
         0
       ],
-      "guidance" : 3.5,
+      "guidance" : 3.3,
       "clip"     : [
         "2890",
         0
@@ -3441,7 +3440,7 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "heun",
+      "sampler_name"       : "euler",
       "scheduler"          : "beta",
       "denoise"            : 0.36,
       "feather"            : 5,
@@ -7647,7 +7646,7 @@
       "steps"              : 17,
       "cfg"                : 1,
       "sampler_name"       : "euler",
-      "scheduler"          : "karras",
+      "scheduler"          : "beta",
       "denoise"            : [
         "2553",
         0
@@ -7851,10 +7850,10 @@
         "2212",
         0
       ],
-      "steps"              : 19,
+      "steps"              : 20,
       "cfg"                : 1,
       "sampler_name"       : "euler",
-      "scheduler"          : "beta_1_1",
+      "scheduler"          : "beta",
       "denoise"            : [
         "2983",
         0
