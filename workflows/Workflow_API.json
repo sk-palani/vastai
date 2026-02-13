@@ -403,8 +403,7 @@
   },
   "251"       : {
     "inputs"     : {
-      "text_0" : "SeeThrough Chifon saree and see-through deep cleavage",
-      "text"   : [
+      "text" : [
         "254",
         0
       ]
@@ -4252,7 +4251,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "3117",
+        "3129",
         0
       ],
       "model2"            : [
@@ -7202,11 +7201,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3117",
+        "3129",
         0
       ],
       "clip"           : [
-        "3117",
+        "2560",
         1
       ]
     },
@@ -7450,25 +7449,6 @@
       "title" : "Replace"
     }
   },
-  "3117"      : {
-    "inputs"     : {
-      "lora_name"      : "SameFace_Fix.safetensors",
-      "strength_model" : -0.6,
-      "strength_clip"  : 1,
-      "model"          : [
-        "2560",
-        0
-      ],
-      "clip"           : [
-        "2560",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "SameFaceNegatice"
-    }
-  },
   "3118"      : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
@@ -7505,6 +7485,20 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA"
+    }
+  },
+  "3129"      : {
+    "inputs"     : {
+      "lora_name"      : "SameFace_Fix.safetensors",
+      "strength_model" : -0.6,
+      "model"          : [
+        "2560",
+        0
+      ]
+    },
+    "class_type" : "LoraLoaderModelOnly",
+    "_meta"      : {
+      "title" : "LoraLoaderModelOnly"
     }
   },
   "2995:113"  : {
