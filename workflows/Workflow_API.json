@@ -403,7 +403,8 @@
   },
   "251"       : {
     "inputs"     : {
-      "text" : [
+      "text_0" : "SeeThrough Chifon saree and see-through deep cleavage",
+      "text"   : [
         "254",
         0
       ]
@@ -641,7 +642,7 @@
   },
   "286"       : {
     "inputs"     : {
-      "value" : false
+      "value" : true
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -872,7 +873,7 @@
   },
   "362"       : {
     "inputs"     : {
-      "value" : 25
+      "value" : 26
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -2136,7 +2137,7 @@
   },
   "1740"      : {
     "inputs"     : {
-      "value" : 1.34
+      "value" : 1.36
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -2707,7 +2708,7 @@
   },
   "1909"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.03,
+      "dishonesty_factor" : -0.02,
       "start_percent"     : 0.25,
       "end_percent"       : 0.4,
       "sampler"           : [
@@ -3834,7 +3835,7 @@
   },
   "2178"      : {
     "inputs"     : {
-      "value" : false
+      "value" : true
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -4251,7 +4252,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "2560",
+        "3117",
         0
       ],
       "model2"            : [
@@ -7201,11 +7202,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "2560",
+        "3117",
         0
       ],
       "clip"           : [
-        "2560",
+        "3117",
         1
       ]
     },
@@ -7421,7 +7422,7 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.25,
+      "max_shift"  : 1.45,
       "base_shift" : 0.75,
       "width"      : 1024,
       "height"     : 1024,
@@ -7447,6 +7448,25 @@
     "class_type" : "StringReplace",
     "_meta"      : {
       "title" : "Replace"
+    }
+  },
+  "3117"      : {
+    "inputs"     : {
+      "lora_name"      : "SameFace_Fix.safetensors",
+      "strength_model" : -0.6,
+      "strength_clip"  : 1,
+      "model"          : [
+        "2560",
+        0
+      ],
+      "clip"           : [
+        "2560",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "SameFaceNegatice"
     }
   },
   "3118"      : {
@@ -7637,7 +7657,7 @@
   "2995:548"  : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : true,
+      "guide_size_for"     : false,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
@@ -7717,8 +7737,8 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.45,
+      "max_shift"  : 1.25,
+      "base_shift" : 0.75,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7850,7 +7870,7 @@
         "2212",
         0
       ],
-      "steps"              : 20,
+      "steps"              : 28,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
