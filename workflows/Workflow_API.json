@@ -2709,7 +2709,7 @@
     "inputs"     : {
       "dishonesty_factor" : -0.02,
       "start_percent"     : 0.25,
-      "end_percent"       : 0.4,
+      "end_percent"       : 0.45,
       "sampler"           : [
         "2957",
         0
@@ -4299,7 +4299,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2268"      : {
@@ -4356,7 +4356,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2273"      : {
@@ -4413,7 +4413,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2277"      : {
@@ -4491,7 +4491,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2296"      : {
@@ -4684,6 +4684,7 @@
       "seam_fix_padding"    : 16,
       "force_uniform_tiles" : true,
       "tiled_decode"        : false,
+      "batch_size"          : 1,
       "image"               : [
         "3038",
         0
@@ -4973,6 +4974,7 @@
       "seam_fix_padding"    : 16,
       "force_uniform_tiles" : true,
       "tiled_decode"        : false,
+      "batch_size"          : 1,
       "image"               : [
         "2384",
         0
@@ -5442,7 +5444,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2644"      : {
@@ -5505,7 +5507,7 @@
     "inputs"     : {
       "detail_amount"      : 0.07,
       "start"              : 0.27,
-      "end"                : 0.42,
+      "end"                : 0.47,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
@@ -6255,7 +6257,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2881"      : {
@@ -6264,7 +6266,7 @@
       "strength_model" : 1.8,
       "strength_clip"  : 1,
       "model"          : [
-        "2695",
+        "3130",
         0
       ],
       "clip"           : [
@@ -6546,7 +6548,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2941"      : {
@@ -6664,7 +6666,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2957"      : {
@@ -7484,7 +7486,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "3129"      : {
@@ -7498,7 +7500,21 @@
     },
     "class_type" : "LoraLoaderModelOnly",
     "_meta"      : {
-      "title" : "LoraLoaderModelOnly"
+      "title" : "Load LoRA"
+    }
+  },
+  "3130"      : {
+    "inputs"     : {
+      "lora_name"      : "SameFace_Fix.safetensors",
+      "strength_model" : -0.6,
+      "model"          : [
+        "2695",
+        0
+      ]
+    },
+    "class_type" : "LoraLoaderModelOnly",
+    "_meta"      : {
+      "title" : "Load LoRA"
     }
   },
   "2995:113"  : {
@@ -7731,8 +7747,8 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.25,
-      "base_shift" : 0.75,
+      "max_shift"  : 0.8,
+      "base_shift" : 0.6,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
