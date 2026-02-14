@@ -1711,14 +1711,18 @@
   "931"       : {
     "inputs"     : {
       "any_01" : [
-        "2403",
+        "3169",
         0
       ],
       "any_02" : [
-        "2339",
+        "2403",
         0
       ],
       "any_03" : [
+        "2339",
+        0
+      ],
+      "any_04" : [
         "1885",
         0
       ]
@@ -3410,7 +3414,7 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.36,
+      "denoise"            : 0.3,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -4678,7 +4682,7 @@
         0
       ],
       "custom_sampler"      : [
-        "2957",
+        "3149",
         0
       ],
       "custom_sigmas"       : [
@@ -4887,8 +4891,8 @@
   "2393"      : {
     "inputs"     : {
       "scheduler" : "beta",
-      "steps"     : 14,
-      "denoise"   : 0.05,
+      "steps"     : 18,
+      "denoise"   : 0.12,
       "model"     : [
         "3055",
         0
@@ -4925,16 +4929,22 @@
         "2212",
         0
       ],
-      "steps"               : 18,
-      "cfg"                 : 3.5,
+      "steps"               : 20,
+      "cfg"                 : 1,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
-      "denoise"             : 0.26,
+      "denoise"             : 0.12,
       "mode_type"           : "Linear",
-      "tile_width"          : 1024,
-      "tile_height"         : 1024,
+      "tile_width"          : [
+        "1927",
+        0
+      ],
+      "tile_height"         : [
+        "1928",
+        0
+      ],
       "mask_blur"           : 32,
-      "tile_padding"        : 64,
+      "tile_padding"        : 32,
       "seam_fix_mode"       : "None",
       "seam_fix_denoise"    : 1,
       "seam_fix_width"      : 64,
@@ -4968,7 +4978,7 @@
         0
       ],
       "custom_sampler"      : [
-        "2957",
+        "3145",
         0
       ],
       "custom_sigmas"       : [
@@ -7465,7 +7475,7 @@
   "3133"      : {
     "inputs"     : {
       "delimiter"        : "",
-      "clean_whitespace" : "false",
+      "clean_whitespace" : "true",
       "text_a"           : [
         "3132",
         0
@@ -7487,7 +7497,7 @@
   "3134"      : {
     "inputs"     : {
       "delimiter"        : "",
-      "clean_whitespace" : "false",
+      "clean_whitespace" : "true",
       "text_a"           : [
         "3132",
         0
@@ -7509,7 +7519,7 @@
   "3135"      : {
     "inputs"     : {
       "delimiter"        : "",
-      "clean_whitespace" : "false",
+      "clean_whitespace" : "true",
       "text_a"           : [
         "3132",
         0
@@ -7531,7 +7541,7 @@
   "3136"      : {
     "inputs"     : {
       "delimiter"        : "",
-      "clean_whitespace" : "false",
+      "clean_whitespace" : "true",
       "text_a"           : [
         "3132",
         0
@@ -7562,7 +7572,7 @@
   },
   "3139"      : {
     "inputs"     : {
-      "value" : "_Prompt_"
+      "value" : "_prompt_"
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
@@ -7571,7 +7581,7 @@
   },
   "3140"      : {
     "inputs"     : {
-      "value" : "_Generated_"
+      "value" : "_generated_"
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
@@ -7580,7 +7590,7 @@
   },
   "3141"      : {
     "inputs"     : {
-      "value" : "_Generated_"
+      "value" : "_generated_"
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
@@ -7589,11 +7599,305 @@
   },
   "3142"      : {
     "inputs"     : {
-      "value" : "_AfterPass02_"
+      "value" : "_pass2_"
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
       "title" : "String"
+    }
+  },
+  "3144"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.02,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.45,
+      "sampler"           : [
+        "2957",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "3145"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.18,
+      "start"              : 0.27,
+      "end"                : 0.47,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3144",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
+  "3149"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.07,
+      "start"              : 0.27,
+      "end"                : 0.47,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3150",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
+  "3150"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.02,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.45,
+      "sampler"           : [
+        "2957",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "3151"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.07,
+      "start"              : 0.27,
+      "end"                : 0.47,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3152",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
+  "3152"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.02,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.45,
+      "sampler"           : [
+        "2957",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "3155"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : false,
+      "images"          : [
+        "3162",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "3156"      : {
+    "inputs"     : {
+      "center_x"            : 0.3,
+      "center_y"            : 0.5,
+      "saturation"          : 0.9,
+      "vignette_intensity"  : 0.010000000000000002,
+      "grain_method"        : "filmgrainer",
+      "grain_power"         : 0.08,
+      "grain_scale"         : 0.4,
+      "grain_sat"           : 0.3,
+      "filmgrainer_shadows" : 0.15000000000000002,
+      "filmgrainer_highs"   : 0.10000000000000002,
+      "blur_strength"       : 1,
+      "blur_focus_spread"   : 0.30000000000000004,
+      "focal_depth"         : 0.10000000000000002,
+      "image"               : [
+        "3165",
+        0
+      ],
+      "depth_map"           : [
+        "3163",
+        0
+      ]
+    },
+    "class_type" : "LayerFilter: FilmV2",
+    "_meta"      : {
+      "title" : "LayerFilter: Film V2"
+    }
+  },
+  "3157"      : {
+    "inputs"     : {
+      "image" : [
+        "3162",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3158"      : {
+    "inputs"     : {
+      "float_value"    : [
+        "2100",
+        0
+      ],
+      "multiply_value" : 0.181818
+    },
+    "class_type" : "FloatMultiplication",
+    "_meta"      : {
+      "title" : "Float Multiplication"
+    }
+  },
+  "3160"      : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "3157",
+        1
+      ],
+      "b"    : [
+        "3157",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "3161"      : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 1,
+      "blur"        : 0,
+      "mask"        : [
+        "3155",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "3162"      : {
+    "inputs"     : {
+      "image" : [
+        "2403",
+        0
+      ]
+    },
+    "class_type" : "ImpactImageBatchToImageList",
+    "_meta"      : {
+      "title" : "Image Batch to Image List"
+    }
+  },
+  "3163"      : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "3160",
+        0
+      ],
+      "image"        : [
+        "3162",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "3165"      : {
+    "inputs"     : {
+      "noise_radius"   : 1,
+      "preserve_edges" : 1,
+      "sharpen"        : 0.5,
+      "ratio"          : 0.5,
+      "image"          : [
+        "3157",
+        0
+      ]
+    },
+    "class_type" : "ImageSmartSharpen+",
+    "_meta"      : {
+      "title" : "🔧 Image Smart Sharpen"
+    }
+  },
+  "3169"      : {
+    "inputs"     : {
+      "images" : [
+        "3171",
+        0
+      ]
+    },
+    "class_type" : "ImageListToImageBatch",
+    "_meta"      : {
+      "title" : "Image List to Image Batch"
+    }
+  },
+  "3171"      : {
+    "inputs"     : {
+      "noise_scale"   : [
+        "3158",
+        0
+      ],
+      "blend_opacity" : 10,
+      "image"         : [
+        "3156",
+        0
+      ],
+      "mask"          : [
+        "3161",
+        0
+      ]
+    },
+    "class_type" : "NoisePlusBlend",
+    "_meta"      : {
+      "title" : "Noise Plus Blend"
     }
   },
   "2995:113"  : {
@@ -7603,7 +7907,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "2866",
+        "3055",
         0
       ]
     },
@@ -7645,7 +7949,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2867",
+        "2213",
         0
       ]
     },
@@ -7700,7 +8004,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2867",
+        "2213",
         0
       ]
     },
@@ -7782,7 +8086,7 @@
         0
       ],
       "clip"               : [
-        "2867",
+        "2213",
         0
       ],
       "vae"                : [
