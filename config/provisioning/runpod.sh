@@ -159,8 +159,9 @@ NODES=(
     "https://github.com/HECer/ComfyUI-FilePathCreator"
     "https://github.com/SparknightLLC/ComfyUI-SpectralVAEDetailer"
     "https://github.com/tritant/ComfyUI-Advanced-Photo-Grain"
-    "https://github.com/sk-palani/ComfyUI_Simpler"
     "https://github.com/chrisfreilich/virtuoso-nodes"
+    "https://github.com/guyyariv/DyPE"
+    "https://github.com/sk-palani/ComfyUI_Simpler"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
@@ -421,6 +422,7 @@ UPSCALE_MODELS=(
     "https://github.com/starinspace/StarinspaceUpscale/releases/download/Models/4xPurePhoto-span.pth"
     "https://huggingface.co/notkenski/upscalers/resolve/main/1xSkinContrast-High-SuperUltraCompact.pth"
     "https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NickelbackFS_72000_G.pth"
+    "https://huggingface.co/uwg/upscaler/blob/main/ESRGAN/4xNomos8kDAT.pth"
 )
 
 CONTROLNET_MODELS=(
