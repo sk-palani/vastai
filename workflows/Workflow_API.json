@@ -1345,11 +1345,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "2609",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -1398,11 +1398,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1930",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -2605,11 +2605,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1934",
+        "3136",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -2857,10 +2857,7 @@
   },
   "1930"      : {
     "inputs"     : {
-      "file_prefix"   : [
-        "1932",
-        0
-      ],
+      "file_prefix"   : "output",
       "time_format"   : "%Y%m%dT%H%M",
       "output_folder" : "",
       "filetype"      : ""
@@ -2882,38 +2879,9 @@
       "title" : "🔧 CR Integer To String"
     }
   },
-  "1932"      : {
-    "inputs"     : {
-      "text1" : "Generated_",
-      "text2" : [
-        "1931",
-        0
-      ]
-    },
-    "class_type" : "TextCombinerTwo",
-    "_meta"      : {
-      "title" : "Text Combiner 2"
-    }
-  },
-  "1933"      : {
-    "inputs"     : {
-      "text1" : "AfterPass02_",
-      "text2" : [
-        "1931",
-        0
-      ]
-    },
-    "class_type" : "TextCombinerTwo",
-    "_meta"      : {
-      "title" : "Text Combiner 2"
-    }
-  },
   "1934"      : {
     "inputs"     : {
-      "file_prefix"   : [
-        "1933",
-        0
-      ],
+      "file_prefix"   : "output",
       "time_format"   : "%Y%m%dT%H%M",
       "output_folder" : "",
       "filetype"      : ""
@@ -3270,11 +3238,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1930",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -4727,11 +4695,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1930",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -4804,11 +4772,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1930",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -5352,10 +5320,7 @@
   },
   "2609"      : {
     "inputs"     : {
-      "file_prefix"   : [
-        "2611",
-        0
-      ],
+      "file_prefix"   : "output",
       "time_format"   : "%Y%m%dT%H%M",
       "output_folder" : "",
       "filetype"      : ""
@@ -5363,27 +5328,11 @@
     "class_type" : "FilePathCreator",
     "_meta"      : {
       "title" : "File Path Creator"
-    }
-  },
-  "2611"      : {
-    "inputs"     : {
-      "text1" : "Generated_",
-      "text2" : [
-        "1931",
-        0
-      ]
-    },
-    "class_type" : "TextCombinerTwo",
-    "_meta"      : {
-      "title" : "Text Combiner 2"
     }
   },
   "2612"      : {
     "inputs"     : {
-      "file_prefix"   : [
-        "2614",
-        0
-      ],
+      "file_prefix"   : "output",
       "time_format"   : "%Y%m%dT%H%M",
       "output_folder" : "",
       "filetype"      : ""
@@ -5391,26 +5340,13 @@
     "class_type" : "FilePathCreator",
     "_meta"      : {
       "title" : "File Path Creator"
-    }
-  },
-  "2614"      : {
-    "inputs"     : {
-      "text1" : "Prompt_",
-      "text2" : [
-        "1931",
-        0
-      ]
-    },
-    "class_type" : "TextCombinerTwo",
-    "_meta"      : {
-      "title" : "Text Combiner 2"
     }
   },
   "2615"      : {
     "inputs"     : {
       "path"                    : "./output/[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "2612",
+        "3133",
         0
       ],
       "filename_delimiter"      : "_",
@@ -6147,11 +6083,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1930",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -6813,11 +6749,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1930",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -6928,11 +6864,11 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "1930",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
+      "filename_number_padding" : 2,
       "filename_number_start"   : "false",
       "extension"               : "png",
       "dpi"                     : 300,
@@ -7473,8 +7409,8 @@
   "3120"      : {
     "inputs"     : {
       "lora_name"      : "body_slider_x-000005.safetensors",
-      "strength_model" : 0.9,
-      "strength_clip"  : 0.9,
+      "strength_model" : 0.8,
+      "strength_clip"  : 0.8,
       "model"          : [
         "2939",
         0
@@ -7515,6 +7451,149 @@
     "class_type" : "LoraLoaderModelOnly",
     "_meta"      : {
       "title" : "Load LoRA"
+    }
+  },
+  "3132"      : {
+    "inputs"     : {
+      "format" : "%Y%m%dT%H%M%S"
+    },
+    "class_type" : "JWDatetimeString",
+    "_meta"      : {
+      "title" : "Datetime String"
+    }
+  },
+  "3133"      : {
+    "inputs"     : {
+      "delimiter"        : "",
+      "clean_whitespace" : "false",
+      "text_a"           : [
+        "3132",
+        0
+      ],
+      "text_b"           : [
+        "3139",
+        0
+      ],
+      "text_c"           : [
+        "1931",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3134"      : {
+    "inputs"     : {
+      "delimiter"        : "",
+      "clean_whitespace" : "false",
+      "text_a"           : [
+        "3132",
+        0
+      ],
+      "text_b"           : [
+        "3140",
+        0
+      ],
+      "text_c"           : [
+        "1931",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3135"      : {
+    "inputs"     : {
+      "delimiter"        : "",
+      "clean_whitespace" : "false",
+      "text_a"           : [
+        "3132",
+        0
+      ],
+      "text_b"           : [
+        "3141",
+        0
+      ],
+      "text_c"           : [
+        "1931",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3136"      : {
+    "inputs"     : {
+      "delimiter"        : "",
+      "clean_whitespace" : "false",
+      "text_a"           : [
+        "3132",
+        0
+      ],
+      "text_b"           : [
+        "3142",
+        0
+      ],
+      "text_c"           : [
+        "1931",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3137"      : {
+    "inputs"     : {
+      "delimiter"        : "",
+      "clean_whitespace" : "false"
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3139"      : {
+    "inputs"     : {
+      "value" : "_Prompt_"
+    },
+    "class_type" : "PrimitiveString",
+    "_meta"      : {
+      "title" : "String"
+    }
+  },
+  "3140"      : {
+    "inputs"     : {
+      "value" : "_Generated_"
+    },
+    "class_type" : "PrimitiveString",
+    "_meta"      : {
+      "title" : "String"
+    }
+  },
+  "3141"      : {
+    "inputs"     : {
+      "value" : "_Generated_"
+    },
+    "class_type" : "PrimitiveString",
+    "_meta"      : {
+      "title" : "String"
+    }
+  },
+  "3142"      : {
+    "inputs"     : {
+      "value" : "_AfterPass02_"
+    },
+    "class_type" : "PrimitiveString",
+    "_meta"      : {
+      "title" : "String"
     }
   },
   "2995:113"  : {
