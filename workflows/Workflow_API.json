@@ -1711,11 +1711,11 @@
   "931"       : {
     "inputs"     : {
       "any_01" : [
-        "3169",
+        "2403",
         0
       ],
       "any_02" : [
-        "2403",
+        "3179",
         0
       ],
       "any_03" : [
@@ -4954,7 +4954,7 @@
       "tiled_decode"        : false,
       "batch_size"          : 1,
       "image"               : [
-        "2384",
+        "3179",
         0
       ],
       "model"               : [
@@ -4978,7 +4978,7 @@
         0
       ],
       "custom_sampler"      : [
-        "3145",
+        "2957",
         0
       ],
       "custom_sigmas"       : [
@@ -7129,7 +7129,7 @@
   },
   "3055"      : {
     "inputs"     : {
-      "reuse_threshold" : 0.2,
+      "reuse_threshold" : 0.29,
       "start_percent"   : 0.15,
       "end_percent"     : 0.95,
       "verbose"         : false,
@@ -7606,43 +7606,6 @@
       "title" : "String"
     }
   },
-  "3144"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.02,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.45,
-      "sampler"           : [
-        "2957",
-        0
-      ]
-    },
-    "class_type" : "LyingSigmaSampler",
-    "_meta"      : {
-      "title" : "Lying Sigma Sampler"
-    }
-  },
-  "3145"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.18,
-      "start"              : 0.27,
-      "end"                : 0.47,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "3144",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
-    }
-  },
   "3149"      : {
     "inputs"     : {
       "detail_amount"      : 0.07,
@@ -7666,43 +7629,6 @@
     }
   },
   "3150"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.02,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.45,
-      "sampler"           : [
-        "2957",
-        0
-      ]
-    },
-    "class_type" : "LyingSigmaSampler",
-    "_meta"      : {
-      "title" : "Lying Sigma Sampler"
-    }
-  },
-  "3151"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.07,
-      "start"              : 0.27,
-      "end"                : 0.47,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "3152",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
-    }
-  },
-  "3152"      : {
     "inputs"     : {
       "dishonesty_factor" : -0.02,
       "start_percent"     : 0.25,
@@ -7825,7 +7751,7 @@
   "3162"      : {
     "inputs"     : {
       "image" : [
-        "2403",
+        "2384",
         0
       ]
     },
@@ -7885,7 +7811,7 @@
         "3158",
         0
       ],
-      "blend_opacity" : 10,
+      "blend_opacity" : 5,
       "image"         : [
         "3156",
         0
@@ -7898,6 +7824,36 @@
     "class_type" : "NoisePlusBlend",
     "_meta"      : {
       "title" : "Noise Plus Blend"
+    }
+  },
+  "3179"      : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "3135",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 2,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "true",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "3169",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
     }
   },
   "2995:113"  : {
@@ -8740,7 +8696,7 @@
   },
   "3014:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.45,
+      "max_shift"  : 1.15,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -8869,11 +8825,11 @@
         "2212",
         0
       ],
-      "steps"              : 23,
+      "steps"              : 21,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.32,
+      "denoise"            : 0.16,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
