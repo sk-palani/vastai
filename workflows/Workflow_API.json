@@ -641,7 +641,7 @@
   },
   "286"       : {
     "inputs"     : {
-      "value" : false
+      "value" : true
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -823,7 +823,7 @@
         "622",
         0
       ],
-      "blend_opacity" : 13,
+      "blend_opacity" : 11,
       "image"         : [
         "363",
         0
@@ -872,7 +872,7 @@
   },
   "362"       : {
     "inputs"     : {
-      "value" : 26
+      "value" : 25
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -2136,7 +2136,7 @@
   },
   "1740"      : {
     "inputs"     : {
-      "value" : 1.25
+      "value" : 1.28
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -2707,9 +2707,9 @@
   },
   "1909"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.02,
+      "dishonesty_factor" : -0.03,
       "start_percent"     : 0.25,
-      "end_percent"       : 0.45,
+      "end_percent"       : 0.4,
       "sampler"           : [
         "2957",
         0
@@ -3408,9 +3408,9 @@
       ],
       "steps"              : 26,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
+      "sampler_name"       : "heun",
       "scheduler"          : "beta",
-      "denoise"            : 0.26,
+      "denoise"            : 0.36,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -3802,7 +3802,7 @@
   },
   "2178"      : {
     "inputs"     : {
-      "value" : true
+      "value" : false
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -4834,7 +4834,7 @@
         "1955",
         0
       ],
-      "b"         : 0.6,
+      "b"         : 0.72,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -4883,7 +4883,7 @@
         "2102",
         0
       ],
-      "b"         : 0.3,
+      "b"         : 0.72,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5196,15 +5196,15 @@
   },
   "2666"      : {
     "inputs"     : {
-      "detail_amount"      : 0.07,
+      "detail_amount"      : 0.06,
       "start"              : 0.27,
-      "end"                : 0.47,
+      "end"                : 0.42,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : true,
+      "smooth"             : false,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "1909",
@@ -7055,8 +7055,8 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.75,
+      "max_shift"  : 1.25,
+      "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -7826,8 +7826,8 @@
       ],
       "steps"              : 17,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
+      "sampler_name"       : "dpmpp_sde",
+      "scheduler"          : "sgm_uniform",
       "denoise"            : [
         "2553",
         0
@@ -8031,7 +8031,7 @@
         "2212",
         0
       ],
-      "steps"              : 21,
+      "steps"              : 18,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -8242,12 +8242,12 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.39,
+      "denoise"            : 0.42,
       "feather"            : 6,
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 2,
+      "cycle"              : 1,
       "inpaint_model"      : false,
       "noise_mask_feather" : 20,
       "tiled_encode"       : false,
