@@ -3012,8 +3012,8 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "3120",
-        1
+        "2936",
+        0
       ]
     },
     "class_type" : "CLIPTextEncodeFlux",
@@ -3035,7 +3035,7 @@
         0
       ],
       "model"        : [
-        "3120",
+        "2939",
         0
       ],
       "conditioning" : [
@@ -3400,7 +3400,7 @@
   "2085"      : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : true,
+      "guide_size_for"     : false,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
@@ -3410,7 +3410,7 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.36,
+      "denoise"            : 0.26,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -4883,7 +4883,7 @@
         "2102",
         0
       ],
-      "b"         : 0.33,
+      "b"         : 0.3,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -7102,25 +7102,6 @@
       "title" : "aidmarealisticskin"
     }
   },
-  "3120"      : {
-    "inputs"     : {
-      "lora_name"      : "body_slider_x-000005.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
-      "model"          : [
-        "2939",
-        0
-      ],
-      "clip"           : [
-        "2936",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
-    }
-  },
   "3129"      : {
     "inputs"     : {
       "lora_name"      : "SameFace_Fix.safetensors",
@@ -7614,22 +7595,6 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "3238"      : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.45,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3055",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "ModelSamplingFlux"
-    }
-  },
   "3243"      : {
     "inputs"     : {
       "text1"     : [
@@ -7656,7 +7621,7 @@
         0
       ],
       "steps"               : 21,
-      "cfg"                 : 0,
+      "cfg"                 : 1,
       "sampler_name"        : "ddim",
       "scheduler"           : "beta",
       "denoise"             : 0.44,
@@ -7678,7 +7643,7 @@
         0
       ],
       "model"               : [
-        "3238",
+        "3055",
         0
       ],
       "positive"            : [
@@ -7786,7 +7751,7 @@
   "2995:2972" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves",
+      "text2"     : "",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -7841,7 +7806,7 @@
   "2995:2973" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish ",
+      "text2"     : "",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -8066,10 +8031,10 @@
         "2212",
         0
       ],
-      "steps"              : 32,
+      "steps"              : 21,
       "cfg"                : 1,
-      "sampler_name"       : "euler_ancestral",
-      "scheduler"          : "normal",
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
       "denoise"            : [
         "2983",
         0
@@ -8277,7 +8242,7 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.42,
+      "denoise"            : 0.39,
       "feather"            : 6,
       "noise_mask"         : true,
       "force_inpaint"      : true,
