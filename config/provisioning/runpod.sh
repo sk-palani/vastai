@@ -161,6 +161,7 @@ NODES=(
     "https://github.com/tritant/ComfyUI-Advanced-Photo-Grain"
     "https://github.com/chrisfreilich/virtuoso-nodes"
     "https://github.com/guyyariv/DyPE"
+    "https://github.com/kijai/ComfyUI-SUPIR"
     "https://github.com/sk-palani/ComfyUI_Simpler"
 )
 
