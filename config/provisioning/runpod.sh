@@ -277,13 +277,11 @@ LORA_MODELS=(
 #   flux_vividizer.safetensors
     "https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
+#   flux-lora-foot.safetensors
+    "https://civitai.com/api/download/models/2069958?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
-
-
-
-
-
-
+#   aidmaNSFWunlock-FLUX-V0.2.safetensors
+    "https://civitai.com/api/download/models/780667?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 #   MysticXXX-v7.safetensors
     "https://civitai.com/api/download/models/2009929?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
