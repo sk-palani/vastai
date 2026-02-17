@@ -1256,7 +1256,7 @@
   "542"       : {
     "inputs"     : {
       "images" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -1345,7 +1345,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3134",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
@@ -1398,7 +1398,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3135",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
@@ -1719,7 +1719,7 @@
         0
       ],
       "any_03" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -1754,11 +1754,11 @@
   "1267"      : {
     "inputs"     : {
       "any_01" : [
-        "2704",
+        "1885",
         0
       ],
       "any_02" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -2091,11 +2091,11 @@
         0
       ],
       "any_05" : [
-        "2704",
+        "1885",
         0
       ],
       "any_06" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -2216,11 +2216,8 @@
   },
   "1813"      : {
     "inputs"     : {
-      "OutputDirectory" : "temp",
-      "OverwriteFile"   : [
-        "124",
-        0
-      ],
+      "OutputDirectory" : "processing",
+      "OverwriteFile"   : true,
       "FilePaths"       : [
         "1838",
         0
@@ -2622,7 +2619,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3018",
+        "2704",
         0
       ]
     },
@@ -2855,18 +2852,6 @@
       "title" : "ImpactMinMax"
     }
   },
-  "1930"      : {
-    "inputs"     : {
-      "file_prefix"   : "output",
-      "time_format"   : "%Y%m%dT%H%M",
-      "output_folder" : "",
-      "filetype"      : ""
-    },
-    "class_type" : "FilePathCreator",
-    "_meta"      : {
-      "title" : "File Path Creator"
-    }
-  },
   "1931"      : {
     "inputs"     : {
       "int_" : [
@@ -2877,18 +2862,6 @@
     "class_type" : "CR Integer To String",
     "_meta"      : {
       "title" : "🔧 CR Integer To String"
-    }
-  },
-  "1934"      : {
-    "inputs"     : {
-      "file_prefix"   : "output",
-      "time_format"   : "%Y%m%dT%H%M",
-      "output_folder" : "",
-      "filetype"      : ""
-    },
-    "class_type" : "FilePathCreator",
-    "_meta"      : {
-      "title" : "File Path Creator"
     }
   },
   "1936"      : {
@@ -3086,11 +3059,11 @@
         0
       ],
       "any_03" : [
-        "2704",
+        "1885",
         0
       ],
       "any_04" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -3238,7 +3211,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3135",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
@@ -3271,11 +3244,11 @@
         0
       ],
       "any_02" : [
-        "2704",
+        "1885",
         0
       ],
       "any_03" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -3714,7 +3687,7 @@
         0
       ],
       "any_02" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -4273,7 +4246,7 @@
   "2268"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.7,
+      "strength_model" : 2.34,
       "strength_clip"  : 1,
       "model"          : [
         "3029",
@@ -4678,7 +4651,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3135",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
@@ -4719,11 +4692,11 @@
         0
       ],
       "any_04" : [
-        "2704",
+        "1885",
         0
       ],
       "any_05" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -5073,30 +5046,6 @@
       "title" : "Positive"
     }
   },
-  "2609"      : {
-    "inputs"     : {
-      "file_prefix"   : "output",
-      "time_format"   : "%Y%m%dT%H%M",
-      "output_folder" : "",
-      "filetype"      : ""
-    },
-    "class_type" : "FilePathCreator",
-    "_meta"      : {
-      "title" : "File Path Creator"
-    }
-  },
-  "2612"      : {
-    "inputs"     : {
-      "file_prefix"   : "output",
-      "time_format"   : "%Y%m%dT%H%M",
-      "output_folder" : "",
-      "filetype"      : ""
-    },
-    "class_type" : "FilePathCreator",
-    "_meta"      : {
-      "title" : "File Path Creator"
-    }
-  },
   "2615"      : {
     "inputs"     : {
       "path"                    : "./output/[time(%Y-%m-%d)]",
@@ -5320,7 +5269,7 @@
   "2703"      : {
     "inputs"     : {
       "image" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -5524,11 +5473,11 @@
         0
       ],
       "any_04" : [
-        "2704",
+        "1885",
         0
       ],
       "any_05" : [
-        "1885",
+        "3018",
         0
       ]
     },
@@ -5838,7 +5787,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3135",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
@@ -6013,7 +5962,7 @@
       "block_number"         : 4,
       "downscale_factor"     : 2,
       "start_percent"        : 0,
-      "end_percent"          : 0.5,
+      "end_percent"          : 0.75,
       "downscale_after_skip" : true,
       "downscale_method"     : "bislerp",
       "upscale_method"       : "bislerp",
@@ -6024,7 +5973,7 @@
     },
     "class_type" : "PatchModelAddDownscale",
     "_meta"      : {
-      "title" : "PatchModelAddDownscale"
+      "title" : "4::2::0::0.5"
     }
   },
   "2892"      : {
@@ -6352,7 +6301,7 @@
   },
   "2963"      : {
     "inputs"     : {
-      "model_name" : "4xPurePhoto-Span.pth"
+      "model_name" : "4x_foolhardy_Remacri.pth"
     },
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
@@ -6445,7 +6394,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3135",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
@@ -6560,7 +6509,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3135",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
@@ -6852,7 +6801,7 @@
     "inputs"     : {
       "enable_fp16_accumulation" : true,
       "model"                    : [
-        "2891",
+        "3259",
         0
       ]
     },
@@ -7227,16 +7176,6 @@
       "title" : "Text Concatenate"
     }
   },
-  "3137"      : {
-    "inputs"     : {
-      "delimiter"        : "",
-      "clean_whitespace" : "false"
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
   "3139"      : {
     "inputs"     : {
       "value" : "_prompt_"
@@ -7257,7 +7196,7 @@
   },
   "3141"      : {
     "inputs"     : {
-      "value" : "_generated_"
+      "value" : "_upscaled_"
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
@@ -7582,17 +7521,33 @@
         0
       ],
       "any_07" : [
-        "2704",
+        "1885",
         0
       ],
       "any_08" : [
-        "1885",
+        "3018",
         0
       ]
     },
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
+    }
+  },
+  "3238"      : {
+    "inputs"     : {
+      "max_shift"  : 1.2,
+      "base_shift" : 0.8,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3055",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
     }
   },
   "3243"      : {
@@ -7624,7 +7579,7 @@
       "cfg"                 : 1,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
-      "denoise"             : 0.1,
+      "denoise"             : 0,
       "mode_type"           : "Linear",
       "tile_width"          : 768,
       "tile_height"         : 768,
@@ -7643,7 +7598,7 @@
         0
       ],
       "model"               : [
-        "3055",
+        "3238",
         0
       ],
       "positive"            : [
@@ -7666,6 +7621,25 @@
     "class_type" : "UltimateSDUpscale",
     "_meta"      : {
       "title" : "Ultimate SD Upscale"
+    }
+  },
+  "3259"      : {
+    "inputs"     : {
+      "block_number"         : 4,
+      "downscale_factor"     : 1,
+      "start_percent"        : 0.75,
+      "end_percent"          : 1,
+      "downscale_after_skip" : true,
+      "downscale_method"     : "bislerp",
+      "upscale_method"       : "bislerp",
+      "model"                : [
+        "2891",
+        0
+      ]
+    },
+    "class_type" : "PatchModelAddDownscale",
+    "_meta"      : {
+      "title" : "PatchModelAddDownscale"
     }
   },
   "2995:113"  : {
@@ -7824,10 +7798,10 @@
         "2212",
         0
       ],
-      "steps"              : 17,
+      "steps"              : 24,
       "cfg"                : 1,
-      "sampler_name"       : "dpmpp_sde",
-      "scheduler"          : "sgm_uniform",
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
       "denoise"            : [
         "2553",
         0
