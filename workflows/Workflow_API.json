@@ -4246,8 +4246,8 @@
   "2268"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.34,
-      "strength_clip"  : 1,
+      "strength_model" : 1.80,
+      "strength_clip"  : 0.80,
       "model"          : [
         "3029",
         0
@@ -7840,7 +7840,7 @@
   "2995:548"  : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : true,
+      "guide_size_for"     : false,
       "max_size"           : 1024,
       "seed"               : [
         "2212",
