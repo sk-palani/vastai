@@ -2394,7 +2394,7 @@
   "1848"      : {
     "inputs"     : {
       "megapixel"     : "2.0",
-      "divisible_by"  : "64",
+      "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
         "2532",
@@ -2661,7 +2661,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.27*(a+c*(b-a))",
+      "expression" : "1.33*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -4196,7 +4196,7 @@
         0
       ],
       "model2"            : [
-        "2644",
+        "2300",
         0
       ]
     },
@@ -4319,25 +4319,6 @@
       "title" : "Load LoRA ::0.8:0.2"
     }
   },
-  "2275"      : {
-    "inputs"     : {
-      "lora_name"      : "flux_vividizer.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 1,
-      "model"          : [
-        "3058",
-        0
-      ],
-      "clip"           : [
-        "2890",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmafluxproultra"
-    }
-  },
   "2276"      : {
     "inputs"     : {
       "lora_name"      : "Illustration Comic book_(FLUX)_06.safetensors",
@@ -4363,12 +4344,12 @@
       "strength_model" : 0.4,
       "strength_clip"  : 0.4,
       "model"          : [
-        "2275",
+        "3058",
         0
       ],
       "clip"           : [
-        "2275",
-        1
+        "2890",
+        0
       ]
     },
     "class_type" : "LoraLoader",
@@ -4634,7 +4615,7 @@
         0
       ],
       "custom_sampler"      : [
-        "3149",
+        "2957",
         0
       ],
       "custom_sigmas"       : [
@@ -5087,25 +5068,6 @@
       "title" : "Load LoRA (Model and CLIP)"
     }
   },
-  "2644"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.9,
-      "model"          : [
-        "2300",
-        0
-      ],
-      "clip"           : [
-        "2300",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Flux_Lora_32F_Breasts"
-    }
-  },
   "2652"      : {
     "inputs"     : {
       "text" : "aidmaimageupgrader, fluxenhancer, detailed hands, Perfect hand"
@@ -5145,9 +5107,9 @@
   },
   "2666"      : {
     "inputs"     : {
-      "detail_amount"      : 0.07,
+      "detail_amount"      : 0.06,
       "start"              : 0.23,
-      "end"                : 0.42,
+      "end"                : 0.43,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
@@ -6000,7 +5962,7 @@
   "2894"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "default"
+      "weight_dtype" : "fp8_e4m3fn"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -6119,11 +6081,11 @@
       "strength_model" : 0.4,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3020",
+        "2881",
         0
       ],
       "clip"           : [
-        "3020",
+        "2881",
         1
       ]
     },
@@ -6301,7 +6263,7 @@
   },
   "2963"      : {
     "inputs"     : {
-      "model_name" : "4x_foolhardy_Remacri.pth"
+      "model_name" : "4xPurePhoto-Span.pth"
     },
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
@@ -6585,25 +6547,6 @@
     "class_type" : "LayerColor: ColorAdapter",
     "_meta"      : {
       "title" : "LayerColor: ColorAdapter"
-    }
-  },
-  "3020"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 0.7,
-      "strength_clip"  : 0.7,
-      "model"          : [
-        "2881",
-        0
-      ],
-      "clip"           : [
-        "2881",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Flux_Lora_32F_Breasts"
     }
   },
   "3023"      : {
@@ -7452,7 +7395,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2213",
+        "2291",
         0
       ]
     },
@@ -7485,7 +7428,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2213",
+        "2291",
         0
       ]
     },
@@ -7570,7 +7513,7 @@
   },
   "3261"      : {
     "inputs"     : {
-      "strength"      : 0.64,
+      "strength"      : 0.9,
       "start_percent" : 0,
       "end_percent"   : 1,
       "positive"      : [
@@ -7605,13 +7548,13 @@
         "2212",
         0
       ],
-      "steps"        : 18,
+      "steps"        : 19,
       "cfg"          : 1,
-      "sampler_name" : "heun",
-      "scheduler"    : "beta",
-      "denoise"      : 0.42,
+      "sampler_name" : "dpmpp_2m",
+      "scheduler"    : "karras",
+      "denoise"      : 0.48,
       "model"        : [
-        "3055",
+        "2292",
         0
       ],
       "positive"     : [
@@ -7630,23 +7573,6 @@
     "class_type" : "KSampler",
     "_meta"      : {
       "title" : "KSampler"
-    }
-  },
-  "3263"      : {
-    "inputs"     : {
-      "upscale_method" : "bicubic",
-      "scale_by"       : [
-        "1740",
-        0
-      ],
-      "image"          : [
-        "3231",
-        0
-      ]
-    },
-    "class_type" : "ImageScaleBy",
-    "_meta"      : {
-      "title" : "Upscale Image By"
     }
   },
   "3264"      : {
@@ -7677,7 +7603,7 @@
   "3267"      : {
     "inputs"     : {
       "pixels" : [
-        "3263",
+        "3272",
         0
       ],
       "vae"    : [
@@ -7688,6 +7614,28 @@
     "class_type" : "VAEEncode",
     "_meta"      : {
       "title" : "VAE Encode"
+    }
+  },
+  "3272"      : {
+    "inputs"     : {
+      "upscale_model"     : "1xSkinContrast-High-SuperUltraCompact.pth",
+      "mode"              : "rescale",
+      "rescale_factor"    : [
+        "1740",
+        0
+      ],
+      "resize_width"      : 1024,
+      "resampling_method" : "lanczos",
+      "supersample"       : "true",
+      "rounding_modulus"  : 8,
+      "image"             : [
+        "3231",
+        0
+      ]
+    },
+    "class_type" : "CR Upscale Image",
+    "_meta"      : {
+      "title" : "🔍 CR Upscale Image"
     }
   },
   "2995:113"  : {
