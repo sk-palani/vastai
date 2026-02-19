@@ -86,6 +86,11 @@ if [ "$total" -gt 1 ]; then
   exit 0
 fi
 
+# --- Clear History ---
+echo "[$LOG_TS] 🧹 Clearing history (ignoring failures)..."
+curl -v -X POST "$URL/api/history" \
+     -H "Content-Type: application/json" \
+     -d '{"clear":true}' > /dev/null 2>&1 || true
 
 
 # --- Submit workflow ---
