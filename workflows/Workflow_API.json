@@ -7032,7 +7032,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "2291",
+        "2213",
         0
       ]
     },
@@ -7056,7 +7056,7 @@
   "3225"      : {
     "inputs"     : {
       "clip_l"   : [
-        "2106",
+        "3315",
         0
       ],
       "t5xxl"    : [
@@ -7065,7 +7065,7 @@
       ],
       "guidance" : 3.5,
       "clip"     : [
-        "2291",
+        "2213",
         0
       ]
     },
@@ -7117,7 +7117,7 @@
   "3243"      : {
     "inputs"     : {
       "text1"     : [
-        "2580",
+        "788",
         0
       ],
       "text2"     : "",
@@ -7191,7 +7191,7 @@
       "scheduler"    : "simple",
       "denoise"      : 0.18,
       "model"        : [
-        "2292",
+        "3055",
         0
       ],
       "positive"     : [
@@ -7273,6 +7273,21 @@
     "class_type" : "CR Upscale Image",
     "_meta"      : {
       "title" : "🔍 CR Upscale Image"
+    }
+  },
+  "3315"      : {
+    "inputs"     : {
+      "text1"     : [
+        "2106",
+        0
+      ],
+      "text2"     : "(aidmarealisticskin:0.2)",
+      "text3"     : "",
+      "delimiter" : ""
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
     }
   },
   "2995:113"  : {
@@ -8115,7 +8130,7 @@
   },
   "3014:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.6,
+      "max_shift"  : 1.5,
       "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
@@ -8248,7 +8263,7 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "simple",
-      "denoise"            : 0.37,
+      "denoise"            : 0.23,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
