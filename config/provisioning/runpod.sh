@@ -403,6 +403,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1782533?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #   d351_Coffee_Krea_Kohya_V1_Unchained_prodigy-000012.safetensors
     "https://civitai.com/api/download/models/2402710?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#   FLUX_Polyhedron_all_Kohya_ss-000001.safetensors
+    "https://civitai.com/api/download/models/812320?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
