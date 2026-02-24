@@ -405,6 +405,11 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2402710?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #   FLUX_Polyhedron_all_Kohya_ss-000001.safetensors
     "https://civitai.com/api/download/models/812320?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#   Portrait_Engine v2.0.safetensors
+    "https://civitai.com/api/download/models/2426731?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#   fluxlisimo_aura_v5-FLUX.safetensors
+    "https://civitai.com/api/download/models/2399530?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 )
 
 
