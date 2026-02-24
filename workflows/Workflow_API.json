@@ -403,8 +403,7 @@
   },
   "251"       : {
     "inputs"     : {
-      "text_0" : "See-Through Braless thin top",
-      "text"   : [
+      "text" : [
         "254",
         0
       ]
@@ -4719,7 +4718,7 @@
     "inputs"     : {
       "detail_amount"      : 0.06,
       "start"              : 0.25,
-      "end"                : 0.35,
+      "end"                : 0.3,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
@@ -8024,8 +8023,8 @@
   },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.25,
-      "base_shift" : 0.8,
+      "max_shift"  : 1.45,
+      "base_shift" : 0.6,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -8231,8 +8230,8 @@
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.25,
-      "base_shift" : 0.8,
+      "max_shift"  : 1.4,
+      "base_shift" : 0.7,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -8364,7 +8363,7 @@
         "3338",
         0
       ],
-      "steps"              : 18,
+      "steps"              : 19,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
