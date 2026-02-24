@@ -403,7 +403,8 @@
   },
   "251"       : {
     "inputs"     : {
-      "text" : [
+      "text_0" : "See-Through Braless thin top",
+      "text"   : [
         "254",
         0
       ]
@@ -2986,7 +2987,7 @@
   },
   "1988"      : {
     "inputs"     : {
-      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\n32F_Cup",
+      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\nd351 d4rk",
       "t5xxl"    : [
         "788",
         0
@@ -3796,7 +3797,7 @@
         "2106",
         0
       ],
-      "text2"     : "(aidmarealisticskin:0.2)",
+      "text2"     : "(aidmarealisticskin:0.2), d351 d4rk",
       "text3"     : "",
       "delimiter" : ""
     },
@@ -3984,7 +3985,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5"
+      "title" : "v1dhya5 1.00::0.00"
     }
   },
   "2253"      : {
@@ -4003,14 +4004,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "Pandora-RAWr 1.00:1.00"
     }
   },
   "2268"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
       "strength_model" : 1.8,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3417",
         0
@@ -4022,7 +4023,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "breast-size2 [3.80::3.80]"
+      "title" : "breast-size2 1.80::0.80"
     }
   },
   "2269"      : {
@@ -4041,7 +4042,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "fluxenhancer"
+      "title" : "aidmaImageUprader-FLUX-v0.3 0.40::0.40"
     }
   },
   "2270"      : {
@@ -4060,7 +4061,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
+      "title" : "AntiBlur 1.50:1.00"
     }
   },
   "2277"      : {
@@ -4079,14 +4080,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "fluxenhancer"
+      "title" : "aidmaImageUprader-FLUX-v0.3 0.40::0.40"
     }
   },
   "2296"      : {
     "inputs"     : {
       "lora_name"      : "aidmaFluxProUltra-FLUX-v0.1.safetensors",
       "strength_model" : 0.65,
-      "strength_clip"  : 0.65,
+      "strength_clip"  : 0.2,
       "model"          : [
         "2247",
         0
@@ -4098,7 +4099,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "aidmaFluxProUltra-FLUX-v0.1 0.65::0.65"
     }
   },
   "2304"      : {
@@ -4674,7 +4675,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
+      "title" : "BreastShaper_splendid_droplets_Flux_v3.0-000009 0.40::0.14"
     }
   },
   "2652"      : {
@@ -4702,7 +4703,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "fluxenhancer"
+      "title" : "Detailed_Hands-000001 0.40:0.60"
     }
   },
   "2656"      : {
@@ -4718,14 +4719,14 @@
     "inputs"     : {
       "detail_amount"      : 0.06,
       "start"              : 0.25,
-      "end"                : 0.45,
+      "end"                : 0.35,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
       "smooth"             : true,
-      "cfg_scale_override" : 1,
+      "cfg_scale_override" : 0,
       "sampler"            : [
         "1909",
         0
@@ -4855,25 +4856,6 @@
     "class_type" : "LayerMask: MaskGrow",
     "_meta"      : {
       "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "2721"      : {
-    "inputs"     : {
-      "lora_name"      : "flux_vividizer.safetensors",
-      "strength_model" : 0.65,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin"
     }
   },
   "2727"      : {
@@ -5411,14 +5393,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "Pandora-RAWr 0.65::0.65"
     }
   },
   "2875"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 1,
+      "strength_model" : 0.8,
+      "strength_clip"  : 0.2,
       "model"          : [
         "2618",
         0
@@ -5430,14 +5412,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
+      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.80:0.80"
     }
   },
   "2901"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 1,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3401",
         0
@@ -5449,7 +5431,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "Pandora-RAWr 0.80::1.00"
     }
   },
   "2922"      : {
@@ -5890,7 +5872,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "Pandora-RAWr 0.80::0.80"
     }
   },
   "3038"      : {
@@ -5982,7 +5964,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "aidmarealisticskin 0.20:0.10"
     }
   },
   "3070"      : {
@@ -6174,7 +6156,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "fluxenhancer"
+      "title" : "Premium_Cinematic_Color-Graded_Portrait_Style__Inspired_by_Brandon_Woelfel 0.40::0.40"
     }
   },
   "3114"      : {
@@ -6223,7 +6205,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "FLUX_Polyhedron_all_Kohya_ss-000001 0.80::0.10"
     }
   },
   "3132"      : {
@@ -6881,7 +6863,7 @@
   },
   "3304"      : {
     "inputs"     : {
-      "max_shift"  : 1.25,
+      "max_shift"  : 1.8,
       "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
@@ -7195,7 +7177,7 @@
   "3339"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3367",
+        "3410",
         1
       ],
       "clip_b"  : [
@@ -7245,7 +7227,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.92,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3401",
         0
@@ -7257,14 +7239,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5"
+      "title" : "v1dhya5 0.92::0.88"
     }
   },
   "3353"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3401",
         0
@@ -7276,7 +7258,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5"
+      "title" : "v1dhya5 1.00::0.80"
     }
   },
   "3356"      : {
@@ -7349,7 +7331,7 @@
         0
       ],
       "model2"            : [
-        "3367",
+        "3410",
         0
       ]
     },
@@ -7393,7 +7375,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
+      "title" : "ILLUSTRATION (FLUX) - V3.1 0.66::1.00"
     }
   },
   "3362"      : {
@@ -7452,14 +7434,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
+      "title" : "ILLUSTRATION (FLUX) - V3.1 0.80::0.80"
     }
   },
   "3367"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
       "strength_model" : 1.75,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3388",
         0
@@ -7471,14 +7453,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "breast-size2 [3.80::3.80]"
+      "title" : "breast-size2 1.75::0.80"
     }
   },
   "3368"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.7,
-      "strength_clip"  : 0.7,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3352",
         0
@@ -7490,7 +7472,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Realism"
+      "title" : "Pandora-RAWr 0.70::0.70"
     }
   },
   "3369"      : {
@@ -7509,14 +7491,14 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "aidmarealisticskin 0.60::0.10"
     }
   },
   "3370"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
       "strength_model" : 1.8,
-      "strength_clip"  : 1,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3399",
         0
@@ -7528,12 +7510,12 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "breast-size2 [3.20::3.20]"
+      "title" : "breast-size2 1.80::1.00"
     }
   },
   "3372"      : {
     "inputs"     : {
-      "stop_at_clip_layer" : -3,
+      "stop_at_clip_layer" : -2,
       "clip"               : [
         "3404",
         0
@@ -7594,7 +7576,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
+      "title" : "ILLUSTRATION (FLUX) - V3.1 0.80::0.21"
     }
   },
   "3380"      : {
@@ -7658,7 +7640,7 @@
   "3388"      : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
+      "strength_model" : 0.4,
       "strength_clip"  : 0.1,
       "model"          : [
         "3397",
@@ -7671,7 +7653,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "aidmarealisticskin 0.60::0.10"
     }
   },
   "3391"      : {
@@ -7725,7 +7707,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5"
+      "title" : "v1dhya5 0.80::0.20"
     }
   },
   "3394"      : {
@@ -7744,7 +7726,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5"
+      "title" : "v1dhya5 0.80::0.10"
     }
   },
   "3395"      : {
@@ -7771,7 +7753,7 @@
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3394",
         0
@@ -7783,7 +7765,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Pandora-RAWr"
+      "title" : "Pandora-RAWr 0.80:0.80"
     }
   },
   "3397"      : {
@@ -7804,7 +7786,7 @@
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 1.5,
-      "strength_clip"  : 1,
+      "strength_clip"  : 0.02,
       "model"          : [
         "3392",
         0
@@ -7816,7 +7798,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "Pandora-RAWr 1.50::1.00"
     }
   },
   "3399"      : {
@@ -7897,7 +7879,7 @@
   },
   "3404"      : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
@@ -7926,11 +7908,49 @@
       "title" : "4::2::0::0.5"
     }
   },
+  "3410"      : {
+    "inputs"     : {
+      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "3367",
+        0
+      ],
+      "clip"           : [
+        "3367",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.60::0.90"
+    }
+  },
   "3411"      : {
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
       "strength_model" : 0.4,
       "strength_clip"  : 0.1,
+      "model"          : [
+        "3412",
+        0
+      ],
+      "clip"           : [
+        "3412",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin 0.40::0.10"
+    }
+  },
+  "3412"      : {
+    "inputs"     : {
+      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
+      "strength_model" : 0.7,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3370",
         0
@@ -7942,7 +7962,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.70::0.70"
     }
   },
   "3413"      : {
@@ -7999,7 +8019,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "aidmarealisticskin"
+      "title" : "aidmarealisticskin 0.60::0.10"
     }
   },
   "2995:113"  : {
