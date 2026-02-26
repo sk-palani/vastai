@@ -1387,7 +1387,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.68
+      "value2" : 0.7
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -2555,7 +2555,7 @@
         0
       ],
       "sampler"      : [
-        "2666",
+        "3420",
         0
       ],
       "sigmas"       : [
@@ -2708,21 +2708,6 @@
     "class_type" : "MaskPreview+",
     "_meta"      : {
       "title" : "🔧 Mask Preview"
-    }
-  },
-  "1909"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.02,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.45,
-      "sampler"           : [
-        "3381",
-        0
-      ]
-    },
-    "class_type" : "LyingSigmaSampler",
-    "_meta"      : {
-      "title" : "Lying Sigma Sampler"
     }
   },
   "1913"      : {
@@ -2984,6 +2969,28 @@
       "title" : "Math Float"
     }
   },
+  "1978"      : {
+    "inputs"     : {
+      "max_shift"  : 1.5,
+      "base_shift" : 0.5,
+      "width"      : [
+        "445",
+        1
+      ],
+      "height"     : [
+        "445",
+        2
+      ],
+      "model"      : [
+        "3402",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
   "1988"      : {
     "inputs"     : {
       "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\nd351 d4rk",
@@ -3016,7 +3023,7 @@
         0
       ],
       "model"        : [
-        "3402",
+        "1978",
         0
       ],
       "conditioning" : [
@@ -4008,8 +4015,8 @@
   },
   "2268"      : {
     "inputs"     : {
-      "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 1.8,
+      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
+      "strength_model" : 1.4,
       "strength_clip"  : 0.2,
       "model"          : [
         "3417",
@@ -4063,11 +4070,11 @@
       "title" : "AntiBlur 1.50:1.00"
     }
   },
-  "2277"      : {
+  "2275"      : {
     "inputs"     : {
-      "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
-      "strength_model" : 0.4,
-      "strength_clip"  : 0.4,
+      "lora_name"      : "flux_vividizer.safetensors",
+      "strength_model" : 1,
+      "strength_clip"  : 1,
       "model"          : [
         "3401",
         0
@@ -4075,6 +4082,25 @@
       "clip"           : [
         "3374",
         0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmafluxproultra"
+    }
+  },
+  "2277"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.4,
+      "model"          : [
+        "2275",
+        0
+      ],
+      "clip"           : [
+        "2275",
+        1
       ]
     },
     "class_type" : "LoraLoader",
@@ -4465,7 +4491,7 @@
         "2102",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 0.33,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -4690,7 +4716,7 @@
     "inputs"     : {
       "lora_name"      : "Detailed_Hands-000001.safetensors",
       "strength_model" : 0.4,
-      "strength_clip"  : 0.6,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3050",
         0
@@ -4712,28 +4738,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "2666"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.06,
-      "start"              : 0.25,
-      "end"                : 0.3,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 0,
-      "sampler"            : [
-        "1909",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "2669"      : {
@@ -5859,7 +5863,7 @@
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.8,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3401",
         0
@@ -5951,7 +5955,7 @@
     "inputs"     : {
       "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
       "strength_model" : 0.2,
-      "strength_clip"  : 0.1,
+      "strength_clip"  : 0,
       "model"          : [
         "3030",
         0
@@ -6160,10 +6164,16 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.25,
+      "max_shift"  : 1.4,
       "base_shift" : 0.8,
-      "width"      : 1024,
-      "height"     : 1024,
+      "width"      : [
+        "394",
+        0
+      ],
+      "height"     : [
+        "394",
+        1
+      ],
       "model"      : [
         "3391",
         0
@@ -6171,7 +6181,7 @@
     },
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
-      "title" : "ModelSamplingFlux"
+      "title" : "ModelSamplingFlux 1.40::0.8"
     }
   },
   "3115"      : {
@@ -6186,25 +6196,6 @@
     "class_type" : "StringReplace",
     "_meta"      : {
       "title" : "Replace"
-    }
-  },
-  "3118"      : {
-    "inputs"     : {
-      "lora_name"      : "FLUX_Polyhedron_all_Kohya_ss-000001.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "2901",
-        0
-      ],
-      "clip"           : [
-        "2901",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "FLUX_Polyhedron_all_Kohya_ss-000001 0.80::0.10"
     }
   },
   "3132"      : {
@@ -6862,7 +6853,7 @@
   },
   "3304"      : {
     "inputs"     : {
-      "max_shift"  : 1.8,
+      "max_shift"  : 1,
       "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
@@ -7514,7 +7505,7 @@
   },
   "3372"      : {
     "inputs"     : {
-      "stop_at_clip_layer" : -2,
+      "stop_at_clip_layer" : -1,
       "clip"               : [
         "3404",
         0
@@ -7878,7 +7869,7 @@
   },
   "3404"      : {
     "inputs"     : {
-      "clip_name1" : "clip_l.safetensors",
+      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
@@ -7976,7 +7967,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "fp8_e4m3fn"
+      "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -8008,11 +7999,11 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3118",
+        "2901",
         0
       ],
       "clip"           : [
-        "3118",
+        "2901",
         1
       ]
     },
@@ -8021,10 +8012,47 @@
       "title" : "aidmarealisticskin 0.60::0.10"
     }
   },
+  "3419"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.05,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.5,
+      "sampler"           : [
+        "3381",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "3420"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.08,
+      "start"              : 0.33,
+      "end"                : 0.5,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3419",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.6,
+      "max_shift"  : 1.2,
+      "base_shift" : 1,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -8104,7 +8132,7 @@
   "2995:2972" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "",
+      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -8138,7 +8166,7 @@
   "2995:2973" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "",
+      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish ",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -8156,10 +8184,10 @@
         "3338",
         0
       ],
-      "steps"              : 21,
+      "steps"              : 23,
       "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
+      "sampler_name"       : "dpmpp_2s_ancestral",
+      "scheduler"          : "sgm_uniform",
       "denoise"            : [
         "2553",
         0
