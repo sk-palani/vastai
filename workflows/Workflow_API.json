@@ -1387,7 +1387,7 @@
   "623"       : {
     "inputs"     : {
       "value1" : 0.92,
-      "value2" : 0.7
+      "value2" : 0.67
     },
     "class_type" : "SeargeFloatPair",
     "_meta"      : {
@@ -1715,7 +1715,7 @@
         0
       ],
       "any_02" : [
-        "3309",
+        "3279",
         0
       ],
       "any_03" : [
@@ -1734,7 +1734,7 @@
   },
   "950"       : {
     "inputs"     : {
-      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5  woman with voluptuous body,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2), visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting,  alluring almond skintone with subtle micro-hairs and soft sheen, low muscle definition, soft natural curves  \nadorning warm red lipstick ,high-end professional camera ,  glamorous ,   sharp focus, detailed fabric texture,   detailed background, \nPerfect Eyes, (Detailed skin:0.8), (Skin blemish:0.8)"
+      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5  woman with body,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2), visible pores, soft peach fuzz, tiny vellus hairs illuminated by lighting,  alluring almond skintone with subtle micro-hairs and soft sheen, low muscle definition, soft natural curves  \nadorning warm red lipstick ,high-end professional DSLR camera ,  glamorous ,   sharp focus, detailed fabric texture,   detailed background, \nPerfect Eyes"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2144,7 +2144,7 @@
   },
   "1740"      : {
     "inputs"     : {
-      "value" : 1.3
+      "value" : 1.36
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -2402,7 +2402,7 @@
   "1848"      : {
     "inputs"     : {
       "megapixel"     : "2.0",
-      "divisible_by"  : "8",
+      "divisible_by"  : "16",
       "mode"          : "pad",
       "delta_percent" : [
         "2532",
@@ -3368,23 +3368,6 @@
       "title" : "InvertMask"
     }
   },
-  "2081"      : {
-    "inputs"     : {
-      "opacity"         : 50,
-      "image"           : [
-        "2066",
-        0
-      ],
-      "color_ref_image" : [
-        "3039",
-        0
-      ]
-    },
-    "class_type" : "LayerColor: ColorAdapter",
-    "_meta"      : {
-      "title" : "LayerColor: ColorAdapter"
-    }
-  },
   "2085"      : {
     "inputs"     : {
       "guide_size"         : 1024,
@@ -3409,7 +3392,7 @@
       "tiled_encode"       : false,
       "tiled_decode"       : false,
       "image"              : [
-        "2081",
+        "3483",
         0
       ],
       "segs"               : [
@@ -3781,7 +3764,7 @@
   },
   "2164"      : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5 Voluptuous woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4265,11 +4248,11 @@
         0
       ],
       "upscale_model"       : [
-        "3395",
+        "3400",
         0
       ],
       "custom_sampler"      : [
-        "3381",
+        "3149",
         0
       ],
       "custom_sigmas"       : [
@@ -6164,8 +6147,8 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.4,
-      "base_shift" : 0.8,
+      "max_shift"  : 1.2,
+      "base_shift" : 0.6,
       "width"      : [
         "394",
         0
@@ -6492,7 +6475,7 @@
   "3182"      : {
     "inputs"     : {
       "image" : [
-        "3309",
+        "3279",
         0
       ]
     },
@@ -6741,59 +6724,13 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3309",
+        "3479",
         0
       ]
     },
     "class_type" : "Image Save",
     "_meta"      : {
       "title" : "Image Save"
-    }
-  },
-  "3285"      : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3339",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "3286"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "3285",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "3290"      : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2106",
-        0
-      ],
-      "t5xxl"    : [
-        "3310",
-        0
-      ],
-      "guidance" : 3.2,
-      "clip"     : [
-        "3339",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
     }
   },
   "3296"      : {
@@ -6834,118 +6771,6 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3303"      : {
-    "inputs"     : {
-      "scheduler" : "beta",
-      "steps"     : 18,
-      "denoise"   : 0.24,
-      "model"     : [
-        "3391",
-        0
-      ]
-    },
-    "class_type" : "BasicScheduler",
-    "_meta"      : {
-      "title" : "BasicScheduler"
-    }
-  },
-  "3304"      : {
-    "inputs"     : {
-      "max_shift"  : 1,
-      "base_shift" : 0.8,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3391",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "ModelSamplingFlux"
-    }
-  },
-  "3309"      : {
-    "inputs"     : {
-      "upscale_by"          : [
-        "1740",
-        0
-      ],
-      "seed"                : [
-        "3338",
-        0
-      ],
-      "steps"               : 16,
-      "cfg"                 : 1,
-      "sampler_name"        : "euler_ancestral",
-      "scheduler"           : "beta",
-      "denoise"             : 0.26,
-      "mode_type"           : "Chess",
-      "tile_width"          : 1024,
-      "tile_height"         : 1024,
-      "mask_blur"           : 32,
-      "tile_padding"        : 64,
-      "seam_fix_mode"       : "None",
-      "seam_fix_denoise"    : 1,
-      "seam_fix_width"      : 64,
-      "seam_fix_mask_blur"  : 8,
-      "seam_fix_padding"    : 16,
-      "force_uniform_tiles" : true,
-      "tiled_decode"        : false,
-      "batch_size"          : 1,
-      "image"               : [
-        "3296",
-        0
-      ],
-      "model"               : [
-        "3304",
-        0
-      ],
-      "positive"            : [
-        "3290",
-        0
-      ],
-      "negative"            : [
-        "3286",
-        0
-      ],
-      "vae"                 : [
-        "3373",
-        0
-      ],
-      "upscale_model"       : [
-        "3395",
-        0
-      ],
-      "custom_sampler"      : [
-        "3381",
-        0
-      ],
-      "custom_sigmas"       : [
-        "3303",
-        0
-      ]
-    },
-    "class_type" : "UltimateSDUpscaleCustomSample",
-    "_meta"      : {
-      "title" : "Ultimate SD Upscale (Custom Sample)"
-    }
-  },
-  "3310"      : {
-    "inputs"     : {
-      "text1"     : [
-        "788",
-        0
-      ],
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "textConcat"
     }
   },
   "3315"      : {
@@ -7957,7 +7782,7 @@
   },
   "3413"      : {
     "inputs"     : {
-      "model_name" : "4xPurePhoto-Span.pth"
+      "model_name" : "4x_NMKD-Superscale-SP_178000_G.pth"
     },
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
@@ -7967,7 +7792,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "default"
+      "weight_dtype" : "fp8_e4m3fn"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -8049,14 +7874,337 @@
       "title" : "Detail Daemon Sampler"
     }
   },
-  "2995:113"  : {
+  "3426"      : {
+    "inputs"     : {
+      "scheduler" : "beta",
+      "steps"     : [
+        "3463",
+        0
+      ],
+      "denoise"   : [
+        "3459",
+        0
+      ],
+      "model"     : [
+        "3474",
+        0
+      ]
+    },
+    "class_type" : "BasicScheduler",
+    "_meta"      : {
+      "title" : "BasicScheduler"
+    }
+  },
+  "3427"      : {
+    "inputs"     : {
+      "expression" : "b+(a-0.46)*(24-b)/(0.72-0.46)",
+      "a"          : [
+        "3450",
+        0
+      ],
+      "b"          : [
+        "3448",
+        0
+      ],
+      "c"          : [
+        "3448",
+        1
+      ]
+    },
+    "class_type" : "MathExpression|pysssss",
+    "_meta"      : {
+      "title" : "Math Expression 🐍"
+    }
+  },
+  "3428"      : {
+    "inputs"     : {
+      "expression" : "c+(a-0.46)*(35-c)/(0.72-0.46)",
+      "a"          : [
+        "3450",
+        0
+      ],
+      "b"          : [
+        "3448",
+        0
+      ],
+      "c"          : [
+        "3448",
+        1
+      ]
+    },
+    "class_type" : "MathExpression|pysssss",
+    "_meta"      : {
+      "title" : "Math Expression 🐍"
+    }
+  },
+  "3439"      : {
+    "inputs"     : {
+      "denoise" : [
+        "3449",
+        0
+      ],
+      "sigmas"  : [
+        "3426",
+        0
+      ]
+    },
+    "class_type" : "SplitSigmasDenoise",
+    "_meta"      : {
+      "title" : "SplitSigmasDenoise"
+    }
+  },
+  "3448"      : {
+    "inputs"     : {
+      "value1" : 28,
+      "value2" : 42
+    },
+    "class_type" : "SeargeIntegerPair",
+    "_meta"      : {
+      "title" : "Range (31:43)"
+    }
+  },
+  "3449"      : {
+    "inputs"     : {
+      "float_1" : 0.58,
+      "float_2" : 0.9992
+    },
+    "class_type" : "TwoFloats",
+    "_meta"      : {
+      "title" : "<<Rough - Smooth>> (default 0.58)"
+    }
+  },
+  "3450"      : {
+    "inputs"     : {
+      "a"         : [
+        "2100",
+        0
+      ],
+      "b"         : 0.98,
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "Math Float"
+    }
+  },
+  "3459"      : {
+    "inputs"     : {
+      "a"         : [
+        "3450",
+        0
+      ],
+      "b"         : 0.72,
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "0.72"
+    }
+  },
+  "3463"      : {
+    "inputs"     : {
+      "expression" : "1.33*(a+c*(b-a))",
+      "a"          : [
+        "3427",
+        0
+      ],
+      "b"          : [
+        "3428",
+        0
+      ],
+      "c"          : [
+        "1405",
+        0
+      ]
+    },
+    "class_type" : "MathExpression|pysssss",
+    "_meta"      : {
+      "title" : "Math Expression 🐍"
+    }
+  },
+  "3469"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.04,
+      "start"              : 0.33,
+      "end"                : 0.5,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3470",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
+  "3470"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.03,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.5,
+      "sampler"           : [
+        "3381",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "3474"      : {
     "inputs"     : {
       "max_shift"  : 1.2,
-      "base_shift" : 1,
+      "base_shift" : 0.6,
+      "width"      : [
+        "394",
+        0
+      ],
+      "height"     : [
+        "394",
+        1
+      ],
+      "model"      : [
+        "3391",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux 1.40::0.8"
+    }
+  },
+  "3478"      : {
+    "inputs"     : {
+      "upscale_by"          : [
+        "1740",
+        0
+      ],
+      "seed"                : [
+        "3386",
+        0
+      ],
+      "steps"               : 16,
+      "cfg"                 : 1,
+      "sampler_name"        : "heun",
+      "scheduler"           : "sgm_uniform",
+      "denoise"             : 0.26,
+      "mode_type"           : "Chess",
+      "tile_width"          : 1024,
+      "tile_height"         : 1024,
+      "mask_blur"           : 33,
+      "tile_padding"        : 64,
+      "seam_fix_mode"       : "None",
+      "seam_fix_denoise"    : 1,
+      "seam_fix_width"      : 64,
+      "seam_fix_mask_blur"  : 8,
+      "seam_fix_padding"    : 16,
+      "force_uniform_tiles" : true,
+      "tiled_decode"        : false,
+      "batch_size"          : 1,
+      "image"               : [
+        "3296",
+        0
+      ],
+      "model"               : [
+        "3474",
+        0
+      ],
+      "positive"            : [
+        "2108",
+        0
+      ],
+      "negative"            : [
+        "1412",
+        1
+      ],
+      "vae"                 : [
+        "3373",
+        0
+      ],
+      "custom_sampler"      : [
+        "3469",
+        0
+      ],
+      "custom_sigmas"       : [
+        "3439",
+        1
+      ]
+    },
+    "class_type" : "UltimateSDUpscaleCustomSample",
+    "_meta"      : {
+      "title" : "Ultimate SD Upscale (Custom Sample)"
+    }
+  },
+  "3479"      : {
+    "inputs"     : {
+      "method"       : "mkl",
+      "strength"     : 0.5,
+      "multithread"  : true,
+      "image_ref"    : [
+        "2669",
+        0
+      ],
+      "image_target" : [
+        "3478",
+        0
+      ]
+    },
+    "class_type" : "ColorMatch",
+    "_meta"      : {
+      "title" : "Color Match"
+    }
+  },
+  "3483"      : {
+    "inputs"     : {
+      "method"       : "mkl",
+      "strength"     : 0.5,
+      "multithread"  : true,
+      "image_ref"    : [
+        "3039",
+        0
+      ],
+      "image_target" : [
+        "2066",
+        0
+      ]
+    },
+    "class_type" : "ColorMatch",
+    "_meta"      : {
+      "title" : "Color Match"
+    }
+  },
+  "3484"      : {
+    "inputs"     : {
+      "max_shift"  : 1.45,
+      "base_shift" : 0.75,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
         "3196",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.45::0.5"
+    }
+  },
+  "2995:113"  : {
+    "inputs"     : {
+      "max_shift"  : 1.2,
+      "base_shift" : 0.4,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3484",
         0
       ]
     },
@@ -8132,7 +8280,7 @@
   "2995:2972" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves",
+      "text2"     : "",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -8166,7 +8314,7 @@
   "2995:2973" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish ",
+      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves\n, Perfect hand and fingers and nails with pastel nail polish ",
       "text3"     : "",
       "delimiter" : ","
     },
