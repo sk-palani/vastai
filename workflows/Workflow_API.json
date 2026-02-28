@@ -641,7 +641,7 @@
   },
   "286"       : {
     "inputs"     : {
-      "value" : true
+      "value" : false
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -872,7 +872,7 @@
   },
   "362"       : {
     "inputs"     : {
-      "value" : 25
+      "value" : 24
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -1548,7 +1548,7 @@
     "inputs"     : {
       "mode"   : "always",
       "volume" : 1,
-      "file"   : "notify.mp3",
+      "file"   : "finish.mp3",
       "any"    : [
         "122",
         0
@@ -1644,7 +1644,7 @@
       "rotation"       : -90,
       "opacity"        : 0,
       "base_image"     : [
-        "1585",
+        "931",
         0
       ],
       "overlay_image"  : [
@@ -1711,7 +1711,7 @@
   "931"       : {
     "inputs"     : {
       "any_01" : [
-        "3183",
+        "3489",
         0
       ],
       "any_02" : [
@@ -1734,7 +1734,7 @@
   },
   "950"       : {
     "inputs"     : {
-      "text" : "professionally color-graded RAW photograph, __AGE__ Indian v1dhya5  woman with body,  beautiful face kohl-lined almond eyes with serene gaze, (bindi on the forehead:1.2), visible pores, soft peach fuzz, tiny vellus hairs illuminated by lighting,  alluring almond skintone with subtle micro-hairs and soft sheen, low muscle definition, soft natural curves  \nadorning warm red lipstick ,high-end professional DSLR camera ,  glamorous ,   sharp focus, detailed fabric texture,   detailed background, \nPerfect Eyes"
+      "text" : "Indian woman, serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, soft sheen skin, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional RAW photograph\n __AGE__ "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1882,21 +1882,6 @@
       "title" : "Contains [$$]"
     }
   },
-  "1357"      : {
-    "inputs"     : {
-      "lut_name" : "Presetpro  - Kodacrome 64.cube",
-      "strength" : 0.27,
-      "log"      : false,
-      "image"    : [
-        "931",
-        0
-      ]
-    },
-    "class_type" : "ProPostApplyLUT",
-    "_meta"      : {
-      "title" : "ProPostApplyLUT"
-    }
-  },
   "1400"      : {
     "inputs"     : {
       "brightness" : 0.93,
@@ -2020,10 +2005,6 @@
   },
   "1566"      : {
     "inputs"     : {
-      "any_01" : [
-        "3329",
-        0
-      ],
       "any_02" : [
         "2332",
         0
@@ -2040,23 +2021,6 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
-    }
-  },
-  "1585"      : {
-    "inputs"     : {
-      "radius"          : 0.7,
-      "amount"          : 1.2,
-      "reduce_noise"    : 0.15,
-      "fade_shadows"    : 0.2,
-      "fade_highlights" : 0.2,
-      "image"           : [
-        "1357",
-        0
-      ]
-    },
-    "class_type" : "SmartSharpen",
-    "_meta"      : {
-      "title" : "Netteté optimisée"
     }
   },
   "1595"      : {
@@ -2669,7 +2633,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.33*(a+c*(b-a))",
+      "expression" : "1*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -3764,7 +3728,7 @@
   },
   "2164"      : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5 woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+      "text" : "A professionally color graded RAW photograph of an Indian woman with an extremely beautiful yet natural face, wearing a small black bindi centered on her forehead. Her skin is rendered with high fidelity detail, showing realistic texture, visible pores, soft peach fuzz, and fine vellus hairs subtly illuminated by gentle side lighting. Faint acne marks and mild natural unevenness are present, emphasizing authenticity and photographic realism over artificial aesthetic perfection. The overall rendering prioritizes true to life skin behavior, organic tonal variation, and natural facial structure.\nSkin detail remains unretouched, avoiding beauty filter effects or excessive smoothing."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3773,7 +3737,7 @@
   },
   "2178"      : {
     "inputs"     : {
-      "value" : true
+      "value" : false
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -4075,7 +4039,7 @@
   "2277"      : {
     "inputs"     : {
       "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
-      "strength_model" : 0.4,
+      "strength_model" : 0.8,
       "strength_clip"  : 0.4,
       "model"          : [
         "2275",
@@ -4425,7 +4389,7 @@
         "1955",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 0.77,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -6149,14 +6113,8 @@
     "inputs"     : {
       "max_shift"  : 1.2,
       "base_shift" : 0.6,
-      "width"      : [
-        "394",
-        0
-      ],
-      "height"     : [
-        "394",
-        1
-      ],
+      "width"      : 1024,
+      "height"     : 1024,
       "model"      : [
         "3391",
         0
@@ -6361,7 +6319,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : false,
       "images"          : [
-        "3182",
+        "3279",
         0
       ]
     },
@@ -6402,7 +6360,7 @@
   "3175"      : {
     "inputs"     : {
       "image" : [
-        "3182",
+        "3279",
         0
       ]
     },
@@ -6472,30 +6430,6 @@
       "title" : "LayerMask: MaskGrow"
     }
   },
-  "3182"      : {
-    "inputs"     : {
-      "image" : [
-        "3279",
-        0
-      ]
-    },
-    "class_type" : "ImpactImageBatchToImageList",
-    "_meta"      : {
-      "title" : "Image Batch to Image List"
-    }
-  },
-  "3183"      : {
-    "inputs"     : {
-      "images" : [
-        "3186",
-        0
-      ]
-    },
-    "class_type" : "ImageListToImageBatch",
-    "_meta"      : {
-      "title" : "Image List to Image Batch"
-    }
-  },
   "3184"      : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
@@ -6504,7 +6438,7 @@
         0
       ],
       "image"        : [
-        "3182",
+        "3279",
         0
       ]
     },
@@ -6519,7 +6453,7 @@
         "3177",
         0
       ],
-      "blend_opacity" : 10,
+      "blend_opacity" : 5,
       "image"         : [
         "3174",
         0
@@ -6637,7 +6571,7 @@
   },
   "3209"      : {
     "inputs"     : {
-      "threshold"     : 0.29,
+      "threshold"     : 0.36,
       "dilation"      : 24,
       "crop_factor"   : 3,
       "drop_size"     : 20,
@@ -6653,7 +6587,7 @@
     },
     "class_type" : "SegmDetectorSEGS",
     "_meta"      : {
-      "title" : "SEGM Detector (SEGS)"
+      "title" : "0.29"
     }
   },
   "3210"      : {
@@ -6724,7 +6658,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3479",
+        "3491",
         0
       ]
     },
@@ -6765,209 +6699,6 @@
       ],
       "any_08" : [
         "3018",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3315"      : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : true,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : false,
-      "images"          : [
-        "3322",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "3316"      : {
-    "inputs"     : {
-      "center_x"            : 0.3,
-      "center_y"            : 0.5,
-      "saturation"          : 0.9,
-      "vignette_intensity"  : 0.010000000000000002,
-      "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.08,
-      "grain_scale"         : 0.4,
-      "grain_sat"           : 0.3,
-      "filmgrainer_shadows" : 0.15000000000000002,
-      "filmgrainer_highs"   : 0.10000000000000002,
-      "blur_strength"       : 1,
-      "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
-      "image"               : [
-        "3325",
-        0
-      ],
-      "depth_map"           : [
-        "3323",
-        0
-      ]
-    },
-    "class_type" : "LayerFilter: FilmV2",
-    "_meta"      : {
-      "title" : "LayerFilter: Film V2"
-    }
-  },
-  "3317"      : {
-    "inputs"     : {
-      "image" : [
-        "3322",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
-    }
-  },
-  "3318"      : {
-    "inputs"     : {
-      "float_value"    : [
-        "2100",
-        0
-      ],
-      "multiply_value" : 0.181818
-    },
-    "class_type" : "FloatMultiplication",
-    "_meta"      : {
-      "title" : "Float Multiplication"
-    }
-  },
-  "3320"      : {
-    "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "3317",
-        1
-      ],
-      "b"    : [
-        "3317",
-        2
-      ]
-    },
-    "class_type" : "ImpactMinMax",
-    "_meta"      : {
-      "title" : "ImpactMinMax"
-    }
-  },
-  "3321"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 1,
-      "blur"        : 0,
-      "mask"        : [
-        "3315",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "3322"      : {
-    "inputs"     : {
-      "image" : [
-        "3334",
-        0
-      ]
-    },
-    "class_type" : "ImpactImageBatchToImageList",
-    "_meta"      : {
-      "title" : "Image Batch to Image List"
-    }
-  },
-  "3323"      : {
-    "inputs"     : {
-      "preprocessor" : "DepthAnythingPreprocessor",
-      "resolution"   : [
-        "3320",
-        0
-      ],
-      "image"        : [
-        "3322",
-        0
-      ]
-    },
-    "class_type" : "AIO_Preprocessor",
-    "_meta"      : {
-      "title" : "AIO Aux Preprocessor"
-    }
-  },
-  "3325"      : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : 0.5,
-      "ratio"          : 0.5,
-      "image"          : [
-        "3317",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
-    }
-  },
-  "3329"      : {
-    "inputs"     : {
-      "images" : [
-        "3330",
-        0
-      ]
-    },
-    "class_type" : "ImageListToImageBatch",
-    "_meta"      : {
-      "title" : "Image List to Image Batch"
-    }
-  },
-  "3330"      : {
-    "inputs"     : {
-      "noise_scale"   : [
-        "3318",
-        0
-      ],
-      "blend_opacity" : 14,
-      "image"         : [
-        "3316",
-        0
-      ],
-      "mask"          : [
-        "3321",
-        0
-      ]
-    },
-    "class_type" : "NoisePlusBlend",
-    "_meta"      : {
-      "title" : "Noise Plus Blend"
-    }
-  },
-  "3334"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2332",
-        0
-      ],
-      "any_02" : [
-        "3211",
-        0
-      ],
-      "any_03" : [
-        "1831",
         0
       ]
     },
@@ -7142,7 +6873,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "3397",
+        "3388",
         0
       ],
       "model2"            : [
@@ -8024,7 +7755,7 @@
   },
   "3469"      : {
     "inputs"     : {
-      "detail_amount"      : 0.04,
+      "detail_amount"      : 0.05,
       "start"              : 0.33,
       "end"                : 0.5,
       "bias"               : 0.5,
@@ -8061,7 +7792,7 @@
   },
   "3474"      : {
     "inputs"     : {
-      "max_shift"  : 1.2,
+      "max_shift"  : 1.4,
       "base_shift" : 0.6,
       "width"      : [
         "394",
@@ -8091,10 +7822,10 @@
         "3386",
         0
       ],
-      "steps"               : 16,
+      "steps"               : 18,
       "cfg"                 : 1,
-      "sampler_name"        : "heun",
-      "scheduler"           : "sgm_uniform",
+      "sampler_name"        : "euler",
+      "scheduler"           : "normal",
       "denoise"             : 0.26,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
@@ -8110,7 +7841,7 @@
       "tiled_decode"        : false,
       "batch_size"          : 1,
       "image"               : [
-        "3296",
+        "3490",
         0
       ],
       "model"               : [
@@ -8197,10 +7928,60 @@
       "title" : "1.45::0.5"
     }
   },
+  "3489"      : {
+    "inputs"     : {
+      "lut_name" : "Presetpro  - Kodacrome 64.cube",
+      "strength" : 0.27,
+      "log"      : false,
+      "image"    : [
+        "3186",
+        0
+      ]
+    },
+    "class_type" : "ProPostApplyLUT",
+    "_meta"      : {
+      "title" : "ProPostApplyLUT"
+    }
+  },
+  "3490"      : {
+    "inputs"     : {
+      "mode"   : "horizontal",
+      "images" : [
+        "3296",
+        0
+      ]
+    },
+    "class_type" : "Image Flip",
+    "_meta"      : {
+      "title" : "Image Flip"
+    }
+  },
+  "3491"      : {
+    "inputs"     : {
+      "mode"   : "horizontal",
+      "images" : [
+        "3479",
+        0
+      ]
+    },
+    "class_type" : "Image Flip",
+    "_meta"      : {
+      "title" : "Image Flip"
+    }
+  },
+  "3493"      : {
+    "inputs"     : {
+      "text" : "A professionally color-graded photograph of Indian v1dhya5   woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.2,
-      "base_shift" : 0.4,
+      "max_shift"  : 1.3,
+      "base_shift" : 0.45,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -8280,7 +8061,7 @@
   "2995:2972" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "",
+      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,\n\nsmooth midriff,low muscle definition, soft natural curves",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -8314,7 +8095,7 @@
   "2995:2973" : {
     "inputs"     : {
       "text1"     : "",
-      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves\n, Perfect hand and fingers and nails with pastel nail polish ",
+      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -8332,10 +8113,10 @@
         "3338",
         0
       ],
-      "steps"              : 23,
+      "steps"              : 18,
       "cfg"                : 1,
-      "sampler_name"       : "dpmpp_2s_ancestral",
-      "scheduler"          : "sgm_uniform",
+      "sampler_name"       : "deis",
+      "scheduler"          : "beta",
       "denoise"            : [
         "2553",
         0
