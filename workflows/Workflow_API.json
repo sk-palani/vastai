@@ -7676,7 +7676,7 @@
       "tiled_decode"        : false,
       "batch_size"          : 1,
       "image"               : [
-        "3490",
+        "3519",
         0
       ],
       "model"               : [
@@ -8061,6 +8061,41 @@
     "class_type" : "easy showAnything",
     "_meta"      : {
       "title" : "Show Any"
+    }
+  },
+  "3519"      : {
+    "inputs"     : {
+      "method"       : "mkl",
+      "strength"     : 0.5,
+      "multithread"  : true,
+      "image_ref"    : [
+        "3522",
+        0
+      ],
+      "image_target" : [
+        "3490",
+        0
+      ]
+    },
+    "class_type" : "ColorMatch",
+    "_meta"      : {
+      "title" : "Color Match"
+    }
+  },
+  "3522"      : {
+    "inputs"     : {
+      "any_01" : [
+        "3499",
+        0
+      ],
+      "any_02" : [
+        "1831",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
     }
   },
   "2995:113"  : {
