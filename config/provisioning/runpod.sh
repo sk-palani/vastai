@@ -126,7 +126,7 @@ NODES=(
     "https://github.com/evanspearman/ComfyMath.git"
     "https://github.com/giriss/comfy-image-saver.git"
     "https://github.com/jags111/efficiency-nodes-comfyui"
-    "https://github.com/jamesWalker55/comfyui-various.git"
+    "https://github.com/jamesWalker55/comfyui-various"
     "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes.git"
     "https://github.com/kijai/ComfyUI-Florence2.git"
     "https://github.com/kijai/ComfyUI-KJNodes.git"
@@ -409,7 +409,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2426731?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #   fluxlisimo_aura_v5-FLUX.safetensors
     "https://civitai.com/api/download/models/2399530?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-
+#   brlns.safetensors
+    "https://civitai.com/api/download/models/1571699?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
