@@ -1104,7 +1104,7 @@
       ],
       "temperature"       : 0.6,
       "top_p"             : 0.95,
-      "max_new_tokens"    : 1024,
+      "max_new_tokens"    : 512,
       "keep_model_loaded" : [
         "2178",
         0
@@ -1132,7 +1132,7 @@
       ],
       "temperature"       : 0.6,
       "top_p"             : 0.95,
-      "max_new_tokens"    : 768,
+      "max_new_tokens"    : 384,
       "keep_model_loaded" : [
         "2178",
         0
@@ -4785,7 +4785,7 @@
       ],
       "temperature"       : 0.6,
       "top_p"             : 0.95,
-      "max_new_tokens"    : 512,
+      "max_new_tokens"    : 384,
       "keep_model_loaded" : [
         "2178",
         0
