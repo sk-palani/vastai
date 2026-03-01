@@ -403,8 +403,7 @@
   },
   "251"       : {
     "inputs"     : {
-      "text_0" : "serene expression, subtle playful wink, left eye gently closed, right eye open and relaxed, slight asymmetrical cheek lift",
-      "text"   : [
+      "text" : [
         "254",
         0
       ]
@@ -1505,7 +1504,7 @@
   },
   "764"       : {
     "inputs"     : {
-      "mode" : true,
+      "mode" : false,
       "a"    : [
         "744",
         1
@@ -1888,9 +1887,9 @@
   },
   "1412"      : {
     "inputs"     : {
-      "strength"      : 0.48,
-      "start_percent" : 0,
-      "end_percent"   : 0.5,
+      "strength"      : 0.38,
+      "start_percent" : 0.12,
+      "end_percent"   : 0.35,
       "positive"      : [
         "737",
         0
@@ -6931,10 +6930,10 @@
   },
   "3374"      : {
     "inputs"     : {
-      "q"    : 1.2,
-      "k"    : 1.1,
-      "v"    : 0.8,
-      "out"  : 1.25,
+      "q"    : 1.1,
+      "k"    : 1.05,
+      "v"    : 0.95,
+      "out"  : 1.12,
       "clip" : [
         "3372",
         0
@@ -7288,7 +7287,7 @@
       "block_number"         : 4,
       "downscale_factor"     : 2,
       "start_percent"        : 0,
-      "end_percent"          : 0.75,
+      "end_percent"          : 0.6,
       "downscale_after_skip" : true,
       "downscale_method"     : "bislerp",
       "upscale_method"       : "bislerp",
@@ -7382,7 +7381,7 @@
     "inputs"     : {
       "block_number"         : 4,
       "downscale_factor"     : 1,
-      "start_percent"        : 0.75,
+      "start_percent"        : 0.6,
       "end_percent"          : 0.9,
       "downscale_after_skip" : true,
       "downscale_method"     : "bislerp",
@@ -7658,15 +7657,15 @@
         "3386",
         0
       ],
-      "steps"               : 18,
-      "cfg"                 : 1,
-      "sampler_name"        : "euler",
+      "steps"               : 24,
+      "cfg"                 : 1.1,
+      "sampler_name"        : "deis",
       "scheduler"           : "beta",
-      "denoise"             : 0.15,
+      "denoise"             : 0.18,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
-      "mask_blur"           : 33,
+      "mask_blur"           : 8,
       "tile_padding"        : 64,
       "seam_fix_mode"       : "None",
       "seam_fix_denoise"    : 1,
@@ -8051,10 +8050,23 @@
       "title" : "ModelMergeFlux1"
     }
   },
+  "3518"      : {
+    "inputs"     : {
+      "text"     : "0.185",
+      "anything" : [
+        "2553",
+        0
+      ]
+    },
+    "class_type" : "easy showAnything",
+    "_meta"      : {
+      "title" : "Show Any"
+    }
+  },
   "2995:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.3,
-      "base_shift" : 0.45,
+      "max_shift"  : 1.05,
+      "base_shift" : 0.3,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -8198,7 +8210,7 @@
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 2,
+      "cycle"              : 1,
       "inpaint_model"      : false,
       "noise_mask_feather" : 20,
       "tiled_encode"       : false,
