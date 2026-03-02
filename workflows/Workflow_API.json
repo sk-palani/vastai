@@ -1916,15 +1916,6 @@
       "title" : "Apply ControlNet"
     }
   },
-  "1479"      : {
-    "inputs"     : {
-      "text" : " , Skin imperfections ,    natural blemishes, Rough skin texture, d351 d4rk, "
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
   "1495"      : {
     "inputs"     : {
       "images" : [
@@ -1984,8 +1975,8 @@
   },
   "1566"      : {
     "inputs"     : {
-      "any_02" : [
-        "2332",
+      "any_01" : [
+        "3329",
         0
       ],
       "any_03" : [
@@ -2341,7 +2332,7 @@
   "1848"      : {
     "inputs"     : {
       "megapixel"     : "2.0",
-      "divisible_by"  : "8",
+      "divisible_by"  : "64",
       "mode"          : "pad",
       "delta_percent" : [
         "2532",
@@ -2630,7 +2621,7 @@
   "1902"      : {
     "inputs"     : {
       "value1" : 28,
-      "value2" : 42
+      "value2" : 43
     },
     "class_type" : "SeargeIntegerPair",
     "_meta"      : {
@@ -2910,7 +2901,7 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.5,
+      "max_shift"  : 1.05,
       "base_shift" : 0.5,
       "width"      : [
         "445",
@@ -2952,7 +2943,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 24,
+      "steps"        : 18,
       "denoise"      : [
         "1999",
         0
@@ -3115,7 +3106,7 @@
   },
   "2060"      : {
     "inputs"     : {
-      "strength"           : 0.8,
+      "strength"           : 0.42,
       "strength_type"      : "multiply",
       "conditioning"       : [
         "2067",
@@ -3897,44 +3888,6 @@
       "title" : "Preview Image"
     }
   },
-  "2247"      : {
-    "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 0,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "v1dhya5 1.00::0.00"
-    }
-  },
-  "2253"      : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 1,
-      "model"          : [
-        "2296",
-        0
-      ],
-      "clip"           : [
-        "2296",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Pandora-RAWr 1.00:1.00"
-    }
-  },
   "2268"      : {
     "inputs"     : {
       "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
@@ -4028,180 +3981,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmaImageUprader-FLUX-v0.3 0.40::0.40"
-    }
-  },
-  "2296"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaFluxProUltra-FLUX-v0.1.safetensors",
-      "strength_model" : 0.65,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "2247",
-        0
-      ],
-      "clip"           : [
-        "2247",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmaFluxProUltra-FLUX-v0.1 0.65::0.65"
-    }
-  },
-  "2304"      : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2875",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2305"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "2304",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2316"      : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2106",
-        0
-      ],
-      "t5xxl"    : [
-        "2317",
-        0
-      ],
-      "guidance" : 3.2,
-      "clip"     : [
-        "2875",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "2317"      : {
-    "inputs"     : {
-      "text1"     : "masterpiece professional potrait photograph of v1dhya5 indian",
-      "text2"     : [
-        "1479",
-        0
-      ],
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "textConcat"
-    }
-  },
-  "2319"      : {
-    "inputs"     : {
-      "max_shift"  : 1.8,
-      "base_shift" : 0.5,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "2875",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "ModelSamplingFlux"
-    }
-  },
-  "2331"      : {
-    "inputs"     : {
-      "scheduler" : "beta",
-      "steps"     : 20,
-      "denoise"   : 0.18,
-      "model"     : [
-        "2875",
-        0
-      ]
-    },
-    "class_type" : "BasicScheduler",
-    "_meta"      : {
-      "title" : "BasicScheduler"
-    }
-  },
-  "2332"      : {
-    "inputs"     : {
-      "upscale_by"          : 1,
-      "seed"                : [
-        "3338",
-        0
-      ],
-      "steps"               : 21,
-      "cfg"                 : 1,
-      "sampler_name"        : "euler",
-      "scheduler"           : "beta",
-      "denoise"             : 0.17,
-      "mode_type"           : "Linear",
-      "tile_width"          : 1024,
-      "tile_height"         : 1024,
-      "mask_blur"           : 32,
-      "tile_padding"        : 64,
-      "seam_fix_mode"       : "None",
-      "seam_fix_denoise"    : 1,
-      "seam_fix_width"      : 64,
-      "seam_fix_mask_blur"  : 8,
-      "seam_fix_padding"    : 16,
-      "force_uniform_tiles" : true,
-      "tiled_decode"        : false,
-      "batch_size"          : 1,
-      "image"               : [
-        "3038",
-        0
-      ],
-      "model"               : [
-        "2319",
-        0
-      ],
-      "positive"            : [
-        "2316",
-        0
-      ],
-      "negative"            : [
-        "2305",
-        0
-      ],
-      "vae"                 : [
-        "3373",
-        0
-      ],
-      "upscale_model"       : [
-        "3400",
-        0
-      ],
-      "custom_sampler"      : [
-        "3149",
-        0
-      ],
-      "custom_sigmas"       : [
-        "2331",
-        0
-      ]
-    },
-    "class_type" : "UltimateSDUpscaleCustomSample",
-    "_meta"      : {
-      "title" : "Ultimate SD Upscale (Custom Sample)"
     }
   },
   "2339"      : {
@@ -4604,25 +4383,6 @@
     "class_type" : "Save Text File",
     "_meta"      : {
       "title" : "Save Text File"
-    }
-  },
-  "2618"      : {
-    "inputs"     : {
-      "lora_name"      : "BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors",
-      "strength_model" : 0.4,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "2253",
-        0
-      ],
-      "clip"           : [
-        "2253",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "BreastShaper_splendid_droplets_Flux_v3.0-000009 0.40::0.14"
     }
   },
   "2652"      : {
@@ -5179,11 +4939,11 @@
   },
   "2846"      : {
     "inputs"     : {
-      "text1"     : [
+      "text1"     : "hazel brown eyes, amber and olive iris tones, detailed iris texture, sharp limbal ring, clear pupil, natural sclera veins, subtle tear film gloss, long separated eyelashes, defined natural eyebrows, visible eyebrow hair strands, realistic hair direction, high detail, photorealistic, macro clarity",
+      "text2"     : [
         "2754",
         0
       ],
-      "text2"     : "Her lips glisten softly with moisture, her eyes luminous and tender, as if holding a quiet breath between them.Red Lipstick, well-defined eyebrows, long eyelashes, (aidmarealisticskin:0.5)",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -5194,11 +4954,11 @@
   },
   "2847"      : {
     "inputs"     : {
-      "text1"     : [
+      "text1"     : "Ultra detailed hazel brown eyes with layered amber and subtle olive tones, intricate radial iris fibers with natural color variation, defined limbal ring, clear pupil edge, realistic sclera with faint capillaries, soft reflective tear film along the waterline creating natural catchlights, luminous but natural gaze, long individually separated eyelashes with fine strand definition, well-defined natural eyebrows with visible hair strands and realistic direction growth, subtle skin texture around the eye area, high clarity macro-level detail, soft diffused lighting reflection, photoreal refinement",
+      "text2"     : [
         "2754",
         0
       ],
-      "text2"     : "well-defined eyebrows, long eyelashes, , Her lips glisten softly with moisture, her hazelnut brown detailed eyes, eyes luminous and tender, as if holding a quiet breath between them.",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -5211,7 +4971,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3134",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
@@ -5235,15 +4995,6 @@
     "class_type" : "Image Save",
     "_meta"      : {
       "title" : "Image Save"
-    }
-  },
-  "2862"      : {
-    "inputs"     : {
-      "text" : "aidmafluxproultra, fluxenhancer, Skin imperfections ,   moles, natural blemishes, Rough skin texture, "
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
     }
   },
   "2866"      : {
@@ -5303,25 +5054,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Pandora-RAWr 0.65::0.65"
-    }
-  },
-  "2875"      : {
-    "inputs"     : {
-      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "2618",
-        0
-      ],
-      "clip"           : [
-        "2618",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.80:0.80"
     }
   },
   "2901"      : {
@@ -5639,25 +5371,6 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "2999"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "2797",
-        0
-      ],
-      "mask"         : [
-        "2829",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
   "3003"      : {
     "inputs"     : {
       "level" : 1.2
@@ -5695,25 +5408,6 @@
     "class_type" : "Image Save",
     "_meta"      : {
       "title" : "Image Save"
-    }
-  },
-  "3013"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1611",
-        0
-      ],
-      "mask"         : [
-        "2715",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
     }
   },
   "3015"      : {
@@ -5782,22 +5476,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Pandora-RAWr 0.80::0.80"
-    }
-  },
-  "3038"      : {
-    "inputs"     : {
-      "any_02" : [
-        "3499",
-        0
-      ],
-      "any_03" : [
-        "1831",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
     }
   },
   "3039"      : {
@@ -6231,43 +5909,6 @@
       "title" : "String"
     }
   },
-  "3149"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.07,
-      "start"              : 0.27,
-      "end"                : 0.47,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "3150",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
-    }
-  },
-  "3150"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.02,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.45,
-      "sampler"           : [
-        "3381",
-        0
-      ]
-    },
-    "class_type" : "LyingSigmaSampler",
-    "_meta"      : {
-      "title" : "Lying Sigma Sampler"
-    }
-  },
   "3171"      : {
     "inputs"     : {
       "face_mask"       : true,
@@ -6633,6 +6274,189 @@
       "title" : "Any Switch (rgthree)"
     }
   },
+  "3315"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : false,
+      "images"          : [
+        "3322",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "3316"      : {
+    "inputs"     : {
+      "center_x"            : 0.3,
+      "center_y"            : 0.5,
+      "saturation"          : 0.9,
+      "vignette_intensity"  : 0.010000000000000002,
+      "grain_method"        : "filmgrainer",
+      "grain_power"         : 0.08,
+      "grain_scale"         : 0.4,
+      "grain_sat"           : 0.3,
+      "filmgrainer_shadows" : 0.15000000000000002,
+      "filmgrainer_highs"   : 0.10000000000000002,
+      "blur_strength"       : 1,
+      "blur_focus_spread"   : 0.30000000000000004,
+      "focal_depth"         : 0.10000000000000002,
+      "image"               : [
+        "3317",
+        0
+      ],
+      "depth_map"           : [
+        "3323",
+        0
+      ]
+    },
+    "class_type" : "LayerFilter: FilmV2",
+    "_meta"      : {
+      "title" : "LayerFilter: Film V2"
+    }
+  },
+  "3317"      : {
+    "inputs"     : {
+      "image" : [
+        "3322",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3318"      : {
+    "inputs"     : {
+      "float_value"    : [
+        "2100",
+        0
+      ],
+      "multiply_value" : 0.181818
+    },
+    "class_type" : "FloatMultiplication",
+    "_meta"      : {
+      "title" : "Float Multiplication"
+    }
+  },
+  "3320"      : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "3317",
+        1
+      ],
+      "b"    : [
+        "3317",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "3321"      : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 1,
+      "blur"        : 0,
+      "mask"        : [
+        "3315",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "3322"      : {
+    "inputs"     : {
+      "image" : [
+        "3334",
+        0
+      ]
+    },
+    "class_type" : "ImpactImageBatchToImageList",
+    "_meta"      : {
+      "title" : "Image Batch to Image List"
+    }
+  },
+  "3323"      : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "3320",
+        0
+      ],
+      "image"        : [
+        "3322",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "3329"      : {
+    "inputs"     : {
+      "images" : [
+        "3330",
+        0
+      ]
+    },
+    "class_type" : "ImageListToImageBatch",
+    "_meta"      : {
+      "title" : "Image List to Image Batch"
+    }
+  },
+  "3330"      : {
+    "inputs"     : {
+      "noise_scale"   : [
+        "3318",
+        0
+      ],
+      "blend_opacity" : 14,
+      "image"         : [
+        "3523",
+        0
+      ],
+      "mask"          : [
+        "3321",
+        0
+      ]
+    },
+    "class_type" : "NoisePlusBlend",
+    "_meta"      : {
+      "title" : "Noise Plus Blend"
+    }
+  },
+  "3334"      : {
+    "inputs"     : {
+      "any_02" : [
+        "3499",
+        0
+      ],
+      "any_03" : [
+        "1831",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
   "3338"      : {
     "inputs"     : {
       "input1" : [
@@ -6908,7 +6732,7 @@
   },
   "3372"      : {
     "inputs"     : {
-      "stop_at_clip_layer" : -3,
+      "stop_at_clip_layer" : -2,
       "clip"               : [
         "3404",
         0
@@ -7432,9 +7256,9 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.18,
+      "detail_amount"      : 0.2,
       "start"              : 0.42,
-      "end"                : 0.65,
+      "end"                : 0.66,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
@@ -7657,7 +7481,7 @@
         "3386",
         0
       ],
-      "steps"               : 24,
+      "steps"               : 21,
       "cfg"                 : 1.1,
       "sampler_name"        : "deis",
       "scheduler"           : "beta",
@@ -8096,6 +7920,38 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
+    }
+  },
+  "3523"      : {
+    "inputs"     : {
+      "noise_radius"   : 1,
+      "preserve_edges" : 1,
+      "sharpen"        : [
+        "3524",
+        0
+      ],
+      "ratio"          : [
+        "3524",
+        1
+      ],
+      "image"          : [
+        "3316",
+        0
+      ]
+    },
+    "class_type" : "ImageSmartSharpen+",
+    "_meta"      : {
+      "title" : "🔧 Image Smart Sharpen"
+    }
+  },
+  "3524"      : {
+    "inputs"     : {
+      "float_1" : 0.22,
+      "float_2" : 0.35
+    },
+    "class_type" : "TwoFloats",
+    "_meta"      : {
+      "title" : "🔧 Image Smart Sharpen Ratio"
     }
   },
   "2995:113"  : {
@@ -9107,6 +8963,183 @@
       ],
       "negative"           : [
         "2998:54",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (BG Detailer)"
+    }
+  },
+  "3251:113"  : {
+    "inputs"     : {
+      "max_shift"  : 1.45,
+      "base_shift" : 0.45,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3401",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.35::0.50"
+    }
+  },
+  "3251:88"   : {
+    "inputs"     : {
+      "combined"     : true,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : true
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "3251:54"   : {
+    "inputs"     : {
+      "conditioning" : [
+        "3251:53",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "3251:53"   : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "3374",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "3251:2975" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_b"           : [
+        "3251:2972",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3251:2972" : {
+    "inputs"     : {
+      "text1"     : "",
+      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves",
+      "text3"     : "",
+      "delimiter" : ","
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "Prompt ClipL Additional"
+    }
+  },
+  "3251:506"  : {
+    "inputs"     : {
+      "clip_l"   : [
+        "3251:2975",
+        0
+      ],
+      "t5xxl"    : [
+        "3251:2976",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "3374",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "3251:2976" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_b"           : [
+        "3251:2973",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3251:2973" : {
+    "inputs"     : {
+      "text1"     : "",
+      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish ",
+      "text3"     : "",
+      "delimiter" : ","
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "Prompt t5xxl Additional"
+    }
+  },
+  "3251:548"  : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : true,
+      "max_size"           : 1024,
+      "seed"               : -1,
+      "steps"              : 17,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : 0.18,
+      "feather"            : 5,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "segs"               : [
+        "3251:88",
+        0
+      ],
+      "model"              : [
+        "3251:113",
+        0
+      ],
+      "clip"               : [
+        "3374",
+        0
+      ],
+      "vae"                : [
+        "3373",
+        0
+      ],
+      "positive"           : [
+        "3251:506",
+        0
+      ],
+      "negative"           : [
+        "3251:54",
         0
       ]
     },
