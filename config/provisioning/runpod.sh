@@ -5,8 +5,12 @@
 
 
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
+sleep 2
 nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
+sleep 2
 nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
+sleep 2
+
 #WORKSPACE=/workspace/
 # * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
 # * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
@@ -162,6 +166,7 @@ NODES=(
     "https://github.com/chrisfreilich/virtuoso-nodes"
     "https://github.com/guyyariv/DyPE"
     "https://github.com/kijai/ComfyUI-SUPIR"
+    "https://github.com/skatardude10/ComfyUI-Optical-Realism"
     "https://github.com/sk-palani/ComfyUI_Simpler"
 )
 
