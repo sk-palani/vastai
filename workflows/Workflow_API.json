@@ -825,7 +825,7 @@
       ],
       "blend_opacity" : 11,
       "image"         : [
-        "3516",
+        "363",
         0
       ],
       "mask"          : [
@@ -836,26 +836,6 @@
     "class_type" : "NoisePlusBlend",
     "_meta"      : {
       "title" : "Noise Plus Blend"
-    }
-  },
-  "342"       : {
-    "inputs"     : {
-      "value1" : 0.72,
-      "value2" : 0.56
-    },
-    "class_type" : "SeargeFloatPair",
-    "_meta"      : {
-      "title" : "0.72::0.56"
-    }
-  },
-  "343"       : {
-    "inputs"     : {
-      "value1" : 0.52,
-      "value2" : 0.37
-    },
-    "class_type" : "SeargeFloatPair",
-    "_meta"      : {
-      "title" : "Input+DetailerDenoise[0.62,0.56]"
     }
   },
   "356"       : {
@@ -1095,34 +1075,6 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "484"       : {
-    "inputs"     : {
-      "question"          : "Describe the image concisely using only clearly visible details. Include the background environment, camera angle and framing, and notable accessories such as glasses, jewelry, hairstyle, and outfit. Describe the subject’s facial expression, including makeup style, eye appearance, and lipstick color or finish. Do not mention image quality, focus, or blur. Avoid speculation and do not infer details that are not visually evident. If the background is minimal, describe its visible elements and setting accurately.",
-      "seed"              : [
-        "3386",
-        0
-      ],
-      "temperature"       : 0.6,
-      "top_p"             : 0.95,
-      "max_new_tokens"    : 512,
-      "keep_model_loaded" : [
-        "2178",
-        0
-      ],
-      "model"             : [
-        "564",
-        0
-      ],
-      "image"             : [
-        "1271",
-        0
-      ]
-    },
-    "class_type" : "JanusProDescribeImage|Mie",
-    "_meta"      : {
-      "title" : "Janus Pro Describe Image 🐑"
-    }
-  },
   "485"       : {
     "inputs"     : {
       "question"          : "Describe the outfit in the image using concise, clearly visible details. Include the color palette, materials and fabric types, surface texture, fit and silhouette, and any notable design elements or accessories that are part of the clothing. Avoid speculation and do not infer brands or materials unless they are visually evident.",
@@ -1132,7 +1084,7 @@
       ],
       "temperature"       : 0.6,
       "top_p"             : 0.95,
-      "max_new_tokens"    : 384,
+      "max_new_tokens"    : 768,
       "keep_model_loaded" : [
         "2178",
         0
@@ -1196,30 +1148,12 @@
       "title" : "Regex Extract"
     }
   },
-  "513"       : {
-    "inputs"     : {
-      "text"   : "loving \npouting\nshy\nhappy\nvery happy\nsilly\naroused\nflirting\nseductive\nprovocative\nsurprised\nopen mouth",
-      "amount" : 1,
-      "seed"   : [
-        "3386",
-        0
-      ]
-    },
-    "class_type" : "TextRandomMultiline",
-    "_meta"      : {
-      "title" : "Text Random Multiline"
-    }
-  },
   "515"       : {
     "inputs"     : {
       "delimiter"        : ",",
       "clean_whitespace" : "true",
       "text_a"           : [
         "3047",
-        0
-      ],
-      "text_b"           : [
-        "2555",
         0
       ]
     },
@@ -1359,16 +1293,6 @@
       "title" : "Float Multiplication"
     }
   },
-  "623"       : {
-    "inputs"     : {
-      "value1" : 0.92,
-      "value2" : 0.67
-    },
-    "class_type" : "SeargeFloatPair",
-    "_meta"      : {
-      "title" : "0.92::0.78"
-    }
-  },
   "654"       : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
@@ -1504,7 +1428,7 @@
   },
   "764"       : {
     "inputs"     : {
-      "mode" : false,
+      "mode" : true,
       "a"    : [
         "744",
         1
@@ -1590,7 +1514,6 @@
       "vertical_align"   : "bottom",
       "offset_x"         : -4,
       "offset_y"         : -2,
-      "direction"        : "ltr",
       "img_composite"    : [
         "828",
         0
@@ -1686,7 +1609,7 @@
   "931"       : {
     "inputs"     : {
       "any_01" : [
-        "3489",
+        "3186",
         0
       ],
       "any_02" : [
@@ -1803,50 +1726,6 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "1343"      : {
-    "inputs"     : {
-      "makeTileable"          : false,
-      "context"               : "Directional (vertical, outward)",
-      "mapWeight"             : 0.5,
-      "sensitivityToOutliers" : 0.117,
-      "patchSize"             : 30,
-      "maxProbeCount"         : 200,
-      "image"                 : [
-        "440",
-        0
-      ],
-      "mask"                  : [
-        "455",
-        0
-      ]
-    },
-    "class_type" : "Resynthesize",
-    "_meta"      : {
-      "title" : "Resynthesize"
-    }
-  },
-  "1344"      : {
-    "inputs"     : {
-      "makeTileable"          : false,
-      "context"               : "Directional (horizontal, outward)",
-      "mapWeight"             : 0.5,
-      "sensitivityToOutliers" : 0.117,
-      "patchSize"             : 30,
-      "maxProbeCount"         : 200,
-      "image"                 : [
-        "440",
-        0
-      ],
-      "mask"                  : [
-        "455",
-        0
-      ]
-    },
-    "class_type" : "Resynthesize",
-    "_meta"      : {
-      "title" : "Resynthesize"
-    }
-  },
   "1345"      : {
     "inputs"     : {
       "text"             : [
@@ -1887,9 +1766,9 @@
   },
   "1412"      : {
     "inputs"     : {
-      "strength"      : 0.38,
-      "start_percent" : 0.12,
-      "end_percent"   : 0.35,
+      "strength"      : 0.48,
+      "start_percent" : 0,
+      "end_percent"   : 0.5,
       "positive"      : [
         "737",
         0
@@ -1976,7 +1855,7 @@
   "1566"      : {
     "inputs"     : {
       "any_01" : [
-        "3329",
+        "3330",
         0
       ],
       "any_03" : [
@@ -2241,11 +2120,11 @@
         0
       ],
       "when_true"  : [
-        "1343",
+        "440",
         0
       ],
       "when_false" : [
-        "1344",
+        "440",
         0
       ]
     },
@@ -2276,8 +2155,8 @@
     "inputs"     : {
       "comparison" : "a <= b",
       "a"          : [
-        "1941",
-        0
+        "3545",
+        2
       ],
       "b"          : [
         "1925",
@@ -2332,8 +2211,8 @@
   "1848"      : {
     "inputs"     : {
       "megapixel"     : "2.0",
-      "divisible_by"  : "64",
-      "mode"          : "pad",
+      "divisible_by"  : "8",
+      "mode"          : "resize",
       "delta_percent" : [
         "2532",
         0
@@ -2356,11 +2235,11 @@
         0
       ],
       "b"          : [
-        "1902",
+        "3547",
         0
       ],
       "c"          : [
-        "1902",
+        "3547",
         1
       ]
     },
@@ -2377,11 +2256,11 @@
         0
       ],
       "b"          : [
-        "1902",
+        "3547",
         0
       ],
       "c"          : [
-        "1902",
+        "3547",
         1
       ]
     },
@@ -2485,7 +2364,7 @@
         0
       ],
       "sampler"      : [
-        "3420",
+        "3419",
         0
       ],
       "sigmas"       : [
@@ -2509,7 +2388,6 @@
         0
       ],
       "noise_strength" : 0.8,
-      "normalize"      : "false",
       "latent"         : [
         "1863",
         0
@@ -2599,7 +2477,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1*(a+c*(b-a))",
+      "expression" : "0.8*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2616,16 +2494,6 @@
     "class_type" : "MathExpression|pysssss",
     "_meta"      : {
       "title" : "Math Expression 🐍"
-    }
-  },
-  "1902"      : {
-    "inputs"     : {
-      "value1" : 28,
-      "value2" : 43
-    },
-    "class_type" : "SeargeIntegerPair",
-    "_meta"      : {
-      "title" : "Range (31:43)"
     }
   },
   "1904"      : {
@@ -2827,16 +2695,6 @@
       "title" : "Math Int"
     }
   },
-  "1941"      : {
-    "inputs"     : {
-      "min" : 1,
-      "max" : 10
-    },
-    "class_type" : "RandomInt",
-    "_meta"      : {
-      "title" : "Random Int"
-    }
-  },
   "1942"      : {
     "inputs"     : {
       "mode" : false,
@@ -2901,7 +2759,7 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.05,
+      "max_shift"  : 1.5,
       "base_shift" : 0.5,
       "width"      : [
         "445",
@@ -2943,7 +2801,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 18,
+      "steps"        : 24,
       "denoise"      : [
         "1999",
         0
@@ -2991,49 +2849,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "2034"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2065",
-        0
-      ],
-      "any_02" : [
-        "654",
-        0
-      ],
-      "any_03" : [
-        "1885",
-        0
-      ],
-      "any_04" : [
-        "3018",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "2035"      : {
-    "inputs"     : {
-      "face_mask"       : false,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : true,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "2034",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
     }
   },
   "2047"      : {
@@ -3106,7 +2921,7 @@
   },
   "2060"      : {
     "inputs"     : {
-      "strength"           : 0.42,
+      "strength"           : 0.8,
       "strength_type"      : "multiply",
       "conditioning"       : [
         "2067",
@@ -3358,7 +3173,7 @@
   "2086"      : {
     "inputs"     : {
       "max_shift"  : 1.45,
-      "base_shift" : 0.75,
+      "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3395,7 +3210,7 @@
         0
       ],
       "when_true"  : [
-        "343",
+        "3542",
         0
       ],
       "when_false" : [
@@ -3415,11 +3230,11 @@
         0
       ],
       "when_true"  : [
-        "623",
+        "3543",
         0
       ],
       "when_false" : [
-        "623",
+        "3543",
         1
       ]
     },
@@ -3435,11 +3250,11 @@
         0
       ],
       "when_true"  : [
-        "342",
+        "3544",
         0
       ],
       "when_false" : [
-        "342",
+        "3544",
         1
       ]
     },
@@ -3694,7 +3509,7 @@
   },
   "2164"      : {
     "inputs"     : {
-      "text" : "A professionally color graded RAW photograph of an Indian woman with an extremely beautiful yet natural face, wearing a small black bindi centered on her forehead. Her skin is rendered with high fidelity detail, showing realistic texture, visible pores, soft peach fuzz, and fine vellus hairs subtly illuminated by gentle side lighting. Faint acne marks and mild natural unevenness are present, emphasizing authenticity and photographic realism over artificial aesthetic perfection. The overall rendering prioritizes true to life skin behavior, organic tonal variation, and natural facial structure.\nSkin detail remains unretouched, avoiding beauty filter effects or excessive smoothing."
+      "text" : "A professionally color graded RAW photograph of an Indian woman with an extremely beautiful yet natural face, wearing a small black bindi centered on her forehead. Her skin is rendered with high fidelity detail, showing realistic texture, visible pores, soft peach fuzz, and fine vellus hairs subtly illuminated by gentle side lighting. The overall rendering prioritizes true to life skin behavior, organic tonal variation, and natural facial structure.\nSkin detail remains unretouched, avoiding beauty filter effects or excessive smoothing."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3888,25 +3703,6 @@
       "title" : "Preview Image"
     }
   },
-  "2268"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 1.4,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3417",
-        0
-      ],
-      "clip"           : [
-        "3417",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "breast-size2 1.80::0.80"
-    }
-  },
   "2269"      : {
     "inputs"     : {
       "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
@@ -4015,10 +3811,6 @@
   },
   "2345"      : {
     "inputs"     : {
-      "any_01" : [
-        "2987",
-        0
-      ],
       "any_02" : [
         "2065",
         0
@@ -4143,7 +3935,7 @@
         "1955",
         0
       ],
-      "b"         : 0.77,
+      "b"         : 0.76,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -4184,35 +3976,6 @@
     "class_type" : "ImpactStringSelector",
     "_meta"      : {
       "title" : "String Selector"
-    }
-  },
-  "2553"      : {
-    "inputs"     : {
-      "a"         : [
-        "2102",
-        0
-      ],
-      "b"         : 0.33,
-      "operation" : "multiply"
-    },
-    "class_type" : "easy mathFloat",
-    "_meta"      : {
-      "title" : "Math Float"
-    }
-  },
-  "2555"      : {
-    "inputs"     : {
-      "text1"     : "The subject is having a ",
-      "text2"     : [
-        "513",
-        0
-      ],
-      "text3"     : " facial expression",
-      "delimiter" : ""
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "textConcat"
     }
   },
   "2567"      : {
@@ -4280,8 +4043,8 @@
         0
       ],
       "text_b"           : [
-        "484",
-        0
+        "3529",
+        1
       ],
       "text_c"           : [
         "2590",
@@ -4462,28 +4225,6 @@
       "title" : "Preview Image"
     }
   },
-  "2672"      : {
-    "inputs"     : {
-      "shadow_brightness"      : 0.88,
-      "shadow_saturation"      : 1,
-      "shadow_hue"             : 0,
-      "shadow_level_offset"    : 0,
-      "shadow_range"           : 0.25,
-      "highlight_brightness"   : 0.97,
-      "highlight_saturation"   : 1,
-      "highlight_hue"          : 0,
-      "highlight_level_offset" : 0,
-      "highlight_range"        : 0.25,
-      "image"                  : [
-        "2198",
-        0
-      ]
-    },
-    "class_type" : "LayerColor: Color of Shadow & Highlight",
-    "_meta"      : {
-      "title" : "LayerColor: Color of Shadow & Highlight"
-    }
-  },
   "2675"      : {
     "inputs"     : {
       "strength"   : 100,
@@ -4545,7 +4286,7 @@
       ],
       "temperature"       : 0.6,
       "top_p"             : 0.95,
-      "max_new_tokens"    : 384,
+      "max_new_tokens"    : 512,
       "keep_model_loaded" : [
         "2178",
         0
@@ -4939,11 +4680,11 @@
   },
   "2846"      : {
     "inputs"     : {
-      "text1"     : "hazel brown eyes, amber and olive iris tones, detailed iris texture, sharp limbal ring, clear pupil, natural sclera veins, subtle tear film gloss, long separated eyelashes, defined natural eyebrows, visible eyebrow hair strands, realistic hair direction, high detail, photorealistic, macro clarity",
-      "text2"     : [
+      "text1"     : [
         "2754",
         0
       ],
+      "text2"     : "Her lips glisten softly with moisture, her eyes luminous and tender, as if holding a quiet breath between them.Red Lipstick, well-defined eyebrows, long eyelashes, (aidmarealisticskin:0.5)",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -4954,11 +4695,11 @@
   },
   "2847"      : {
     "inputs"     : {
-      "text1"     : "Ultra detailed hazel brown eyes with layered amber and subtle olive tones, intricate radial iris fibers with natural color variation, defined limbal ring, clear pupil edge, realistic sclera with faint capillaries, soft reflective tear film along the waterline creating natural catchlights, luminous but natural gaze, long individually separated eyelashes with fine strand definition, well-defined natural eyebrows with visible hair strands and realistic direction growth, subtle skin texture around the eye area, high clarity macro-level detail, soft diffused lighting reflection, photoreal refinement",
-      "text2"     : [
+      "text1"     : [
         "2754",
         0
       ],
+      "text2"     : "well-defined eyebrows, long eyelashes, , Her lips glisten softly with moisture, her hazelnut brown detailed eyes, eyes luminous and tender, as if holding a quiet breath between them.",
       "text3"     : "",
       "delimiter" : ","
     },
@@ -4971,7 +4712,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3135",
+        "3134",
         0
       ],
       "filename_delimiter"      : "_",
@@ -4997,46 +4738,6 @@
       "title" : "Image Save"
     }
   },
-  "2866"      : {
-    "inputs"     : {
-      "model_a" : [
-        "3417",
-        0
-      ],
-      "model_b" : [
-        "2268",
-        0
-      ],
-      "boolean" : [
-        "241",
-        0
-      ]
-    },
-    "class_type" : "Model Input Switch",
-    "_meta"      : {
-      "title" : "Model Input Switch"
-    }
-  },
-  "2867"      : {
-    "inputs"     : {
-      "clip_a"  : [
-        "3417",
-        1
-      ],
-      "clip_b"  : [
-        "2268",
-        1
-      ],
-      "boolean" : [
-        "241",
-        0
-      ]
-    },
-    "class_type" : "CLIP Input Switch",
-    "_meta"      : {
-      "title" : "CLIP Input Switch"
-    }
-  },
   "2874"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -5054,25 +4755,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Pandora-RAWr 0.65::0.65"
-    }
-  },
-  "2901"      : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Pandora-RAWr 0.80::1.00"
     }
   },
   "2922"      : {
@@ -5136,7 +4818,7 @@
       "output_black_point" : 0,
       "output_white_point" : 1,
       "image"              : [
-        "2672",
+        "3556",
         0
       ]
     },
@@ -5148,7 +4830,7 @@
   "2930"      : {
     "inputs"     : {
       "brightness_target"   : 0.5,
-      "cyan_red"            : 0.02,
+      "cyan_red"            : -0.02,
       "magenta_green"       : 0,
       "yellow_blue"         : 0.05,
       "preserve_luminosity" : false,
@@ -5222,15 +4904,6 @@
       "title" : "Input Selector"
     }
   },
-  "2970"      : {
-    "inputs"     : {
-      "text" : "aidmarealisticskin"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
   "2973"      : {
     "inputs"     : {
       "text" : "aidmarealisticskin, Skin imperfections,"
@@ -5243,25 +4916,10 @@
   "2975"      : {
     "inputs"     : {
       "invert_mask" : false,
-      "grow"        : 2,
+      "grow"        : 8,
       "blur"        : 4,
       "mask"        : [
         "2355",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "2978"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
-      "mask"        : [
-        "2035",
         0
       ]
     },
@@ -5284,36 +4942,6 @@
       "title" : "Math Float"
     }
   },
-  "2987"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "3134",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 2,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "true",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "2995:548",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
   "2989"      : {
     "inputs"     : {
       "mask_opacity" : 0.3,
@@ -5333,25 +4961,6 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "2993"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "2034",
-        0
-      ],
-      "mask"         : [
-        "2978",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
   "2997"      : {
     "inputs"     : {
       "mask_opacity" : 0.3,
@@ -5363,6 +4972,25 @@
       ],
       "mask"         : [
         "2975",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2999"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.3,
+      "mask_color"   : "255, 0, 207",
+      "pass_through" : false,
+      "image"        : [
+        "2797",
+        0
+      ],
+      "mask"         : [
+        "2829",
         0
       ]
     },
@@ -5408,6 +5036,25 @@
     "class_type" : "Image Save",
     "_meta"      : {
       "title" : "Image Save"
+    }
+  },
+  "3013"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.3,
+      "mask_color"   : "255, 0, 207",
+      "pass_through" : false,
+      "image"        : [
+        "1611",
+        0
+      ],
+      "mask"         : [
+        "2715",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
     }
   },
   "3015"      : {
@@ -5678,8 +5325,8 @@
       "delimiter"        : "__",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "484",
-        0
+        "3529",
+        1
       ],
       "text_b"           : [
         "485",
@@ -5940,22 +5587,6 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "3176"      : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : 0.5,
-      "ratio"          : 0.5,
-      "image"          : [
-        "3175",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
-    }
-  },
   "3177"      : {
     "inputs"     : {
       "float_value"    : [
@@ -6026,7 +5657,7 @@
       ],
       "blend_opacity" : 4,
       "image"         : [
-        "3514",
+        "3561",
         0
       ],
       "mask"          : [
@@ -6037,46 +5668,6 @@
     "class_type" : "NoisePlusBlend",
     "_meta"      : {
       "title" : "Noise Plus Blend"
-    }
-  },
-  "3196"      : {
-    "inputs"     : {
-      "model_a" : [
-        "3391",
-        0
-      ],
-      "model_b" : [
-        "2866",
-        0
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "Model Input Switch",
-    "_meta"      : {
-      "title" : "Model Input Switch"
-    }
-  },
-  "3197"      : {
-    "inputs"     : {
-      "clip_a"  : [
-        "3339",
-        0
-      ],
-      "clip_b"  : [
-        "2867",
-        0
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "CLIP Input Switch",
-    "_meta"      : {
-      "title" : "CLIP Input Switch"
     }
   },
   "3201"      : {
@@ -6248,10 +5839,6 @@
         "2339",
         0
       ],
-      "any_03" : [
-        "2987",
-        0
-      ],
       "any_04" : [
         "2065",
         0
@@ -6284,7 +5871,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : false,
       "images"          : [
-        "3322",
+        "3334",
         0
       ]
     },
@@ -6293,39 +5880,10 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "3316"      : {
-    "inputs"     : {
-      "center_x"            : 0.3,
-      "center_y"            : 0.5,
-      "saturation"          : 0.9,
-      "vignette_intensity"  : 0.010000000000000002,
-      "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.08,
-      "grain_scale"         : 0.4,
-      "grain_sat"           : 0.3,
-      "filmgrainer_shadows" : 0.15000000000000002,
-      "filmgrainer_highs"   : 0.10000000000000002,
-      "blur_strength"       : 1,
-      "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
-      "image"               : [
-        "3317",
-        0
-      ],
-      "depth_map"           : [
-        "3323",
-        0
-      ]
-    },
-    "class_type" : "LayerFilter: FilmV2",
-    "_meta"      : {
-      "title" : "LayerFilter: Film V2"
-    }
-  },
   "3317"      : {
     "inputs"     : {
       "image" : [
-        "3322",
+        "3334",
         0
       ]
     },
@@ -6379,18 +5937,6 @@
       "title" : "LayerMask: MaskGrow"
     }
   },
-  "3322"      : {
-    "inputs"     : {
-      "image" : [
-        "3334",
-        0
-      ]
-    },
-    "class_type" : "ImpactImageBatchToImageList",
-    "_meta"      : {
-      "title" : "Image Batch to Image List"
-    }
-  },
   "3323"      : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
@@ -6399,25 +5945,13 @@
         0
       ],
       "image"        : [
-        "3322",
+        "3334",
         0
       ]
     },
     "class_type" : "AIO_Preprocessor",
     "_meta"      : {
       "title" : "AIO Aux Preprocessor"
-    }
-  },
-  "3329"      : {
-    "inputs"     : {
-      "images" : [
-        "3330",
-        0
-      ]
-    },
-    "class_type" : "ImageListToImageBatch",
-    "_meta"      : {
-      "title" : "Image List to Image Batch"
     }
   },
   "3330"      : {
@@ -6428,7 +5962,7 @@
       ],
       "blend_opacity" : 14,
       "image"         : [
-        "3523",
+        "3562",
         0
       ],
       "mask"          : [
@@ -6521,7 +6055,7 @@
   },
   "3352"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 0.92,
       "strength_clip"  : 0.2,
       "model"          : [
@@ -6540,7 +6074,7 @@
   },
   "3353"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 1,
       "strength_clip"  : 0.2,
       "model"          : [
@@ -6654,25 +6188,6 @@
       "title" : "ILLUSTRATION (FLUX) - V3.1 0.80::0.80"
     }
   },
-  "3367"      : {
-    "inputs"     : {
-      "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 1.75,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3388",
-        0
-      ],
-      "clip"           : [
-        "3388",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "breast-size2 1.75::0.80"
-    }
-  },
   "3368"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -6732,7 +6247,7 @@
   },
   "3372"      : {
     "inputs"     : {
-      "stop_at_clip_layer" : -2,
+      "stop_at_clip_layer" : -3,
       "clip"               : [
         "3404",
         0
@@ -6798,7 +6313,7 @@
   },
   "3380"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
@@ -6891,7 +6406,7 @@
   },
   "3392"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
@@ -6910,7 +6425,7 @@
   },
   "3393"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
@@ -6929,7 +6444,7 @@
   },
   "3394"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
@@ -7131,12 +6646,12 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3367",
+        "3538",
         0
       ],
       "clip"           : [
-        "3367",
-        1
+        "3537",
+        0
       ]
     },
     "class_type" : "LoraLoader",
@@ -7169,12 +6684,12 @@
       "strength_model" : 0.5,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3370",
+        "3534",
         0
       ],
       "clip"           : [
-        "3370",
-        1
+        "3533",
+        0
       ]
     },
     "class_type" : "LoraLoader",
@@ -7220,28 +6735,9 @@
       "title" : "PatchModelAddDownscale"
     }
   },
-  "3417"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "2901",
-        0
-      ],
-      "clip"           : [
-        "2901",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin 0.60::0.10"
-    }
-  },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.12,
+      "dishonesty_factor" : -0.04,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -7252,47 +6748,6 @@
     "class_type" : "LyingSigmaSampler",
     "_meta"      : {
       "title" : "Lying Sigma Sampler"
-    }
-  },
-  "3420"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.2,
-      "start"              : 0.42,
-      "end"                : 0.66,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : false,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "3419",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
-    }
-  },
-  "3421"      : {
-    "inputs"     : {
-      "lora_name"      : "FLUX_Polyhedron_all_Kohya_ss-000001.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "FLUX_Polyhedron_all_Kohya_ss-000001 0.80::0.10"
     }
   },
   "3426"      : {
@@ -7324,11 +6779,11 @@
         0
       ],
       "b"          : [
-        "3448",
+        "3549",
         0
       ],
       "c"          : [
-        "3448",
+        "3549",
         1
       ]
     },
@@ -7345,27 +6800,17 @@
         0
       ],
       "b"          : [
-        "3448",
+        "3548",
         0
       ],
       "c"          : [
-        "3448",
+        "3548",
         1
       ]
     },
     "class_type" : "MathExpression|pysssss",
     "_meta"      : {
       "title" : "Math Expression 🐍"
-    }
-  },
-  "3448"      : {
-    "inputs"     : {
-      "value1" : 28,
-      "value2" : 42
-    },
-    "class_type" : "SeargeIntegerPair",
-    "_meta"      : {
-      "title" : "Range (31:43)"
     }
   },
   "3449"      : {
@@ -7430,14 +6875,14 @@
   "3469"      : {
     "inputs"     : {
       "detail_amount"      : 0.02,
-      "start"              : 0.33,
-      "end"                : 0.45,
+      "start"              : 0.66,
+      "end"                : 0.74,
       "bias"               : 0.35,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : true,
+      "smooth"             : false,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "3502",
@@ -7451,14 +6896,14 @@
   },
   "3474"      : {
     "inputs"     : {
-      "max_shift"  : 1.4,
+      "max_shift"  : 1.25,
       "base_shift" : 0.6,
       "width"      : [
-        "394",
+        "3522",
         0
       ],
       "height"     : [
-        "394",
+        "3522",
         1
       ],
       "model"      : [
@@ -7471,79 +6916,17 @@
       "title" : "ModelSamplingFlux 1.40::0.8"
     }
   },
-  "3478"      : {
-    "inputs"     : {
-      "upscale_by"          : [
-        "1740",
-        0
-      ],
-      "seed"                : [
-        "3386",
-        0
-      ],
-      "steps"               : 21,
-      "cfg"                 : 1.1,
-      "sampler_name"        : "deis",
-      "scheduler"           : "beta",
-      "denoise"             : 0.18,
-      "mode_type"           : "Chess",
-      "tile_width"          : 1024,
-      "tile_height"         : 1024,
-      "mask_blur"           : 8,
-      "tile_padding"        : 64,
-      "seam_fix_mode"       : "None",
-      "seam_fix_denoise"    : 1,
-      "seam_fix_width"      : 64,
-      "seam_fix_mask_blur"  : 8,
-      "seam_fix_padding"    : 16,
-      "force_uniform_tiles" : true,
-      "tiled_decode"        : false,
-      "batch_size"          : 1,
-      "image"               : [
-        "3519",
-        0
-      ],
-      "model"               : [
-        "3474",
-        0
-      ],
-      "positive"            : [
-        "2108",
-        0
-      ],
-      "negative"            : [
-        "1412",
-        1
-      ],
-      "vae"                 : [
-        "3373",
-        0
-      ],
-      "custom_sampler"      : [
-        "3469",
-        0
-      ],
-      "custom_sigmas"       : [
-        "3512",
-        1
-      ]
-    },
-    "class_type" : "UltimateSDUpscaleCustomSample",
-    "_meta"      : {
-      "title" : "Ultimate SD Upscale (Custom Sample)"
-    }
-  },
   "3479"      : {
     "inputs"     : {
       "method"       : "mkl",
-      "strength"     : 0.5,
+      "strength"     : 0.25,
       "multithread"  : true,
       "image_ref"    : [
         "2669",
         0
       ],
       "image_target" : [
-        "3478",
+        "3560",
         0
       ]
     },
@@ -7569,37 +6952,6 @@
     "class_type" : "ColorMatch",
     "_meta"      : {
       "title" : "Color Match"
-    }
-  },
-  "3484"      : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.75,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3196",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.45::0.5"
-    }
-  },
-  "3489"      : {
-    "inputs"     : {
-      "lut_name" : "Presetpro  - Kodacrome 64.cube",
-      "strength" : 0.24,
-      "log"      : false,
-      "image"    : [
-        "3186",
-        0
-      ]
-    },
-    "class_type" : "ProPostApplyLUT",
-    "_meta"      : {
-      "title" : "ProPostApplyLUT"
     }
   },
   "3490"      : {
@@ -7630,7 +6982,7 @@
   },
   "3493"      : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5   woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5   woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,\n\n\nFaint acne marks and mild natural unevenness are present, emphasizing authenticity and photographic realism over artificial aesthetic perfection. T\n\n\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7734,35 +7086,6 @@
       "title" : "SplitSigmasDenoise"
     }
   },
-  "3514"      : {
-    "inputs"     : {
-      "center_x"            : 0.3,
-      "center_y"            : 0.5,
-      "saturation"          : 0.9,
-      "vignette_intensity"  : 0.010000000000000002,
-      "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.05,
-      "grain_scale"         : 0.6,
-      "grain_sat"           : 0.3,
-      "filmgrainer_shadows" : 0.08,
-      "filmgrainer_highs"   : 0.05,
-      "blur_strength"       : 1,
-      "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
-      "image"               : [
-        "3176",
-        0
-      ],
-      "depth_map"           : [
-        "3184",
-        0
-      ]
-    },
-    "class_type" : "LayerFilter: FilmV2",
-    "_meta"      : {
-      "title" : "LayerFilter: Film V2"
-    }
-  },
   "3515"      : {
     "inputs"     : {
       "float_1" : 0.22,
@@ -7771,28 +7094,6 @@
     "class_type" : "TwoFloats",
     "_meta"      : {
       "title" : "🔧 Image Smart Sharpen Ratio"
-    }
-  },
-  "3516"      : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : [
-        "3515",
-        0
-      ],
-      "ratio"          : [
-        "3515",
-        1
-      ],
-      "image"          : [
-        "363",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "3517"      : {
@@ -7874,297 +7175,432 @@
       "title" : "ModelMergeFlux1"
     }
   },
-  "3518"      : {
-    "inputs"     : {
-      "text"     : "0.185",
-      "anything" : [
-        "2553",
-        0
-      ]
-    },
-    "class_type" : "easy showAnything",
-    "_meta"      : {
-      "title" : "Show Any"
-    }
-  },
-  "3519"      : {
-    "inputs"     : {
-      "method"       : "mkl",
-      "strength"     : 0.5,
-      "multithread"  : true,
-      "image_ref"    : [
-        "3522",
-        0
-      ],
-      "image_target" : [
-        "3490",
-        0
-      ]
-    },
-    "class_type" : "ColorMatch",
-    "_meta"      : {
-      "title" : "Color Match"
-    }
-  },
   "3522"      : {
     "inputs"     : {
-      "any_01" : [
-        "3499",
-        0
-      ],
-      "any_02" : [
-        "1831",
+      "image" : [
+        "3296",
         0
       ]
     },
-    "class_type" : "Any Switch (rgthree)",
+    "class_type" : "GetImageSize+",
     "_meta"      : {
-      "title" : "Any Switch (rgthree)"
+      "title" : "🔧 Get Image Size"
     }
   },
-  "3523"      : {
+  "3528"      : {
     "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : [
-        "3524",
+      "exclude_people_info"                   : false,
+      "include_lighting"                      : false,
+      "include_camera_angle"                  : true,
+      "include_watermark"                     : false,
+      "include_JPEG_artifacts"                : false,
+      "include_exif"                          : false,
+      "exclude_sexual"                        : false,
+      "exclude_image_resolution"              : false,
+      "include_aesthetic_quality"             : true,
+      "include_composition_style"             : true,
+      "exclude_text"                          : false,
+      "specify_depth_field"                   : false,
+      "specify_lighting_sources"              : false,
+      "do_not_use_ambiguous_language"         : false,
+      "include_nsfw"                          : true,
+      "only_describe_most_important_elements" : true,
+      "do_not_include_artist_name_or_title"   : true,
+      "identify_image_orientation"            : true,
+      "use_vulgar_slang_and_profanity"        : false,
+      "do_not_use_polite_euphemisms"          : false,
+      "include_character_age"                 : true,
+      "include_camera_shot_type"              : true,
+      "exclude_mood_feeling"                  : true,
+      "include_camera_vantage_height"         : true,
+      "mention_watermark"                     : false,
+      "avoid_meta_descriptive_phrases"        : false,
+      "refer_character_name"                  : true,
+      "character_name"                        : "v1dhya5"
+    },
+    "class_type" : "JC_ExtraOptions",
+    "_meta"      : {
+      "title" : "JoyCaption Extra Options"
+    }
+  },
+  "3529"      : {
+    "inputs"     : {
+      "model"             : "joycaption-beta-one",
+      "quantization"      : "Balanced (8-bit)",
+      "prompt_style"      : "Descriptive",
+      "caption_length"    : "any",
+      "max_new_tokens"    : 512,
+      "temperature"       : 0.6,
+      "top_p"             : 0.9,
+      "top_k"             : 0,
+      "custom_prompt"     : "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
+      "memory_management" : "Keep in Memory",
+      "image"             : [
+        "1271",
         0
       ],
-      "ratio"          : [
-        "3524",
+      "extra_options"     : [
+        "3528",
+        0
+      ]
+    },
+    "class_type" : "JC_adv",
+    "_meta"      : {
+      "title" : "JoyCaption (Advanced)"
+    }
+  },
+  "3530"      : {
+    "inputs"     : {
+      "question"          : "Describe the image concisely using only clearly visible details. Include the background environment, camera angle and framing, and notable accessories such as glasses, jewelry, hairstyle, and outfit. Describe the subject’s facial expression, including makeup style, eye appearance, and lipstick color or finish. Do not mention image quality, focus, or blur. Avoid speculation and do not infer details that are not visually evident. If the background is minimal, describe its visible elements and setting accurately.",
+      "seed"              : -1,
+      "temperature"       : 0.6,
+      "top_p"             : 0.95,
+      "max_new_tokens"    : 1024,
+      "keep_model_loaded" : false
+    },
+    "class_type" : "JanusProDescribeImage|Mie",
+    "_meta"      : {
+      "title" : "Janus Pro Describe Image 🐑"
+    }
+  },
+  "3533"      : {
+    "inputs"     : {
+      "clip_a"  : [
+        "3398",
         1
       ],
-      "image"          : [
-        "3316",
+      "clip_b"  : [
+        "3370",
+        1
+      ],
+      "boolean" : [
+        "241",
         0
       ]
     },
-    "class_type" : "ImageSmartSharpen+",
+    "class_type" : "CLIP Input Switch",
     "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
+      "title" : "CLIP Input Switch"
     }
   },
-  "3524"      : {
+  "3534"      : {
     "inputs"     : {
-      "float_1" : 0.22,
-      "float_2" : 0.35
+      "model_a" : [
+        "3399",
+        0
+      ],
+      "model_b" : [
+        "3370",
+        0
+      ],
+      "boolean" : [
+        "241",
+        0
+      ]
+    },
+    "class_type" : "Model Input Switch",
+    "_meta"      : {
+      "title" : "Model Input Switch"
+    }
+  },
+  "3537"      : {
+    "inputs"     : {
+      "clip_a"  : [
+        "3388",
+        1
+      ],
+      "clip_b"  : [
+        "3388",
+        1
+      ],
+      "boolean" : [
+        "241",
+        0
+      ]
+    },
+    "class_type" : "CLIP Input Switch",
+    "_meta"      : {
+      "title" : "CLIP Input Switch"
+    }
+  },
+  "3538"      : {
+    "inputs"     : {
+      "model_a" : [
+        "3388",
+        0
+      ],
+      "model_b" : [
+        "3388",
+        0
+      ],
+      "boolean" : [
+        "241",
+        0
+      ]
+    },
+    "class_type" : "Model Input Switch",
+    "_meta"      : {
+      "title" : "Model Input Switch"
+    }
+  },
+  "3540"      : {
+    "inputs"     : {
+      "texts"   : "Turn  {{PROMPT}} into a realistic photograph",
+      "find"    : "{{PROMPT}}",
+      "replace" : ""
+    },
+    "class_type" : "ReplaceText",
+    "_meta"      : {
+      "title" : "Replace Text"
+    }
+  },
+  "3541"      : {
+    "inputs"     : {
+      "texts"   : "Turn  {{PROMPT}} into a realistic photograph",
+      "find"    : "{{PROMPT}}",
+      "replace" : ""
+    },
+    "class_type" : "ReplaceText",
+    "_meta"      : {
+      "title" : "Replace Text"
+    }
+  },
+  "3542"      : {
+    "inputs"     : {
+      "float_1" : 0.52,
+      "float_2" : 0.4
     },
     "class_type" : "TwoFloats",
     "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen Ratio"
+      "title" : "2 Floats"
     }
   },
-  "2995:113"  : {
+  "3543"      : {
     "inputs"     : {
-      "max_shift"  : 1.05,
-      "base_shift" : 0.3,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3484",
+      "float_1" : 0.92,
+      "float_2" : 0.67
+    },
+    "class_type" : "TwoFloats",
+    "_meta"      : {
+      "title" : "2 Floats"
+    }
+  },
+  "3544"      : {
+    "inputs"     : {
+      "float_1" : 0.72,
+      "float_2" : 0.56
+    },
+    "class_type" : "TwoFloats",
+    "_meta"      : {
+      "title" : "2 Floats"
+    }
+  },
+  "3545"      : {
+    "inputs"     : {
+      "number_type" : "integer",
+      "minimum"     : 1,
+      "maximum"     : 10,
+      "seed"        : -1
+    },
+    "class_type" : "Random Number",
+    "_meta"      : {
+      "title" : "Random Number"
+    }
+  },
+  "3547"      : {
+    "inputs"     : {
+      "float_1" : 28,
+      "float_2" : 42
+    },
+    "class_type" : "TwoFloats",
+    "_meta"      : {
+      "title" : "Range (31:43)"
+    }
+  },
+  "3548"      : {
+    "inputs"     : {
+      "float_1" : 28,
+      "float_2" : 42
+    },
+    "class_type" : "TwoFloats",
+    "_meta"      : {
+      "title" : "Range (31:43)"
+    }
+  },
+  "3549"      : {
+    "inputs"     : {
+      "float_1" : 28,
+      "float_2" : 42
+    },
+    "class_type" : "TwoFloats",
+    "_meta"      : {
+      "title" : "Range (31:43)"
+    }
+  },
+  "3556"      : {
+    "inputs"     : {
+      "shadow_brightness"      : 0.88,
+      "shadow_saturation"      : 1,
+      "shadow_hue"             : 0,
+      "shadow_level_offset"    : 0,
+      "shadow_range"           : 0.25,
+      "highlight_brightness"   : 0.97,
+      "highlight_saturation"   : 1,
+      "highlight_hue"          : 0,
+      "highlight_level_offset" : 0,
+      "highlight_range"        : 0.25,
+      "image"                  : [
+        "2198",
         0
       ]
     },
-    "class_type" : "ModelSamplingFlux",
+    "class_type" : "LayerColor: Color of Shadow & Highlight",
     "_meta"      : {
-      "title" : "1.35::0.50"
+      "title" : "LayerColor: Color of Shadow & Highlight"
     }
   },
-  "2995:88"   : {
+  "3560"      : {
     "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2978",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "2995:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "2995:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2995:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3197",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2995:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2106",
+      "upscale_by"          : [
+        "1740",
         0
       ],
-      "text_b"           : [
-        "2995:2972",
+      "seed"                : [
+        "3386",
         0
       ],
-      "text_c"           : [
-        "2970",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2995:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,\n\nsmooth midriff,low muscle definition, soft natural curves",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "2995:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
+      "steps"               : 12,
+      "cfg"                 : 0.5,
+      "sampler_name"        : "euler",
+      "scheduler"           : "beta",
+      "denoise"             : 0.18,
+      "mode_type"           : "Linear",
+      "tile_width"          : 512,
+      "tile_height"         : 512,
+      "mask_blur"           : 8,
+      "tile_padding"        : 32,
+      "seam_fix_mode"       : "None",
+      "seam_fix_denoise"    : 1,
+      "seam_fix_width"      : 64,
+      "seam_fix_mask_blur"  : 8,
+      "seam_fix_padding"    : 16,
+      "force_uniform_tiles" : true,
+      "tiled_decode"        : false,
+      "batch_size"          : 1,
+      "image"               : [
+        "3490",
         0
       ],
-      "text_b"           : [
-        "2995:2973",
+      "model"               : [
+        "3474",
         0
       ],
-      "text_c"           : [
-        "2970",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2995:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "2995:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "3338",
+      "positive"            : [
+        "2108",
         0
       ],
-      "steps"              : 18,
-      "cfg"                : 1,
-      "sampler_name"       : "deis",
-      "scheduler"          : "beta",
-      "denoise"            : [
-        "2553",
-        0
+      "negative"            : [
+        "1412",
+        1
       ],
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 1,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "2034",
-        0
-      ],
-      "segs"               : [
-        "2995:88",
-        0
-      ],
-      "model"              : [
-        "2995:113",
-        0
-      ],
-      "clip"               : [
-        "3197",
-        0
-      ],
-      "vae"                : [
+      "vae"                 : [
         "3373",
         0
       ],
-      "positive"           : [
-        "2995:506",
+      "upscale_model"       : [
+        "3395",
         0
       ],
-      "negative"           : [
-        "2995:54",
+      "custom_sampler"      : [
+        "3469",
         0
+      ],
+      "custom_sigmas"       : [
+        "3512",
+        1
       ]
     },
-    "class_type" : "DetailerForEach",
+    "class_type" : "UltimateSDUpscaleCustomSample",
     "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
+      "title" : "Ultimate SD Upscale (Custom Sample)"
     }
   },
-  "2995:506"  : {
+  "3561"      : {
     "inputs"     : {
-      "clip_l"   : [
-        "2995:2975",
+      "lens_distortion"      : false,
+      "color_temperature"    : 0.3,
+      "tint"                 : 0,
+      "atmosphere_enabled"   : true,
+      "haze_strength"        : 0,
+      "lift_blacks"          : 0.002,
+      "depth_offset"         : 0,
+      "f_stop"               : "f/8.0",
+      "dof_intensity"        : 0.5,
+      "dof_auto_focus"       : false,
+      "dof_sharpness_radius" : 0,
+      "dof_focus_point"      : 0.7,
+      "light_wrap_strength"  : 0,
+      "promist_strength"     : 0.15,
+      "halation_strength"    : 0.002,
+      "chromatic_aberration" : 0.003,
+      "vignette_intensity"   : 0.06,
+      "grain_power"          : 0.025,
+      "monochrome_grain"     : false,
+      "highlight_rolloff"    : 0.04,
+      "image"                : [
+        "3175",
         0
       ],
-      "t5xxl"    : [
-        "2995:2976",
-        0
-      ],
-      "guidance" : 3.2,
-      "clip"     : [
-        "3197",
+      "depth_map"            : [
+        "3184",
         0
       ]
     },
-    "class_type" : "CLIPTextEncodeFlux",
+    "class_type" : "OpticalRealism",
     "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
+      "title" : "Optical Realism & Physics"
+    }
+  },
+  "3562"      : {
+    "inputs"     : {
+      "lens_distortion"      : false,
+      "color_temperature"    : 0.3,
+      "tint"                 : 0,
+      "atmosphere_enabled"   : false,
+      "haze_strength"        : 0,
+      "lift_blacks"          : 0.002,
+      "depth_offset"         : 0,
+      "f_stop"               : "f/8.0",
+      "dof_intensity"        : 1,
+      "dof_auto_focus"       : false,
+      "dof_sharpness_radius" : 0,
+      "dof_focus_point"      : 0.7,
+      "light_wrap_strength"  : 0,
+      "promist_strength"     : 0,
+      "halation_strength"    : 0.002,
+      "chromatic_aberration" : 0.005,
+      "vignette_intensity"   : 0.05,
+      "grain_power"          : 0.03,
+      "monochrome_grain"     : false,
+      "highlight_rolloff"    : 0.05,
+      "image"                : [
+        "3317",
+        0
+      ],
+      "depth_map"            : [
+        "3323",
+        0
+      ]
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
     }
   },
   "2996:113"  : {
     "inputs"     : {
-      "max_shift"  : 1.4,
-      "base_shift" : 0.7,
+      "max_shift"  : 1.1,
+      "base_shift" : 0.6,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -8296,7 +7732,7 @@
         "3338",
         0
       ],
-      "steps"              : 19,
+      "steps"              : 16,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -8963,183 +8399,6 @@
       ],
       "negative"           : [
         "2998:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "3251:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.45,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3401",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "3251:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "3251:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "3251:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "3251:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "3251:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_b"           : [
-        "3251:2972",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3251:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "3251:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "3251:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "3251:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "3251:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_b"           : [
-        "3251:2973",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3251:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish ",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "3251:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : true,
-      "max_size"           : 1024,
-      "seed"               : -1,
-      "steps"              : 17,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : 0.18,
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "segs"               : [
-        "3251:88",
-        0
-      ],
-      "model"              : [
-        "3251:113",
-        0
-      ],
-      "clip"               : [
-        "3374",
-        0
-      ],
-      "vae"                : [
-        "3373",
-        0
-      ],
-      "positive"           : [
-        "3251:506",
-        0
-      ],
-      "negative"           : [
-        "3251:54",
         0
       ]
     },
