@@ -1795,6 +1795,15 @@
       "title" : "Apply ControlNet"
     }
   },
+  "1479"      : {
+    "inputs"     : {
+      "text" : " , Skin imperfections ,    natural blemishes, Rough skin texture, d351 d4rk, "
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
   "1495"      : {
     "inputs"     : {
       "images" : [
@@ -1856,6 +1865,10 @@
     "inputs"     : {
       "any_01" : [
         "3330",
+        0
+      ],
+      "any_02" : [
+        "3551",
         0
       ],
       "any_03" : [
@@ -2364,7 +2377,7 @@
         0
       ],
       "sampler"      : [
-        "3419",
+        "3420",
         0
       ],
       "sigmas"       : [
@@ -3703,6 +3716,44 @@
       "title" : "Preview Image"
     }
   },
+  "2247"      : {
+    "inputs"     : {
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
+      "strength_model" : 1,
+      "strength_clip"  : 0,
+      "model"          : [
+        "3401",
+        0
+      ],
+      "clip"           : [
+        "3374",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "v1dhya5 1.00::0.00"
+    }
+  },
+  "2253"      : {
+    "inputs"     : {
+      "lora_name"      : "Pandora-RAWr.safetensors",
+      "strength_model" : 1,
+      "strength_clip"  : 1,
+      "model"          : [
+        "2296",
+        0
+      ],
+      "clip"           : [
+        "2296",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Pandora-RAWr 1.00:1.00"
+    }
+  },
   "2269"      : {
     "inputs"     : {
       "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
@@ -3777,6 +3828,117 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmaImageUprader-FLUX-v0.3 0.40::0.40"
+    }
+  },
+  "2296"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaFluxProUltra-FLUX-v0.1.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2247",
+        0
+      ],
+      "clip"           : [
+        "2247",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmaFluxProUltra-FLUX-v0.1 0.65::0.65"
+    }
+  },
+  "2304"      : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "2875",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "2305"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "2304",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2316"      : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2106",
+        0
+      ],
+      "t5xxl"    : [
+        "2317",
+        0
+      ],
+      "guidance" : 3.2,
+      "clip"     : [
+        "2875",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "2317"      : {
+    "inputs"     : {
+      "text1"     : "masterpiece professional potrait photograph of v1dhya5 indian",
+      "text2"     : [
+        "1479",
+        0
+      ],
+      "text3"     : "",
+      "delimiter" : ","
+    },
+    "class_type" : "ttN concat",
+    "_meta"      : {
+      "title" : "textConcat"
+    }
+  },
+  "2319"      : {
+    "inputs"     : {
+      "max_shift"  : 1.8,
+      "base_shift" : 0.5,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2875",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "2331"      : {
+    "inputs"     : {
+      "scheduler" : "beta",
+      "steps"     : 20,
+      "denoise"   : 0.18,
+      "model"     : [
+        "2875",
+        0
+      ]
+    },
+    "class_type" : "BasicScheduler",
+    "_meta"      : {
+      "title" : "BasicScheduler"
     }
   },
   "2339"      : {
@@ -4148,6 +4310,25 @@
       "title" : "Save Text File"
     }
   },
+  "2618"      : {
+    "inputs"     : {
+      "lora_name"      : "BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2253",
+        0
+      ],
+      "clip"           : [
+        "2253",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "BreastShaper_splendid_droplets_Flux_v3.0-000009 0.40::0.14"
+    }
+  },
   "2652"      : {
     "inputs"     : {
       "text" : "aidmaimageupgrader, fluxenhancer, detailed hands, Perfect hand"
@@ -4258,6 +4439,25 @@
     "class_type" : "LayerMask: MaskGrow",
     "_meta"      : {
       "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "2721"      : {
+    "inputs"     : {
+      "lora_name"      : "flux_vividizer.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "3401",
+        0
+      ],
+      "clip"           : [
+        "3374",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin"
     }
   },
   "2727"      : {
@@ -4738,6 +4938,15 @@
       "title" : "Image Save"
     }
   },
+  "2862"      : {
+    "inputs"     : {
+      "text" : "aidmafluxproultra, fluxenhancer, Skin imperfections ,   moles, natural blemishes, Rough skin texture, "
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
   "2874"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -4755,6 +4964,25 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Pandora-RAWr 0.65::0.65"
+    }
+  },
+  "2875"      : {
+    "inputs"     : {
+      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
+      "strength_model" : 0.8,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2618",
+        0
+      ],
+      "clip"           : [
+        "2618",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.80:0.80"
     }
   },
   "2922"      : {
@@ -5123,6 +5351,22 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Pandora-RAWr 0.80::0.80"
+    }
+  },
+  "3038"      : {
+    "inputs"     : {
+      "any_02" : [
+        "3499",
+        0
+      ],
+      "any_03" : [
+        "1831",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
     }
   },
   "3039"      : {
@@ -5556,6 +5800,43 @@
       "title" : "String"
     }
   },
+  "3149"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.07,
+      "start"              : 0.27,
+      "end"                : 0.47,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3150",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
+  "3150"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.02,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.45,
+      "sampler"           : [
+        "3381",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
   "3171"      : {
     "inputs"     : {
       "face_mask"       : true,
@@ -5977,6 +6258,10 @@
   },
   "3334"      : {
     "inputs"     : {
+      "any_01" : [
+        "3551",
+        0
+      ],
       "any_02" : [
         "3499",
         0
@@ -6750,6 +7035,28 @@
       "title" : "Lying Sigma Sampler"
     }
   },
+  "3420"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.04,
+      "start"              : 0.45,
+      "end"                : 0.65,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : false,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3419",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
   "3426"      : {
     "inputs"     : {
       "scheduler" : "beta",
@@ -6870,28 +7177,6 @@
     "class_type" : "MathExpression|pysssss",
     "_meta"      : {
       "title" : "Math Expression 🐍"
-    }
-  },
-  "3469"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.02,
-      "start"              : 0.66,
-      "end"                : 0.74,
-      "bias"               : 0.35,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : false,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "3502",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "3474"      : {
@@ -7437,6 +7722,69 @@
       "title" : "Range (31:43)"
     }
   },
+  "3551"      : {
+    "inputs"     : {
+      "upscale_by"          : 1,
+      "seed"                : [
+        "3338",
+        0
+      ],
+      "steps"               : 20,
+      "cfg"                 : 1,
+      "sampler_name"        : "euler",
+      "scheduler"           : "beta",
+      "denoise"             : 0.17,
+      "mode_type"           : "Linear",
+      "tile_width"          : 1024,
+      "tile_height"         : 1024,
+      "mask_blur"           : 8,
+      "tile_padding"        : 40,
+      "seam_fix_mode"       : "None",
+      "seam_fix_denoise"    : 1,
+      "seam_fix_width"      : 64,
+      "seam_fix_mask_blur"  : 8,
+      "seam_fix_padding"    : 16,
+      "force_uniform_tiles" : true,
+      "tiled_decode"        : false,
+      "batch_size"          : 1,
+      "image"               : [
+        "3038",
+        0
+      ],
+      "model"               : [
+        "2319",
+        0
+      ],
+      "positive"            : [
+        "2316",
+        0
+      ],
+      "negative"            : [
+        "2305",
+        0
+      ],
+      "vae"                 : [
+        "3373",
+        0
+      ],
+      "upscale_model"       : [
+        "3400",
+        0
+      ],
+      "custom_sampler"      : [
+        "3149",
+        0
+      ],
+      "custom_sigmas"       : [
+        "2331",
+        0
+      ]
+    },
+    "class_type" : "UltimateSDUpscaleCustomSample",
+    "_meta"      : {
+      "title" : "Ultimate SD Upscale (Custom Sample)"
+    }
+  },
   "3556"      : {
     "inputs"     : {
       "shadow_brightness"      : 0.88,
@@ -7475,8 +7823,8 @@
       "scheduler"           : "beta",
       "denoise"             : 0.18,
       "mode_type"           : "Linear",
-      "tile_width"          : 512,
-      "tile_height"         : 512,
+      "tile_width"          : 768,
+      "tile_height"         : 768,
       "mask_blur"           : 8,
       "tile_padding"        : 32,
       "seam_fix_mode"       : "None",
@@ -7512,7 +7860,7 @@
         0
       ],
       "custom_sampler"      : [
-        "3469",
+        "3502",
         0
       ],
       "custom_sigmas"       : [
