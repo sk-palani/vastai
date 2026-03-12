@@ -75,7 +75,13 @@ NODES=(
     "https://github.com/Tenney95/ComfyUI-NodeAligner"
     "https://github.com/brayevalerien/ComfyUI-resynthesizer"
     "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
+    "https://github.com/chrisgoringe/cg-use-everywhere"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/ltdrdata/was-node-suite-comfyui"
+    "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
+    "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/skatardude10/ComfyUI-Optical-Realism"
     "https://github.com/sonnybox/ComfyUI-SuperNodes"
     "https://github.com/yorkane/ComfyUI-KYNode"
@@ -94,7 +100,6 @@ CLIP_MODELS=(
 
 TEXT_ENCODER_MODELS=(
     "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"
-
 )
 
 
@@ -157,6 +162,8 @@ UNET_MODELS=(
 
 DIFFUSION_MODELS=(
   "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"
+  "https://civitai.com/api/download/models/2631758?type=Model&format=SafeTensor&size=pruned&fp=bf16&token=${CIVITAI_TOKEN}"
+
 )
 
 VAE_MODELS=(
@@ -256,7 +263,7 @@ function provisioning_start() {
         "${CLIP_MODELS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/models/text_encoders" \
-        "${TEXT_ENCODER[@]}"
+        "${TEXT_ENCODER_MODELS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/models/clip_vision" \
         "${CLIPVISION_MODELS[@]}"
