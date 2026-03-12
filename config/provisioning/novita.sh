@@ -68,16 +68,18 @@ CHECKPOINT_MODELS=(
 
 NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
-    "https://github.com/skatardude10/ComfyUI-Optical-Realism"
-    "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
     "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
-    "https://github.com/Fannovel16/ComfyUI-MagickWand.git"
+    "https://github.com/Fannovel16/ComfyUI-MagickWand"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
-    "https://github.com/Jonseed/ComfyUI-Detail-Daemon.git"
-    "https://github.com/Tenney95/ComfyUI-NodeAligner.git"
-    "https://github.com/brayevalerien/ComfyUI-resynthesizer.git"
+    "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    "https://github.com/Tenney95/ComfyUI-NodeAligner"
+    "https://github.com/brayevalerien/ComfyUI-resynthesizer"
+    "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
+    "https://github.com/skatardude10/ComfyUI-Optical-Realism"
+    "https://github.com/sonnybox/ComfyUI-SuperNodes"
     "https://github.com/yorkane/ComfyUI-KYNode"
+)
 
 
 WORKFLOWS=(
