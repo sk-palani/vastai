@@ -4,34 +4,6 @@
 
 
 
-nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
-sleep 2
-nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
-sleep 2
-nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
-sleep 2
-
-#WORKSPACE=/workspace/
-# * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
-# * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
-chmod +x ${WORKSPACE}scripts/submit_prompt.sh
-set -f
-JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log"
-
-crontab -l 2>/dev/null | {
-    grep -q "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
-} | crontab -
-set +f
-
-service cron start &
-
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
-supervisorctl stop 'jupyter'
-
-
 
 # https://github.com/MushroomFleet/Runpod-init
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
@@ -94,80 +66,87 @@ CHECKPOINT_MODELS=(
 )
 
 NODES=(
-    "https://github.com/yorkane/ComfyUI-KYNode"
-    "https://github.com/Acly/comfyui-tooling-nodes.git"
-    "https://github.com/BadCafeCode/masquerade-nodes-comfyui.git"
-    "https://github.com/BlenderNeko/ComfyUI_Noise.git"
-    "https://github.com/BobsBlazed/Bobs_Latent_Optimizer.git"
-    "https://github.com/Clybius/ComfyUI-Latent-Modifiers.git"
-    "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git"
     "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
     "https://github.com/Fannovel16/ComfyUI-MagickWand.git"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/Jonseed/ComfyUI-Detail-Daemon.git"
-    "https://github.com/KoreTeknology/ComfyUI-Universal-Styler.git"
-    "https://github.com/Layer-norm/comfyui-lama-remover"
-    "https://github.com/SeargeDP/ComfyUI_Searge_LLM.git"
-    "https://github.com/SeargeDP/SeargeSDXL.git"
-    "https://github.com/Smirnov75/ComfyUI-mxToolkit.git"
-    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git"
     "https://github.com/Tenney95/ComfyUI-NodeAligner.git"
-    "https://github.com/TinyTerra/ComfyUI_tinyterraNodes.git"
-    "https://github.com/WASasquatch/was-node-suite-comfyui.git"
-    "https://github.com/Xclbr7/ComfyUI-Merlin.git"
-    "https://github.com/alexopus/ComfyUI-Image-Saver.git"
     "https://github.com/brayevalerien/ComfyUI-resynthesizer.git"
-    "https://github.com/chflame163/ComfyUI_LayerStyle.git"
-    "https://github.com/chrisgoringe/cg-image-picker.git"
-    "https://github.com/chrisgoringe/cg-use-everywhere.git"
-    "https://github.com/city96/ComfyUI-GGUF.git"
-#    "https://github.com/crystian/ComfyUI-Crystools.git"
-    "https://github.com/cubiq/ComfyUI_essentials.git"
-    "https://github.com/dagthomas/comfyui_dagthomas.git"
-    "https://github.com/daxcay/ComfyUI-JDCN"
-    "https://github.com/digitaljohn/comfyui-propost.git"
-    "https://github.com/djbielejeski/a-person-mask-generator"
-    "https://github.com/evanspearman/ComfyMath.git"
-    "https://github.com/giriss/comfy-image-saver.git"
-    "https://github.com/jags111/efficiency-nodes-comfyui"
-    "https://github.com/jamesWalker55/comfyui-various"
-    "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes.git"
-    "https://github.com/kijai/ComfyUI-Florence2.git"
-    "https://github.com/kijai/ComfyUI-KJNodes.git"
-    "https://github.com/kijai/ComfyUI-segment-anything-2.git"
-    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
-    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
-    "https://github.com/melMass/comfy_mtb.git"
-    "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger.git"
-    "https://github.com/mirabarukaso/ComfyUI_Mira.git"
-    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
-    "https://github.com/rgthree/rgthree-comfy.git"
-    "https://github.com/sipherxyz/comfyui-art-venture.git"
-    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
-    "https://github.com/thezveroboy/comfyui-random-image-loader"
-    "https://github.com/un-seen/comfyui-tensorops.git"
-    "https://github.com/yolain/ComfyUI-Easy-Use.git"
-    "https://github.com/za-wa-n-go/ComfyUI_Zwng_Nodes"
-    "https://github.com/LevelPixel/ComfyUI-LevelPixel"
-    "https://github.com/shiimizu/ComfyUI-TiledDiffusion"
-    "https://github.com/MieMieeeee/ComfyUI-CaptionThis"
-#    "https://github.com/kk8bit/kaytool"
-    "https://github.com/TTPlanetPig/Comfyui_TTP_Toolset"
-    "https://github.com/gseth/ControlAltAI-Nodes"
-    "https://github.com/M1kep/ComfyLiterals"
-    "https://github.com/pamparamm/ComfyUI-ppm"
-    "https://github.com/quasiblob/ComfyUI-EsesImageCompare"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
-    "https://github.com/orion4d/ComfyUI_SharpnessPro"
-    "https://github.com/HECer/ComfyUI-FilePathCreator"
-    "https://github.com/SparknightLLC/ComfyUI-SpectralVAEDetailer"
-    "https://github.com/tritant/ComfyUI-Advanced-Photo-Grain"
-    "https://github.com/chrisfreilich/virtuoso-nodes"
-    "https://github.com/guyyariv/DyPE"
-    "https://github.com/kijai/ComfyUI-SUPIR"
-    "https://github.com/skatardude10/ComfyUI-Optical-Realism"
     "https://github.com/sk-palani/ComfyUI_Simpler"
+    "https://github.com/skatardude10/ComfyUI-Optical-Realism"
+    "https://github.com/yorkane/ComfyUI-KYNode"
+
+#    "https://github.com/1038lab/ComfyUI-JoyCaption"
+#    "https://github.com/Acly/comfyui-tooling-nodes.git"
+#    "https://github.com/BadCafeCode/masquerade-nodes-comfyui.git"
+#    "https://github.com/BlenderNeko/ComfyUI_Noise.git"
+#    "https://github.com/BobsBlazed/Bobs_Latent_Optimizer.git"
+#    "https://github.com/Clybius/ComfyUI-Latent-Modifiers.git"
+#    "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git"
+#    "https://github.com/HECer/ComfyUI-FilePathCreator"
+#    "https://github.com/HavocsCall/CMFY-HavocsCall-Custom-Nodes"
+#    "https://github.com/KoreTeknology/ComfyUI-Universal-Styler.git"
+#    "https://github.com/Layer-norm/comfyui-lama-remover"
+#    "https://github.com/LevelPixel/ComfyUI-LevelPixel"
+#    "https://github.com/M1kep/ComfyLiterals"
+#    "https://github.com/MieMieeeee/ComfyUI-CaptionThis"
+#    "https://github.com/SeargeDP/ComfyUI_Searge_LLM.git"
+#    "https://github.com/SeargeDP/SeargeSDXL.git"
+#    "https://github.com/Smirnov75/ComfyUI-mxToolkit.git"
+#    "https://github.com/SparknightLLC/ComfyUI-SpectralVAEDetailer"
+#    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git"
+#    "https://github.com/TTPlanetPig/Comfyui_TTP_Toolset"
+#    "https://github.com/TinyTerra/ComfyUI_tinyterraNodes.git"
+#    "https://github.com/WASasquatch/was-node-suite-comfyui.git"
+#    "https://github.com/Xclbr7/ComfyUI-Merlin.git"
+#    "https://github.com/alexopus/ComfyUI-Image-Saver.git"
+#    "https://github.com/chflame163/ComfyUI_LayerStyle.git"
+#    "https://github.com/chrisfreilich/virtuoso-nodes"
+#    "https://github.com/chrisgoringe/cg-image-picker.git"
+#    "https://github.com/chrisgoringe/cg-use-everywhere.git"
+#    "https://github.com/city96/ComfyUI-GGUF.git"
+#    "https://github.com/crystian/ComfyUI-Crystools"
+#    "https://github.com/cubiq/ComfyUI_essentials.git"
+#    "https://github.com/dagthomas/comfyui_dagthomas.git"
+#    "https://github.com/daxcay/ComfyUI-JDCN"
+#    "https://github.com/digitaljohn/comfyui-propost.git"
+#    "https://github.com/djbielejeski/a-person-mask-generator"
+#    "https://github.com/evanspearman/ComfyMath.git"
+#    "https://github.com/giriss/comfy-image-saver.git"
+#    "https://github.com/gseth/ControlAltAI-Nodes"
+#    "https://github.com/guyyariv/DyPE"
+#    "https://github.com/jags111/efficiency-nodes-comfyui"
+#    "https://github.com/jamesWalker55/comfyui-various"
+#    "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes.git"
+#    "https://github.com/kijai/ComfyUI-Florence2.git"
+#    "https://github.com/kijai/ComfyUI-KJNodes.git"
+#    "https://github.com/kijai/ComfyUI-SUPIR"
+#    "https://github.com/kijai/ComfyUI-segment-anything-2.git"
+#    "https://github.com/kk8bit/kaytool"
+#    "https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
+#    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+#    "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+#    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git"
+#    "https://github.com/melMass/comfy_mtb.git"
+#    "https://github.com/miaoshouai/ComfyUI-Miaoshouai-Tagger.git"
+#    "https://github.com/mirabarukaso/ComfyUI_Mira.git"
+#    "https://github.com/orion4d/ComfyUI_SharpnessPro"
+#    "https://github.com/pamparamm/ComfyUI-ppm"
+#    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git"
+#    "https://github.com/quasiblob/ComfyUI-EsesImageCompare"
+#    "https://github.com/rgthree/rgthree-comfy.git"
+#    "https://github.com/shiimizu/ComfyUI-TiledDiffusion"
+#    "https://github.com/sipherxyz/comfyui-art-venture.git"
+#    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
+#    "https://github.com/thezveroboy/comfyui-random-image-loader"
+#    "https://github.com/tritant/ComfyUI-Advanced-Photo-Grain"
+#    "https://github.com/un-seen/comfyui-tensorops.git"
+#    "https://github.com/willmiao/ComfyUI-Lora-Manager"
+#    "https://github.com/yolain/ComfyUI-Easy-Use.git"
+#    "https://github.com/za-wa-n-go/ComfyUI_Zwng_Nodes"
+#    "https://github.com/zhangp365/ComfyUI-utils-nodes"
+##    "https://github.com/crystian/ComfyUI-Crystools.git"
 )
 
 #    "https://github.com/yolain/ComfyUI-Easy-Use.git"
@@ -248,6 +227,7 @@ UNET_MODELS=(
 
 VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+    "https://civitai.com/api/download/models/2511862?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux-vae-bf16.safetensors"
 #    "https://civitai.com/api/download/models/1749336?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2439129?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
@@ -747,3 +727,37 @@ ${WORKSPACE}/environments/python/comfyui/bin/python -m pip install -r /workspace
 provisioning_get_default_workflow
 
 ## while loop to check queue every 60 seconds
+
+#wget --header="Authorization: Bearer $HF_TOKEN" "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"
+#wget --header="Authorization: Bearer $HF_TOKEN" "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"
+#wget --header="Authorization: Bearer $HF_TOKEN" https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors
+
+
+
+
+nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
+sleep 2
+nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
+sleep 2
+nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
+sleep 2
+
+#WORKSPACE=/workspace/
+# * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
+# * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
+chmod +x ${WORKSPACE}scripts/submit_prompt.sh
+set -f
+JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log"
+
+crontab -l 2>/dev/null | {
+    grep -q "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
+} | crontab -
+set +f
+
+service cron start &
+
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
+supervisorctl stop 'jupyter'
