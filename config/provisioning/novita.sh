@@ -85,6 +85,8 @@ NODES=(
     "https://github.com/skatardude10/ComfyUI-Optical-Realism"
     "https://github.com/sonnybox/ComfyUI-SuperNodes"
     "https://github.com/yorkane/ComfyUI-KYNode"
+    "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/djbielejeski/a-person-mask-generator"
 )
 
 
@@ -509,15 +511,6 @@ provisioning_get_default_workflow
 #wget --header="Authorization: Bearer $HF_TOKEN" https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors
 
 
-
-
-nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
-sleep 2
-nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
-sleep 2
-nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
-sleep 2
-
 #WORKSPACE=/workspace/
 # * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
 # * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
@@ -537,3 +530,13 @@ supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
 supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
 supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
 supervisorctl stop 'jupyter'
+
+
+
+
+nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
+sleep 2
+nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
+sleep 2
+nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
+sleep 2
