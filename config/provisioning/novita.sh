@@ -68,25 +68,34 @@ CHECKPOINT_MODELS=(
 
 NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
+    "https://github.com/ClownsharkBatwing/RES4LYF"
     "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
     "https://github.com/Fannovel16/ComfyUI-MagickWand"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    "https://github.com/LevelPixel/ComfyUI-LevelPixel"
     "https://github.com/Tenney95/ComfyUI-NodeAligner"
     "https://github.com/brayevalerien/ComfyUI-resynthesizer"
     "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
+    "https://github.com/chrisfreilich/virtuoso-nodes"
     "https://github.com/chrisgoringe/cg-use-everywhere"
+    "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/digitaljohn/comfyui-propost"
+    "https://github.com/djbielejeski/a-person-mask-generator"
+    "https://github.com/jags111/efficiency-nodes-comfyui"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
     "https://github.com/ltdrdata/was-node-suite-comfyui"
     "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/skatardude10/ComfyUI-Optical-Realism"
     "https://github.com/sonnybox/ComfyUI-SuperNodes"
+    "https://github.com/storyicon/comfyui_segment_anything"
+    "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
     "https://github.com/yorkane/ComfyUI-KYNode"
-    "https://github.com/cubiq/ComfyUI_essentials"
-    "https://github.com/djbielejeski/a-person-mask-generator"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
 )
 
 
@@ -151,15 +160,6 @@ MP3=(
 
 
 UNET_MODELS=(
-#    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-#    "https://civitai.com/api/download/models/2157702?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
-#    cyberrealisticFlux_v25.safetensors
-#    "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
-#   "https://civitai.com/api/download/models/2440283?type=Model&format=GGUF&size=pruned&fp=fp8&token=${CIVITAI_TOKEN}"
-#   "https://civitai.com/api/download/models/2482779?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
-#   "https://civitai.com/api/download/models/2220553?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=${CIVITAI_TOKEN}"
-#   "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/resolve/main/flux1-krea-dev.safetensors"
-#   "https://civitai.com/api/download/models/2287992?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 )
 
 DIFFUSION_MODELS=(
@@ -176,6 +176,13 @@ VAE_MODELS=(
 LORA_MODELS=(
     "https://civitai.com/api/download/models/2608738?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     "https://civitai.com/api/download/models/2617737?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2622287?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2648917?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    dark&light_Standard.safetensors
+    "https://civitai.com/api/download/models/2694640?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2704067?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2742432?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2744685?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 
