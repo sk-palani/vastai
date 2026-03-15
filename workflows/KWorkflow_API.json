@@ -11,7 +11,7 @@
       "scheduler"    : "simple",
       "denoise"      : 0.42,
       "model"        : [
-        "509",
+        "121",
         0
       ],
       "positive"     : [
@@ -60,7 +60,7 @@
       "scheduler"    : "simple",
       "denoise"      : 0.3,
       "model"        : [
-        "465",
+        "121",
         0
       ],
       "positive"     : [
@@ -95,6 +95,16 @@
     "class_type" : "VAEDecode",
     "_meta"      : {
       "title" : "VAE Decode"
+    }
+  },
+  "81"        : {
+    "inputs"     : {
+      "string"         : "{PROMPT},\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections,\nsoft diffused daylight, professional portrait photography, 85mm lens\n\nRemove any watermarks, \n\nSome Transparent elements in the outfit, \n\n4ft3rd4rk",
+      "strip_newlines" : true
+    },
+    "class_type" : "StringConstantMultiline",
+    "_meta"      : {
+      "title" : "String Constant Multiline"
     }
   },
   "88"        : {
@@ -133,8 +143,8 @@
   },
   "103"       : {
     "inputs"     : {
-      "any_03" : [
-        "224",
+      "any_02" : [
+        "250",
         0
       ]
     },
@@ -295,8 +305,9 @@
   },
   "140"       : {
     "inputs"     : {
-      "mode"  : "raw value",
-      "input" : [
+      "mode"        : "raw value",
+      "displaytext" : "Create 9:16 image with ultra-high-resolution ultra realistic details. A beautiful Indian woman with   black hair, .Monk Skin Tone Scale-3, hour glass figure with narrow waist. wearing minimal jewelry/Accessories .  like an  intricate    gold necklaces, and a   golden pendant.  Remove any watermarks. v1dhya5, Soft natural daylight from window, warm cozy atmosphere, high-end fashion photography style, cinematic lighting  ,natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks,4ft3rd4rk,the subject is portrayed at 24 years of age,",
+      "input"       : [
         "655",
         0
       ]
@@ -368,8 +379,8 @@
     "inputs"     : {
       "stop_at_clip_layer" : -2,
       "clip"               : [
-        "510",
-        1
+        "116",
+        0
       ]
     },
     "class_type" : "CLIPSetLastLayer",
@@ -420,14 +431,17 @@
       "title" : "Strength"
     }
   },
-  "224"       : {
+  "232"       : {
     "inputs"     : {
-      "string"         : "Create 9:16 image with ultra-high-resolution ultra realistic details. A beautiful Indian woman with   black hair, .Monk Skin Tone Scale-3, hour glass figure with narrow waist. wearing minimal jewelry/Accessories .  like an  intricate    gold necklaces, and a   golden pendant.  Remove any watermarks. v1dhya5, Soft natural daylight from window, warm cozy atmosphere, high-end fashion photography style, cinematic lighting \n ,natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks,4ft3rd4rk",
-      "strip_newlines" : true
+      "output" : "",
+      "source" : [
+        "250",
+        0
+      ]
     },
-    "class_type" : "StringConstantMultiline",
+    "class_type" : "Display Any (rgthree)",
     "_meta"      : {
-      "title" : "String Constant Multiline"
+      "title" : "Display Any (rgthree)"
     }
   },
   "233"       : {
@@ -458,6 +472,35 @@
     "class_type" : "SomethingToString",
     "_meta"      : {
       "title" : "_generated_"
+    }
+  },
+  "245"       : {
+    "inputs"     : {
+      "model"                  : "gokaygokay/Florence-2-Flux-Large",
+      "precision"              : "bf16",
+      "attention"              : "sdpa",
+      "convert_to_safetensors" : true
+    },
+    "class_type" : "DownloadAndLoadFlorence2Model",
+    "_meta"      : {
+      "title" : "DownloadAndLoadFlorence2Model"
+    }
+  },
+  "250"       : {
+    "inputs"     : {
+      "find"    : "{{PROMPT}}",
+      "replace" : [
+        "320",
+        2
+      ],
+      "text"    : [
+        "81",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
     }
   },
   "255"       : {
@@ -518,7 +561,10 @@
         "378",
         0
       ],
-      "noise_strength" : 0.27,
+      "noise_strength" : [
+        "222",
+        0
+      ],
       "normalize"      : "false",
       "latent"         : [
         "369",
@@ -555,6 +601,31 @@
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
       "title" : "Enable for IMG2IMG"
+    }
+  },
+  "320"       : {
+    "inputs"     : {
+      "text_input"         : "",
+      "task"               : "more_detailed_caption",
+      "fill_mask"          : true,
+      "keep_model_loaded"  : false,
+      "max_new_tokens"     : 128,
+      "num_beams"          : 3,
+      "do_sample"          : true,
+      "output_mask_select" : "",
+      "seed"               : -1,
+      "image"              : [
+        "127",
+        0
+      ],
+      "florence2_model"    : [
+        "245",
+        0
+      ]
+    },
+    "class_type" : "Florence2Run",
+    "_meta"      : {
+      "title" : "Florence2Run"
     }
   },
   "346"       : {
@@ -619,7 +690,7 @@
         0
       ],
       "model"                      : [
-        "510",
+        "121",
         0
       ],
       "clip"                       : [
@@ -929,20 +1000,6 @@
       "title" : "Block if None or empty "
     }
   },
-  "465"       : {
-    "inputs"     : {
-      "lora_name"      : "DarkKlein9b_v2BFS_extracted_lora_r256.safetensors",
-      "strength_model" : 0.2,
-      "model"          : [
-        "509",
-        0
-      ]
-    },
-    "class_type" : "LoraLoaderModelOnly",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
   "470"       : {
     "inputs"     : {
       "boolean" : [
@@ -987,81 +1044,6 @@
     "class_type" : "FloatConstant",
     "_meta"      : {
       "title" : "Strength"
-    }
-  },
-  "509"       : {
-    "inputs"     : {
-      "PowerLoraLoaderHeaderWidget" : {
-        "type" : "PowerLoraLoaderHeaderWidget"
-      },
-      "lora_1"                      : {
-        "on"       : false,
-        "lora"     : "detail_slider_klein_9b_20260123_065513.safetensors",
-        "strength" : 0.4
-      },
-      "lora_2"                      : {
-        "on"       : true,
-        "lora"     : "klein_slider_bust.safetensors",
-        "strength" : 2.8
-      },
-      "lora_3"                      : {
-        "on"       : true,
-        "lora"     : "klein_slider_bodyweight_50.safetensors",
-        "strength" : 1.6
-      },
-      "lora_4"                      : {
-        "on"       : true,
-        "lora"     : "hip_size_slider_klein_9b_v1_0.safetensors",
-        "strength" : 5
-      },
-      "lora_5"                      : {
-        "on"       : false,
-        "lora"     : "dark&light_Standard.safetensors",
-        "strength" : -2
-      },
-      "lora_6"                      : {
-        "on"       : false,
-        "lora"     : "afterdark2_klein.safetensors",
-        "strength" : 0.8
-      },
-      "➕ Add Lora"                  : "",
-      "model"                       : [
-        "510",
-        0
-      ],
-      "clip"                        : [
-        "510",
-        1
-      ]
-    },
-    "class_type" : "Power Lora Loader (rgthree)",
-    "_meta"      : {
-      "title" : "Power Lora Loader (rgthree)"
-    }
-  },
-  "510"       : {
-    "inputs"     : {
-      "PowerLoraLoaderHeaderWidget" : {
-        "type" : "PowerLoraLoaderHeaderWidget"
-      },
-      "lora_1"                      : {
-        "on"       : true,
-        "lora"     : "detail_slider_klein_9b_20260123_065513.safetensors",
-        "strength" : 0.4
-      },
-      "➕ Add Lora"                  : "",
-      "model"                       : [
-        "121",
-        0
-      ],
-      "clip"                        : [
-        "116",
-        0
-      ]
-    },
-    "class_type" : "Power Lora Loader (rgthree)",
-    "_meta"      : {
-      "title" : "Power Lora Loader (rgthree)"
     }
   },
   "549"       : {
@@ -2100,7 +2082,7 @@
         0
       ],
       "model"                      : [
-        "510",
+        "121",
         0
       ],
       "clip"                       : [
@@ -2343,7 +2325,7 @@
         0
       ],
       "model"    : [
-        "509",
+        "121",
         0
       ],
       "positive" : [
@@ -2495,7 +2477,7 @@
       "steps"               : 5,
       "cfg"                 : 1,
       "sampler_name"        : "res_3m",
-      "scheduler"           : "simple",
+      "scheduler"           : "beta57",
       "denoise"             : 0.19,
       "mode_type"           : "Linear",
       "tile_width"          : 768,
@@ -2515,7 +2497,7 @@
         0
       ],
       "model"               : [
-        "510",
+        "121",
         0
       ],
       "positive"            : [
