@@ -272,8 +272,9 @@
   },
   "140"       : {
     "inputs"     : {
-      "mode"  : "raw value",
-      "input" : [
+      "mode"        : "raw value",
+      "displaytext" : "{PROMPT},natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks, Some Transparent elements in the outfit, 4ft3rd4rk,the subject is portrayed at 24 years of age,",
+      "input"       : [
         "655",
         0
       ]
@@ -2543,9 +2544,9 @@
   "1160"      : {
     "inputs"     : {
       "noise_type_init" : "wavelet",
-      "s_noise_init"    : 0.5,
-      "denoise_alt"     : 0.5,
-      "channelwise_cfg" : false
+      "s_noise_init"    : 1,
+      "denoise_alt"     : 1,
+      "channelwise_cfg" : true
     },
     "class_type" : "SharkOptions_Beta",
     "_meta"      : {
