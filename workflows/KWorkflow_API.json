@@ -2489,10 +2489,10 @@
     "inputs"     : {
       "eta"          : 0.5,
       "sampler_name" : "multistep/res_2m",
-      "scheduler"    : "simple",
+      "scheduler"    : "ddim_uniform",
       "steps"        : 7,
       "steps_to_run" : -1,
-      "denoise"      : 0.3,
+      "denoise"      : 1,
       "cfg"          : 1,
       "seed"         : [
         "378",
@@ -2518,6 +2518,18 @@
       ],
       "sigmas"       : [
         "1152",
+        0
+      ],
+      "options"      : [
+        "1158",
+        0
+      ],
+      "options 2"    : [
+        "1159",
+        0
+      ],
+      "options 3"    : [
+        "1160",
         0
       ]
     },
@@ -2553,6 +2565,50 @@
     "class_type" : "GetLatentSizeAndCount",
     "_meta"      : {
       "title" : "Get Latent Size & Count"
+    }
+  },
+  "1158"      : {
+    "inputs"     : {
+      "weight"     : 0.22,
+      "method"     : "model",
+      "mode"       : "hard",
+      "eta"        : 0.25,
+      "start_step" : 2,
+      "end_step"   : 3
+    },
+    "class_type" : "ClownOptions_DetailBoost_Beta",
+    "_meta"      : {
+      "title" : "ClownOptions Detail Boost"
+    }
+  },
+  "1159"      : {
+    "inputs"     : {
+      "noise_type_sde"         : "brownian",
+      "noise_type_sde_substep" : "brownian",
+      "noise_mode_sde"         : "hard",
+      "noise_mode_sde_substep" : "hard",
+      "eta"                    : 0.25,
+      "eta_substep"            : 0.25,
+      "seed"                   : [
+        "378",
+        0
+      ]
+    },
+    "class_type" : "ClownOptions_SDE_Beta",
+    "_meta"      : {
+      "title" : "ClownOptions SDE"
+    }
+  },
+  "1160"      : {
+    "inputs"     : {
+      "noise_type_init" : "brownian",
+      "s_noise_init"    : 1,
+      "denoise_alt"     : 1,
+      "channelwise_cfg" : false
+    },
+    "class_type" : "SharkOptions_Beta",
+    "_meta"      : {
+      "title" : "SharkOptions"
     }
   },
   "1091:1082" : {
