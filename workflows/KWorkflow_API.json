@@ -11,7 +11,7 @@
       "scheduler"    : "simple",
       "denoise"      : 0.42,
       "model"        : [
-        "121",
+        "510",
         0
       ],
       "positive"     : [
@@ -48,44 +48,11 @@
       "title" : "VAE Decode"
     }
   },
-  "35"        : {
-    "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 7,
-      "cfg"          : 1,
-      "sampler_name" : "res_2m",
-      "scheduler"    : "simple",
-      "denoise"      : 0.3,
-      "model"        : [
-        "121",
-        0
-      ],
-      "positive"     : [
-        "474",
-        0
-      ],
-      "negative"     : [
-        "413",
-        0
-      ],
-      "latent_image" : [
-        "371",
-        0
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "Pass 1 : KSampler 02"
-    }
-  },
   "37"        : {
     "inputs"     : {
       "samples" : [
-        "35",
-        0
+        "1150",
+        1
       ],
       "vae"     : [
         "114",
@@ -306,7 +273,7 @@
   "140"       : {
     "inputs"     : {
       "mode"        : "raw value",
-      "displaytext" : "Create 9:16 image with ultra-high-resolution ultra realistic details. A beautiful Indian woman with   black hair, .Monk Skin Tone Scale-3, hour glass figure with narrow waist. wearing minimal jewelry/Accessories .  like an  intricate    gold necklaces, and a   golden pendant.  Remove any watermarks. v1dhya5, Soft natural daylight from window, warm cozy atmosphere, high-end fashion photography style, cinematic lighting  ,natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks,4ft3rd4rk,the subject is portrayed at 24 years of age,",
+      "displaytext" : "{PROMPT},natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks, Some Transparent elements in the outfit, 4ft3rd4rk,the subject is portrayed at 24 years of age,",
       "input"       : [
         "655",
         0
@@ -375,35 +342,6 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "213"       : {
-    "inputs"     : {
-      "stop_at_clip_layer" : -2,
-      "clip"               : [
-        "116",
-        0
-      ]
-    },
-    "class_type" : "CLIPSetLastLayer",
-    "_meta"      : {
-      "title" : "CLIP Set Last Layer"
-    }
-  },
-  "214"       : {
-    "inputs"     : {
-      "q"    : 1.1,
-      "k"    : 1.05,
-      "v"    : 0.95,
-      "out"  : 1.12,
-      "clip" : [
-        "213",
-        0
-      ]
-    },
-    "class_type" : "CLIPAttentionMultiply",
-    "_meta"      : {
-      "title" : "CLIPAttentionMultiply"
-    }
-  },
   "220"       : {
     "inputs"     : {
       "value" : 0.8
@@ -424,7 +362,7 @@
   },
   "222"       : {
     "inputs"     : {
-      "value" : 0.67
+      "value" : 0.52
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -690,7 +628,7 @@
         0
       ],
       "model"                      : [
-        "121",
+        "510",
         0
       ],
       "clip"                       : [
@@ -1015,8 +953,8 @@
   "474"       : {
     "inputs"     : {
       "clip" : [
-        "214",
-        0
+        "510",
+        1
       ],
       "text" : [
         "655",
@@ -1044,6 +982,31 @@
     "class_type" : "FloatConstant",
     "_meta"      : {
       "title" : "Strength"
+    }
+  },
+  "510"       : {
+    "inputs"     : {
+      "PowerLoraLoaderHeaderWidget" : {
+        "type" : "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1"                      : {
+        "on"       : true,
+        "lora"     : "detail_slider_klein_9b_20260123_065513.safetensors",
+        "strength" : 0.4
+      },
+      "➕ Add Lora"                  : "",
+      "model"                       : [
+        "121",
+        0
+      ],
+      "clip"                        : [
+        "116",
+        0
+      ]
+    },
+    "class_type" : "Power Lora Loader (rgthree)",
+    "_meta"      : {
+      "title" : "Power Lora Loader (rgthree)"
     }
   },
   "549"       : {
@@ -2082,7 +2045,7 @@
         0
       ],
       "model"                      : [
-        "121",
+        "510",
         0
       ],
       "clip"                       : [
@@ -2325,7 +2288,7 @@
         0
       ],
       "model"    : [
-        "121",
+        "510",
         0
       ],
       "positive" : [
@@ -2385,8 +2348,8 @@
     "inputs"     : {
       "text" : "Replace the woman's face and hair in Image1 with the woman's face and hair in Image2, retain the facial expression from Image1. \nretain the facial outfit and accessories from Image1.\n\nOther places remain completely unchanged. Maintain consistency for better integration of characters into the environment.\n\nRemove any watermarks in Image1",
       "clip" : [
-        "214",
-        0
+        "510",
+        1
       ]
     },
     "class_type" : "CLIPTextEncode",
@@ -2408,7 +2371,7 @@
   },
   "1053"      : {
     "inputs"     : {
-      "sampler_name" : "res_2s"
+      "sampler_name" : "res_2m"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
@@ -2474,14 +2437,14 @@
         "378",
         0
       ],
-      "steps"               : 5,
+      "steps"               : 4,
       "cfg"                 : 1,
       "sampler_name"        : "res_3m",
-      "scheduler"           : "beta57",
-      "denoise"             : 0.19,
-      "mode_type"           : "Linear",
-      "tile_width"          : 768,
-      "tile_height"         : 768,
+      "scheduler"           : "simple",
+      "denoise"             : 0.01,
+      "mode_type"           : "Chess",
+      "tile_width"          : 896,
+      "tile_height"         : 896,
       "mask_blur"           : 10,
       "tile_padding"        : 32,
       "seam_fix_mode"       : "None",
@@ -2497,7 +2460,7 @@
         0
       ],
       "model"               : [
-        "121",
+        "510",
         0
       ],
       "positive"            : [
@@ -2520,6 +2483,76 @@
     "class_type" : "UltimateSDUpscale",
     "_meta"      : {
       "title" : "Ultimate SD Upscale"
+    }
+  },
+  "1150"      : {
+    "inputs"     : {
+      "eta"          : 0.5,
+      "sampler_name" : "multistep/res_2m",
+      "scheduler"    : "simple",
+      "steps"        : 7,
+      "steps_to_run" : -1,
+      "denoise"      : 0.3,
+      "cfg"          : 1,
+      "seed"         : [
+        "378",
+        0
+      ],
+      "sampler_mode" : "standard",
+      "bongmath"     : true,
+      "model"        : [
+        "510",
+        0
+      ],
+      "positive"     : [
+        "474",
+        0
+      ],
+      "negative"     : [
+        "413",
+        0
+      ],
+      "latent_image" : [
+        "371",
+        0
+      ],
+      "sigmas"       : [
+        "1152",
+        0
+      ]
+    },
+    "class_type" : "ClownsharKSampler_Beta",
+    "_meta"      : {
+      "title" : "ClownsharKSampler"
+    }
+  },
+  "1152"      : {
+    "inputs"     : {
+      "steps"  : 7,
+      "width"  : [
+        "1155",
+        5
+      ],
+      "height" : [
+        "1155",
+        4
+      ]
+    },
+    "class_type" : "Flux2Scheduler",
+    "_meta"      : {
+      "title" : "Flux2Scheduler"
+    }
+  },
+  "1155"      : {
+    "inputs"     : {
+      "latent" : [
+        "269",
+        0
+      ]
+    },
+    "class_type" : "GetLatentSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Latent Size & Count"
     }
   },
   "1091:1082" : {
