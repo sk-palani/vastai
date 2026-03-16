@@ -272,9 +272,8 @@
   },
   "140"       : {
     "inputs"     : {
-      "mode"        : "raw value",
-      "displaytext" : "{PROMPT},natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks, Some Transparent elements in the outfit, 4ft3rd4rk,the subject is portrayed at 24 years of age,",
-      "input"       : [
+      "mode"  : "raw value",
+      "input" : [
         "655",
         0
       ]
@@ -2418,7 +2417,7 @@
   "1134"      : {
     "inputs"     : {
       "any_02" : [
-        "1147",
+        "1162",
         0
       ]
     },
@@ -2427,72 +2426,14 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "1147"      : {
-    "inputs"     : {
-      "upscale_by"          : [
-        "476",
-        0
-      ],
-      "seed"                : [
-        "378",
-        0
-      ],
-      "steps"               : 4,
-      "cfg"                 : 1,
-      "sampler_name"        : "res_3m",
-      "scheduler"           : "simple",
-      "denoise"             : 0.01,
-      "mode_type"           : "Chess",
-      "tile_width"          : 896,
-      "tile_height"         : 896,
-      "mask_blur"           : 10,
-      "tile_padding"        : 32,
-      "seam_fix_mode"       : "None",
-      "seam_fix_denoise"    : 1,
-      "seam_fix_width"      : 64,
-      "seam_fix_mask_blur"  : 8,
-      "seam_fix_padding"    : 16,
-      "force_uniform_tiles" : true,
-      "tiled_decode"        : false,
-      "batch_size"          : 1,
-      "image"               : [
-        "965",
-        0
-      ],
-      "model"               : [
-        "510",
-        0
-      ],
-      "positive"            : [
-        "423",
-        0
-      ],
-      "negative"            : [
-        "425",
-        0
-      ],
-      "vae"                 : [
-        "114",
-        0
-      ],
-      "upscale_model"       : [
-        "1122",
-        0
-      ]
-    },
-    "class_type" : "UltimateSDUpscale",
-    "_meta"      : {
-      "title" : "Ultimate SD Upscale"
-    }
-  },
   "1150"      : {
     "inputs"     : {
       "eta"          : 0.5,
       "sampler_name" : "multistep/res_2m",
-      "scheduler"    : "ddim_uniform",
-      "steps"        : 7,
+      "scheduler"    : "simple",
+      "steps"        : 6,
       "steps_to_run" : -1,
-      "denoise"      : 1,
+      "denoise"      : 0.37,
       "cfg"          : 1,
       "seed"         : [
         "378",
@@ -2571,7 +2512,7 @@
     "inputs"     : {
       "weight"     : 0.22,
       "method"     : "model",
-      "mode"       : "hard",
+      "mode"       : "lorentzian",
       "eta"        : 0.25,
       "start_step" : 2,
       "end_step"   : 3
@@ -2583,8 +2524,8 @@
   },
   "1159"      : {
     "inputs"     : {
-      "noise_type_sde"         : "brownian",
-      "noise_type_sde_substep" : "brownian",
+      "noise_type_sde"         : "wavelet",
+      "noise_type_sde_substep" : "wavelet",
       "noise_mode_sde"         : "hard",
       "noise_mode_sde_substep" : "hard",
       "eta"                    : 0.25,
@@ -2601,14 +2542,104 @@
   },
   "1160"      : {
     "inputs"     : {
-      "noise_type_init" : "brownian",
-      "s_noise_init"    : 1,
-      "denoise_alt"     : 1,
+      "noise_type_init" : "wavelet",
+      "s_noise_init"    : 0.5,
+      "denoise_alt"     : 0.5,
       "channelwise_cfg" : false
     },
     "class_type" : "SharkOptions_Beta",
     "_meta"      : {
       "title" : "SharkOptions"
+    }
+  },
+  "1162"      : {
+    "inputs"     : {
+      "upscale_by"          : [
+        "476",
+        0
+      ],
+      "seed"                : [
+        "378",
+        0
+      ],
+      "steps"               : 5,
+      "cfg"                 : 1,
+      "sampler_name"        : "res_2m",
+      "scheduler"           : "simple",
+      "denoise"             : 0.2,
+      "mode_type"           : "Chess",
+      "tile_width"          : 896,
+      "tile_height"         : 896,
+      "mask_blur"           : 10,
+      "tile_padding"        : 32,
+      "seam_fix_mode"       : "None",
+      "seam_fix_denoise"    : 1,
+      "seam_fix_width"      : 64,
+      "seam_fix_mask_blur"  : 8,
+      "seam_fix_padding"    : 16,
+      "force_uniform_tiles" : true,
+      "tiled_decode"        : false,
+      "batch_size"          : 1,
+      "image"               : [
+        "965",
+        0
+      ],
+      "model"               : [
+        "510",
+        0
+      ],
+      "positive"            : [
+        "423",
+        0
+      ],
+      "negative"            : [
+        "425",
+        0
+      ],
+      "vae"                 : [
+        "114",
+        0
+      ],
+      "upscale_model"       : [
+        "1122",
+        0
+      ],
+      "custom_sampler"      : [
+        "1163",
+        0
+      ],
+      "custom_sigmas"       : [
+        "1164",
+        0
+      ]
+    },
+    "class_type" : "UltimateSDUpscaleCustomSample",
+    "_meta"      : {
+      "title" : "Ultimate SD Upscale (Custom Sample)"
+    }
+  },
+  "1163"      : {
+    "inputs"     : {
+      "sampler_name" : "res_2m"
+    },
+    "class_type" : "KSamplerSelect",
+    "_meta"      : {
+      "title" : "KSamplerSelect"
+    }
+  },
+  "1164"      : {
+    "inputs"     : {
+      "scheduler" : "simple",
+      "steps"     : 5,
+      "denoise"   : 0.16,
+      "model"     : [
+        "510",
+        0
+      ]
+    },
+    "class_type" : "BasicScheduler",
+    "_meta"      : {
+      "title" : "BasicScheduler"
     }
   },
   "1091:1082" : {
