@@ -305,8 +305,9 @@
   },
   "140"       : {
     "inputs"     : {
-      "mode"  : "raw value",
-      "input" : [
+      "mode"        : "raw value",
+      "displaytext" : "Create 9:16 image with ultra-high-resolution ultra realistic details. The image is a portrait of a young Indian woman standing in front of a white wall. She is wearing a traditional Indian blouse with a floral print in shades of pink, yellow, and brown. The blouse has a deep V-neckline and is paired with a maroon saree. She has a gold necklace and earrings. Her hair is pulled back in a neat bun and she is smiling at the camera. Her right hand is resting on her hip, with her left hand touching her neck. She appears to be posing for the camera with a slight smile on her face.,natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks, Some Transparent elements in the outfit, 4ft3rd4rk, Enhance this image,,the subject is portrayed at 24 years of age,,The subject is having a happy facial expression,Cleavage cutout",
+      "input"       : [
         "655",
         0
       ]
@@ -480,7 +481,7 @@
       "tint"                 : 0,
       "atmosphere_enabled"   : false,
       "haze_strength"        : 0,
-      "lift_blacks"          : 0,
+      "lift_blacks"          : 0.01,
       "depth_offset"         : 0,
       "f_stop"               : "Manual",
       "dof_intensity"        : 0,
@@ -492,9 +493,9 @@
       "halation_strength"    : 0.1,
       "chromatic_aberration" : 0.001,
       "vignette_intensity"   : 0.08,
-      "grain_power"          : 0.008,
+      "grain_power"          : 0.004,
       "monochrome_grain"     : true,
-      "highlight_rolloff"    : 0,
+      "highlight_rolloff"    : 0.01,
       "image"                : [
         "1094",
         0
@@ -548,7 +549,7 @@
   },
   "272"       : {
     "inputs"     : {
-      "image" : "k_20260316T1600341735811513_00000001.jpg"
+      "image" : "1ed8791650effcb687aa33fd5d5d25ae.jpg"
     },
     "class_type" : "LoadImage",
     "_meta"      : {
@@ -1860,7 +1861,8 @@
   },
   "651"       : {
     "inputs"     : {
-      "text" : [
+      "text_0" : "Cleavage cutout",
+      "text"   : [
         "637",
         0
       ]
