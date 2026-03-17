@@ -589,110 +589,6 @@
       "title" : "Florence2Run"
     }
   },
-  "346"  : {
-    "inputs"     : {
-      "image" : [
-        "351",
-        0
-      ]
-    },
-    "class_type" : "ImageListToBatch+",
-    "_meta"      : {
-      "title" : "🔧 Image List To Batch"
-    }
-  },
-  "347"  : {
-    "inputs"     : {
-      "image" : [
-        "1210",
-        0
-      ]
-    },
-    "class_type" : "ImageBatchToList+",
-    "_meta"      : {
-      "title" : "🔧 Image Batch To List"
-    }
-  },
-  "351"  : {
-    "inputs"     : {
-      "guide_size"                 : 768,
-      "guide_size_for"             : true,
-      "max_size"                   : 1024,
-      "seed"                       : [
-        "378",
-        0
-      ],
-      "steps"                      : 18,
-      "cfg"                        : 1,
-      "sampler_name"               : "res_2s",
-      "scheduler"                  : "simple",
-      "denoise"                    : 0.37,
-      "feather"                    : 12,
-      "noise_mask"                 : true,
-      "force_inpaint"              : true,
-      "bbox_threshold"             : 0.5,
-      "bbox_dilation"              : 20,
-      "bbox_crop_factor"           : 3.6,
-      "sam_detection_hint"         : "center-1",
-      "sam_dilation"               : 3,
-      "sam_threshold"              : 0.93,
-      "sam_bbox_expansion"         : 0,
-      "sam_mask_hint_threshold"    : 0.7,
-      "sam_mask_hint_use_negative" : "False",
-      "drop_size"                  : 10,
-      "wildcard"                   : "",
-      "cycle"                      : 1,
-      "inpaint_model"              : false,
-      "noise_mask_feather"         : 20,
-      "tiled_encode"               : false,
-      "tiled_decode"               : false,
-      "image"                      : [
-        "347",
-        0
-      ],
-      "model"                      : [
-        "1220",
-        0
-      ],
-      "clip"                       : [
-        "1197",
-        0
-      ],
-      "vae"                        : [
-        "1227",
-        0
-      ],
-      "positive"                   : [
-        "1216",
-        0
-      ],
-      "negative"                   : [
-        "1221",
-        0
-      ],
-      "bbox_detector"              : [
-        "353",
-        0
-      ],
-      "segm_detector_opt"          : [
-        "353",
-        1
-      ]
-    },
-    "class_type" : "FaceDetailer",
-    "_meta"      : {
-      "title" : "FLUX_FaceDetailer"
-    }
-  },
-  "353"  : {
-    "inputs"     : {
-      "model_name" : "segm/face_yolov9c.pt"
-    },
-    "class_type" : "UltralyticsDetectorProvider",
-    "_meta"      : {
-      "title" : "UltralyticsDetectorProvider"
-    }
-  },
   "359"  : {
     "inputs"     : {
       "method"       : "mkl",
@@ -848,112 +744,6 @@
       "title" : "Image Save"
     }
   },
-  "433"  : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "105",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "346",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "435"  : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "105",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "1143",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "440"  : {
-    "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "441",
-        1
-      ],
-      "b"    : [
-        "441",
-        2
-      ]
-    },
-    "class_type" : "ImpactMinMax",
-    "_meta"      : {
-      "title" : "MinMax"
-    }
-  },
-  "441"  : {
-    "inputs"     : {
-      "image" : [
-        "965",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
-    }
-  },
-  "443"  : {
-    "inputs"     : {
-      "expression" : "(a * b)/16",
-      "values.a"   : [
-        "476",
-        0
-      ],
-      "values.b"   : [
-        "440",
-        0
-      ]
-    },
-    "class_type" : "ComfyMathExpression",
-    "_meta"      : {
-      "title" : "Math Expression"
-    }
-  },
   "445"  : {
     "inputs"     : {
       "OutputDirectory" : "processing",
@@ -1057,19 +847,6 @@
     "class_type" : "FloatConstant",
     "_meta"      : {
       "title" : "Strength"
-    }
-  },
-  "482"  : {
-    "inputs"     : {
-      "output" : "",
-      "input"  : [
-        "1142",
-        1
-      ]
-    },
-    "class_type" : "Display Int (rgthree)",
-    "_meta"      : {
-      "title" : "Display Int (rgthree)"
     }
   },
   "506"  : {
@@ -2041,140 +1818,6 @@
       "title" : "LayerColor: Gamma"
     }
   },
-  "959"  : {
-    "inputs"     : {
-      "image" : [
-        "433",
-        0
-      ]
-    },
-    "class_type" : "ImageBatchToList+",
-    "_meta"      : {
-      "title" : "🔧 Image Batch To List"
-    }
-  },
-  "965"  : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "105",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "966",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "966"  : {
-    "inputs"     : {
-      "image" : [
-        "970",
-        0
-      ]
-    },
-    "class_type" : "ImageListToBatch+",
-    "_meta"      : {
-      "title" : "🔧 Image List To Batch"
-    }
-  },
-  "968"  : {
-    "inputs"     : {
-      "model_name" : "bbox/Eyeful_v2-Paired.pt"
-    },
-    "class_type" : "UltralyticsDetectorProvider",
-    "_meta"      : {
-      "title" : "UltralyticsDetectorProvider"
-    }
-  },
-  "970"  : {
-    "inputs"     : {
-      "guide_size"                 : 512,
-      "guide_size_for"             : true,
-      "max_size"                   : 1024,
-      "seed"                       : [
-        "378",
-        0
-      ],
-      "steps"                      : 18,
-      "cfg"                        : 1,
-      "sampler_name"               : "res_2m",
-      "scheduler"                  : "simple",
-      "denoise"                    : 0.13,
-      "feather"                    : 10,
-      "noise_mask"                 : true,
-      "force_inpaint"              : true,
-      "bbox_threshold"             : 0.5,
-      "bbox_dilation"              : 10,
-      "bbox_crop_factor"           : 3,
-      "sam_detection_hint"         : "center-1",
-      "sam_dilation"               : 2,
-      "sam_threshold"              : 0.93,
-      "sam_bbox_expansion"         : 0,
-      "sam_mask_hint_threshold"    : 0.7,
-      "sam_mask_hint_use_negative" : "False",
-      "drop_size"                  : 10,
-      "wildcard"                   : "",
-      "cycle"                      : 1,
-      "inpaint_model"              : false,
-      "noise_mask_feather"         : 20,
-      "tiled_encode"               : false,
-      "tiled_decode"               : false,
-      "image"                      : [
-        "959",
-        0
-      ],
-      "model"                      : [
-        "1220",
-        0
-      ],
-      "clip"                       : [
-        "1197",
-        0
-      ],
-      "vae"                        : [
-        "1227",
-        0
-      ],
-      "positive"                   : [
-        "1216",
-        0
-      ],
-      "negative"                   : [
-        "1221",
-        0
-      ],
-      "bbox_detector"              : [
-        "968",
-        0
-      ],
-      "segm_detector_opt"          : [
-        "968",
-        1
-      ]
-    },
-    "class_type" : "FaceDetailer",
-    "_meta"      : {
-      "title" : "FLUX_EyeDetailer"
-    }
-  },
   "983"  : {
     "inputs"     : {
       "condition"  : [
@@ -2234,115 +1877,16 @@
       "title" : "Color Match"
     }
   },
-  "1130" : {
-    "inputs"     : {
-      "upscale_method" : "lanczos",
-      "scale_by"       : 2,
-      "image"          : [
-        "965",
-        0
-      ]
-    },
-    "class_type" : "ImageScaleBy",
-    "_meta"      : {
-      "title" : "Upscale Image By"
-    }
-  },
   "1134" : {
     "inputs"     : {
-      "any_01" : [
-        "435",
+      "any_03" : [
+        "1210",
         0
       ]
     },
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
-    }
-  },
-  "1142" : {
-    "inputs"     : {
-      "expression" : "a*16",
-      "values.a"   : [
-        "443",
-        1
-      ]
-    },
-    "class_type" : "ComfyMathExpression",
-    "_meta"      : {
-      "title" : "Math Expression"
-    }
-  },
-  "1143" : {
-    "inputs"     : {
-      "seed"               : [
-        "378",
-        0
-      ],
-      "resolution"         : [
-        "1142",
-        1
-      ],
-      "max_resolution"     : 4096,
-      "batch_size"         : 5,
-      "uniform_batch_size" : false,
-      "color_correction"   : "wavelet",
-      "temporal_overlap"   : 1,
-      "prepend_frames"     : 0,
-      "input_noise_scale"  : 0.001,
-      "latent_noise_scale" : 0.005,
-      "offload_device"     : "cpu",
-      "enable_debug"       : false,
-      "image"              : [
-        "1130",
-        0
-      ],
-      "dit"                : [
-        "1145",
-        0
-      ],
-      "vae"                : [
-        "1144",
-        0
-      ]
-    },
-    "class_type" : "SeedVR2VideoUpscaler",
-    "_meta"      : {
-      "title" : "SeedVR2 Video Upscaler (v2.5.24)"
-    }
-  },
-  "1144" : {
-    "inputs"     : {
-      "model"               : "ema_vae_fp16.safetensors",
-      "device"              : "cuda:0",
-      "encode_tiled"        : true,
-      "encode_tile_size"    : 1024,
-      "encode_tile_overlap" : 128,
-      "decode_tiled"        : true,
-      "decode_tile_size"    : 1024,
-      "decode_tile_overlap" : 128,
-      "tile_debug"          : "false",
-      "offload_device"      : "cpu",
-      "cache_model"         : false
-    },
-    "class_type" : "SeedVR2LoadVAEModel",
-    "_meta"      : {
-      "title" : "SeedVR2 (Down)Load VAE Model"
-    }
-  },
-  "1145" : {
-    "inputs"     : {
-      "model"              : "seedvr2_ema_7b_sharp_fp8_e4m3fn_mixed_block35_fp16.safetensors",
-      "device"             : "cuda:0",
-      "blocks_to_swap"     : 36,
-      "swap_io_components" : false,
-      "offload_device"     : "cpu",
-      "cache_model"        : false,
-      "attention_mode"     : "sdpa"
-    },
-    "class_type" : "SeedVR2LoadDiTModel",
-    "_meta"      : {
-      "title" : "SeedVR2 (Down)Load DiT Model"
     }
   },
   "1177" : {
@@ -2660,7 +2204,7 @@
         0
       ],
       "sampler"      : [
-        "1286",
+        "1285",
         0
       ],
       "sigmas"       : [
@@ -2845,28 +2389,6 @@
     "class_type" : "LyingSigmaSampler",
     "_meta"      : {
       "title" : "Lying Sigma Sampler"
-    }
-  },
-  "1286" : {
-    "inputs"     : {
-      "detail_amount"      : 0.2,
-      "start"              : 0.42,
-      "end"                : 0.65,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : false,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "1285",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "1287" : {
