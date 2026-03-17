@@ -589,30 +589,6 @@
       "title" : "Florence2Run"
     }
   },
-  "346"       : {
-    "inputs"     : {
-      "image" : [
-        "351",
-        0
-      ]
-    },
-    "class_type" : "ImageListToBatch+",
-    "_meta"      : {
-      "title" : "🔧 Image List To Batch"
-    }
-  },
-  "347"       : {
-    "inputs"     : {
-      "image" : [
-        "1210",
-        0
-      ]
-    },
-    "class_type" : "ImageBatchToList+",
-    "_meta"      : {
-      "title" : "🔧 Image Batch To List"
-    }
-  },
   "351"       : {
     "inputs"     : {
       "guide_size"                 : 768,
@@ -647,7 +623,7 @@
       "tiled_encode"               : false,
       "tiled_decode"               : false,
       "image"                      : [
-        "347",
+        "1210",
         0
       ],
       "model"                      : [
@@ -869,13 +845,89 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "346",
+        "351",
         0
       ]
     },
     "class_type" : "Image Save",
     "_meta"      : {
       "title" : "Image Save"
+    }
+  },
+  "435"       : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "105",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 4,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "false",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "true",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "1143",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "440"       : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "441",
+        1
+      ],
+      "b"    : [
+        "441",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "MinMax"
+    }
+  },
+  "441"       : {
+    "inputs"     : {
+      "image" : [
+        "1350",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "443"       : {
+    "inputs"     : {
+      "expression" : "(a * b)/16",
+      "values.a"   : [
+        "476",
+        0
+      ],
+      "values.b"   : [
+        "440",
+        0
+      ]
+    },
+    "class_type" : "ComfyMathExpression",
+    "_meta"      : {
+      "title" : "Math Expression"
     }
   },
   "445"       : {
@@ -981,6 +1033,19 @@
     "class_type" : "FloatConstant",
     "_meta"      : {
       "title" : "Strength"
+    }
+  },
+  "482"       : {
+    "inputs"     : {
+      "output" : "",
+      "input"  : [
+        "1142",
+        1
+      ]
+    },
+    "class_type" : "Display Int (rgthree)",
+    "_meta"      : {
+      "title" : "Display Int (rgthree)"
     }
   },
   "506"       : {
@@ -2342,8 +2407,26 @@
       "title" : "Color Match"
     }
   },
+  "1130"      : {
+    "inputs"     : {
+      "upscale_method" : "lanczos",
+      "scale_by"       : 2,
+      "image"          : [
+        "1350",
+        0
+      ]
+    },
+    "class_type" : "ImageScaleBy",
+    "_meta"      : {
+      "title" : "Upscale Image By"
+    }
+  },
   "1134"      : {
     "inputs"     : {
+      "any_01" : [
+        "435",
+        0
+      ],
       "any_03" : [
         "433",
         0
@@ -2356,6 +2439,91 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
+    }
+  },
+  "1142"      : {
+    "inputs"     : {
+      "expression" : "a*16",
+      "values.a"   : [
+        "443",
+        1
+      ]
+    },
+    "class_type" : "ComfyMathExpression",
+    "_meta"      : {
+      "title" : "Math Expression"
+    }
+  },
+  "1143"      : {
+    "inputs"     : {
+      "seed"               : [
+        "378",
+        0
+      ],
+      "resolution"         : [
+        "1142",
+        1
+      ],
+      "max_resolution"     : 4096,
+      "batch_size"         : 5,
+      "uniform_batch_size" : false,
+      "color_correction"   : "wavelet",
+      "temporal_overlap"   : 1,
+      "prepend_frames"     : 0,
+      "input_noise_scale"  : 0.001,
+      "latent_noise_scale" : 0.003,
+      "offload_device"     : "cpu",
+      "enable_debug"       : false,
+      "image"              : [
+        "1130",
+        0
+      ],
+      "dit"                : [
+        "1145",
+        0
+      ],
+      "vae"                : [
+        "1144",
+        0
+      ]
+    },
+    "class_type" : "SeedVR2VideoUpscaler",
+    "_meta"      : {
+      "title" : "SeedVR2 Video Upscaler (v2.5.24)"
+    }
+  },
+  "1144"      : {
+    "inputs"     : {
+      "model"               : "ema_vae_fp16.safetensors",
+      "device"              : "cuda:0",
+      "encode_tiled"        : true,
+      "encode_tile_size"    : 1024,
+      "encode_tile_overlap" : 128,
+      "decode_tiled"        : true,
+      "decode_tile_size"    : 1024,
+      "decode_tile_overlap" : 128,
+      "tile_debug"          : "false",
+      "offload_device"      : "cpu",
+      "cache_model"         : false
+    },
+    "class_type" : "SeedVR2LoadVAEModel",
+    "_meta"      : {
+      "title" : "SeedVR2 (Down)Load VAE Model"
+    }
+  },
+  "1145"      : {
+    "inputs"     : {
+      "model"              : "seedvr2_ema_7b_sharp_fp8_e4m3fn_mixed_block35_fp16.safetensors",
+      "device"             : "cuda:0",
+      "blocks_to_swap"     : 36,
+      "swap_io_components" : true,
+      "offload_device"     : "cpu",
+      "cache_model"        : false,
+      "attention_mode"     : "sdpa"
+    },
+    "class_type" : "SeedVR2LoadDiTModel",
+    "_meta"      : {
+      "title" : "SeedVR2 (Down)Load DiT Model"
     }
   },
   "1177"      : {
@@ -3006,7 +3174,7 @@
   },
   "1329"      : {
     "inputs"     : {
-      "text" : "Replace the woman's face and hair in Image1 with the woman's face and hair in Image2, retain the facial expression from Image1. \nretain the outfit, jewelry and accessories from Image1.\n\nComposition and color grading must remain completely unchanged. Maintain consistency for better integration of characters into the environment.\n\nRemove any watermarks in Image1\n\nLooking at the camera"
+      "text" : "Replace the woman's face and hair in Image1 with the woman's face and hair in Image2, retain the facial expression from Image1. change the eye color to hazel brown. \nretain the outfit, jewelry and accessories from Image1.\n\nComposition and color grading must remain completely unchanged. Maintain consistency for better integration of characters into the environment.\n\nRemove any watermarks in Image1\n\nLooking at the camera"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3054,6 +3222,22 @@
     "class_type" : "TextConcatenate",
     "_meta"      : {
       "title" : "TextConcatenate"
+    }
+  },
+  "1350"      : {
+    "inputs"     : {
+      "any_02" : [
+        "433",
+        0
+      ],
+      "any_03" : [
+        "1210",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Switch"
     }
   },
   "1091:1082" : {
