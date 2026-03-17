@@ -589,6 +589,110 @@
       "title" : "Florence2Run"
     }
   },
+  "346"  : {
+    "inputs"     : {
+      "image" : [
+        "351",
+        0
+      ]
+    },
+    "class_type" : "ImageListToBatch+",
+    "_meta"      : {
+      "title" : "🔧 Image List To Batch"
+    }
+  },
+  "347"  : {
+    "inputs"     : {
+      "image" : [
+        "1210",
+        0
+      ]
+    },
+    "class_type" : "ImageBatchToList+",
+    "_meta"      : {
+      "title" : "🔧 Image Batch To List"
+    }
+  },
+  "351"  : {
+    "inputs"     : {
+      "guide_size"                 : 768,
+      "guide_size_for"             : true,
+      "max_size"                   : 1024,
+      "seed"                       : [
+        "378",
+        0
+      ],
+      "steps"                      : 18,
+      "cfg"                        : 1,
+      "sampler_name"               : "res_2s",
+      "scheduler"                  : "simple",
+      "denoise"                    : 0.2,
+      "feather"                    : 12,
+      "noise_mask"                 : true,
+      "force_inpaint"              : true,
+      "bbox_threshold"             : 0.5,
+      "bbox_dilation"              : 20,
+      "bbox_crop_factor"           : 3.6,
+      "sam_detection_hint"         : "center-1",
+      "sam_dilation"               : 3,
+      "sam_threshold"              : 0.93,
+      "sam_bbox_expansion"         : 0,
+      "sam_mask_hint_threshold"    : 0.7,
+      "sam_mask_hint_use_negative" : "False",
+      "drop_size"                  : 10,
+      "wildcard"                   : "",
+      "cycle"                      : 1,
+      "inpaint_model"              : false,
+      "noise_mask_feather"         : 20,
+      "tiled_encode"               : false,
+      "tiled_decode"               : false,
+      "image"                      : [
+        "347",
+        0
+      ],
+      "model"                      : [
+        "1220",
+        0
+      ],
+      "clip"                       : [
+        "1197",
+        0
+      ],
+      "vae"                        : [
+        "1227",
+        0
+      ],
+      "positive"                   : [
+        "1216",
+        0
+      ],
+      "negative"                   : [
+        "1221",
+        0
+      ],
+      "bbox_detector"              : [
+        "353",
+        0
+      ],
+      "segm_detector_opt"          : [
+        "353",
+        1
+      ]
+    },
+    "class_type" : "FaceDetailer",
+    "_meta"      : {
+      "title" : "FLUX_FaceDetailer"
+    }
+  },
+  "353"  : {
+    "inputs"     : {
+      "model_name" : "segm/face_yolov9c.pt"
+    },
+    "class_type" : "UltralyticsDetectorProvider",
+    "_meta"      : {
+      "title" : "UltralyticsDetectorProvider"
+    }
+  },
   "359"  : {
     "inputs"     : {
       "method"       : "mkl",
@@ -736,6 +840,36 @@
       "show_previews"           : "false",
       "images"                  : [
         "359",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "433"  : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "105",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 4,
+      "filename_number_start"   : "false",
+      "extension"               : "png",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "false",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "true",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "346",
         0
       ]
     },
@@ -1880,6 +2014,10 @@
   "1134" : {
     "inputs"     : {
       "any_03" : [
+        "433",
+        0
+      ],
+      "any_05" : [
         "1210",
         0
       ]
