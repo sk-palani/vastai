@@ -129,18 +129,6 @@
       "title" : "SAMLoader (Impact)"
     }
   },
-  "92"        : {
-    "inputs"     : {
-      "anything" : [
-        "91",
-        0
-      ]
-    },
-    "class_type" : "Anything Everywhere",
-    "_meta"      : {
-      "title" : "Anything Everywhere"
-    }
-  },
   "103"       : {
     "inputs"     : {
       "any_02" : [
@@ -155,7 +143,7 @@
   },
   "105"       : {
     "inputs"     : {
-      "delimiter"        : "",
+      "delimiter"        : "_",
       "clean_whitespace" : "true",
       "text_a"           : [
         "235",
@@ -173,7 +161,7 @@
   },
   "106"       : {
     "inputs"     : {
-      "delimiter"        : "",
+      "delimiter"        : "_",
       "clean_whitespace" : "true",
       "text_a"           : [
         "235",
@@ -306,7 +294,7 @@
   "140"       : {
     "inputs"     : {
       "mode"        : "raw value",
-      "displaytext" : "Create 9:16 image with ultra-high-resolution ultra realistic details. The image is a portrait of a young Indian woman standing in front of a white wall. She is wearing a traditional Indian blouse with a floral print in shades of pink, yellow, and brown. The blouse has a deep V-neckline and is paired with a maroon saree. She has a gold necklace and earrings. Her hair is pulled back in a neat bun and she is smiling at the camera. Her right hand is resting on her hip, with her left hand touching her neck. She appears to be posing for the camera with a slight smile on her face.,natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks, Some Transparent elements in the outfit, 4ft3rd4rk, Enhance this image,,the subject is portrayed at 24 years of age,,The subject is having a happy facial expression,Cleavage cutout",
+      "displaytext" : "Create 9:16 image with ultra-high-resolution ultra realistic details. The image shows a young woman standing in an abandoned room with a high ceiling. She is wearing a gray crop top with the word \"mini\" written on it and a white mini skirt with black buttons. Her long dark hair is styled in loose waves and she is looking up towards the sky. On the right side of the image, there is a large dreamcatcher hanging from the ceiling. The dreamcatchers are made of white feathers and have intricate patterns. The room appears to be in a dilapidated state with peeling paint and debris scattered on the floor. There is a wooden door on the left side and a,natural skin variation, natural skin texture, visible pores, subtle skin imperfections,soft diffused daylight, professional portrait photography, 85mm lensRemove any watermarks, Some Transparent elements in the outfit, 4ft3rd4rk, Enhance this image,,the subject is portrayed at 24 years of age,,The subject is having a happy facial expression",
       "input"       : [
         "655",
         0
@@ -549,7 +537,7 @@
   },
   "272"       : {
     "inputs"     : {
-      "image" : "1ed8791650effcb687aa33fd5d5d25ae.jpg"
+      "image" : "k_20260316T1600341735811513_00000001.jpg"
     },
     "class_type" : "LoadImage",
     "_meta"      : {
@@ -649,6 +637,10 @@
       ],
       "bbox_detector"              : [
         "353",
+        0
+      ],
+      "sam_model_opt"              : [
+        "91",
         0
       ],
       "segm_detector_opt"          : [
@@ -855,82 +847,6 @@
       "title" : "Image Save"
     }
   },
-  "435"       : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "105",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "1143",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "440"       : {
-    "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "441",
-        1
-      ],
-      "b"    : [
-        "441",
-        2
-      ]
-    },
-    "class_type" : "ImpactMinMax",
-    "_meta"      : {
-      "title" : "MinMax"
-    }
-  },
-  "441"       : {
-    "inputs"     : {
-      "image" : [
-        "1350",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
-    }
-  },
-  "443"       : {
-    "inputs"     : {
-      "expression" : "(a * b)/16",
-      "values.a"   : [
-        "476",
-        0
-      ],
-      "values.b"   : [
-        "440",
-        0
-      ]
-    },
-    "class_type" : "ComfyMathExpression",
-    "_meta"      : {
-      "title" : "Math Expression"
-    }
-  },
   "445"       : {
     "inputs"     : {
       "OutputDirectory" : "processing",
@@ -1034,19 +950,6 @@
     "class_type" : "FloatConstant",
     "_meta"      : {
       "title" : "Strength"
-    }
-  },
-  "482"       : {
-    "inputs"     : {
-      "output" : "",
-      "input"  : [
-        "1142",
-        1
-      ]
-    },
-    "class_type" : "Display Int (rgthree)",
-    "_meta"      : {
-      "title" : "Display Int (rgthree)"
     }
   },
   "506"       : {
@@ -1861,8 +1764,7 @@
   },
   "651"       : {
     "inputs"     : {
-      "text_0" : "Cleavage cutout",
-      "text"   : [
+      "text" : [
         "637",
         0
       ]
@@ -2409,24 +2311,10 @@
       "title" : "Color Match"
     }
   },
-  "1130"      : {
-    "inputs"     : {
-      "upscale_method" : "lanczos",
-      "scale_by"       : 2,
-      "image"          : [
-        "1350",
-        0
-      ]
-    },
-    "class_type" : "ImageScaleBy",
-    "_meta"      : {
-      "title" : "Upscale Image By"
-    }
-  },
   "1134"      : {
     "inputs"     : {
-      "any_01" : [
-        "435",
+      "any_02" : [
+        "1312",
         0
       ],
       "any_03" : [
@@ -2440,92 +2328,7 @@
     },
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "1142"      : {
-    "inputs"     : {
-      "expression" : "a*16",
-      "values.a"   : [
-        "443",
-        1
-      ]
-    },
-    "class_type" : "ComfyMathExpression",
-    "_meta"      : {
-      "title" : "Math Expression"
-    }
-  },
-  "1143"      : {
-    "inputs"     : {
-      "seed"               : [
-        "378",
-        0
-      ],
-      "resolution"         : [
-        "1142",
-        1
-      ],
-      "max_resolution"     : 4096,
-      "batch_size"         : 5,
-      "uniform_batch_size" : false,
-      "color_correction"   : "wavelet",
-      "temporal_overlap"   : 1,
-      "prepend_frames"     : 0,
-      "input_noise_scale"  : 0.001,
-      "latent_noise_scale" : 0.003,
-      "offload_device"     : "cpu",
-      "enable_debug"       : false,
-      "image"              : [
-        "1130",
-        0
-      ],
-      "dit"                : [
-        "1145",
-        0
-      ],
-      "vae"                : [
-        "1144",
-        0
-      ]
-    },
-    "class_type" : "SeedVR2VideoUpscaler",
-    "_meta"      : {
-      "title" : "SeedVR2 Video Upscaler (v2.5.24)"
-    }
-  },
-  "1144"      : {
-    "inputs"     : {
-      "model"               : "ema_vae_fp16.safetensors",
-      "device"              : "cuda:0",
-      "encode_tiled"        : true,
-      "encode_tile_size"    : 1024,
-      "encode_tile_overlap" : 128,
-      "decode_tiled"        : true,
-      "decode_tile_size"    : 1024,
-      "decode_tile_overlap" : 128,
-      "tile_debug"          : "false",
-      "offload_device"      : "cpu",
-      "cache_model"         : false
-    },
-    "class_type" : "SeedVR2LoadVAEModel",
-    "_meta"      : {
-      "title" : "SeedVR2 (Down)Load VAE Model"
-    }
-  },
-  "1145"      : {
-    "inputs"     : {
-      "model"              : "seedvr2_ema_7b_sharp_fp8_e4m3fn_mixed_block35_fp16.safetensors",
-      "device"             : "cuda:0",
-      "blocks_to_swap"     : 36,
-      "swap_io_components" : true,
-      "offload_device"     : "cpu",
-      "cache_model"        : false,
-      "attention_mode"     : "sdpa"
-    },
-    "class_type" : "SeedVR2LoadDiTModel",
-    "_meta"      : {
-      "title" : "SeedVR2 (Down)Load DiT Model"
+      "title" : "Switch"
     }
   },
   "1177"      : {
@@ -2589,19 +2392,6 @@
       "title" : "KSamplerSelect"
     }
   },
-  "1191"      : {
-    "inputs"     : {
-      "enable_fp16_accumulation" : true,
-      "model"                    : [
-        "1194",
-        0
-      ]
-    },
-    "class_type" : "ModelPatchTorchSettings",
-    "_meta"      : {
-      "title" : "Model Patch Torch Settings"
-    }
-  },
   "1192"      : {
     "inputs"     : {
       "clip_name1" : "clip_l.safetensors",
@@ -2614,57 +2404,6 @@
       "title" : "DualCLIPLoader"
     }
   },
-  "1193"      : {
-    "inputs"     : {
-      "stop_at_clip_layer" : -3,
-      "clip"               : [
-        "1192",
-        0
-      ]
-    },
-    "class_type" : "CLIPSetLastLayer",
-    "_meta"      : {
-      "title" : "CLIP Set Last Layer"
-    }
-  },
-  "1194"      : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 1,
-      "start_percent"        : 0.6,
-      "end_percent"          : 0.9,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "1195",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "PatchModelAddDownscale"
-    }
-  },
-  "1195"      : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 2,
-      "start_percent"        : 0,
-      "end_percent"          : 0.6,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "1196",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "4::2::0::0.5"
-    }
-  },
   "1196"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
@@ -2673,22 +2412,6 @@
     "class_type" : "UNETLoader",
     "_meta"      : {
       "title" : "Load Diffusion Model"
-    }
-  },
-  "1197"      : {
-    "inputs"     : {
-      "q"    : 1.1,
-      "k"    : 1.05,
-      "v"    : 0.95,
-      "out"  : 1.12,
-      "clip" : [
-        "1193",
-        0
-      ]
-    },
-    "class_type" : "CLIPAttentionMultiply",
-    "_meta"      : {
-      "title" : "CLIPAttentionMultiply"
     }
   },
   "1210"      : {
@@ -2773,6 +2496,43 @@
     "class_type" : "VAELoader",
     "_meta"      : {
       "title" : "FLUX VAE"
+    }
+  },
+  "1236"      : {
+    "inputs"     : {
+      "scheduler" : "beta",
+      "steps"     : 18,
+      "denoise"   : 0.12,
+      "model"     : [
+        "1297",
+        0
+      ]
+    },
+    "class_type" : "BasicScheduler",
+    "_meta"      : {
+      "title" : "FLUX_BasicScheduler"
+    }
+  },
+  "1240"      : {
+    "inputs"     : {
+      "denoise" : 0.58,
+      "sigmas"  : [
+        "1236",
+        0
+      ]
+    },
+    "class_type" : "SplitSigmasDenoise",
+    "_meta"      : {
+      "title" : "SplitSigmasDenoise"
+    }
+  },
+  "1241"      : {
+    "inputs"     : {
+      "sampler_name" : "euler"
+    },
+    "class_type" : "KSamplerSelect",
+    "_meta"      : {
+      "title" : "KSamplerSelect"
     }
   },
   "1242"      : {
@@ -3018,7 +2778,7 @@
   "1297"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
         "1298",
@@ -3037,14 +2797,14 @@
   "1298"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v4.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 0.2,
+      "strength_model" : 0.9,
+      "strength_clip"  : 0.8,
       "model"          : [
-        "1191",
+        "1196",
         0
       ],
       "clip"           : [
-        "1197",
+        "1192",
         0
       ]
     },
@@ -3130,6 +2890,96 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
+    }
+  },
+  "1312"      : {
+    "inputs"     : {
+      "upscale_by"          : 1.42,
+      "seed"                : [
+        "378",
+        0
+      ],
+      "steps"               : 18,
+      "cfg"                 : 1,
+      "sampler_name"        : "euler",
+      "scheduler"           : "simple",
+      "denoise"             : 0.26,
+      "mode_type"           : "Chess",
+      "tile_width"          : 1024,
+      "tile_height"         : 1024,
+      "mask_blur"           : 32,
+      "tile_padding"        : 64,
+      "seam_fix_mode"       : "None",
+      "seam_fix_denoise"    : 1,
+      "seam_fix_width"      : 64,
+      "seam_fix_mask_blur"  : 8,
+      "seam_fix_padding"    : 16,
+      "force_uniform_tiles" : true,
+      "tiled_decode"        : false,
+      "batch_size"          : 1,
+      "image"               : [
+        "1317",
+        0
+      ],
+      "model"               : [
+        "1297",
+        0
+      ],
+      "positive"            : [
+        "1216",
+        0
+      ],
+      "negative"            : [
+        "1221",
+        0
+      ],
+      "vae"                 : [
+        "1227",
+        0
+      ],
+      "custom_sampler"      : [
+        "1241",
+        0
+      ],
+      "custom_sigmas"       : [
+        "1240",
+        1
+      ]
+    },
+    "class_type" : "UltimateSDUpscaleCustomSample",
+    "_meta"      : {
+      "title" : "FLUX_Ultimate SD Upscale (Custom Sample)"
+    }
+  },
+  "1313"      : {
+    "inputs"     : {
+      "scheduler" : "sgm_uniform",
+      "steps"     : 10,
+      "denoise"   : 0.1,
+      "model"     : [
+        "1297",
+        0
+      ]
+    },
+    "class_type" : "BasicScheduler",
+    "_meta"      : {
+      "title" : "FLUX_BasicScheduler"
+    }
+  },
+  "1317"      : {
+    "inputs"     : {
+      "any_02" : [
+        "433",
+        0
+      ],
+      "any_03" : [
+        "1210",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
     }
   },
   "1322"      : {
@@ -3226,20 +3076,13 @@
       "title" : "TextConcatenate"
     }
   },
-  "1350"      : {
+  "1356"      : {
     "inputs"     : {
-      "any_02" : [
-        "433",
-        0
-      ],
-      "any_03" : [
-        "1210",
-        0
-      ]
+      "sampler_name" : "euler"
     },
-    "class_type" : "Any Switch (rgthree)",
+    "class_type" : "KSamplerSelect",
     "_meta"      : {
-      "title" : "Switch"
+      "title" : "KSamplerSelect"
     }
   },
   "1091:1082" : {
@@ -3342,16 +3185,16 @@
     "inputs"     : {
       "upscale_method" : "lanczos",
       "width"          : [
-        "1052",
+        "1022",
         1
       ],
       "height"         : [
-        "1052",
+        "1022",
         2
       ],
       "crop"           : "center",
       "image"          : [
-        "1022",
+        "1052",
         0
       ]
     },
@@ -3366,7 +3209,7 @@
       "megapixels"       : 1,
       "resolution_steps" : 1,
       "image"            : [
-        "1052",
+        "1022",
         0
       ]
     },
