@@ -2029,7 +2029,7 @@
   },
   "1196"      : {
     "inputs"     : {
-      "unet_name"    : "flux1-dev-fp8.safetensors",
+      "unet_name"    : "flux1-dev.safetensors",
       "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
