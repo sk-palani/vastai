@@ -1,139 +1,15 @@
 {
-  "27"        : {
+  "81"   : {
     "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 7,
-      "cfg"          : 1,
-      "sampler_name" : "res_3m",
-      "scheduler"    : "ddim_uniform",
-      "denoise"      : 0.64,
-      "model"        : [
-        "509",
-        0
-      ],
-      "positive"     : [
-        "474",
-        0
-      ],
-      "negative"     : [
-        "413",
-        0
-      ],
-      "latent_image" : [
-        "269",
-        0
-      ]
+      "string"         : "Create an ultra-high-resolution of v1dhya5 indian with ultra realistic details  \n\n{{PROMPT}},\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections,\nsoft diffused daylight, professional portrait photography\n\nRemove any watermarks, \n\nSome Transparent elements in the outfit, ",
+      "strip_newlines" : true
     },
-    "class_type" : "KSampler",
+    "class_type" : "StringConstantMultiline",
     "_meta"      : {
-      "title" : "Klein_Pass 1 : KSampler 01 :: 0.56"
+      "title" : "String Constant Multiline"
     }
   },
-  "31"        : {
-    "inputs"     : {
-      "samples" : [
-        "27",
-        0
-      ],
-      "vae"     : [
-        "114",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "Klein_VAE Decode"
-    }
-  },
-  "35"        : {
-    "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 5,
-      "cfg"          : 1,
-      "sampler_name" : "euler",
-      "scheduler"    : "simple",
-      "denoise"      : 0.52,
-      "model"        : [
-        "509",
-        0
-      ],
-      "positive"     : [
-        "474",
-        0
-      ],
-      "negative"     : [
-        "413",
-        0
-      ],
-      "latent_image" : [
-        "1183",
-        0
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "Klein_Pass 1 : KSampler 02"
-    }
-  },
-  "37"        : {
-    "inputs"     : {
-      "samples" : [
-        "35",
-        0
-      ],
-      "vae"     : [
-        "114",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "Klein_VAE Decode"
-    }
-  },
-  "82"        : {
-    "inputs"     : {
-      "exclude_people_info"                   : false,
-      "include_lighting"                      : false,
-      "include_camera_angle"                  : true,
-      "include_watermark"                     : false,
-      "include_JPEG_artifacts"                : false,
-      "include_exif"                          : false,
-      "exclude_sexual"                        : false,
-      "exclude_image_resolution"              : false,
-      "include_aesthetic_quality"             : true,
-      "include_composition_style"             : true,
-      "exclude_text"                          : false,
-      "specify_depth_field"                   : false,
-      "specify_lighting_sources"              : false,
-      "do_not_use_ambiguous_language"         : false,
-      "include_nsfw"                          : false,
-      "only_describe_most_important_elements" : true,
-      "do_not_include_artist_name_or_title"   : true,
-      "identify_image_orientation"            : true,
-      "use_vulgar_slang_and_profanity"        : false,
-      "do_not_use_polite_euphemisms"          : false,
-      "include_character_age"                 : true,
-      "include_camera_shot_type"              : false,
-      "exclude_mood_feeling"                  : false,
-      "include_camera_vantage_height"         : false,
-      "mention_watermark"                     : false,
-      "avoid_meta_descriptive_phrases"        : true,
-      "refer_character_name"                  : true,
-      "character_name"                        : "v1dhya5"
-    },
-    "class_type" : "JC_ExtraOptions",
-    "_meta"      : {
-      "title" : "JoyCaption Extra Options"
-    }
-  },
-  "91"        : {
+  "91"   : {
     "inputs"     : {
       "model_name"  : "sam_vit_b_01ec64.pth",
       "device_mode" : "Prefer GPU"
@@ -143,36 +19,10 @@
       "title" : "SAMLoader (Impact)"
     }
   },
-  "100"       : {
+  "103"  : {
     "inputs"     : {
-      "model"             : "joycaption-beta-one-fp8",
-      "quantization"      : "Maximum Savings (4-bit)",
-      "prompt_style"      : "Descriptive",
-      "caption_length"    : "medium",
-      "max_new_tokens"    : 128,
-      "temperature"       : 0.5,
-      "top_p"             : 0.85,
-      "top_k"             : 0,
-      "custom_prompt"     : "Write a detailed visual description of the image as a prompt for image generation.\n\nDescribe:\n- subject appearance\n- clothing and accessories\n- pose and expression\n- environment and background\n- lighting and color palette\n- camera angle and framing\n- textures and materials\n\nUse natural descriptive language similar to photography prompts.\n\nDo not mention analysis, instructions, or the existence of the image.\nDo not include reasoning or lists.\n\nOutput only a single descriptive paragraph.",
-      "memory_management" : "Keep in Memory",
-      "image"             : [
-        "127",
-        0
-      ],
-      "extra_options"     : [
-        "82",
-        0
-      ]
-    },
-    "class_type" : "JC_adv",
-    "_meta"      : {
-      "title" : "JoyCaption (Advanced)"
-    }
-  },
-  "103"       : {
-    "inputs"     : {
-      "any_01" : [
-        "374",
+      "any_02" : [
+        "250",
         0
       ]
     },
@@ -181,7 +31,7 @@
       "title" : "Any Switch (rgthree)"
     }
   },
-  "105"       : {
+  "105"  : {
     "inputs"     : {
       "delimiter"        : "_",
       "clean_whitespace" : "true",
@@ -199,7 +49,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "106"       : {
+  "106"  : {
     "inputs"     : {
       "delimiter"        : "_",
       "clean_whitespace" : "true",
@@ -217,7 +67,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "114"       : {
+  "114"  : {
     "inputs"     : {
       "vae_name" : "flux2-vae.safetensors"
     },
@@ -226,7 +76,7 @@
       "title" : "Load VAE"
     }
   },
-  "115"       : {
+  "115"  : {
     "inputs"     : {
       "unet_name"    : "flux-2-klein-9b.safetensors",
       "weight_dtype" : "default"
@@ -236,7 +86,7 @@
       "title" : "Load Diffusion Model"
     }
   },
-  "116"       : {
+  "116"  : {
     "inputs"     : {
       "clip_name" : "qwen_3_8b.safetensors",
       "type"      : "flux2",
@@ -247,7 +97,7 @@
       "title" : "Load CLIP"
     }
   },
-  "118"       : {
+  "118"  : {
     "inputs"     : {
       "value" : false
     },
@@ -256,26 +106,12 @@
       "title" : "Enable for fixed_seed"
     }
   },
-  "121"       : {
-    "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v4_klein.safetensors",
-      "strength_model" : 1,
-      "model"          : [
-        "115",
-        0
-      ]
-    },
-    "class_type" : "LoraLoaderModelOnly",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
-  "127"       : {
+  "127"  : {
     "inputs"     : {
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
-      "delta_percent" : 0.5,
+      "delta_percent" : 0.3,
       "image"         : [
         "983",
         0
@@ -286,25 +122,25 @@
       "title" : "Image Preparations"
     }
   },
-  "128"       : {
+  "128"  : {
     "inputs"     : {
-      "value" : "_generated_"
+      "value" : "_generated"
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
       "title" : "String"
     }
   },
-  "129"       : {
+  "129"  : {
     "inputs"     : {
-      "value" : "_detailed_"
+      "value" : "_afterpass01"
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
       "title" : "String"
     }
   },
-  "133"       : {
+  "133"  : {
     "inputs"     : {
       "seed" : -1
     },
@@ -313,7 +149,7 @@
       "title" : "Seed (rgthree)"
     }
   },
-  "135"       : {
+  "135"  : {
     "inputs"     : {
       "directory_1"            : "Inputs/Next/Best",
       "directory_2"            : "Inputs/Next",
@@ -322,7 +158,7 @@
       "include_subdirectories" : "yes",
       "index"                  : 0,
       "seed"                   : [
-        "984",
+        "1933",
         0
       ]
     },
@@ -331,45 +167,7 @@
       "title" : "Input Image"
     }
   },
-  "140"       : {
-    "inputs"     : {
-      "mode"  : "raw value",
-      "input" : [
-        "655",
-        0
-      ]
-    },
-    "class_type" : "DisplayAny",
-    "_meta"      : {
-      "title" : "🔧 Display Any"
-    }
-  },
-  "143"       : {
-    "inputs"     : {
-      "output" : "",
-      "source" : [
-        "374",
-        0
-      ]
-    },
-    "class_type" : "Display Any (rgthree)",
-    "_meta"      : {
-      "title" : "Display Any (rgthree)"
-    }
-  },
-  "154"       : {
-    "inputs"     : {
-      "images" : [
-        "31",
-        0
-      ]
-    },
-    "class_type" : "PreviewImage",
-    "_meta"      : {
-      "title" : "Preview Image"
-    }
-  },
-  "174"       : {
+  "174"  : {
     "inputs"     : {
       "mode" : false,
       "a"    : [
@@ -386,7 +184,7 @@
       "title" : "ImpactMinMax"
     }
   },
-  "176"       : {
+  "176"  : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
       "resolution"   : [
@@ -403,7 +201,7 @@
       "title" : "AIO Aux Preprocessor"
     }
   },
-  "189"       : {
+  "189"  : {
     "inputs"     : {
       "image" : [
         "1703",
@@ -415,7 +213,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "220"       : {
+  "220"  : {
     "inputs"     : {
       "value" : 0.8
     },
@@ -424,7 +222,7 @@
       "title" : "Strength"
     }
   },
-  "221"       : {
+  "221"  : {
     "inputs"     : {
       "value" : 1
     },
@@ -433,7 +231,7 @@
       "title" : "INT Constant"
     }
   },
-  "222"       : {
+  "222"  : {
     "inputs"     : {
       "value" : 0.52
     },
@@ -442,7 +240,20 @@
       "title" : "Strength"
     }
   },
-  "233"       : {
+  "232"  : {
+    "inputs"     : {
+      "output" : "",
+      "source" : [
+        "250",
+        0
+      ]
+    },
+    "class_type" : "Display Any (rgthree)",
+    "_meta"      : {
+      "title" : "Display Any (rgthree)"
+    }
+  },
+  "233"  : {
     "inputs"     : {
       "output" : "",
       "input"  : [
@@ -455,13 +266,13 @@
       "title" : "Display Int (rgthree)"
     }
   },
-  "235"       : {
+  "235"  : {
     "inputs"     : {
       "prefix" : [
         "407",
         0
       ],
-      "suffix" : "",
+      "suffix" : "_",
       "input"  : [
         "378",
         0
@@ -472,99 +283,27 @@
       "title" : "_generated_"
     }
   },
-  "259"       : {
+  "245"  : {
     "inputs"     : {
-      "string"         : "change image1 into  a real photo of an indian v1dhya5 with ultra-high-resolution ultra realistic details. \n\n{{PROMPT}},\n\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections,\n\nRemove any watermarks, black/white borders,\n\nSome Transparent elements in the outfit, \n \nEnhance this image, Make the lighting dramatic and slightly dark,\n",
-      "strip_newlines" : true
+      "model"                  : "gokaygokay/Florence-2-Flux-Large",
+      "precision"              : "bf16",
+      "attention"              : "sdpa",
+      "convert_to_safetensors" : true
     },
-    "class_type" : "StringConstantMultiline",
+    "class_type" : "DownloadAndLoadFlorence2Model",
     "_meta"      : {
-      "title" : "String Constant Multiline"
+      "title" : "DownloadAndLoadFlorence2Model"
     }
   },
-  "267"       : {
-    "inputs"     : {
-      "pixels" : [
-        "577",
-        0
-      ],
-      "vae"    : [
-        "114",
-        0
-      ]
-    },
-    "class_type" : "VAEEncode",
-    "_meta"      : {
-      "title" : "Klein_VAE Encode"
-    }
-  },
-  "269"       : {
-    "inputs"     : {
-      "noise_seed"     : [
-        "378",
-        0
-      ],
-      "noise_strength" : [
-        "222",
-        0
-      ],
-      "normalize"      : "false",
-      "latent"         : [
-        "267",
-        0
-      ]
-    },
-    "class_type" : "InjectLatentNoise+",
-    "_meta"      : {
-      "title" : "🔧 Inject Latent Noise"
-    }
-  },
-  "272"       : {
-    "inputs"     : {
-      "image" : "IMG_20260319_221649_595.jpg"
-    },
-    "class_type" : "LoadImage",
-    "_meta"      : {
-      "title" : "Load Image"
-    }
-  },
-  "281"       : {
-    "inputs"     : {
-      "value" : true
-    },
-    "class_type" : "PrimitiveBoolean",
-    "_meta"      : {
-      "title" : "Enable for IMG2IMG"
-    }
-  },
-  "359"       : {
-    "inputs"     : {
-      "method"       : "mkl",
-      "strength"     : 0.25,
-      "multithread"  : true,
-      "image_ref"    : [
-        "127",
-        0
-      ],
-      "image_target" : [
-        "37",
-        0
-      ]
-    },
-    "class_type" : "ColorMatch",
-    "_meta"      : {
-      "title" : "Color Match :: 0.42"
-    }
-  },
-  "374"       : {
+  "250"  : {
     "inputs"     : {
       "find"    : "{{PROMPT}}",
       "replace" : [
-        "100",
-        1
+        "320",
+        2
       ],
       "text"    : [
-        "259",
+        "1373",
         0
       ]
     },
@@ -573,7 +312,50 @@
       "title" : "Text Find and Replace"
     }
   },
-  "378"       : {
+  "272"  : {
+    "inputs"     : {
+      "image" : "IMG_20260319_221649_595.jpg"
+    },
+    "class_type" : "LoadImage",
+    "_meta"      : {
+      "title" : "Load Image"
+    }
+  },
+  "281"  : {
+    "inputs"     : {
+      "value" : true
+    },
+    "class_type" : "PrimitiveBoolean",
+    "_meta"      : {
+      "title" : "Enable for IMG2IMG"
+    }
+  },
+  "320"  : {
+    "inputs"     : {
+      "text_input"         : "",
+      "task"               : "more_detailed_caption",
+      "fill_mask"          : true,
+      "keep_model_loaded"  : true,
+      "max_new_tokens"     : 128,
+      "num_beams"          : 3,
+      "do_sample"          : true,
+      "output_mask_select" : "",
+      "seed"               : -1,
+      "image"              : [
+        "127",
+        0
+      ],
+      "florence2_model"    : [
+        "245",
+        0
+      ]
+    },
+    "class_type" : "Florence2Run",
+    "_meta"      : {
+      "title" : "Florence2Run"
+    }
+  },
+  "378"  : {
     "inputs"     : {
       "images" : [
         "983",
@@ -585,10 +367,10 @@
       "title" : "Image to Seed"
     }
   },
-  "407"       : {
+  "407"  : {
     "inputs"     : {
       "file_prefix"   : "kf",
-      "time_format"   : "%Y%m%dT%H%M%S",
+      "time_format"   : "%Y%m%dT%H%M%S_",
       "output_folder" : "",
       "filetype"      : ""
     },
@@ -597,7 +379,7 @@
       "title" : "File Path Creator"
     }
   },
-  "413"       : {
+  "413"  : {
     "inputs"     : {
       "conditioning" : [
         "474",
@@ -609,7 +391,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "421"       : {
+  "421"  : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -639,14 +421,14 @@
       "title" : "Image Save"
     }
   },
-  "423"       : {
+  "423"  : {
     "inputs"     : {
       "text" : [
         "1429",
         0
       ],
       "clip" : [
-        "510",
+        "1923",
         1
       ]
     },
@@ -655,7 +437,7 @@
       "title" : "CLIP Text Encode"
     }
   },
-  "425"       : {
+  "425"  : {
     "inputs"     : {
       "conditioning" : [
         "423",
@@ -667,11 +449,11 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "431"       : {
+  "431"  : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "105",
+        "106",
         0
       ],
       "filename_delimiter"      : "_",
@@ -688,7 +470,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "1452",
+        "1918",
         0
       ]
     },
@@ -697,7 +479,7 @@
       "title" : "Image Save"
     }
   },
-  "445"       : {
+  "445"  : {
     "inputs"     : {
       "OutputDirectory" : "processing",
       "OverwriteFile"   : true,
@@ -711,7 +493,7 @@
       "title" : "JDCN_FileMover"
     }
   },
-  "447"       : {
+  "447"  : {
     "inputs"     : {
       "boolean" : [
         "470",
@@ -723,7 +505,7 @@
       "title" : "NOT"
     }
   },
-  "448"       : {
+  "448"  : {
     "inputs"     : {
       "custom_path"     : "Inputs/Processed",
       "filename_prefix" : [
@@ -751,7 +533,7 @@
       "title" : "LayerUtility: Image Tagger Save"
     }
   },
-  "457"       : {
+  "457"  : {
     "inputs"     : {
       "reverse"         : false,
       "block_execution" : false,
@@ -765,7 +547,7 @@
       "title" : "Block if None or empty "
     }
   },
-  "470"       : {
+  "470"  : {
     "inputs"     : {
       "boolean" : [
         "457",
@@ -777,7 +559,7 @@
       "title" : "Logic NOT"
     }
   },
-  "474"       : {
+  "474"  : {
     "inputs"     : {
       "clip" : [
         "510",
@@ -793,7 +575,7 @@
       "title" : "Klein_CLIP exText Encode"
     }
   },
-  "476"       : {
+  "476"  : {
     "inputs"     : {
       "value" : 1.33
     },
@@ -802,7 +584,7 @@
       "title" : "Strength"
     }
   },
-  "506"       : {
+  "506"  : {
     "inputs"     : {
       "value" : 1.19
     },
@@ -811,7 +593,7 @@
       "title" : "Strength"
     }
   },
-  "509"       : {
+  "509"  : {
     "inputs"     : {
       "PowerLoraLoaderHeaderWidget" : {
         "type" : "PowerLoraLoaderHeaderWidget"
@@ -861,18 +643,18 @@
       "title" : "Power Lora Loader (rgthree)"
     }
   },
-  "510"       : {
+  "510"  : {
     "inputs"     : {
       "PowerLoraLoaderHeaderWidget" : {
         "type" : "PowerLoraLoaderHeaderWidget"
       },
       "lora_1"                      : {
         "on"       : false,
-        "lora"     : "detail_slider_klein_9b_20260123_065513.safetensors",
+        "lora"     : "ultra_real_v2.safetensors",
         "strength" : 0.4
       },
       "lora_2"                      : {
-        "on"       : true,
+        "on"       : false,
         "lora"     : "klein_9b_enhancer_v2.safetensors",
         "strength" : 1
       },
@@ -884,16 +666,21 @@
       "lora_4"                      : {
         "on"       : true,
         "lora"     : "lighting.safetensors",
-        "strength" : -2.5
+        "strength" : -0.45
+      },
+      "lora_5"                      : {
+        "on"       : true,
+        "lora"     : "klein_slider_eyes.safetensors",
+        "strength" : 2.5
       },
       "➕ Add Lora"                  : "",
       "model"                       : [
-        "121",
+        "1923",
         0
       ],
       "clip"                        : [
-        "116",
-        0
+        "1923",
+        1
       ]
     },
     "class_type" : "Power Lora Loader (rgthree)",
@@ -901,7 +688,7 @@
       "title" : "Power Lora Loader (rgthree)"
     }
   },
-  "549"       : {
+  "549"  : {
     "inputs"     : {
       "face_mask"       : false,
       "background_mask" : true,
@@ -920,7 +707,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "550"       : {
+  "550"  : {
     "inputs"     : {
       "mask" : [
         "549",
@@ -932,7 +719,7 @@
       "title" : "InvertMask"
     }
   },
-  "551"       : {
+  "551"  : {
     "inputs"     : {
       "padding_left"   : 32,
       "padding_right"  : 32,
@@ -953,7 +740,7 @@
       "title" : "Bounded Image Crop with Mask"
     }
   },
-  "553"       : {
+  "553"  : {
     "inputs"     : {
       "face_mask"       : true,
       "background_mask" : false,
@@ -972,7 +759,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "554"       : {
+  "554"  : {
     "inputs"     : {
       "condition"  : [
         "599",
@@ -992,7 +779,7 @@
       "title" : "Input Selector"
     }
   },
-  "556"       : {
+  "556"  : {
     "inputs"     : {
       "strength"   : 100,
       "brightness" : 0,
@@ -1012,7 +799,7 @@
       "title" : "LayerColor: AutoAdjust V2"
     }
   },
-  "559"       : {
+  "559"  : {
     "inputs"     : {
       "channel"            : "RGB",
       "input_black_point"  : 0,
@@ -1030,7 +817,7 @@
       "title" : "Levels"
     }
   },
-  "573"       : {
+  "573"  : {
     "inputs"     : {
       "brightness" : 0.93,
       "contrast"   : 1.08,
@@ -1045,7 +832,7 @@
       "title" : "Brightness Contrast V2"
     }
   },
-  "575"       : {
+  "575"  : {
     "inputs"     : {
       "overlay_resize" : "None",
       "resize_method"  : "nearest-exact",
@@ -1074,7 +861,7 @@
       "title" : "Image Overlay"
     }
   },
-  "576"       : {
+  "576"  : {
     "inputs"     : {
       "shadow_brightness"      : 0.88,
       "shadow_saturation"      : 1,
@@ -1096,7 +883,7 @@
       "title" : "LayerColor: Color of Shadow & Highlight"
     }
   },
-  "577"       : {
+  "577"  : {
     "inputs"     : {
       "brightness_target"   : 0.5,
       "cyan_red"            : -0.02,
@@ -1113,7 +900,7 @@
       "title" : "Color Balance Advanced"
     }
   },
-  "582"       : {
+  "582"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1127,7 +914,7 @@
       "title" : "Contains [##]"
     }
   },
-  "583"       : {
+  "583"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1141,7 +928,7 @@
       "title" : "Contains [**]"
     }
   },
-  "591"       : {
+  "591"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1155,7 +942,7 @@
       "title" : "Contains [sketch]"
     }
   },
-  "594"       : {
+  "594"  : {
     "inputs"     : {
       "boolean" : [
         "591",
@@ -1167,7 +954,7 @@
       "title" : "Logic NOT"
     }
   },
-  "596"       : {
+  "596"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1181,7 +968,7 @@
       "title" : "Contains [$$]"
     }
   },
-  "599"       : {
+  "599"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1195,7 +982,7 @@
       "title" : "Contains [TT]"
     }
   },
-  "603"       : {
+  "603"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1209,7 +996,7 @@
       "title" : "Contains [~~]"
     }
   },
-  "604"       : {
+  "604"  : {
     "inputs"     : {
       "expression" : "c*(a-b)",
       "values.a"   : [
@@ -1226,7 +1013,7 @@
       "title" : "Math Expression"
     }
   },
-  "605"       : {
+  "605"  : {
     "inputs"     : {
       "string"           : [
         "135",
@@ -1244,7 +1031,7 @@
       "title" : "Regex Extract"
     }
   },
-  "607"       : {
+  "607"  : {
     "inputs"     : {
       "value" : "0"
     },
@@ -1253,7 +1040,7 @@
       "title" : "String"
     }
   },
-  "608"       : {
+  "608"  : {
     "inputs"     : {
       "value" : "+"
     },
@@ -1262,7 +1049,7 @@
       "title" : "String"
     }
   },
-  "609"       : {
+  "609"  : {
     "inputs"     : {
       "text" : [
         "610",
@@ -1274,7 +1061,7 @@
       "title" : "Show Text Bridge [LP]"
     }
   },
-  "610"       : {
+  "610"  : {
     "inputs"     : {
       "string"           : [
         "135",
@@ -1292,7 +1079,7 @@
       "title" : "Regex Extract"
     }
   },
-  "611"       : {
+  "611"  : {
     "inputs"     : {
       "delimiter"        : "",
       "clean_whitespace" : "true",
@@ -1310,7 +1097,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "612"       : {
+  "612"  : {
     "inputs"     : {
       "delimiter"        : "",
       "clean_whitespace" : "true",
@@ -1328,7 +1115,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "615"       : {
+  "615"  : {
     "inputs"     : {
       "string"           : [
         "135",
@@ -1346,7 +1133,7 @@
       "title" : "Regex Extract"
     }
   },
-  "620"       : {
+  "620"  : {
     "inputs"     : {
       "delimiter"        : "",
       "clean_whitespace" : "true",
@@ -1364,7 +1151,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "621"       : {
+  "621"  : {
     "inputs"     : {
       "string" : [
         "620",
@@ -1376,7 +1163,7 @@
       "title" : "Convert String To Int [LP]"
     }
   },
-  "622"       : {
+  "622"  : {
     "inputs"     : {
       "string" : [
         "612",
@@ -1388,7 +1175,7 @@
       "title" : "Length"
     }
   },
-  "623"       : {
+  "623"  : {
     "inputs"     : {
       "string" : [
         "611",
@@ -1400,7 +1187,7 @@
       "title" : "Length"
     }
   },
-  "624"       : {
+  "624"  : {
     "inputs"     : {
       "value" : 5
     },
@@ -1409,7 +1196,7 @@
       "title" : "INT Constant"
     }
   },
-  "625"       : {
+  "625"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1423,7 +1210,7 @@
       "title" : "Text Contains [Saree]"
     }
   },
-  "626"       : {
+  "626"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1437,7 +1224,7 @@
       "title" : "Text Contains [back]"
     }
   },
-  "627"       : {
+  "627"  : {
     "inputs"     : {
       "text_a"  : [
         "632",
@@ -1457,7 +1244,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "628"       : {
+  "628"  : {
     "inputs"     : {
       "text_a"  : [
         "652",
@@ -1477,7 +1264,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "629"       : {
+  "629"  : {
     "inputs"     : {
       "value" : "Photo taken from the back of the subject,"
     },
@@ -1486,7 +1273,7 @@
       "title" : "OnTrue"
     }
   },
-  "630"       : {
+  "630"  : {
     "inputs"     : {
       "string_a"  : [
         "628",
@@ -1503,7 +1290,7 @@
       "title" : "Concatenate"
     }
   },
-  "632"       : {
+  "632"  : {
     "inputs"     : {
       "value" : "wearing indian saree with intricate details"
     },
@@ -1512,7 +1299,7 @@
       "title" : "OnTrue"
     }
   },
-  "634"       : {
+  "634"  : {
     "inputs"     : {
       "delimiter"        : ", ",
       "clean_whitespace" : "true",
@@ -1538,7 +1325,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "635"       : {
+  "635"  : {
     "inputs"     : {
       "join_with"   : ",",
       "string_list" : [
@@ -1551,7 +1338,7 @@
       "title" : "String List to String"
     }
   },
-  "636"       : {
+  "636"  : {
     "inputs"     : {
       "string"  : [
         "635",
@@ -1565,7 +1352,7 @@
       "title" : "Replace"
     }
   },
-  "637"       : {
+  "637"  : {
     "inputs"     : {
       "string"           : [
         "135",
@@ -1583,7 +1370,7 @@
       "title" : "Regex Extract"
     }
   },
-  "638"       : {
+  "638"  : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -1597,7 +1384,7 @@
       "title" : "Text Contains [back]"
     }
   },
-  "640"       : {
+  "640"  : {
     "inputs"     : {
       "text_a"  : [
         "629",
@@ -1617,7 +1404,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "644"       : {
+  "644"  : {
     "inputs"     : {
       "value" : ""
     },
@@ -1626,7 +1413,7 @@
       "title" : "On False"
     }
   },
-  "651"       : {
+  "651"  : {
     "inputs"     : {
       "text" : [
         "637",
@@ -1638,7 +1425,7 @@
       "title" : "Show Text [LP]"
     }
   },
-  "652"       : {
+  "652"  : {
     "inputs"     : {
       "value" : "Photo taken from the side of the subject,"
     },
@@ -1647,7 +1434,7 @@
       "title" : "OnTrue"
     }
   },
-  "655"       : {
+  "655"  : {
     "inputs"     : {
       "delimiter"        : ",",
       "clean_whitespace" : "true",
@@ -1673,7 +1460,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "657"       : {
+  "657"  : {
     "inputs"     : {
       "comparison" : "a <= b",
       "a"          : [
@@ -1690,7 +1477,7 @@
       "title" : "Compare"
     }
   },
-  "660"       : {
+  "660"  : {
     "inputs"     : {
       "comparison" : "a < b",
       "a"          : [
@@ -1707,7 +1494,7 @@
       "title" : ">0"
     }
   },
-  "662"       : {
+  "662"  : {
     "inputs"     : {
       "mode" : true,
       "a"    : [
@@ -1724,7 +1511,7 @@
       "title" : "ImpactMinMax"
     }
   },
-  "665"       : {
+  "665"  : {
     "inputs"     : {
       "value" : 15
     },
@@ -1733,7 +1520,7 @@
       "title" : "INT Constant"
     }
   },
-  "666"       : {
+  "666"  : {
     "inputs"     : {
       "value" : 1
     },
@@ -1742,7 +1529,7 @@
       "title" : "INT Constant"
     }
   },
-  "667"       : {
+  "667"  : {
     "inputs"     : {
       "string"  : "__{{ age }}__ years old ",
       "find"    : "__{{ age }}__",
@@ -1756,7 +1543,7 @@
       "title" : "Replace"
     }
   },
-  "668"       : {
+  "668"  : {
     "inputs"     : {
       "value" : 20
     },
@@ -1765,7 +1552,7 @@
       "title" : "INT Constant"
     }
   },
-  "669"       : {
+  "669"  : {
     "inputs"     : {
       "condition"  : [
         "660",
@@ -1785,7 +1572,7 @@
       "title" : "Input Selector"
     }
   },
-  "670"       : {
+  "670"  : {
     "inputs"     : {
       "prefix" : "",
       "suffix" : "",
@@ -1799,7 +1586,7 @@
       "title" : "Something To String"
     }
   },
-  "672"       : {
+  "672"  : {
     "inputs"     : {
       "string"  : "the subject is portrayed at __{{ age }}__ years of age,  ",
       "find"    : "__{{ age }}__",
@@ -1813,7 +1600,7 @@
       "title" : "Replace"
     }
   },
-  "674"       : {
+  "674"  : {
     "inputs"     : {
       "value" : 24
     },
@@ -1822,7 +1609,7 @@
       "title" : "Age"
     }
   },
-  "676"       : {
+  "676"  : {
     "inputs"     : {
       "boolean" : true
     },
@@ -1831,7 +1618,7 @@
       "title" : "Red Lipstick?"
     }
   },
-  "744"       : {
+  "744"  : {
     "inputs"     : {
       "gamma" : 1.25,
       "image" : [
@@ -1844,7 +1631,7 @@
       "title" : "LayerColor: Gamma"
     }
   },
-  "983"       : {
+  "983"  : {
     "inputs"     : {
       "condition"  : [
         "118",
@@ -1864,7 +1651,7 @@
       "title" : "Input Selector"
     }
   },
-  "984"       : {
+  "984"  : {
     "inputs"     : {
       "condition"  : [
         "118",
@@ -1884,7 +1671,7 @@
       "title" : "Input Selector"
     }
   },
-  "1094"      : {
+  "1094" : {
     "inputs"     : {
       "method"       : "mkl",
       "strength"     : 0.24,
@@ -1903,7 +1690,7 @@
       "title" : "Color Match"
     }
   },
-  "1177"      : {
+  "1177" : {
     "inputs"     : {
       "seed" : -1
     },
@@ -1912,21 +1699,7 @@
       "title" : "Seed (rgthree)"
     }
   },
-  "1183"      : {
-    "inputs"     : {
-      "upscale_method" : "nearest-exact",
-      "scale_by"       : 1.1,
-      "samples"        : [
-        "27",
-        0
-      ]
-    },
-    "class_type" : "LatentUpscaleBy",
-    "_meta"      : {
-      "title" : "Upscale Latent By"
-    }
-  },
-  "1186"      : {
+  "1186" : {
     "inputs"     : {
       "sampler_name" : "euler_ancestral"
     },
@@ -1935,7 +1708,7 @@
       "title" : "KSamplerSelect"
     }
   },
-  "1187"      : {
+  "1187" : {
     "inputs"     : {
       "condition"  : [
         "591",
@@ -1955,7 +1728,7 @@
       "title" : "Input Selector"
     }
   },
-  "1189"      : {
+  "1189" : {
     "inputs"     : {
       "sampler_name" : "euler"
     },
@@ -1964,7 +1737,7 @@
       "title" : "KSamplerSelect"
     }
   },
-  "1192"      : {
+  "1192" : {
     "inputs"     : {
       "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
@@ -1976,20 +1749,7 @@
       "title" : "DualCLIPLoader"
     }
   },
-  "1193"      : {
-    "inputs"     : {
-      "stop_at_clip_layer" : -2,
-      "clip"               : [
-        "1192",
-        0
-      ]
-    },
-    "class_type" : "CLIPSetLastLayer",
-    "_meta"      : {
-      "title" : "CLIP Set Last Layer"
-    }
-  },
-  "1194"      : {
+  "1194" : {
     "inputs"     : {
       "block_number"         : 4,
       "downscale_factor"     : 1,
@@ -2008,7 +1768,7 @@
       "title" : "PatchModelAddDownscale"
     }
   },
-  "1195"      : {
+  "1195" : {
     "inputs"     : {
       "block_number"         : 4,
       "downscale_factor"     : 2,
@@ -2027,7 +1787,7 @@
       "title" : "4::2::0::0.5"
     }
   },
-  "1196"      : {
+  "1196" : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
       "weight_dtype" : "default"
@@ -2037,23 +1797,7 @@
       "title" : "Load Diffusion Model"
     }
   },
-  "1197"      : {
-    "inputs"     : {
-      "q"    : 1.1,
-      "k"    : 1.05,
-      "v"    : 0.95,
-      "out"  : 1.12,
-      "clip" : [
-        "1193",
-        0
-      ]
-    },
-    "class_type" : "CLIPAttentionMultiply",
-    "_meta"      : {
-      "title" : "CLIPAttentionMultiply"
-    }
-  },
-  "1216"      : {
+  "1216" : {
     "inputs"     : {
       "clip_l"   : [
         "1306",
@@ -2074,7 +1818,7 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1221"      : {
+  "1221" : {
     "inputs"     : {
       "conditioning" : [
         "1216",
@@ -2086,7 +1830,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "1227"      : {
+  "1227" : {
     "inputs"     : {
       "vae_name" : "ae.safetensors"
     },
@@ -2095,11 +1839,11 @@
       "title" : "FLUX VAE"
     }
   },
-  "1236"      : {
+  "1236" : {
     "inputs"     : {
       "scheduler" : "karras",
-      "steps"     : 19,
-      "denoise"   : 0.24,
+      "steps"     : 18,
+      "denoise"   : 0.18,
       "model"     : [
         "1532",
         0
@@ -2110,7 +1854,7 @@
       "title" : "FLUX_BasicScheduler"
     }
   },
-  "1241"      : {
+  "1241" : {
     "inputs"     : {
       "sampler_name" : "dpmpp_2m"
     },
@@ -2119,7 +1863,7 @@
       "title" : "KSamplerSelect"
     }
   },
-  "1297"      : {
+  "1297" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 1.5,
@@ -2129,7 +1873,7 @@
         0
       ],
       "clip"           : [
-        "1197",
+        "1192",
         0
       ]
     },
@@ -2138,10 +1882,10 @@
       "title" : "Pandora-RAWr 0.70::0.70"
     }
   },
-  "1298"      : {
+  "1298" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.8,
       "strength_clip"  : 0.12,
       "model"          : [
         "1676",
@@ -2157,7 +1901,7 @@
       "title" : "v1dhya5 0.92::0.88"
     }
   },
-  "1305"      : {
+  "1305" : {
     "inputs"     : {
       "find"    : "woman",
       "replace" : "young girl",
@@ -2171,7 +1915,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "1306"      : {
+  "1306" : {
     "inputs"     : {
       "condition"  : [
         "657",
@@ -2191,7 +1935,7 @@
       "title" : "Input Selector"
     }
   },
-  "1307"      : {
+  "1307" : {
     "inputs"     : {
       "find"    : "__AGE__",
       "replace" : [
@@ -2208,7 +1952,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "1309"      : {
+  "1309" : {
     "inputs"     : {
       "text" : "Indian woman, __AGE__ , __EXPRESSION__, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, sharp focus on eyes,  "
     },
@@ -2217,7 +1961,7 @@
       "title" : "Text Multiline"
     }
   },
-  "1312"      : {
+  "1312" : {
     "inputs"     : {
       "upscale_by"          : [
         "476",
@@ -2227,11 +1971,11 @@
         "378",
         0
       ],
-      "steps"               : 19,
+      "steps"               : 18,
       "cfg"                 : 1.9,
       "sampler_name"        : "dpmpp_2m",
       "scheduler"           : "karras",
-      "denoise"             : 0.19,
+      "denoise"             : 0.18,
       "mode_type"           : "Linear",
       "tile_width"          : 768,
       "tile_height"         : 768,
@@ -2246,7 +1990,7 @@
       "tiled_decode"        : false,
       "batch_size"          : 1,
       "image"               : [
-        "1523",
+        "1839",
         0
       ],
       "model"               : [
@@ -2283,7 +2027,7 @@
       "title" : "FLUX_Ultimate SD Upscale (Custom Sample)"
     }
   },
-  "1322"      : {
+  "1322" : {
     "inputs"     : {
       "seed" : [
         "378",
@@ -2299,7 +2043,7 @@
       "title" : "Text Random Line"
     }
   },
-  "1323"      : {
+  "1323" : {
     "inputs"     : {
       "text" : "The subject is having a loving facial expression\nThe subject is having a pouting facial expression\nThe subject is having a shy facial expression\nThe subject is having a happy facial expression\nThe subject is having a very happy facial expression\nThe subject is having a silly facial expression\nThe subject is having a aroused facial expression\nThe subject is having a flirting facial expression\nThe subject is having a seductive facial expression\nThe subject is having a provocative facial expression\nThe subject is having a surprised facial expression\nThe subject is having a open mouth facial expression"
     },
@@ -2308,16 +2052,16 @@
       "title" : "Text Multiline"
     }
   },
-  "1344"      : {
+  "1344" : {
     "inputs"     : {
-      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin\n\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  "
+      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
     }
   },
-  "1345"      : {
+  "1345" : {
     "inputs"     : {
       "separator" : ",",
       "text_1"    : [
@@ -2334,7 +2078,7 @@
       "title" : "TextConcatenate"
     }
   },
-  "1356"      : {
+  "1356" : {
     "inputs"     : {
       "sampler_name" : "euler"
     },
@@ -2343,7 +2087,34 @@
       "title" : "KSamplerSelect"
     }
   },
-  "1377"      : {
+  "1373" : {
+    "inputs"     : {
+      "condition"  : false,
+      "when_true"  : [
+        "81",
+        0
+      ],
+      "when_false" : [
+        "1374",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "1374" : {
+    "inputs"     : {
+      "string"         : "change image1 into  a real photo of an indian v1dhya5 with ultra-high-resolution ultra realistic details. \n\n{{PROMPT}},\n\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections,\n\nRemove any watermarks, black/white borders,\n\nSome Transparent elements in the outfit, \n \nEnhance this image, Make the lighting dramatic and slightly dark,\n",
+      "strip_newlines" : true
+    },
+    "class_type" : "StringConstantMultiline",
+    "_meta"      : {
+      "title" : "String Constant Multiline"
+    }
+  },
+  "1377" : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -2357,7 +2128,7 @@
       "title" : "Contains [~~]"
     }
   },
-  "1380"      : {
+  "1380" : {
     "inputs"     : {
       "text_a" : [
         "1381",
@@ -2369,7 +2140,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "1381"      : {
+  "1381" : {
     "inputs"     : {
       "value" : "wearing indian saree with intricate details"
     },
@@ -2378,7 +2149,7 @@
       "title" : "OnTrue"
     }
   },
-  "1383"      : {
+  "1383" : {
     "inputs"     : {
       "text"             : [
         "135",
@@ -2392,7 +2163,7 @@
       "title" : "Text Contains [||] closed Eyes"
     }
   },
-  "1384"      : {
+  "1384" : {
     "inputs"     : {
       "text_a"  : [
         "1385",
@@ -2412,7 +2183,7 @@
       "title" : "Text Input Switch"
     }
   },
-  "1385"      : {
+  "1385" : {
     "inputs"     : {
       "value" : "with closed eyes"
     },
@@ -2421,7 +2192,7 @@
       "title" : "OnTrue"
     }
   },
-  "1393"      : {
+  "1393" : {
     "inputs"     : {
       "text" : "Replace the woman's face and hair in Image1 with the woman's face and hair in Image2, retain the facial expression from Image1. \nretain the outfit, jewelry and accessories from Image1.\n\nComposition and color grading must remain completely unchanged. Maintain consistency for better integration of characters into the environment.\n\nRemove any watermarks in Image1\n\nLooking at the camera,\nchange the eye color to dark hazel brown. "
     },
@@ -2430,173 +2201,7 @@
       "title" : "Text Multiline"
     }
   },
-  "1403"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "105",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "1442:1443",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "1408"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1452",
-        0
-      ],
-      "mask"         : [
-        "1426",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "1412"      : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "1452",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "1414"      : {
-    "inputs"     : {
-      "noise_mask" : true,
-      "positive"   : [
-        "423",
-        0
-      ],
-      "negative"   : [
-        "425",
-        0
-      ],
-      "vae"        : [
-        "114",
-        0
-      ],
-      "pixels"     : [
-        "1452",
-        0
-      ],
-      "mask"       : [
-        "1426",
-        0
-      ]
-    },
-    "class_type" : "InpaintModelConditioning",
-    "_meta"      : {
-      "title" : "Klein_InpaintModelConditioning"
-    }
-  },
-  "1417"      : {
-    "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 5,
-      "cfg"          : 1,
-      "sampler_name" : "res_2m",
-      "scheduler"    : "simple",
-      "denoise"      : 0.62,
-      "model"        : [
-        "510",
-        0
-      ],
-      "positive"     : [
-        "1414",
-        0
-      ],
-      "negative"     : [
-        "1414",
-        1
-      ],
-      "latent_image" : [
-        "1414",
-        2
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "Klein_Pass 1 : KSampler 01 :: 0.48"
-    }
-  },
-  "1419"      : {
-    "inputs"     : {
-      "samples" : [
-        "1417",
-        0
-      ],
-      "vae"     : [
-        "114",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "Klein_VAE Klein_Decode"
-    }
-  },
-  "1426"      : {
-    "inputs"     : {
-      "expand"                 : 12,
-      "incremental_expandrate" : 6,
-      "tapered_corners"        : true,
-      "flip_input"             : false,
-      "blur_radius"            : 6,
-      "lerp_alpha"             : 1,
-      "decay_factor"           : 1,
-      "fill_holes"             : true,
-      "mask"                   : [
-        "1412",
-        0
-      ]
-    },
-    "class_type" : "GrowMaskWithBlur",
-    "_meta"      : {
-      "title" : "Grow Mask With Blur"
-    }
-  },
-  "1429"      : {
+  "1429" : {
     "inputs"     : {
       "delimiter"        : ",",
       "clean_whitespace" : "true",
@@ -2618,7 +2223,7 @@
       "title" : "Text Concatenate"
     }
   },
-  "1431"      : {
+  "1431" : {
     "inputs"     : {
       "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
     },
@@ -2627,10 +2232,10 @@
       "title" : "Text Multiline"
     }
   },
-  "1447"      : {
+  "1447" : {
     "inputs"     : {
       "any_01" : [
-        "1442:1443",
+        "1766",
         0
       ]
     },
@@ -2639,11 +2244,11 @@
       "title" : "Switch"
     }
   },
-  "1448"      : {
+  "1448" : {
     "inputs"     : {
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
-      "mode"          : "resize",
+      "mode"          : "pad",
       "delta_percent" : 0,
       "image"         : [
         "1447",
@@ -2655,25 +2260,7 @@
       "title" : "Image Preparations"
     }
   },
-  "1452"      : {
-    "inputs"     : {
-      "temperature" : 5,
-      "hue"         : 0,
-      "brightness"  : -5,
-      "contrast"    : 2,
-      "saturation"  : 2,
-      "gamma"       : 1.1,
-      "image"       : [
-        "359",
-        0
-      ]
-    },
-    "class_type" : "ColorCorrect",
-    "_meta"      : {
-      "title" : "ColorCorrect"
-    }
-  },
-  "1457"      : {
+  "1457" : {
     "inputs"     : {
       "model_name" : "4x_foolhardy_Remacri.pth"
     },
@@ -2682,7 +2269,7 @@
       "title" : "Load Upscale Model"
     }
   },
-  "1507"      : {
+  "1507" : {
     "inputs"     : {
       "mask_opacity" : 0.3,
       "mask_color"   : "255, 0, 207",
@@ -2701,7 +2288,7 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "1508"      : {
+  "1508" : {
     "inputs"     : {
       "expand"                 : 12,
       "incremental_expandrate" : 6,
@@ -2721,7 +2308,7 @@
       "title" : "Grow Mask With Blur"
     }
   },
-  "1509"      : {
+  "1509" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -2751,7 +2338,7 @@
       "title" : "Image Save"
     }
   },
-  "1510"      : {
+  "1510" : {
     "inputs"     : {
       "seed"         : [
         "378",
@@ -2784,7 +2371,7 @@
       "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
-  "1511"      : {
+  "1511" : {
     "inputs"     : {
       "face_mask"       : false,
       "background_mask" : false,
@@ -2803,7 +2390,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "1513"      : {
+  "1513" : {
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
@@ -2832,7 +2419,7 @@
       "title" : "FLUX_InpaintModelConditioning"
     }
   },
-  "1514"      : {
+  "1514" : {
     "inputs"     : {
       "samples" : [
         "1510",
@@ -2848,7 +2435,7 @@
       "title" : "FLUX_Decode"
     }
   },
-  "1523"      : {
+  "1523" : {
     "inputs"     : {
       "any_01" : [
         "1851",
@@ -2876,7 +2463,7 @@
       "title" : "Switch"
     }
   },
-  "1532"      : {
+  "1532" : {
     "inputs"     : {
       "max_shift"  : 1.05,
       "base_shift" : 0.6,
@@ -2892,7 +2479,7 @@
       "title" : "FLUX_ModelSamplingFlux 1.40::0.8"
     }
   },
-  "1540"      : {
+  "1540" : {
     "inputs"     : {
       "enable_fp16_accumulation" : true,
       "model"                    : [
@@ -2905,7 +2492,7 @@
       "title" : "Model Patch Torch Settings"
     }
   },
-  "1547"      : {
+  "1547" : {
     "inputs"     : {
       "clip_l"   : "clean clothing, proper fit, correct anatomy, aligned outfit, natural folds, realistic proportions, consistent fabric, sharp seams, no distortion, no warping, no broken clothing, no misalignment, stable structure, coherent garment,\n",
       "t5xxl"    : "A realistic outfit with physically accurate fabric behavior, clean stitching, natural folds and tension, consistent texture, no distortions or artifacts, proper alignment with the body,   lighting consistent with the scene, professional quality garment rendering,\n\nexposure perfectly matches the original image, no localized brightness adjustment, no relighting or tonal deviation",
@@ -2920,7 +2507,7 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1548"      : {
+  "1548" : {
     "inputs"     : {
       "conditioning" : [
         "1547",
@@ -2932,7 +2519,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "1572"      : {
+  "1572" : {
     "inputs"     : {
       "text" : "Indian woman, __AGE__ , serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, realistic fabric texture, realistic   background,   ultra high resolution, professional RAW photograph\n"
     },
@@ -2941,7 +2528,7 @@
       "title" : "Text Multiline"
     }
   },
-  "1576"      : {
+  "1576" : {
     "inputs"     : {
       "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
     },
@@ -2950,10 +2537,10 @@
       "title" : "Text Multiline"
     }
   },
-  "1626"      : {
+  "1626" : {
     "inputs"     : {
       "pixels" : [
-        "1448",
+        "1447",
         0
       ],
       "vae"    : [
@@ -2966,7 +2553,7 @@
       "title" : "FLUX_VAE Encode"
     }
   },
-  "1628"      : {
+  "1628" : {
     "inputs"     : {
       "model"        : [
         "1660",
@@ -2982,7 +2569,7 @@
       "title" : "FLUX_BasicGuider"
     }
   },
-  "1629"      : {
+  "1629" : {
     "inputs"     : {
       "noise_seed" : [
         "378",
@@ -2994,14 +2581,14 @@
       "title" : "RandomNoise"
     }
   },
-  "1631"      : {
+  "1631" : {
     "inputs"     : {},
     "class_type" : "DisableNoise",
     "_meta"      : {
       "title" : "DisableNoise"
     }
   },
-  "1635"      : {
+  "1635" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -3031,10 +2618,10 @@
       "title" : "Image Save"
     }
   },
-  "1639"      : {
+  "1639" : {
     "inputs"     : {
       "image" : [
-        "1448",
+        "1447",
         0
       ]
     },
@@ -3043,7 +2630,7 @@
       "title" : "🔧 Get Image Size"
     }
   },
-  "1642"      : {
+  "1642" : {
     "inputs"     : {
       "samples" : [
         "1648",
@@ -3059,15 +2646,11 @@
       "title" : "FLUX_VAE Decode"
     }
   },
-  "1644"      : {
+  "1644" : {
     "inputs"     : {
       "tile_mode"  : "None",
       "tile_size"  : 512,
       "overlap"    : 64,
-      "samples"    : [
-        "35",
-        0
-      ],
       "input_vae"  : [
         "114",
         0
@@ -3082,7 +2665,7 @@
       "title" : "FLUX_Reencode Latent"
     }
   },
-  "1645"      : {
+  "1645" : {
     "inputs"     : {
       "images" : [
         "1642",
@@ -3094,7 +2677,7 @@
       "title" : "Preview Image"
     }
   },
-  "1646"      : {
+  "1646" : {
     "inputs"     : {
       "sampler_name" : "euler"
     },
@@ -3103,7 +2686,7 @@
       "title" : "KSamplerSelect"
     }
   },
-  "1648"      : {
+  "1648" : {
     "inputs"     : {
       "noise"        : [
         "1629",
@@ -3131,13 +2714,13 @@
       "title" : "Pass02:Sampler1"
     }
   },
-  "1649"      : {
+  "1649" : {
     "inputs"     : {
       "a"         : [
         "222",
         0
       ],
-      "b"         : 0.72,
+      "b"         : 1.21,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3145,7 +2728,7 @@
       "title" : "0.72"
     }
   },
-  "1650"      : {
+  "1650" : {
     "inputs"     : {
       "condition"  : [
         "591",
@@ -3165,14 +2748,11 @@
       "title" : "Input Selector"
     }
   },
-  "1657"      : {
+  "1657" : {
     "inputs"     : {
-      "scheduler" : "simple",
+      "scheduler" : "beta",
       "steps"     : 28,
-      "denoise"   : [
-        "222",
-        0
-      ],
+      "denoise"   : 0.62,
       "model"     : [
         "1660",
         0
@@ -3183,7 +2763,7 @@
       "title" : "BasicScheduler"
     }
   },
-  "1658"      : {
+  "1658" : {
     "inputs"     : {
       "samples" : [
         "1661",
@@ -3199,7 +2779,7 @@
       "title" : "FLUX_VAE Decode"
     }
   },
-  "1660"      : {
+  "1660" : {
     "inputs"     : {
       "max_shift"  : 1.02,
       "base_shift" : 0.58,
@@ -3221,7 +2801,7 @@
       "title" : "FLUX_ModelSamplingFlux"
     }
   },
-  "1661"      : {
+  "1661" : {
     "inputs"     : {
       "noise"        : [
         "1631",
@@ -3249,7 +2829,7 @@
       "title" : "Pass02:Sampler2"
     }
   },
-  "1662"      : {
+  "1662" : {
     "inputs"     : {
       "sampler_name" : "euler"
     },
@@ -3258,7 +2838,7 @@
       "title" : "KSamplerSelect"
     }
   },
-  "1663"      : {
+  "1663" : {
     "inputs"     : {
       "denoise" : 0.56,
       "sigmas"  : [
@@ -3271,7 +2851,7 @@
       "title" : "0.8"
     }
   },
-  "1664"      : {
+  "1664" : {
     "inputs"     : {
       "noise_seed"     : [
         "378",
@@ -3289,9 +2869,9 @@
       "title" : "🔧 Inject Latent Noise"
     }
   },
-  "1665"      : {
+  "1665" : {
     "inputs"     : {
-      "dishonesty_factor" : -0.04,
+      "dishonesty_factor" : -0.02,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -3304,9 +2884,9 @@
       "title" : "Lying Sigma Sampler"
     }
   },
-  "1666"      : {
+  "1666" : {
     "inputs"     : {
-      "detail_amount"      : 0.04,
+      "detail_amount"      : 0.03,
       "start"              : 0.3,
       "end"                : 0.45,
       "bias"               : 0.5,
@@ -3326,7 +2906,7 @@
       "title" : "Detail Daemon Sampler"
     }
   },
-  "1673"      : {
+  "1673" : {
     "inputs"     : {
       "lens_distortion"      : -0.01,
       "color_temperature"    : 0,
@@ -3362,7 +2942,7 @@
       "title" : "Optical Realism & Physics"
     }
   },
-  "1674"      : {
+  "1674" : {
     "inputs"     : {
       "find"    : "__EXPRESSION__",
       "replace" : [
@@ -3379,7 +2959,7 @@
       "title" : "Text Find and Replace"
     }
   },
-  "1676"      : {
+  "1676" : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
       "strength_model" : 1.8,
@@ -3398,7 +2978,7 @@
       "title" : "Pandora-RAWr 0.70::0.70"
     }
   },
-  "1677"      : {
+  "1677" : {
     "inputs"     : {
       "temperature" : 0,
       "hue"         : 0,
@@ -3416,7 +2996,7 @@
       "title" : "ColorCorrect"
     }
   },
-  "1695"      : {
+  "1695" : {
     "inputs"     : {
       "lora_name"      : "AntiBlur.safetensors",
       "strength_model" : 1.8,
@@ -3435,10 +3015,14 @@
       "title" : "Pandora-RAWr 0.70::0.70"
     }
   },
-  "1703"      : {
+  "1703" : {
     "inputs"     : {
-      "any_02" : [
+      "any_01" : [
         "1312",
+        0
+      ],
+      "any_02" : [
+        "1839",
         0
       ],
       "any_03" : [
@@ -3455,7 +3039,7 @@
       "title" : "Switch"
     }
   },
-  "1704"      : {
+  "1704" : {
     "inputs"     : {
       "any_01" : [
         "1754",
@@ -3471,7 +3055,7 @@
       "title" : "Switch"
     }
   },
-  "1711"      : {
+  "1711" : {
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
@@ -3500,7 +3084,7 @@
       "title" : "FLUX_InpaintModelConditioning"
     }
   },
-  "1714"      : {
+  "1714" : {
     "inputs"     : {
       "mask_opacity" : 0.3,
       "mask_color"   : "255, 0, 207",
@@ -3519,7 +3103,7 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "1716"      : {
+  "1716" : {
     "inputs"     : {
       "any_01" : [
         "1514",
@@ -3539,7 +3123,7 @@
       "title" : "Switch"
     }
   },
-  "1718"      : {
+  "1718" : {
     "inputs"     : {
       "face_mask"       : true,
       "background_mask" : false,
@@ -3558,7 +3142,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "1719"      : {
+  "1719" : {
     "inputs"     : {
       "expand"                 : 12,
       "incremental_expandrate" : 6,
@@ -3578,7 +3162,7 @@
       "title" : "Grow Mask With Blur"
     }
   },
-  "1720"      : {
+  "1720" : {
     "inputs"     : {
       "conditioning" : [
         "1725",
@@ -3590,7 +3174,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "1725"      : {
+  "1725" : {
     "inputs"     : {
       "clip_l"   : "symmetrical face, consistent facial identity, correct facial anatomy, properly aligned facial features, natural proportions, stable facial structure, no distortion, no asymmetry, clean facial geometry, clear facial definition at all distances",
       "t5xxl"    : "A professionally color graded photograph of an Indian woman with a naturally attractive and well proportioned face and a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with fine pores and visible microtexture, subtle skin variation and natural irregularities, enhanced fine detail with clear high frequency texture, no noise or grain, no exaggerated or artificial skin detail, soft diffused lighting with balanced highlights, photorealistic rendering with clean and detailed skin and consistent clarity across viewing distances",
@@ -3605,7 +3189,7 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1726"      : {
+  "1726" : {
     "inputs"     : {
       "seed"         : [
         "378",
@@ -3638,7 +3222,7 @@
       "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
-  "1727"      : {
+  "1727" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -3668,7 +3252,7 @@
       "title" : "Image Save"
     }
   },
-  "1728"      : {
+  "1728" : {
     "inputs"     : {
       "samples" : [
         "1726",
@@ -3684,7 +3268,7 @@
       "title" : "FLUX_Decode"
     }
   },
-  "1741"      : {
+  "1741" : {
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
@@ -3713,7 +3297,7 @@
       "title" : "FLUX_InpaintModelConditioning"
     }
   },
-  "1744"      : {
+  "1744" : {
     "inputs"     : {
       "mask_opacity" : 0.3,
       "mask_color"   : "255, 0, 207",
@@ -3732,7 +3316,7 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "1747"      : {
+  "1747" : {
     "inputs"     : {
       "face_mask"       : false,
       "background_mask" : true,
@@ -3751,7 +3335,7 @@
       "title" : "A Person Mask Generator"
     }
   },
-  "1748"      : {
+  "1748" : {
     "inputs"     : {
       "expand"                 : 12,
       "incremental_expandrate" : 6,
@@ -3771,7 +3355,7 @@
       "title" : "Grow Mask With Blur"
     }
   },
-  "1749"      : {
+  "1749" : {
     "inputs"     : {
       "conditioning" : [
         "1751",
@@ -3783,7 +3367,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "1751"      : {
+  "1751" : {
     "inputs"     : {
       "clip_l"   : "clear background, defined environment, stable scene structure, no blur, no smearing, no distortion, consistent perspective, sharp spatial layout, coherent surroundings, no low resolution areas, equal scene importance",
       "t5xxl"    : "highly detailed and sharp background with clear structure and realistic textures, no blur or grain, no smeared or low resolution areas, natural depth of field with background remaining clear and readable, equal level of detail across subject and environment, consistent lighting and high resolution detail throughout the entire image",
@@ -3798,17 +3382,17 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1752"      : {
+  "1752" : {
     "inputs"     : {
       "seed"         : [
         "378",
         0
       ],
       "steps"        : 20,
-      "cfg"          : 2.2,
+      "cfg"          : 1.5,
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "denoise"      : 0.45,
+      "denoise"      : 0.43,
       "model"        : [
         "1695",
         0
@@ -3831,7 +3415,7 @@
       "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
-  "1753"      : {
+  "1753" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -3861,7 +3445,7 @@
       "title" : "Image Save"
     }
   },
-  "1754"      : {
+  "1754" : {
     "inputs"     : {
       "samples" : [
         "1752",
@@ -3877,7 +3461,7 @@
       "title" : "FLUX_Decode"
     }
   },
-  "1756"      : {
+  "1756" : {
     "inputs"     : {
       "any_01" : [
         "1658",
@@ -3889,10 +3473,10 @@
       "title" : "Switch"
     }
   },
-  "1766"      : {
+  "1766" : {
     "inputs"     : {
       "any_01" : [
-        "1442:1443",
+        "1918",
         0
       ]
     },
@@ -3901,7 +3485,7 @@
       "title" : "Switch"
     }
   },
-  "1771"      : {
+  "1771" : {
     "inputs"     : {
       "lut_name" : "Presetpro  - Kodacrome 64.cube",
       "strength" : 0.24,
@@ -3916,7 +3500,7 @@
       "title" : "ProPostApplyLUT"
     }
   },
-  "1775"      : {
+  "1775" : {
     "inputs"     : {
       "clip_l"   : "sharp image, clear details, no blur, no smearing, high clarity, defined edges, stable structure",
       "t5xxl"    : "high resolution image with enhanced fine detail and clarity, sharp textures and well defined edges, no blur or softness, no noise or grain, clean high frequency details, consistent sharpness across subject and background, refined and crisp overall image quality",
@@ -3931,13 +3515,13 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1777"      : {
+  "1777" : {
     "inputs"     : {
       "clip_l"   : "sharp image, clear details, no blur, no smearing, high clarity, defined edges, stable structure",
       "t5xxl"    : "high resolution image with enhanced fine detail and clarity, sharp textures and well defined edges, strong local contrast and micro contrast, clear separation between surfaces, no blur or softness, no noise or grain, clean high frequency details, consistent sharpness across subject and background, refined and crisp overall image quality",
       "guidance" : 2.8,
       "clip"     : [
-        "1197",
+        "1192",
         0
       ]
     },
@@ -3946,7 +3530,7 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1778"      : {
+  "1778" : {
     "inputs"     : {
       "denoise" : 0.52
     },
@@ -3955,7 +3539,7 @@
       "title" : "SplitSigmasDenoise"
     }
   },
-  "1780"      : {
+  "1780" : {
     "inputs"     : {
       "text" : "Close-up Photograph of a beautiful Indian v1dhya5 woman with a dark skin tone,"
     },
@@ -3964,7 +3548,25 @@
       "title" : "Text Multiline"
     }
   },
-  "1835"      : {
+  "1783" : {
+    "inputs"     : {
+      "seed"         : -1,
+      "steps"        : 21,
+      "cfg"          : 2.5,
+      "sampler_name" : "euler",
+      "scheduler"    : "beta",
+      "denoise"      : 0.38,
+      "model"        : [
+        "1298",
+        0
+      ]
+    },
+    "class_type" : "KSampler",
+    "_meta"      : {
+      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
+    }
+  },
+  "1835" : {
     "inputs"     : {
       "image" : [
         "1523",
@@ -3976,7 +3578,7 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "1836"      : {
+  "1836" : {
     "inputs"     : {
       "mode" : false,
       "a"    : [
@@ -3993,7 +3595,7 @@
       "title" : "MinMax"
     }
   },
-  "1837"      : {
+  "1837" : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
       "resolution"   : [
@@ -4010,7 +3612,7 @@
       "title" : "AIO Aux Preprocessor"
     }
   },
-  "1838"      : {
+  "1838" : {
     "inputs"     : {
       "noise_radius"   : 1,
       "preserve_edges" : 1,
@@ -4029,16 +3631,16 @@
       "title" : "🔧 Image Smart Sharpen"
     }
   },
-  "1839"      : {
+  "1839" : {
     "inputs"     : {
       "center_x"            : 0.3,
       "center_y"            : 0.5,
-      "saturation"          : 0.9,
+      "saturation"          : 1.08,
       "vignette_intensity"  : 0.010000000000000002,
       "grain_method"        : "filmgrainer",
       "grain_power"         : 0.06,
       "grain_scale"         : 0.3,
-      "grain_sat"           : 0.2,
+      "grain_sat"           : 0.15,
       "filmgrainer_shadows" : 0.15000000000000002,
       "filmgrainer_highs"   : 0.10000000000000002,
       "blur_strength"       : 0,
@@ -4058,7 +3660,7 @@
       "title" : "LayerFilter: Film V2"
     }
   },
-  "1842"      : {
+  "1842" : {
     "inputs"     : {
       "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
     },
@@ -4067,7 +3669,7 @@
       "title" : "Text Multiline"
     }
   },
-  "1843"      : {
+  "1843" : {
     "inputs"     : {
       "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nDetailed female hands, Diamond ring in one finger. No Nailpolish,"
     },
@@ -4076,7 +3678,7 @@
       "title" : "Text Multiline"
     }
   },
-  "1845"      : {
+  "1845" : {
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
@@ -4105,7 +3707,7 @@
       "title" : "FLUX_InpaintModelConditioning"
     }
   },
-  "1847"      : {
+  "1847" : {
     "inputs"     : {
       "mask_opacity" : 0.3,
       "mask_color"   : "255, 0, 207",
@@ -4124,18 +3726,18 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "1848"      : {
+  "1848" : {
     "inputs"     : {
-      "expand"                 : 12,
+      "expand"                 : 10,
       "incremental_expandrate" : 6,
       "tapered_corners"        : true,
       "flip_input"             : false,
       "blur_radius"            : 6,
       "lerp_alpha"             : 1,
       "decay_factor"           : 1,
-      "fill_holes"             : false,
+      "fill_holes"             : true,
       "mask"                   : [
-        "1876",
+        "1887",
         0
       ]
     },
@@ -4144,7 +3746,7 @@
       "title" : "Grow Mask With Blur"
     }
   },
-  "1849"      : {
+  "1849" : {
     "inputs"     : {
       "conditioning" : [
         "1865",
@@ -4156,7 +3758,7 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "1851"      : {
+  "1851" : {
     "inputs"     : {
       "samples" : [
         "1866",
@@ -4172,7 +3774,7 @@
       "title" : "FLUX_Decode"
     }
   },
-  "1856"      : {
+  "1856" : {
     "inputs"     : {
       "any_01" : [
         "1728",
@@ -4196,7 +3798,7 @@
       "title" : "Switch"
     }
   },
-  "1862"      : {
+  "1862" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
@@ -4226,10 +3828,10 @@
       "title" : "Image Save"
     }
   },
-  "1865"      : {
+  "1865" : {
     "inputs"     : {
-      "clip_l"   : "symmetrical face, consistent facial identity, correct facial anatomy, properly aligned facial features, natural proportions, stable facial structure, no distortion, no asymmetry, clean facial geometry, clear facial definition at all distances",
-      "t5xxl"    : "sharp clear eyes with detailed iris and natural reflections, no blur or distortion, well defined eyelids and eyelashes, consistent lighting and natural appearance",
+      "clip_l"   : "clear eyes, correct eye anatomy, properly aligned eyes, no distortion, no asymmetry, sharp eye structure, stable eyelids, coherent gaze direction, no deformation",
+      "t5xxl"    : "A highly detailed realistic human eye region with sharp and clear iris patterns, natural reflections and catchlights, well defined eyelashes and eyelids, clean edges and smooth transitions, enhanced fine detail in the iris without noise or grain, natural variation and subtle imperfections, no blur, no distortion, no over-sharpening, photorealistic and consistent with overall image lighting",
       "guidance" : 3.5,
       "clip"     : [
         "1298",
@@ -4241,7 +3843,7 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1866"      : {
+  "1866" : {
     "inputs"     : {
       "seed"         : [
         "378",
@@ -4251,7 +3853,7 @@
       "cfg"          : 2.5,
       "sampler_name" : "dpmpp_2m",
       "scheduler"    : "karras",
-      "denoise"      : 0.38,
+      "denoise"      : 0.32,
       "model"        : [
         "1298",
         0
@@ -4274,7 +3876,7 @@
       "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
-  "1873"      : {
+  "1873" : {
     "inputs"     : {
       "value" : 0.45
     },
@@ -4283,13 +3885,17 @@
       "title" : "Strength"
     }
   },
-  "1876"      : {
+  "1887" : {
     "inputs"     : {
-      "face_mask"       : false,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : false,
+      "face"            : false,
+      "left_eyebrow"    : true,
+      "right_eyebrow"   : true,
+      "left_eye"        : true,
+      "right_eye"       : true,
+      "left_pupil"      : true,
+      "right_pupil"     : true,
+      "lips"            : true,
+      "number_of_faces" : 1,
       "confidence"      : 0.4,
       "refine_mask"     : true,
       "images"          : [
@@ -4297,107 +3903,271 @@
         0
       ]
     },
-    "class_type" : "APersonMaskGenerator",
+    "class_type" : "APersonFaceLandmarkMaskGenerator",
     "_meta"      : {
-      "title" : "A Person Mask Generator"
+      "title" : "Face Landmark Masks"
     }
   },
-  "1442:1439" : {
+  "1904" : {
     "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "1442:1438",
+      "text" : "Make this photo high-quality with natural skin texture. \nPreserve the direction that the subject is looking,\nPreserve subject's facial features, expression, figure and pose. Preserve overall composition of this photo.\nPreserve Subjects Eye closed or open state.\nChange the subject hair color to natural black,\nAdd tiny platinum/diamond nose stud pin in the side of the nose.\nAdd subtle eyeliner and eye-shadow in the eyes and warm red nude lipstick.\nIncrease the bust size by 50%\nRemove any watermarks.",
+      "clip" : [
+        "510",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Klein_CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "1905" : {
+    "inputs"     : {
+      "conditioning" : [
+        "1904",
+        0
+      ],
+      "latent"       : [
+        "1907",
+        0
+      ]
+    },
+    "class_type" : "ReferenceLatent",
+    "_meta"      : {
+      "title" : "ReferenceLatent"
+    }
+  },
+  "1907" : {
+    "inputs"     : {
+      "pixels" : [
+        "577",
+        0
+      ],
+      "vae"    : [
+        "114",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "Klein_VAE Enc"
+    }
+  },
+  "1910" : {
+    "inputs"     : {
+      "conditioning" : [
+        "1916",
+        0
+      ],
+      "latent"       : [
+        "1912",
+        0
+      ]
+    },
+    "class_type" : "ReferenceLatent",
+    "_meta"      : {
+      "title" : "ReferenceLatent"
+    }
+  },
+  "1912" : {
+    "inputs"     : {
+      "pixels" : [
+        "577",
+        0
+      ],
+      "vae"    : [
+        "114",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "Klein_VAE Enc"
+    }
+  },
+  "1913" : {
+    "inputs"     : {
+      "width"      : [
+        "1915",
+        0
+      ],
+      "height"     : [
+        "1915",
         1
       ],
-      "b"    : [
-        "1442:1438",
-        2
-      ]
+      "batch_size" : 1
     },
-    "class_type" : "ImpactMinMax",
+    "class_type" : "EmptyFlux2LatentImage",
     "_meta"      : {
-      "title" : "ImpactMinMax"
+      "title" : "Empty Latent"
     }
   },
-  "1442:1440" : {
+  "1914" : {
     "inputs"     : {
-      "preprocessor" : "DepthAnythingPreprocessor",
-      "resolution"   : [
-        "1442:1439",
-        0
-      ],
-      "image"        : [
-        "1419",
+      "conditioning" : [
+        "1916",
         0
       ]
     },
-    "class_type" : "AIO_Preprocessor",
+    "class_type" : "ConditioningZeroOut",
     "_meta"      : {
-      "title" : "AIO Aux Preprocessor"
+      "title" : "ConditioningZeroOut"
     }
   },
-  "1442:1441" : {
-    "inputs"     : {
-      "lens_distortion"      : -0.005,
-      "color_temperature"    : -0.05,
-      "tint"                 : 0,
-      "atmosphere_enabled"   : false,
-      "haze_strength"        : 0,
-      "lift_blacks"          : 0.01,
-      "depth_offset"         : 0,
-      "f_stop"               : "Manual",
-      "dof_intensity"        : 0,
-      "dof_auto_focus"       : false,
-      "dof_sharpness_radius" : 0,
-      "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0.25,
-      "promist_strength"     : 0.03,
-      "halation_strength"    : 0.1,
-      "chromatic_aberration" : 0.001,
-      "vignette_intensity"   : 0.08,
-      "grain_power"          : 0.004,
-      "monochrome_grain"     : true,
-      "highlight_rolloff"    : 0.01,
-      "image"                : [
-        "1419",
-        0
-      ],
-      "depth_map"            : [
-        "1442:1440",
-        0
-      ]
-    },
-    "class_type" : "OpticalRealism",
-    "_meta"      : {
-      "title" : "Optical Realism & Physics"
-    }
-  },
-  "1442:1438" : {
+  "1915" : {
     "inputs"     : {
       "image" : [
-        "1419",
+        "577",
         0
       ]
     },
-    "class_type" : "GetImageSizeAndCount",
+    "class_type" : "GetImageSize",
     "_meta"      : {
-      "title" : "Get Image Size & Count"
+      "title" : "Get Size"
     }
   },
-  "1442:1443" : {
+  "1916" : {
     "inputs"     : {
-      "size"              : 512,
-      "downscale_preview" : true,
-      "downscale_mode"    : true,
-      "compress_level"    : 0,
-      "images"            : [
-        "1442:1441",
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture. \nPreserve the direction that the subject is looking,\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve Subjects Eye closed or open state.\nChange the subject hair color to natural black,\nAdd subtle eyeliner and eye-shadow in the eyes and warm brown nude lipstick.\nIncrease the bust size by 34DD.\nRemove any watermarks.",
+      "clip" : [
+        "1923",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Klein_CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "1917" : {
+    "inputs"     : {
+      "seed"         : [
+        "378",
+        0
+      ],
+      "steps"        : 4,
+      "cfg"          : 1,
+      "sampler_name" : "euler_ancestral",
+      "scheduler"    : "simple",
+      "denoise"      : 1,
+      "model"        : [
+        "1923",
+        0
+      ],
+      "positive"     : [
+        "1931",
+        0
+      ],
+      "negative"     : [
+        "1914",
+        0
+      ],
+      "latent_image" : [
+        "1913",
         0
       ]
     },
-    "class_type" : "PreviewImageForConditions|LP",
+    "class_type" : "KSampler",
     "_meta"      : {
-      "title" : "Preview Image Bridge [LP]"
+      "title" : "Klein_KSampler"
+    }
+  },
+  "1918" : {
+    "inputs"     : {
+      "samples" : [
+        "1917",
+        0
+      ],
+      "vae"     : [
+        "114",
+        0
+      ]
+    },
+    "class_type" : "VAEDecode",
+    "_meta"      : {
+      "title" : "Klein_VAE Decode"
+    }
+  },
+  "1922" : {
+    "inputs"     : {
+      "lora_name"      : "vidhyas_lora_v4_klein.safetensors",
+      "strength_model" : 1,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "115",
+        0
+      ],
+      "clip"           : [
+        "116",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA (Model and CLIP)"
+    }
+  },
+  "1923" : {
+    "inputs"     : {
+      "lora_name"      : "ultra_real_v2.safetensors",
+      "strength_model" : 0.5,
+      "strength_clip"  : 1,
+      "model"          : [
+        "1922",
+        0
+      ],
+      "clip"           : [
+        "1922",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA (Model and CLIP)"
+    }
+  },
+  "1931" : {
+    "inputs"     : {
+      "magnitude"           : 1,
+      "contrast"            : 0.05,
+      "normalize_strength"  : 0.05,
+      "preserve_original"   : 0.05,
+      "preserve_mode"       : "linear",
+      "edit_text_weight"    : 1,
+      "active_end_override" : 1,
+      "low_vram"            : false,
+      "device"              : "auto",
+      "debug"               : false,
+      "conditioning"        : [
+        "1910",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinEnhancer",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
+  "1933" : {
+    "inputs"     : {
+      "seed" : -1
+    },
+    "class_type" : "Seed (rgthree)",
+    "_meta"      : {
+      "title" : "Seed (rgthree)"
+    }
+  },
+  "1934" : {
+    "inputs"     : {
+      "text_0" : "Inputs/Next/rithu-chowdary-at-hilife-launch-21mar14.jpg",
+      "text"   : [
+        "135",
+        3
+      ]
+    },
+    "class_type" : "ShowText|LP",
+    "_meta"      : {
+      "title" : "Show Text [LP]"
     }
   }
 }
