@@ -9,6 +9,11 @@
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 workflows_dir=${WORKSPACE}/ComfyUI/user/default/workflows
 
+mkdir -p "${WORKSPACE}ComfyUI/Inputs/Downloaded/Parked"
+mkdir -p "${WORKSPACE}ComfyUI/Inputs/Next/Best"
+mkdir -p "${WORKSPACE}ComfyUI/Inputs/Next/Park"
+mkdir -p "${WORKSPACE}ComfyUI/Inputs/Processed"
+
 mkdir -p "${WORKSPACE}environments/python/comfyui"
 cd "${WORKSPACE}environments/python/"
 
