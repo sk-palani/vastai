@@ -68,6 +68,8 @@ PIP_PACKAGES=(
 )
 
 CHECKPOINT_MODELS=(
+  #
+  #  "https://civitai.com/api/download/models/813603?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 )
 
 
@@ -89,6 +91,7 @@ NODES=(
     "https://github.com/djbielejeski/a-person-mask-generator"
     "https://github.com/jags111/efficiency-nodes-comfyui"
     "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
     "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
     "https://github.com/ltdrdata/was-node-suite-comfyui"
@@ -99,8 +102,8 @@ NODES=(
     "https://github.com/sonnybox/ComfyUI-SuperNodes"
     "https://github.com/storyicon/comfyui_segment_anything"
     "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
-    "https://github.com/yorkane/ComfyUI-KYNode"
     "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/yorkane/ComfyUI-KYNode"
 )
 
 
@@ -184,6 +187,10 @@ VAE_MODELS=(
 
 LORA_MODELS=(
     # Flux2.Klein
+    # V2_flux_klein_4.safetensors
+    "https://civitai.com/api/download/models/2777010?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # Chest_9B.safetensors
+    "https://civitai.com/api/download/models/2809741?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_slider_bodyweight_50.safetensors
     "https://civitai.com/api/download/models/2608738?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_slider_bust.safetensors
@@ -213,6 +220,9 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2778447?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_slider_eyes.safetensors
     "https://civitai.com/api/download/models/2619978?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # FLUX2_KLEIN_UNLOCKED_V1.safetensors
+    "https://civitai.com/api/download/models/2788349?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
     # Flux1.Dev
     # Pandora-RAWr.safetensors
     "https://civitai.com/api/download/models/1943855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
