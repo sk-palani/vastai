@@ -621,9 +621,9 @@
         "strength" : 2.4
       },
       "lora_4"                      : {
-        "on"       : true,
+        "on"       : false,
         "lora"     : "klein_slider_bodyweight_50.safetensors",
-        "strength" : 2.1
+        "strength" : 5
       },
       "lora_5"                      : {
         "on"       : false,
@@ -2642,24 +2642,6 @@
       "title" : "FLUX_*CLIPTextEncodeFlux"
     }
   },
-  "1726" : {
-    "inputs"     : {
-      "seed"         : -1,
-      "steps"        : 22,
-      "cfg"          : 1.4,
-      "sampler_name" : "dpmpp_2m",
-      "scheduler"    : "karras",
-      "denoise"      : 0.5,
-      "model"        : [
-        "1298",
-        0
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
-    }
-  },
   "1727" : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
@@ -3141,6 +3123,23 @@
       "title" : "Klein_VAE Enc"
     }
   },
+  "1913" : {
+    "inputs"     : {
+      "width"      : [
+        "1915",
+        0
+      ],
+      "height"     : [
+        "1915",
+        1
+      ],
+      "batch_size" : 1
+    },
+    "class_type" : "EmptyFlux2LatentImage",
+    "_meta"      : {
+      "title" : "Empty Latent"
+    }
+  },
   "1914" : {
     "inputs"     : {
       "conditioning" : [
@@ -3205,7 +3204,7 @@
         0
       ],
       "latent_image" : [
-        "2383",
+        "1913",
         0
       ]
     },
@@ -3252,7 +3251,7 @@
   "1931" : {
     "inputs"     : {
       "magnitude"           : 1,
-      "contrast"            : 0,
+      "contrast"            : 0.05,
       "normalize_strength"  : 0.05,
       "preserve_original"   : 0.05,
       "preserve_mode"       : "linear",
@@ -3301,7 +3300,7 @@
   },
   "1934" : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/Best/204dd470914a734c25e2d8602ab78aea.jpg",
+      "text_0" : "Inputs/Next/656848485_18018897614818317_4938382381574657033_n.webp",
       "text"   : [
         "2034",
         3
@@ -3469,7 +3468,7 @@
         "378",
         0
       ],
-      "steps"        : 21,
+      "steps"        : 14,
       "cfg"          : 1,
       "sampler_name" : "euler_ancestral",
       "scheduler"    : "linear_quadratic",
@@ -3771,7 +3770,7 @@
   },
   "2023" : {
     "inputs"     : {
-      "detail_amount"      : 0.08,
+      "detail_amount"      : 0.06,
       "start"              : 0.3,
       "end"                : 0.45,
       "bias"               : 0.5,
@@ -3866,7 +3865,7 @@
   },
   "2040" : {
     "inputs"     : {
-      "text" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
+      "text" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 36DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3912,7 +3911,7 @@
   },
   "2044" : {
     "inputs"     : {
-      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
+      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 36DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
       "text"   : [
         "2161",
         0
@@ -4167,7 +4166,7 @@
         1
       ],
       "clip_b"  : [
-        "2127",
+        "2129",
         1
       ],
       "boolean" : [
@@ -4206,7 +4205,7 @@
         0
       ],
       "model_b" : [
-        "2127",
+        "2129",
         0
       ],
       "boolean" : [
@@ -4236,6 +4235,44 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmaImageUprader-FLUX-v0.3 0.40::0.40"
+    }
+  },
+  "2129" : {
+    "inputs"     : {
+      "lora_name"      : "Pandora-RAWr.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.65,
+      "model"          : [
+        "2130",
+        0
+      ],
+      "clip"           : [
+        "2130",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Pandora-RAWr 0.65::0.65"
+    }
+  },
+  "2130" : {
+    "inputs"     : {
+      "lora_name"      : "brlns.safetensors",
+      "strength_model" : 1.1,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2127",
+        0
+      ],
+      "clip"           : [
+        "2127",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Pandora-RAWr 0.65::0.65"
     }
   },
   "2131" : {
@@ -4956,8 +4993,8 @@
   "2322" : {
     "inputs"     : {
       "lora_name"      : "[FLUX.2.Klein]FilmGrain_Redmond.safetensors",
-      "strength_model" : 0.1,
-      "strength_clip"  : 0.1,
+      "strength_model" : 0.3,
+      "strength_clip"  : 0.2,
       "model"          : [
         "2328",
         0
@@ -4987,7 +5024,7 @@
       "max_shift"    : 1.02,
       "base_shift"   : 0.59,
       "model"        : [
-        "2225",
+        "1298",
         0
       ],
       "latent_image" : [
@@ -5260,10 +5297,10 @@
         "378",
         0
       ],
-      "steps"               : 23,
-      "cfg"                 : 1,
-      "sampler_name"        : "res_2s",
-      "scheduler"           : "ddim_uniform",
+      "steps"               : 12,
+      "cfg"                 : 2,
+      "sampler_name"        : "euler",
+      "scheduler"           : "simple",
       "denoise"             : 0.2,
       "mode_type"           : "Linear",
       "tile_width"          : 1024,
@@ -5367,23 +5404,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "2383" : {
-    "inputs"     : {
-      "width"      : [
-        "1915",
-        0
-      ],
-      "height"     : [
-        "1915",
-        1
-      ],
-      "batch_size" : 1
-    },
-    "class_type" : "EmptyFlux2LatentImage",
-    "_meta"      : {
-      "title" : "Empty Flux 2 Latent"
     }
   }
 }
