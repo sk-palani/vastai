@@ -162,7 +162,7 @@
     "inputs"     : {
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
-      "mode"          : "resize",
+      "mode"          : "pad",
       "delta_percent" : 0,
       "image"         : [
         "983",
@@ -682,11 +682,11 @@
       },
       "➕ Add Lora"                  : "",
       "model"                       : [
-        "2145",
+        "2322",
         0
       ],
       "clip"                        : [
-        "2145",
+        "2322",
         1
       ]
     },
@@ -1026,7 +1026,7 @@
         "2034",
         3
       ],
-      "regex_pattern"    : "\\{(.*)\\}",
+      "regex_pattern"    : "\\[(.*)\\]",
       "mode"             : "First Group",
       "case_insensitive" : false,
       "multiline"        : false,
@@ -1840,7 +1840,7 @@
         0
       ],
       "t5xxl"    : [
-        "2240",
+        "1345",
         0
       ],
       "guidance" : 3.5,
@@ -1875,30 +1875,6 @@
       "title" : "FLUX VAE"
     }
   },
-  "1236" : {
-    "inputs"     : {
-      "scheduler" : "beta",
-      "steps"     : 12,
-      "denoise"   : 0.14,
-      "model"     : [
-        "2259",
-        0
-      ]
-    },
-    "class_type" : "BasicScheduler",
-    "_meta"      : {
-      "title" : "FLUX_BasicScheduler"
-    }
-  },
-  "1241" : {
-    "inputs"     : {
-      "sampler_name" : "euler"
-    },
-    "class_type" : "KSamplerSelect",
-    "_meta"      : {
-      "title" : "KSamplerSelect"
-    }
-  },
   "1297" : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -1920,15 +1896,15 @@
   },
   "1298" : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 1,
       "strength_clip"  : 0.14,
       "model"          : [
-        "2300",
+        "2321",
         0
       ],
       "clip"           : [
-        "2300",
+        "2321",
         1
       ]
     },
@@ -2024,7 +2000,7 @@
   },
   "1344" : {
     "inputs"     : {
-      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness ,\n  tiny black mole in the chin, \n\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage."
+      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness ,\n  tiny black mole in the chin, \n\nFilmGrainAF,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2293,7 +2269,7 @@
       "scheduler"    : "beta",
       "denoise"      : 0.32,
       "model"        : [
-        "2209",
+        "2126",
         0
       ],
       "positive"     : [
@@ -2419,7 +2395,7 @@
     "inputs"     : {
       "clip_l"   : "clean clothing, proper fit, correct anatomy, aligned outfit, natural folds, realistic proportions, consistent fabric, sharp seams, no distortion, no warping, no broken clothing, no misalignment, stable structure, coherent garment,\n",
       "t5xxl"    : "A realistic outfit with physically accurate fabric behavior, clean stitching, natural folds and tension, consistent texture, no distortions or artifacts, proper alignment with the body,   lighting consistent with the scene, professional quality garment rendering,\n\nexposure perfectly matches the original image, no localized brightness adjustment, no relighting or tonal deviation",
-      "guidance" : 3.2,
+      "guidance" : 3.5,
       "clip"     : [
         "2120",
         0
@@ -2458,29 +2434,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "1644" : {
-    "inputs"     : {
-      "tile_mode"  : "None",
-      "tile_size"  : 512,
-      "overlap"    : 0,
-      "samples"    : [
-        "1978",
-        0
-      ],
-      "input_vae"  : [
-        "114",
-        0
-      ],
-      "output_vae" : [
-        "1227",
-        0
-      ]
-    },
-    "class_type" : "ReencodeLatent",
-    "_meta"      : {
-      "title" : "FLUX_Reencode Latent"
     }
   },
   "1673" : {
@@ -2579,12 +2532,12 @@
       "strength_model" : 2,
       "strength_clip"  : 1,
       "model"          : [
-        "1297",
+        "1194",
         0
       ],
       "clip"           : [
-        "1297",
-        1
+        "1197",
+        0
       ]
     },
     "class_type" : "LoraLoader",
@@ -2595,7 +2548,7 @@
   "1703" : {
     "inputs"     : {
       "any_01" : [
-        "2061",
+        "2374",
         0
       ],
       "any_02" : [
@@ -2661,25 +2614,6 @@
       "title" : "FLUX_InpaintModelConditioning"
     }
   },
-  "1714" : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "2192",
-        1
-      ],
-      "mask"         : [
-        "2192",
-        2
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
   "1716" : {
     "inputs"     : {
       "any_01" : [
@@ -2708,7 +2642,7 @@
       "body_mask"       : false,
       "clothes_mask"    : false,
       "confidence"      : 0.4,
-      "refine_mask"     : true,
+      "refine_mask"     : false,
       "images"          : [
         "1716",
         0
@@ -2733,38 +2667,17 @@
   },
   "1725" : {
     "inputs"     : {
-      "clip_l"   : "symmetrical face, consistent facial identity, correct facial anatomy, properly aligned facial features, natural proportions, stable facial structure, no distortion, no asymmetry, clean facial geometry, clear facial definition at all distances",
-      "t5xxl"    : [
-        "2234",
-        0
-      ],
-      "guidance" : 3.5,
+      "clip_l"   : "preserve original facial identity, maintain exact facial structure, do not alter facial geometry",
+      "t5xxl"    : "A professionally color graded photograph of an Indian woman with a naturally attractive and well proportioned face and a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with fine pores and visible microtexture, subtle skin variation and natural irregularities, enhanced fine detail with clear high frequency texture, no noise or grain, no exaggerated or artificial skin detail, soft diffused lighting with balanced highlights, photorealistic rendering with clean and detailed skin and consistent clarity across viewing distances",
+      "guidance" : 3.6,
       "clip"     : [
-        "1298",
+        "2225",
         1
       ]
     },
     "class_type" : "CLIPTextEncodeFlux",
     "_meta"      : {
       "title" : "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
-  "1726" : {
-    "inputs"     : {
-      "seed"         : -1,
-      "steps"        : 22,
-      "cfg"          : 1.4,
-      "sampler_name" : "dpmpp_2m",
-      "scheduler"    : "karras",
-      "denoise"      : 0.5,
-      "model"        : [
-        "1298",
-        0
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
   "1727" : {
@@ -2800,8 +2713,8 @@
   "1728" : {
     "inputs"     : {
       "samples" : [
-        "2177",
-        0
+        "2189",
+        1
       ],
       "vae"     : [
         "1227",
@@ -2939,7 +2852,7 @@
       "scheduler"    : "beta",
       "denoise"      : 0.43,
       "model"        : [
-        "2208",
+        "1695",
         0
       ],
       "positive"     : [
@@ -3049,21 +2962,6 @@
       "title" : "ProPostApplyLUT"
     }
   },
-  "1777" : {
-    "inputs"     : {
-      "clip_l"   : "sharp image, clear details, no blur, no smearing, high clarity, defined edges, stable structure",
-      "t5xxl"    : "high resolution image with enhanced fine detail and clarity, sharp textures and well defined edges, strong local contrast and micro contrast, clear separation between surfaces, no blur or softness, no noise or grain, clean high frequency details, consistent sharpness across subject and background, refined and crisp overall image quality",
-      "guidance" : 3.5,
-      "clip"     : [
-        "1192",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
   "1780" : {
     "inputs"     : {
       "text" : "Close-up Photograph of a beautiful Indian v1dhya5 woman with a dark skin tone,"
@@ -3127,7 +3025,7 @@
         "1873",
         0
       ],
-      "ratio"          : 0.6,
+      "ratio"          : 0.4,
       "image"          : [
         "1523",
         0
@@ -3158,7 +3056,7 @@
   },
   "1873" : {
     "inputs"     : {
-      "value" : 0.45
+      "value" : 0.38
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -3440,7 +3338,7 @@
   },
   "1934" : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/IMG_20260328_223455_855.jpg",
+      "text_0" : "Inputs/Next/Best/656638104_18063908027422886_2779516801639152964_n.jpg",
       "text"   : [
         "2034",
         3
@@ -3510,7 +3408,7 @@
   "1962" : {
     "inputs"     : {
       "pixels" : [
-        "2263",
+        "2308",
         0
       ],
       "vae"    : [
@@ -3558,9 +3456,9 @@
   },
   "1973" : {
     "inputs"     : {
-      "text" : "\n\nMake this photo high-quality photo of v1dhya5 with natural skin texture. \nPreserve the direction that the subject is looking,\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve the outfit and accessories from the reference Image.\nPreserve Subjects Eye/Mouth - closed or open state.\nChange the subject hair color to natural black,\nAdd subtle eyeliner and eye-shadow in the eyes and warm light brown nude lipstick.\nIncrease the bust size by 34DD.\nRemove any watermarks.\n\nEnhance this image\nFix the Texts to meaningful words.",
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture. \nfluxtrait, detailed skin,\n\nPreserve the direction that the subject is looking,\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve the outfit and accessories from the reference Image.\nPreserve Subjects Eye/Mouth - closed or open state.\nChange the subject hair color to natural black,\nAdd subtle eyeliner and eye-shadow in the eyes and warm light brown nude lipstick.\nIncrease the bust size by 36DD.\nRemove any watermarks.\n\nEnhance this image\nFix the Texts to meaningful words.",
       "clip" : [
-        "2145",
+        "2322",
         1
       ]
     },
@@ -3611,7 +3509,7 @@
       "scheduler"    : "linear_quadratic",
       "denoise"      : 1,
       "model"        : [
-        "2145",
+        "2322",
         0
       ],
       "positive"     : [
@@ -3651,11 +3549,11 @@
   "1990" : {
     "inputs"     : {
       "model"        : [
-        "2257",
+        "2327",
         0
       ],
       "conditioning" : [
-        "1216",
+        "2350",
         0
       ]
     },
@@ -3794,10 +3692,10 @@
   "2014" : {
     "inputs"     : {
       "scheduler" : "beta",
-      "steps"     : 28,
+      "steps"     : 12,
       "denoise"   : 0.37,
       "model"     : [
-        "2257",
+        "2327",
         0
       ]
     },
@@ -3861,7 +3759,7 @@
   },
   "2019" : {
     "inputs"     : {
-      "denoise" : 0.68,
+      "denoise" : 0.7,
       "sigmas"  : [
         "2014",
         0
@@ -3870,6 +3768,21 @@
     "class_type" : "SplitSigmasDenoise",
     "_meta"      : {
       "title" : "0.8"
+    }
+  },
+  "2020" : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.03,
+      "start_percent"     : 0.1,
+      "end_percent"       : 0.45,
+      "sampler"           : [
+        "2018",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
     }
   },
   "2022" : {
@@ -3903,7 +3816,7 @@
       "smooth"             : true,
       "cfg_scale_override" : 1,
       "sampler"            : [
-        "2018",
+        "2020",
         0
       ]
     },
@@ -3987,7 +3900,7 @@
   },
   "2040" : {
     "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5 with deatailed natural skin texture. \n\n__AGE_STRING__   or Match the age of the subject to the reference photo,  \nPreserve the direction that the subject is looking,\n__EYE_STATE__\n\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve the outfit and accessories from the reference Photo.\nChange the subject hair color to natural black, and Eye color to dark brown.\nAdd subtle eyeliner and eye-shadow in the eyes and warm light  pale-brown nude lipstick.\nAdd a tiny black or burgundy bindi,\nIncrease the bust size by 36DD.\nIncrease the ass, thigh and calfs size accordingly,\nRemove any watermarks."
+      "text" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 36DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4033,7 +3946,7 @@
   },
   "2044" : {
     "inputs"     : {
-      "text_0" : "Make this photo high-quality photo of v1dhya5 with deatailed natural skin texture. \n\nthe subject is portrayed at 24 years of age,     or Match the age of the subject to the reference photo,  \nPreserve the direction that the subject is looking,\nPreserve Subject's Mouth closed or open state.\n\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve the outfit and accessories from the reference Photo.\nChange the subject hair color to natural black, and Eye color to dark brown.\nAdd subtle eyeliner and eye-shadow in the eyes and warm light  pale-brown nude lipstick.\nAdd a tiny black or burgundy bindi,\nIncrease the bust size by 36DD.\nIncrease the ass, thigh and calfs size accordingly,\nRemove any watermarks.",
+      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 36DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
       "text"   : [
         "2161",
         0
@@ -4061,72 +3974,6 @@
     "class_type" : "ColorMatch",
     "_meta"      : {
       "title" : "Color Match"
-    }
-  },
-  "2061" : {
-    "inputs"     : {
-      "upscale_by"          : [
-        "476",
-        0
-      ],
-      "seed"                : [
-        "378",
-        0
-      ],
-      "steps"               : 12,
-      "cfg"                 : 2,
-      "sampler_name"        : "euler",
-      "scheduler"           : "simple",
-      "denoise"             : 0.2,
-      "mode_type"           : "Linear",
-      "tile_width"          : 1024,
-      "tile_height"         : 1024,
-      "mask_blur"           : 6,
-      "tile_padding"        : 32,
-      "seam_fix_mode"       : "None",
-      "seam_fix_denoise"    : 1,
-      "seam_fix_width"      : 64,
-      "seam_fix_mask_blur"  : 8,
-      "seam_fix_padding"    : 16,
-      "force_uniform_tiles" : true,
-      "tiled_decode"        : true,
-      "batch_size"          : 1,
-      "image"               : [
-        "2181",
-        0
-      ],
-      "model"               : [
-        "2259",
-        0
-      ],
-      "positive"            : [
-        "1777",
-        0
-      ],
-      "negative"            : [
-        "1221",
-        0
-      ],
-      "vae"                 : [
-        "1227",
-        0
-      ],
-      "upscale_model"       : [
-        "2305",
-        0
-      ],
-      "custom_sampler"      : [
-        "1241",
-        0
-      ],
-      "custom_sigmas"       : [
-        "1236",
-        0
-      ]
-    },
-    "class_type" : "UltimateSDUpscaleCustomSample",
-    "_meta"      : {
-      "title" : "FLUX_Ultimate SD Upscale (Custom Sample)"
     }
   },
   "2063" : {
@@ -4261,7 +4108,7 @@
     },
     "class_type" : "StyleModelApply",
     "_meta"      : {
-      "title" : "Apply Style Model :: 0.8"
+      "title" : "FLUX_Apply Style Model :: 0.8"
     }
   },
   "2083" : {
@@ -4510,8 +4357,8 @@
   "2145" : {
     "inputs"     : {
       "lora_name"      : "V2_flux_klein_4.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 1,
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.4,
       "model"          : [
         "1922",
         0
@@ -4717,7 +4564,7 @@
   },
   "2174" : {
     "inputs"     : {
-      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  "
+      "text" : "A professionally color graded photograph of an Indian  v1dhya5  girl with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin,\n\nFilmGrainAF,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n\n \n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4748,18 +4595,6 @@
       "title" : "Remove Noise Mask"
     }
   },
-  "2177" : {
-    "inputs"     : {
-      "samples" : [
-        "2189",
-        0
-      ]
-    },
-    "class_type" : "RemoveNoiseMask",
-    "_meta"      : {
-      "title" : "Remove Noise Mask"
-    }
-  },
   "2181" : {
     "inputs"     : {
       "center_x"            : 0.3,
@@ -4774,7 +4609,7 @@
       "filmgrainer_highs"   : 0.05,
       "blur_strength"       : 1,
       "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
+      "focal_depth"         : 0,
       "image"               : [
         "1838",
         0
@@ -4846,13 +4681,13 @@
   },
   "2189" : {
     "inputs"     : {
-      "eta"          : 0.5,
-      "sampler_name" : "exponential/res_2s",
-      "scheduler"    : "bong_tangent",
-      "steps"        : 21,
-      "steps_to_run" : 21,
-      "denoise"      : 0.21,
-      "cfg"          : 2.4,
+      "eta"          : 0,
+      "sampler_name" : "multistep/res_3m",
+      "scheduler"    : "simple",
+      "steps"        : 7,
+      "steps_to_run" : 7,
+      "denoise"      : 0.18,
+      "cfg"          : 1,
       "seed"         : [
         "378",
         0
@@ -4860,7 +4695,7 @@
       "sampler_mode" : "standard",
       "bongmath"     : false,
       "model"        : [
-        "2190",
+        "2338",
         0
       ],
       "positive"     : [
@@ -4892,24 +4727,6 @@
     "class_type" : "DifferentialDiffusion",
     "_meta"      : {
       "title" : "FLUX_Differential Diffusion"
-    }
-  },
-  "2191" : {
-    "inputs"     : {
-      "eta"          : 0.52,
-      "sampler_name" : "exponential/res_3s",
-      "scheduler"    : "linear_quadratic",
-      "steps"        : 9,
-      "steps_to_run" : 9,
-      "denoise"      : 0.3,
-      "cfg"          : 1,
-      "seed"         : -1,
-      "sampler_mode" : "standard",
-      "bongmath"     : true
-    },
-    "class_type" : "ClownsharKSampler_Beta",
-    "_meta"      : {
-      "title" : "ClownsharKSampler"
     }
   },
   "2192" : {
@@ -4970,11 +4787,11 @@
   },
   "2196" : {
     "inputs"     : {
-      "expand"                 : 10,
+      "expand"                 : 8,
       "incremental_expandrate" : 0,
       "tapered_corners"        : true,
       "flip_input"             : false,
-      "blur_radius"            : 50,
+      "blur_radius"            : 12,
       "lerp_alpha"             : 1,
       "decay_factor"           : 1,
       "fill_holes"             : false,
@@ -5105,85 +4922,23 @@
       "title" : "Image Crop By Mask"
     }
   },
-  "2208" : {
-    "inputs"     : {
-      "strength" : 1,
-      "model"    : [
-        "1695",
-        0
-      ]
-    },
-    "class_type" : "DifferentialDiffusion",
-    "_meta"      : {
-      "title" : "FLUX_Differential Diffusion"
-    }
-  },
-  "2209" : {
-    "inputs"     : {
-      "strength" : 1,
-      "model"    : [
-        "2126",
-        0
-      ]
-    },
-    "class_type" : "DifferentialDiffusion",
-    "_meta"      : {
-      "title" : "FLUX_Differential Diffusion"
-    }
-  },
   "2225" : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 1,
+      "strength_clip"  : 0.96,
       "model"          : [
-        "1297",
+        "2317",
         0
       ],
       "clip"           : [
-        "1297",
+        "2317",
         1
       ]
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "v1dhya5 0.92::0.88"
-    }
-  },
-  "2231" : {
-    "inputs"     : {
-      "eta"          : 0.52,
-      "sampler_name" : "exponential/res_3s",
-      "scheduler"    : "linear_quadratic",
-      "steps"        : 9,
-      "steps_to_run" : 9,
-      "denoise"      : 0.3,
-      "cfg"          : 1,
-      "seed"         : -1,
-      "sampler_mode" : "standard",
-      "bongmath"     : true
-    },
-    "class_type" : "ClownsharKSampler_Beta",
-    "_meta"      : {
-      "title" : "ClownsharKSampler"
-    }
-  },
-  "2232" : {
-    "inputs"     : {
-      "eta"          : 0.52,
-      "sampler_name" : "exponential/res_3s",
-      "scheduler"    : "linear_quadratic",
-      "steps"        : 9,
-      "steps_to_run" : 9,
-      "denoise"      : 0.3,
-      "cfg"          : 1,
-      "seed"         : -1,
-      "sampler_mode" : "standard",
-      "bongmath"     : true
-    },
-    "class_type" : "ClownsharKSampler_Beta",
-    "_meta"      : {
-      "title" : "ClownsharKSampler"
     }
   },
   "2234" : {
@@ -5212,20 +4967,6 @@
       "title" : "Text Multiline"
     }
   },
-  "2240" : {
-    "inputs"     : {
-      "instruction_prompt" : "Clean-up the following prompt to add more detail,\nRemove any redundant and conflicting prompts.",
-      "max_new_tokens"     : 768,
-      "prompt"             : [
-        "1345",
-        0
-      ]
-    },
-    "class_type" : "Superprompt",
-    "_meta"      : {
-      "title" : "Superprompt"
-    }
-  },
   "2247" : {
     "inputs"     : {
       "brightness"    : 0.97,
@@ -5243,23 +4984,6 @@
     "class_type" : "SuperColorAdjustAllInOne",
     "_meta"      : {
       "title" : "🐧 Adjust Color AIO"
-    }
-  },
-  "2248" : {
-    "inputs"     : {
-      "find"    : "__EXPRESSION__",
-      "replace" : [
-        "2234",
-        0
-      ],
-      "text"    : [
-        "2186",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
     }
   },
   "2252" : {
@@ -5289,77 +5013,13 @@
       "title" : "ImageScaleToTotalPixels"
     }
   },
-  "2257" : {
-    "inputs"     : {
-      "scaling"      : "exponential",
-      "max_shift"    : 1.02,
-      "base_shift"   : 0.58,
-      "model"        : [
-        "1298",
-        0
-      ],
-      "latent_image" : [
-        "1644",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingAdvancedResolution",
-    "_meta"      : {
-      "title" : "FLUX_ModelSamplingAdvancedResolution"
-    }
-  },
-  "2259" : {
-    "inputs"     : {
-      "scaling"      : "exponential",
-      "max_shift"    : 1.1,
-      "base_shift"   : 0.6,
-      "model"        : [
-        "2304",
-        0
-      ],
-      "latent_image" : [
-        "2302",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingAdvancedResolution",
-    "_meta"      : {
-      "title" : "ModelSamplingAdvancedResolution"
-    }
-  },
-  "2263" : {
-    "inputs"     : {
-      "center_x"            : 0.3,
-      "center_y"            : 0.5,
-      "saturation"          : 0.9,
-      "vignette_intensity"  : 0.010000000000000002,
-      "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.08,
-      "grain_scale"         : 0.4,
-      "grain_sat"           : 0.3,
-      "filmgrainer_shadows" : 0.08,
-      "filmgrainer_highs"   : 0.05,
-      "blur_strength"       : 1,
-      "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
-      "image"               : [
-        "2150",
-        0
-      ],
-      "depth_map"           : [
-        "2264",
-        0
-      ]
-    },
-    "class_type" : "LayerFilter: FilmV2",
-    "_meta"      : {
-      "title" : "LayerFilter: Film V2"
-    }
-  },
   "2264" : {
     "inputs"     : {
       "preprocessor" : "DepthAnythingPreprocessor",
-      "resolution"   : 640,
+      "resolution"   : [
+        "2310",
+        0
+      ],
       "image"        : [
         "2150",
         0
@@ -5389,7 +5049,506 @@
       "title" : "v1dhya5 0.92::0.88"
     }
   },
-  "2302" : {
+  "2308" : {
+    "inputs"     : {
+      "lens_distortion"      : -0.01,
+      "color_temperature"    : 0,
+      "tint"                 : 0,
+      "atmosphere_enabled"   : false,
+      "haze_strength"        : 0.1,
+      "lift_blacks"          : 0.04,
+      "depth_offset"         : 0,
+      "f_stop"               : "Manual",
+      "dof_intensity"        : 0,
+      "dof_auto_focus"       : false,
+      "dof_sharpness_radius" : 0,
+      "dof_focus_point"      : 0,
+      "light_wrap_strength"  : 0.15,
+      "promist_strength"     : 0.1,
+      "halation_strength"    : 0.15,
+      "chromatic_aberration" : 0.002,
+      "vignette_intensity"   : 0.05,
+      "grain_power"          : 0.014,
+      "monochrome_grain"     : false,
+      "highlight_rolloff"    : 0,
+      "image"                : [
+        "2150",
+        0
+      ],
+      "depth_map"            : [
+        "2264",
+        0
+      ]
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
+    }
+  },
+  "2309" : {
+    "inputs"     : {
+      "image" : [
+        "2150",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "2310" : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "2309",
+        1
+      ],
+      "b"    : [
+        "2309",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "2311" : {
+    "inputs"     : {
+      "find"    : "__DEFAULT_CLIPL_PROMPT__",
+      "replace" : [
+        "2186",
+        0
+      ],
+      "text"    : [
+        "2234",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2317" : {
+    "inputs"     : {
+      "lora_name"      : "No Plastic Skin Lora (jockerai).safetensors",
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.4,
+      "model"          : [
+        "1194",
+        0
+      ],
+      "clip"           : [
+        "1197",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "v1dhya5 0.92::0.88"
+    }
+  },
+  "2318" : {
+    "inputs"     : {
+      "pixels" : [
+        "2247",
+        0
+      ],
+      "vae"    : [
+        "1227",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "FLUX_VAE Encode"
+    }
+  },
+  "2321" : {
+    "inputs"     : {
+      "lora_name"      : "Portrait_Engine v2.0.safetensors",
+      "strength_model" : 0.3,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2300",
+        0
+      ],
+      "clip"           : [
+        "2300",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "v1dhya5 0.92::0.88"
+    }
+  },
+  "2322" : {
+    "inputs"     : {
+      "lora_name"      : "[FLUX.2.Klein]FilmGrain_Redmond.safetensors",
+      "strength_model" : 0.3,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2328",
+        0
+      ],
+      "clip"           : [
+        "2328",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "v1dhya5 0.92::0.88"
+    }
+  },
+  "2323" : {
+    "inputs"     : {
+      "text" : "Make this photo high-quality photo of v1dhya5 with deatailed natural skin texture. \n\n__AGE_STRING__   or Match the age of the subject to the reference photo,  \nPreserve the direction that the subject is looking,\n__EYE_STATE__\n\n\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve the outfit and accessories from the reference Photo.\nChange the subject hair color to natural black, and Eye color to dark brown.\nAdd subtle eyeliner and eye-shadow in the eyes and warm light  pale-brown nude lipstick.\nAdd a tiny black or burgundy bindi,\nIncrease the bust size by 36DD.\nIncrease the ass, thigh and calfs size accordingly,\nRemove any watermarks."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2327" : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 1.02,
+      "base_shift"   : 0.59,
+      "model"        : [
+        "1298",
+        0
+      ],
+      "latent_image" : [
+        "2318",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "FLUX_Sampling"
+    }
+  },
+  "2328" : {
+    "inputs"     : {
+      "lora_name"      : "klein_slider_eyes.safetensors",
+      "strength_model" : 2.1,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "2145",
+        0
+      ],
+      "clip"           : [
+        "2145",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "v1dhya5 0.92::0.88"
+    }
+  },
+  "2329" : {
+    "inputs"     : {
+      "text" : "--\n### AgeString            :  \n#### __AgeString__\n--\n### Prompt_From_FileName :  \n#### __Prompt_From_FileName__\n--\n### FacialExpression :  \n#### __FacialExpression__\n--\n\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2338" : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 1.1,
+      "base_shift"   : 0.4,
+      "model"        : [
+        "2225",
+        0
+      ],
+      "latent_image" : [
+        "1711",
+        2
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "FLUX_ModelSamplAdvRes"
+    }
+  },
+  "2341" : {
+    "inputs"     : {
+      "find"    : "__AgeString__",
+      "replace" : [
+        "672",
+        0
+      ],
+      "text"    : [
+        "2329",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2342" : {
+    "inputs"     : {
+      "find"    : "__Prompt_From_FileName__",
+      "replace" : [
+        "634",
+        0
+      ],
+      "text"    : [
+        "2341",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2343" : {
+    "inputs"     : {
+      "find"    : "__FacialExpression__",
+      "replace" : [
+        "1322",
+        0
+      ],
+      "text"    : [
+        "2342",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2344" : {
+    "inputs"     : {
+      "value" : true
+    },
+    "class_type" : "PrimitiveBoolean",
+    "_meta"      : {
+      "title" : "Boolean"
+    }
+  },
+  "2347" : {
+    "inputs"     : {
+      "style_model_name" : "flex1_redux_siglip2_512.safetensors"
+    },
+    "class_type" : "StyleModelLoader",
+    "_meta"      : {
+      "title" : "Load Style Model"
+    }
+  },
+  "2348" : {
+    "inputs"     : {
+      "clip_name" : "siglip2_so400m_patch16_512.safetensors"
+    },
+    "class_type" : "AdvancedVisionLoader",
+    "_meta"      : {
+      "title" : "Load Advanced Vision Model"
+    }
+  },
+  "2349" : {
+    "inputs"     : {
+      "crop"        : "none",
+      "clip_vision" : [
+        "2348",
+        0
+      ],
+      "image"       : [
+        "2034",
+        0
+      ]
+    },
+    "class_type" : "CLIPVisionEncode",
+    "_meta"      : {
+      "title" : "CLIP Vision Encode"
+    }
+  },
+  "2350" : {
+    "inputs"     : {
+      "strength"           : 0.8,
+      "strength_type"      : "multiply",
+      "conditioning"       : [
+        "1216",
+        0
+      ],
+      "style_model"        : [
+        "2347",
+        0
+      ],
+      "clip_vision_output" : [
+        "2349",
+        0
+      ]
+    },
+    "class_type" : "StyleModelApply",
+    "_meta"      : {
+      "title" : "FLUX_ Style Model :: 0.8"
+    }
+  },
+  "2359" : {
+    "inputs"     : {
+      "mask_opacity" : 0.4,
+      "mask_color"   : "255, 0, 210",
+      "pass_through" : false,
+      "image"        : [
+        "2192",
+        1
+      ],
+      "mask"         : [
+        "2192",
+        2
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2368" : {
+    "inputs"     : {
+      "clip_l"   : "sharp image, clear details, no blur, no smearing, high clarity, defined edges, stable structure",
+      "t5xxl"    : "high resolution image with enhanced fine detail and clarity, sharp textures and well defined edges, strong local contrast and micro contrast, clear separation between surfaces, no blur or softness, no noise or grain, clean high frequency details, consistent sharpness across subject and background, refined and crisp overall image quality",
+      "guidance" : 3.5,
+      "clip"     : [
+        "1192",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "FLUX_*CLIPTextEncodeFlux"
+    }
+  },
+  "2370" : {
+    "inputs"     : {
+      "scheduler" : "beta",
+      "steps"     : 12,
+      "denoise"   : 0.14,
+      "model"     : [
+        "2371",
+        0
+      ]
+    },
+    "class_type" : "BasicScheduler",
+    "_meta"      : {
+      "title" : "FLUX_BasicScheduler"
+    }
+  },
+  "2371" : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 1.1,
+      "base_shift"   : 0.6,
+      "model"        : [
+        "2378",
+        0
+      ],
+      "latent_image" : [
+        "2377",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "ModelSamplingAdvancedResolution"
+    }
+  },
+  "2372" : {
+    "inputs"     : {
+      "model_name" : "4x_NMKD-Siax_200k.pth"
+    },
+    "class_type" : "UpscaleModelLoader",
+    "_meta"      : {
+      "title" : "Load Upscale Model"
+    }
+  },
+  "2373" : {
+    "inputs"     : {
+      "sampler_name" : "euler"
+    },
+    "class_type" : "KSamplerSelect",
+    "_meta"      : {
+      "title" : "KSamplerSelect"
+    }
+  },
+  "2374" : {
+    "inputs"     : {
+      "upscale_by"          : [
+        "476",
+        0
+      ],
+      "seed"                : [
+        "378",
+        0
+      ],
+      "steps"               : 12,
+      "cfg"                 : 2,
+      "sampler_name"        : "euler",
+      "scheduler"           : "simple",
+      "denoise"             : 0.2,
+      "mode_type"           : "Linear",
+      "tile_width"          : 1024,
+      "tile_height"         : 1024,
+      "mask_blur"           : 6,
+      "tile_padding"        : 32,
+      "seam_fix_mode"       : "None",
+      "seam_fix_denoise"    : 1,
+      "seam_fix_width"      : 64,
+      "seam_fix_mask_blur"  : 8,
+      "seam_fix_padding"    : 16,
+      "force_uniform_tiles" : true,
+      "tiled_decode"        : true,
+      "batch_size"          : 1,
+      "image"               : [
+        "2181",
+        0
+      ],
+      "model"               : [
+        "2371",
+        0
+      ],
+      "positive"            : [
+        "2368",
+        0
+      ],
+      "negative"            : [
+        "1221",
+        0
+      ],
+      "vae"                 : [
+        "1227",
+        0
+      ],
+      "upscale_model"       : [
+        "2372",
+        0
+      ],
+      "custom_sampler"      : [
+        "2373",
+        0
+      ],
+      "custom_sigmas"       : [
+        "2370",
+        0
+      ]
+    },
+    "class_type" : "UltimateSDUpscaleCustomSample",
+    "_meta"      : {
+      "title" : "FLUX_Ultimate SD Upscale (Custom Sample)"
+    }
+  },
+  "2377" : {
     "inputs"     : {
       "pixels" : [
         "2181",
@@ -5405,12 +5564,12 @@
       "title" : "FLUX_VAE Encode"
     }
   },
-  "2304" : {
+  "2378" : {
     "inputs"     : {
       "lora_name"      : "No Plastic Skin Lora (jockerai).safetensors",
       "strength_model" : 0.95,
       "model"          : [
-        "2306",
+        "2379",
         0
       ]
     },
@@ -5419,16 +5578,7 @@
       "title" : "Load LoRA"
     }
   },
-  "2305" : {
-    "inputs"     : {
-      "model_name" : "4x_NMKD-Siax_200k.pth"
-    },
-    "class_type" : "UpscaleModelLoader",
-    "_meta"      : {
-      "title" : "Load Upscale Model"
-    }
-  },
-  "2306" : {
+  "2379" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.95,

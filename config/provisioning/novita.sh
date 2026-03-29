@@ -222,6 +222,9 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2619978?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # FLUX2_KLEIN_UNLOCKED_V1.safetensors
     "https://civitai.com/api/download/models/2788349?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    #
+    "https://civitai.com/api/download/models/2720914?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 
     # Flux1.Dev
     # Pandora-RAWr.safetensors
@@ -236,13 +239,14 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/746602?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     https://civitai.com/api/download/models/746602?type=Model&format=SafeTensor
 
-#   aidmaImageUprader-FLUX-v0.3.safetensors
+    # aidmaImageUprader-FLUX-v0.3.safetensors
     "https://civitai.com/api/download/models/984672?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#   flux_vividizer.safetensors
+    # flux_vividizer.safetensors
     "https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#   brlns.safetensors
+    # brlns.safetensors
     "https://civitai.com/api/download/models/1571699?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-
+    # Portrait_Engine v2.0.safetensors
+    "https://civitai.com/api/download/models/2426731?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
