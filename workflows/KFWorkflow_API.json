@@ -621,9 +621,9 @@
         "strength" : 2.4
       },
       "lora_4"                      : {
-        "on"       : false,
+        "on"       : true,
         "lora"     : "klein_slider_bodyweight_50.safetensors",
-        "strength" : 5
+        "strength" : 2.1
       },
       "lora_5"                      : {
         "on"       : false,
@@ -1769,44 +1769,6 @@
       "title" : "CLIP Set Last Layer"
     }
   },
-  "1194" : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 1,
-      "start_percent"        : 0.6,
-      "end_percent"          : 0.9,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "1195",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "PatchModelAddDownscale"
-    }
-  },
-  "1195" : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 2,
-      "start_percent"        : 0,
-      "end_percent"          : 0.6,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "1540",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "4::2::0::0.5"
-    }
-  },
   "1196" : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
@@ -1881,7 +1843,7 @@
       "strength_model" : 1,
       "strength_clip"  : 0.02,
       "model"          : [
-        "1194",
+        "1540",
         0
       ],
       "clip"           : [
@@ -2532,7 +2494,7 @@
       "strength_model" : 2,
       "strength_clip"  : 1,
       "model"          : [
-        "1194",
+        "1540",
         0
       ],
       "clip"           : [
@@ -2678,6 +2640,24 @@
     "class_type" : "CLIPTextEncodeFlux",
     "_meta"      : {
       "title" : "FLUX_*CLIPTextEncodeFlux"
+    }
+  },
+  "1726" : {
+    "inputs"     : {
+      "seed"         : -1,
+      "steps"        : 22,
+      "cfg"          : 1.4,
+      "sampler_name" : "dpmpp_2m",
+      "scheduler"    : "karras",
+      "denoise"      : 0.5,
+      "model"        : [
+        "1298",
+        0
+      ]
+    },
+    "class_type" : "KSampler",
+    "_meta"      : {
+      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
   "1727" : {
@@ -3161,23 +3141,6 @@
       "title" : "Klein_VAE Enc"
     }
   },
-  "1913" : {
-    "inputs"     : {
-      "width"      : [
-        "1915",
-        0
-      ],
-      "height"     : [
-        "1915",
-        1
-      ],
-      "batch_size" : 1
-    },
-    "class_type" : "EmptyFlux2LatentImage",
-    "_meta"      : {
-      "title" : "Empty Latent"
-    }
-  },
   "1914" : {
     "inputs"     : {
       "conditioning" : [
@@ -3242,7 +3205,7 @@
         0
       ],
       "latent_image" : [
-        "1913",
+        "2383",
         0
       ]
     },
@@ -3289,7 +3252,7 @@
   "1931" : {
     "inputs"     : {
       "magnitude"           : 1,
-      "contrast"            : 0.05,
+      "contrast"            : 0,
       "normalize_strength"  : 0.05,
       "preserve_original"   : 0.05,
       "preserve_mode"       : "linear",
@@ -3338,7 +3301,7 @@
   },
   "1934" : {
     "inputs"     : {
-      "text_0" : "Inputs/Next/Best/656638104_18063908027422886_2779516801639152964_n.jpg",
+      "text_0" : "Inputs/Next/Best/204dd470914a734c25e2d8602ab78aea.jpg",
       "text"   : [
         "2034",
         3
@@ -3456,7 +3419,10 @@
   },
   "1973" : {
     "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture. \nfluxtrait, detailed skin,\n\nPreserve the direction that the subject is looking,\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve the outfit and accessories from the reference Image.\nPreserve Subjects Eye/Mouth - closed or open state.\nChange the subject hair color to natural black,\nAdd subtle eyeliner and eye-shadow in the eyes and warm light brown nude lipstick.\nIncrease the bust size by 36DD.\nRemove any watermarks.\n\nEnhance this image\nFix the Texts to meaningful words.",
+      "text" : [
+        "2186",
+        0
+      ],
       "clip" : [
         "2322",
         1
@@ -3503,7 +3469,7 @@
         "378",
         0
       ],
-      "steps"        : 14,
+      "steps"        : 21,
       "cfg"          : 1,
       "sampler_name" : "euler_ancestral",
       "scheduler"    : "linear_quadratic",
@@ -3805,7 +3771,7 @@
   },
   "2023" : {
     "inputs"     : {
-      "detail_amount"      : 0.06,
+      "detail_amount"      : 0.08,
       "start"              : 0.3,
       "end"                : 0.45,
       "bias"               : 0.5,
@@ -3900,7 +3866,7 @@
   },
   "2040" : {
     "inputs"     : {
-      "text" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 36DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
+      "text" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3946,7 +3912,7 @@
   },
   "2044" : {
     "inputs"     : {
-      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 36DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
+      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression, body proportions, figure, and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply subtle eyeliner and soft eye shadow, with warm light pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
       "text"   : [
         "2161",
         0
@@ -4145,7 +4111,7 @@
   },
   "2086" : {
     "inputs"     : {
-      "text" : "Enhance this photo\nFix the Texts to meaningful words.\n\n__EXPRESSION__,\n\nMake this photo high-quality photo of v1dhya5 with natural skin texture. Preserve overall composition of this photo.\n\nRefine the outfit and accessories from the reference Image. \n.__CAMERA_ANGLE__,\nfluxtrait"
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture. \nfluxtrait, detailed skin,\n\n__EXPRESSION__\n\n__EYE_STATE__\n\nPreserve subject's pose. Preserve overall composition of this photo.\nRefine the outfit and accessories from the reference Image.\n\nRemove any watermarks.\n\nEnhance this image\nFix the Texts to meaningful words."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4171,7 +4137,7 @@
   },
   "2089" : {
     "inputs"     : {
-      "text" : "Enhance this photo\nFix the Texts to meaningful words.\n\nMake this photo high-quality photo of v1dhya5 with natural skin texture. \nRefine the outfit and accessories from the reference photo. \n\n__EXPRESSION__\n\nPreserve the direction that the subject is looking,\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\n__EYE_STATE__,\n\n\nAdd subtle eyeliner and eye-shadow in the eyes and very subtle light red nude lipstick.\nIncrease the bust size by 36DD.\nRemove any watermarks.\nfluxtrait"
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture. \nfluxtrait, detailed skin,\n\n__EXPRESSION__\n\n__EYE_STATE__\n\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nRefine the outfit and accessories from the reference Image.\nPreserve Subject's Mouth - closed or open state. \nAdd subtle eyeliner and eye-shadow in the eyes and warm light red nude lipstick.\nIncrease the bust size by 36DD.\nRemove any watermarks.\n\nEnhance this image\nFix the Texts to meaningful words."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4201,7 +4167,7 @@
         1
       ],
       "clip_b"  : [
-        "2129",
+        "2127",
         1
       ],
       "boolean" : [
@@ -4220,7 +4186,7 @@
       "strength_model" : 0.6,
       "strength_clip"  : 0.6,
       "model"          : [
-        "1194",
+        "1540",
         0
       ],
       "clip"           : [
@@ -4240,7 +4206,7 @@
         0
       ],
       "model_b" : [
-        "2129",
+        "2127",
         0
       ],
       "boolean" : [
@@ -4270,44 +4236,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "aidmaImageUprader-FLUX-v0.3 0.40::0.40"
-    }
-  },
-  "2129" : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.65,
-      "strength_clip"  : 0.65,
-      "model"          : [
-        "2130",
-        0
-      ],
-      "clip"           : [
-        "2130",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Pandora-RAWr 0.65::0.65"
-    }
-  },
-  "2130" : {
-    "inputs"     : {
-      "lora_name"      : "brlns.safetensors",
-      "strength_model" : 1.1,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "2127",
-        0
-      ],
-      "clip"           : [
-        "2127",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Pandora-RAWr 0.65::0.65"
     }
   },
   "2131" : {
@@ -4805,123 +4733,6 @@
       "title" : "Grow Mask With Blur"
     }
   },
-  "2198" : {
-    "inputs"     : {
-      "exclude_people_info"                   : false,
-      "include_lighting"                      : false,
-      "include_camera_angle"                  : true,
-      "include_watermark"                     : false,
-      "include_JPEG_artifacts"                : false,
-      "include_exif"                          : false,
-      "exclude_sexual"                        : false,
-      "exclude_image_resolution"              : false,
-      "include_aesthetic_quality"             : false,
-      "include_composition_style"             : false,
-      "exclude_text"                          : false,
-      "specify_depth_field"                   : false,
-      "specify_lighting_sources"              : false,
-      "do_not_use_ambiguous_language"         : false,
-      "include_nsfw"                          : false,
-      "only_describe_most_important_elements" : true,
-      "do_not_include_artist_name_or_title"   : true,
-      "identify_image_orientation"            : true,
-      "use_vulgar_slang_and_profanity"        : false,
-      "do_not_use_polite_euphemisms"          : false,
-      "include_character_age"                 : true,
-      "include_camera_shot_type"              : false,
-      "exclude_mood_feeling"                  : false,
-      "include_camera_vantage_height"         : false,
-      "mention_watermark"                     : false,
-      "avoid_meta_descriptive_phrases"        : true,
-      "refer_character_name"                  : true,
-      "character_name"                        : "v1dhya5"
-    },
-    "class_type" : "JC_ExtraOptions",
-    "_meta"      : {
-      "title" : "JoyCaption Extra Options"
-    }
-  },
-  "2199" : {
-    "inputs"     : {
-      "model"             : "joycaption-beta-one-fp8",
-      "quantization"      : "Maximum Savings (4-bit)",
-      "prompt_style"      : "Descriptive",
-      "caption_length"    : "medium",
-      "max_new_tokens"    : 128,
-      "temperature"       : 0.5,
-      "top_p"             : 0.85,
-      "top_k"             : 0,
-      "custom_prompt"     : "🖼️ Simple Description\ndescribe the facial expression and direction of the look , estimate the subject's age - absolutely nothing else",
-      "memory_management" : "Keep in Memory",
-      "image"             : [
-        "2202",
-        0
-      ],
-      "extra_options"     : [
-        "2198",
-        0
-      ]
-    },
-    "class_type" : "JC_adv",
-    "_meta"      : {
-      "title" : "JoyCaption (Advanced)"
-    }
-  },
-  "2200" : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "127",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "2201" : {
-    "inputs"     : {
-      "expand"                 : 10,
-      "incremental_expandrate" : 0,
-      "tapered_corners"        : true,
-      "flip_input"             : false,
-      "blur_radius"            : 50,
-      "lerp_alpha"             : 1,
-      "decay_factor"           : 1,
-      "fill_holes"             : false,
-      "mask"                   : [
-        "2200",
-        0
-      ]
-    },
-    "class_type" : "GrowMaskWithBlur",
-    "_meta"      : {
-      "title" : "Grow Mask With Blur"
-    }
-  },
-  "2202" : {
-    "inputs"     : {
-      "image" : [
-        "127",
-        0
-      ],
-      "mask"  : [
-        "2201",
-        0
-      ]
-    },
-    "class_type" : "ImageCropByMask",
-    "_meta"      : {
-      "title" : "Image Crop By Mask"
-    }
-  },
   "2225" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v4.safetensors",
@@ -4939,32 +4750,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "v1dhya5 0.92::0.88"
-    }
-  },
-  "2234" : {
-    "inputs"     : {
-      "find"    : "__PROMPT_FACE__",
-      "replace" : [
-        "2199",
-        1
-      ],
-      "text"    : [
-        "2236",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "2236" : {
-    "inputs"     : {
-      "text" : "__PROMPT_FACE__,\n\n__DEFAULT_CLIPL_PROMPT__"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
     }
   },
   "2247" : {
@@ -5114,30 +4899,13 @@
       "title" : "ImpactMinMax"
     }
   },
-  "2311" : {
-    "inputs"     : {
-      "find"    : "__DEFAULT_CLIPL_PROMPT__",
-      "replace" : [
-        "2186",
-        0
-      ],
-      "text"    : [
-        "2234",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
   "2317" : {
     "inputs"     : {
       "lora_name"      : "No Plastic Skin Lora (jockerai).safetensors",
       "strength_model" : 0.6,
       "strength_clip"  : 0.4,
       "model"          : [
-        "1194",
+        "1540",
         0
       ],
       "clip"           : [
@@ -5188,8 +4956,8 @@
   "2322" : {
     "inputs"     : {
       "lora_name"      : "[FLUX.2.Klein]FilmGrain_Redmond.safetensors",
-      "strength_model" : 0.3,
-      "strength_clip"  : 0.2,
+      "strength_model" : 0.1,
+      "strength_clip"  : 0.1,
       "model"          : [
         "2328",
         0
@@ -5219,7 +4987,7 @@
       "max_shift"    : 1.02,
       "base_shift"   : 0.59,
       "model"        : [
-        "1298",
+        "2225",
         0
       ],
       "latent_image" : [
@@ -5492,10 +5260,10 @@
         "378",
         0
       ],
-      "steps"               : 12,
-      "cfg"                 : 2,
-      "sampler_name"        : "euler",
-      "scheduler"           : "simple",
+      "steps"               : 23,
+      "cfg"                 : 1,
+      "sampler_name"        : "res_2s",
+      "scheduler"           : "ddim_uniform",
       "denoise"             : 0.2,
       "mode_type"           : "Linear",
       "tile_width"          : 1024,
@@ -5590,6 +5358,32 @@
     "class_type" : "LoraLoaderModelOnly",
     "_meta"      : {
       "title" : "Load LoRA"
+    }
+  },
+  "2381" : {
+    "inputs"     : {
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture. \nfluxtrait, detailed skin,\n\n__EXPRESSION__\n\n__EYE_STATE__\n\nPreserve subject's facial expression, figure and pose. Preserve overall composition of this photo.\nPreserve the outfit and accessories from the reference Image.\nPreserve Subject's Mouth - closed or open state. \nAdd subtle eyeliner and eye-shadow in the eyes and warm light red nude lipstick.\nIncrease the bust size by 36DD.\nRemove any watermarks.\n\nEnhance this image\nFix the Texts to meaningful words."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2383" : {
+    "inputs"     : {
+      "width"      : [
+        "1915",
+        0
+      ],
+      "height"     : [
+        "1915",
+        1
+      ],
+      "batch_size" : 1
+    },
+    "class_type" : "EmptyFlux2LatentImage",
+    "_meta"      : {
+      "title" : "Empty Flux 2 Latent"
     }
   }
 }
