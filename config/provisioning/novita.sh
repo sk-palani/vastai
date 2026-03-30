@@ -237,14 +237,32 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1023284?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     #
     "https://civitai.com/api/download/models/746602?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    https://civitai.com/api/download/models/746602?type=Model&format=SafeTensor
 
+#   aidmaRealisticSkin-FLUX-v0.1.safetensors
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # aidmaFluxProUltra-FLUX-v0.1.safetensors
+    "https://civitai.com/api/download/models/1115050?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # aidmaImageUprader-FLUX-v0.3.safetensors
     "https://civitai.com/api/download/models/984672?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # flux_vividizer.safetensors
     "https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # brlns.safetensors
     "https://civitai.com/api/download/models/1571699?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors
+    "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    #   d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors
+    "https://civitai.com/api/download/models/1612200?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#   SameFace_Fix.safetensors
+    "https://civitai.com/api/download/models/857446?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+#   Illustration Comic book_(FLUX)_06.safetensors
+    "https://civitai.com/api/download/models/1815533?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#   Premium_Cinematic_Color-Graded_Portrait_Style__Inspired_by_Brandon_Woelfel.safetensors
+    "https://civitai.com/api/download/models/2127531?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    #   Detailed_Hands-000001.safetensors.0
+    "https://civitai.com/api/download/models/1003317?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#   ILLUSTRATION (FLUX) - V3.1.safetensors
+      "https://civitai.com/api/download/models/1319198?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Portrait_Engine v2.0.safetensors
     "https://civitai.com/api/download/models/2426731?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
@@ -270,11 +288,10 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-#    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
+    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux_shakker_labs_union_pro-fp8_e4m3fn.safetensors"
 #    "https://civitai.com/api/download/models/1307407?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-#    "https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler/resolve/main/diffusion_pytorch_model.safetensors"
+    "https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler/resolve/main/diffusion_pytorch_model.safetensors"
 )
-
 
 ULTRALYTICS_SEGS_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8n_v2.pt"
