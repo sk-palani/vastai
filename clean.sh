@@ -16,7 +16,7 @@ random_seed=$(( random_seed % max_seed ))
 echo "[$LOG_TS] 🎲 Using random seed: $random_seed"
 
 # --- Identify removable node types ---
-REMOVE_TYPES='["PreviewAny", "ShowText|pysssss", "ShowText|LP"]'
+REMOVE_TYPES='["PreviewAny", "ShowText|pysssss", "ShowText|LP", "PreviewImage"]'
 
 random_seed="-1"
 
@@ -39,7 +39,7 @@ jq '
     [ paths as $p
       | select(
           ($p | last) == "class_type"
-          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|pysssss" or getpath($p) == "Image Comparer (rgthree)")
+          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|pysssss" or getpath($p) == "Image Comparer (rgthree)" or getpath($p) == "PreviewImage")
         )
       | $p[:-1]
     ]
