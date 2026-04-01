@@ -265,6 +265,10 @@ LORA_MODELS=(
       "https://civitai.com/api/download/models/1319198?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Portrait_Engine v2.0.safetensors
     "https://civitai.com/api/download/models/2426731?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # screen_eyes.safetensors
+    "https://civitai.com/api/download/models/755383?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # IndianWomanFluxV1.safetensors
+    "https://civitai.com/api/download/models/1312467?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
