@@ -88,7 +88,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : false,
       "images"          : [
-        "3018",
+        "3867",
         0
       ]
     },
@@ -1038,22 +1038,13 @@
   "478"       : {
     "inputs"     : {
       "image" : [
-        "3018",
+        "3867",
         0
       ]
     },
     "class_type" : "GetImageSizeAndCount",
     "_meta"      : {
       "title" : "Get Image Size & Count"
-    }
-  },
-  "494"       : {
-    "inputs"     : {
-      "text" : "nude, dark textured large areola and medium-sized  erect nipples,  (nsfw:0.8),   jewelry,\n\n\nnude, dark texture areola and erect nipples,  (nsfw:0.7),  \n\n\nsee-through blouse and saree, deep-cleavage, jewelry, (Hip-Chain:1.2), \n\ncolorful silk saree with expensive hand-made embroidery designs, backless blouse,\n\nsexy heart-shaped clothing cutout in the back revealing buttcrack,\n\nsee-through saree, Floral prints embroidery,    Belly Piercing,\n\nwearing Glasses\n\nSitting on the knees, in front of mirror,  Happy facial expression,colorful lace top with expensive hand-made embroidery designs backless blouse,  \n\nSexy Hip-Chain,Sexy Waist-Chain, Sexy crop-top made of jasmine flowers,\n\nA tattoo of a baby elephant is visible on the left chest area. "
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
     }
   },
   "495"       : {
@@ -2156,7 +2147,7 @@
   "1859"      : {
     "inputs"     : {
       "model"        : [
-        "3114",
+        "3864",
         0
       ],
       "conditioning" : [
@@ -2181,7 +2172,7 @@
         0
       ],
       "model"     : [
-        "3114",
+        "3864",
         0
       ]
     },
@@ -2630,7 +2621,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 24,
+      "steps"        : 42,
       "denoise"      : [
         "1999",
         0
@@ -2640,7 +2631,7 @@
         0
       ],
       "model"        : [
-        "1978",
+        "3863",
         0
       ],
       "conditioning" : [
@@ -3971,7 +3962,7 @@
         0
       ],
       "image"        : [
-        "3018",
+        "3867",
         0
       ]
     },
@@ -4416,41 +4407,6 @@
     "class_type" : "APersonMaskGenerator",
     "_meta"      : {
       "title" : "A Person Mask Generator"
-    }
-  },
-  "2929"      : {
-    "inputs"     : {
-      "channel"            : "RGB",
-      "input_black_point"  : 0,
-      "input_gamma"        : 1.1,
-      "input_white_point"  : 1,
-      "output_black_point" : 0,
-      "output_white_point" : 1,
-      "image"              : [
-        "2672",
-        0
-      ]
-    },
-    "class_type" : "Levels",
-    "_meta"      : {
-      "title" : "Levels"
-    }
-  },
-  "2930"      : {
-    "inputs"     : {
-      "brightness_target"   : 0.5,
-      "cyan_red"            : 0.02,
-      "magenta_green"       : 0,
-      "yellow_blue"         : 0.05,
-      "preserve_luminosity" : false,
-      "image"               : [
-        "2929",
-        0
-      ]
-    },
-    "class_type" : "ColorBalanceAdvanced",
-    "_meta"      : {
-      "title" : "Color Balance Advanced"
     }
   },
   "2945"      : {
@@ -5000,7 +4956,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "3391",
+        "3401",
         0
       ]
     },
@@ -5561,11 +5517,11 @@
       "strength_model" : 1.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3399",
+        "3862",
         0
       ],
       "clip"           : [
-        "3398",
+        "3862",
         1
       ]
     },
@@ -6033,8 +5989,8 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.2,
-      "start"              : 0.42,
+      "detail_amount"      : 0.23,
+      "start"              : 0.4,
       "end"                : 0.65,
       "bias"               : 0.5,
       "exponent"           : 1,
@@ -6377,11 +6333,11 @@
     "inputs"     : {
       "condition"  : true,
       "when_true"  : [
-        "2930",
+        "2672",
         0
       ],
       "when_false" : [
-        "2930",
+        "2672",
         0
       ]
     },
@@ -6618,7 +6574,7 @@
       "quantization"      : "Balanced (8-bit)",
       "prompt_style"      : "Descriptive",
       "caption_length"    : "any",
-      "max_new_tokens"    : 512,
+      "max_new_tokens"    : 128,
       "temperature"       : 0.6,
       "top_p"             : 0.9,
       "top_k"             : 0,
@@ -7080,7 +7036,7 @@
       "quantization"      : "Balanced (8-bit)",
       "prompt_style"      : "Descriptive",
       "caption_length"    : "any",
-      "max_new_tokens"    : 512,
+      "max_new_tokens"    : 128,
       "temperature"       : 0.6,
       "top_p"             : 0.9,
       "top_k"             : 0,
@@ -7106,7 +7062,7 @@
       "quantization"      : "Balanced (8-bit)",
       "prompt_style"      : "Descriptive",
       "caption_length"    : "any",
-      "max_new_tokens"    : 512,
+      "max_new_tokens"    : 128,
       "temperature"       : 0.6,
       "top_p"             : 0.9,
       "top_k"             : 0,
@@ -7285,7 +7241,7 @@
   },
   "3723"      : {
     "inputs"     : {
-      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
+      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture,   realistic lighting",
       "text"   : [
         "3735",
         0
@@ -7625,7 +7581,7 @@
   },
   "3766"      : {
     "inputs"     : {
-      "text" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
+      "text" : "Make this a high-quality, photorealistic image of v1dhya5.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture,   realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -8034,22 +7990,6 @@
       "title" : "Input Selector"
     }
   },
-  "3846"      : {
-    "inputs"     : {
-      "condition"  : [
-        "3830",
-        0
-      ],
-      "when_false" : [
-        "3135",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
   "3849"      : {
     "inputs"     : {
       "condition"  : [
@@ -8128,6 +8068,79 @@
     "class_type" : "InputSelector",
     "_meta"      : {
       "title" : "Input Selector"
+    }
+  },
+  "3862"      : {
+    "inputs"     : {
+      "lora_name"      : "FluxSideboob.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "3399",
+        0
+      ],
+      "clip"           : [
+        "3398",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "breast-size2 1.80::1.00"
+    }
+  },
+  "3863"      : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 1.5,
+      "base_shift"   : 0.5,
+      "model"        : [
+        "3402",
+        0
+      ],
+      "latent_image" : [
+        "154",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "ModelSamplingAdvancedResolution"
+    }
+  },
+  "3864"      : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 1.2,
+      "base_shift"   : 0.6,
+      "model"        : [
+        "3391",
+        0
+      ],
+      "latent_image" : [
+        "1989",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "ModelSamplingAdvancedResolution"
+    }
+  },
+  "3867"      : {
+    "inputs"     : {
+      "any_01" : [
+        "3018",
+        0
+      ],
+      "any_02" : [
+        "2669",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
     }
   },
   "2996:3572" : {

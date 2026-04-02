@@ -22,12 +22,12 @@ fi
 # --- Configuration ---
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 URL="http://localhost:18188"
-WORKFLOW_FILE="$SCRIPT_DIR/KFWorkflow_API.json"
-UPDATED_FILE="$SCRIPT_DIR/KFWorkflow_API_updated.json"
+WORKFLOW_FILE="$SCRIPT_DIR/Workflow_API.json"
+UPDATED_FILE="$SCRIPT_DIR/Workflow_API_updated.json"
 LOG_TS=$(date '+%Y-%m-%d %H:%M:%S')
 
 # -- Download latest workflow file
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/KFWorkflow_API.json"
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/HybridWorkflow_API.json"
 
 wget -O "${WORKFLOW_FILE}" "${DEFAULT_WORKFLOW}"
 echo "Hash : " "$(md5sum ${WORKFLOW_FILE})"
