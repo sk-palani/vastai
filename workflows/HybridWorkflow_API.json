@@ -823,7 +823,7 @@
   "356"       : {
     "inputs"     : {
       "image" : [
-        "1848",
+        "3871",
         0
       ]
     },
@@ -2068,7 +2068,7 @@
     "inputs"     : {
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
-      "mode"          : "pad",
+      "mode"          : "resize",
       "delta_percent" : [
         "2532",
         0
@@ -2601,7 +2601,7 @@
   },
   "1988"      : {
     "inputs"     : {
-      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\nd351 d4rk",
+      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene  setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\nd351 d4rk",
       "t5xxl"    : [
         "788",
         0
@@ -5946,7 +5946,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "fp8_e4m3fn"
+      "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -8092,7 +8092,7 @@
   "3863"      : {
     "inputs"     : {
       "scaling"      : "exponential",
-      "max_shift"    : 1.5,
+      "max_shift"    : 1.06,
       "base_shift"   : 0.5,
       "model"        : [
         "3402",
@@ -8141,6 +8141,52 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
+    }
+  },
+  "3869"      : {
+    "inputs"     : {
+      "comparison" : "a == b",
+      "a"          : [
+        "2529",
+        0
+      ],
+      "b"          : [
+        "3870",
+        0
+      ]
+    },
+    "class_type" : "easy compare",
+    "_meta"      : {
+      "title" : "Compare"
+    }
+  },
+  "3870"      : {
+    "inputs"     : {
+      "value" : 1
+    },
+    "class_type" : "FloatConstant",
+    "_meta"      : {
+      "title" : "Float Constant"
+    }
+  },
+  "3871"      : {
+    "inputs"     : {
+      "condition"  : [
+        "3869",
+        0
+      ],
+      "when_true"  : [
+        "1837",
+        0
+      ],
+      "when_false" : [
+        "1848",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
     }
   },
   "2996:3572" : {
