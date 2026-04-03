@@ -394,7 +394,8 @@
   },
   "251"       : {
     "inputs"     : {
-      "text" : [
+      "text_0" : "20260403T135815",
+      "text"   : [
         "254",
         0
       ]
@@ -2621,7 +2622,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 42,
+      "steps"        : 20,
       "denoise"      : [
         "1999",
         0
@@ -3652,10 +3653,10 @@
   },
   "2535"      : {
     "inputs"     : {
-      "comparison" : "a >= b",
+      "comparison" : "a > b",
       "a"          : [
         "2529",
-        0
+        1
       ],
       "b"          : [
         "2536",
@@ -7631,9 +7632,9 @@
       "magnitude"           : 1,
       "contrast"            : 0,
       "normalize_strength"  : 0.05,
-      "preserve_original"   : 0.15,
+      "preserve_original"   : 0.33,
       "preserve_mode"       : "hybrid",
-      "edit_text_weight"    : 0.75,
+      "edit_text_weight"    : 1.33,
       "active_end_override" : 1,
       "low_vram"            : false,
       "device"              : "auto",
@@ -8148,7 +8149,7 @@
       "comparison" : "a == b",
       "a"          : [
         "2529",
-        0
+        1
       ],
       "b"          : [
         "3870",
