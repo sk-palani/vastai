@@ -174,6 +174,8 @@ UNET_MODELS=(
 DIFFUSION_MODELS=(
 #  "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"
   "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/resolve/main/flux-2-klein-9b.safetensors"
+  # fluxtraitFLUX2KleinFLUXZ_flux2Klein9bV2.safetensors
+  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
 #  "https://civitai.com/api/download/models/2631758?type=Model&format=SafeTensor&size=pruned&fp=bf16&token=${CIVITAI_TOKEN}"
 
 #  "https://civitai.com/api/download/models/2766094?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=${CIVITAI_TOKEN}"
@@ -218,6 +220,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2659307?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # ultra_real_v2.safetensors
     "https://civitai.com/api/download/models/2778447?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # ultra_real_v3.safetensors
+    "https://civitai.com/api/download/models/2810006?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_slider_eyes.safetensors
     "https://civitai.com/api/download/models/2619978?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # FLUX2_KLEIN_UNLOCKED_V1.safetensors

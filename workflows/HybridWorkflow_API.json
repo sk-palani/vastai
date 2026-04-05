@@ -394,8 +394,7 @@
   },
   "251"       : {
     "inputs"     : {
-      "text_0" : "20260403T135815",
-      "text"   : [
+      "text" : [
         "254",
         0
       ]
@@ -1308,7 +1307,7 @@
   "744"       : {
     "inputs"     : {
       "image" : [
-        "2109",
+        "3877",
         0
       ]
     },
@@ -1319,7 +1318,7 @@
   },
   "764"       : {
     "inputs"     : {
-      "mode" : true,
+      "mode" : false,
       "a"    : [
         "744",
         1
@@ -7242,7 +7241,7 @@
   },
   "3723"      : {
     "inputs"     : {
-      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5.\n\nthe subject is portrayed at 24 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture,   realistic lighting",
+      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 15 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
       "text"   : [
         "3735",
         0
@@ -7582,7 +7581,7 @@
   },
   "3766"      : {
     "inputs"     : {
-      "text" : "Make this a high-quality, photorealistic image of v1dhya5.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture,   realistic lighting"
+      "text" : "Make this photo high-qualit Photograph of v1dhya5.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nnatural skin texture,   realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7591,7 +7590,7 @@
   },
   "3767"      : {
     "inputs"     : {
-      "text" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
+      "text" : "Make this photo high-qualit Photograph of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7630,11 +7629,11 @@
   "3770"      : {
     "inputs"     : {
       "magnitude"           : 1,
-      "contrast"            : 0,
-      "normalize_strength"  : 0.05,
-      "preserve_original"   : 0.33,
+      "contrast"            : -0.05,
+      "normalize_strength"  : 0.15,
+      "preserve_original"   : 0.18,
       "preserve_mode"       : "hybrid",
-      "edit_text_weight"    : 1.33,
+      "edit_text_weight"    : 1.18,
       "active_end_override" : 1,
       "low_vram"            : false,
       "device"              : "auto",
@@ -7719,9 +7718,9 @@
   },
   "3801"      : {
     "inputs"     : {
-      "lora_name"      : "[FLUX.2.Klein]FilmGrain_Redmond.safetensors",
-      "strength_model" : 0.3,
-      "strength_clip"  : 0.2,
+      "lora_name"      : "klein_9b_enhancer_v2.safetensors",
+      "strength_model" : 0.42,
+      "strength_clip"  : 0.02,
       "model"          : [
         "3802",
         0
@@ -7740,7 +7739,7 @@
     "inputs"     : {
       "lora_name"      : "V2_flux_klein_4.safetensors",
       "strength_model" : 0.6,
-      "strength_clip"  : 0.4,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3798",
         0
@@ -8188,6 +8187,64 @@
     "class_type" : "InputSelector",
     "_meta"      : {
       "title" : "Input Selector"
+    }
+  },
+  "3875"      : {
+    "inputs"     : {
+      "model_a" : [
+        "3798",
+        0
+      ],
+      "model_b" : [
+        "3801",
+        0
+      ],
+      "boolean" : [
+        "322",
+        0
+      ]
+    },
+    "class_type" : "Model Input Switch",
+    "_meta"      : {
+      "title" : "Model Input Switch"
+    }
+  },
+  "3876"      : {
+    "inputs"     : {
+      "clip_a"  : [
+        "3798",
+        1
+      ],
+      "clip_b"  : [
+        "3801",
+        1
+      ],
+      "boolean" : [
+        "322",
+        0
+      ]
+    },
+    "class_type" : "CLIP Input Switch",
+    "_meta"      : {
+      "title" : "CLIP Input Switch"
+    }
+  },
+  "3877"      : {
+    "inputs"     : {
+      "rem_mode"          : "RMBG-1.4",
+      "image_output"      : "Preview",
+      "save_prefix"       : "ComfyUI",
+      "torchscript_jit"   : false,
+      "add_background"    : "none",
+      "refine_foreground" : false,
+      "images"            : [
+        "2109",
+        0
+      ]
+    },
+    "class_type" : "easy imageRemBg",
+    "_meta"      : {
+      "title" : "Image Remove Bg"
     }
   },
   "2996:3572" : {
