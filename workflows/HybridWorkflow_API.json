@@ -363,7 +363,7 @@
   },
   "247"       : {
     "inputs"     : {
-      "value" : "wearing indian saree with intricate details"
+      "value" : "wearing indian saree with structure from the reference image, including natural draping, pleats, folds, and border continuity, with realistic fabric flow and no artificial seams or distortions."
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
@@ -390,18 +390,6 @@
     "class_type" : "Text Concatenate",
     "_meta"      : {
       "title" : "Text Concatenate"
-    }
-  },
-  "251"       : {
-    "inputs"     : {
-      "text" : [
-        "254",
-        0
-      ]
-    },
-    "class_type" : "ShowText|LP",
-    "_meta"      : {
-      "title" : "Show Text [LP]"
     }
   },
   "252"       : {
@@ -2068,7 +2056,7 @@
     "inputs"     : {
       "megapixel"     : "2.0",
       "divisible_by"  : "8",
-      "mode"          : "resize",
+      "mode"          : "pad",
       "delta_percent" : [
         "2532",
         0
@@ -2577,28 +2565,6 @@
       "title" : "Math Float"
     }
   },
-  "1978"      : {
-    "inputs"     : {
-      "max_shift"  : 1.5,
-      "base_shift" : 0.5,
-      "width"      : [
-        "445",
-        1
-      ],
-      "height"     : [
-        "445",
-        2
-      ],
-      "model"      : [
-        "3402",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "ModelSamplingFlux"
-    }
-  },
   "1988"      : {
     "inputs"     : {
       "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene  setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\nd351 d4rk",
@@ -2621,7 +2587,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 20,
+      "steps"        : 24,
       "denoise"      : [
         "1999",
         0
@@ -2918,9 +2884,9 @@
   },
   "2085"      : {
     "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
+      "guide_size"         : 768,
+      "guide_size_for"     : true,
+      "max_size"           : 768,
       "seed"               : [
         "3338",
         0
@@ -2929,7 +2895,7 @@
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
-      "denoise"            : 0.29,
+      "denoise"            : 0.59,
       "feather"            : 5,
       "noise_mask"         : true,
       "force_inpaint"      : true,
@@ -3766,8 +3732,8 @@
         0
       ],
       "text_b"           : [
-        "3529",
-        1
+        "3889",
+        0
       ],
       "text_c"           : [
         "515",
@@ -4032,8 +3998,8 @@
         0
       ],
       "text_c"           : [
-        "3690",
-        1
+        "3891",
+        0
       ]
     },
     "class_type" : "Text Concatenate",
@@ -4881,16 +4847,16 @@
       "delimiter"        : "__",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "3529",
-        1
+        "3889",
+        0
       ],
       "text_b"           : [
-        "3689",
-        1
+        "3890",
+        0
       ],
       "text_c"           : [
-        "3690",
-        1
+        "3891",
+        0
       ]
     },
     "class_type" : "Text Concatenate",
@@ -5514,8 +5480,8 @@
   "3370"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 1.8,
-      "strength_clip"  : 0.2,
+      "strength_model" : 1.6,
+      "strength_clip"  : 0.08,
       "model"          : [
         "3862",
         0
@@ -5867,7 +5833,7 @@
   },
   "3404"      : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "default"
@@ -5974,9 +5940,9 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.12,
+      "dishonesty_factor" : -0.04,
       "start_percent"     : 0.25,
-      "end_percent"       : 0.5,
+      "end_percent"       : 0.45,
       "sampler"           : [
         "3381",
         0
@@ -5989,15 +5955,15 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.23,
-      "start"              : 0.4,
-      "end"                : 0.65,
+      "detail_amount"      : 0.1,
+      "start"              : 0.25,
+      "end"                : 0.5,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : false,
+      "smooth"             : true,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "3419",
@@ -6123,9 +6089,9 @@
   },
   "3469"      : {
     "inputs"     : {
-      "detail_amount"      : 0.03,
-      "start"              : 0.33,
-      "end"                : 0.45,
+      "detail_amount"      : 0.05,
+      "start"              : 0.1,
+      "end"                : 0.5,
       "bias"               : 0.35,
       "exponent"           : 1,
       "start_offset"       : 0,
@@ -6176,10 +6142,10 @@
         0
       ],
       "steps"               : 24,
-      "cfg"                 : 1.1,
+      "cfg"                 : 2,
       "sampler_name"        : "euler",
       "scheduler"           : "simple",
-      "denoise"             : 0.18,
+      "denoise"             : 0.16,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -6213,6 +6179,10 @@
         "3373",
         0
       ],
+      "upscale_model"       : [
+        "3395",
+        0
+      ],
       "custom_sampler"      : [
         "3469",
         0
@@ -6224,7 +6194,7 @@
     },
     "class_type" : "UltimateSDUpscaleCustomSample",
     "_meta"      : {
-      "title" : "Ultimate SD Upscale (Custom Sample)"
+      "title" : "FLUX_Ultimate SD Upscale (Custom Sample)"
     }
   },
   "3479"      : {
@@ -6530,68 +6500,6 @@
     "class_type" : "ImageSmartSharpen+",
     "_meta"      : {
       "title" : "🔧 Image Smart Sharpen"
-    }
-  },
-  "3528"      : {
-    "inputs"     : {
-      "exclude_people_info"                   : false,
-      "include_lighting"                      : false,
-      "include_camera_angle"                  : true,
-      "include_watermark"                     : false,
-      "include_JPEG_artifacts"                : false,
-      "include_exif"                          : false,
-      "exclude_sexual"                        : false,
-      "exclude_image_resolution"              : false,
-      "include_aesthetic_quality"             : true,
-      "include_composition_style"             : true,
-      "exclude_text"                          : false,
-      "specify_depth_field"                   : false,
-      "specify_lighting_sources"              : false,
-      "do_not_use_ambiguous_language"         : false,
-      "include_nsfw"                          : true,
-      "only_describe_most_important_elements" : true,
-      "do_not_include_artist_name_or_title"   : true,
-      "identify_image_orientation"            : true,
-      "use_vulgar_slang_and_profanity"        : false,
-      "do_not_use_polite_euphemisms"          : false,
-      "include_character_age"                 : true,
-      "include_camera_shot_type"              : true,
-      "exclude_mood_feeling"                  : true,
-      "include_camera_vantage_height"         : true,
-      "mention_watermark"                     : false,
-      "avoid_meta_descriptive_phrases"        : false,
-      "refer_character_name"                  : true,
-      "character_name"                        : "v1dhya5"
-    },
-    "class_type" : "JC_ExtraOptions",
-    "_meta"      : {
-      "title" : "JoyCaption Extra Options"
-    }
-  },
-  "3529"      : {
-    "inputs"     : {
-      "model"             : "joycaption-beta-one-fp8",
-      "quantization"      : "Balanced (8-bit)",
-      "prompt_style"      : "Descriptive",
-      "caption_length"    : "any",
-      "max_new_tokens"    : 128,
-      "temperature"       : 0.6,
-      "top_p"             : 0.9,
-      "top_k"             : 0,
-      "custom_prompt"     : "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
-      "memory_management" : "Keep in Memory",
-      "image"             : [
-        "1271",
-        0
-      ],
-      "extra_options"     : [
-        "3528",
-        0
-      ]
-    },
-    "class_type" : "JC_adv",
-    "_meta"      : {
-      "title" : "JoyCaption (Advanced)"
     }
   },
   "3533"      : {
@@ -7017,8 +6925,8 @@
         0
       ],
       "text_b"           : [
-        "3689",
-        1
+        "3890",
+        0
       ],
       "text_c"           : [
         "3686",
@@ -7028,58 +6936,6 @@
     "class_type" : "Text Concatenate",
     "_meta"      : {
       "title" : "Text Concatenate"
-    }
-  },
-  "3689"      : {
-    "inputs"     : {
-      "model"             : "joycaption-beta-one-fp8",
-      "quantization"      : "Balanced (8-bit)",
-      "prompt_style"      : "Descriptive",
-      "caption_length"    : "any",
-      "max_new_tokens"    : 128,
-      "temperature"       : 0.6,
-      "top_p"             : 0.9,
-      "top_k"             : 0,
-      "custom_prompt"     : "Describe the outfit in the image using concise, clearly visible details. Include the color palette, materials and fabric types, surface texture, fit and silhouette, and any notable design elements or accessories that are part of the clothing. Avoid speculation and do not infer brands or materials unless they are visually evident.",
-      "memory_management" : "Keep in Memory",
-      "image"             : [
-        "1271",
-        0
-      ],
-      "extra_options"     : [
-        "3528",
-        0
-      ]
-    },
-    "class_type" : "JC_adv",
-    "_meta"      : {
-      "title" : "JoyCaption (Advanced)"
-    }
-  },
-  "3690"      : {
-    "inputs"     : {
-      "model"             : "joycaption-beta-one-fp8",
-      "quantization"      : "Balanced (8-bit)",
-      "prompt_style"      : "Descriptive",
-      "caption_length"    : "any",
-      "max_new_tokens"    : 128,
-      "temperature"       : 0.6,
-      "top_p"             : 0.9,
-      "top_k"             : 0,
-      "custom_prompt"     : "Describe the subject’s facial expression, inferred emotional state, and eye gaze direction based on visible facial cues. Include details about hairstyle, visible jewelry, and outfit. Also describe makeup elements such as eye makeup, eye appearance, and lipstick color or finish. Ground all emotional or gaze interpretations in observable features and avoid speculation beyond what the image reasonably suggests.",
-      "memory_management" : "Keep in Memory",
-      "image"             : [
-        "1271",
-        0
-      ],
-      "extra_options"     : [
-        "3528",
-        0
-      ]
-    },
-    "class_type" : "JC_adv",
-    "_meta"      : {
-      "title" : "JoyCaption (Advanced)"
     }
   },
   "3691"      : {
@@ -7237,19 +7093,6 @@
     "class_type" : "CLIPTextEncode",
     "_meta"      : {
       "title" : "Klein_CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "3723"      : {
-    "inputs"     : {
-      "text_0" : "Make this a high-quality, photorealistic image of v1dhya5 with detailed natural skin texture and visible pores.\n\nthe subject is portrayed at 15 years of age,   or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting",
-      "text"   : [
-        "3735",
-        0
-      ]
-    },
-    "class_type" : "ShowText|LP",
-    "_meta"      : {
-      "title" : "Show Text [LP]"
     }
   },
   "3724"      : {
@@ -7411,7 +7254,7 @@
         0
       ],
       "latent_image" : [
-        "3762",
+        "3886",
         0
       ]
     },
@@ -7460,32 +7303,13 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3757",
+        "3896",
         0
       ]
     },
     "class_type" : "Image Save",
     "_meta"      : {
       "title" : "Image Save"
-    }
-  },
-  "3757"      : {
-    "inputs"     : {
-      "method"       : "mkl",
-      "strength"     : 0.37,
-      "multithread"  : true,
-      "image_ref"    : [
-        "2109",
-        0
-      ],
-      "image_target" : [
-        "3730",
-        0
-      ]
-    },
-    "class_type" : "ColorMatch",
-    "_meta"      : {
-      "title" : "Color Match"
     }
   },
   "3759"      : {
@@ -7542,23 +7366,6 @@
       "title" : "Input Selector"
     }
   },
-  "3762"      : {
-    "inputs"     : {
-      "width"      : [
-        "3724",
-        0
-      ],
-      "height"     : [
-        "3724",
-        1
-      ],
-      "batch_size" : 1
-    },
-    "class_type" : "EmptyFlux2LatentImage",
-    "_meta"      : {
-      "title" : "Empty Latent"
-    }
-  },
   "3764"      : {
     "inputs"     : {
       "condition"  : [
@@ -7581,7 +7388,7 @@
   },
   "3766"      : {
     "inputs"     : {
-      "text" : "Make this photo high-qualit Photograph of v1dhya5.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nnatural skin texture,   realistic lighting"
+      "text" : "Make this photo high-qualit Photograph of v1dhya5.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black,preserving styling hilights  and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nnatural skin texture,   realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7590,7 +7397,7 @@
   },
   "3767"      : {
     "inputs"     : {
-      "text" : "Make this photo high-qualit Photograph of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with warm pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting, natural color tones, and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
+      "text" : "Make this photo high-qualit Photograph of v1dhya5 with detailed natural skin texture and visible pores.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nnatural skin texture, visible pores, subtle skin imperfections, realistic lighting"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7629,11 +7436,11 @@
   "3770"      : {
     "inputs"     : {
       "magnitude"           : 1,
-      "contrast"            : -0.05,
-      "normalize_strength"  : 0.15,
-      "preserve_original"   : 0.18,
+      "contrast"            : 0.05,
+      "normalize_strength"  : 0.05,
+      "preserve_original"   : 0.3,
       "preserve_mode"       : "hybrid",
-      "edit_text_weight"    : 1.18,
+      "edit_text_weight"    : 1.2,
       "active_end_override" : 1,
       "low_vram"            : false,
       "device"              : "auto",
@@ -7700,8 +7507,8 @@
   "3798"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v4_klein.safetensors",
-      "strength_model" : 1,
-      "strength_clip"  : 0.12,
+      "strength_model" : 1.2,
+      "strength_clip"  : 0.08,
       "model"          : [
         "3796",
         0
@@ -7714,25 +7521,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA (Model and CLIP) 1.00 :: 0.42"
-    }
-  },
-  "3801"      : {
-    "inputs"     : {
-      "lora_name"      : "klein_9b_enhancer_v2.safetensors",
-      "strength_model" : 0.42,
-      "strength_clip"  : 0.02,
-      "model"          : [
-        "3802",
-        0
-      ],
-      "clip"           : [
-        "3802",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "v1dhya5 0.92::0.88"
     }
   },
   "3802"      : {
@@ -7859,7 +7647,7 @@
   "3824"      : {
     "inputs"     : {
       "any_01" : [
-        "3757",
+        "3896",
         0
       ],
       "any_02" : [
@@ -8092,7 +7880,7 @@
   "3863"      : {
     "inputs"     : {
       "scaling"      : "exponential",
-      "max_shift"    : 1.06,
+      "max_shift"    : 1.15,
       "base_shift"   : 0.5,
       "model"        : [
         "3402",
@@ -8111,8 +7899,8 @@
   "3864"      : {
     "inputs"     : {
       "scaling"      : "exponential",
-      "max_shift"    : 1.2,
-      "base_shift"   : 0.6,
+      "max_shift"    : 1.15,
+      "base_shift"   : 0.5,
       "model"        : [
         "3391",
         0
@@ -8124,7 +7912,7 @@
     },
     "class_type" : "ModelSamplingAdvancedResolution",
     "_meta"      : {
-      "title" : "ModelSamplingAdvancedResolution"
+      "title" : "1.2::0.6"
     }
   },
   "3867"      : {
@@ -8145,7 +7933,7 @@
   },
   "3869"      : {
     "inputs"     : {
-      "comparison" : "a == b",
+      "comparison" : "a <= b",
       "a"          : [
         "2529",
         1
@@ -8162,7 +7950,7 @@
   },
   "3870"      : {
     "inputs"     : {
-      "value" : 1
+      "value" : 1.12
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -8196,7 +7984,7 @@
         0
       ],
       "model_b" : [
-        "3801",
+        "3802",
         0
       ],
       "boolean" : [
@@ -8216,7 +8004,7 @@
         1
       ],
       "clip_b"  : [
-        "3801",
+        "3802",
         1
       ],
       "boolean" : [
@@ -8247,9 +8035,124 @@
       "title" : "Image Remove Bg"
     }
   },
+  "3886"      : {
+    "inputs"     : {
+      "width"      : [
+        "3724",
+        0
+      ],
+      "height"     : [
+        "3724",
+        1
+      ],
+      "batch_size" : 1
+    },
+    "class_type" : "EmptyFlux2LatentImage",
+    "_meta"      : {
+      "title" : "Empty Flux 2 Latent"
+    }
+  },
+  "3887"      : {
+    "inputs"     : {
+      "value" : "wearing indian saree with intricate details"
+    },
+    "class_type" : "PrimitiveString",
+    "_meta"      : {
+      "title" : "OnTrue"
+    }
+  },
+  "3889"      : {
+    "inputs"     : {
+      "model_name"        : "Qwen3-VL-4B-Instruct",
+      "quantization"      : "None (FP16)",
+      "attention_mode"    : "sdpa",
+      "preset_prompt"     : "🖼️ Simple Description",
+      "custom_prompt"     : "Write a prompt about the face and expression of this image using the exact instructions provided:\n\nPlease avoid using generic gendered terms such as “man,” “woman,” “boy,” or “girl.” These can introduce model bias.\nInstead, use specific, fictional but realistic personal descriptors such as:\n \n* V1dhya5\n\nAll identities must be fictional but grounded in realistic cultural, geographic, and demographic context.\n\n\n\nFollow this structural order:\n \n1. Subject(s)\n2. Clothing\n3. Pose & expression\n4. Environment\n5. Lighting\n6. Camera angle / framing\n7. Material details\n8. nsfw details and be specific\n\n\n \n* Do not use stylization tags\n* Do not add fictional elements\n* Do not add metaphors or emotions\n* Do not change the setting unless told\n* Do not output anything except the final prompt\n* Do not mention watermarks.\n* Do not mention mutable traits such as ethnicity, body type, skin colour, hair style, etc.\n* Do not exclude nsfw elements of the image\n\nYou may use terms from this list that correspond to the image: \n\nperspective\ndepth of field\nfisheye\nforeshortening\nvanishing point\nleading lines\nrule of thirds\nclose-up\ncandid portrait\nshot on Canon Eos\nRing LIght\nRAW photo\nblurred background\nbeauty shot\neye level\nlow angle\nhigh angle\nbird's-eye view\naerial view\ntop-down\nworm's-eye view\noverhead\nclose-up\nextreme close-up\nmedium shot\nmedium close-up\nmedium long shot\nlong shot\nwide shot\nextreme wide shot\nestablishing shot\nfull body\nthree-quarter shot\nprofile view\nside view\nrear view\nfront view\nheadshot\nshoulder-up\nwaist-up\nknee-up\nover-the-shoulder\nPOV\nfirst-person\nmirror shot\nreflection shot\ntracking shot\npan shot\ntilt shot\nDutch angle\nground-level\nhip-level\nshoulder-level\naerial panorama\nwide-angle\ntelephoto\n35mm\n50mm\n85mm\nmacro\ntabletop\novertop\nthree-point perspective\nRAW photo\n\n\n(ONE block of text, no headings)\n",
+      "max_tokens"        : 256,
+      "keep_model_loaded" : true,
+      "seed"              : [
+        "3662",
+        0
+      ],
+      "image"             : [
+        "1271",
+        0
+      ]
+    },
+    "class_type" : "AILab_QwenVL",
+    "_meta"      : {
+      "title" : "QwenVL Auto Prompt (reccomend do not change)"
+    }
+  },
+  "3890"      : {
+    "inputs"     : {
+      "model_name"        : "Qwen3-VL-4B-Instruct",
+      "quantization"      : "None (FP16)",
+      "attention_mode"    : "sdpa",
+      "preset_prompt"     : "🖼️ Ultra Detailed Description",
+      "custom_prompt"     : "Describe the outfit in the image using concise, clearly visible details. Include the color palette, materials and fabric types, surface texture, fit and silhouette, and any notable design elements or accessories that are part of the clothing. Avoid speculation and do not infer brands or materials unless they are visually evident.\n\n\n(ONE block of text, no headings)",
+      "max_tokens"        : 256,
+      "keep_model_loaded" : true,
+      "seed"              : [
+        "3662",
+        0
+      ],
+      "image"             : [
+        "1271",
+        0
+      ]
+    },
+    "class_type" : "AILab_QwenVL",
+    "_meta"      : {
+      "title" : "QwenVL Auto Prompt (reccomend do not change)"
+    }
+  },
+  "3891"      : {
+    "inputs"     : {
+      "model_name"        : "Qwen3-VL-4B-Instruct",
+      "quantization"      : "None (FP16)",
+      "attention_mode"    : "sdpa",
+      "preset_prompt"     : "🖼️ Simple Description",
+      "custom_prompt"     : "Describe the subject’s facial expression, inferred emotional state, and eye gaze direction based on visible facial cues. Include details about hairstyle, visible jewelry, and outfit. Also describe makeup elements such as eye makeup, eye appearance, and lipstick color or finish. Ground all emotional or gaze interpretations in observable features and avoid speculation beyond what the image reasonably suggests.\n\n\n(ONE block of text, no headings)",
+      "max_tokens"        : 256,
+      "keep_model_loaded" : true,
+      "seed"              : [
+        "3662",
+        0
+      ],
+      "image"             : [
+        "1271",
+        0
+      ]
+    },
+    "class_type" : "AILab_QwenVL",
+    "_meta"      : {
+      "title" : "QwenVL Auto Prompt (reccomend do not change)"
+    }
+  },
+  "3896"      : {
+    "inputs"     : {
+      "color_space" : "YCbCr",
+      "factor"      : 0.33,
+      "device"      : "auto",
+      "batch_size"  : 0,
+      "image"       : [
+        "3730",
+        0
+      ],
+      "reference"   : [
+        "2109",
+        0
+      ]
+    },
+    "class_type" : "ImageColorMatch+",
+    "_meta"      : {
+      "title" : "🔧 Image Color Match"
+    }
+  },
   "2996:3572" : {
     "inputs"     : {
-      "max_shift"  : 1.4,
+      "max_shift"  : 1.09,
       "base_shift" : 0.7,
       "width"      : 1024,
       "height"     : 1024,
@@ -8341,16 +8244,37 @@
       "title" : "Text Concatenate"
     }
   },
+  "2996:3586" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2996:3582",
+        0
+      ],
+      "t5xxl"    : [
+        "2996:3581",
+        0
+      ],
+      "guidance" : 3.3,
+      "clip"     : [
+        "3339",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
   "2996:3585" : {
     "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : true,
-      "max_size"           : 1024,
+      "guide_size"         : 768,
+      "guide_size_for"     : false,
+      "max_size"           : 768,
       "seed"               : [
         "3338",
         0
       ],
-      "steps"              : 19,
+      "steps"              : 18,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -8362,7 +8286,7 @@
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 2,
+      "cycle"              : 1,
       "inpaint_model"      : false,
       "noise_mask_feather" : 20,
       "tiled_encode"       : false,
@@ -8399,27 +8323,6 @@
     "class_type" : "DetailerForEach",
     "_meta"      : {
       "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "2996:3586" : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2996:3582",
-        0
-      ],
-      "t5xxl"    : [
-        "2996:3581",
-        0
-      ],
-      "guidance" : 3.3,
-      "clip"     : [
-        "3339",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
     }
   },
   "2991:506"  : {

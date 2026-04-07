@@ -39,7 +39,7 @@ jq '
     [ paths as $p
       | select(
           ($p | last) == "class_type"
-          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|pysssss" or getpath($p) == "Image Comparer (rgthree)" or getpath($p) == "PreviewImage")
+          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|LP" or getpath($p) == "ShowText|pysssss" or getpath($p) == "Image Comparer (rgthree)" or getpath($p) == "PreviewImage")
         )
       | $p[:-1]
     ]

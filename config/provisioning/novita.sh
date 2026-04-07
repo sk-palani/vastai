@@ -185,6 +185,7 @@ DIFFUSION_MODELS=(
 VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
     "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"
+    "https://civitai.com/api/download/models/2527939?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 LORA_MODELS=(
@@ -241,6 +242,9 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1023284?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     #
     "https://civitai.com/api/download/models/746602?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # See_through_clothes_FLUX.safetensors
+    "https://civitai.com/api/download/models/1392314?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 
 #   aidmaRealisticSkin-FLUX-v0.1.safetensors
     "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
