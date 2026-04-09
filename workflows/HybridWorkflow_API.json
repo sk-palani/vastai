@@ -1484,34 +1484,6 @@
       "title" : "Math Expression 🐍"
     }
   },
-  "1611"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2339",
-        0
-      ],
-      "any_02" : [
-        "2065",
-        0
-      ],
-      "any_03" : [
-        "654",
-        0
-      ],
-      "any_04" : [
-        "1885",
-        0
-      ],
-      "any_05" : [
-        "3018",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
   "1636"      : {
     "inputs"     : {
       "image" : [
@@ -3437,34 +3409,6 @@
       "title" : "Save Text File"
     }
   },
-  "2652"      : {
-    "inputs"     : {
-      "text" : "aidmaimageupgrader, fluxenhancer, detailed hands, Perfect hand"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2655"      : {
-    "inputs"     : {
-      "lora_name"      : "Detailed_Hands-000001.safetensors",
-      "strength_model" : 0.4,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3050",
-        0
-      ],
-      "clip"           : [
-        "3050",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Detailed_Hands-000001 0.40:0.60"
-    }
-  },
   "2656"      : {
     "inputs"     : {
       "text" : "fluxenhancer,aidmaimageupgrader, d351 d4rk, aidmarealisticskin, aidmafluxproultra, slicked back hairstyle:1.2, high ponytail:1.3, pulled back hairstyle:1.2, Skin imperfections , Freckles, moles, natural blemishes, Rough skin texture, "
@@ -3530,21 +3474,6 @@
     "class_type" : "LayerColor: AutoAdjustV2",
     "_meta"      : {
       "title" : "LayerColor: AutoAdjust V2"
-    }
-  },
-  "2715"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
-      "mask"        : [
-        "3015",
-        1
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
     }
   },
   "2727"      : {
@@ -3638,10 +3567,6 @@
     "inputs"     : {
       "any_01" : [
         "3279",
-        0
-      ],
-      "any_02" : [
-        "3011",
         0
       ],
       "any_03" : [
@@ -4157,71 +4082,6 @@
       "title" : "ImageAndMaskPreview"
     }
   },
-  "3011"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "3852",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 2,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "true",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "3014:3624",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "3013"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1611",
-        0
-      ],
-      "mask"         : [
-        "2715",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "3015"      : {
-    "inputs"     : {
-      "method"          : "human_parsing_lip",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : "14,15",
-      "image"           : [
-        "1611",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
   "3018"      : {
     "inputs"     : {
       "opacity"         : 50,
@@ -4253,25 +4113,6 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3030"      : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Pandora-RAWr 0.80::0.80"
     }
   },
   "3039"      : {
@@ -4329,25 +4170,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Prompt Extras"
-    }
-  },
-  "3050"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.2,
-      "strength_clip"  : 0,
-      "model"          : [
-        "3030",
-        0
-      ],
-      "clip"           : [
-        "3030",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin 0.20:0.10"
     }
   },
   "3070"      : {
@@ -4842,10 +4664,6 @@
   },
   "3296"      : {
     "inputs"     : {
-      "any_01" : [
-        "3011",
-        0
-      ],
       "any_02" : [
         "2339",
         0
@@ -7434,26 +7252,6 @@
       "title" : "Input Selector"
     }
   },
-  "3852"      : {
-    "inputs"     : {
-      "condition"  : [
-        "3830",
-        0
-      ],
-      "when_true"  : [
-        "3134",
-        0
-      ],
-      "when_false" : [
-        "3135",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
   "3855"      : {
     "inputs"     : {
       "condition"  : [
@@ -8178,174 +7976,6 @@
     "class_type" : "Text Concatenate",
     "_meta"      : {
       "title" : "Text Concatenate"
-    }
-  },
-  "3014:3609" : {
-    "inputs"     : {
-      "clip_l"   : [
-        "3014:3621",
-        0
-      ],
-      "t5xxl"    : [
-        "3014:3620",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "2655",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "3014:3611" : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.5,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "2655",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "3014:3614" : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2715",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "3014:3617" : {
-    "inputs"     : {
-      "conditioning" : [
-        "3014:3618",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "3014:3618" : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "2655",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "3014:3620" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
-        0
-      ],
-      "text_c"           : [
-        "2652",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3014:3621" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_c"           : [
-        "2652",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3014:3624" : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "3338",
-        0
-      ],
-      "steps"              : 23,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : 0.5,
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "1611",
-        0
-      ],
-      "segs"               : [
-        "3014:3614",
-        0
-      ],
-      "model"              : [
-        "3014:3611",
-        0
-      ],
-      "clip"               : [
-        "2655",
-        1
-      ],
-      "vae"                : [
-        "3373",
-        0
-      ],
-      "positive"           : [
-        "3014:3609",
-        0
-      ],
-      "negative"           : [
-        "3014:3617",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
     }
   },
   "2996:3572" : {
