@@ -229,6 +229,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2788349?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     #
     "https://civitai.com/api/download/models/2720914?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # RealSkin.safetensors
+    "https://civitai.com/api/download/models/2848310?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 
     # Flux1.Dev
