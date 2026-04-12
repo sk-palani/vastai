@@ -2384,7 +2384,7 @@
       ],
       "steps"              : 28,
       "cfg"                : 1,
-      "sampler_name"       : "res_3m",
+      "sampler_name"       : "euler_ancestral",
       "scheduler"          : "simple",
       "denoise"            : 0.42,
       "feather"            : 5,
