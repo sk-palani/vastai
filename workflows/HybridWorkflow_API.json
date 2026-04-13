@@ -6061,52 +6061,34 @@
       "title" : "Math Float"
     }
   },
-  "3716"      : {
-    "inputs"     : {
-      "temperature" : 0,
-      "hue"         : 0,
-      "brightness"  : 0,
-      "contrast"    : 1,
-      "saturation"  : -1,
-      "gamma"       : 1.1,
-      "image"       : [
-        "3175",
-        0
-      ]
-    },
-    "class_type" : "ColorCorrect",
-    "_meta"      : {
-      "title" : "ColorCorrect"
-    }
-  },
   "3717"      : {
     "inputs"     : {
-      "lens_distortion"      : -0.01,
-      "color_temperature"    : 0,
-      "tint"                 : 0,
+      "lens_distortion"      : 0,
+      "color_temperature"    : 0.05,
+      "tint"                 : -0.05,
       "atmosphere_enabled"   : false,
       "haze_strength"        : 0,
       "lift_blacks"          : 0.04,
       "depth_offset"         : 0,
       "f_stop"               : "Manual",
-      "dof_intensity"        : 0,
+      "dof_intensity"        : 0.01,
       "dof_auto_focus"       : false,
       "dof_sharpness_radius" : 0,
       "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0.15,
+      "light_wrap_strength"  : 1,
       "promist_strength"     : 0.1,
       "halation_strength"    : 0.15,
       "chromatic_aberration" : 0.002,
-      "vignette_intensity"   : 0.05,
-      "grain_power"          : 0.014,
+      "vignette_intensity"   : 0.15,
+      "grain_power"          : 0.008,
       "monochrome_grain"     : false,
-      "highlight_rolloff"    : 0,
+      "highlight_rolloff"    : 0.05,
       "image"                : [
-        "3716",
+        "4117",
         0
       ],
       "depth_map"            : [
-        "3184",
+        "4115",
         0
       ]
     },
@@ -7756,6 +7738,33 @@
     "class_type" : "VAEEncode",
     "_meta"      : {
       "title" : "VAE Encode"
+    }
+  },
+  "4115"      : {
+    "inputs"     : {
+      "image" : [
+        "3184",
+        0
+      ]
+    },
+    "class_type" : "ImageInvert",
+    "_meta"      : {
+      "title" : "Invert Image"
+    }
+  },
+  "4117"      : {
+    "inputs"     : {
+      "sharpen_radius" : 1,
+      "sigma"          : 0.1,
+      "alpha"          : 0.1,
+      "image"          : [
+        "3175",
+        0
+      ]
+    },
+    "class_type" : "ImageSharpen",
+    "_meta"      : {
+      "title" : "ImageSharpen"
     }
   },
   "2995:3552" : {
