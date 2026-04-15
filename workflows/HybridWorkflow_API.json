@@ -8466,11 +8466,11 @@
         "3662",
         0
       ],
-      "steps"               : 5,
-      "cfg"                 : 1.2,
+      "steps"               : 6,
+      "cfg"                 : 1,
       "sampler_name"        : "euler",
       "scheduler"           : "normal",
-      "denoise"             : 0.1,
+      "denoise"             : 0.08,
       "mode_type"           : "Linear",
       "tile_width"          : [
         "1927",
