@@ -2046,7 +2046,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.15*(a+c*(b-a))",
+      "expression" : "1.2*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -5740,7 +5740,7 @@
       "steps"               : 24,
       "cfg"                 : 1,
       "sampler_name"        : "res_2s",
-      "scheduler"           : "simple",
+      "scheduler"           : "normal",
       "denoise"             : 0.12,
       "mode_type"           : "Linear",
       "tile_width"          : [
@@ -5786,7 +5786,7 @@
         0
       ],
       "custom_sampler"      : [
-        "3381",
+        "3469",
         0
       ],
       "custom_sigmas"       : [
@@ -5840,7 +5840,7 @@
   "3489"      : {
     "inputs"     : {
       "lut_name" : "Presetpro  - Kodacrome 64.cube",
-      "strength" : 0.12,
+      "strength" : 0.1,
       "log"      : false,
       "image"    : [
         "3524",
@@ -6640,14 +6640,14 @@
       "tint"                 : 0,
       "atmosphere_enabled"   : true,
       "haze_strength"        : 0,
-      "lift_blacks"          : 0.04,
+      "lift_blacks"          : 0.02,
       "depth_offset"         : 0,
       "f_stop"               : "Manual",
       "dof_intensity"        : 0,
       "dof_auto_focus"       : false,
       "dof_sharpness_radius" : 0,
       "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0.15,
+      "light_wrap_strength"  : 0.05,
       "promist_strength"     : 0.1,
       "halation_strength"    : 0.15,
       "chromatic_aberration" : 0.002,
@@ -6684,7 +6684,7 @@
   "3722"      : {
     "inputs"     : {
       "text" : [
-        "3950",
+        "3983",
         0
       ],
       "clip" : [
@@ -6836,11 +6836,11 @@
       "strength_model" : 3.8,
       "strength_clip"  : 0.21,
       "model"          : [
-        "3771",
+        "3993",
         0
       ],
       "clip"           : [
-        "3771",
+        "3993",
         1
       ]
     },
@@ -7553,41 +7553,6 @@
       "title" : "Apply ControlNet"
     }
   },
-  "3919"      : {
-    "inputs"     : {
-      "scaling"      : "exponential",
-      "max_shift"    : 1.15,
-      "base_shift"   : 0.5,
-      "model"        : [
-        "3363",
-        0
-      ],
-      "latent_image" : [
-        "3921",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingAdvancedResolution",
-    "_meta"      : {
-      "title" : "1.2::0.6"
-    }
-  },
-  "3921"      : {
-    "inputs"     : {
-      "pixels" : [
-        "2345",
-        0
-      ],
-      "vae"    : [
-        "3373",
-        0
-      ]
-    },
-    "class_type" : "VAEEncode",
-    "_meta"      : {
-      "title" : "FLUX_VAE Encode"
-    }
-  },
   "3929"      : {
     "inputs"     : {
       "mode"            : "smooth",
@@ -7799,31 +7764,11 @@
         0
       ],
       "when_true"  : [
-        "3953",
+        "4012:4010",
         0
       ],
       "when_false" : [
         "3952",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "3943"      : {
-    "inputs"     : {
-      "condition"  : [
-        "3814",
-        0
-      ],
-      "when_true"  : [
-        "3960",
-        0
-      ],
-      "when_false" : [
-        "3956",
         0
       ]
     },
@@ -7843,7 +7788,7 @@
         0
       ],
       "when_false" : [
-        "3959",
+        "3964",
         0
       ]
     },
@@ -7895,96 +7840,6 @@
       "title" : "Text Find and Replace"
     }
   },
-  "3953"      : {
-    "inputs"     : {
-      "find"    : "__EYE_STATE__",
-      "replace" : [
-        "3943",
-        0
-      ],
-      "text"    : [
-        "3945",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "3955"      : {
-    "inputs"     : {
-      "condition"  : [
-        "268",
-        0
-      ],
-      "when_true"  : [
-        "3957",
-        0
-      ],
-      "when_false" : [
-        "3958",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "3956"      : {
-    "inputs"     : {
-      "text" : "Preserve Subject's Mouth closed or open state."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "3957"      : {
-    "inputs"     : {
-      "text" : ""
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "3958"      : {
-    "inputs"     : {
-      "text" : "Enhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "3959"      : {
-    "inputs"     : {
-      "find"    : "__BODY_STATE__",
-      "replace" : [
-        "3955",
-        0
-      ],
-      "text"    : [
-        "3964",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "3960"      : {
-    "inputs"     : {
-      "text" : "Change subject's Eyes to  Closed state."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
   "3963"      : {
     "inputs"     : {
       "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
@@ -7996,7 +7851,7 @@
   },
   "3964"      : {
     "inputs"     : {
-      "text" : "Make this photo high-qualit Photograph of v1dhya5.\n\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\nCHANGE THE SKIN COLOR TO medium, light-brown, or pale-gold complexion that falls between fair and dusky with Radiant  undertone, \n\nChanget the age of the subject to  __AGE_STRING__ years. \n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n\n__EYE_STATE__\n\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black without changing the texture and hair-style, preserving styling hilights and eye color to dark brown.\n\nApply faint eyeliner and soft eye shadow,  and tiny bindi matching the outfit color,\n\n__BODY_STATE__\n\n\nRemove harsh reflections in skin, \n\nRemove any visible watermarks or text artifacts.\n\nRemove any other person in the background.\n \n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5.\n\n\n__EXPRESSION__  and redraw the face to match v1dhya5.\n\nCHANGE THE SKIN COLOR TO medium, light-brown, or pale-gold complexion that falls between fair and dusky with Radiant  undertone, \n\nChanget the age of the subject to  __AGE_STRING__ years. \n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nKeep the subject's original shape, inherent color, initial angle and detailed texture completely unchanged, simultaneously adjust the background perspective (matching the horizon line, vanishing point and near-large-far-small proportion of the subject's angle), and add natural light and shadow to the subject that conforms to the background's light source direction, intensity and color temperature, so as to achieve a natural integration where the subject and the background are spatially consistent and have unified light and shadow.\n\n__EYE_STATE__\n\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black without changing the texture and hair-style, preserving styling hilights and eye color to dark brown.\n\nApply faint eyeliner and soft eye shadow,  and tiny bindi matching the outfit color,\n\n__BODY_STATE__\n\n\nRemove harsh reflections in skin, \n\nRemove any visible watermarks or text artifacts.\n\nRemove any other person in the background.\n \n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -8020,6 +7875,509 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "RealSKin 0.92:0.10"
+    }
+  },
+  "3969"      : {
+    "inputs"     : {
+      "text"             : [
+        "3891",
+        0
+      ],
+      "sub_text"         : "eyes gently closed",
+      "case_insensitive" : true
+    },
+    "class_type" : "Text Contains",
+    "_meta"      : {
+      "title" : "Text Contains [back]"
+    }
+  },
+  "3970"      : {
+    "inputs"     : {
+      "text"             : [
+        "3891",
+        0
+      ],
+      "sub_text"         : "eyes closed",
+      "case_insensitive" : true
+    },
+    "class_type" : "Text Contains",
+    "_meta"      : {
+      "title" : "Text Contains [back]"
+    }
+  },
+  "3972"      : {
+    "inputs"     : {
+      "boolean_a" : [
+        "3969",
+        0
+      ],
+      "boolean_b" : [
+        "3970",
+        0
+      ]
+    },
+    "class_type" : "Logic Comparison OR",
+    "_meta"      : {
+      "title" : "Logic Comparison OR"
+    }
+  },
+  "3973"      : {
+    "inputs"     : {
+      "boolean_a" : [
+        "3972",
+        0
+      ],
+      "boolean_b" : [
+        "3814",
+        0
+      ]
+    },
+    "class_type" : "Logic Comparison OR",
+    "_meta"      : {
+      "title" : "Logic Comparison OR"
+    }
+  },
+  "3977"      : {
+    "inputs"     : {
+      "text" : "Change the subject's facial expression to loving facial expression\nChange the subject's facial expression to pouting facial expression\nChange the subject's facial expression to shy facial expression\nChange the subject's facial expression to happy facial expression\nChange the subject's facial expression to very happy facial expression\nChange the subject's facial expression to silly facial expression\nChange the subject's facial expression to aroused facial expression\nChange the subject's facial expression to flirting facial expression\nChange the subject's facial expression to seductive facial expression\nChange the subject's facial expression to provocative facial expression\nChange the subject's facial expression to surprised facial expression\nChange the subject's facial expression to open mouth facial expression"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "3978"      : {
+    "inputs"     : {
+      "seed" : [
+        "3662",
+        0
+      ],
+      "text" : [
+        "3977",
+        0
+      ]
+    },
+    "class_type" : "Text Random Line",
+    "_meta"      : {
+      "title" : "Text Random Line"
+    }
+  },
+  "3983"      : {
+    "inputs"     : {
+      "find"    : "__EXPRESSION__",
+      "replace" : [
+        "3978",
+        0
+      ],
+      "text"    : [
+        "3950",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "3993"      : {
+    "inputs"     : {
+      "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
+      "strength_model" : 1,
+      "strength_clip"  : 1,
+      "model"          : [
+        "3771",
+        0
+      ],
+      "clip"           : [
+        "3771",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "RealSKin 0.92:0.10"
+    }
+  },
+  "3992:3990" : {
+    "inputs"     : {
+      "text" : "> ## **__TEXT__ **"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Prompt - Taken from Back"
+    }
+  },
+  "3992:3991" : {
+    "inputs"     : {
+      "find"    : "__TEXT__",
+      "replace" : [
+        "3978",
+        0
+      ],
+      "text"    : [
+        "3992:3990",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "4018:4015" : {
+    "inputs"     : {
+      "text" : "> ## **__TEXT__ **"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Prompt - Taken from Back"
+    }
+  },
+  "4018:4016" : {
+    "inputs"     : {
+      "find"    : "__TEXT__",
+      "replace" : [
+        "249",
+        0
+      ],
+      "text"    : [
+        "4018:4015",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "4023:4020" : {
+    "inputs"     : {
+      "text" : "> ## **__TEXT__ **"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Prompt - Taken from Back"
+    }
+  },
+  "4023:4021" : {
+    "inputs"     : {
+      "find"    : "__TEXT__",
+      "replace" : [
+        "1806",
+        3
+      ],
+      "text"    : [
+        "4023:4020",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "3995:3955" : {
+    "inputs"     : {
+      "condition"  : [
+        "268",
+        0
+      ],
+      "when_true"  : [
+        "3995:3997",
+        0
+      ],
+      "when_false" : [
+        "3995:3998",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "3995:3997" : {
+    "inputs"     : {
+      "string" : " "
+    },
+    "class_type" : "StringConstant",
+    "_meta"      : {
+      "title" : "String Constant"
+    }
+  },
+  "3995:3998" : {
+    "inputs"     : {
+      "string" : "Enhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance."
+    },
+    "class_type" : "StringConstant",
+    "_meta"      : {
+      "title" : "String Constant"
+    }
+  },
+  "3995:3959" : {
+    "inputs"     : {
+      "find"    : "__BODY_STATE__",
+      "replace" : [
+        "3995:3955",
+        0
+      ],
+      "text"    : [
+        "3945",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "4012:4006" : {
+    "inputs"     : {
+      "condition"  : [
+        "3973",
+        0
+      ],
+      "when_true"  : [
+        "4012:4007",
+        0
+      ],
+      "when_false" : [
+        "4012:4008",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "4012:4007" : {
+    "inputs"     : {
+      "string" : " "
+    },
+    "class_type" : "StringConstant",
+    "_meta"      : {
+      "title" : "String Constant"
+    }
+  },
+  "4012:4008" : {
+    "inputs"     : {
+      "string" : "Preserve Subject's Mouth closed or open state."
+    },
+    "class_type" : "StringConstant",
+    "_meta"      : {
+      "title" : "String Constant"
+    }
+  },
+  "4012:4010" : {
+    "inputs"     : {
+      "find"    : "__BODY_STATE__",
+      "replace" : [
+        "4012:4006",
+        0
+      ],
+      "text"    : [
+        "3995:3959",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2996:3575" : {
+    "inputs"     : {
+      "combined"     : true,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : true,
+      "mask"         : [
+        "2975",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2996:3578" : {
+    "inputs"     : {
+      "conditioning" : [
+        "2996:3579",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2996:3579" : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "3362",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "2996:3581" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "2754",
+        0
+      ],
+      "text_c"           : [
+        "3201",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "2996:3582" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "2106",
+        0
+      ],
+      "text_c"           : [
+        "3201",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "2996:3585" : {
+    "inputs"     : {
+      "guide_size"         : 768,
+      "guide_size_for"     : false,
+      "max_size"           : 768,
+      "seed"               : [
+        "3338",
+        0
+      ],
+      "steps"              : 28,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : [
+        "2983",
+        0
+      ],
+      "feather"            : 5,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 1,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "2345",
+        0
+      ],
+      "segs"               : [
+        "2996:3575",
+        0
+      ],
+      "model"              : [
+        "2996:3974",
+        0
+      ],
+      "clip"               : [
+        "3362",
+        0
+      ],
+      "vae"                : [
+        "3373",
+        0
+      ],
+      "positive"           : [
+        "2996:3586",
+        0
+      ],
+      "negative"           : [
+        "2996:3578",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (BG Detailer)"
+    }
+  },
+  "2996:3974" : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 1.15,
+      "base_shift"   : 0.5,
+      "model"        : [
+        "3363",
+        0
+      ],
+      "latent_image" : [
+        "2996:3975",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "1.2::0.6"
+    }
+  },
+  "2996:3975" : {
+    "inputs"     : {
+      "pixels" : [
+        "2345",
+        0
+      ],
+      "vae"    : [
+        "3373",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "FLUX_VAE Encode"
+    }
+  },
+  "2996:3586" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2996:3582",
+        0
+      ],
+      "t5xxl"    : [
+        "2996:3581",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "3362",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
     }
   },
   "2991:506"  : {
@@ -8354,181 +8712,6 @@
       ],
       "negative"           : [
         "3014:3617",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "2996:3572" : {
-    "inputs"     : {
-      "max_shift"  : 0.8,
-      "base_shift" : 0.4,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3919",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "2996:3575" : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2975",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "2996:3578" : {
-    "inputs"     : {
-      "conditioning" : [
-        "2996:3579",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2996:3579" : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3362",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2996:3581" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2754",
-        0
-      ],
-      "text_c"           : [
-        "3201",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2996:3582" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2106",
-        0
-      ],
-      "text_c"           : [
-        "3201",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2996:3586" : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2996:3582",
-        0
-      ],
-      "t5xxl"    : [
-        "2996:3581",
-        0
-      ],
-      "guidance" : 3.3,
-      "clip"     : [
-        "3362",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "2996:3585" : {
-    "inputs"     : {
-      "guide_size"         : 768,
-      "guide_size_for"     : false,
-      "max_size"           : 768,
-      "seed"               : [
-        "3338",
-        0
-      ],
-      "steps"              : 28,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : [
-        "2983",
-        0
-      ],
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 1,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "2345",
-        0
-      ],
-      "segs"               : [
-        "2996:3575",
-        0
-      ],
-      "model"              : [
-        "2996:3572",
-        0
-      ],
-      "clip"               : [
-        "3362",
-        0
-      ],
-      "vae"                : [
-        "3373",
-        0
-      ],
-      "positive"           : [
-        "2996:3586",
-        0
-      ],
-      "negative"           : [
-        "2996:3578",
         0
       ]
     },
