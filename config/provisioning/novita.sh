@@ -246,7 +246,10 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/746602?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # See_through_clothes_FLUX.safetensors
     "https://civitai.com/api/download/models/1392314?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-
+    # The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors
+    "https://civitai.com/api/download/models/2882334?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # change_to_raw_photo.safetensors
+    "https://civitai.com/api/download/models/2797560?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 #   aidmaRealisticSkin-FLUX-v0.1.safetensors
     "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
