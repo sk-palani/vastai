@@ -1819,7 +1819,7 @@
   "1496"      : {
     "inputs"     : {
       "images" : [
-        "3023",
+        "2849",
         0
       ]
     },
@@ -2357,7 +2357,7 @@
         0
       ],
       "latent_image" : [
-        "3605",
+        "1989",
         0
       ]
     },
@@ -2862,49 +2862,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "2034"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2065",
-        0
-      ],
-      "any_02" : [
-        "654",
-        0
-      ],
-      "any_03" : [
-        "1885",
-        0
-      ],
-      "any_04" : [
-        "3018",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "2035"      : {
-    "inputs"     : {
-      "face_mask"       : false,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : true,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "2034",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
     }
   },
   "2047"      : {
@@ -3797,25 +3754,6 @@
       "title" : "Pandora-RAWr 1.00:1.00"
     }
   },
-  "2268"      : {
-    "inputs"     : {
-      "lora_name"      : "Flux_Lora_32F_Breasts.safetensors",
-      "strength_model" : 1.4,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3417",
-        0
-      ],
-      "clip"           : [
-        "3417",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "breast-size2 1.80::0.80"
-    }
-  },
   "2269"      : {
     "inputs"     : {
       "lora_name"      : "aidmaImageUprader-FLUX-v0.3.safetensors",
@@ -4035,10 +3973,6 @@
   },
   "2345"      : {
     "inputs"     : {
-      "any_01" : [
-        "2987",
-        0
-      ],
       "any_02" : [
         "2065",
         0
@@ -4204,20 +4138,6 @@
     "class_type" : "ImpactStringSelector",
     "_meta"      : {
       "title" : "String Selector"
-    }
-  },
-  "2553"      : {
-    "inputs"     : {
-      "a"         : [
-        "2102",
-        0
-      ],
-      "b"         : 0.33,
-      "operation" : "multiply"
-    },
-    "class_type" : "easy mathFloat",
-    "_meta"      : {
-      "title" : "Math Float"
     }
   },
   "2567"      : {
@@ -4662,30 +4582,26 @@
         0
       ],
       "any_02" : [
-        "3588",
-        0
-      ],
-      "any_03" : [
         "3011",
         0
       ],
-      "any_04" : [
+      "any_03" : [
         "2339",
         0
       ],
-      "any_05" : [
+      "any_04" : [
         "2065",
         0
       ],
-      "any_06" : [
+      "any_05" : [
         "654",
         0
       ],
-      "any_07" : [
+      "any_06" : [
         "1885",
         0
       ],
-      "any_08" : [
+      "any_07" : [
         "3018",
         0
       ]
@@ -5031,46 +4947,6 @@
       "title" : "Text Multiline"
     }
   },
-  "2866"      : {
-    "inputs"     : {
-      "model_a" : [
-        "3417",
-        0
-      ],
-      "model_b" : [
-        "2268",
-        0
-      ],
-      "boolean" : [
-        "241",
-        0
-      ]
-    },
-    "class_type" : "Model Input Switch",
-    "_meta"      : {
-      "title" : "Model Input Switch"
-    }
-  },
-  "2867"      : {
-    "inputs"     : {
-      "clip_a"  : [
-        "3417",
-        1
-      ],
-      "clip_b"  : [
-        "2268",
-        1
-      ],
-      "boolean" : [
-        "241",
-        0
-      ]
-    },
-    "class_type" : "CLIP Input Switch",
-    "_meta"      : {
-      "title" : "CLIP Input Switch"
-    }
-  },
   "2874"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -5107,25 +4983,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.80:0.80"
-    }
-  },
-  "2901"      : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Pandora-RAWr 0.80::1.00"
     }
   },
   "2922"      : {
@@ -5275,15 +5132,6 @@
       "title" : "Input Selector"
     }
   },
-  "2970"      : {
-    "inputs"     : {
-      "text" : "aidmarealisticskin"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
   "2973"      : {
     "inputs"     : {
       "text" : "aidmarealisticskin, Skin imperfections,"
@@ -5308,21 +5156,6 @@
       "title" : "LayerMask: MaskGrow"
     }
   },
-  "2978"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
-      "mask"        : [
-        "2035",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
   "2983"      : {
     "inputs"     : {
       "a"         : [
@@ -5337,36 +5170,6 @@
       "title" : "Math Float"
     }
   },
-  "2987"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "3134",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 2,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "true",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "2995:548",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
   "2989"      : {
     "inputs"     : {
       "mask_opacity" : 0.3,
@@ -5378,25 +5181,6 @@
       ],
       "mask"         : [
         "898",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "2993"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "2034",
-        0
-      ],
-      "mask"         : [
-        "2978",
         0
       ]
     },
@@ -5525,7 +5309,7 @@
         0
       ],
       "color_ref_image" : [
-        "3606",
+        "2669",
         0
       ]
     },
@@ -6167,46 +5951,6 @@
       "title" : "Noise Plus Blend"
     }
   },
-  "3196"      : {
-    "inputs"     : {
-      "model_a" : [
-        "3391",
-        0
-      ],
-      "model_b" : [
-        "2866",
-        0
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "Model Input Switch",
-    "_meta"      : {
-      "title" : "Model Input Switch"
-    }
-  },
-  "3197"      : {
-    "inputs"     : {
-      "clip_a"  : [
-        "3339",
-        0
-      ],
-      "clip_b"  : [
-        "2867",
-        0
-      ],
-      "boolean" : [
-        "322",
-        0
-      ]
-    },
-    "class_type" : "CLIP Input Switch",
-    "_meta"      : {
-      "title" : "CLIP Input Switch"
-    }
-  },
   "3201"      : {
     "inputs"     : {
       "condition"  : [
@@ -6369,34 +6113,26 @@
   "3296"      : {
     "inputs"     : {
       "any_01" : [
-        "3588",
-        0
-      ],
-      "any_02" : [
         "3011",
         0
       ],
-      "any_03" : [
+      "any_02" : [
         "2339",
         0
       ],
       "any_04" : [
-        "2987",
-        0
-      ],
-      "any_05" : [
         "2065",
         0
       ],
-      "any_06" : [
+      "any_05" : [
         "654",
         0
       ],
-      "any_07" : [
+      "any_06" : [
         "1885",
         0
       ],
-      "any_08" : [
+      "any_07" : [
         "3018",
         0
       ]
@@ -7125,7 +6861,7 @@
         0
       ],
       "model_b" : [
-        "3600",
+        "3411",
         0
       ],
       "boolean" : [
@@ -7145,7 +6881,7 @@
         1
       ],
       "clip_b"  : [
-        "3600",
+        "3411",
         1
       ],
       "boolean" : [
@@ -7208,6 +6944,25 @@
       "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.60::0.90"
     }
   },
+  "3411"      : {
+    "inputs"     : {
+      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "3412",
+        0
+      ],
+      "clip"           : [
+        "3412",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "aidmarealisticskin 0.40::0.10"
+    }
+  },
   "3412"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
@@ -7265,25 +7020,6 @@
       "title" : "PatchModelAddDownscale"
     }
   },
-  "3417"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.6,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "2901",
-        0
-      ],
-      "clip"           : [
-        "2901",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin 0.60::0.10"
-    }
-  },
   "3419"      : {
     "inputs"     : {
       "dishonesty_factor" : -0.04,
@@ -7321,25 +7057,6 @@
       "title" : "Detail Daemon Sampler"
     }
   },
-  "3421"      : {
-    "inputs"     : {
-      "lora_name"      : "FLUX_Polyhedron_all_Kohya_ss-000001.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "FLUX_Polyhedron_all_Kohya_ss-000001 0.80::0.10"
-    }
-  },
   "3426"      : {
     "inputs"     : {
       "scheduler" : "beta",
@@ -7352,7 +7069,7 @@
         0
       ],
       "model"     : [
-        "3391",
+        "3474",
         0
       ]
     },
@@ -7462,13 +7179,35 @@
       "title" : "Math Expression 🐍"
     }
   },
+  "3474"      : {
+    "inputs"     : {
+      "max_shift"  : 1.25,
+      "base_shift" : 0.6,
+      "width"      : [
+        "3522",
+        0
+      ],
+      "height"     : [
+        "3522",
+        1
+      ],
+      "model"      : [
+        "3391",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux 1.40::0.8"
+    }
+  },
   "3479"      : {
     "inputs"     : {
       "method"       : "mkl",
       "strength"     : 0.25,
       "multithread"  : true,
       "image_ref"    : [
-        "3603",
+        "2669",
         0
       ],
       "image_target" : [
@@ -7498,22 +7237,6 @@
     "class_type" : "ColorMatch",
     "_meta"      : {
       "title" : "Color Match"
-    }
-  },
-  "3484"      : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.75,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3196",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.45::0.5"
     }
   },
   "3490"      : {
@@ -7737,17 +7460,16 @@
       "title" : "ModelMergeFlux1"
     }
   },
-  "3518"      : {
+  "3522"      : {
     "inputs"     : {
-      "text"     : "0.185",
-      "anything" : [
-        "2553",
+      "image" : [
+        "3296",
         0
       ]
     },
-    "class_type" : "easy showAnything",
+    "class_type" : "GetImageSize+",
     "_meta"      : {
-      "title" : "Show Any"
+      "title" : "🔧 Get Image Size"
     }
   },
   "3528"      : {
@@ -8118,7 +7840,7 @@
         0
       ],
       "model"               : [
-        "3391",
+        "3474",
         0
       ],
       "positive"            : [
@@ -8221,477 +7943,6 @@
     "class_type" : "OpticalRealism",
     "_meta"      : {
       "title" : "Optical Realism & Physics"
-    }
-  },
-  "3581"      : {
-    "inputs"     : {
-      "text" : "aidmaimageupgrader, fluxenhancer, detailed hands, Perfect Female foot"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "3582"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
-      "mask"        : [
-        "3584",
-        1
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
-  "3583"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "3593",
-        0
-      ],
-      "mask"         : [
-        "3582",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "3584"      : {
-    "inputs"     : {
-      "method"          : "human_parsing_lip",
-      "confidence"      : 0.4,
-      "crop_multi"      : 0,
-      "mask_components" : "16,17,19,18",
-      "image"           : [
-        "3593",
-        0
-      ]
-    },
-    "class_type" : "easy humanSegmentation",
-    "_meta"      : {
-      "title" : "Human Segmentation"
-    }
-  },
-  "3588"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "3134",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 2,
-      "filename_number_start"   : "false",
-      "extension"               : "png",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "true",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "3586:548",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "3590"      : {
-    "inputs"     : {
-      "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3401",
-        0
-      ],
-      "clip"           : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Pandora-RAWr 0.80::0.80"
-    }
-  },
-  "3591"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.2,
-      "strength_clip"  : 0,
-      "model"          : [
-        "3590",
-        0
-      ],
-      "clip"           : [
-        "3590",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin 0.20:0.10"
-    }
-  },
-  "3592"      : {
-    "inputs"     : {
-      "lora_name"      : "flux-lora-foot.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3591",
-        0
-      ],
-      "clip"           : [
-        "3591",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "flux-lora-foot.safetensors 0.80::0.20"
-    }
-  },
-  "3593"      : {
-    "inputs"     : {
-      "any_01" : [
-        "3011",
-        0
-      ],
-      "any_02" : [
-        "2339",
-        0
-      ],
-      "any_03" : [
-        "2065",
-        0
-      ],
-      "any_04" : [
-        "654",
-        0
-      ],
-      "any_05" : [
-        "1885",
-        0
-      ],
-      "any_06" : [
-        "3018",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3599"      : {
-    "inputs"     : {
-      "lora_name"      : "aidmaRealisticSkin-FLUX-v0.1.safetensors",
-      "strength_model" : 0.4,
-      "strength_clip"  : 0.1,
-      "model"          : [
-        "3412",
-        0
-      ],
-      "clip"           : [
-        "3412",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "aidmarealisticskin 0.40::0.10"
-    }
-  },
-  "3600"      : {
-    "inputs"     : {
-      "lora_name"      : "flux-lora-foot.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3599",
-        0
-      ],
-      "clip"           : [
-        "3599",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
-    }
-  },
-  "3603"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2669",
-        0
-      ],
-      "any_02" : [
-        "2109",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3605"      : {
-    "inputs"     : {
-      "any_01" : [
-        "1989",
-        0
-      ],
-      "any_02" : [
-        "154",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3606"      : {
-    "inputs"     : {
-      "any_01" : [
-        "2669",
-        0
-      ],
-      "any_02" : [
-        "2109",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "2995:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.05,
-      "base_shift" : 0.3,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3484",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "2995:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "2978",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "2995:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "2995:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "2995:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3197",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "2995:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "2106",
-        0
-      ],
-      "text_b"           : [
-        "2995:2972",
-        0
-      ],
-      "text_c"           : [
-        "2970",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2995:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,\n\nsmooth midriff,low muscle definition, soft natural curves",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "2995:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
-        0
-      ],
-      "text_b"           : [
-        "2995:2973",
-        0
-      ],
-      "text_c"           : [
-        "2970",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2995:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "Natural breast shape, Perfect hand and fingers and nails with pastel nail polish,wearing thin golden necklace,",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "2995:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "3338",
-        0
-      ],
-      "steps"              : 18,
-      "cfg"                : 1,
-      "sampler_name"       : "deis",
-      "scheduler"          : "beta",
-      "denoise"            : [
-        "2553",
-        0
-      ],
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 1,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "2034",
-        0
-      ],
-      "segs"               : [
-        "2995:88",
-        0
-      ],
-      "model"              : [
-        "2995:113",
-        0
-      ],
-      "clip"               : [
-        "3197",
-        0
-      ],
-      "vae"                : [
-        "3373",
-        0
-      ],
-      "positive"           : [
-        "2995:506",
-        0
-      ],
-      "negative"           : [
-        "2995:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "2995:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2995:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "2995:2976",
-        0
-      ],
-      "guidance" : 3.2,
-      "clip"     : [
-        "3197",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
     }
   },
   "2996:113"  : {
@@ -9297,383 +8548,6 @@
       ],
       "negative"           : [
         "3014:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "3251:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.45,
-      "base_shift" : 0.45,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3401",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "3251:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "3251:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "3251:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "3251:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "3251:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_b"           : [
-        "3251:2972",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3251:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "tiny broken capillaries,\nsubtle redness and discoloration,\npeach fuzz catching side light,\n\nskin that is realistic rather than cosmetically retouched\n ,low muscle definition,   natural curves",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "3251:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "3251:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "3251:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "3374",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "3251:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_b"           : [
-        "3251:2973",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3251:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "skin that is realistic rather than cosmetically retouched\n, Perfect hand and fingers and nails with pastel nail polish ",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "3251:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : true,
-      "max_size"           : 1024,
-      "seed"               : -1,
-      "steps"              : 17,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : 0.18,
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "segs"               : [
-        "3251:88",
-        0
-      ],
-      "model"              : [
-        "3251:113",
-        0
-      ],
-      "clip"               : [
-        "3374",
-        0
-      ],
-      "vae"                : [
-        "3373",
-        0
-      ],
-      "positive"           : [
-        "3251:506",
-        0
-      ],
-      "negative"           : [
-        "3251:54",
-        0
-      ]
-    },
-    "class_type" : "DetailerForEach",
-    "_meta"      : {
-      "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "3586:506"  : {
-    "inputs"     : {
-      "clip_l"   : [
-        "3586:2975",
-        0
-      ],
-      "t5xxl"    : [
-        "3586:2976",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "3592",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
-    }
-  },
-  "3586:113"  : {
-    "inputs"     : {
-      "max_shift"  : 1.05,
-      "base_shift" : 0.5,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3592",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
-    }
-  },
-  "3586:88"   : {
-    "inputs"     : {
-      "combined"     : true,
-      "crop_factor"  : 3,
-      "bbox_fill"    : false,
-      "drop_size"    : 10,
-      "contour_fill" : true,
-      "mask"         : [
-        "3582",
-        0
-      ]
-    },
-    "class_type" : "MaskToSEGS",
-    "_meta"      : {
-      "title" : "MASK to SEGS"
-    }
-  },
-  "3586:54"   : {
-    "inputs"     : {
-      "conditioning" : [
-        "3586:53",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "3586:53"   : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3592",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Negative Prompt"
-    }
-  },
-  "3586:2976" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_a"           : [
-        "788",
-        0
-      ],
-      "text_b"           : [
-        "3586:2973",
-        0
-      ],
-      "text_c"           : [
-        "3581",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3586:2975" : {
-    "inputs"     : {
-      "delimiter"        : ", ",
-      "clean_whitespace" : "true",
-      "text_b"           : [
-        "3586:2972",
-        0
-      ],
-      "text_c"           : [
-        "3581",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "3586:2972" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt ClipL Additional"
-    }
-  },
-  "3586:2973" : {
-    "inputs"     : {
-      "text1"     : "",
-      "text2"     : "Detailed female foot, No Nailpolish,",
-      "text3"     : "",
-      "delimiter" : ","
-    },
-    "class_type" : "ttN concat",
-    "_meta"      : {
-      "title" : "Prompt t5xxl Additional"
-    }
-  },
-  "3586:548"  : {
-    "inputs"     : {
-      "guide_size"         : 1024,
-      "guide_size_for"     : false,
-      "max_size"           : 1024,
-      "seed"               : [
-        "3338",
-        0
-      ],
-      "steps"              : 18,
-      "cfg"                : 1,
-      "sampler_name"       : "euler",
-      "scheduler"          : "beta",
-      "denoise"            : 0.32,
-      "feather"            : 5,
-      "noise_mask"         : true,
-      "force_inpaint"      : true,
-      "wildcard"           : "",
-      "cycle"              : 2,
-      "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
-      "tiled_encode"       : false,
-      "tiled_decode"       : false,
-      "image"              : [
-        "3593",
-        0
-      ],
-      "segs"               : [
-        "3586:88",
-        0
-      ],
-      "model"              : [
-        "3586:113",
-        0
-      ],
-      "clip"               : [
-        "3592",
-        1
-      ],
-      "vae"                : [
-        "3373",
-        0
-      ],
-      "positive"           : [
-        "3586:506",
-        0
-      ],
-      "negative"           : [
-        "3586:54",
         0
       ]
     },

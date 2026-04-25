@@ -27,7 +27,7 @@ UPDATED_FILE="$SCRIPT_DIR/Workflow_API_updated.json"
 LOG_TS=$(date '+%Y-%m-%d %H:%M:%S')
 
 # -- Download latest workflow file
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/HybridWorkflow_API.json"
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/Workflow_API.json"
 
 wget -O "${WORKFLOW_FILE}" "${DEFAULT_WORKFLOW}"
 echo "Hash : " "$(md5sum ${WORKFLOW_FILE})"
