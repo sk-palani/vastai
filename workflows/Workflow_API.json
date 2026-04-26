@@ -2275,7 +2275,7 @@
   "1955"      : {
     "inputs"     : {
       "a"         : [
-        "2100",
+        "3891",
         0
       ],
       "b"         : 0.98,
@@ -2354,7 +2354,7 @@
   "1999"      : {
     "inputs"     : {
       "a"         : [
-        "2100",
+        "3891",
         0
       ],
       "b"         : 0.49,
@@ -3774,7 +3774,7 @@
   "2843"      : {
     "inputs"     : {
       "a"         : [
-        "2102",
+        "3892",
         0
       ],
       "b"         : 0.62,
@@ -3961,7 +3961,7 @@
   "2983"      : {
     "inputs"     : {
       "a"         : [
-        "2102",
+        "3892",
         0
       ],
       "b"         : 0.75,
@@ -4822,7 +4822,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.92,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.06,
       "model"          : [
         "3401",
         0
@@ -4841,7 +4841,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.06,
       "model"          : [
         "3401",
         0
@@ -5061,7 +5061,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.06,
       "model"          : [
         "3401",
         0
@@ -5125,7 +5125,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.06,
       "model"          : [
         "3401",
         0
@@ -5144,7 +5144,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.08,
       "model"          : [
         "3401",
         0
@@ -5163,7 +5163,7 @@
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.1,
+      "strength_clip"  : 0.06,
       "model"          : [
         "3401",
         0
@@ -5536,7 +5536,7 @@
   "3450"      : {
     "inputs"     : {
       "a"         : [
-        "2100",
+        "3891",
         0
       ],
       "b"         : 0.98,
@@ -6426,7 +6426,7 @@
   "3694"      : {
     "inputs"     : {
       "a"         : [
-        "2100",
+        "3891",
         0
       ],
       "b"         : 0.18,
@@ -6543,7 +6543,7 @@
   "3702"      : {
     "inputs"     : {
       "a"         : [
-        "2100",
+        "3891",
         0
       ],
       "b"         : 0.18,
@@ -6998,6 +6998,26 @@
       "title" : "Klein_VAE Enc"
     }
   },
+  "3795"      : {
+    "inputs"     : {
+      "color_space" : "YCbCr",
+      "factor"      : 1,
+      "device"      : "auto",
+      "batch_size"  : 0,
+      "image"       : [
+        "3796",
+        0
+      ],
+      "reference"   : [
+        "2109",
+        0
+      ]
+    },
+    "class_type" : "ImageColorMatch+",
+    "_meta"      : {
+      "title" : "🔧 Image Color Match"
+    }
+  },
   "3796"      : {
     "inputs"     : {
       "samples" : [
@@ -7228,7 +7248,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-qualit Photograph of v1dhya5.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7333,7 +7353,7 @@
       "magnitude"           : 0.95,
       "contrast"            : 0.05,
       "normalize_strength"  : 0.05,
-      "preserve_original"   : 1,
+      "preserve_original"   : 1.4,
       "preserve_mode"       : "dampen",
       "edit_text_weight"    : 0.8,
       "active_end_override" : 1,
@@ -7514,13 +7534,13 @@
       "quality"                 : 100,
       "optimize_image"          : "false",
       "lossless_webp"           : "false",
-      "overwrite_mode"          : "false",
+      "overwrite_mode"          : "prefix_as_filename",
       "show_history"            : "false",
       "show_history_by_prefix"  : "true",
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3796",
+        "3795",
         0
       ]
     },
@@ -7532,7 +7552,7 @@
   "3856"      : {
     "inputs"     : {
       "pixels" : [
-        "3796",
+        "3795",
         0
       ],
       "vae"    : [
@@ -7717,6 +7737,49 @@
     "class_type" : "Logic Comparison OR",
     "_meta"      : {
       "title" : "Logic Comparison OR"
+    }
+  },
+  "3891"      : {
+    "inputs"     : {
+      "a"         : [
+        "3893",
+        0
+      ],
+      "b"         : [
+        "2100",
+        0
+      ],
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "Math Float"
+    }
+  },
+  "3892"      : {
+    "inputs"     : {
+      "a"         : [
+        "3893",
+        0
+      ],
+      "b"         : [
+        "2102",
+        0
+      ],
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "Math Float"
+    }
+  },
+  "3893"      : {
+    "inputs"     : {
+      "value" : 1.2
+    },
+    "class_type" : "FloatConstant",
+    "_meta"      : {
+      "title" : "Float Constant"
     }
   },
   "2996:3572" : {
