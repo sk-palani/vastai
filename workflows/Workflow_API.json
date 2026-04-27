@@ -2879,8 +2879,8 @@
         0
       ],
       "when_true"  : [
-        "362",
-        0
+        "3894",
+        2
       ],
       "when_false" : [
         "1922",
@@ -4715,7 +4715,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3491",
+        "3479",
         0
       ]
     },
@@ -5655,7 +5655,7 @@
       "tiled_decode"        : false,
       "batch_size"          : 1,
       "image"               : [
-        "3490",
+        "3296",
         0
       ],
       "model"               : [
@@ -5691,7 +5691,7 @@
   "3479"      : {
     "inputs"     : {
       "method"       : "mkl",
-      "strength"     : 0.5,
+      "strength"     : 0.6,
       "multithread"  : true,
       "image_ref"    : [
         "2669",
@@ -5739,32 +5739,6 @@
     "class_type" : "ProPostApplyLUT",
     "_meta"      : {
       "title" : "ProPostApplyLUT"
-    }
-  },
-  "3490"      : {
-    "inputs"     : {
-      "mode"   : "horizontal",
-      "images" : [
-        "3296",
-        0
-      ]
-    },
-    "class_type" : "Image Flip",
-    "_meta"      : {
-      "title" : "Image Flip"
-    }
-  },
-  "3491"      : {
-    "inputs"     : {
-      "mode"   : "horizontal",
-      "images" : [
-        "3479",
-        0
-      ]
-    },
-    "class_type" : "Image Flip",
-    "_meta"      : {
-      "title" : "Image Flip"
     }
   },
   "3493"      : {
@@ -7780,6 +7754,21 @@
     "class_type" : "FloatConstant",
     "_meta"      : {
       "title" : "Float Constant"
+    }
+  },
+  "3894"      : {
+    "inputs"     : {
+      "number_type" : "integer",
+      "minimum"     : 21,
+      "maximum"     : 29,
+      "seed"        : [
+        "3705",
+        0
+      ]
+    },
+    "class_type" : "Random Number",
+    "_meta"      : {
+      "title" : "Age Range"
     }
   },
   "2996:3572" : {
