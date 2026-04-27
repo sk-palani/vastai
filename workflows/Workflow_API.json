@@ -1321,7 +1321,7 @@
   },
   "950"       : {
     "inputs"     : {
-      "text" : "Indian woman, serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional RAW photograph\n __AGE__ "
+      "text" : "Indian woman,   alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional photograph\n __AGE__ "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3294,7 +3294,7 @@
         0
       ],
       "text"    : [
-        "950",
+        "3898",
         0
       ]
     },
@@ -7298,7 +7298,7 @@
   },
   "3837"      : {
     "inputs"     : {
-      "text" : "fluxtrait"
+      "text" : "fluxtrait,\nindian-girl-brown-eyes,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -7388,11 +7388,11 @@
       "strength_model" : 1,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3843",
+        "3897",
         0
       ],
       "clip"           : [
-        "3843",
+        "3897",
         1
       ]
     },
@@ -7769,6 +7769,54 @@
     "class_type" : "Random Number",
     "_meta"      : {
       "title" : "Age Range"
+    }
+  },
+  "3897"      : {
+    "inputs"     : {
+      "lora_name"      : "Indian_Girl_Brown_Eyes_NSFW_epoch_9.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 1,
+      "model"          : [
+        "3843",
+        0
+      ],
+      "clip"           : [
+        "3843",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "RealSKin 0.92:0.10"
+    }
+  },
+  "3898"      : {
+    "inputs"     : {
+      "condition"  : [
+        "241",
+        0
+      ],
+      "when_true"  : [
+        "950",
+        0
+      ],
+      "when_false" : [
+        "3900",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "3900"      : {
+    "inputs"     : {
+      "text" : "Indian woman, serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional photograph\n __AGE__ "
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
     }
   },
   "2996:3572" : {
