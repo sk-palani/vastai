@@ -1659,7 +1659,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.7",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
