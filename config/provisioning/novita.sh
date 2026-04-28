@@ -185,6 +185,7 @@ MP3=(
 
 
 UNET_MODELS=(
+  "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 )
 
 DIFFUSION_MODELS=(
@@ -247,6 +248,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2720914?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # RealSkin.safetensors
     "https://civitai.com/api/download/models/2848310?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # Indian_Girl_Brown_Eyes_NSFW_epoch_9.safetensors
+    "https://civitai.com/api/download/models/2848560?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 
     # Flux1.Dev
