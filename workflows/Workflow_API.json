@@ -1353,12 +1353,6 @@
       "title" : "Load Advanced Vision Model"
     }
   },
-  "1521"      : {
-    "inputs" : {},
-    "_meta"  : {
-      "title" : "Groups Muter - Generation"
-    }
-  },
   "1566"      : {
     "inputs"     : {
       "any_05" : [
@@ -2246,18 +2240,6 @@
       "title" : "Math Float"
     }
   },
-  "2098"      : {
-    "inputs" : {},
-    "_meta"  : {
-      "title" : "Fast Groups Muter (rgthree) - Detailers"
-    }
-  },
-  "2099"      : {
-    "inputs" : {},
-    "_meta"  : {
-      "title" : "Fast Groups Muter (rgthree) - Detailers"
-    }
-  },
   "2100"      : {
     "inputs"     : {
       "condition"  : [
@@ -3041,20 +3023,6 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3025"      : {
-    "inputs" : {
-      "UNKNOWN" : 1.3
-    },
-    "_meta"  : {
-      "title" : "🔖"
-    }
-  },
-  "3034"      : {
-    "inputs" : {},
-    "_meta"  : {
-      "title" : "Input Processing"
     }
   },
   "3047"      : {
@@ -5173,14 +5141,6 @@
       "title" : "Load LoRA (Model and CLIP)"
     }
   },
-  "3765"      : {
-    "inputs" : {
-      "UNKNOWN" : 1
-    },
-    "_meta"  : {
-      "title" : "🔖"
-    }
-  },
   "3768"      : {
     "inputs"     : {
       "condition"  : [
@@ -5222,14 +5182,6 @@
       "title" : "Get Size"
     }
   },
-  "3773"      : {
-    "inputs" : {
-      "UNKNOWN" : 1
-    },
-    "_meta"  : {
-      "title" : "🔖"
-    }
-  },
   "3774"      : {
     "inputs"     : {
       "clip_name" : "qwen_3_8b.safetensors",
@@ -5239,12 +5191,6 @@
     "class_type" : "CLIPLoader",
     "_meta"      : {
       "title" : "Load CLIP"
-    }
-  },
-  "3776"      : {
-    "inputs" : {},
-    "_meta"  : {
-      "title" : "Flux.2.Klein. :: Prepartion Edit"
     }
   },
   "3779"      : {
