@@ -75,20 +75,28 @@ CHECKPOINT_MODELS=(
 
 NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
+    "https://github.com/1038lab/ComfyUI-QwenVL"
     "https://github.com/ClownsharkBatwing/RES4LYF"
     "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
     "https://github.com/Fannovel16/ComfyUI-MagickWand"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/HECer/ComfyUI-FilePathCreator"
     "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
+    "https://github.com/Layer-norm/comfyui-lama-remover"
     "https://github.com/LevelPixel/ComfyUI-LevelPixel"
     "https://github.com/Tenney95/ComfyUI-NodeAligner"
     "https://github.com/brayevalerien/ComfyUI-resynthesizer"
     "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
+    "https://github.com/chflame163/ComfyUI_LayerStyle"
     "https://github.com/chrisfreilich/virtuoso-nodes"
     "https://github.com/chrisgoringe/cg-use-everywhere"
     "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/daxcay/ComfyUI-JDCN"
     "https://github.com/digitaljohn/comfyui-propost"
     "https://github.com/djbielejeski/a-person-mask-generator"
+    "https://github.com/fchangjun/Baidu_Meux_ComfyTools"
+    "https://github.com/gseth/ControlAltAI-Nodes"
     "https://github.com/jags111/efficiency-nodes-comfyui"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
@@ -97,9 +105,11 @@ NODES=(
     "https://github.com/ltdrdata/was-node-suite-comfyui"
     "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/skatardude10/ComfyUI-Optical-Realism"
     "https://github.com/sonnybox/ComfyUI-SuperNodes"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
     "https://github.com/storyicon/comfyui_segment_anything"
     "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
     "https://github.com/yolain/ComfyUI-Easy-Use"
@@ -114,6 +124,12 @@ WORKFLOWS=(
 
 
 CLIP_MODELS=(
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
+#    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors"
+    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
+    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors"
 
 )
 
@@ -175,7 +191,7 @@ DIFFUSION_MODELS=(
 #  "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"
   "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/resolve/main/flux-2-klein-9b.safetensors"
   # fluxtraitFLUX2KleinFLUXZ_flux2Klein9bV2.safetensors
-  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
+#  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
 #  "https://civitai.com/api/download/models/2631758?type=Model&format=SafeTensor&size=pruned&fp=bf16&token=${CIVITAI_TOKEN}"
 
 #  "https://civitai.com/api/download/models/2766094?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=${CIVITAI_TOKEN}"
@@ -250,6 +266,8 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2882334?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # change_to_raw_photo.safetensors
     "https://civitai.com/api/download/models/2797560?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # FLUX_Polyhedron_all_Kohya_ss-000001.safetensors
+    "https://civitai.com/api/download/models/812320?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 #   aidmaRealisticSkin-FLUX-v0.1.safetensors
     "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
@@ -263,6 +281,13 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/1571699?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # BreastShaper_splendid_droplets_Flux_v3.0-000009.safetensors
     "https://civitai.com/api/download/models/824319?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+#   Flux_Lora_32F_Breasts.safetensors
+    "https://civitai.com/api/download/models/2554707?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    "https://civitai.com/api/download/models/2846977?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+
     #   d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors
     "https://civitai.com/api/download/models/1612200?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #   SameFace_Fix.safetensors
@@ -317,6 +342,7 @@ ULTRALYTICS_SEGS_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/jags/yolov8_model_segmentation-set/resolve/main/skin_yolov8m-seg_400.pt"
   "https://civitai.com/api/download/models/1324778?type=Model&format=PickleTensor"
+  "https://huggingface.co/ashllay/YOLO_Models/resolve/main/segm/unwanted-3x.pt"
 
 )
 
@@ -634,13 +660,13 @@ crontab -l 2>/dev/null | {
 set +f
 
 service cron start &
-
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
-supervisorctl stop 'jupyter'
-
+#
+#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
+#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
+#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
+#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
+#supervisorctl stop 'jupyter'
+#
 
 
 
