@@ -1315,9 +1315,9 @@
   },
   "1412"      : {
     "inputs"     : {
-      "strength"      : 0.66,
+      "strength"      : 0.56,
       "start_percent" : 0,
-      "end_percent"   : 0.6,
+      "end_percent"   : 0.56,
       "positive"      : [
         "737",
         0
