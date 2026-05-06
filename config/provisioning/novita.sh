@@ -210,7 +210,7 @@ LORA_MODELS=(
     # V2_flux_klein_4.safetensors
     "https://civitai.com/api/download/models/2777010?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Chest_9B.safetensors
-    "https://civitai.com/api/download/models/2809741?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/2857549?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_slider_bodyweight_50.safetensors
     "https://civitai.com/api/download/models/2608738?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_slider_bust.safetensors
@@ -231,7 +231,11 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2744685?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_9b_enhancer_v2.safetensors
     "https://civitai.com/api/download/models/2746136?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    
+    # klein_9b_enhancer_v2.safetensors
+    "https://civitai.com/api/download/models/2900355?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    # skin tone.safetensors
+    "https://civitai.com/api/download/models/2920132?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # ass_slider_klein9b_v12_20260216_080807.safetensors
     "https://civitai.com/api/download/models/2695145?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # voluptuous_slider_klein9b_v05_20260203_155139.safetensors
