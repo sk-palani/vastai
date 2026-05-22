@@ -53,6 +53,14 @@ APT_PACKAGES=(
     "ncdu"
     "socat"
     "cron"
+    "libgl1"
+    "libegl1"
+    "libgles2"
+    "libglib2.0-0"
+    "libsm6"
+    "libxext6"
+    "libxrender1"
+    "ffmpeg"
 )
 
 #apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
@@ -206,7 +214,9 @@ VAE_MODELS=(
 )
 
 LORA_MODELS=(
+    # ------------------------------
     # Flux2.Klein
+    # ------------------------------
     # V2_flux_klein_4.safetensors
     "https://civitai.com/api/download/models/2777010?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Chest_9B.safetensors
@@ -254,9 +264,12 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2848310?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Indian_Girl_Brown_Eyes_NSFW_epoch_9.safetensors
     "https://civitai.com/api/download/models/2848560?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # HighDetail.safetensors
+    "https://civitai.com/api/download/models/2960420?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
-
+    # ------------------------------
     # Flux1.Dev
+    # ------------------------------
     # Pandora-RAWr.safetensors
     "https://civitai.com/api/download/models/1943855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # breast-size2.safetensors
@@ -440,7 +453,7 @@ function provisioning_start() {
     chmod +x  "${WORKSPACE}/l"
     provisioning_get_workflows
     provisioning_print_end
-    touch /workspace/.noprovisioning
+    touch "${WORKSPACE}/.noprovisioning"
 }
 
 function pip_install() {
@@ -634,12 +647,12 @@ provisioning_get_apt_packages
 #pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 
 # Allow user to disable provisioning if they started with a script they didn't want
-if [[ ! -f /workspace/.noprovisioning ]]; then
+if [[ ! -f "${WORKSPACE}/.noprovisioning" ]]; then
     provisioning_start
     pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 fi
 
-${WORKSPACE}/environments/python/comfyui/bin/python -m pip install -r /workspace/ComfyUI/requirements.txt
+${WORKSPACE}/environments/python/comfyui/bin/python -m pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 #opencv-contrib-python
 provisioning_get_default_workflow
 
