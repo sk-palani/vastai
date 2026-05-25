@@ -1146,7 +1146,7 @@
       ],
       "font"             : "SevenSegment.ttf",
       "size"             : 38,
-      "color"            : "#d73b33FF",
+      "color"            : "#00fff8FF",
       "background_color" : "#00000000",
       "shadow_distance"  : 0,
       "shadow_blur"      : 0,
@@ -1659,7 +1659,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.7",
+      "megapixel"     : "1.6",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -1740,7 +1740,7 @@
   "1859"      : {
     "inputs"     : {
       "model"        : [
-        "3114",
+        "3903",
         0
       ],
       "conditioning" : [
@@ -1765,7 +1765,7 @@
         0
       ],
       "model"     : [
-        "3114",
+        "3903",
         0
       ]
     },
@@ -3225,22 +3225,6 @@
     "class_type" : "StringReplace",
     "_meta"      : {
       "title" : "Replace"
-    }
-  },
-  "3114"      : {
-    "inputs"     : {
-      "max_shift"  : 1.4,
-      "base_shift" : 0.8,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3344",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "ModelSamplingFlux 1.40::0.8"
     }
   },
   "3115"      : {
@@ -4729,7 +4713,7 @@
     },
     "class_type" : "AILab_QwenVL",
     "_meta"      : {
-      "title" : "QwenVL Auto Prompt (recommend do not change)"
+      "title" : "QwenVL Auto Prompt (reccomend do not change)"
     }
   },
   "3664"      : {
@@ -5664,7 +5648,7 @@
   "3842"      : {
     "inputs"     : {
       "lora_name"      : "klein_slider_bust.safetensors",
-      "strength_model" : 2,
+      "strength_model" : 2.4,
       "strength_clip"  : 0.21,
       "model"          : [
         "3779",
@@ -5696,7 +5680,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5 0.92::0.88"
+      "title" : "Change to Raw .88"
     }
   },
   "3844"      : {
@@ -5705,11 +5689,11 @@
       "strength_model" : 1,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3843",
+        "3942",
         0
       ],
       "clip"           : [
-        "3843",
+        "3942",
         1
       ]
     },
@@ -6117,6 +6101,22 @@
       "title" : "Text Multiline"
     }
   },
+  "3903"      : {
+    "inputs"     : {
+      "max_shift"  : 1.4,
+      "base_shift" : 0.8,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3344",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux 1.40::0.8"
+    }
+  },
   "3907"      : {
     "inputs"     : {
       "pixels" : [
@@ -6227,6 +6227,25 @@
       "title" : "KSamplerSelect"
     }
   },
+  "3942"      : {
+    "inputs"     : {
+      "lora_name"      : "[FLUX.2.Klein]FilmGrain_Redmond.safetensors",
+      "strength_model" : 0.5,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "3843",
+        0
+      ],
+      "clip"           : [
+        "3843",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "RealSKin 0.92:0.10"
+    }
+  },
   "2996:3572" : {
     "inputs"     : {
       "max_shift"  : 1.4,
@@ -6234,7 +6253,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "3344",
+        "3363",
         0
       ]
     },
@@ -6276,7 +6295,7 @@
     "inputs"     : {
       "text" : "",
       "clip" : [
-        "3339",
+        "3362",
         0
       ]
     },
@@ -6342,7 +6361,7 @@
         0
       ],
       "clip"               : [
-        "3339",
+        "3362",
         0
       ],
       "vae"                : [
@@ -6375,7 +6394,7 @@
       ],
       "guidance" : 3.3,
       "clip"     : [
-        "3339",
+        "3362",
         0
       ]
     },
