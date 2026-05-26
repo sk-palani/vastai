@@ -289,6 +289,11 @@ LORA_MODELS=(
     # FLUX_Polyhedron_all_Kohya_ss-000001.safetensors
     "https://civitai.com/api/download/models/812320?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
+    # FluxSideboob.safetensors
+    "https://civitai.com/api/download/models/737532?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # FluxSideboob_Photo.safetensors
+    "https://civitai.com/api/download/models/752200?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 #   aidmaRealisticSkin-FLUX-v0.1.safetensors
     "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # aidmaFluxProUltra-FLUX-v0.1.safetensors
