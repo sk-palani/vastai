@@ -1,7 +1,7 @@
 {
   "9": {
     "inputs": {
-      "filename_prefix": "Flux.1_Dev2026-05-29_01:08",
+      "filename_prefix": "Flux.1_Dev2026-05-29_01:24",
       "images": [
         "63",
         0
@@ -15,12 +15,12 @@
   "60": {
     "inputs": {
       "width": [
-        "67",
-        0
+        "96",
+        1
       ],
       "height": [
-        "67",
-        1
+        "96",
+        2
       ],
       "batch_size": 1
     },
@@ -31,9 +31,9 @@
   },
   "62": {
     "inputs": {
-      "seed": -1,
+      "seed": 283560710674774,
       "steps": 18,
-      "cfg": 1.1,
+      "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
@@ -42,7 +42,7 @@
         0
       ],
       "positive": [
-        "76",
+        "99",
         0
       ],
       "negative": [
@@ -78,7 +78,7 @@
   "64": {
     "inputs": {
       "conditioning": [
-        "76",
+        "99",
         0
       ]
     },
@@ -89,7 +89,7 @@
   },
   "65": {
     "inputs": {
-      "lora_name": "vidhyas_lora_v4.safetensors",
+      "lora_name": "vidhyas_lora_v3.safetensors",
       "strength_model": 1,
       "model": [
         "91",
@@ -101,27 +101,17 @@
       "title": "Load LoRA"
     }
   },
-  "67": {
-    "inputs": {
-      "aspect_ratio": "3:4 (Portrait Standard)",
-      "megapixels": 2
-    },
-    "class_type": "ResolutionSelector",
-    "_meta": {
-      "title": "Resolution Selector"
-    }
-  },
   "70": {
     "inputs": {
-      "max_shift": 1.08,
+      "max_shift": 1.4,
       "base_shift": 0.5,
       "width": [
-        "67",
-        0
+        "96",
+        1
       ],
       "height": [
-        "67",
-        1
+        "96",
+        2
       ],
       "model": [
         "65",
@@ -133,33 +123,15 @@
       "title": "ModelSamplingFlux"
     }
   },
-  "76": {
-    "inputs": {
-      "clip_l": [
-        "79",
-        0
-      ],
-      "t5xxl": "A professionally color graded RAW photograph of an Indian woman with an extremely beautiful yet natural face, wearing a small black bindi centered on her forehead. Her skin is rendered with high fidelity detail, showing realistic texture, visible pores, soft peach fuzz, and fine vellus hairs subtly illuminated by gentle side lighting. Faint acne marks and mild natural unevenness are present, emphasizing authenticity and photographic realism over artificial aesthetic perfection. The overall rendering prioritizes true to life skin behavior, organic tonal variation, and natural facial structure.\nSkin detail remains unretouched, avoiding beauty filter effects or excessive smoothing.",
-      "guidance": 3.5,
-      "clip": [
-        "87",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncodeFlux",
-    "_meta": {
-      "title": "CLIPTextEncodeFlux"
-    }
-  },
   "78": {
     "inputs": {
-      "directory_1": "Inputs/Next/Best",
-      "directory_2": "Inputs/Next",
+      "directory_1": "Inputs/Downloaded",
+      "directory_2": "Inputs/Downloaded",
       "directory_3": "Inputs/Downloaded",
       "ordering_mode": "random",
-      "include_subdirectories": "yes",
+      "include_subdirectories": "no",
       "index": 0,
-      "seed": -1
+      "seed": 869075606106830
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -175,7 +147,7 @@
       "custom_prompt": "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
       "max_tokens": 256,
       "keep_model_loaded": true,
-      "seed": -1,
+      "seed": 868430717,
       "image": [
         "78",
         0
@@ -193,41 +165,6 @@
     "class_type": "VAELoader",
     "_meta": {
       "title": "FLUX VAE"
-    }
-  },
-  "82": {
-    "inputs": {
-      "sampler_name": "euler_ancestral"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "KSamplerSelect"
-    }
-  },
-  "83": {
-    "inputs": {
-      "condition": true,
-      "when_true": [
-        "85",
-        0
-      ],
-      "when_false": [
-        "82",
-        0
-      ]
-    },
-    "class_type": "InputSelector",
-    "_meta": {
-      "title": "Input Selector"
-    }
-  },
-  "85": {
-    "inputs": {
-      "sampler_name": "euler"
-    },
-    "class_type": "KSamplerSelect",
-    "_meta": {
-      "title": "KSamplerSelect"
     }
   },
   "87": {
@@ -298,6 +235,75 @@
     "class_type": "DualCLIPLoader",
     "_meta": {
       "title": "DualCLIPLoader"
+    }
+  },
+  "95": {
+    "inputs": {
+      "megapixel": "1.6",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 2,
+      "image": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations"
+    }
+  },
+  "96": {
+    "inputs": {
+      "image": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "97": {
+    "inputs": {
+      "images": [
+        "96",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "98": {
+    "inputs": {
+      "text_undefined": "A woman with wet dark hair stands facing away from the camera in a shower stall. She wears a black strapless dress adorned with gold leaf patterns. Her neck is decorated with a white flower garland wrapped around her head and shoulders, extending down over her back. Gold bangles adorn both wrists. In the background, water streams fall onto the tiled walls of the bathroom.\n\nThe scene has warm lighting and soft shadows. The wall tiles have brownish tones with slight variations. The frame includes a wooden door handle visible on the left side. The overall atmosphere suggests a serene yet intimate moment during a personal ritual or bath time.",
+      "text": [
+        "79",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "99": {
+    "inputs": {
+      "text": [
+        "79",
+        0
+      ],
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
     }
   }
 }
