@@ -1,7 +1,7 @@
 {
   "9": {
     "inputs": {
-      "filename_prefix": "Flux.1_Dev2026-05-29_01:24",
+      "filename_prefix": "Flux.1_Dev2026-05-29_01:41",
       "images": [
         "63",
         0
@@ -31,7 +31,7 @@
   },
   "62": {
     "inputs": {
-      "seed": 283560710674774,
+      "seed": -1,
       "steps": 28,
       "cfg": 1,
       "sampler_name": "euler",
@@ -123,21 +123,6 @@
       "title": "ModelSamplingFlux"
     }
   },
-  "78": {
-    "inputs": {
-      "directory_1": "Inputs/Downloaded",
-      "directory_2": "Inputs/Downloaded",
-      "directory_3": "Inputs/Downloaded",
-      "ordering_mode": "random",
-      "include_subdirectories": "no",
-      "index": 0,
-      "seed": 869075606106830
-    },
-    "class_type": "Input_Image",
-    "_meta": {
-      "title": "Input Image"
-    }
-  },
   "79": {
     "inputs": {
       "model_name": "Qwen3-VL-2B-Instruct",
@@ -147,9 +132,9 @@
       "custom_prompt": "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
       "max_tokens": 512,
       "keep_model_loaded": true,
-      "seed": 868430717,
+      "seed": -1,
       "image": [
-        "78",
+        "102",
         0
       ]
     },
@@ -244,7 +229,7 @@
       "mode": "pad",
       "delta_percent": 2,
       "image": [
-        "78",
+        "102",
         0
       ]
     },
@@ -265,31 +250,6 @@
       "title": "Get Image Size & Count"
     }
   },
-  "97": {
-    "inputs": {
-      "images": [
-        "96",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "98": {
-    "inputs": {
-      "text_0": "A woman stands confidently with her hands placed firmly on her hips. She has long dark hair pulled back from her face by a thin headband and wears subtle makeup accentuating her eyes and lips. Her expression is serious and direct, looking straight ahead.\n\nShe's wearing a strikingly bright pink sheer robe or cover-up with ruffled edges along the neckline and sleeves, tied loosely around her waist with a matching ribbon bow. The fabric appears lightweight yet opaque near her body but more see-through towards the lower parts where she reveals some skin underneath. \n\nThe background consists of neutral-colored walls; behind her left shoulder (viewer’s right), there is a large abstract painting featuring intricate patterns in muted tones. On the far right side of the frame, part of a window shows light filtering through trees outside while casting soft shadows across the wall nearby. There's also visible power cord hanging down vertically beside the windowsill holding up a small framed picture depicting what looks like a portrait or religious iconography – possibly Jesus Christ based on its style.\n\nOverall lighting seems naturally lit coming from the front-right direction—perhaps sunlight entering through the open doorway—and casts distinct highlights over her figure contrasting against darker areas within the room. The entire scene conveys a blend between modern elegance and spiritual undertones subtly conveyed via",
-      "text": [
-        "79",
-        0
-      ]
-    },
-    "class_type": "ShowText|pysssss",
-    "_meta": {
-      "title": "Show Text 🐍"
-    }
-  },
   "99": {
     "inputs": {
       "text": [
@@ -304,6 +264,40 @@
     "class_type": "CLIPTextEncode",
     "_meta": {
       "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "100": {
+    "inputs": {
+      "megapixel": "1.6",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": -5
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations"
+    }
+  },
+  "101": {
+    "inputs": {
+      "image": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "102": {
+    "inputs": {
+      "folder": "Inputs/Downloaded",
+      "include_subfolders": false
+    },
+    "class_type": "LoadRandomImage",
+    "_meta": {
+      "title": "Load Random Image"
     }
   }
 }
