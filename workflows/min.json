@@ -31,7 +31,7 @@
   },
   "62": {
     "inputs": {
-      "seed": 283560710674774,
+      "seed": -1,
       "steps": 18,
       "cfg": 1,
       "sampler_name": "euler",
@@ -131,7 +131,7 @@
       "ordering_mode": "random",
       "include_subdirectories": "no",
       "index": 0,
-      "seed": 869075606106830
+      "seed": -1
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -147,7 +147,7 @@
       "custom_prompt": "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
       "max_tokens": 256,
       "keep_model_loaded": true,
-      "seed": 868430717,
+      "seed": -1,
       "image": [
         "78",
         0
@@ -263,31 +263,6 @@
     "class_type": "GetImageSizeAndCount",
     "_meta": {
       "title": "Get Image Size & Count"
-    }
-  },
-  "97": {
-    "inputs": {
-      "images": [
-        "96",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "98": {
-    "inputs": {
-      "text_undefined": "A woman with wet dark hair stands facing away from the camera in a shower stall. She wears a black strapless dress adorned with gold leaf patterns. Her neck is decorated with a white flower garland wrapped around her head and shoulders, extending down over her back. Gold bangles adorn both wrists. In the background, water streams fall onto the tiled walls of the bathroom.\n\nThe scene has warm lighting and soft shadows. The wall tiles have brownish tones with slight variations. The frame includes a wooden door handle visible on the left side. The overall atmosphere suggests a serene yet intimate moment during a personal ritual or bath time.",
-      "text": [
-        "79",
-        0
-      ]
-    },
-    "class_type": "ShowText|pysssss",
-    "_meta": {
-      "title": "Show Text 🐍"
     }
   },
   "99": {
