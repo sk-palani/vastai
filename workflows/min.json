@@ -1,0 +1,303 @@
+{
+  "9": {
+    "inputs": {
+      "filename_prefix": "Flux.1_Dev2026-05-29_01:08",
+      "images": [
+        "63",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "60": {
+    "inputs": {
+      "width": [
+        "67",
+        0
+      ],
+      "height": [
+        "67",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "EmptySD3LatentImage"
+    }
+  },
+  "62": {
+    "inputs": {
+      "seed": 43,
+      "steps": 18,
+      "cfg": 1.1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "70",
+        0
+      ],
+      "positive": [
+        "76",
+        0
+      ],
+      "negative": [
+        "64",
+        0
+      ],
+      "latent_image": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "63": {
+    "inputs": {
+      "samples": [
+        "62",
+        0
+      ],
+      "vae": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "64": {
+    "inputs": {
+      "conditioning": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "65": {
+    "inputs": {
+      "lora_name": "vidhyas_lora_v4.safetensors",
+      "strength_model": 1,
+      "model": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "67": {
+    "inputs": {
+      "aspect_ratio": "3:4 (Portrait Standard)",
+      "megapixels": 2
+    },
+    "class_type": "ResolutionSelector",
+    "_meta": {
+      "title": "Resolution Selector"
+    }
+  },
+  "70": {
+    "inputs": {
+      "max_shift": 1.08,
+      "base_shift": 0.5,
+      "width": [
+        "67",
+        0
+      ],
+      "height": [
+        "67",
+        1
+      ],
+      "model": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "ModelSamplingFlux"
+    }
+  },
+  "76": {
+    "inputs": {
+      "clip_l": [
+        "79",
+        0
+      ],
+      "t5xxl": "A professionally color graded RAW photograph of an Indian woman with an extremely beautiful yet natural face, wearing a small black bindi centered on her forehead. Her skin is rendered with high fidelity detail, showing realistic texture, visible pores, soft peach fuzz, and fine vellus hairs subtly illuminated by gentle side lighting. Faint acne marks and mild natural unevenness are present, emphasizing authenticity and photographic realism over artificial aesthetic perfection. The overall rendering prioritizes true to life skin behavior, organic tonal variation, and natural facial structure.\nSkin detail remains unretouched, avoiding beauty filter effects or excessive smoothing.",
+      "guidance": 3.5,
+      "clip": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncodeFlux",
+    "_meta": {
+      "title": "CLIPTextEncodeFlux"
+    }
+  },
+  "78": {
+    "inputs": {
+      "directory_1": "Inputs/Next/Best",
+      "directory_2": "Inputs/Next",
+      "directory_3": "Inputs/Downloaded",
+      "ordering_mode": "random",
+      "include_subdirectories": "yes",
+      "index": 0,
+      "seed": -328850087185509
+    },
+    "class_type": "Input_Image",
+    "_meta": {
+      "title": "Input Image"
+    }
+  },
+  "79": {
+    "inputs": {
+      "model_name": "Qwen3-VL-2B-Instruct",
+      "quantization": "4-bit (VRAM-friendly)",
+      "attention_mode": "auto",
+      "preset_prompt": "🖼️ Simple Description",
+      "custom_prompt": "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
+      "max_tokens": 256,
+      "keep_model_loaded": true,
+      "seed": 366426387,
+      "image": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "AILab_QwenVL",
+    "_meta": {
+      "title": "QwenVL Auto Prompt (reccomend do not change)"
+    }
+  },
+  "81": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "FLUX VAE"
+    }
+  },
+  "82": {
+    "inputs": {
+      "sampler_name": "euler_ancestral"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "83": {
+    "inputs": {
+      "condition": true,
+      "when_true": [
+        "85",
+        0
+      ],
+      "when_false": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "85": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "87": {
+    "inputs": {
+      "q": 1.1,
+      "k": 1.05,
+      "v": 0.95,
+      "out": 1.12,
+      "clip": [
+        "90",
+        0
+      ]
+    },
+    "class_type": "CLIPAttentionMultiply",
+    "_meta": {
+      "title": "CLIPAttentionMultiply"
+    }
+  },
+  "90": {
+    "inputs": {
+      "stop_at_clip_layer": -3,
+      "clip": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "91": {
+    "inputs": {
+      "block_number": 4,
+      "downscale_factor": 2,
+      "start_percent": 0,
+      "end_percent": 0.6,
+      "downscale_after_skip": true,
+      "downscale_method": "bislerp",
+      "upscale_method": "bislerp",
+      "model": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "PatchModelAddDownscale",
+    "_meta": {
+      "title": "4::2::0::0.5"
+    }
+  },
+  "93": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "94": {
+    "inputs": {
+      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name2": "t5xxl_fp16.safetensors",
+      "type": "flux",
+      "device": "cpu"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  }
+}
