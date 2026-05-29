@@ -751,7 +751,7 @@
       ],
       "blend_opacity" : 9,
       "image"         : [
-        "3516",
+        "363",
         0
       ],
       "mask"          : [
@@ -4396,28 +4396,6 @@
     "class_type" : "SplitSigmasDenoise",
     "_meta"      : {
       "title" : "SplitSigmasDenoise"
-    }
-  },
-  "3516"      : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : [
-        "3692",
-        0
-      ],
-      "ratio"          : [
-        "3693",
-        0
-      ],
-      "image"          : [
-        "363",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "3517"      : {
