@@ -63,7 +63,7 @@ APT_PACKAGES=(
     "ffmpeg"
 )
 
-#apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen
+#apt-get update --fix-missing &&  apt install -y   libmagickwand-dev axel tree screen socat  cron   libgl1 libegl1 libgles2 libglib2.0-0 libsm6 libxext6 libxrender1 ffmpeg
 
 
 PIP_PACKAGES=(
@@ -219,6 +219,10 @@ LORA_MODELS=(
     # ------------------------------
     # V2_flux_klein_4.safetensors
     "https://civitai.com/api/download/models/2777010?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # V3_flux_klein.safetensors
+    "https://civitai.com/api/download/models/2903375?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+
     # Chest_9B.safetensors
     "https://civitai.com/api/download/models/2857549?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # klein_slider_bodyweight_50.safetensors
@@ -250,10 +254,13 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2695145?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # voluptuous_slider_klein9b_v05_20260203_155139.safetensors
     "https://civitai.com/api/download/models/2659307?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    # ultra_real_v2.safetensors
-    "https://civitai.com/api/download/models/2778447?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    # ultra_real_v3.safetensors
-    "https://civitai.com/api/download/models/2810006?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # ultra_real_v4.safetensors
+    "https://civitai.com/api/download/models/2846977?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+
+
+    "https://civitai.com/api/download/models/1413133?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
     # klein_slider_eyes.safetensors
     "https://civitai.com/api/download/models/2619978?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # FLUX2_KLEIN_UNLOCKED_V1.safetensors
@@ -266,6 +273,9 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2848560?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # HighDetail.safetensors
     "https://civitai.com/api/download/models/2960420?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # Professional_studio_quality_epoch_10.safetensors
+    "https://civitai.com/api/download/models/2968520?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 
     # ------------------------------
     # Flux1.Dev
@@ -693,6 +703,11 @@ service cron start &
 #supervisorctl stop 'jupyter'
 #
 
+
+supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_0"'
+supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_1"'
+supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_2"'
+supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_3"'
 
 
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
