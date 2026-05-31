@@ -1220,6 +1220,10 @@
   },
   "931"       : {
     "inputs"     : {
+      "any_02" : [
+        "2849",
+        0
+      ],
       "any_03" : [
         "3279",
         0
@@ -2925,6 +2929,303 @@
       "title" : "Text Concatenate"
     }
   },
+  "2797"      : {
+    "inputs"     : {
+      "any_01" : [
+        "3279",
+        0
+      ],
+      "any_03" : [
+        "2339",
+        0
+      ],
+      "any_06" : [
+        "1885",
+        0
+      ],
+      "any_07" : [
+        "3018",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
+  "2814"      : {
+    "inputs"     : {
+      "image" : [
+        "2797",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "2815"      : {
+    "inputs"     : {
+      "face"            : false,
+      "left_eyebrow"    : true,
+      "right_eyebrow"   : true,
+      "left_eye"        : true,
+      "right_eye"       : true,
+      "left_pupil"      : false,
+      "right_pupil"     : false,
+      "lips"            : false,
+      "number_of_faces" : 1,
+      "confidence"      : 0.3,
+      "refine_mask"     : false,
+      "images"          : [
+        "2826",
+        0
+      ]
+    },
+    "class_type" : "APersonFaceLandmarkMaskGenerator",
+    "_meta"      : {
+      "title" : "Face Landmark Mask"
+    }
+  },
+  "2816"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "images"          : [
+        "2797",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "2818"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.6,
+      "mask_color"   : "255, 0, 25507",
+      "pass_through" : false,
+      "image"        : [
+        "2826",
+        0
+      ],
+      "mask"         : [
+        "3045",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2820"      : {
+    "inputs"     : {
+      "mask" : [
+        "3045",
+        0
+      ]
+    },
+    "class_type" : "MaskToImage",
+    "_meta"      : {
+      "title" : "Convert Mask to Image"
+    }
+  },
+  "2822"      : {
+    "inputs"     : {
+      "padding"        : 0,
+      "blur"           : 0,
+      "mask"           : [
+        "2816",
+        0
+      ],
+      "image_optional" : [
+        "2797",
+        0
+      ]
+    },
+    "class_type" : "MaskBoundingBox+",
+    "_meta"      : {
+      "title" : "🔧 Mask Bounding Box"
+    }
+  },
+  "2824"      : {
+    "inputs"     : {
+      "overlay_resize" : "None",
+      "resize_method"  : "nearest-exact",
+      "rescale_factor" : 1,
+      "width"          : [
+        "2822",
+        4
+      ],
+      "height"         : [
+        "2822",
+        5
+      ],
+      "x_offset"       : [
+        "2822",
+        2
+      ],
+      "y_offset"       : [
+        "2822",
+        3
+      ],
+      "rotation"       : 0,
+      "opacity"        : 0,
+      "base_image"     : [
+        "2825",
+        0
+      ],
+      "overlay_image"  : [
+        "2820",
+        0
+      ]
+    },
+    "class_type" : "Image Overlay",
+    "_meta"      : {
+      "title" : "Image Overlay"
+    }
+  },
+  "2825"      : {
+    "inputs"     : {
+      "width"  : [
+        "2814",
+        1
+      ],
+      "height" : [
+        "2814",
+        2
+      ],
+      "red"    : 0,
+      "green"  : 0,
+      "blue"   : 0
+    },
+    "class_type" : "Image Blank",
+    "_meta"      : {
+      "title" : "Image Blank"
+    }
+  },
+  "2826"      : {
+    "inputs"     : {
+      "padding_left"   : 0,
+      "padding_right"  : 0,
+      "padding_top"    : 0,
+      "padding_bottom" : 0,
+      "return_list"    : false,
+      "image"          : [
+        "2797",
+        0
+      ],
+      "mask"           : [
+        "2816",
+        0
+      ]
+    },
+    "class_type" : "Bounded Image Crop with Mask",
+    "_meta"      : {
+      "title" : "Bounded Image Crop with Mask"
+    }
+  },
+  "2827"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.58,
+      "mask_color"   : "255, 0, 25507",
+      "pass_through" : false,
+      "image"        : [
+        "2797",
+        0
+      ],
+      "mask"         : [
+        "2829",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2829"      : {
+    "inputs"     : {
+      "red"       : 255,
+      "green"     : 255,
+      "blue"      : 255,
+      "threshold" : 0,
+      "image"     : [
+        "2824",
+        0
+      ]
+    },
+    "class_type" : "MaskFromColor+",
+    "_meta"      : {
+      "title" : "🔧 Mask From Color"
+    }
+  },
+  "2830"      : {
+    "inputs"     : {
+      "expand"          : 8,
+      "tapered_corners" : true,
+      "mask"            : [
+        "2815",
+        0
+      ]
+    },
+    "class_type" : "GrowMask",
+    "_meta"      : {
+      "title" : "Grow Mask"
+    }
+  },
+  "2843"      : {
+    "inputs"     : {
+      "a"         : [
+        "2102",
+        0
+      ],
+      "b"         : 0.62,
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "Math Float"
+    }
+  },
+  "2849"      : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "3752",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 2,
+      "filename_number_start"   : "false",
+      "extension"               : "jpg",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "true",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "2998:3605",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
   "2964"      : {
     "inputs"     : {
       "condition"  : [
@@ -3002,6 +3303,25 @@
       "title" : "ImageAndMaskPreview"
     }
   },
+  "2999"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.3,
+      "mask_color"   : "255, 0, 207",
+      "pass_through" : false,
+      "image"        : [
+        "2797",
+        0
+      ],
+      "mask"         : [
+        "2829",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
   "3018"      : {
     "inputs"     : {
       "opacity"         : 50,
@@ -3021,6 +3341,10 @@
   },
   "3023"      : {
     "inputs"     : {
+      "any_01" : [
+        "2849",
+        0
+      ],
       "any_02" : [
         "2158",
         0
@@ -3029,6 +3353,18 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
+    }
+  },
+  "3045"      : {
+    "inputs"     : {
+      "masks" : [
+        "2830",
+        0
+      ]
+    },
+    "class_type" : "Mask Fill Holes",
+    "_meta"      : {
+      "title" : "Mask Fill Holes"
     }
   },
   "3047"      : {
@@ -4100,7 +4436,7 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.04,
+      "dishonesty_factor" : -0.03,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4301,11 +4637,11 @@
         "3705",
         0
       ],
-      "steps"               : 21,
+      "steps"               : 23,
       "cfg"                 : 1.1,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
-      "denoise"             : 0.19,
+      "denoise"             : 0.15,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4991,6 +5327,73 @@
       "title" : "Math Float 0.181818"
     }
   },
+  "3697"      : {
+    "inputs"     : {
+      "delimiter"        : ",",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "3701",
+        0
+      ],
+      "text_b"           : [
+        "2754",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3698"      : {
+    "inputs"     : {
+      "text" : "A professionally color-graded RAW close-up photograph of a shy sexy and alluring dark brown almond  skin tone young Indian v1dhya5 woman with extremely beautiful face , photo taken using using a  high-end professional camera , posing glamorously like she is with her lover who is taking the photo,  \n\nThe makeup is minimal but bold and glamorous, featuring black bindi on the forehead and a dramatic eye makeup with dark eyeliner / kohl and mascara, along with defined eyebrows. Her sexy pouty lips are painted a vivid red   . Her lips are narrow, plump, and wet-looking, subtly curved for a sensual appearance., adding a touch of elegance and intensity to their appearance. The skin has a healthy glow, accentuated by subtle matte makeup techniques. "
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "3699"      : {
+    "inputs"     : {
+      "delimiter"        : ",",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "3698",
+        0
+      ],
+      "text_b"           : [
+        "2754",
+        0
+      ],
+      "text_c"           : [
+        "3700",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "3700"      : {
+    "inputs"     : {
+      "text" : "well-defined eyebrows, long eyelashes, , Her lips glisten softly with moisture, her hazelnut brown detailed eyes, eyes luminous and tender, as if holding a quiet breath between them."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "3701"      : {
+    "inputs"     : {
+      "text" : "Her lips glisten softly with moisture, her eyes luminous and tender, as if holding a quiet breath between them.Red Lipstick, well-defined eyebrows, long eyelashes, (aidmarealisticskin:0.5)"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
   "3703"      : {
     "inputs"     : {
       "value" : 0.72
@@ -5080,6 +5483,26 @@
     }
   },
   "3747"      : {
+    "inputs"     : {
+      "condition"  : [
+        "3720",
+        0
+      ],
+      "when_true"  : [
+        "3135",
+        0
+      ],
+      "when_false" : [
+        "3135",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "3752"      : {
     "inputs"     : {
       "condition"  : [
         "3720",
@@ -6425,6 +6848,173 @@
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
       "title" : "1.35::0.50"
+    }
+  },
+  "2998:3590" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2998:3602",
+        0
+      ],
+      "t5xxl"    : [
+        "2998:3601",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "3362",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
+    }
+  },
+  "2998:3592" : {
+    "inputs"     : {
+      "max_shift"  : 1.55,
+      "base_shift" : 0.55,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3363",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.35::0.50"
+    }
+  },
+  "2998:3595" : {
+    "inputs"     : {
+      "combined"     : true,
+      "crop_factor"  : 3,
+      "bbox_fill"    : false,
+      "drop_size"    : 10,
+      "contour_fill" : true,
+      "mask"         : [
+        "2829",
+        0
+      ]
+    },
+    "class_type" : "MaskToSEGS",
+    "_meta"      : {
+      "title" : "MASK to SEGS"
+    }
+  },
+  "2998:3598" : {
+    "inputs"     : {
+      "conditioning" : [
+        "2998:3599",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2998:3599" : {
+    "inputs"     : {
+      "text" : "",
+      "clip" : [
+        "3362",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Negative Prompt"
+    }
+  },
+  "2998:3601" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "3699",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "2998:3602" : {
+    "inputs"     : {
+      "delimiter"        : ", ",
+      "clean_whitespace" : "true",
+      "text_a"           : [
+        "3697",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "2998:3605" : {
+    "inputs"     : {
+      "guide_size"         : 1024,
+      "guide_size_for"     : false,
+      "max_size"           : 1024,
+      "seed"               : [
+        "3338",
+        0
+      ],
+      "steps"              : 23,
+      "cfg"                : 1,
+      "sampler_name"       : "euler",
+      "scheduler"          : "beta",
+      "denoise"            : [
+        "2843",
+        0
+      ],
+      "feather"            : 5,
+      "noise_mask"         : true,
+      "force_inpaint"      : true,
+      "wildcard"           : "",
+      "cycle"              : 2,
+      "inpaint_model"      : false,
+      "noise_mask_feather" : 20,
+      "tiled_encode"       : false,
+      "tiled_decode"       : false,
+      "image"              : [
+        "2797",
+        0
+      ],
+      "segs"               : [
+        "2998:3595",
+        0
+      ],
+      "model"              : [
+        "2998:3592",
+        0
+      ],
+      "clip"               : [
+        "3362",
+        0
+      ],
+      "vae"                : [
+        "3373",
+        0
+      ],
+      "positive"           : [
+        "2998:3590",
+        0
+      ],
+      "negative"           : [
+        "2998:3598",
+        0
+      ]
+    },
+    "class_type" : "DetailerForEach",
+    "_meta"      : {
+      "title" : "Detailer (BG Detailer)"
     }
   }
 }
