@@ -2163,7 +2163,7 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.23,
+      "max_shift"  : 1.15,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -4071,7 +4071,7 @@
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
       "strength_model" : 0.4,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.07,
       "model"          : [
         "3534",
         0
@@ -4308,9 +4308,9 @@
         "3705",
         0
       ],
-      "steps"               : 12,
-      "cfg"                 : 1.1,
-      "sampler_name"        : "deis",
+      "steps"               : 20,
+      "cfg"                 : 1,
+      "sampler_name"        : "euler",
       "scheduler"           : "beta",
       "denoise"             : 0.18,
       "mode_type"           : "Chess",
@@ -5535,7 +5535,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5. \n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
