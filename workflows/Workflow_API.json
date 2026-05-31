@@ -5603,14 +5603,14 @@
   },
   "3841"      : {
     "inputs"     : {
-      "active_scale"        : 0.95,
-      "per_token_whiten"    : 0.05,
-      "norm_equalize"       : 0.05,
-      "early_layer_scale"   : 1.4,
-      "mid_layer_scale"     : 1,
-      "late_layer_scale"    : 0.8,
-      "preserve_original"   : 1,
-      "active_end_override" : false,
+      "contrast"            : 0.05,
+      "normalize_strength"  : 0.05,
+      "preserve_mode"       : "linear",
+      "magnitude"           : 0.95,
+      "edit_text_weight"    : 0.8,
+      "low_vram"            : false,
+      "preserve_original"   : 1.4,
+      "active_end_override" : 1,
       "device"              : "auto",
       "debug"               : false,
       "conditioning"        : [
