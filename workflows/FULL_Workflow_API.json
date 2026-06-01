@@ -4284,7 +4284,7 @@
   },
   "3474"      : {
     "inputs"     : {
-      "max_shift"  : 1.05,
+      "max_shift"  : 1.2,
       "base_shift" : 0.6,
       "width"      : [
         "3522",
@@ -4316,9 +4316,9 @@
       ],
       "steps"               : 23,
       "cfg"                 : 1.1,
-      "sampler_name"        : "euler",
+      "sampler_name"        : "deis",
       "scheduler"           : "beta",
-      "denoise"             : 0.15,
+      "denoise"             : 0.18,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
