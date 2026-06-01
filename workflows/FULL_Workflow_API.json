@@ -4241,7 +4241,7 @@
   },
   "3463"      : {
     "inputs"     : {
-      "expression" : "1.33*(a+c*(b-a))",
+      "expression" : "1*(a+c*(b-a))",
       "a"          : [
         "3427",
         0
@@ -5148,7 +5148,7 @@
     "inputs"     : {
       "lora_name"      : "klein_slider_bodyweight_50.safetensors",
       "strength_model" : 3.8,
-      "strength_clip"  : 0.21,
+      "strength_clip"  : 0,
       "model"          : [
         "3834",
         0
@@ -5648,7 +5648,7 @@
     "inputs"     : {
       "lora_name"      : "klein_slider_bust.safetensors",
       "strength_model" : 2.4,
-      "strength_clip"  : 0.21,
+      "strength_clip"  : 0,
       "model"          : [
         "3779",
         0
@@ -6228,7 +6228,7 @@
     "inputs"     : {
       "lora_name"      : "Chest_9B.safetensors",
       "strength_model" : 2.4,
-      "strength_clip"  : 0.21,
+      "strength_clip"  : 0,
       "model"          : [
         "3842",
         0
