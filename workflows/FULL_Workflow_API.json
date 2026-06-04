@@ -1422,7 +1422,7 @@
   },
   "1740"      : {
     "inputs"     : {
-      "value" : 1.21
+      "value" : 1.18
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -4286,8 +4286,8 @@
         "3705",
         0
       ],
-      "steps"               : 23,
-      "cfg"                 : 1.1,
+      "steps"               : 17,
+      "cfg"                 : 0.8,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
       "denoise"             : 0.15,
@@ -6251,7 +6251,7 @@
       "preserve_original"   : 1.4,
       "preserve_mode"       : "linear",
       "edit_text_weight"    : 0.8,
-      "active_end_override" : 1,
+      "active_end_override" : 0,
       "low_vram"            : false,
       "device"              : "auto",
       "debug"               : false,
