@@ -1813,7 +1813,7 @@
         0
       ],
       "sampler"      : [
-        "3420",
+        "3419",
         0
       ],
       "sigmas"       : [
@@ -2163,16 +2163,10 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.15,
-      "base_shift" : 0.5,
-      "width"      : [
-        "1927",
-        0
-      ],
-      "height"     : [
-        "1928",
-        0
-      ],
+      "max_shift"  : 0.8,
+      "base_shift" : 0.6,
+      "width"      : 1024,
+      "height"     : 1024,
       "model"      : [
         "3402",
         0
@@ -2180,7 +2174,7 @@
     },
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
-      "title" : "ModelSamplingFlux"
+      "title" : "1.15::0.5"
     }
   },
   "1988"      : {
@@ -4104,7 +4098,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "default"
+      "weight_dtype" : "fp8_e4m3fn"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -4124,28 +4118,6 @@
     "class_type" : "LyingSigmaSampler",
     "_meta"      : {
       "title" : "Lying Sigma Sampler"
-    }
-  },
-  "3420"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.14,
-      "start"              : 0.42,
-      "end"                : 0.65,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : false,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "3419",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "3426"      : {
@@ -4241,7 +4213,7 @@
   },
   "3463"      : {
     "inputs"     : {
-      "expression" : "1*(a+c*(b-a))",
+      "expression" : "1.33*(a+c*(b-a))",
       "a"          : [
         "3427",
         0
@@ -4284,7 +4256,7 @@
   },
   "3474"      : {
     "inputs"     : {
-      "max_shift"  : 1.2,
+      "max_shift"  : 1.05,
       "base_shift" : 0.6,
       "width"      : [
         "3522",
@@ -4316,9 +4288,9 @@
       ],
       "steps"               : 23,
       "cfg"                 : 1.1,
-      "sampler_name"        : "deis",
+      "sampler_name"        : "euler",
       "scheduler"           : "beta",
-      "denoise"             : 0.18,
+      "denoise"             : 0.15,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -5148,7 +5120,7 @@
     "inputs"     : {
       "lora_name"      : "klein_slider_bodyweight_50.safetensors",
       "strength_model" : 3.8,
-      "strength_clip"  : 0,
+      "strength_clip"  : 0.21,
       "model"          : [
         "3834",
         0
@@ -5582,7 +5554,7 @@
         0
       ],
       "positive"     : [
-        "3974",
+        "3980",
         0
       ],
       "negative"     : [
@@ -5648,7 +5620,7 @@
     "inputs"     : {
       "lora_name"      : "klein_slider_bust.safetensors",
       "strength_model" : 2.4,
-      "strength_clip"  : 0,
+      "strength_clip"  : 0.21,
       "model"          : [
         "3779",
         0
@@ -6128,6 +6100,34 @@
       "title" : "Klein_InpaintModelConditioning"
     }
   },
+  "3918"      : {
+    "inputs"     : {
+      "vae" : [
+        "3771",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "Klein_VAE Enc"
+    }
+  },
+  "3920"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "3923",
+        0
+      ],
+      "latent"       : [
+        "3918",
+        0
+      ]
+    },
+    "class_type" : "ReferenceLatent",
+    "_meta"      : {
+      "title" : "ReferenceLatent"
+    }
+  },
   "3922"      : {
     "inputs"     : {
       "seed"         : [
@@ -6228,7 +6228,7 @@
     "inputs"     : {
       "lora_name"      : "Chest_9B.safetensors",
       "strength_model" : 2.4,
-      "strength_clip"  : 0,
+      "strength_clip"  : 0.21,
       "model"          : [
         "3842",
         0
@@ -6243,7 +6243,7 @@
       "title" : "Load LoRA (Model and CLIP)"
     }
   },
-  "3974"      : {
+  "3980"      : {
     "inputs"     : {
       "magnitude"           : 1,
       "contrast"            : 0.05,
@@ -6426,7 +6426,7 @@
   },
   "2996:3572" : {
     "inputs"     : {
-      "max_shift"  : 1.08,
+      "max_shift"  : 0.9,
       "base_shift" : 0.58,
       "width"      : 1024,
       "height"     : 1024,
