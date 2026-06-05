@@ -1422,7 +1422,7 @@
   },
   "1740"      : {
     "inputs"     : {
-      "value" : 1.18
+      "value" : 1.21
     },
     "class_type" : "easy float",
     "_meta"      : {
@@ -2163,10 +2163,16 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 0.8,
-      "base_shift" : 0.6,
-      "width"      : 1024,
-      "height"     : 1024,
+      "max_shift"  : 1.15,
+      "base_shift" : 0.5,
+      "width"      : [
+        "1927",
+        0
+      ],
+      "height"     : [
+        "1928",
+        0
+      ],
       "model"      : [
         "3402",
         0
@@ -2174,7 +2180,7 @@
     },
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
-      "title" : "1.15::0.5"
+      "title" : "ModelSamplingFlux"
     }
   },
   "1988"      : {
@@ -3538,7 +3544,7 @@
         0
       ],
       "clip"           : [
-        "3374",
+        "3404",
         0
       ]
     },
@@ -3557,7 +3563,7 @@
         0
       ],
       "clip"           : [
-        "3374",
+        "3404",
         0
       ]
     },
@@ -3701,19 +3707,6 @@
       "title" : "breast-size2 1.80::1.00"
     }
   },
-  "3372"      : {
-    "inputs"     : {
-      "stop_at_clip_layer" : -3,
-      "clip"               : [
-        "3404",
-        0
-      ]
-    },
-    "class_type" : "CLIPSetLastLayer",
-    "_meta"      : {
-      "title" : "CLIP Set Last Layer"
-    }
-  },
   "3373"      : {
     "inputs"     : {
       "vae_name" : "ae.safetensors"
@@ -3721,22 +3714,6 @@
     "class_type" : "VAELoader",
     "_meta"      : {
       "title" : "FLUX VAE"
-    }
-  },
-  "3374"      : {
-    "inputs"     : {
-      "q"    : 1.1,
-      "k"    : 1.05,
-      "v"    : 0.95,
-      "out"  : 1.12,
-      "clip" : [
-        "3372",
-        0
-      ]
-    },
-    "class_type" : "CLIPAttentionMultiply",
-    "_meta"      : {
-      "title" : "CLIPAttentionMultiply"
     }
   },
   "3375"      : {
@@ -3777,7 +3754,7 @@
         0
       ],
       "clip"           : [
-        "3374",
+        "3404",
         0
       ]
     },
@@ -3841,7 +3818,7 @@
         0
       ],
       "clip"           : [
-        "3374",
+        "3404",
         0
       ]
     },
@@ -3860,7 +3837,7 @@
         0
       ],
       "clip"           : [
-        "3374",
+        "3404",
         0
       ]
     },
@@ -3879,7 +3856,7 @@
         0
       ],
       "clip"           : [
-        "3374",
+        "3404",
         0
       ]
     },
@@ -3987,7 +3964,7 @@
     "inputs"     : {
       "enable_fp16_accumulation" : true,
       "model"                    : [
-        "3407",
+        "3414",
         0
       ]
     },
@@ -4048,25 +4025,6 @@
       "title" : "DualCLIPLoader"
     }
   },
-  "3407"      : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 2,
-      "start_percent"        : 0,
-      "end_percent"          : 0.6,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "3414",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "4::2::0::0.5"
-    }
-  },
   "3410"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
@@ -4098,7 +4056,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "fp8_e4m3fn"
+      "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -4286,8 +4244,8 @@
         "3705",
         0
       ],
-      "steps"               : 17,
-      "cfg"                 : 0.8,
+      "steps"               : 23,
+      "cfg"                 : 1.1,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
       "denoise"             : 0.15,
@@ -5554,7 +5512,7 @@
         0
       ],
       "positive"     : [
-        "3980",
+        "3974",
         0
       ],
       "negative"     : [
@@ -6100,34 +6058,6 @@
       "title" : "Klein_InpaintModelConditioning"
     }
   },
-  "3918"      : {
-    "inputs"     : {
-      "vae" : [
-        "3771",
-        0
-      ]
-    },
-    "class_type" : "VAEEncode",
-    "_meta"      : {
-      "title" : "Klein_VAE Enc"
-    }
-  },
-  "3920"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "3923",
-        0
-      ],
-      "latent"       : [
-        "3918",
-        0
-      ]
-    },
-    "class_type" : "ReferenceLatent",
-    "_meta"      : {
-      "title" : "ReferenceLatent"
-    }
-  },
   "3922"      : {
     "inputs"     : {
       "seed"         : [
@@ -6137,7 +6067,7 @@
       "steps"        : 5,
       "cfg"          : 1,
       "sampler_name" : "euler",
-      "scheduler"    : "simple",
+      "scheduler"    : "normal",
       "denoise"      : 0.58,
       "model"        : [
         "3846",
@@ -6163,7 +6093,7 @@
   },
   "3923"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.",
+      "text" : "Make this photo high-quality photo of v1dhya5.  copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. \n\nAvoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.",
       "clip" : [
         "3846",
         1
@@ -6228,7 +6158,7 @@
     "inputs"     : {
       "lora_name"      : "Chest_9B.safetensors",
       "strength_model" : 2.4,
-      "strength_clip"  : 0.21,
+      "strength_clip"  : 0.09,
       "model"          : [
         "3842",
         0
@@ -6243,15 +6173,15 @@
       "title" : "Load LoRA (Model and CLIP)"
     }
   },
-  "3980"      : {
+  "3974"      : {
     "inputs"     : {
       "magnitude"           : 1,
       "contrast"            : 0.05,
       "normalize_strength"  : 0.05,
-      "preserve_original"   : 1.4,
+      "preserve_original"   : 1,
       "preserve_mode"       : "linear",
       "edit_text_weight"    : 0.8,
-      "active_end_override" : 0,
+      "active_end_override" : 1,
       "low_vram"            : false,
       "device"              : "auto",
       "debug"               : false,
@@ -6263,6 +6193,22 @@
     "class_type" : "Flux2KleinEnhancer",
     "_meta"      : {
       "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
+  "3979"      : {
+    "inputs"     : {
+      "q"    : 1,
+      "k"    : 1,
+      "v"    : 1,
+      "out"  : 1,
+      "clip" : [
+        "3404",
+        0
+      ]
+    },
+    "class_type" : "CLIPAttentionMultiply",
+    "_meta"      : {
+      "title" : "CLIPAttentionMultiply"
     }
   },
   "2996:3575" : {
@@ -6426,7 +6372,7 @@
   },
   "2996:3572" : {
     "inputs"     : {
-      "max_shift"  : 0.9,
+      "max_shift"  : 1.08,
       "base_shift" : 0.58,
       "width"      : 1024,
       "height"     : 1024,
