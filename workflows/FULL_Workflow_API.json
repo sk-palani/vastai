@@ -4190,28 +4190,6 @@
       "title" : "Math Expression 🐍"
     }
   },
-  "3469"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.03,
-      "start"              : 0.3,
-      "end"                : 0.45,
-      "bias"               : 0.35,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : false,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "3502",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
-    }
-  },
   "3474"      : {
     "inputs"     : {
       "max_shift"  : 1.05,
@@ -4244,11 +4222,11 @@
         "3705",
         0
       ],
-      "steps"               : 23,
-      "cfg"                 : 1.1,
-      "sampler_name"        : "euler",
+      "steps"               : 16,
+      "cfg"                 : 0.8,
+      "sampler_name"        : "deis",
       "scheduler"           : "beta",
-      "denoise"             : 0.15,
+      "denoise"             : 0.12,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4283,7 +4261,7 @@
         0
       ],
       "custom_sampler"      : [
-        "3469",
+        "3381",
         0
       ],
       "custom_sigmas"       : [
@@ -4336,21 +4314,6 @@
     "class_type" : "Text Contains",
     "_meta"      : {
       "title" : "Contains [~~]"
-    }
-  },
-  "3502"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.03,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.5,
-      "sampler"           : [
-        "3381",
-        0
-      ]
-    },
-    "class_type" : "LyingSigmaSampler",
-    "_meta"      : {
-      "title" : "Lying Sigma Sampler"
     }
   },
   "3512"      : {
