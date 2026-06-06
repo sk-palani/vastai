@@ -314,7 +314,7 @@
     },
     "class_type" : "StringConcatenate",
     "_meta"      : {
-      "title" : "Concatenate"
+      "title" : "Concatenate Text"
     }
   },
   "247"       : {
@@ -372,7 +372,7 @@
     },
     "class_type" : "StringReplace",
     "_meta"      : {
-      "title" : "Replace"
+      "title" : "Replace Text"
     }
   },
   "254"       : {
@@ -390,7 +390,7 @@
     },
     "class_type" : "RegexExtract",
     "_meta"      : {
-      "title" : "Regex Extract"
+      "title" : "Extract Text"
     }
   },
   "255"       : {
@@ -482,7 +482,7 @@
     },
     "class_type" : "StringReplace",
     "_meta"      : {
-      "title" : "Replace"
+      "title" : "Replace Text"
     }
   },
   "272"       : {
@@ -500,7 +500,7 @@
     },
     "class_type" : "RegexExtract",
     "_meta"      : {
-      "title" : "Regex Extract"
+      "title" : "Extract Text"
     }
   },
   "275"       : {
@@ -562,7 +562,7 @@
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
-      "title" : "String"
+      "title" : "Text String"
     }
   },
   "285"       : {
@@ -571,7 +571,7 @@
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
-      "title" : "String"
+      "title" : "Text String"
     }
   },
   "286"       : {
@@ -610,7 +610,7 @@
     },
     "class_type" : "RegexExtract",
     "_meta"      : {
-      "title" : "Regex Extract"
+      "title" : "Extract Text"
     }
   },
   "290"       : {
@@ -622,7 +622,7 @@
     },
     "class_type" : "StringLength",
     "_meta"      : {
-      "title" : "Length"
+      "title" : "Text Length"
     }
   },
   "293"       : {
@@ -652,7 +652,7 @@
     },
     "class_type" : "StringLength",
     "_meta"      : {
-      "title" : "Length"
+      "title" : "Text Length"
     }
   },
   "296"       : {
@@ -847,6 +847,18 @@
       "title" : "🔧 Get Image Size"
     }
   },
+  "445"       : {
+    "inputs"     : {
+      "image" : [
+        "2109",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
   "478"       : {
     "inputs"     : {
       "image" : [
@@ -892,7 +904,7 @@
     },
     "class_type" : "RegexExtract",
     "_meta"      : {
-      "title" : "Regex Extract"
+      "title" : "Extract Text"
     }
   },
   "515"       : {
@@ -1122,7 +1134,7 @@
     },
     "class_type" : "InvertMask",
     "_meta"      : {
-      "title" : "InvertMask"
+      "title" : "Invert Mask"
     }
   },
   "828"       : {
@@ -1273,7 +1285,7 @@
     },
     "class_type" : "ImageScaleToTotalPixels",
     "_meta"      : {
-      "title" : "ImageScaleToTotalPixels"
+      "title" : "Scale Image to Total Pixels"
     }
   },
   "1318"      : {
@@ -1542,7 +1554,7 @@
     },
     "class_type" : "StringConcatenate",
     "_meta"      : {
-      "title" : "Concatenate"
+      "title" : "Concatenate Text"
     }
   },
   "1819"      : {
@@ -1659,7 +1671,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.9",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -1740,7 +1752,7 @@
   "1859"      : {
     "inputs"     : {
       "model"        : [
-        "3114",
+        "3994",
         0
       ],
       "conditioning" : [
@@ -1755,7 +1767,7 @@
   },
   "1860"      : {
     "inputs"     : {
-      "scheduler" : "simple",
+      "scheduler" : "beta",
       "steps"     : [
         "1893",
         0
@@ -1765,7 +1777,7 @@
         0
       ],
       "model"     : [
-        "3114",
+        "3994",
         0
       ]
     },
@@ -1813,7 +1825,7 @@
         0
       ],
       "sampler"      : [
-        "3419",
+        "3420",
         0
       ],
       "sigmas"       : [
@@ -2165,14 +2177,8 @@
     "inputs"     : {
       "max_shift"  : 1.15,
       "base_shift" : 0.5,
-      "width"      : [
-        "1927",
-        0
-      ],
-      "height"     : [
-        "1928",
-        0
-      ],
+      "width"      : 1024,
+      "height"     : 1024,
       "model"      : [
         "3402",
         0
@@ -2776,7 +2782,7 @@
     },
     "class_type" : "StringReplace",
     "_meta"      : {
-      "title" : "Replace"
+      "title" : "Replace Text"
     }
   },
   "2615"      : {
@@ -2975,7 +2981,7 @@
         "2102",
         0
       ],
-      "b"         : 0.75,
+      "b"         : 0.66,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3230,29 +3236,7 @@
     },
     "class_type" : "StringReplace",
     "_meta"      : {
-      "title" : "Replace"
-    }
-  },
-  "3114"      : {
-    "inputs"     : {
-      "max_shift"  : 1.4,
-      "base_shift" : 0.4,
-      "width"      : [
-        "1927",
-        0
-      ],
-      "height"     : [
-        "1928",
-        0
-      ],
-      "model"      : [
-        "3391",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "ModelSamplingFlux 1.40::0.8"
+      "title" : "Replace Text"
     }
   },
   "3115"      : {
@@ -3266,7 +3250,7 @@
     },
     "class_type" : "StringReplace",
     "_meta"      : {
-      "title" : "Replace"
+      "title" : "Replace Text"
     }
   },
   "3133"      : {
@@ -3363,7 +3347,7 @@
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
-      "title" : "String"
+      "title" : "Text String"
     }
   },
   "3140"      : {
@@ -3372,7 +3356,7 @@
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
-      "title" : "String"
+      "title" : "Text String"
     }
   },
   "3141"      : {
@@ -3381,7 +3365,7 @@
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
-      "title" : "String"
+      "title" : "Text String"
     }
   },
   "3142"      : {
@@ -3390,7 +3374,7 @@
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
-      "title" : "String"
+      "title" : "Text String"
     }
   },
   "3201"      : {
@@ -3443,7 +3427,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3479",
+        "3478",
         0
       ]
     },
@@ -3540,11 +3524,11 @@
       "strength_model" : 0.92,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
-        "3404",
+        "3374",
         0
       ]
     },
@@ -3559,11 +3543,11 @@
       "strength_model" : 1,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
-        "3404",
+        "3374",
         0
       ]
     },
@@ -3707,6 +3691,19 @@
       "title" : "breast-size2 1.80::1.00"
     }
   },
+  "3372"      : {
+    "inputs"     : {
+      "stop_at_clip_layer" : -3,
+      "clip"               : [
+        "3404",
+        0
+      ]
+    },
+    "class_type" : "CLIPSetLastLayer",
+    "_meta"      : {
+      "title" : "CLIP Set Last Layer"
+    }
+  },
   "3373"      : {
     "inputs"     : {
       "vae_name" : "ae.safetensors"
@@ -3714,6 +3711,22 @@
     "class_type" : "VAELoader",
     "_meta"      : {
       "title" : "FLUX VAE"
+    }
+  },
+  "3374"      : {
+    "inputs"     : {
+      "q"    : 1.1,
+      "k"    : 1.05,
+      "v"    : 0.95,
+      "out"  : 1.12,
+      "clip" : [
+        "3372",
+        0
+      ]
+    },
+    "class_type" : "CLIPAttentionMultiply",
+    "_meta"      : {
+      "title" : "CLIPAttentionMultiply"
     }
   },
   "3375"      : {
@@ -3750,11 +3763,11 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
-        "3404",
+        "3374",
         0
       ]
     },
@@ -3814,11 +3827,11 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
-        "3404",
+        "3374",
         0
       ]
     },
@@ -3833,11 +3846,11 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
-        "3404",
+        "3374",
         0
       ]
     },
@@ -3852,11 +3865,11 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
-        "3404",
+        "3374",
         0
       ]
     },
@@ -3904,20 +3917,6 @@
       "title" : "Pandora-RAWr 0.80:0.80"
     }
   },
-  "3397"      : {
-    "inputs"     : {
-      "lora_name"      : "SameFace_Fix.safetensors",
-      "strength_model" : -0.6,
-      "model"          : [
-        "3396",
-        0
-      ]
-    },
-    "class_type" : "LoraLoaderModelOnly",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
   "3398"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -3958,19 +3957,6 @@
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
       "title" : "Load Upscale Model"
-    }
-  },
-  "3401"      : {
-    "inputs"     : {
-      "enable_fp16_accumulation" : true,
-      "model"                    : [
-        "3414",
-        0
-      ]
-    },
-    "class_type" : "ModelPatchTorchSettings",
-    "_meta"      : {
-      "title" : "Model Patch Torch Settings"
     }
   },
   "3402"      : {
@@ -4025,6 +4011,25 @@
       "title" : "DualCLIPLoader"
     }
   },
+  "3407"      : {
+    "inputs"     : {
+      "block_number"         : 4,
+      "downscale_factor"     : 2,
+      "start_percent"        : 0,
+      "end_percent"          : 0.6,
+      "downscale_after_skip" : true,
+      "downscale_method"     : "bislerp",
+      "upscale_method"       : "bislerp",
+      "model"                : [
+        "3414",
+        0
+      ]
+    },
+    "class_type" : "PatchModelAddDownscale",
+    "_meta"      : {
+      "title" : "4::2::0::0.5"
+    }
+  },
   "3410"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
@@ -4056,7 +4061,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "default"
+      "weight_dtype" : "fp8_e4m3fn"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -4076,6 +4081,28 @@
     "class_type" : "LyingSigmaSampler",
     "_meta"      : {
       "title" : "Lying Sigma Sampler"
+    }
+  },
+  "3420"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.1,
+      "start"              : 0.25,
+      "end"                : 0.8,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : false,
+      "cfg_scale_override" : 0,
+      "sampler"            : [
+        "3419",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
     }
   },
   "3426"      : {
@@ -4222,11 +4249,11 @@
         "3705",
         0
       ],
-      "steps"               : 16,
-      "cfg"                 : 0.8,
-      "sampler_name"        : "deis",
-      "scheduler"           : "beta",
-      "denoise"             : 0.12,
+      "steps"               : 12,
+      "cfg"                 : 0.9,
+      "sampler_name"        : "euler",
+      "scheduler"           : "simple",
+      "denoise"             : 0.2,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4249,12 +4276,12 @@
         0
       ],
       "positive"            : [
-        "2108",
+        "3986",
         0
       ],
       "negative"            : [
-        "1412",
-        1
+        "3983",
+        0
       ],
       "vae"                 : [
         "3373",
@@ -4272,25 +4299,6 @@
     "class_type" : "UltimateSDUpscaleCustomSample",
     "_meta"      : {
       "title" : "Ultimate SD Upscale (Custom Sample)"
-    }
-  },
-  "3479"      : {
-    "inputs"     : {
-      "method"       : "mkl",
-      "strength"     : 0.5,
-      "multithread"  : true,
-      "image_ref"    : [
-        "2669",
-        0
-      ],
-      "image_target" : [
-        "3478",
-        0
-      ]
-    },
-    "class_type" : "ColorMatch",
-    "_meta"      : {
-      "title" : "Color Match"
     }
   },
   "3493"      : {
@@ -4417,7 +4425,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "3397",
+        "3396",
         0
       ],
       "model2"            : [
@@ -4485,10 +4493,10 @@
   "3535"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 1.8,
-      "strength_clip"  : 0.2,
+      "strength_model" : 2.8,
+      "strength_clip"  : 0.1,
       "model"          : [
-        "3397",
+        "3396",
         0
       ],
       "clip"           : [
@@ -4524,7 +4532,7 @@
   "3538"      : {
     "inputs"     : {
       "model_a" : [
-        "3397",
+        "3396",
         0
       ],
       "model_b" : [
@@ -5041,7 +5049,7 @@
     "inputs"     : {
       "lora_name"      : "klein_slider_bodyweight_50.safetensors",
       "strength_model" : 3.8,
-      "strength_clip"  : 0.21,
+      "strength_clip"  : 0.08,
       "model"          : [
         "3834",
         0
@@ -5151,7 +5159,7 @@
   "3789"      : {
     "inputs"     : {
       "model_a" : [
-        "3842",
+        "3779",
         0
       ],
       "model_b" : [
@@ -5171,8 +5179,8 @@
   "3790"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3842",
-        1
+        "3780",
+        0
       ],
       "clip_b"  : [
         "3763",
@@ -5496,13 +5504,13 @@
     "inputs"     : {
       "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.09,
+      "strength_clip"  : 0.08,
       "model"          : [
-        "3930",
+        "3842",
         0
       ],
       "clip"           : [
-        "3930",
+        "3842",
         1
       ]
     },
@@ -5540,8 +5548,8 @@
   "3842"      : {
     "inputs"     : {
       "lora_name"      : "klein_slider_bust.safetensors",
-      "strength_model" : 2.4,
-      "strength_clip"  : 0.21,
+      "strength_model" : 3,
+      "strength_clip"  : 0.09,
       "model"          : [
         "3779",
         0
@@ -5558,8 +5566,8 @@
   },
   "3843"      : {
     "inputs"     : {
-      "lora_name"      : "HighDetail.safetensors",
-      "strength_model" : 0.42,
+      "lora_name"      : "ColorTone_Standard.safetensors",
+      "strength_model" : 0.8,
       "strength_clip"  : 0.08,
       "model"          : [
         "3845",
@@ -5572,7 +5580,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5 0.92::0.88"
+      "title" : "ColorTone_Standard"
     }
   },
   "3844"      : {
@@ -5616,7 +5624,7 @@
   "3846"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v4_klein.safetensors",
-      "strength_model" : 0.71,
+      "strength_model" : 0.74,
       "strength_clip"  : 0.08,
       "model"          : [
         "3812",
@@ -5754,7 +5762,7 @@
     },
     "class_type" : "PrimitiveString",
     "_meta"      : {
-      "title" : "String"
+      "title" : "Text String"
     }
   },
   "3862"      : {
@@ -5927,7 +5935,7 @@
   },
   "3904"      : {
     "inputs"     : {
-      "expand"                 : 12,
+      "expand"                 : 18,
       "incremental_expandrate" : 6,
       "tapered_corners"        : true,
       "flip_input"             : false,
@@ -5996,7 +6004,7 @@
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
-        "3923",
+        "3920",
         0
       ],
       "negative"   : [
@@ -6021,6 +6029,38 @@
       "title" : "Klein_InpaintModelConditioning"
     }
   },
+  "3918"      : {
+    "inputs"     : {
+      "pixels" : [
+        "1837",
+        0
+      ],
+      "vae"    : [
+        "3771",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "Klein_VAE Enc"
+    }
+  },
+  "3920"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "3923",
+        0
+      ],
+      "latent"       : [
+        "3918",
+        0
+      ]
+    },
+    "class_type" : "ReferenceLatent",
+    "_meta"      : {
+      "title" : "ReferenceLatent"
+    }
+  },
   "3922"      : {
     "inputs"     : {
       "seed"         : [
@@ -6031,7 +6071,7 @@
       "cfg"          : 1,
       "sampler_name" : "euler",
       "scheduler"    : "normal",
-      "denoise"      : 0.58,
+      "denoise"      : 0.8,
       "model"        : [
         "3846",
         0
@@ -6056,7 +6096,7 @@
   },
   "3923"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5.  copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. \n\nAvoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.",
+      "text" : "Make this photo high-quality photo of v1dhya5.  copy the expression from the reference image.\n\ncopy the accessories like nose pin and ear studs from the reference image.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a very small black or burgundy bindi.\n\n",
       "clip" : [
         "3846",
         1
@@ -6117,35 +6157,16 @@
       "title" : "Image Save"
     }
   },
-  "3930"      : {
-    "inputs"     : {
-      "lora_name"      : "Chest_9B.safetensors",
-      "strength_model" : 2.4,
-      "strength_clip"  : 0.09,
-      "model"          : [
-        "3842",
-        0
-      ],
-      "clip"           : [
-        "3842",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
-    }
-  },
   "3974"      : {
     "inputs"     : {
-      "magnitude"           : 1,
-      "contrast"            : 0.05,
-      "normalize_strength"  : 0.05,
+      "active_scale"        : 1,
+      "per_token_whiten"    : 0.05,
+      "norm_equalize"       : 0.05,
+      "early_layer_scale"   : 0.8,
+      "mid_layer_scale"     : 1.2,
+      "late_layer_scale"    : 0.8,
       "preserve_original"   : 1,
-      "preserve_mode"       : "linear",
-      "edit_text_weight"    : 0.8,
-      "active_end_override" : 1,
-      "low_vram"            : false,
+      "active_end_override" : false,
       "device"              : "auto",
       "debug"               : false,
       "conditioning"        : [
@@ -6158,20 +6179,120 @@
       "title" : "FLUX.2 Klein Enhancer"
     }
   },
-  "3979"      : {
+  "3982"      : {
     "inputs"     : {
-      "q"    : 1,
-      "k"    : 1,
-      "v"    : 1,
-      "out"  : 1,
+      "text" : "",
       "clip" : [
-        "3404",
+        "3339",
         0
       ]
     },
-    "class_type" : "CLIPAttentionMultiply",
+    "class_type" : "CLIPTextEncode",
     "_meta"      : {
-      "title" : "CLIPAttentionMultiply"
+      "title" : "CLIP Text Encode (Prompt)"
+    }
+  },
+  "3983"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "3982",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "3985"      : {
+    "inputs"     : {
+      "text" : "professional photo taken using a high-end Fujifilm X-T5 camera depicting an   indian  v1dhya5 woman in a serene setting, the overall mood of the photograph is calm and introspective",
+      "clip" : [
+        "3339",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "CLIP Text Encode (Prompt)"
+    }
+  },
+  "3986"      : {
+    "inputs"     : {
+      "guidance"     : 3.5,
+      "conditioning" : [
+        "3985",
+        0
+      ]
+    },
+    "class_type" : "FluxGuidance",
+    "_meta"      : {
+      "title" : "FluxGuidance"
+    }
+  },
+  "3991"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "images"          : [
+        "1837",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "3992"      : {
+    "inputs"     : {
+      "image" : [
+        "1837",
+        0
+      ],
+      "mask"  : [
+        "3996",
+        0
+      ]
+    },
+    "class_type" : "ImageCropByMask",
+    "_meta"      : {
+      "title" : "Image Crop By Mask"
+    }
+  },
+  "3994"      : {
+    "inputs"     : {
+      "max_shift"  : 1.4,
+      "base_shift" : 0.4,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3391",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.40::0.40"
+    }
+  },
+  "3996"      : {
+    "inputs"     : {
+      "expand"          : 30,
+      "tapered_corners" : true,
+      "mask"            : [
+        "3991",
+        0
+      ]
+    },
+    "class_type" : "GrowMask",
+    "_meta"      : {
+      "title" : "Grow Mask"
     }
   },
   "2996:3575" : {
@@ -6282,7 +6403,7 @@
         "3338",
         0
       ],
-      "steps"              : 19,
+      "steps"              : 24,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -6335,8 +6456,8 @@
   },
   "2996:3572" : {
     "inputs"     : {
-      "max_shift"  : 1.08,
-      "base_shift" : 0.58,
+      "max_shift"  : 0.8,
+      "base_shift" : 0.4,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
