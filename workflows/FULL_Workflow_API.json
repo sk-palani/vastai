@@ -1659,7 +1659,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.6",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -1813,7 +1813,7 @@
         0
       ],
       "sampler"      : [
-        "3420",
+        "3381",
         0
       ],
       "sigmas"       : [
@@ -3528,7 +3528,7 @@
       "strength_model" : 0.92,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3414",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3547,7 +3547,7 @@
       "strength_model" : 1,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3414",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3767,7 +3767,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3414",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3831,7 +3831,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3414",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3850,7 +3850,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
-        "3414",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3869,7 +3869,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
-        "3414",
+        "3407",
         0
       ],
       "clip"           : [
@@ -4027,6 +4027,25 @@
     "class_type" : "DualCLIPLoader",
     "_meta"      : {
       "title" : "DualCLIPLoader"
+    }
+  },
+  "3407"      : {
+    "inputs"     : {
+      "block_number"         : 4,
+      "downscale_factor"     : 2,
+      "start_percent"        : 0,
+      "end_percent"          : 0.6,
+      "downscale_after_skip" : true,
+      "downscale_method"     : "bislerp",
+      "upscale_method"       : "bislerp",
+      "model"                : [
+        "3414",
+        0
+      ]
+    },
+    "class_type" : "PatchModelAddDownscale",
+    "_meta"      : {
+      "title" : "4::2::0::0.5"
     }
   },
   "3410"      : {
@@ -4289,11 +4308,11 @@
         "3705",
         0
       ],
-      "steps"               : 12,
-      "cfg"                 : 1.1,
-      "sampler_name"        : "deis",
+      "steps"               : 14,
+      "cfg"                 : 1,
+      "sampler_name"        : "euler",
       "scheduler"           : "beta",
-      "denoise"             : 0.18,
+      "denoise"             : 0.2,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -5641,7 +5660,7 @@
   "3843"      : {
     "inputs"     : {
       "lora_name"      : "HighDetail.safetensors",
-      "strength_model" : 0.21,
+      "strength_model" : 0.12,
       "strength_clip"  : 0.08,
       "model"          : [
         "3845",
@@ -5660,14 +5679,14 @@
   "3844"      : {
     "inputs"     : {
       "lora_name"      : "ultra_real_v4.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3843",
+        "3973",
         0
       ],
       "clip"           : [
-        "3843",
+        "3973",
         1
       ]
     },
@@ -6216,6 +6235,25 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA (Model and CLIP)"
+    }
+  },
+  "3973"      : {
+    "inputs"     : {
+      "lora_name"      : "ColorTone_Standard.safetensors",
+      "strength_model" : 0.64,
+      "strength_clip"  : 0.08,
+      "model"          : [
+        "3843",
+        0
+      ],
+      "clip"           : [
+        "3843",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "ColorTone_Standard"
     }
   },
   "2996:3575" : {

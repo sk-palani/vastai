@@ -9,6 +9,7 @@
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 workflows_dir=${WORKSPACE}/ComfyUI/user/default/workflows
 
+mkdir -p "${WORKSPACE}/ComfyUI/user/default/workflows"
 mkdir -p "${WORKSPACE}ComfyUI/Inputs/Downloaded/Parked"
 mkdir -p "${WORKSPACE}ComfyUI/Inputs/Next/Best"
 mkdir -p "${WORKSPACE}ComfyUI/Inputs/Next/Park"
@@ -694,7 +695,8 @@ crontab -l 2>/dev/null | {
 } | crontab -
 set +f
 
-service cron start &
+/etc/init.d/cron start
+
 #
 #supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
 #supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
@@ -704,15 +706,17 @@ service cron start &
 #
 
 
-supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_0"'
-supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_1"'
-supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_2"'
-supervisorctl start 'cf_quicktunnel:="cf_quicktunnel_3"'
+supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_0"'
+supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_1"'
+supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_2"'
+supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_3"'
 
 
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
 sleep 2
 nohup  socat TCP-LISTEN:19000,fork,reuseaddr TCP:127.0.0.1:18188 &
+sleep 2
+nohup  socat TCP-LISTEN:8188,fork,reuseaddr TCP:127.0.0.1:18188 &
 sleep 2
 nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
 sleep 2
