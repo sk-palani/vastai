@@ -3528,7 +3528,7 @@
       "strength_model" : 0.92,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3407",
+        "3414",
         0
       ],
       "clip"           : [
@@ -3547,7 +3547,7 @@
       "strength_model" : 1,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3407",
+        "3414",
         0
       ],
       "clip"           : [
@@ -3767,7 +3767,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3407",
+        "3414",
         0
       ],
       "clip"           : [
@@ -3831,7 +3831,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3407",
+        "3414",
         0
       ],
       "clip"           : [
@@ -3850,7 +3850,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
-        "3407",
+        "3414",
         0
       ],
       "clip"           : [
@@ -3869,7 +3869,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
-        "3407",
+        "3414",
         0
       ],
       "clip"           : [
@@ -4029,25 +4029,6 @@
       "title" : "DualCLIPLoader"
     }
   },
-  "3407"      : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 2,
-      "start_percent"        : 0,
-      "end_percent"          : 0.6,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "3414",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "4::2::0::0.5"
-    }
-  },
   "3410"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
@@ -4107,7 +4088,7 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.12,
+      "dishonesty_factor" : -0.05,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4122,7 +4103,7 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.2,
+      "detail_amount"      : 0.05,
       "start"              : 0.42,
       "end"                : 0.65,
       "bias"               : 0.5,
