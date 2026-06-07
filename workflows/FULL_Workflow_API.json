@@ -751,7 +751,7 @@
       ],
       "blend_opacity" : 9,
       "image"         : [
-        "3516",
+        "363",
         0
       ],
       "mask"          : [
@@ -845,18 +845,6 @@
     "class_type" : "GetImageSize+",
     "_meta"      : {
       "title" : "🔧 Get Image Size"
-    }
-  },
-  "445"       : {
-    "inputs"     : {
-      "image" : [
-        "2109",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
     }
   },
   "478"       : {
@@ -1671,7 +1659,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.9",
+      "megapixel"     : "1.6",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -1752,7 +1740,7 @@
   "1859"      : {
     "inputs"     : {
       "model"        : [
-        "3994",
+        "3114",
         0
       ],
       "conditioning" : [
@@ -1762,7 +1750,7 @@
     },
     "class_type" : "BasicGuider",
     "_meta"      : {
-      "title" : "BasicGuider"
+      "title" : "Basic Guider"
     }
   },
   "1860"      : {
@@ -1777,7 +1765,7 @@
         0
       ],
       "model"     : [
-        "3994",
+        "3114",
         0
       ]
     },
@@ -2175,7 +2163,7 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.15,
+      "max_shift"  : 1.23,
       "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
@@ -2981,7 +2969,7 @@
         "2102",
         0
       ],
-      "b"         : 0.66,
+      "b"         : 0.75,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3059,7 +3047,7 @@
   },
   "3048"      : {
     "inputs"     : {
-      "text" : "She has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nHer hands are detailed and natural in appearance, wearing a single diamond ring, with bare nails and no nail polish.\n"
+      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nHer hands are detailed and natural in appearance, wearing a single diamond ring, with bare nails and no nail polish.\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -3237,6 +3225,22 @@
     "class_type" : "StringReplace",
     "_meta"      : {
       "title" : "Replace Text"
+    }
+  },
+  "3114"      : {
+    "inputs"     : {
+      "max_shift"  : 1.17,
+      "base_shift" : 0.67,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3391",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux 1.40::0.8"
     }
   },
   "3115"      : {
@@ -3427,7 +3431,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "3478",
+        "3479",
         0
       ]
     },
@@ -3638,7 +3642,7 @@
     "inputs"     : {
       "lora_name"      : "ILLUSTRATION (FLUX) - V3.1.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.08,
+      "strength_clip"  : 0.8,
       "model"          : [
         "3353",
         0
@@ -3657,7 +3661,7 @@
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.7,
-      "strength_clip"  : 0.08,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3352",
         0
@@ -3901,8 +3905,8 @@
   "3396"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.2,
+      "strength_model" : 1.5,
+      "strength_clip"  : 0.02,
       "model"          : [
         "3394",
         0
@@ -3917,10 +3921,24 @@
       "title" : "Pandora-RAWr 0.80:0.80"
     }
   },
+  "3397"      : {
+    "inputs"     : {
+      "lora_name"      : "SameFace_Fix.safetensors",
+      "strength_model" : -0.6,
+      "model"          : [
+        "3396",
+        0
+      ]
+    },
+    "class_type" : "LoraLoaderModelOnly",
+    "_meta"      : {
+      "title" : "Load LoRA"
+    }
+  },
   "3398"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 1.5,
       "strength_clip"  : 0.02,
       "model"          : [
         "3392",
@@ -3966,7 +3984,7 @@
         0
       ],
       "model_b" : [
-        "3534",
+        "3412",
         0
       ],
       "boolean" : [
@@ -3986,8 +4004,8 @@
         1
       ],
       "clip_b"  : [
-        "3533",
-        0
+        "3412",
+        1
       ],
       "boolean" : [
         "322",
@@ -4004,7 +4022,7 @@
       "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
-      "device"     : "default"
+      "device"     : "cpu"
     },
     "class_type" : "DualCLIPLoader",
     "_meta"      : {
@@ -4049,6 +4067,25 @@
       "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.60::0.90"
     }
   },
+  "3412"      : {
+    "inputs"     : {
+      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "3534",
+        0
+      ],
+      "clip"           : [
+        "3533",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.70::0.70"
+    }
+  },
   "3413"      : {
     "inputs"     : {
       "model_name" : "4x_foolhardy_Remacri.pth"
@@ -4070,7 +4107,7 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.03,
+      "dishonesty_factor" : -0.12,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4085,16 +4122,16 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.1,
-      "start"              : 0.25,
-      "end"                : 0.8,
+      "detail_amount"      : 0.2,
+      "start"              : 0.42,
+      "end"                : 0.65,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
       "smooth"             : false,
-      "cfg_scale_override" : 0,
+      "cfg_scale_override" : 1,
       "sampler"            : [
         "3419",
         0
@@ -4217,6 +4254,28 @@
       "title" : "Math Expression 🐍"
     }
   },
+  "3469"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.03,
+      "start"              : 0.33,
+      "end"                : 0.45,
+      "bias"               : 0.35,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3502",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
   "3474"      : {
     "inputs"     : {
       "max_shift"  : 1.05,
@@ -4250,10 +4309,10 @@
         0
       ],
       "steps"               : 12,
-      "cfg"                 : 0.9,
-      "sampler_name"        : "euler",
-      "scheduler"           : "simple",
-      "denoise"             : 0.2,
+      "cfg"                 : 1.1,
+      "sampler_name"        : "deis",
+      "scheduler"           : "beta",
+      "denoise"             : 0.18,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4276,19 +4335,19 @@
         0
       ],
       "positive"            : [
-        "3986",
+        "2108",
         0
       ],
       "negative"            : [
-        "3983",
-        0
+        "1412",
+        1
       ],
       "vae"                 : [
         "3373",
         0
       ],
       "custom_sampler"      : [
-        "3381",
+        "3469",
         0
       ],
       "custom_sigmas"       : [
@@ -4299,6 +4358,25 @@
     "class_type" : "UltimateSDUpscaleCustomSample",
     "_meta"      : {
       "title" : "Ultimate SD Upscale (Custom Sample)"
+    }
+  },
+  "3479"      : {
+    "inputs"     : {
+      "method"       : "mkl",
+      "strength"     : 0.5,
+      "multithread"  : true,
+      "image_ref"    : [
+        "2669",
+        0
+      ],
+      "image_target" : [
+        "3478",
+        0
+      ]
+    },
+    "class_type" : "ColorMatch",
+    "_meta"      : {
+      "title" : "Color Match"
     }
   },
   "3493"      : {
@@ -4324,6 +4402,21 @@
       "title" : "Contains [~~]"
     }
   },
+  "3502"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.01,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.5,
+      "sampler"           : [
+        "3381",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
   "3512"      : {
     "inputs"     : {
       "denoise" : 0.42,
@@ -4335,28 +4428,6 @@
     "class_type" : "SplitSigmasDenoise",
     "_meta"      : {
       "title" : "SplitSigmasDenoise"
-    }
-  },
-  "3516"      : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : [
-        "3692",
-        0
-      ],
-      "ratio"          : [
-        "3693",
-        0
-      ],
-      "image"          : [
-        "363",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "3517"      : {
@@ -4425,7 +4496,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "3396",
+        "3397",
         0
       ],
       "model2"            : [
@@ -4493,10 +4564,10 @@
   "3535"      : {
     "inputs"     : {
       "lora_name"      : "breast-size2.safetensors",
-      "strength_model" : 2.8,
-      "strength_clip"  : 0.1,
+      "strength_model" : 1.8,
+      "strength_clip"  : 0.2,
       "model"          : [
-        "3396",
+        "3397",
         0
       ],
       "clip"           : [
@@ -4532,7 +4603,7 @@
   "3538"      : {
     "inputs"     : {
       "model_a" : [
-        "3396",
+        "3397",
         0
       ],
       "model_b" : [
@@ -5049,7 +5120,7 @@
     "inputs"     : {
       "lora_name"      : "klein_slider_bodyweight_50.safetensors",
       "strength_model" : 3.8,
-      "strength_clip"  : 0.08,
+      "strength_clip"  : 0.21,
       "model"          : [
         "3834",
         0
@@ -5159,7 +5230,7 @@
   "3789"      : {
     "inputs"     : {
       "model_a" : [
-        "3779",
+        "3842",
         0
       ],
       "model_b" : [
@@ -5179,8 +5250,8 @@
   "3790"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3780",
-        0
+        "3842",
+        1
       ],
       "clip_b"  : [
         "3763",
@@ -5442,7 +5513,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5.\nMaintain a soft, natural South Indian facial structure with a smooth feminine jawline and naturally rounded chin. Avoid pronounced chin clefts, deep dimples, split chin structure, exaggerated mandibular definition, overly sharp jaw contours, or genetically prominent chin indentations. Keep the chin subtle, proportional, softly contoured, and consistent with realistic South Indian facial anatomy.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5483,7 +5554,7 @@
         0
       ],
       "positive"     : [
-        "3974",
+        "3841",
         0
       ],
       "negative"     : [
@@ -5504,13 +5575,13 @@
     "inputs"     : {
       "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
       "strength_model" : 0.8,
-      "strength_clip"  : 0.08,
+      "strength_clip"  : 0.09,
       "model"          : [
-        "3842",
+        "3930",
         0
       ],
       "clip"           : [
-        "3842",
+        "3930",
         1
       ]
     },
@@ -5545,11 +5616,33 @@
       "title" : "Empty Flux 2 Latent"
     }
   },
+  "3841"      : {
+    "inputs"     : {
+      "active_scale"        : 0.95,
+      "per_token_whiten"    : 0.05,
+      "norm_equalize"       : 0.05,
+      "early_layer_scale"   : 1.4,
+      "mid_layer_scale"     : 1,
+      "late_layer_scale"    : 0.8,
+      "preserve_original"   : 1,
+      "active_end_override" : false,
+      "device"              : "auto",
+      "debug"               : false,
+      "conditioning"        : [
+        "3760",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinEnhancer",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
   "3842"      : {
     "inputs"     : {
       "lora_name"      : "klein_slider_bust.safetensors",
-      "strength_model" : 3,
-      "strength_clip"  : 0.09,
+      "strength_model" : 2.4,
+      "strength_clip"  : 0.21,
       "model"          : [
         "3779",
         0
@@ -5566,8 +5659,8 @@
   },
   "3843"      : {
     "inputs"     : {
-      "lora_name"      : "ColorTone_Standard.safetensors",
-      "strength_model" : 0.8,
+      "lora_name"      : "HighDetail.safetensors",
+      "strength_model" : 0.21,
       "strength_clip"  : 0.08,
       "model"          : [
         "3845",
@@ -5580,7 +5673,7 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "ColorTone_Standard"
+      "title" : "v1dhya5 0.92::0.88"
     }
   },
   "3844"      : {
@@ -5624,7 +5717,7 @@
   "3846"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v4_klein.safetensors",
-      "strength_model" : 0.74,
+      "strength_model" : 0.71,
       "strength_clip"  : 0.08,
       "model"          : [
         "3812",
@@ -5935,7 +6028,7 @@
   },
   "3904"      : {
     "inputs"     : {
-      "expand"                 : 18,
+      "expand"                 : 12,
       "incremental_expandrate" : 6,
       "tapered_corners"        : true,
       "flip_input"             : false,
@@ -6004,7 +6097,7 @@
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
-        "3920",
+        "3923",
         0
       ],
       "negative"   : [
@@ -6029,38 +6122,6 @@
       "title" : "Klein_InpaintModelConditioning"
     }
   },
-  "3918"      : {
-    "inputs"     : {
-      "pixels" : [
-        "1837",
-        0
-      ],
-      "vae"    : [
-        "3771",
-        0
-      ]
-    },
-    "class_type" : "VAEEncode",
-    "_meta"      : {
-      "title" : "Klein_VAE Enc"
-    }
-  },
-  "3920"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "3923",
-        0
-      ],
-      "latent"       : [
-        "3918",
-        0
-      ]
-    },
-    "class_type" : "ReferenceLatent",
-    "_meta"      : {
-      "title" : "ReferenceLatent"
-    }
-  },
   "3922"      : {
     "inputs"     : {
       "seed"         : [
@@ -6070,8 +6131,8 @@
       "steps"        : 5,
       "cfg"          : 1,
       "sampler_name" : "euler",
-      "scheduler"    : "normal",
-      "denoise"      : 0.8,
+      "scheduler"    : "simple",
+      "denoise"      : 0.58,
       "model"        : [
         "3846",
         0
@@ -6096,7 +6157,7 @@
   },
   "3923"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5.  copy the expression from the reference image.\n\ncopy the accessories like nose pin and ear studs from the reference image.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a very small black or burgundy bindi.\n\n",
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.",
       "clip" : [
         "3846",
         1
@@ -6131,7 +6192,7 @@
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
       "filename_prefix"         : [
-        "3925",
+        "3135",
         0
       ],
       "filename_delimiter"      : "_",
@@ -6142,7 +6203,7 @@
       "quality"                 : 100,
       "optimize_image"          : "false",
       "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
+      "overwrite_mode"          : "false",
       "show_history"            : "false",
       "show_history_by_prefix"  : "true",
       "embed_workflow"          : "true",
@@ -6157,142 +6218,23 @@
       "title" : "Image Save"
     }
   },
-  "3974"      : {
+  "3930"      : {
     "inputs"     : {
-      "active_scale"        : 1,
-      "per_token_whiten"    : 0.05,
-      "norm_equalize"       : 0.05,
-      "early_layer_scale"   : 0.8,
-      "mid_layer_scale"     : 1.2,
-      "late_layer_scale"    : 0.8,
-      "preserve_original"   : 1,
-      "active_end_override" : false,
-      "device"              : "auto",
-      "debug"               : false,
-      "conditioning"        : [
-        "3760",
-        0
-      ]
-    },
-    "class_type" : "Flux2KleinEnhancer",
-    "_meta"      : {
-      "title" : "FLUX.2 Klein Enhancer"
-    }
-  },
-  "3982"      : {
-    "inputs"     : {
-      "text" : "",
-      "clip" : [
-        "3339",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "CLIP Text Encode (Prompt)"
-    }
-  },
-  "3983"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "3982",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "3985"      : {
-    "inputs"     : {
-      "text" : "professional photo taken using a high-end Fujifilm X-T5 camera depicting an   indian  v1dhya5 woman in a serene setting, the overall mood of the photograph is calm and introspective",
-      "clip" : [
-        "3339",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "CLIP Text Encode (Prompt)"
-    }
-  },
-  "3986"      : {
-    "inputs"     : {
-      "guidance"     : 3.5,
-      "conditioning" : [
-        "3985",
-        0
-      ]
-    },
-    "class_type" : "FluxGuidance",
-    "_meta"      : {
-      "title" : "FluxGuidance"
-    }
-  },
-  "3991"      : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "1837",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "3992"      : {
-    "inputs"     : {
-      "image" : [
-        "1837",
+      "lora_name"      : "Chest_9B.safetensors",
+      "strength_model" : 2.4,
+      "strength_clip"  : 0.21,
+      "model"          : [
+        "3842",
         0
       ],
-      "mask"  : [
-        "3996",
-        0
+      "clip"           : [
+        "3842",
+        1
       ]
     },
-    "class_type" : "ImageCropByMask",
+    "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Image Crop By Mask"
-    }
-  },
-  "3994"      : {
-    "inputs"     : {
-      "max_shift"  : 1.4,
-      "base_shift" : 0.4,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3391",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.40::0.40"
-    }
-  },
-  "3996"      : {
-    "inputs"     : {
-      "expand"          : 30,
-      "tapered_corners" : true,
-      "mask"            : [
-        "3991",
-        0
-      ]
-    },
-    "class_type" : "GrowMask",
-    "_meta"      : {
-      "title" : "Grow Mask"
+      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "2996:3575" : {
@@ -6397,13 +6339,13 @@
   "2996:3585" : {
     "inputs"     : {
       "guide_size"         : 1024,
-      "guide_size_for"     : false,
+      "guide_size_for"     : true,
       "max_size"           : 1024,
       "seed"               : [
         "3338",
         0
       ],
-      "steps"              : 24,
+      "steps"              : 19,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -6456,8 +6398,8 @@
   },
   "2996:3572" : {
     "inputs"     : {
-      "max_shift"  : 0.8,
-      "base_shift" : 0.4,
+      "max_shift"  : 1.15,
+      "base_shift" : 0.5,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
