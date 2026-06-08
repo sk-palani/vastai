@@ -661,12 +661,14 @@ provisioning_get_apt_packages
 #provisioning_get_pip_packages
 #provisioning_start
 #pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
+/etc/init.d/cron start
 
 # Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f "${WORKSPACE}/.noprovisioning" ]]; then
     provisioning_start
     pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 fi
+
 
 ${WORKSPACE}/environments/python/comfyui/bin/python -m pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
 #opencv-contrib-python

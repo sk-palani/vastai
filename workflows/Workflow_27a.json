@@ -1822,7 +1822,7 @@
         0
       ],
       "sampler"      : [
-        "3420",
+        "3381",
         0
       ],
       "sigmas"       : [
@@ -1953,21 +1953,6 @@
     "class_type" : "MathExpression|pysssss",
     "_meta"      : {
       "title" : "Math Expression 🐍"
-    }
-  },
-  "1909"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.02,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.45,
-      "sampler"           : [
-        "3381",
-        0
-      ]
-    },
-    "class_type" : "LyingSigmaSampler",
-    "_meta"      : {
-      "title" : "Lying Sigma Sampler"
     }
   },
   "1913"      : {
@@ -2826,28 +2811,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "2666"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.06,
-      "start"              : 0.25,
-      "end"                : 0.3,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 0,
-      "sampler"            : [
-        "1909",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "2669"      : {
