@@ -1146,7 +1146,7 @@
       ],
       "font"             : "SevenSegment.ttf",
       "size"             : 38,
-      "color"            : "#00fff8FF",
+      "color"            : "#DF2935FF",
       "background_color" : "#00000000",
       "shadow_distance"  : 0,
       "shadow_blur"      : 0,
@@ -3243,7 +3243,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "3391",
+        "3344",
         0
       ]
     },
@@ -3818,22 +3818,6 @@
       "title" : "KSamplerSelect"
     }
   },
-  "3391"      : {
-    "inputs"     : {
-      "reuse_threshold" : 0.2,
-      "start_percent"   : 0.15,
-      "end_percent"     : 0.95,
-      "verbose"         : false,
-      "model"           : [
-        "3344",
-        0
-      ]
-    },
-    "class_type" : "EasyCache",
-    "_meta"      : {
-      "title" : "EasyCache"
-    }
-  },
   "3392"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
@@ -4014,7 +3998,7 @@
   },
   "3404"      : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "clip_l.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "cpu"
@@ -4074,7 +4058,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "fp8_e4m3fn"
+      "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -4083,7 +4067,7 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.12,
+      "dishonesty_factor" : -0.05,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4098,7 +4082,7 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.2,
+      "detail_amount"      : 0.08,
       "start"              : 0.42,
       "end"                : 0.65,
       "bias"               : 0.5,
@@ -4265,7 +4249,7 @@
         1
       ],
       "model"      : [
-        "3391",
+        "3344",
         0
       ]
     },
@@ -4284,11 +4268,11 @@
         "3705",
         0
       ],
-      "steps"               : 12,
-      "cfg"                 : 1.1,
-      "sampler_name"        : "deis",
+      "steps"               : 16,
+      "cfg"                 : 1,
+      "sampler_name"        : "euler",
       "scheduler"           : "beta",
-      "denoise"             : 0.18,
+      "denoise"             : 0.2,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4339,7 +4323,7 @@
   "3479"      : {
     "inputs"     : {
       "method"       : "mkl",
-      "strength"     : 0.6,
+      "strength"     : 0.5,
       "multithread"  : true,
       "image_ref"    : [
         "2669",
@@ -5550,7 +5534,7 @@
   "3834"      : {
     "inputs"     : {
       "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.8,
       "strength_clip"  : 0.09,
       "model"          : [
         "3930",
@@ -5635,8 +5619,8 @@
   },
   "3843"      : {
     "inputs"     : {
-      "lora_name"      : "change_to_raw_photo.safetensors",
-      "strength_model" : 0.42,
+      "lora_name"      : "HighDetail.safetensors",
+      "strength_model" : 0.12,
       "strength_clip"  : 0.08,
       "model"          : [
         "3845",
@@ -5649,13 +5633,13 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "Change to Raw .88"
+      "title" : "v1dhya5 0.92::0.88"
     }
   },
   "3844"      : {
     "inputs"     : {
       "lora_name"      : "ultra_real_v4.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
         "3973",
@@ -5989,7 +5973,7 @@
       "max_shift"    : 1.1,
       "base_shift"   : 0.55,
       "model"        : [
-        "3391",
+        "3344",
         0
       ],
       "latent_image" : [
