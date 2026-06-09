@@ -1146,7 +1146,7 @@
       ],
       "font"             : "SevenSegment.ttf",
       "size"             : 38,
-      "color"            : "#DF2935FF",
+      "color"            : "#00fff8FF",
       "background_color" : "#00000000",
       "shadow_distance"  : 0,
       "shadow_blur"      : 0,
@@ -4083,7 +4083,7 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.05,
+      "dishonesty_factor" : -0.12,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4098,7 +4098,7 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.08,
+      "detail_amount"      : 0.2,
       "start"              : 0.42,
       "end"                : 0.65,
       "bias"               : 0.5,
@@ -4284,11 +4284,11 @@
         "3705",
         0
       ],
-      "steps"               : 16,
-      "cfg"                 : 1,
-      "sampler_name"        : "euler",
+      "steps"               : 12,
+      "cfg"                 : 1.1,
+      "sampler_name"        : "deis",
       "scheduler"           : "beta",
-      "denoise"             : 0.2,
+      "denoise"             : 0.18,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -4339,7 +4339,7 @@
   "3479"      : {
     "inputs"     : {
       "method"       : "mkl",
-      "strength"     : 0.5,
+      "strength"     : 0.6,
       "multithread"  : true,
       "image_ref"    : [
         "2669",
@@ -5489,7 +5489,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5.\nMaintain a soft, natural South Indian facial structure with a smooth feminine jawline and naturally rounded chin. Avoid pronounced chin clefts, deep dimples, split chin structure, exaggerated mandibular definition, overly sharp jaw contours, or genetically prominent chin indentations. Keep the chin subtle, proportional, softly contoured, and consistent with realistic South Indian facial anatomy.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n\nFilmGrainAF,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5550,7 +5550,7 @@
   "3834"      : {
     "inputs"     : {
       "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 1,
       "strength_clip"  : 0.09,
       "model"          : [
         "3930",
@@ -5635,8 +5635,8 @@
   },
   "3843"      : {
     "inputs"     : {
-      "lora_name"      : "HighDetail.safetensors",
-      "strength_model" : 0.12,
+      "lora_name"      : "change_to_raw_photo.safetensors",
+      "strength_model" : 0.42,
       "strength_clip"  : 0.08,
       "model"          : [
         "3845",
@@ -5649,13 +5649,13 @@
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "v1dhya5 0.92::0.88"
+      "title" : "Change to Raw .88"
     }
   },
   "3844"      : {
     "inputs"     : {
       "lora_name"      : "ultra_real_v4.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 1,
       "strength_clip"  : 0.1,
       "model"          : [
         "3973",
