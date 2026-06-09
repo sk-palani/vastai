@@ -1764,7 +1764,7 @@
   },
   "1860"      : {
     "inputs"     : {
-      "scheduler" : "beta",
+      "scheduler" : "simple",
       "steps"     : [
         "1893",
         0
@@ -3238,8 +3238,8 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.4,
-      "base_shift" : 0.8,
+      "max_shift"  : 1.18,
+      "base_shift" : 0.53,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3744,7 +3744,7 @@
   },
   "3375"      : {
     "inputs"     : {
-      "sampler_name" : "euler_ancestral"
+      "sampler_name" : "euler"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
@@ -4306,8 +4306,12 @@
         "3373",
         0
       ],
+      "upscale_model"       : [
+        "3395",
+        0
+      ],
       "custom_sampler"      : [
-        "3469",
+        "3381",
         0
       ],
       "custom_sigmas"       : [
