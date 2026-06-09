@@ -1659,7 +1659,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.6",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -2675,7 +2675,7 @@
   },
   "2545"      : {
     "inputs"     : {
-      "strings"   : "Inputs/Next/Best\nInputs/Next/best",
+      "strings"   : "Inputs/Next/Best1\nInputs/Next/Best2",
       "multiline" : false,
       "select"    : 0
     },
@@ -4644,7 +4644,7 @@
   },
   "3659"      : {
     "inputs"     : {
-      "model_name"        : "Qwen3-VL-4B-Instruct",
+      "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
       "attention_mode"    : "sdpa",
       "preset_prompt"     : "🖼️ Simple Description",
@@ -4670,7 +4670,7 @@
   },
   "3660"      : {
     "inputs"     : {
-      "model_name"        : "Qwen3-VL-4B-Instruct",
+      "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
       "attention_mode"    : "sdpa",
       "preset_prompt"     : "🖼️ Ultra Detailed Description",
@@ -4696,7 +4696,7 @@
   },
   "3664"      : {
     "inputs"     : {
-      "model_name"        : "Qwen3-VL-4B-Instruct",
+      "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
       "attention_mode"    : "sdpa",
       "preset_prompt"     : "🖼️ Simple Description",
@@ -5336,7 +5336,7 @@
   "3812"      : {
     "inputs"     : {
       "unet_name"    : "flux-2-klein-9b.safetensors",
-      "weight_dtype" : "fp8_e4m3fn"
+      "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -5603,14 +5603,14 @@
   },
   "3841"      : {
     "inputs"     : {
-      "contrast"            : 0.05,
-      "normalize_strength"  : 0.05,
-      "preserve_mode"       : "linear",
-      "magnitude"           : 0.95,
-      "edit_text_weight"    : 0.8,
-      "low_vram"            : false,
-      "preserve_original"   : 1.4,
-      "active_end_override" : 1,
+      "active_scale"        : 0.95,
+      "per_token_whiten"    : 0.05,
+      "norm_equalize"       : 0.05,
+      "early_layer_scale"   : 1.4,
+      "mid_layer_scale"     : 1,
+      "late_layer_scale"    : 0.8,
+      "preserve_original"   : 1,
+      "active_end_override" : false,
       "device"              : "auto",
       "debug"               : false,
       "conditioning"        : [
