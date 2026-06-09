@@ -1936,7 +1936,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.15*(a+c*(b-a))",
+      "expression" : "1.17*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2162,7 +2162,7 @@
         "2100",
         0
       ],
-      "b"         : 0.98,
+      "b"         : 0.95,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -2172,8 +2172,8 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.23,
-      "base_shift" : 0.5,
+      "max_shift"  : 1.18,
+      "base_shift" : 0.53,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3239,7 +3239,7 @@
   "3114"      : {
     "inputs"     : {
       "max_shift"  : 1.4,
-      "base_shift" : 0.6,
+      "base_shift" : 0.8,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3998,7 +3998,7 @@
   },
   "3404"      : {
     "inputs"     : {
-      "clip_name1" : "clip_l.safetensors",
+      "clip_name1" : "ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "cpu"
@@ -4527,11 +4527,11 @@
       "strength_model" : 1.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3396",
+        "3989",
         0
       ],
       "clip"           : [
-        "3396",
+        "3989",
         1
       ]
     },
@@ -5473,7 +5473,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n\nFilmGrainAF,\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject?s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n\nFilmGrainAF,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5504,10 +5504,10 @@
         "3705",
         0
       ],
-      "steps"        : 5,
+      "steps"        : 10,
       "cfg"          : 1,
-      "sampler_name" : "euler",
-      "scheduler"    : "simple",
+      "sampler_name" : "euler_ancestral",
+      "scheduler"    : "sgm_uniform",
       "denoise"      : 1,
       "model"        : [
         "3789",
@@ -5657,9 +5657,9 @@
   },
   "3845"      : {
     "inputs"     : {
-      "lora_name"      : "V2_flux_klein_4.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.1,
+      "lora_name"      : "V4_flux_klein.safetensors",
+      "strength_model" : 0.6,
+      "strength_clip"  : 0.6,
       "model"          : [
         "3846",
         0
@@ -6076,7 +6076,7 @@
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
-        "3923",
+        "3920",
         0
       ],
       "negative"   : [
@@ -6101,6 +6101,38 @@
       "title" : "Klein_InpaintModelConditioning"
     }
   },
+  "3918"      : {
+    "inputs"     : {
+      "pixels" : [
+        "2109",
+        0
+      ],
+      "vae"    : [
+        "3771",
+        0
+      ]
+    },
+    "class_type" : "VAEEncode",
+    "_meta"      : {
+      "title" : "Klein_VAE Enc"
+    }
+  },
+  "3920"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "3923",
+        0
+      ],
+      "latent"       : [
+        "3918",
+        0
+      ]
+    },
+    "class_type" : "ReferenceLatent",
+    "_meta"      : {
+      "title" : "ReferenceLatent"
+    }
+  },
   "3922"      : {
     "inputs"     : {
       "seed"         : [
@@ -6113,11 +6145,11 @@
       "scheduler"    : "simple",
       "denoise"      : 0.62,
       "model"        : [
-        "3846",
+        "3845",
         0
       ],
       "positive"     : [
-        "3917",
+        "3991",
         0
       ],
       "negative"     : [
@@ -6138,7 +6170,7 @@
     "inputs"     : {
       "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.",
       "clip" : [
-        "3846",
+        "3845",
         1
       ]
     },
@@ -6267,6 +6299,47 @@
       "title" : "Any Switch (rgthree)"
     }
   },
+  "3989"      : {
+    "inputs"     : {
+      "lora_name"      : "FluxSideboob_Photo.safetensors",
+      "strength_model" : 0.8,
+      "strength_clip"  : 0.2,
+      "model"          : [
+        "3396",
+        0
+      ],
+      "clip"           : [
+        "3396",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "SideBoob.00"
+    }
+  },
+  "3991"      : {
+    "inputs"     : {
+      "active_scale"        : 0.95,
+      "per_token_whiten"    : 0.05,
+      "norm_equalize"       : 0.05,
+      "early_layer_scale"   : 1.4,
+      "mid_layer_scale"     : 1,
+      "late_layer_scale"    : 0.8,
+      "preserve_original"   : 0.6,
+      "active_end_override" : false,
+      "device"              : "auto",
+      "debug"               : false,
+      "conditioning"        : [
+        "3917",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinEnhancer",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
   "2996:3575" : {
     "inputs"     : {
       "combined"     : true,
@@ -6325,27 +6398,6 @@
     "class_type" : "Text Concatenate",
     "_meta"      : {
       "title" : "Text Concatenate"
-    }
-  },
-  "2996:3586" : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2996:3582",
-        0
-      ],
-      "t5xxl"    : [
-        "2996:3581",
-        0
-      ],
-      "guidance" : 3.3,
-      "clip"     : [
-        "3362",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux"
     }
   },
   "2996:3581" : {
@@ -6440,6 +6492,27 @@
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
       "title" : "1.35::0.50"
+    }
+  },
+  "2996:3586" : {
+    "inputs"     : {
+      "clip_l"   : [
+        "2996:3582",
+        0
+      ],
+      "t5xxl"    : [
+        "2996:3581",
+        0
+      ],
+      "guidance" : 3.5,
+      "clip"     : [
+        "3362",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncodeFlux",
+    "_meta"      : {
+      "title" : "CLIPTextEncodeFlux"
     }
   }
 }

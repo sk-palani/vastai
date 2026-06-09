@@ -219,9 +219,11 @@ LORA_MODELS=(
     # Flux2.Klein
     # ------------------------------
     # V2_flux_klein_4.safetensors
-    "https://civitai.com/api/download/models/2777010?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # "https://civitai.com/api/download/models/2777010?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # V3_flux_klein.safetensors
-    "https://civitai.com/api/download/models/2903375?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # "https://civitai.com/api/download/models/2903375?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # V4_flux_klein.safetensors
+    "https://civitai.com/api/download/models/2998669?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 
     # Chest_9B.safetensors
