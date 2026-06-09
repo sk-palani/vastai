@@ -97,7 +97,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : false,
       "images"          : [
-        "3018",
+        "3974",
         0
       ]
     },
@@ -850,7 +850,7 @@
   "478"       : {
     "inputs"     : {
       "image" : [
-        "3018",
+        "3974",
         0
       ]
     },
@@ -1440,7 +1440,10 @@
       "ordering_mode"          : "random",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : -1
+      "seed"                   : [
+        "3705",
+        0
+      ]
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -1469,7 +1472,10 @@
       "ordering_mode"          : "random",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : -1
+      "seed"                   : [
+        "3705",
+        0
+      ]
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -1593,7 +1599,10 @@
       "ordering_mode"          : "random",
       "include_subdirectories" : "yes",
       "index"                  : 0,
-      "seed"                   : -1
+      "seed"                   : [
+        "3705",
+        0
+      ]
     },
     "class_type" : "Input_Image",
     "_meta"      : {
@@ -2463,7 +2472,7 @@
   "2117"      : {
     "inputs"     : {
       "any_02" : [
-        "3018",
+        "3977",
         0
       ]
     },
@@ -2840,7 +2849,7 @@
         0
       ],
       "image"        : [
-        "3018",
+        "3974",
         0
       ]
     },
@@ -3229,8 +3238,8 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.17,
-      "base_shift" : 0.67,
+      "max_shift"  : 1.4,
+      "base_shift" : 0.6,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3476,8 +3485,8 @@
   "3339"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3410",
-        1
+        "3537",
+        0
       ],
       "clip_b"  : [
         "3361",
@@ -3905,7 +3914,7 @@
   "3396"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1.5,
+      "strength_model" : 1,
       "strength_clip"  : 0.02,
       "model"          : [
         "3394",
@@ -3921,24 +3930,10 @@
       "title" : "Pandora-RAWr 0.80:0.80"
     }
   },
-  "3397"      : {
-    "inputs"     : {
-      "lora_name"      : "SameFace_Fix.safetensors",
-      "strength_model" : -0.6,
-      "model"          : [
-        "3396",
-        0
-      ]
-    },
-    "class_type" : "LoraLoaderModelOnly",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
   "3398"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 1.5,
+      "strength_model" : 1,
       "strength_clip"  : 0.02,
       "model"          : [
         "3392",
@@ -4048,25 +4043,6 @@
       "title" : "4::2::0::0.5"
     }
   },
-  "3410"      : {
-    "inputs"     : {
-      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
-      "strength_model" : 0.4,
-      "strength_clip"  : 0.2,
-      "model"          : [
-        "3538",
-        0
-      ],
-      "clip"           : [
-        "3537",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.60::0.90"
-    }
-  },
   "3412"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
@@ -4122,7 +4098,7 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.05,
+      "detail_amount"      : 0.08,
       "start"              : 0.42,
       "end"                : 0.65,
       "bias"               : 0.5,
@@ -4308,7 +4284,7 @@
         "3705",
         0
       ],
-      "steps"               : 14,
+      "steps"               : 16,
       "cfg"                 : 1,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
@@ -4496,11 +4472,11 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "3397",
+        "3396",
         0
       ],
       "model2"            : [
-        "3410",
+        "3538",
         0
       ]
     },
@@ -4567,7 +4543,7 @@
       "strength_model" : 1.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3397",
+        "3396",
         0
       ],
       "clip"           : [
@@ -4603,7 +4579,7 @@
   "3538"      : {
     "inputs"     : {
       "model_a" : [
-        "3397",
+        "3396",
         0
       ],
       "model_b" : [
@@ -6007,6 +5983,25 @@
       "title" : "Logic Comparison OR"
     }
   },
+  "3895"      : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 1.1,
+      "base_shift"   : 0.55,
+      "model"        : [
+        "3391",
+        0
+      ],
+      "latent_image" : [
+        "1989",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "ModelSamplingAd.. 1.4-0.8"
+    }
+  },
   "3900"      : {
     "inputs"     : {
       "mask_opacity" : 0.3,
@@ -6132,7 +6127,7 @@
       "cfg"          : 1,
       "sampler_name" : "euler",
       "scheduler"    : "simple",
-      "denoise"      : 0.58,
+      "denoise"      : 0.62,
       "model"        : [
         "3846",
         0
@@ -6254,6 +6249,38 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "ColorTone_Standard"
+    }
+  },
+  "3974"      : {
+    "inputs"     : {
+      "any_01" : [
+        "3018",
+        0
+      ],
+      "any_02" : [
+        "2669",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
+  "3977"      : {
+    "inputs"     : {
+      "any_01" : [
+        "3018",
+        0
+      ],
+      "any_02" : [
+        "2669",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
     }
   },
   "2996:3575" : {
