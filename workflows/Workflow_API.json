@@ -4646,7 +4646,7 @@
     "inputs"     : {
       "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
-      "attention_mode"    : "sdpa",
+      "attention_mode"    : "auto",
       "preset_prompt"     : "🖼️ Simple Description",
       "custom_prompt"     : "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
       "max_tokens"        : 256,
@@ -4672,7 +4672,7 @@
     "inputs"     : {
       "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
-      "attention_mode"    : "sdpa",
+      "attention_mode"    : "auto",
       "preset_prompt"     : "🖼️ Ultra Detailed Description",
       "custom_prompt"     : "Describe the outfit in the image using concise, clearly visible details. Include the color palette, materials and fabric types, surface texture, fit and silhouette, and any notable design elements or accessories that are part of the clothing. Avoid speculation and do not infer brands or materials unless they are visually evident.\n\n(ONE block of text, no headings)",
       "max_tokens"        : 256,
@@ -4698,7 +4698,7 @@
     "inputs"     : {
       "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
-      "attention_mode"    : "sdpa",
+      "attention_mode"    : "auto",
       "preset_prompt"     : "🖼️ Simple Description",
       "custom_prompt"     : "Describe the subject’s facial expression, inferred emotional state, and eye gaze direction based on visible facial cues. Include details about hairstyle, visible jewelry, and outfit. Also describe makeup elements such as eye makeup, eye appearance, and lipstick color or finish. Ground all emotional or gaze interpretations in observable features and avoid speculation beyond what the image reasonably suggests.\n\n\n(ONE block of text, no headings)",
       "max_tokens"        : 256,
@@ -6108,7 +6108,7 @@
     },
     "class_type" : "VAEEncode",
     "_meta"      : {
-      "title" : "VAE Encode"
+      "title" : "Klein_VAE Decode"
     }
   },
   "3909"      : {
