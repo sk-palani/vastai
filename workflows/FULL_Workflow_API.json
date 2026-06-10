@@ -5646,11 +5646,11 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3973",
+        "3843",
         0
       ],
       "clip"           : [
-        "3973",
+        "3843",
         1
       ]
     },
@@ -6250,25 +6250,6 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA (Model and CLIP)"
-    }
-  },
-  "3973"      : {
-    "inputs"     : {
-      "lora_name"      : "ColorTone_Standard.safetensors",
-      "strength_model" : 0.64,
-      "strength_clip"  : 0.08,
-      "model"          : [
-        "3843",
-        0
-      ],
-      "clip"           : [
-        "3843",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "ColorTone_Standard"
     }
   },
   "3974"      : {
