@@ -5508,7 +5508,7 @@
         "3705",
         0
       ],
-      "steps"        : 10,
+      "steps"        : 7,
       "cfg"          : 1,
       "sampler_name" : "euler",
       "scheduler"    : "simple",
@@ -5538,7 +5538,7 @@
   "3834"      : {
     "inputs"     : {
       "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 0.6,
       "strength_clip"  : 0.09,
       "model"          : [
         "3930",
@@ -5556,7 +5556,7 @@
   },
   "3837"      : {
     "inputs"     : {
-      "text" : "fluxtrait,\nindian-girl-brown-eyes,\n"
+      "text" : "indian-girl-brown-eyes,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5621,36 +5621,17 @@
       "title" : "Load LoRA (Model and CLIP)"
     }
   },
-  "3843"      : {
-    "inputs"     : {
-      "lora_name"      : "HighDetail.safetensors",
-      "strength_model" : 0.12,
-      "strength_clip"  : 0.08,
-      "model"          : [
-        "3845",
-        0
-      ],
-      "clip"           : [
-        "3845",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "v1dhya5 0.92::0.88"
-    }
-  },
   "3844"      : {
     "inputs"     : {
       "lora_name"      : "ultra_real_v4.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3843",
+        "3845",
         0
       ],
       "clip"           : [
-        "3843",
+        "3845",
         1
       ]
     },
