@@ -1240,7 +1240,7 @@
   },
   "950"       : {
     "inputs"     : {
-      "text" : "Indian woman,   alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional photograph\n __AGE__ "
+      "text" : "Indian woman,   alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling,  sharp focus on eyes, shallow depth of field, soft shadow rolloff, realistic detailed background, Shot on 35mm Fujifilm Fujicolor Pro 400H professional color negative film. The image features authentic, fine analog film grain texture primarily visible in the softer areas and midtones. The colors are rendered with the characteristic cool undertones of classic Fuji film, showcasing beautiful pastel greens, desaturated blues, and a very subtle magenta hue in the soft highlights. The scene displays an airy, wide dynamic range with an incredibly smooth, creamy highlight roll-off and low-contrast matte shadows. Candid, quiet, and romantic analog snapshot aesthetic., \n\n __AGE__ "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1668,7 +1668,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
