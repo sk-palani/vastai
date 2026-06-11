@@ -859,24 +859,6 @@
       "title" : "Get Image Size & Count"
     }
   },
-  "494"       : {
-    "inputs"     : {
-      "text" : "nude, dark textured large areola and medium-sized  erect nipples,  (nsfw:0.8),   jewelry,\n\n\nnude, dark texture areola and erect nipples,  (nsfw:0.7),  \n\n\nsee-through blouse and saree, deep-cleavage, jewelry, (Hip-Chain:1.2), \n\ncolorful silk saree with expensive hand-made embroidery designs, backless blouse,\n\nsexy heart-shaped clothing cutout in the back revealing buttcrack,\n\nsee-through saree, Floral prints embroidery,    Belly Piercing,\n\nwearing Glasses\n\nSitting on the knees, in front of mirror,  Happy facial expression,colorful lace top with expensive hand-made embroidery designs backless blouse,  \n\nSexy Hip-Chain,Sexy Waist-Chain, Sexy crop-top made of jasmine flowers,\n\nA tattoo of a baby elephant is visible on the left chest area. "
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "495"       : {
-    "inputs"     : {
-      "text" : " hip chain, waist chain, hands behind the back, crop top overhang,\n\nand light freckles scattered across her cheeks and nose. "
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
   "500"       : {
     "inputs"     : {
       "string"           : [
@@ -1315,9 +1297,9 @@
   },
   "1412"      : {
     "inputs"     : {
-      "strength"      : 0.56,
+      "strength"      : 0.45,
       "start_percent" : 0,
-      "end_percent"   : 0.56,
+      "end_percent"   : 0.4,
       "positive"      : [
         "737",
         0
@@ -1845,7 +1827,7 @@
         "3338",
         0
       ],
-      "noise_strength" : 0.8,
+      "noise_strength" : 0.35,
       "normalize"      : "false",
       "latent"         : [
         "1863",
@@ -2193,7 +2175,7 @@
         "788",
         0
       ],
-      "guidance" : 3.5,
+      "guidance" : 3.2,
       "clip"     : [
         "3403",
         0
@@ -3056,7 +3038,7 @@
   },
   "3048"      : {
     "inputs"     : {
-      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance, \n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n \n\nHer hair is long, black, and curly, with a few natural gray strands subtly visible. Her teeth are aligned, but one upper canine tooth is slightly twisted for a natural, imperfect charm.\n\nHer hands are detailed and natural in appearance, wearing a single diamond ring, with bare nails and no nail polish.\n"
+      "text" : "She wears a form fitted outfit tailored precisely to her form, clean elegant lines that contour her silhouette without feeling restrictive, vibrant refined colors that remain tasteful and balanced, smooth high quality fabric with a subtle sheen that responds beautifully to cinematic lighting, gentle highlights tracing the curves of the design, structured yet fluid tailoring that suggests confidence and poise, minimal but intentional detailing that enhances shape rather than overwhelming it, graceful sophistication with a modern feminine presence, sharper tailoring accents, confident color contrast that draws the eye without breaking elegance,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -6470,7 +6452,7 @@
         "2996:3581",
         0
       ],
-      "guidance" : 3.5,
+      "guidance" : 3.2,
       "clip"     : [
         "3362",
         0
