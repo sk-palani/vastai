@@ -2175,7 +2175,7 @@
         "788",
         0
       ],
-      "guidance" : 3.2,
+      "guidance" : 3.0,
       "clip"     : [
         "3403",
         0
@@ -4251,10 +4251,10 @@
         0
       ],
       "steps"               : 16,
-      "cfg"                 : 1,
-      "sampler_name"        : "euler",
+      "cfg"                 : 0.8,
+      "sampler_name"        : "deis",
       "scheduler"           : "beta",
-      "denoise"             : 0.2,
+      "denoise"             : 0.12,
       "mode_type"           : "Chess",
       "tile_width"          : 1024,
       "tile_height"         : 1024,
@@ -6452,7 +6452,7 @@
         "2996:3581",
         0
       ],
-      "guidance" : 3.2,
+      "guidance" : 2.8,
       "clip"     : [
         "3362",
         0
