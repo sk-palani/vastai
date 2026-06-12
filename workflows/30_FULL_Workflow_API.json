@@ -72,7 +72,7 @@
   },
   "44"        : {
     "inputs"     : {
-      "conditioning_to_strength" : 0.35,
+      "conditioning_to_strength" : 0.4,
       "conditioning_to"          : [
         "1412",
         0
@@ -1244,7 +1244,7 @@
   },
   "950"       : {
     "inputs"     : {
-      "text" : "Indian woman, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional photograph\n __AGE__ "
+      "text" : "Indian woman, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, natural photographic color, neutral light color balance, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional photograph\n __AGE__ "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1840,7 +1840,7 @@
         "3338",
         0
       ],
-      "noise_strength" : 0.3,
+      "noise_strength" : 0.35,
       "normalize"      : "false",
       "latent"         : [
         "1863",
@@ -4016,20 +4016,6 @@
       "title" : "Pandora-RAWr 0.80:0.80"
     }
   },
-  "3397"      : {
-    "inputs"     : {
-      "lora_name"      : "SameFace_Fix.safetensors",
-      "strength_model" : -0.6,
-      "model"          : [
-        "3396",
-        0
-      ]
-    },
-    "class_type" : "LoraLoaderModelOnly",
-    "_meta"      : {
-      "title" : "Load LoRA"
-    }
-  },
   "3398"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
@@ -4159,7 +4145,7 @@
   "3410"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
-      "strength_model" : 0.4,
+      "strength_model" : 0.65,
       "strength_clip"  : 0.2,
       "model"          : [
         "3538",
@@ -4211,11 +4197,11 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.12,
-      "start"              : 0.5,
-      "end"                : 0.7,
+      "detail_amount"      : 0.08,
+      "start"              : 0.4,
+      "end"                : 0.6,
       "bias"               : 0.5,
-      "exponent"           : 0.66,
+      "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
@@ -4229,118 +4215,6 @@
     "class_type" : "DetailDaemonSamplerNode",
     "_meta"      : {
       "title" : "Detail Daemon Sampler"
-    }
-  },
-  "3426"      : {
-    "inputs"     : {
-      "scheduler" : "beta",
-      "steps"     : [
-        "3463",
-        0
-      ],
-      "denoise"   : [
-        "3459",
-        0
-      ],
-      "model"     : [
-        "3474",
-        0
-      ]
-    },
-    "class_type" : "BasicScheduler",
-    "_meta"      : {
-      "title" : "BasicScheduler"
-    }
-  },
-  "3427"      : {
-    "inputs"     : {
-      "expression" : "b+(a-0.46)*(24-b)/(0.72-0.46)",
-      "a"          : [
-        "3450",
-        0
-      ],
-      "b"          : [
-        "3652",
-        0
-      ],
-      "c"          : [
-        "3651",
-        0
-      ]
-    },
-    "class_type" : "MathExpression|pysssss",
-    "_meta"      : {
-      "title" : "Math Expression 🐍"
-    }
-  },
-  "3428"      : {
-    "inputs"     : {
-      "expression" : "c+(a-0.46)*(35-c)/(0.72-0.46)",
-      "a"          : [
-        "3450",
-        0
-      ],
-      "b"          : [
-        "3652",
-        0
-      ],
-      "c"          : [
-        "3651",
-        0
-      ]
-    },
-    "class_type" : "MathExpression|pysssss",
-    "_meta"      : {
-      "title" : "Math Expression 🐍"
-    }
-  },
-  "3450"      : {
-    "inputs"     : {
-      "a"         : [
-        "2100",
-        0
-      ],
-      "b"         : 0.98,
-      "operation" : "multiply"
-    },
-    "class_type" : "easy mathFloat",
-    "_meta"      : {
-      "title" : "Math Float"
-    }
-  },
-  "3459"      : {
-    "inputs"     : {
-      "a"         : [
-        "3450",
-        0
-      ],
-      "b"         : 0.72,
-      "operation" : "multiply"
-    },
-    "class_type" : "easy mathFloat",
-    "_meta"      : {
-      "title" : "0.72"
-    }
-  },
-  "3463"      : {
-    "inputs"     : {
-      "expression" : "1.33*(a+c*(b-a))",
-      "a"          : [
-        "3427",
-        0
-      ],
-      "b"          : [
-        "3428",
-        0
-      ],
-      "c"          : [
-        "1405",
-        0
-      ]
-    },
-    "class_type" : "MathExpression|pysssss",
-    "_meta"      : {
-      "title" : "Math Expression 🐍"
     }
   },
   "3474"      : {
@@ -4381,8 +4255,14 @@
       "scheduler"           : "beta",
       "denoise"             : 0.08,
       "mode_type"           : "Chess",
-      "tile_width"          : 1024,
-      "tile_height"         : 1024,
+      "tile_width"          : [
+        "1927",
+        0
+      ],
+      "tile_height"         : [
+        "1928",
+        0
+      ],
       "mask_blur"           : 4,
       "tile_padding"        : 32,
       "seam_fix_mode"       : "None",
@@ -4416,10 +4296,6 @@
       "custom_sampler"      : [
         "3381",
         0
-      ],
-      "custom_sigmas"       : [
-        "3512",
-        1
       ]
     },
     "class_type" : "UltimateSDUpscaleCustomSample",
@@ -4494,19 +4370,6 @@
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
       "title" : "Any Switch (rgthree)"
-    }
-  },
-  "3512"      : {
-    "inputs"     : {
-      "denoise" : 0.42,
-      "sigmas"  : [
-        "3426",
-        0
-      ]
-    },
-    "class_type" : "SplitSigmasDenoise",
-    "_meta"      : {
-      "title" : "SplitSigmasDenoise"
     }
   },
   "3514"      : {
@@ -4618,7 +4481,7 @@
       "single_blocks.37." : 0,
       "final_layer."      : 1,
       "model1"            : [
-        "3397",
+        "3396",
         0
       ],
       "model2"            : [
@@ -4717,7 +4580,7 @@
       "strength_model" : 1.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3397",
+        "3396",
         0
       ],
       "clip"           : [
@@ -4753,7 +4616,7 @@
   "3538"      : {
     "inputs"     : {
       "model_a" : [
-        "3397",
+        "3396",
         0
       ],
       "model_b" : [
@@ -4806,31 +4669,13 @@
       "title" : "Float Constant"
     }
   },
-  "3651"      : {
-    "inputs"     : {
-      "value" : 43
-    },
-    "class_type" : "easy int",
-    "_meta"      : {
-      "title" : "Int"
-    }
-  },
-  "3652"      : {
-    "inputs"     : {
-      "value" : 28
-    },
-    "class_type" : "easy int",
-    "_meta"      : {
-      "title" : "Int"
-    }
-  },
   "3659"      : {
     "inputs"     : {
       "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
       "attention_mode"    : "auto",
       "preset_prompt"     : "🖼️ Simple Description",
-      "custom_prompt"     : "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.",
+      "custom_prompt"     : "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a image generation prompt.",
       "max_tokens"        : 256,
       "keep_model_loaded" : [
         "2178",
@@ -5753,7 +5598,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\npreserve shadow depth and directional lighting from reference\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5787,10 +5632,10 @@
       "steps"        : 5,
       "cfg"          : 1,
       "sampler_name" : "euler",
-      "scheduler"    : "simple",
-      "denoise"      : 0.85,
+      "scheduler"    : "beta",
+      "denoise"      : 1,
       "model"        : [
-        "3789",
+        "3982",
         0
       ],
       "positive"     : [
@@ -6212,7 +6057,7 @@
       "mask_color"   : "255, 0, 207",
       "pass_through" : false,
       "image"        : [
-        "3796",
+        "3983",
         0
       ],
       "mask"         : [
@@ -6255,7 +6100,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : true,
       "images"          : [
-        "3796",
+        "3983",
         0
       ]
     },
@@ -6308,7 +6153,7 @@
         0
       ],
       "pixels"     : [
-        "3796",
+        "3983",
         0
       ],
       "mask"       : [
@@ -6490,6 +6335,44 @@
       "title" : "FLUX.2 Klein Enhancer"
     }
   },
+  "3982"      : {
+    "inputs"     : {
+      "scaling"      : "exponential",
+      "max_shift"    : 0.75,
+      "base_shift"   : 0.42,
+      "model"        : [
+        "3789",
+        0
+      ],
+      "latent_image" : [
+        "3792",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingAdvancedResolution",
+    "_meta"      : {
+      "title" : "ModelSamplingAdvancedResolution"
+    }
+  },
+  "3983"      : {
+    "inputs"     : {
+      "method"       : "reinhard_lab_gpu",
+      "strength"     : 0.8,
+      "multithread"  : true,
+      "image_target" : [
+        "3796",
+        0
+      ],
+      "image_ref"    : [
+        "2109",
+        0
+      ]
+    },
+    "class_type" : "ColorMatchV2",
+    "_meta"      : {
+      "title" : "ColorMatchV2"
+    }
+  },
   "2996:3575" : {
     "inputs"     : {
       "combined"     : true,
@@ -6589,6 +6472,22 @@
       "title" : "Text Concatenate"
     }
   },
+  "2996:3572" : {
+    "inputs"     : {
+      "max_shift"  : 1.1,
+      "base_shift" : 0.58,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3363",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "1.35::0.50"
+    }
+  },
   "2996:3585" : {
     "inputs"     : {
       "guide_size"         : 1024,
@@ -6598,7 +6497,7 @@
         "3338",
         0
       ],
-      "steps"              : 19,
+      "steps"              : 14,
       "cfg"                : 1,
       "sampler_name"       : "euler",
       "scheduler"          : "beta",
@@ -6610,7 +6509,7 @@
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 2,
+      "cycle"              : 1,
       "inpaint_model"      : false,
       "noise_mask_feather" : 20,
       "tiled_encode"       : false,
@@ -6647,22 +6546,6 @@
     "class_type" : "DetailerForEach",
     "_meta"      : {
       "title" : "Detailer (BG Detailer)"
-    }
-  },
-  "2996:3572" : {
-    "inputs"     : {
-      "max_shift"  : 1.1,
-      "base_shift" : 0.58,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "3363",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "1.35::0.50"
     }
   }
 }
