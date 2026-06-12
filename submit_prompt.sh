@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 find "${WORKSPACE}ComfyUI/temp/" -type f -name "*.png" -mmin +10 -delete
-
+mkdir -p "${WORKSPACE}ComfyUI/Inputs/Processed/Failed/"
+find "${WORKSPACE}ComfyUI/processing/" -type f -name "*.*" -mmin +15 -exec mv {} "${WORKSPACE}ComfyUI/Inputs/Processed/Failed/" \;
 mkdir -p "${WORKSPACE}ComfyUI/Inputs/Downloaded/Parked/"
 mkdir -p "${WORKSPACE}ComfyUI/Inputs/Next/Park/"
 find "${WORKSPACE}ComfyUI/Inputs/Next/Park" -type f \( \
@@ -83,8 +84,10 @@ jq -c '
   )
 ' "$UPDATED_FILE" > "$TMP_FILE" && mv "$TMP_FILE" "$UPDATED_FILE"
 
+# --- Convert UE-style virtual links into real links and export a ComfyUI API prompt ---
+python3 "$SCRIPT_DIR/scripts/convert_ue_to_real_links.py" --api "$UPDATED_FILE" "$UPDATED_FILE"
 
-echo "[$LOG_TS] 🔄 Updated seeds and removed unwanted nodes in $UPDATED_FILE"
+echo "[$LOG_TS] 🔄 Updated seeds, removed unwanted nodes, and exported a ComfyUI API prompt in $UPDATED_FILE"
 
 # --- Check queue status ---
 total=$(curl -s "$URL/queue" | jq '[.queue_running, .queue_pending] | add | length')
