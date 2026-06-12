@@ -792,8 +792,8 @@
       "saturation"          : 0.9,
       "vignette_intensity"  : 0.010000000000000002,
       "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.05,
-      "grain_scale"         : 0.6,
+      "grain_power"         : 0.03,
+      "grain_scale"         : 0.5,
       "grain_sat"           : 0.3,
       "filmgrainer_shadows" : 0.08,
       "filmgrainer_highs"   : 0.05,
@@ -1663,7 +1663,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -1759,7 +1759,7 @@
   },
   "1860"      : {
     "inputs"     : {
-      "scheduler" : "simple",
+      "scheduler" : "beta",
       "steps"     : [
         "1893",
         0
@@ -1840,7 +1840,7 @@
         "3338",
         0
       ],
-      "noise_strength" : 0.35,
+      "noise_strength" : 0.05,
       "normalize"      : "false",
       "latent"         : [
         "1863",
@@ -2675,7 +2675,7 @@
         "1955",
         0
       ],
-      "b"         : 0.76,
+      "b"         : 0.62,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -2961,8 +2961,8 @@
   "2975"      : {
     "inputs"     : {
       "invert_mask" : false,
-      "grow"        : 2,
-      "blur"        : 4,
+      "grow"        : 6,
+      "blur"        : 8,
       "mask"        : [
         "2355",
         0
@@ -4197,7 +4197,7 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.08,
+      "detail_amount"      : 0.05,
       "start"              : 0.4,
       "end"                : 0.6,
       "bias"               : 0.5,
@@ -4205,7 +4205,7 @@
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
-      "smooth"             : false,
+      "smooth"             : true,
       "cfg_scale_override" : 1,
       "sampler"            : [
         "3419",
@@ -4872,7 +4872,7 @@
   },
   "3683"      : {
     "inputs"     : {
-      "value" : 0.58
+      "value" : 0.55
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -5204,7 +5204,7 @@
   "3763"      : {
     "inputs"     : {
       "lora_name"      : "klein_slider_bodyweight_50.safetensors",
-      "strength_model" : 3.8,
+      "strength_model" : 2.8,
       "strength_clip"  : 0.21,
       "model"          : [
         "3834",
@@ -5598,7 +5598,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\npreserve shadow depth and directional lighting from reference\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5 in the same visual style and color mode as the reference image.\nCopy the facial expression from the reference image.\n\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\npreserve shadow depth and directional lighting from reference\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5635,7 +5635,7 @@
       "scheduler"    : "beta",
       "denoise"      : 1,
       "model"        : [
-        "3982",
+        "3987",
         0
       ],
       "positive"     : [
@@ -5659,7 +5659,7 @@
   "3834"      : {
     "inputs"     : {
       "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 0.9,
       "strength_clip"  : 0.09,
       "model"          : [
         "3930",
@@ -5677,7 +5677,7 @@
   },
   "3837"      : {
     "inputs"     : {
-      "text" : "fluxtrait,\nindian-girl-brown-eyes,\n"
+      "text" : "\nfluxtrait,\nindian-girl-brown-eyes,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -6141,7 +6141,7 @@
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
-        "3920",
+        "3923",
         0
       ],
       "negative"   : [
@@ -6166,22 +6166,6 @@
       "title" : "Klein_InpaintModelConditioning"
     }
   },
-  "3918"      : {
-    "inputs"     : {
-      "pixels" : [
-        "2109",
-        0
-      ],
-      "vae"    : [
-        "3771",
-        0
-      ]
-    },
-    "class_type" : "VAEEncode",
-    "_meta"      : {
-      "title" : "Klein_VAE Enc"
-    }
-  },
   "3920"      : {
     "inputs"     : {
       "conditioning" : [
@@ -6189,7 +6173,7 @@
         0
       ],
       "latent"       : [
-        "3918",
+        "3833",
         0
       ]
     },
@@ -6207,7 +6191,7 @@
       "steps"        : 5,
       "cfg"          : 1,
       "sampler_name" : "euler",
-      "scheduler"    : "simple",
+      "scheduler"    : "beta",
       "denoise"      : 0.42,
       "model"        : [
         "3846",
@@ -6335,25 +6319,6 @@
       "title" : "FLUX.2 Klein Enhancer"
     }
   },
-  "3982"      : {
-    "inputs"     : {
-      "scaling"      : "exponential",
-      "max_shift"    : 0.75,
-      "base_shift"   : 0.42,
-      "model"        : [
-        "3789",
-        0
-      ],
-      "latent_image" : [
-        "3792",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingAdvancedResolution",
-    "_meta"      : {
-      "title" : "ModelSamplingAdvancedResolution"
-    }
-  },
   "3983"      : {
     "inputs"     : {
       "method"       : "reinhard_lab_gpu",
@@ -6371,6 +6336,22 @@
     "class_type" : "ColorMatchV2",
     "_meta"      : {
       "title" : "ColorMatchV2"
+    }
+  },
+  "3987"      : {
+    "inputs"     : {
+      "max_shift"  : 0.75,
+      "base_shift" : 0.43,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3789",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
     }
   },
   "2996:3575" : {
@@ -6505,13 +6486,13 @@
         "2983",
         0
       ],
-      "feather"            : 5,
+      "feather"            : 10,
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
       "cycle"              : 1,
       "inpaint_model"      : false,
-      "noise_mask_feather" : 20,
+      "noise_mask_feather" : 40,
       "tiled_encode"       : false,
       "tiled_decode"       : false,
       "image"              : [
