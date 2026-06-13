@@ -1582,9 +1582,9 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
-      "mode"          : "resize",
+      "mode"          : "pad",
       "delta_percent" : [
         "2532",
         0
@@ -2800,7 +2800,7 @@
         "2102",
         0
       ],
-      "b"         : 0.5,
+      "b"         : 0.42,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3404,8 +3404,8 @@
   "3339"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3410",
-        1
+        "3537",
+        0
       ],
       "clip_b"  : [
         "3361",
@@ -3691,7 +3691,7 @@
   },
   "3380"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
@@ -3739,7 +3739,7 @@
   },
   "3392"      : {
     "inputs"     : {
-      "lora_name"      : "vidhyas_lora_v3.safetensors",
+      "lora_name"      : "vidhyas_lora_v4.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
@@ -3895,7 +3895,7 @@
         0
       ],
       "model_b" : [
-        "3534",
+        "3412",
         0
       ],
       "boolean" : [
@@ -3915,8 +3915,8 @@
         1
       ],
       "clip_b"  : [
-        "3533",
-        0
+        "3412",
+        1
       ],
       "boolean" : [
         "322",
@@ -3959,23 +3959,23 @@
       "title" : "4::2::0::0.5"
     }
   },
-  "3410"      : {
+  "3412"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
       "strength_model" : 0.65,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.07,
       "model"          : [
-        "3538",
+        "3534",
         0
       ],
       "clip"           : [
-        "3537",
+        "3533",
         0
       ]
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
-      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.60::0.90"
+      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.70::0.70"
     }
   },
   "3413"      : {
@@ -4014,7 +4014,7 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.05,
+      "detail_amount"      : 0.08,
       "start"              : 0.3,
       "end"                : 0.7,
       "bias"               : 0.5,
@@ -4280,7 +4280,7 @@
         0
       ],
       "model2"            : [
-        "3410",
+        "3538",
         0
       ]
     },
@@ -4667,7 +4667,7 @@
   },
   "3683"      : {
     "inputs"     : {
-      "value" : 0.55
+      "value" : 0.4
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -4884,9 +4884,9 @@
       "atmosphere_enabled"   : true,
       "haze_strength"        : 0,
       "lift_blacks"          : 0,
-      "depth_offset"         : -0.25,
+      "depth_offset"         : -0.05,
       "f_stop"               : "f/5.6",
-      "dof_intensity"        : 0.3,
+      "dof_intensity"        : 0.08,
       "dof_auto_focus"       : false,
       "dof_sharpness_radius" : 0.35,
       "dof_focus_point"      : 0,
@@ -4894,10 +4894,10 @@
       "promist_strength"     : 0,
       "halation_strength"    : 0,
       "chromatic_aberration" : 0,
-      "vignette_intensity"   : 0.35,
-      "grain_power"          : 0.005,
+      "vignette_intensity"   : 0.1,
+      "grain_power"          : 0.002,
       "monochrome_grain"     : false,
-      "highlight_rolloff"    : 0.05,
+      "highlight_rolloff"    : 0.2,
       "image"                : [
         "3175",
         0
@@ -5149,7 +5149,7 @@
   },
   "3803"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture,  __CAMERA_ANGLE__ , \nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\n\nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
+      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 __CAMERA_ANGLE__ , \nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction,  \n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\n\nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5341,7 +5341,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction, and overall composition of the reference image.\n\nMatch the identity of v1dhya5 while preserving realistic adult head-to-body proportions. Maintain the original face size relative to the shoulders, torso, and body. Do not enlarge the head, forehead, eyes, lips, or facial features. Preserve the original framing, crop, subject scale, and camera distance.\n\nCopy the facial expression from the reference image.\n\nPreserve shadow depth, contrast, and directional lighting from the reference image.\n\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\nPreserve the exact subject orientation, viewing direction, pose, camera perspective, and composition from the reference image.\n\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium-brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without whitening, brightening, fairness enhancement, beauty-filter smoothing, or airbrushing.\n\nPreserve realistic eumelanin depth, subtle golden-brown undertones, natural tonal variation, mild uneven pigmentation, fine pores, realistic skin texture, and photographic dynamic range. Maintain consistent medium-to-dark South Indian brown skin tones throughout the image while preserving realistic lighting response and shadow transitions.\n\nPreserve the original facial expression, pose, composition, outfit, accessories, and subject scale from the reference image.\n\nAdjust hair color to natural black while preserving existing styling and highlights. Adjust eye color to dark brown.\n\nApply faint eyeliner, soft eye shadow, and neutral pale-brown nude lipstick.\n\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approximately 34DD) with proportionate adjustments to hips, thighs, and calves while maintaining realistic anatomy, posture, and balance.\n\nEnsure realistic lighting, natural skin rendering, and consistent shadows.\n\nRemove visible watermarks, text artifacts, and unrelated background people.\n\n__EXPRESSION__\n"
+      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression, emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility, eye expression, eyelid position, eyebrow position, cheek tension, facial muscle movement, and overall expression geometry from the reference image.\n\nPreserve the original emotional intensity of the expression. Do not neutralize, soften, simplify, reduce, or replace expressive facial features. If the reference image contains an open mouth, smile, grin, laugh, smirk, pout, wink, or any expressive facial pose, preserve it exactly.\n\nTransform the reference image into a high-quality photorealistic photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve the direction that the subject is looking. Preserve the exact head orientation, viewing direction, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition of the reference image.\n\nIdentity replacement must preserve expression geometry. Change only the facial identity while maintaining the original expression structure unchanged.\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old while preserving age-appropriate facial features and maintaining the original facial expression.\n\nPreserve the original visual style, color palette, lighting direction, shadow depth, contrast, and photographic characteristics of the reference image.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange the subject hair color to natural black while preserving the original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture, natural facial proportions, realistic facial volume, authentic skin detail, and photorealistic rendering.\n\n__EYE_STATE__\n\nRemove any visible watermarks, logos, text artifacts, or image overlays.\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5378,7 +5378,7 @@
       "scheduler"    : "simple",
       "denoise"      : 1,
       "model"        : [
-        "3987",
+        "3992",
         0
       ],
       "positive"     : [
@@ -5401,7 +5401,7 @@
   },
   "3837"      : {
     "inputs"     : {
-      "text" : "\nfluxtrait,\nindian-girl-brown-eyes,\n"
+      "text" : "\n indian-girl-brown-eyes,\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5425,10 +5425,29 @@
       "title" : "Empty Flux 2 Latent"
     }
   },
+  "3842"      : {
+    "inputs"     : {
+      "lora_name"      : "Y2K Latina Aphrodite - Klein 9B.safetensors",
+      "strength_model" : 0.75,
+      "strength_clip"  : 0.21,
+      "model"          : [
+        "3779",
+        0
+      ],
+      "clip"           : [
+        "3780",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "Load LoRA (Model and CLIP)"
+    }
+  },
   "3844"      : {
     "inputs"     : {
-      "lora_name"      : "ultra_real_v4.safetensors",
-      "strength_model" : 1,
+      "lora_name"      : "ultra_real_v3.safetensors",
+      "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
         "3845",
@@ -5846,8 +5865,8 @@
     "inputs"     : {
       "noise_mask" : true,
       "positive"   : [
-        "3923",
-        0
+        "3990",
+        1
       ],
       "negative"   : [
         "3909",
@@ -5899,7 +5918,7 @@
       "scheduler"    : "simple",
       "denoise"      : 0.42,
       "model"        : [
-        "3846",
+        "3990",
         0
       ],
       "positive"     : [
@@ -5922,7 +5941,7 @@
   },
   "3923"      : {
     "inputs"     : {
-      "text" : "Make this photo a high-quality portrait of v1dhya5. Copy the expression from the reference image.\n\nRender authentic melanin-rich South Indian dark brown skin with subtle pores, fine skin texture, \nsubtle golden-brown undertones, and realistic tonal variation. No smoothing, no brightening, \nno beauty-filter effects.",
+      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression, emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility, eye expression, eyelid position, eyebrow position, cheek tension, and facial muscle movement from the reference image.\n\nCopy the expression from the reference image exactly. Preserve the original expression geometry and emotional intensity. Do not neutralize, soften, simplify, or replace expressive facial features. If the reference image contains a smile, grin, laugh, smirk, pout, open mouth, wink, or other expressive facial pose, preserve it exactly.\n\nMake this photo a high-quality photorealistic portrait of v1dhya5 while preserving the original head orientation, viewing direction, facial angle, camera perspective, framing, crop, and subject scale.\n\nPreserve realistic facial proportions, natural facial volume, realistic jawline, authentic nose shape, natural eye structure, and photorealistic facial detail.\n\nRender authentic melanin-rich South Indian dark-brown skin with realistic RAW-photo skin texture, subtle pores, fine skin detail, natural tonal variation, mild uneven pigmentation, rich eumelanin depth, and subtle golden-brown undertones.\n\nAvoid whitening, brightening, beauty-filter smoothing, airbrushing, plastic skin, excessive sharpening, artificial glow, porcelain skin, pink undertones, or unrealistic skin retouching.\n\nPreserve realistic lighting, shadow depth, contrast, and natural photographic rendering.\n",
       "clip" : [
         "3846",
         1
@@ -5989,12 +6008,12 @@
       "strength_model" : 2.4,
       "strength_clip"  : 0.09,
       "model"          : [
-        "3779",
+        "3842",
         0
       ],
       "clip"           : [
-        "3780",
-        0
+        "3842",
+        1
       ]
     },
     "class_type" : "LoraLoader",
@@ -6005,7 +6024,7 @@
   "3983"      : {
     "inputs"     : {
       "method"       : "reinhard_lab_gpu",
-      "strength"     : 0.8,
+      "strength"     : 0.86,
       "multithread"  : true,
       "image_target" : [
         "3796",
@@ -6045,7 +6064,7 @@
       "early_layer_scale"   : 1.15,
       "mid_layer_scale"     : 1.05,
       "late_layer_scale"    : 0.9,
-      "preserve_original"   : 0.75,
+      "preserve_original"   : 0.8,
       "active_end_override" : false,
       "device"              : "auto",
       "debug"               : false,
@@ -6072,13 +6091,71 @@
       "device"              : "auto",
       "debug"               : false,
       "conditioning"        : [
-        "3760",
-        0
+        "3992",
+        1
       ]
     },
     "class_type" : "Flux2KleinEnhancer",
     "_meta"      : {
       "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
+  "3990"      : {
+    "inputs"     : {
+      "balance"      : 0.5,
+      "debug"        : false,
+      "model"        : [
+        "3846",
+        0
+      ],
+      "conditioning" : [
+        "3920",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinTextRefBalance",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Text/Ref Balance"
+    }
+  },
+  "3992"      : {
+    "inputs"     : {
+      "balance"      : 0.48,
+      "debug"        : false,
+      "model"        : [
+        "3987",
+        0
+      ],
+      "conditioning" : [
+        "3760",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinTextRefBalance",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Text/Ref Balance"
+    }
+  },
+  "3995"      : {
+    "inputs"     : {
+      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction, and overall composition of the reference image.\n\nMatch the identity of v1dhya5 while preserving realistic adult head-to-body proportions. Maintain the original face size relative to the shoulders, torso, and body. Do not enlarge the head, forehead, eyes, lips, or facial features. Preserve the original framing, crop, subject scale, and camera distance.\n\nCopy the facial expression from the reference image.\n\nPreserve shadow depth, contrast, and directional lighting from the reference image.\n\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\nPreserve the exact subject orientation, viewing direction, pose, camera perspective, and composition from the reference image.\n\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium-brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without whitening, brightening, fairness enhancement, beauty-filter smoothing, or airbrushing.\n\nPreserve realistic eumelanin depth, subtle golden-brown undertones, natural tonal variation, mild uneven pigmentation, fine pores, realistic skin texture, and photographic dynamic range. Maintain consistent medium-to-dark South Indian brown skin tones throughout the image while preserving realistic lighting response and shadow transitions.\n\nPreserve the original facial expression, pose, composition, outfit, accessories, and subject scale from the reference image.\n\nAdjust hair color to natural black while preserving existing styling and highlights. Adjust eye color to dark brown.\n\nApply faint eyeliner, soft eye shadow, and neutral pale-brown nude lipstick.\n\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approximately 34DD) with proportionate adjustments to hips, thighs, and calves while maintaining realistic anatomy, posture, and balance.\n\nEnsure realistic lighting, natural skin rendering, and consistent shadows.\n\nRemove visible watermarks, text artifacts, and unrelated background people.\n\n__EXPRESSION__\n\n\ny2klatinaaphrodite\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "3996"      : {
+    "inputs"     : {
+      "text" : "Make this photo a high-quality portrait of v1dhya5. Copy the expression from the reference image.\n\nRender authentic melanin-rich South Indian dark brown skin with subtle pores, fine skin texture, \nsubtle golden-brown undertones, and realistic tonal variation. No smoothing, no brightening, \nno beauty-filter effects.",
+      "clip" : [
+        "3374",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Klein_CLIP Text Encode (Positive Prompt)"
     }
   },
   "2996:3575" : {
