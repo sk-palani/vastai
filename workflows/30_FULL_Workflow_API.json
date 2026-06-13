@@ -87,25 +87,6 @@
       "title" : "ConditioningAverage"
     }
   },
-  "55"        : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : true,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : false,
-      "images"          : [
-        "3018",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
   "122"       : {
     "inputs"     : {
       "any" : [
@@ -743,27 +724,6 @@
       "title" : "M"
     }
   },
-  "339"       : {
-    "inputs"     : {
-      "noise_scale"   : [
-        "3694",
-        0
-      ],
-      "blend_opacity" : 9,
-      "image"         : [
-        "3516",
-        0
-      ],
-      "mask"          : [
-        "2193",
-        0
-      ]
-    },
-    "class_type" : "NoisePlusBlend",
-    "_meta"      : {
-      "title" : "Noise Plus Blend"
-    }
-  },
   "356"       : {
     "inputs"     : {
       "image" : [
@@ -783,35 +743,6 @@
     "class_type" : "easy int",
     "_meta"      : {
       "title" : "Age"
-    }
-  },
-  "363"       : {
-    "inputs"     : {
-      "center_x"            : 0.3,
-      "center_y"            : 0.5,
-      "saturation"          : 0.9,
-      "vignette_intensity"  : 0.010000000000000002,
-      "grain_method"        : "filmgrainer",
-      "grain_power"         : 0.03,
-      "grain_scale"         : 0.5,
-      "grain_sat"           : 0.3,
-      "filmgrainer_shadows" : 0.08,
-      "filmgrainer_highs"   : 0.05,
-      "blur_strength"       : 0,
-      "blur_focus_spread"   : 0.30000000000000004,
-      "focal_depth"         : 0.10000000000000002,
-      "image"               : [
-        "478",
-        0
-      ],
-      "depth_map"           : [
-        "2727",
-        0
-      ]
-    },
-    "class_type" : "LayerFilter: FilmV2",
-    "_meta"      : {
-      "title" : "LayerFilter: Film V2"
     }
   },
   "389"       : {
@@ -845,18 +776,6 @@
     "class_type" : "GetImageSize+",
     "_meta"      : {
       "title" : "🔧 Get Image Size"
-    }
-  },
-  "478"       : {
-    "inputs"     : {
-      "image" : [
-        "3018",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
     }
   },
   "494"       : {
@@ -1663,9 +1582,9 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
-      "mode"          : "pad",
+      "mode"          : "resize",
       "delta_percent" : [
         "2532",
         0
@@ -1868,36 +1787,6 @@
       "title" : "SplitSigmasDenoise"
     }
   },
-  "1885"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "3723",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 2,
-      "filename_number_start"   : "false",
-      "extension"               : "jpg",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "false",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "339",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
   "1888"      : {
     "inputs"     : {
       "samples" : [
@@ -1912,21 +1801,6 @@
     "class_type" : "VAEDecode",
     "_meta"      : {
       "title" : "VAE Decode"
-    }
-  },
-  "1889"      : {
-    "inputs"     : {
-      "mode"   : "always",
-      "volume" : 1,
-      "file"   : "notify.wav",
-      "any"    : [
-        "1885",
-        0
-      ]
-    },
-    "class_type" : "PlaySound|pysssss",
-    "_meta"      : {
-      "title" : "PlaySound 🐍"
     }
   },
   "1893"      : {
@@ -1991,7 +1865,7 @@
   },
   "1921"      : {
     "inputs"     : {
-      "value" : 20
+      "value" : 18
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -2017,7 +1891,7 @@
   },
   "1923"      : {
     "inputs"     : {
-      "value" : 15
+      "value" : 14
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -2123,23 +1997,6 @@
     "class_type" : "easy mathInt",
     "_meta"      : {
       "title" : "Math Int"
-    }
-  },
-  "1942"      : {
-    "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "478",
-        1
-      ],
-      "b"    : [
-        "478",
-        2
-      ]
-    },
-    "class_type" : "ImpactMinMax",
-    "_meta"      : {
-      "title" : "ImpactMinMax"
     }
   },
   "1945"      : {
@@ -2512,21 +2369,6 @@
       "title" : "Boolean"
     }
   },
-  "2193"      : {
-    "inputs"     : {
-      "invert_mask" : false,
-      "grow"        : 1,
-      "blur"        : 0,
-      "mask"        : [
-        "55",
-        0
-      ]
-    },
-    "class_type" : "LayerMask: MaskGrow",
-    "_meta"      : {
-      "title" : "LayerMask: MaskGrow"
-    }
-  },
   "2339"      : {
     "inputs"     : {
       "output_path"             : "[time(%Y-%m-%d)]",
@@ -2559,10 +2401,6 @@
   },
   "2345"      : {
     "inputs"     : {
-      "any_04" : [
-        "1885",
-        0
-      ],
       "any_05" : [
         "3018",
         0
@@ -2675,7 +2513,7 @@
         "1955",
         0
       ],
-      "b"         : 0.62,
+      "b"         : 0.73,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -2771,7 +2609,7 @@
   },
   "2598"      : {
     "inputs"     : {
-      "string"  : "__{{ age }}__ years old ",
+      "string"  : "The subject appears approximately __{{ age }}__ years old, with realistic age-appropriate facial features, skin texture, facial volume, and natural signs of maturity consistent with that age.",
       "find"    : "__{{ age }}__",
       "replace" : [
         "3706",
@@ -2840,23 +2678,6 @@
     "class_type" : "VAEDecode",
     "_meta"      : {
       "title" : "VAE Decode"
-    }
-  },
-  "2727"      : {
-    "inputs"     : {
-      "preprocessor" : "DepthAnythingPreprocessor",
-      "resolution"   : [
-        "1942",
-        0
-      ],
-      "image"        : [
-        "3018",
-        0
-      ]
-    },
-    "class_type" : "AIO_Preprocessor",
-    "_meta"      : {
-      "title" : "AIO Aux Preprocessor"
     }
   },
   "2751"      : {
@@ -3557,10 +3378,6 @@
         "2339",
         0
       ],
-      "any_06" : [
-        "1885",
-        0
-      ],
       "any_07" : [
         "3018",
         0
@@ -4198,8 +4015,8 @@
   "3420"      : {
     "inputs"     : {
       "detail_amount"      : 0.05,
-      "start"              : 0.4,
-      "end"                : 0.6,
+      "start"              : 0.3,
+      "end"                : 0.7,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
@@ -4391,28 +4208,6 @@
     "class_type" : "LayerFilter: FilmV2",
     "_meta"      : {
       "title" : "LayerFilter: Film V2"
-    }
-  },
-  "3516"      : {
-    "inputs"     : {
-      "noise_radius"   : 1,
-      "preserve_edges" : 1,
-      "sharpen"        : [
-        "3692",
-        0
-      ],
-      "ratio"          : [
-        "3693",
-        0
-      ],
-      "image"          : [
-        "363",
-        0
-      ]
-    },
-    "class_type" : "ImageSmartSharpen+",
-    "_meta"      : {
-      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "3517"      : {
@@ -4939,38 +4734,6 @@
       "title" : "Text Concatenate"
     }
   },
-  "3692"      : {
-    "inputs"     : {
-      "value" : 0.22
-    },
-    "class_type" : "FloatConstant",
-    "_meta"      : {
-      "title" : "Float Constant"
-    }
-  },
-  "3693"      : {
-    "inputs"     : {
-      "value" : 0.35
-    },
-    "class_type" : "FloatConstant",
-    "_meta"      : {
-      "title" : "Float Constant"
-    }
-  },
-  "3694"      : {
-    "inputs"     : {
-      "a"         : [
-        "2100",
-        0
-      ],
-      "b"         : 0.18,
-      "operation" : "multiply"
-    },
-    "class_type" : "easy mathFloat",
-    "_meta"      : {
-      "title" : "Math Float 0.181818"
-    }
-  },
   "3702"      : {
     "inputs"     : {
       "a"         : [
@@ -5071,26 +4834,6 @@
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
       "title" : "Boolean"
-    }
-  },
-  "3723"      : {
-    "inputs"     : {
-      "condition"  : [
-        "3720",
-        0
-      ],
-      "when_true"  : [
-        "3136",
-        0
-      ],
-      "when_false" : [
-        "3135",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
     }
   },
   "3739"      : {
@@ -5204,14 +4947,14 @@
   "3763"      : {
     "inputs"     : {
       "lora_name"      : "klein_slider_bodyweight_50.safetensors",
-      "strength_model" : 2.8,
+      "strength_model" : 2.5,
       "strength_clip"  : 0.21,
       "model"          : [
-        "3834",
+        "3930",
         0
       ],
       "clip"           : [
-        "3834",
+        "3930",
         1
       ]
     },
@@ -5315,7 +5058,7 @@
   "3789"      : {
     "inputs"     : {
       "model_a" : [
-        "3842",
+        "3779",
         0
       ],
       "model_b" : [
@@ -5335,8 +5078,8 @@
   "3790"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3842",
-        1
+        "3780",
+        0
       ],
       "clip_b"  : [
         "3763",
@@ -5406,7 +5149,7 @@
   },
   "3803"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture,  __CAMERA_ANGLE__ , \nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n\n__AGE_STRING__ , \nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture,  __CAMERA_ANGLE__ , \nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\n\nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5598,7 +5341,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 in the same visual style and color mode as the reference image.\nCopy the facial expression from the reference image.\n\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\npreserve shadow depth and directional lighting from reference\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n\nMaintain the subject’s facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\nRemove any other person in the background.\n\nFilmGrainAF,\n"
+      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction, and overall composition of the reference image.\n\nMatch the identity of v1dhya5 while preserving realistic adult head-to-body proportions. Maintain the original face size relative to the shoulders, torso, and body. Do not enlarge the head, forehead, eyes, lips, or facial features. Preserve the original framing, crop, subject scale, and camera distance.\n\nCopy the facial expression from the reference image.\n\nPreserve shadow depth, contrast, and directional lighting from the reference image.\n\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\nPreserve the exact subject orientation, viewing direction, pose, camera perspective, and composition from the reference image.\n\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium-brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without whitening, brightening, fairness enhancement, beauty-filter smoothing, or airbrushing.\n\nPreserve realistic eumelanin depth, subtle golden-brown undertones, natural tonal variation, mild uneven pigmentation, fine pores, realistic skin texture, and photographic dynamic range. Maintain consistent medium-to-dark South Indian brown skin tones throughout the image while preserving realistic lighting response and shadow transitions.\n\nPreserve the original facial expression, pose, composition, outfit, accessories, and subject scale from the reference image.\n\nAdjust hair color to natural black while preserving existing styling and highlights. Adjust eye color to dark brown.\n\nApply faint eyeliner, soft eye shadow, and neutral pale-brown nude lipstick.\n\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approximately 34DD) with proportionate adjustments to hips, thighs, and calves while maintaining realistic anatomy, posture, and balance.\n\nEnsure realistic lighting, natural skin rendering, and consistent shadows.\n\nRemove visible watermarks, text artifacts, and unrelated background people.\n\n__EXPRESSION__\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5629,17 +5372,17 @@
         "3705",
         0
       ],
-      "steps"        : 5,
+      "steps"        : 7,
       "cfg"          : 1,
       "sampler_name" : "euler",
-      "scheduler"    : "beta",
+      "scheduler"    : "simple",
       "denoise"      : 1,
       "model"        : [
         "3987",
         0
       ],
       "positive"     : [
-        "3974",
+        "3989",
         0
       ],
       "negative"     : [
@@ -5654,25 +5397,6 @@
     "class_type" : "KSampler",
     "_meta"      : {
       "title" : "Klein_KSampler"
-    }
-  },
-  "3834"      : {
-    "inputs"     : {
-      "lora_name"      : "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
-      "strength_model" : 0.9,
-      "strength_clip"  : 0.09,
-      "model"          : [
-        "3930",
-        0
-      ],
-      "clip"           : [
-        "3930",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "RealSKin 0.92:0.10"
     }
   },
   "3837"      : {
@@ -5699,25 +5423,6 @@
     "class_type" : "EmptyFlux2LatentImage",
     "_meta"      : {
       "title" : "Empty Flux 2 Latent"
-    }
-  },
-  "3842"      : {
-    "inputs"     : {
-      "lora_name"      : "klein_slider_bust.safetensors",
-      "strength_model" : 2.4,
-      "strength_clip"  : 0.21,
-      "model"          : [
-        "3779",
-        0
-      ],
-      "clip"           : [
-        "3780",
-        0
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "Load LoRA (Model and CLIP)"
     }
   },
   "3844"      : {
@@ -5954,7 +5659,7 @@
   },
   "3871"      : {
     "inputs"     : {
-      "text" : "Change the subject's facial expression to loving facial expression\nChange the subject's facial expression to pouting facial expression\nChange the subject's facial expression to shy facial expression\nChange the subject's facial expression to happy facial expression\nChange the subject's facial expression to very happy facial expression\nChange the subject's facial expression to silly facial expression\nChange the subject's facial expression to aroused facial expression\nChange the subject's facial expression to flirting facial expression\nChange the subject's facial expression to seductive facial expression\nChange the subject's facial expression to provocative facial expression\nChange the subject's facial expression to surprised facial expression\nChange the subject's facial expression to open mouth facial expression"
+      "text" : "Adjust the facial expression to a warm, affectionate expression with gentle eyes and a soft natural smile.\nAdjust the facial expression to a playful pout with slightly pursed lips and expressive eyes.\nAdjust the facial expression to a shy expression with a subtle smile, softened gaze, and slight facial hesitation.\nAdjust the facial expression to a naturally happy expression with a relaxed smile and bright eyes.\nAdjust the facial expression to a joyful expression with a broad genuine smile and visible happiness in the eyes.\nAdjust the facial expression to a playful and silly expression with lighthearted energy and natural facial movement.\nAdjust the facial expression to a softly romantic expression with warm eyes, relaxed lips, and subtle emotional engagement.\nAdjust the facial expression to a flirtatious expression with a playful gaze, slight smile, and confident eye contact.\nAdjust the facial expression to a subtly seductive expression with relaxed eyelids, soft lips, and understated confidence.\nAdjust the facial expression to a confident and alluring expression while maintaining realistic facial anatomy and natural emotion.\nAdjust the facial expression to a surprised expression with widened eyes, raised brows, and natural facial tension.\nAdjust the facial expression to a slightly open-mouth expression with relaxed lips and natural facial posture.\nAdjust the facial expression to a gentle wink with one eye softly closed and a playful smile.\nAdjust the facial expression to a mischievous expression with a subtle smirk and expressive eyes.\nAdjust the facial expression to a thoughtful expression with a calm gaze and relaxed facial muscles.\nAdjust the facial expression to a dreamy expression with softened eyes and a peaceful smile.\nAdjust the facial expression to a confident expression with direct eye contact and composed facial features.\nAdjust the facial expression to a cheerful laughing expression with natural eye creases and authentic joy.\nAdjust the facial expression to a curious expression with attentive eyes and slight eyebrow lift.\nAdjust the facial expression to a gentle smirk with subtle asymmetry and natural confidence."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -6191,14 +5896,14 @@
       "steps"        : 5,
       "cfg"          : 1,
       "sampler_name" : "euler",
-      "scheduler"    : "beta",
+      "scheduler"    : "simple",
       "denoise"      : 0.42,
       "model"        : [
         "3846",
         0
       ],
       "positive"     : [
-        "3917",
+        "3988",
         0
       ],
       "negative"     : [
@@ -6284,39 +5989,17 @@
       "strength_model" : 2.4,
       "strength_clip"  : 0.09,
       "model"          : [
-        "3842",
+        "3779",
         0
       ],
       "clip"           : [
-        "3842",
-        1
+        "3780",
+        0
       ]
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA (Model and CLIP)"
-    }
-  },
-  "3974"      : {
-    "inputs"     : {
-      "active_scale"        : 1,
-      "per_token_whiten"    : 0.05,
-      "norm_equalize"       : 0.05,
-      "early_layer_scale"   : 0.85,
-      "mid_layer_scale"     : 0.9,
-      "late_layer_scale"    : 0.85,
-      "preserve_original"   : 1,
-      "active_end_override" : false,
-      "device"              : "auto",
-      "debug"               : false,
-      "conditioning"        : [
-        "3760",
-        0
-      ]
-    },
-    "class_type" : "Flux2KleinEnhancer",
-    "_meta"      : {
-      "title" : "FLUX.2 Klein Enhancer"
     }
   },
   "3983"      : {
@@ -6352,6 +6035,50 @@
     "class_type" : "ModelSamplingFlux",
     "_meta"      : {
       "title" : "ModelSamplingFlux"
+    }
+  },
+  "3988"      : {
+    "inputs"     : {
+      "active_scale"        : 0.85,
+      "per_token_whiten"    : 0.03,
+      "norm_equalize"       : 0.08,
+      "early_layer_scale"   : 1.15,
+      "mid_layer_scale"     : 1.05,
+      "late_layer_scale"    : 0.9,
+      "preserve_original"   : 0.75,
+      "active_end_override" : false,
+      "device"              : "auto",
+      "debug"               : false,
+      "conditioning"        : [
+        "3917",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinEnhancer",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
+  "3989"      : {
+    "inputs"     : {
+      "active_scale"        : 0.85,
+      "per_token_whiten"    : 0.03,
+      "norm_equalize"       : 0.08,
+      "early_layer_scale"   : 1.15,
+      "mid_layer_scale"     : 1.05,
+      "late_layer_scale"    : 0.9,
+      "preserve_original"   : 0.75,
+      "active_end_override" : false,
+      "device"              : "auto",
+      "debug"               : false,
+      "conditioning"        : [
+        "3760",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinEnhancer",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Enhancer"
     }
   },
   "2996:3575" : {
