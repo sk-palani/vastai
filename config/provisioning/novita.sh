@@ -253,6 +253,8 @@ LORA_MODELS=(
 
     # skin tone.safetensors
     "https://civitai.com/api/download/models/2920132?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # buttocks.safetensors
+    "https://civitai.com/api/download/models/2872664?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # ass_slider_klein9b_v12_20260216_080807.safetensors
     "https://civitai.com/api/download/models/2695145?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # voluptuous_slider_klein9b_v05_20260203_155139.safetensors
@@ -345,6 +347,10 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/755383?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # IndianWomanFluxV1.safetensors
     "https://civitai.com/api/download/models/1312467?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # CleavageHelper-FLUX-rc4.safetensors
+    "https://civitai.com/api/download/models/742855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # CleavageHelper-FLUX-RC5.safetensors
+    "https://civitai.com/api/download/models/747750?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 )
 
