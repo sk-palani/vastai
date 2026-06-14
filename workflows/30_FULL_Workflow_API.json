@@ -30,7 +30,7 @@
         0
       ],
       "image"       : [
-        "2109",
+        "4034",
         0
       ]
     },
@@ -147,7 +147,7 @@
   "154"       : {
     "inputs"     : {
       "pixels" : [
-        "2109",
+        "4034",
         0
       ],
       "vae"    : [
@@ -235,7 +235,7 @@
   "242"       : {
     "inputs"     : {
       "text_a"  : [
-        "247",
+        "4010",
         0
       ],
       "text_b"  : [
@@ -296,15 +296,6 @@
     "class_type" : "StringConcatenate",
     "_meta"      : {
       "title" : "Concatenate Text"
-    }
-  },
-  "247"       : {
-    "inputs"     : {
-      "value" : "wearing indian saree with intricate details"
-    },
-    "class_type" : "PrimitiveString",
-    "_meta"      : {
-      "title" : "OnTrue"
     }
   },
   "249"       : {
@@ -977,7 +968,7 @@
   "744"       : {
     "inputs"     : {
       "image" : [
-        "2109",
+        "4034",
         0
       ]
     },
@@ -1190,7 +1181,7 @@
       "megapixels"       : 1.6,
       "resolution_steps" : 1,
       "image"            : [
-        "2109",
+        "4034",
         0
       ]
     },
@@ -1582,7 +1573,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.9",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -2046,12 +2037,15 @@
   },
   "1988"      : {
     "inputs"     : {
-      "clip_l"   : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\nd351 d4rk",
+      "clip_l"   : [
+        "4014",
+        0
+      ],
       "t5xxl"    : [
         "788",
         0
       ],
-      "guidance" : 3.5,
+      "guidance" : 3.4,
       "clip"     : [
         "3403",
         0
@@ -2066,7 +2060,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 24,
+      "steps"        : 44,
       "denoise"      : [
         "1999",
         0
@@ -2259,26 +2253,6 @@
       ],
       "when_false" : [
         "1412",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2109"      : {
-    "inputs"     : {
-      "condition"  : [
-        "1345",
-        0
-      ],
-      "when_true"  : [
-        "1837",
-        0
-      ],
-      "when_false" : [
-        "1566",
         0
       ]
     },
@@ -2513,7 +2487,7 @@
         "1955",
         0
       ],
-      "b"         : 0.73,
+      "b"         : 0.68,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -2733,7 +2707,7 @@
       "delimiter"        : ",",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "2111",
+        "4017",
         0
       ],
       "text_b"           : [
@@ -2800,7 +2774,7 @@
         "2102",
         0
       ],
-      "b"         : 0.42,
+      "b"         : 0.44,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3061,7 +3035,7 @@
   "3114"      : {
     "inputs"     : {
       "max_shift"  : 1.1,
-      "base_shift" : 0.5,
+      "base_shift" : 0.55,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3404,8 +3378,8 @@
   "3339"      : {
     "inputs"     : {
       "clip_a"  : [
-        "3537",
-        0
+        "3410",
+        1
       ],
       "clip_b"  : [
         "3361",
@@ -3472,7 +3446,7 @@
   "3353"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 1,
+      "strength_model" : 0.92,
       "strength_clip"  : 0.06,
       "model"          : [
         "3401",
@@ -3759,7 +3733,7 @@
   "3393"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 0.9,
       "strength_clip"  : 0,
       "model"          : [
         "3401",
@@ -3778,7 +3752,7 @@
   "3394"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 0.6,
       "strength_clip"  : 0,
       "model"          : [
         "3401",
@@ -3959,6 +3933,25 @@
       "title" : "4::2::0::0.5"
     }
   },
+  "3410"      : {
+    "inputs"     : {
+      "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
+      "strength_model" : 0.65,
+      "strength_clip"  : 0.1,
+      "model"          : [
+        "3538",
+        0
+      ],
+      "clip"           : [
+        "3537",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3 0.60::0.90"
+    }
+  },
   "3412"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
@@ -3999,7 +3992,7 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.03,
+      "dishonesty_factor" : -0.02,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4014,9 +4007,9 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.08,
-      "start"              : 0.3,
-      "end"                : 0.7,
+      "detail_amount"      : 0.07,
+      "start"              : 0.34,
+      "end"                : 0.66,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
@@ -4280,7 +4273,7 @@
         0
       ],
       "model2"            : [
-        "3538",
+        "3410",
         0
       ]
     },
@@ -4375,11 +4368,11 @@
       "strength_model" : 1.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "3396",
+        "4050",
         0
       ],
       "clip"           : [
-        "3396",
+        "4050",
         1
       ]
     },
@@ -4469,7 +4462,7 @@
       "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
       "attention_mode"    : "auto",
-      "preset_prompt"     : "🖼️ Simple Description",
+      "preset_prompt"     : "🖼️ Detailed Description",
       "custom_prompt"     : "- Role: AI Image Analysis and Description Specialist\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a image generation prompt.",
       "max_tokens"        : 256,
       "keep_model_loaded" : [
@@ -4667,7 +4660,7 @@
   },
   "3683"      : {
     "inputs"     : {
-      "value" : 0.4
+      "value" : 0.52
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -4919,7 +4912,7 @@
         0
       ],
       "clip" : [
-        "3790",
+        "4003",
         0
       ]
     },
@@ -4995,7 +4988,7 @@
   "3772"      : {
     "inputs"     : {
       "image" : [
-        "2109",
+        "4034",
         0
       ]
     },
@@ -5098,7 +5091,7 @@
   "3792"      : {
     "inputs"     : {
       "pixels" : [
-        "2109",
+        "4034",
         0
       ],
       "vae"    : [
@@ -5341,7 +5334,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression, emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility, eye expression, eyelid position, eyebrow position, cheek tension, facial muscle movement, and overall expression geometry from the reference image.\n\nPreserve the original emotional intensity of the expression. Do not neutralize, soften, simplify, reduce, or replace expressive facial features. If the reference image contains an open mouth, smile, grin, laugh, smirk, pout, wink, or any expressive facial pose, preserve it exactly.\n\nTransform the reference image into a high-quality photorealistic photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve the direction that the subject is looking. Preserve the exact head orientation, viewing direction, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition of the reference image.\n\nIdentity replacement must preserve expression geometry. Change only the facial identity while maintaining the original expression structure unchanged.\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old while preserving age-appropriate facial features and maintaining the original facial expression.\n\nPreserve the original visual style, color palette, lighting direction, shadow depth, contrast, and photographic characteristics of the reference image.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange the subject hair color to natural black while preserving the original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture, natural facial proportions, realistic facial volume, authentic skin detail, and photorealistic rendering.\n\n__EYE_STATE__\n\nRemove any visible watermarks, logos, text artifacts, or image overlays.\n"
+      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression, emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility,eyelid position, eyelid tension,  facial muscle movement, eyebrow position, cheek tension, facial muscle movement, and overall expression geometry from the reference image.\n\nPreserve the original emotional intensity of the expression. Do not neutralize, soften, simplify, reduce, or replace expressive facial features. If the reference image contains an open mouth, smile, grin, laugh, smirk, pout, wink, or any expressive facial pose, preserve it exactly.\n\nTransform the reference image into a high-quality   photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve the exact gaze direction, pupil position, eye alignment, focus point, and viewing direction from the reference image. Do not redirect the eyes toward the camera or toward a different target.. Preserve the exact head orientation, viewing direction, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition of the reference image.\n\n \nMatch the subject's apparent age to approximately __AGE_STRING__ years old while preserving age-appropriate facial features and maintaining the original facial expression.\n\nPreserve the original visual style, color palette, lighting direction, shadow depth, contrast, and photographic characteristics of the reference image.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange the subject hair color to natural black while preserving the original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture, \n\n__EYE_STATE__\n\nRemove any visible watermarks, logos, text artifacts, or image overlays.\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5397,6 +5390,25 @@
     "class_type" : "KSampler",
     "_meta"      : {
       "title" : "Klein_KSampler"
+    }
+  },
+  "3834"      : {
+    "inputs"     : {
+      "lora_name"      : "buttocks.safetensors",
+      "strength_model" : 4,
+      "strength_clip"  : 1,
+      "model"          : [
+        "3789",
+        0
+      ],
+      "clip"           : [
+        "3790",
+        0
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "RealSKin 0.92:0.10"
     }
   },
   "3837"      : {
@@ -5585,26 +5597,10 @@
       "title" : "Image Save"
     }
   },
-  "3856"      : {
-    "inputs"     : {
-      "pixels" : [
-        "3912",
-        0
-      ],
-      "vae"    : [
-        "3373",
-        0
-      ]
-    },
-    "class_type" : "VAEEncode",
-    "_meta"      : {
-      "title" : "VAE Encode"
-    }
-  },
   "3857"      : {
     "inputs"     : {
       "any_01" : [
-        "3856",
+        "4026",
         0
       ],
       "any_02" : [
@@ -5916,7 +5912,7 @@
       "cfg"          : 1,
       "sampler_name" : "euler",
       "scheduler"    : "simple",
-      "denoise"      : 0.42,
+      "denoise"      : 0.48,
       "model"        : [
         "3990",
         0
@@ -6031,7 +6027,7 @@
         0
       ],
       "image_ref"    : [
-        "2109",
+        "4034",
         0
       ]
     },
@@ -6047,7 +6043,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "3789",
+        "4002",
         0
       ]
     },
@@ -6086,7 +6082,7 @@
       "early_layer_scale"   : 1.15,
       "mid_layer_scale"     : 1.05,
       "late_layer_scale"    : 0.9,
-      "preserve_original"   : 0.75,
+      "preserve_original"   : 0.7,
       "active_end_override" : false,
       "device"              : "auto",
       "debug"               : false,
@@ -6158,6 +6154,343 @@
       "title" : "Klein_CLIP Text Encode (Positive Prompt)"
     }
   },
+  "4002"      : {
+    "inputs"     : {
+      "model_a" : [
+        "3789",
+        0
+      ],
+      "model_b" : [
+        "3834",
+        0
+      ],
+      "boolean" : [
+        "3868",
+        0
+      ]
+    },
+    "class_type" : "Model Input Switch",
+    "_meta"      : {
+      "title" : "Model Input Switch"
+    }
+  },
+  "4003"      : {
+    "inputs"     : {
+      "clip_a"  : [
+        "3790",
+        0
+      ],
+      "clip_b"  : [
+        "3834",
+        1
+      ],
+      "boolean" : [
+        "3868",
+        0
+      ]
+    },
+    "class_type" : "CLIP Input Switch",
+    "_meta"      : {
+      "title" : "CLIP Input Switch"
+    }
+  },
+  "4009"      : {
+    "inputs"     : {
+      "text" : "captivating professional photo of v1dhya5 woman in a serene outdoor setting, the overall mood of the photograph is calm and introspective, capturing a moment of introspection or contemplation, \n\nd351 d4rk\n\n__SAREE__\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "4010"      : {
+    "inputs"     : {
+      "text" : "wearing indian saree with intricate details.\nThe saree is a single continuous draped fabric. Preserve continuous fabric flow across the back, waist, shoulder, and pallu. Do not introduce garment seams, zippers, closures, center-back stitching, panel joins, or dress-like construction lines."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "4011"      : {
+    "inputs"     : {
+      "text" : ""
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "4012"      : {
+    "inputs"     : {
+      "text" : "traditional saree,\nsingle continuous draped fabric,\nseamless wraparound garment,\ncontinuous pallu drape,\nunstitched fabric construction,\nno visible back seam,\nno zipper,\nno center-back closure,\ncontinuous textile flow"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "4013"      : {
+    "inputs"     : {
+      "condition"  : [
+        "240",
+        0
+      ],
+      "when_true"  : [
+        "4012",
+        0
+      ],
+      "when_false" : [
+        "4011",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "4014"      : {
+    "inputs"     : {
+      "find"    : "__SAREE__",
+      "replace" : [
+        "4013",
+        0
+      ],
+      "text"    : [
+        "4009",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "4017"      : {
+    "inputs"     : {
+      "text" : "A high-quality photorealistic close-up portrait of an Indian woman with a naturally beautiful face and authentic facial proportions.\n\nRender realistic melanin-rich South Indian brown skin with visible pores, fine skin texture, subtle vellus hair, natural tonal variation, realistic facial volume, and authentic RAW-photography skin detail. Preserve natural skin characteristics including mild uneven pigmentation and realistic texture. Avoid beauty-filter smoothing, airbrushing, plastic skin, excessive sharpening, or artificial glow.\n\nThe subject appears approximately 24 years old with realistic age-appropriate facial features.\n\nPreserve the original facial expression exactly, including mouth shape, smile intensity, teeth visibility, lip position, cheek tension, eye expression, eyelid position, and facial muscle movement.\n\nRender realistic dental anatomy with naturally aligned teeth, realistic tooth shape, visible tooth separation, subtle enamel variation, natural translucency, realistic gum line, and authentic smile structure. Preserve teeth visibility and smile geometry from the reference image.\n\nPreserve realistic eyes with natural catchlights, eyelashes, iris detail, and authentic eye shape.\n\nPreserve the small black bindi centered on the forehead.\n\nMaintain photorealistic lighting, realistic shadow transitions, natural color response, and professional RAW-photography realism.\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "4018"      : {
+    "inputs"     : {
+      "text" : "photorealistic Indian woman,\nmelanin-rich brown skin,\nnatural skin texture,\nvisible pores,\nrealistic facial detail,\nnatural smile,\nrealistic teeth,\nprofessional photography,\nRAW photo realism"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "4020"      : {
+    "inputs"     : {
+      "tile_mode"  : "None",
+      "tile_size"  : 512,
+      "overlap"    : 64,
+      "samples"    : [
+        "4025",
+        0
+      ],
+      "input_vae"  : [
+        "3771",
+        0
+      ],
+      "output_vae" : [
+        "3373",
+        0
+      ]
+    },
+    "class_type" : "ReencodeLatent",
+    "_meta"      : {
+      "title" : "Reencode Latent"
+    }
+  },
+  "4025"      : {
+    "inputs"     : {
+      "samples" : [
+        "3922",
+        0
+      ]
+    },
+    "class_type" : "RemoveNoiseMask",
+    "_meta"      : {
+      "title" : "Remove Noise Mask"
+    }
+  },
+  "4026"      : {
+    "inputs"     : {
+      "condition"  : [
+        "322",
+        0
+      ],
+      "when_true"  : [
+        "4020",
+        0
+      ],
+      "when_false" : [
+        "4029",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "4029"      : {
+    "inputs"     : {
+      "noise_seed"     : [
+        "3338",
+        0
+      ],
+      "noise_strength" : 0.03,
+      "normalize"      : "false",
+      "latent"         : [
+        "4020",
+        0
+      ]
+    },
+    "class_type" : "InjectLatentNoise+",
+    "_meta"      : {
+      "title" : "🔧 Inject Latent Noise"
+    }
+  },
+  "4030"      : {
+    "inputs"     : {
+      "image" : [
+        "4033",
+        0
+      ]
+    },
+    "class_type" : "ImageInvert",
+    "_meta"      : {
+      "title" : "Invert Image Colors"
+    }
+  },
+  "4031"      : {
+    "inputs"     : {
+      "image" : [
+        "4049",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "4032"      : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "4031",
+        1
+      ],
+      "b"    : [
+        "4031",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "4033"      : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "4032",
+        0
+      ],
+      "image"        : [
+        "4049",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "4034"      : {
+    "inputs"     : {
+      "lens_distortion"      : 0,
+      "color_temperature"    : 0,
+      "tint"                 : 0,
+      "atmosphere_enabled"   : true,
+      "haze_strength"        : 0,
+      "lift_blacks"          : 0,
+      "depth_offset"         : -0.05,
+      "f_stop"               : "f/5.6",
+      "dof_intensity"        : 0.08,
+      "dof_auto_focus"       : false,
+      "dof_sharpness_radius" : 0.35,
+      "dof_focus_point"      : 0,
+      "light_wrap_strength"  : 0,
+      "promist_strength"     : 0,
+      "halation_strength"    : 0,
+      "chromatic_aberration" : 0,
+      "vignette_intensity"   : 0.1,
+      "grain_power"          : 0.002,
+      "monochrome_grain"     : false,
+      "highlight_rolloff"    : 0.2,
+      "image"                : [
+        "4049",
+        0
+      ],
+      "depth_map"            : [
+        "4030",
+        0
+      ]
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
+    }
+  },
+  "4049"      : {
+    "inputs"     : {
+      "boolean" : [
+        "1345",
+        0
+      ],
+      "image_a" : [
+        "1837",
+        0
+      ],
+      "image_b" : [
+        "1566",
+        0
+      ]
+    },
+    "class_type" : "easy imageSwitch",
+    "_meta"      : {
+      "title" : "Image Switch"
+    }
+  },
+  "4050"      : {
+    "inputs"     : {
+      "lora_name"      : "CleavageHelper-FLUX-RC5.safetensors",
+      "strength_model" : 1,
+      "strength_clip"  : 1,
+      "model"          : [
+        "3396",
+        0
+      ],
+      "clip"           : [
+        "3396",
+        1
+      ]
+    },
+    "class_type" : "LoraLoader",
+    "_meta"      : {
+      "title" : "CleavageHelper-FLUX-rc4 1.00 :: 0.1"
+    }
+  },
   "2996:3575" : {
     "inputs"     : {
       "combined"     : true,
@@ -6205,7 +6538,7 @@
       "delimiter"        : ", ",
       "clean_whitespace" : "true",
       "text_a"           : [
-        "2106",
+        "4018",
         0
       ],
       "text_c"           : [
@@ -6294,7 +6627,7 @@
       "noise_mask"         : true,
       "force_inpaint"      : true,
       "wildcard"           : "",
-      "cycle"              : 1,
+      "cycle"              : 2,
       "inpaint_model"      : false,
       "noise_mask_feather" : 40,
       "tiled_encode"       : false,
