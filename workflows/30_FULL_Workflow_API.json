@@ -30,7 +30,7 @@
         0
       ],
       "image"       : [
-        "4034",
+        "4049",
         0
       ]
     },
@@ -147,7 +147,7 @@
   "154"       : {
     "inputs"     : {
       "pixels" : [
-        "4034",
+        "4049",
         0
       ],
       "vae"    : [
@@ -968,7 +968,7 @@
   "744"       : {
     "inputs"     : {
       "image" : [
-        "4034",
+        "4049",
         0
       ]
     },
@@ -1181,7 +1181,7 @@
       "megapixels"       : 1.6,
       "resolution_steps" : 1,
       "image"            : [
-        "4034",
+        "4049",
         0
       ]
     },
@@ -1269,6 +1269,10 @@
   },
   "1566"      : {
     "inputs"     : {
+      "any_01" : [
+        "3523",
+        0
+      ],
       "any_05" : [
         "356",
         0
@@ -2045,7 +2049,7 @@
         "788",
         0
       ],
-      "guidance" : 3.4,
+      "guidance" : 3.5,
       "clip"     : [
         "3403",
         0
@@ -2060,7 +2064,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 44,
+      "steps"        : 24,
       "denoise"      : [
         "1999",
         0
@@ -3362,6 +3366,123 @@
       "title" : "Any Switch (rgthree)"
     }
   },
+  "3315"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : false,
+      "images"          : [
+        "3334",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "3317"      : {
+    "inputs"     : {
+      "image" : [
+        "3334",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3320"      : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "3317",
+        1
+      ],
+      "b"    : [
+        "3317",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "3321"      : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 1,
+      "blur"        : 0,
+      "mask"        : [
+        "3315",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "3323"      : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "3320",
+        0
+      ],
+      "image"        : [
+        "3334",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "3330"      : {
+    "inputs"     : {
+      "noise_scale"   : [
+        "3682",
+        0
+      ],
+      "blend_opacity" : 14,
+      "image"         : [
+        "4055",
+        0
+      ],
+      "mask"          : [
+        "3321",
+        0
+      ]
+    },
+    "class_type" : "NoisePlusBlend",
+    "_meta"      : {
+      "title" : "Noise Plus Blend"
+    }
+  },
+  "3334"      : {
+    "inputs"     : {
+      "any_04" : [
+        "356",
+        0
+      ],
+      "any_05" : [
+        "1837",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
   "3338"      : {
     "inputs"     : {
       "input1" : [
@@ -4007,8 +4128,8 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.07,
-      "start"              : 0.34,
+      "detail_amount"      : 0.06,
+      "start"              : 0.33,
       "end"                : 0.66,
       "bias"               : 0.5,
       "exponent"           : 1,
@@ -4016,7 +4137,7 @@
       "end_offset"         : 0,
       "fade"               : 0,
       "smooth"             : true,
-      "cfg_scale_override" : 1,
+      "cfg_scale_override" : 3.5,
       "sampler"            : [
         "3419",
         0
@@ -4320,6 +4441,22 @@
     "class_type" : "GetImageSize+",
     "_meta"      : {
       "title" : "🔧 Get Image Size"
+    }
+  },
+  "3523"      : {
+    "inputs"     : {
+      "noise_radius"   : 1,
+      "preserve_edges" : 1,
+      "sharpen"        : 0.5,
+      "ratio"          : 0.5,
+      "image"          : [
+        "3330",
+        0
+      ]
+    },
+    "class_type" : "ImageSmartSharpen+",
+    "_meta"      : {
+      "title" : "🔧 Image Smart Sharpen"
     }
   },
   "3533"      : {
@@ -4658,9 +4795,23 @@
       "title" : "Convert Int To String [LP]"
     }
   },
+  "3682"      : {
+    "inputs"     : {
+      "a"         : [
+        "2100",
+        0
+      ],
+      "b"         : 0.18,
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "Math Float 0.181818"
+    }
+  },
   "3683"      : {
     "inputs"     : {
-      "value" : 0.52
+      "value" : 0.54
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -4778,6 +4929,82 @@
     "class_type" : "IntToString|LP",
     "_meta"      : {
       "title" : "Convert Int To String [LP]"
+    }
+  },
+  "3710"      : {
+    "inputs"     : {
+      "lens_distortion"      : -0.01,
+      "color_temperature"    : 0.05,
+      "tint"                 : -0.05,
+      "atmosphere_enabled"   : false,
+      "haze_strength"        : 0.6,
+      "lift_blacks"          : 0.05,
+      "depth_offset"         : -0.25,
+      "f_stop"               : "Manual",
+      "dof_intensity"        : 0.3,
+      "dof_auto_focus"       : true,
+      "dof_sharpness_radius" : 0.35,
+      "dof_focus_point"      : 0,
+      "light_wrap_strength"  : 0.7,
+      "promist_strength"     : 0.1,
+      "halation_strength"    : 0.15,
+      "chromatic_aberration" : 0.002,
+      "vignette_intensity"   : 0.15,
+      "grain_power"          : 0.012,
+      "monochrome_grain"     : true,
+      "highlight_rolloff"    : 0.05,
+      "image"                : [
+        "3317",
+        0
+      ],
+      "depth_map"            : [
+        "3712",
+        0
+      ]
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
+    }
+  },
+  "3711"      : {
+    "inputs"     : {
+      "lens_distortion"      : false,
+      "color_temperature"    : 0.4,
+      "tint"                 : 0.23,
+      "atmosphere_enabled"   : 0,
+      "haze_strength"        : 0.5,
+      "lift_blacks"          : 0.002,
+      "depth_offset"         : 0.25,
+      "f_stop"               : "Manual",
+      "dof_intensity"        : 0.99,
+      "dof_auto_focus"       : false,
+      "dof_sharpness_radius" : 0.35,
+      "dof_focus_point"      : 0,
+      "light_wrap_strength"  : 0.7,
+      "promist_strength"     : 0.1,
+      "halation_strength"    : 0.15,
+      "chromatic_aberration" : 0.002,
+      "vignette_intensity"   : 0.15,
+      "grain_power"          : 0.012,
+      "monochrome_grain"     : true,
+      "highlight_rolloff"    : 0.05
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
+    }
+  },
+  "3712"      : {
+    "inputs"     : {
+      "image" : [
+        "3323",
+        0
+      ]
+    },
+    "class_type" : "ImageInvert",
+    "_meta"      : {
+      "title" : "Invert Image Colors"
     }
   },
   "3713"      : {
@@ -4988,7 +5215,7 @@
   "3772"      : {
     "inputs"     : {
       "image" : [
-        "4034",
+        "4049",
         0
       ]
     },
@@ -5091,7 +5318,7 @@
   "3792"      : {
     "inputs"     : {
       "pixels" : [
-        "4034",
+        "4049",
         0
       ],
       "vae"    : [
@@ -5142,7 +5369,7 @@
   },
   "3803"      : {
     "inputs"     : {
-      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 __CAMERA_ANGLE__ , \nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction,  \n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\n\nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
+      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 __CAMERA_ANGLE__ , \n\n__INSTRUCTION_FROM_FILE__,\n\nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction,  \n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\n\nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5184,7 +5411,7 @@
         0
       ],
       "text"    : [
-        "3802",
+        "4070",
         0
       ]
     },
@@ -5212,7 +5439,7 @@
   },
   "3820"      : {
     "inputs"     : {
-      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
+      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n\n__INSTRUCTION_FROM_FILE__,\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5334,7 +5561,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression, emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility,eyelid position, eyelid tension,  facial muscle movement, eyebrow position, cheek tension, facial muscle movement, and overall expression geometry from the reference image.\n\nPreserve the original emotional intensity of the expression. Do not neutralize, soften, simplify, reduce, or replace expressive facial features. If the reference image contains an open mouth, smile, grin, laugh, smirk, pout, wink, or any expressive facial pose, preserve it exactly.\n\nTransform the reference image into a high-quality   photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve the exact gaze direction, pupil position, eye alignment, focus point, and viewing direction from the reference image. Do not redirect the eyes toward the camera or toward a different target.. Preserve the exact head orientation, viewing direction, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition of the reference image.\n\n \nMatch the subject's apparent age to approximately __AGE_STRING__ years old while preserving age-appropriate facial features and maintaining the original facial expression.\n\nPreserve the original visual style, color palette, lighting direction, shadow depth, contrast, and photographic characteristics of the reference image.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange the subject hair color to natural black while preserving the original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture, \n\n__EYE_STATE__\n\nRemove any visible watermarks, logos, text artifacts, or image overlays.\n"
+      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression,\n\n__INSTRUCTION_FROM_FILE__,\n\n emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility,eyelid position, eyelid tension,  facial muscle movement, eyebrow position, cheek tension, facial muscle movement, and overall expression geometry from the reference image.\n\nPreserve the original emotional intensity of the expression. Do not neutralize, soften, simplify, reduce, or replace expressive facial features. If the reference image contains an open mouth, smile, grin, laugh, smirk, pout, wink, or any expressive facial pose, preserve it exactly.\n\nTransform the reference image into a high-quality   photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve the exact gaze direction, pupil position, eye alignment, focus point, and viewing direction from the reference image. Do not redirect the eyes toward the camera or toward a different target.. Preserve the exact head orientation, viewing direction, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition of the reference image.\n\n \nMatch the subject's apparent age to approximately __AGE_STRING__ years old while preserving age-appropriate facial features and maintaining the original facial expression.\n\nPreserve the original visual style, color palette, lighting direction, shadow depth, contrast, and photographic characteristics of the reference image.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange the subject hair color to natural black while preserving the original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture, \n\n__EYE_STATE__\n\nRemove any visible watermarks, logos, text artifacts, or image overlays.\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -6027,7 +6254,7 @@
         0
       ],
       "image_ref"    : [
-        "4034",
+        "4049",
         0
       ]
     },
@@ -6346,7 +6573,7 @@
         "3338",
         0
       ],
-      "noise_strength" : 0.03,
+      "noise_strength" : 0.04,
       "normalize"      : "false",
       "latent"         : [
         "4020",
@@ -6356,100 +6583,6 @@
     "class_type" : "InjectLatentNoise+",
     "_meta"      : {
       "title" : "🔧 Inject Latent Noise"
-    }
-  },
-  "4030"      : {
-    "inputs"     : {
-      "image" : [
-        "4033",
-        0
-      ]
-    },
-    "class_type" : "ImageInvert",
-    "_meta"      : {
-      "title" : "Invert Image Colors"
-    }
-  },
-  "4031"      : {
-    "inputs"     : {
-      "image" : [
-        "4049",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
-    }
-  },
-  "4032"      : {
-    "inputs"     : {
-      "mode" : false,
-      "a"    : [
-        "4031",
-        1
-      ],
-      "b"    : [
-        "4031",
-        2
-      ]
-    },
-    "class_type" : "ImpactMinMax",
-    "_meta"      : {
-      "title" : "ImpactMinMax"
-    }
-  },
-  "4033"      : {
-    "inputs"     : {
-      "preprocessor" : "DepthAnythingPreprocessor",
-      "resolution"   : [
-        "4032",
-        0
-      ],
-      "image"        : [
-        "4049",
-        0
-      ]
-    },
-    "class_type" : "AIO_Preprocessor",
-    "_meta"      : {
-      "title" : "AIO Aux Preprocessor"
-    }
-  },
-  "4034"      : {
-    "inputs"     : {
-      "lens_distortion"      : 0,
-      "color_temperature"    : 0,
-      "tint"                 : 0,
-      "atmosphere_enabled"   : true,
-      "haze_strength"        : 0,
-      "lift_blacks"          : 0,
-      "depth_offset"         : -0.05,
-      "f_stop"               : "f/5.6",
-      "dof_intensity"        : 0.08,
-      "dof_auto_focus"       : false,
-      "dof_sharpness_radius" : 0.35,
-      "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0,
-      "promist_strength"     : 0,
-      "halation_strength"    : 0,
-      "chromatic_aberration" : 0,
-      "vignette_intensity"   : 0.1,
-      "grain_power"          : 0.002,
-      "monochrome_grain"     : false,
-      "highlight_rolloff"    : 0.2,
-      "image"                : [
-        "4049",
-        0
-      ],
-      "depth_map"            : [
-        "4030",
-        0
-      ]
-    },
-    "class_type" : "OpticalRealism",
-    "_meta"      : {
-      "title" : "Optical Realism & Physics"
     }
   },
   "4049"      : {
@@ -6489,6 +6622,169 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "CleavageHelper-FLUX-rc4 1.00 :: 0.1"
+    }
+  },
+  "4054"      : {
+    "inputs"     : {
+      "shadow_brightness"      : 1.04,
+      "shadow_saturation"      : 1,
+      "shadow_hue"             : 0,
+      "shadow_level_offset"    : -1,
+      "shadow_range"           : 0.25,
+      "highlight_brightness"   : 0.94,
+      "highlight_saturation"   : 1,
+      "highlight_hue"          : 0,
+      "highlight_level_offset" : 0,
+      "highlight_range"        : 0.25,
+      "image"                  : [
+        "3710",
+        0
+      ]
+    },
+    "class_type" : "LayerColor: Color of Shadow & Highlight",
+    "_meta"      : {
+      "title" : "LayerColor: Color of Shadow & Highlight"
+    }
+  },
+  "4055"      : {
+    "inputs"     : {
+      "gamma" : 1.23,
+      "image" : [
+        "4054",
+        0
+      ]
+    },
+    "class_type" : "LayerColor: Gamma",
+    "_meta"      : {
+      "title" : "LayerColor: Gamma"
+    }
+  },
+  "4062"      : {
+    "inputs"     : {
+      "string"           : [
+        "1838",
+        0
+      ],
+      "regex_pattern"    : "\\[(.*)\\]",
+      "mode"             : "All Groups",
+      "case_insensitive" : false,
+      "multiline"        : false,
+      "dotall"           : false,
+      "group_index"      : 1
+    },
+    "class_type" : "RegexExtract",
+    "_meta"      : {
+      "title" : "Extract Text"
+    }
+  },
+  "4063"      : {
+    "inputs"     : {
+      "join_with"   : ",",
+      "string_list" : [
+        "4062",
+        0
+      ]
+    },
+    "class_type" : "StringListToString",
+    "_meta"      : {
+      "title" : "String List to String"
+    }
+  },
+  "4064"      : {
+    "inputs"     : {
+      "string"  : [
+        "4063",
+        0
+      ],
+      "find"    : "_",
+      "replace" : ","
+    },
+    "class_type" : "StringReplace",
+    "_meta"      : {
+      "title" : "Replace Text"
+    }
+  },
+  "4070"      : {
+    "inputs"     : {
+      "find"    : "__INSTRUCTION_FROM_FILE__",
+      "replace" : [
+        "4064",
+        0
+      ],
+      "text"    : [
+        "3802",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "4073"      : {
+    "inputs"     : {
+      "condition"  : [
+        "4077",
+        0
+      ],
+      "when_true"  : [
+        "3134",
+        0
+      ],
+      "when_false" : [
+        "3135",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "4075"      : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "4073",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 2,
+      "filename_number_start"   : "false",
+      "extension"               : "jpg",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "false",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "false",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "2670",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "4077"      : {
+    "inputs"     : {
+      "boolean_a" : [
+        "3720",
+        0
+      ],
+      "boolean_b" : [
+        "232",
+        0
+      ]
+    },
+    "class_type" : "Logic Comparison OR",
+    "_meta"      : {
+      "title" : "Logic Comparison OR"
     }
   },
   "2996:3575" : {
