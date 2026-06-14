@@ -4128,16 +4128,16 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.06,
-      "start"              : 0.33,
-      "end"                : 0.66,
+      "detail_amount"      : 0.05,
+      "start"              : 0.3,
+      "end"                : 0.62,
       "bias"               : 0.5,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
       "fade"               : 0,
       "smooth"             : true,
-      "cfg_scale_override" : 3.5,
+      "cfg_scale_override" : 1.2,
       "sampler"            : [
         "3419",
         0
@@ -4270,7 +4270,7 @@
   },
   "3493"      : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5   woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5 woman with a natural beautiful face and black bindi on the forehead, realistic skin texture, visible pores, subtle vellus hair, mild natural tonal variation, and photographic realism,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4811,7 +4811,7 @@
   },
   "3683"      : {
     "inputs"     : {
-      "value" : 0.54
+      "value" : 0.4
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -6164,7 +6164,7 @@
   },
   "3923"      : {
     "inputs"     : {
-      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression, emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility, eye expression, eyelid position, eyebrow position, cheek tension, and facial muscle movement from the reference image.\n\nCopy the expression from the reference image exactly. Preserve the original expression geometry and emotional intensity. Do not neutralize, soften, simplify, or replace expressive facial features. If the reference image contains a smile, grin, laugh, smirk, pout, open mouth, wink, or other expressive facial pose, preserve it exactly.\n\nMake this photo a high-quality photorealistic portrait of v1dhya5 while preserving the original head orientation, viewing direction, facial angle, camera perspective, framing, crop, and subject scale.\n\nPreserve realistic facial proportions, natural facial volume, realistic jawline, authentic nose shape, natural eye structure, and photorealistic facial detail.\n\nRender authentic melanin-rich South Indian dark-brown skin with realistic RAW-photo skin texture, subtle pores, fine skin detail, natural tonal variation, mild uneven pigmentation, rich eumelanin depth, and subtle golden-brown undertones.\n\nAvoid whitening, brightening, beauty-filter smoothing, airbrushing, plastic skin, excessive sharpening, artificial glow, porcelain skin, pink undertones, or unrealistic skin retouching.\n\nPreserve realistic lighting, shadow depth, contrast, and natural photographic rendering.\n",
+      "text" : "Replace the facial identity with v1dhya5 while preserving the reference expression, mouth shape, lip position, smile intensity, teeth visibility, eye expression, eyelid position, cheek tension, and facial muscle movement.\n\nPreserve the original expression geometry and emotional intensity. If the reference image contains a smile, grin, laugh, smirk, pout, open mouth, wink, or other expressive facial pose, keep the same expression structure.\n\nMake this photo a high-quality photorealistic portrait of v1dhya5 while preserving the original head orientation, viewing direction, facial angle, camera perspective, framing, crop, and subject scale.\n\nPreserve realistic facial proportions, natural facial volume, realistic jawline, authentic nose shape, natural eye structure, and photorealistic facial detail.\n\nRender authentic melanin-rich South Indian brown skin with realistic RAW-photo skin texture, subtle pores, fine skin detail, natural tonal variation, and mild uneven pigmentation.\n\nAvoid whitening, beauty-filter smoothing, airbrushing, plastic skin, excessive sharpening, artificial glow, porcelain skin, or unrealistic skin retouching.\n\nPreserve realistic lighting, shadow depth, contrast, and natural photographic rendering.\n",
       "clip" : [
         "3846",
         1
@@ -6309,7 +6309,7 @@
       "early_layer_scale"   : 1.15,
       "mid_layer_scale"     : 1.05,
       "late_layer_scale"    : 0.9,
-      "preserve_original"   : 0.7,
+      "preserve_original"   : 0.78,
       "active_end_override" : false,
       "device"              : "auto",
       "debug"               : false,
@@ -6573,7 +6573,7 @@
         "3338",
         0
       ],
-      "noise_strength" : 0.04,
+      "noise_strength" : 0.025,
       "normalize"      : "false",
       "latent"         : [
         "4020",
@@ -6648,7 +6648,7 @@
   },
   "4055"      : {
     "inputs"     : {
-      "gamma" : 1.23,
+      "gamma" : 1.08,
       "image" : [
         "4054",
         0
