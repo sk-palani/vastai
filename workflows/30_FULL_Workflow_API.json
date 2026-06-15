@@ -954,7 +954,7 @@
         "788",
         0
       ],
-      "guidance" : 3.5,
+      "guidance" : 2.8,
       "clip"     : [
         "3339",
         0
@@ -1154,7 +1154,7 @@
   },
   "950"       : {
     "inputs"     : {
-      "text" : "Indian woman, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, natural photographic color, neutral light color balance, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional photograph\n __AGE__ "
+      "text" : "Indian woman,   alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling,  sharp focus on eyes, shallow depth of field, soft shadow rolloff, realistic detailed background, Shot on 35mm Fujifilm Fujicolor Pro 400H professional color negative film. The image features authentic, fine analog film grain texture primarily visible in the softer areas and midtones. The colors are rendered with the characteristic cool undertones of classic Fuji film, showcasing beautiful pastel greens, desaturated blues, and a very subtle magenta hue in the soft highlights. The scene displays an airy, wide dynamic range with an incredibly smooth, creamy highlight roll-off and low-contrast matte shadows. Candid, quiet, and romantic analog snapshot aesthetic., \n\n __AGE__ "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1673,7 +1673,7 @@
   },
   "1860"      : {
     "inputs"     : {
-      "scheduler" : "beta",
+      "scheduler" : "simple",
       "steps"     : [
         "1893",
         0
@@ -1754,7 +1754,7 @@
         "3338",
         0
       ],
-      "noise_strength" : 0.05,
+      "noise_strength" : 0.35,
       "normalize"      : "false",
       "latent"         : [
         "1863",
@@ -1800,7 +1800,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.15*(a+c*(b-a))",
+      "expression" : "1.17*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2009,7 +2009,7 @@
         "2100",
         0
       ],
-      "b"         : 0.98,
+      "b"         : 0.95,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -2019,8 +2019,8 @@
   },
   "1978"      : {
     "inputs"     : {
-      "max_shift"  : 1.15,
-      "base_shift" : 0.5,
+      "max_shift"  : 1.18,
+      "base_shift" : 0.53,
       "width"      : [
         "1927",
         0
@@ -2049,7 +2049,7 @@
         "788",
         0
       ],
-      "guidance" : 3.5,
+      "guidance" : 3.0,
       "clip"     : [
         "3403",
         0
@@ -3038,8 +3038,8 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.1,
-      "base_shift" : 0.55,
+      "max_shift"  : 1.18,
+      "base_shift" : 0.53,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3684,7 +3684,7 @@
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.7,
-      "strength_clip"  : 0.08,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3352",
         0
@@ -3758,7 +3758,7 @@
   },
   "3375"      : {
     "inputs"     : {
-      "sampler_name" : "euler_ancestral"
+      "sampler_name" : "euler"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
@@ -3873,7 +3873,7 @@
   "3394"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v3.safetensors",
-      "strength_model" : 0.6,
+      "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
         "3401",
@@ -3912,8 +3912,8 @@
   "3396"      : {
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
-      "strength_model" : 0.8,
-      "strength_clip"  : 0.1,
+      "strength_model" : 1,
+      "strength_clip"  : 0.02,
       "model"          : [
         "3394",
         0
@@ -3932,7 +3932,7 @@
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 1,
-      "strength_clip"  : 0.1,
+      "strength_clip"  : 0.02,
       "model"          : [
         "3392",
         0
@@ -4025,7 +4025,7 @@
   },
   "3404"      : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1" : "ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors",
       "clip_name2" : "t5xxl_fp16.safetensors",
       "type"       : "flux",
       "device"     : "cpu"
@@ -4076,8 +4076,8 @@
   "3412"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
-      "strength_model" : 0.65,
-      "strength_clip"  : 0.07,
+      "strength_model" : 0.4,
+      "strength_clip"  : 0.2,
       "model"          : [
         "3534",
         0
@@ -4113,7 +4113,7 @@
   },
   "3419"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.02,
+      "dishonesty_factor" : -0.05,
       "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
@@ -4182,9 +4182,9 @@
       ],
       "steps"               : 8,
       "cfg"                 : 1,
-      "sampler_name"        : "dpmpp_2s_ancestral",
+      "sampler_name"        : "deis",
       "scheduler"           : "beta",
-      "denoise"             : 0.08,
+      "denoise"             : 0.12,
       "mode_type"           : "Chess",
       "tile_width"          : [
         "1927",
@@ -4270,7 +4270,7 @@
   },
   "3493"      : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5   woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5 woman with beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -4811,7 +4811,7 @@
   },
   "3683"      : {
     "inputs"     : {
-      "value" : 0.4
+      "value" : 0.58
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
