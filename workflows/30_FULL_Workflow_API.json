@@ -1056,7 +1056,7 @@
       ],
       "font"             : "SevenSegment.ttf",
       "size"             : 38,
-      "color"            : "#b4df29FF",
+      "color"            : "#DF2935FF",
       "background_color" : "#00000000",
       "shadow_distance"  : 0,
       "shadow_blur"      : 0,
@@ -1154,7 +1154,7 @@
   },
   "950"       : {
     "inputs"     : {
-      "text" : "Indian woman,   alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling,  sharp focus on eyes, shallow depth of field, soft shadow rolloff, realistic detailed background, Shot on 35mm Fujifilm Fujicolor Pro 400H professional color negative film. The image features authentic, fine analog film grain texture primarily visible in the softer areas and midtones. The colors are rendered with the characteristic cool undertones of classic Fuji film, showcasing beautiful pastel greens, desaturated blues, and a very subtle magenta hue in the soft highlights. The scene displays an airy, wide dynamic range with an incredibly smooth, creamy highlight roll-off and low-contrast matte shadows. Candid, quiet, and romantic analog snapshot aesthetic., \n\n __AGE__ "
+      "text" : "Indian woman, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, natural photographic color, neutral light color balance, soft shadow rolloff, detailed fabric texture, realistic detailed background, studio lighting, subtle rim light, ultra high resolution, professional photograph\n __AGE__ "
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -2049,7 +2049,7 @@
         "788",
         0
       ],
-      "guidance" : 3.0,
+      "guidance" : 3.3,
       "clip"     : [
         "3403",
         0
@@ -3684,7 +3684,7 @@
     "inputs"     : {
       "lora_name"      : "Pandora-RAWr.safetensors",
       "strength_model" : 0.7,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.08,
       "model"          : [
         "3352",
         0
@@ -3758,7 +3758,7 @@
   },
   "3375"      : {
     "inputs"     : {
-      "sampler_name" : "euler"
+      "sampler_name" : "euler_ancestral"
     },
     "class_type" : "KSamplerSelect",
     "_meta"      : {
@@ -4077,7 +4077,7 @@
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
       "strength_model" : 0.4,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.13,
       "model"          : [
         "3534",
         0
@@ -4104,7 +4104,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "default"
+      "weight_dtype" : "fp8_e4m3fn"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -4137,7 +4137,7 @@
       "end_offset"         : 0,
       "fade"               : 0.05,
       "smooth"             : true,
-      "cfg_scale_override" : 1.2,
+      "cfg_scale_override" : 1,
       "sampler"            : [
         "3419",
         0
@@ -4270,7 +4270,7 @@
   },
   "3493"      : {
     "inputs"     : {
-      "text" : "A professionally color-graded photograph of Indian v1dhya5 woman with beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
+      "text" : "A professionally color-graded photograph of Indian v1dhya5   woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5497,7 +5497,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "__INSTRUCTION_FROM_FILE__\n\nReplace the facial identity with v1dhya5 while preserving the exact facial expression and emotional intensity from the reference image: mouth shape, lip position, smile/grin shape and intensity, teeth visibility, eyelid position and tension, eyebrow position, cheek tension, and overall facial muscle geometry. Do not neutralize, soften, simplify, or alter the expression.\n\nGenerate a high-quality real-world photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve exactly from the reference image: gaze direction, pupil position, eye alignment, focus target, head orientation, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition. Do not redirect the eyes.\n\nMatch apparent age to approximately __AGE_STRING__ years old while maintaining age-appropriate facial features and the same expression.\n\nPreserve the original photographic style: realistic lighting direction, natural shadows, true-to-life contrast, and realistic color balance.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange hair color to natural black while preserving original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture. Ensure skin tone is natural brown with neutral color balance; avoid reddish or pink skin cast.\n\n__EYE_STATE__\n\nRemove all visible watermarks, logos, text artifacts, and overlays."
+      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression,\n\n__INSTRUCTION_FROM_FILE__,\n\n emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility,eyelid position, eyelid tension,  facial muscle movement, eyebrow position, cheek tension, facial muscle movement, and overall expression geometry from the reference image.\n\nPreserve the original emotional intensity of the expression. Do not neutralize, soften, simplify, reduce, or replace expressive facial features. If the reference image contains an open mouth, smile, grin, laugh, smirk, pout, wink, or any expressive facial pose, preserve it exactly.\n\nTransform the reference image into a high-quality   photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve the exact gaze direction, pupil position, eye alignment, focus point, and viewing direction from the reference image. Do not redirect the eyes toward the camera or toward a different target.. Preserve the exact head orientation, viewing direction, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition of the reference image.\n\n \nMatch the subject's apparent age to approximately __AGE_STRING__ years old while preserving age-appropriate facial features and maintaining the original facial expression.\n\nPreserve the original visual style, color palette, lighting direction, shadow depth, contrast, and photographic characteristics of the reference image.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange the subject hair color to natural black while preserving the original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture, \n\n__EYE_STATE__\n\nRemove any visible watermarks, logos, text artifacts, or image overlays.\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
