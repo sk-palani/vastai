@@ -1731,7 +1731,7 @@
         0
       ],
       "sampler"      : [
-        "3420",
+        "3381",
         0
       ],
       "sigmas"       : [
@@ -1800,7 +1800,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.17*(a+c*(b-a))",
+      "expression" : "1.1*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2049,7 +2049,7 @@
         "788",
         0
       ],
-      "guidance" : 3.3,
+      "guidance" : 3.4,
       "clip"     : [
         "3403",
         0
@@ -2064,7 +2064,7 @@
     "inputs"     : {
       "sampler_name" : "euler",
       "scheduler"    : "beta",
-      "steps"        : 24,
+      "steps"        : 26,
       "denoise"      : [
         "1999",
         0
@@ -4182,7 +4182,7 @@
       ],
       "steps"               : 8,
       "cfg"                 : 1,
-      "sampler_name"        : "deis",
+      "sampler_name"        : "euler_ancestral",
       "scheduler"           : "beta",
       "denoise"             : 0.12,
       "mode_type"           : "Chess",
