@@ -3718,19 +3718,6 @@
       "title" : "breast-size2 1.80::1.00"
     }
   },
-  "3372"      : {
-    "inputs"     : {
-      "stop_at_clip_layer" : -3,
-      "clip"               : [
-        "3404",
-        0
-      ]
-    },
-    "class_type" : "CLIPSetLastLayer",
-    "_meta"      : {
-      "title" : "CLIP Set Last Layer"
-    }
-  },
   "3373"      : {
     "inputs"     : {
       "vae_name" : "ae.safetensors"
@@ -3747,7 +3734,7 @@
       "v"    : 0.95,
       "out"  : 1.12,
       "clip" : [
-        "3372",
+        "3404",
         0
       ]
     },
@@ -3974,7 +3961,7 @@
     "inputs"     : {
       "enable_fp16_accumulation" : true,
       "model"                    : [
-        "3407",
+        "3414",
         0
       ]
     },
@@ -4035,25 +4022,6 @@
       "title" : "DualCLIPLoader"
     }
   },
-  "3407"      : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 2,
-      "start_percent"        : 0,
-      "end_percent"          : 0.6,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "3414",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "4::2::0::0.5"
-    }
-  },
   "3410"      : {
     "inputs"     : {
       "lora_name"      : "d351_d4rk_Desi_Espresso_Flux_Kohya_V3.safetensors",
@@ -4104,7 +4072,7 @@
   "3414"      : {
     "inputs"     : {
       "unet_name"    : "flux1-dev.safetensors",
-      "weight_dtype" : "fp8_e4m3fn"
+      "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -4180,11 +4148,11 @@
         "3705",
         0
       ],
-      "steps"               : 8,
+      "steps"               : 9,
       "cfg"                 : 1,
       "sampler_name"        : "euler_ancestral",
       "scheduler"           : "beta",
-      "denoise"             : 0.12,
+      "denoise"             : 0.1,
       "mode_type"           : "Chess",
       "tile_width"          : [
         "1927",
