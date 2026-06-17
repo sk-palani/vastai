@@ -212,6 +212,10 @@ VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
     "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"
     "https://civitai.com/api/download/models/2527939?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # nightPhotoHDR_flux1.safetensors
+    "https://civitai.com/api/download/models/2615379?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # flashPhotoFLUXVAE_v10.safetensors
+    "https://civitai.com/api/download/models/1749336?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 LORA_MODELS=(
