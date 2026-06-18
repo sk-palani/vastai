@@ -954,7 +954,7 @@
         "788",
         0
       ],
-      "guidance" : 3,
+      "guidance" : 2.8,
       "clip"     : [
         "3339",
         0
@@ -1130,6 +1130,10 @@
   },
   "931"       : {
     "inputs"     : {
+      "any_01" : [
+        "3489",
+        0
+      ],
       "any_03" : [
         "3279",
         0
@@ -1573,7 +1577,7 @@
   },
   "1848"      : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.6",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : [
@@ -1664,7 +1668,7 @@
     },
     "class_type" : "BasicGuider",
     "_meta"      : {
-      "title" : "Basic Guider"
+      "title" : "BasicGuider"
     }
   },
   "1860"      : {
@@ -1796,7 +1800,7 @@
   },
   "1893"      : {
     "inputs"     : {
-      "expression" : "1.06*(a+c*(b-a))",
+      "expression" : "1.1*(a+c*(b-a))",
       "a"          : [
         "1855",
         0
@@ -2487,7 +2491,7 @@
         "1955",
         0
       ],
-      "b"         : 0.62,
+      "b"         : 0.76,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3186,6 +3190,107 @@
       "title" : "Text String"
     }
   },
+  "3171"      : {
+    "inputs"     : {
+      "face_mask"       : true,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : true,
+      "clothes_mask"    : false,
+      "confidence"      : 0.4,
+      "refine_mask"     : false,
+      "images"          : [
+        "3505",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "3175"      : {
+    "inputs"     : {
+      "image" : [
+        "3505",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "3180"      : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "3175",
+        1
+      ],
+      "b"    : [
+        "3175",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "ImpactMinMax"
+    }
+  },
+  "3181"      : {
+    "inputs"     : {
+      "invert_mask" : false,
+      "grow"        : 1,
+      "blur"        : 0,
+      "mask"        : [
+        "3171",
+        0
+      ]
+    },
+    "class_type" : "LayerMask: MaskGrow",
+    "_meta"      : {
+      "title" : "LayerMask: MaskGrow"
+    }
+  },
+  "3184"      : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "3180",
+        0
+      ],
+      "image"        : [
+        "3505",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "3186"      : {
+    "inputs"     : {
+      "noise_scale"   : [
+        "3702",
+        0
+      ],
+      "blend_opacity" : 4,
+      "image"         : [
+        "3756",
+        0
+      ],
+      "mask"          : [
+        "3181",
+        0
+      ]
+    },
+    "class_type" : "NoisePlusBlend",
+    "_meta"      : {
+      "title" : "Noise Plus Blend"
+    }
+  },
   "3201"      : {
     "inputs"     : {
       "condition"  : [
@@ -3446,7 +3551,7 @@
       "strength_model" : 0.92,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3465,7 +3570,7 @@
       "strength_model" : 0.92,
       "strength_clip"  : 0.06,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3685,7 +3790,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3733,7 +3838,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0.2,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3752,7 +3857,7 @@
       "strength_model" : 0.9,
       "strength_clip"  : 0,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3771,7 +3876,7 @@
       "strength_model" : 0.8,
       "strength_clip"  : 0,
       "model"          : [
-        "3401",
+        "3407",
         0
       ],
       "clip"           : [
@@ -3863,19 +3968,6 @@
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
       "title" : "Load Upscale Model"
-    }
-  },
-  "3401"      : {
-    "inputs"     : {
-      "enable_fp16_accumulation" : false,
-      "model"                    : [
-        "3407",
-        0
-      ]
-    },
-    "class_type" : "ModelPatchTorchSettings",
-    "_meta"      : {
-      "title" : "Model Patch Torch Settings"
     }
   },
   "3402"      : {
@@ -4056,7 +4148,7 @@
         1
       ],
       "model"      : [
-        "3363",
+        "3344",
         0
       ]
     },
@@ -4108,7 +4200,7 @@
         0
       ],
       "positive"            : [
-        "4088",
+        "2108",
         0
       ],
       "negative"            : [
@@ -4148,6 +4240,21 @@
       "title" : "Color Match"
     }
   },
+  "3489"      : {
+    "inputs"     : {
+      "lut_name" : "Presetpro  - Kodacrome 64.cube",
+      "strength" : 0.19,
+      "log"      : false,
+      "image"    : [
+        "3186",
+        0
+      ]
+    },
+    "class_type" : "ProPostApplyLUT",
+    "_meta"      : {
+      "title" : "ProPostApplyLUT"
+    }
+  },
   "3493"      : {
     "inputs"     : {
       "text" : "A professionally color-graded photograph of Indian v1dhya5   woman with extremely beautiful face with black bindi on the forehead, detailed natural skin texture, visible pores, soft peach fuzz, tiny vellus hairs illuminated by side lighting, faint acne marks and mild unevenness, photographic realism prioritized over aesthetic perfection,"
@@ -4169,6 +4276,39 @@
     "class_type" : "Text Contains",
     "_meta"      : {
       "title" : "Contains [~~]"
+    }
+  },
+  "3505"      : {
+    "inputs"     : {
+      "any_02" : [
+        "3279",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
+  "3514"      : {
+    "inputs"     : {
+      "center_x"            : 0.3,
+      "center_y"            : 0.5,
+      "saturation"          : 0.9,
+      "vignette_intensity"  : 0.010000000000000002,
+      "grain_method"        : "filmgrainer",
+      "grain_power"         : 0.05,
+      "grain_scale"         : 0.6,
+      "grain_sat"           : 0.3,
+      "filmgrainer_shadows" : 0.08,
+      "filmgrainer_highs"   : 0.05,
+      "blur_strength"       : 1,
+      "blur_focus_spread"   : 0.30000000000000004,
+      "focal_depth"         : 0.10000000000000002
+    },
+    "class_type" : "LayerFilter: FilmV2",
+    "_meta"      : {
+      "title" : "LayerFilter: Film V2"
     }
   },
   "3517"      : {
@@ -4248,6 +4388,34 @@
     "class_type" : "ModelMergeFlux1",
     "_meta"      : {
       "title" : "ModelMergeFlux1"
+    }
+  },
+  "3519"      : {
+    "inputs"     : {
+      "lens_distortion"      : false,
+      "color_temperature"    : 0.4,
+      "tint"                 : 0.23,
+      "atmosphere_enabled"   : 0,
+      "haze_strength"        : 0.5,
+      "lift_blacks"          : 0.002,
+      "depth_offset"         : 0.25,
+      "f_stop"               : "Manual",
+      "dof_intensity"        : true,
+      "dof_auto_focus"       : 0.1,
+      "dof_sharpness_radius" : 0.35,
+      "dof_focus_point"      : 0,
+      "light_wrap_strength"  : 0.7,
+      "promist_strength"     : 0.1,
+      "halation_strength"    : 0.15,
+      "chromatic_aberration" : 0.002,
+      "vignette_intensity"   : 0.15,
+      "grain_power"          : 0.012,
+      "monochrome_grain"     : true,
+      "highlight_rolloff"    : 0.05
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
     }
   },
   "3522"      : {
@@ -4406,7 +4574,7 @@
   },
   "3650"      : {
     "inputs"     : {
-      "value" : 0.69
+      "value" : 0.67
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -4630,7 +4798,7 @@
   },
   "3683"      : {
     "inputs"     : {
-      "value" : 0.48
+      "value" : 0.58
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -4648,7 +4816,7 @@
   },
   "3685"      : {
     "inputs"     : {
-      "value" : 42
+      "value" : 43
     },
     "class_type" : "easy int",
     "_meta"      : {
@@ -4697,6 +4865,20 @@
       "title" : "Text Concatenate"
     }
   },
+  "3702"      : {
+    "inputs"     : {
+      "a"         : [
+        "2100",
+        0
+      ],
+      "b"         : 0.18,
+      "operation" : "multiply"
+    },
+    "class_type" : "easy mathFloat",
+    "_meta"      : {
+      "title" : "Math Float 0.181818"
+    }
+  },
   "3703"      : {
     "inputs"     : {
       "value" : 0.72
@@ -4740,6 +4922,46 @@
     "inputs"     : {
       "image" : [
         "3323",
+        0
+      ]
+    },
+    "class_type" : "ImageInvert",
+    "_meta"      : {
+      "title" : "Invert Image Colors"
+    }
+  },
+  "3713"      : {
+    "inputs"     : {
+      "lens_distortion"      : -0.01,
+      "color_temperature"    : 0.05,
+      "tint"                 : -0.05,
+      "atmosphere_enabled"   : false,
+      "haze_strength"        : 0.6,
+      "lift_blacks"          : 0.05,
+      "depth_offset"         : -0.25,
+      "f_stop"               : "Manual",
+      "dof_intensity"        : 0.3,
+      "dof_auto_focus"       : true,
+      "dof_sharpness_radius" : 0.35,
+      "dof_focus_point"      : 0,
+      "light_wrap_strength"  : 0.7,
+      "promist_strength"     : 0.1,
+      "halation_strength"    : 0.15,
+      "chromatic_aberration" : 0.002,
+      "vignette_intensity"   : 0.15,
+      "grain_power"          : 0.012,
+      "monochrome_grain"     : true,
+      "highlight_rolloff"    : 0.05
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
+    }
+  },
+  "3714"      : {
+    "inputs"     : {
+      "image" : [
+        "3184",
         0
       ]
     },
@@ -4795,6 +5017,42 @@
     "class_type" : "InputSelector",
     "_meta"      : {
       "title" : "Input Selector"
+    }
+  },
+  "3756"      : {
+    "inputs"     : {
+      "lens_distortion"      : 0,
+      "color_temperature"    : 0,
+      "tint"                 : 0,
+      "atmosphere_enabled"   : true,
+      "haze_strength"        : 0,
+      "lift_blacks"          : 0,
+      "depth_offset"         : -0.05,
+      "f_stop"               : "f/5.6",
+      "dof_intensity"        : 0.08,
+      "dof_auto_focus"       : false,
+      "dof_sharpness_radius" : 0.35,
+      "dof_focus_point"      : 0,
+      "light_wrap_strength"  : 0,
+      "promist_strength"     : 0,
+      "halation_strength"    : 0,
+      "chromatic_aberration" : 0,
+      "vignette_intensity"   : 0.1,
+      "grain_power"          : 0.002,
+      "monochrome_grain"     : false,
+      "highlight_rolloff"    : 0.2,
+      "image"                : [
+        "3175",
+        0
+      ],
+      "depth_map"            : [
+        "3714",
+        0
+      ]
+    },
+    "class_type" : "OpticalRealism",
+    "_meta"      : {
+      "title" : "Optical Realism & Physics"
     }
   },
   "3759"      : {
@@ -5104,7 +5362,7 @@
   },
   "3820"      : {
     "inputs"     : {
-      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n__INSTRUCTION_FROM_FILE__,\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
+      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n\n__INSTRUCTION_FROM_FILE__,\n__EXPRESSION__,\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5974,7 +6232,7 @@
       "early_layer_scale"   : 1.15,
       "mid_layer_scale"     : 1.05,
       "late_layer_scale"    : 0.9,
-      "preserve_original"   : 0.83,
+      "preserve_original"   : 0.78,
       "active_end_override" : false,
       "device"              : "auto",
       "debug"               : false,
@@ -6022,6 +6280,15 @@
     "class_type" : "Flux2KleinTextRefBalance",
     "_meta"      : {
       "title" : "FLUX.2 Klein Text/Ref Balance"
+    }
+  },
+  "3995"      : {
+    "inputs"     : {
+      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction, and overall composition of the reference image.\n\nMatch the identity of v1dhya5 while preserving realistic adult head-to-body proportions. Maintain the original face size relative to the shoulders, torso, and body. Do not enlarge the head, forehead, eyes, lips, or facial features. Preserve the original framing, crop, subject scale, and camera distance.\n\nCopy the facial expression from the reference image.\n\nPreserve shadow depth, contrast, and directional lighting from the reference image.\n\n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\nPreserve the exact subject orientation, viewing direction, pose, camera perspective, and composition from the reference image.\n\n__EYE_STATE__\n\nChange the skin tone to authentic melanin-rich South Indian medium-brown skin with warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a natural complexion consistently across the face, neck, shoulders, arms, hands, and body without whitening, brightening, fairness enhancement, beauty-filter smoothing, or airbrushing.\n\nPreserve realistic eumelanin depth, subtle golden-brown undertones, natural tonal variation, mild uneven pigmentation, fine pores, realistic skin texture, and photographic dynamic range. Maintain consistent medium-to-dark South Indian brown skin tones throughout the image while preserving realistic lighting response and shadow transitions.\n\nPreserve the original facial expression, pose, composition, outfit, accessories, and subject scale from the reference image.\n\nAdjust hair color to natural black while preserving existing styling and highlights. Adjust eye color to dark brown.\n\nApply faint eyeliner, soft eye shadow, and neutral pale-brown nude lipstick.\n\nAdd a small black or burgundy bindi.\n\nEnhance body proportions naturally: fuller bust (approximately 34DD) with proportionate adjustments to hips, thighs, and calves while maintaining realistic anatomy, posture, and balance.\n\nEnsure realistic lighting, natural skin rendering, and consistent shadows.\n\nRemove visible watermarks, text artifacts, and unrelated background people.\n\n__EXPRESSION__\n\n\ny2klatinaaphrodite\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
     }
   },
   "3996"      : {
@@ -6443,6 +6710,15 @@
       "title" : "Logic Comparison OR"
     }
   },
+  "4078"      : {
+    "inputs"     : {
+      "text" : "Replace the facial identity with v1dhya5 while preserving the exact facial expression,\n\n__INSTRUCTION_FROM_FILE__,\n\n emotional character, mouth shape, lip position, smile intensity, grin shape, teeth visibility,eyelid position, eyelid tension,  facial muscle movement, eyebrow position, cheek tension, facial muscle movement, and overall expression geometry from the reference image.\n\nPreserve the original emotional intensity of the expression. Do not neutralize, soften, simplify, reduce, or replace expressive facial features. If the reference image contains an open mouth, smile, grin, laugh, smirk, pout, wink, or any expressive facial pose, preserve it exactly.\n\nTransform the reference image into a high-quality   photograph of v1dhya5 __CAMERA_ANGLE__.\n\nPreserve the exact gaze direction, pupil position, eye alignment, focus point, and viewing direction from the reference image. Do not redirect the eyes toward the camera or toward a different target.. Preserve the exact head orientation, viewing direction, facial angle, pose, camera perspective, camera distance, subject scale, framing, crop, and overall composition of the reference image.\n\n \nMatch the subject's apparent age to approximately __AGE_STRING__ years old while preserving age-appropriate facial features and maintaining the original facial expression.\n\nPreserve the original visual style, color palette, lighting direction, shadow depth, contrast, and photographic characteristics of the reference image.\n\nPreserve and refine the outfit and accessories from the reference image.\n\nChange the subject hair color to natural black while preserving the original hairstyle, hair volume, hair texture, and hair movement.\n\nPreserve realistic skin texture, \n\n__EYE_STATE__\n\nRemove any visible watermarks, logos, text artifacts, or image overlays.\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
   "4079"      : {
     "inputs"     : {
       "lens_distortion"      : 0,
@@ -6477,57 +6753,6 @@
     "class_type" : "OpticalRealism",
     "_meta"      : {
       "title" : "Optical Realism & Physics"
-    }
-  },
-  "4082"      : {
-    "inputs"     : {
-      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n__INSTRUCTION_FROM_FILE__,\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "4083"      : {
-    "inputs"     : {
-      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\n\n__INSTRUCTION_FROM_FILE__,\n__EXPRESSION__,\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "4088"      : {
-    "inputs"     : {
-      "clip_l"   : [
-        "2106",
-        0
-      ],
-      "t5xxl"    : [
-        "788",
-        0
-      ],
-      "guidance" : 3.5,
-      "clip"     : [
-        "3362",
-        0
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "CLIPTextEncodeFlux 2.8"
-    }
-  },
-  "4091"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "4088",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
     }
   },
   "2996:3575" : {
