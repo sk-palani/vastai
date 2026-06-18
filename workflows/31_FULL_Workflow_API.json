@@ -2487,7 +2487,7 @@
         "1955",
         0
       ],
-      "b"         : 0.76,
+      "b"         : 0.62,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
