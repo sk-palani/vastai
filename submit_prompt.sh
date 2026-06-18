@@ -85,7 +85,7 @@ jq -c '
 ' "$UPDATED_FILE" > "$TMP_FILE" && mv "$TMP_FILE" "$UPDATED_FILE"
 
 # --- Convert UE-style virtual links into real links and export a ComfyUI API prompt ---
-python3 "$SCRIPT_DIR/scripts/convert_ue_to_real_links.py" --api "$UPDATED_FILE" "$UPDATED_FILE"
+# python3 "$SCRIPT_DIR/scripts/convert_ue_to_real_links.py" --api "$UPDATED_FILE" "$UPDATED_FILE"
 
 echo "[$LOG_TS] 🔄 Updated seeds, removed unwanted nodes, and exported a ComfyUI API prompt in $UPDATED_FILE"
 
