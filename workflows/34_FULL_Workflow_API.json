@@ -5504,7 +5504,7 @@
       ],
       "when_true"  : [
         "4195",
-        1
+        0
       ],
       "when_false" : [
         "4150",
@@ -5534,8 +5534,8 @@
   },
   "4139"      : {
     "inputs"     : {
-      "dishonesty_factor" : -0.05,
-      "start_percent"     : 0.1,
+      "dishonesty_factor" : -0.03,
+      "start_percent"     : 0.25,
       "end_percent"       : 0.5,
       "sampler"           : [
         "4225",
@@ -5557,7 +5557,7 @@
       "normalize"      : "false",
       "latent"         : [
         "4195",
-        1
+        0
       ]
     },
     "class_type" : "InjectLatentNoise+",
@@ -5946,7 +5946,7 @@
       ],
       "when_true"  : [
         "4303",
-        1
+        0
       ],
       "when_false" : [
         "4280",
@@ -6074,11 +6074,11 @@
         "3338",
         0
       ],
-      "noise_strength" : 0.01,
+      "noise_strength" : 0.02,
       "normalize"      : "false",
       "latent"         : [
         "4303",
-        1
+        0
       ]
     },
     "class_type" : "InjectLatentNoise+",
@@ -6887,7 +6887,7 @@
   "4421"      : {
     "inputs"     : {
       "lora_name"      : "skin tone.safetensors",
-      "strength_model" : -0.6,
+      "strength_model" : -2,
       "model"          : [
         "4362",
         0
