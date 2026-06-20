@@ -2237,7 +2237,7 @@
         "1955",
         0
       ],
-      "b"         : 0.56,
+      "b"         : 0.58,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -2505,7 +2505,7 @@
   },
   "3018"      : {
     "inputs"     : {
-      "opacity"         : 50,
+      "opacity"         : 80,
       "image"           : [
         "4274",
         0
@@ -2736,8 +2736,8 @@
   },
   "3114"      : {
     "inputs"     : {
-      "max_shift"  : 1.25,
-      "base_shift" : 0.75,
+      "max_shift"  : 1.04,
+      "base_shift" : 0.74,
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
@@ -3643,10 +3643,10 @@
   },
   "3420"      : {
     "inputs"     : {
-      "detail_amount"      : 0.1,
+      "detail_amount"      : 0.02,
       "start"              : 0.3,
       "end"                : 0.55,
-      "bias"               : 0.5,
+      "bias"               : 0.6,
       "exponent"           : 1,
       "start_offset"       : 0,
       "end_offset"         : 0,
@@ -3696,7 +3696,7 @@
         0
       ],
       "steps"               : 10,
-      "cfg"                 : 0.5,
+      "cfg"                 : 0.7,
       "sampler_name"        : "euler",
       "scheduler"           : "beta",
       "denoise"             : 0.12,
@@ -4722,7 +4722,7 @@
   },
   "3831"      : {
     "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\n\n__INSTRUCTION_FROM_FILE__,\n\n\nEnhance body proportions naturally: fuller bust (approx. 34D) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject's facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range.\n"
+      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\n\n__INSTRUCTION_FROM_FILE__,\n\n\nEnhance body proportions naturally: fuller bust (approx. 34D) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject's facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women.\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -5063,7 +5063,7 @@
         0
       ],
       "latent"       : [
-        "4407",
+        "4424",
         0
       ]
     },
@@ -5700,7 +5700,7 @@
   },
   "4183"      : {
     "inputs"     : {
-      "value" : 0.58
+      "value" : 0.38
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -6109,7 +6109,7 @@
   },
   "4292"      : {
     "inputs"     : {
-      "value" : 0.51999
+      "value" : 0.56
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -6491,7 +6491,7 @@
   "4370"      : {
     "inputs"     : {
       "lora_name"      : "klein_slider_bust.safetensors",
-      "strength_model" : 2.4,
+      "strength_model" : 1.2,
       "strength_clip"  : 0.21,
       "model"          : [
         "4360",
@@ -6529,7 +6529,7 @@
   "4372"      : {
     "inputs"     : {
       "lora_name"      : "Chest_9B.safetensors",
-      "strength_model" : 2.4,
+      "strength_model" : 1.8,
       "strength_clip"  : 0.21,
       "model"          : [
         "4370",
@@ -6704,7 +6704,7 @@
   "4388"      : {
     "inputs"     : {
       "samples" : [
-        "4407",
+        "4424",
         0
       ],
       "vae"     : [
@@ -6887,7 +6887,7 @@
   "4421"      : {
     "inputs"     : {
       "lora_name"      : "skin tone.safetensors",
-      "strength_model" : -2,
+      "strength_model" : -1.2,
       "model"          : [
         "4362",
         0
@@ -6914,6 +6914,41 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
+    }
+  },
+  "4424"      : {
+    "inputs"     : {
+      "hue"        : 0,
+      "saturation" : 0.5,
+      "brightness" : -0.1,
+      "contrast"   : 1.05,
+      "sharpness"  : 0.95,
+      "device"     : "gpu",
+      "batch_size" : 0,
+      "latent"     : [
+        "4407",
+        0
+      ]
+    },
+    "class_type" : "LatentImageAdjust",
+    "_meta"      : {
+      "title" : "🎛️ Latent Image Adjust"
+    }
+  },
+  "4425"      : {
+    "inputs"     : {
+      "samples" : [
+        "4424",
+        0
+      ],
+      "vae"     : [
+        "4356",
+        0
+      ]
+    },
+    "class_type" : "VAEDecode",
+    "_meta"      : {
+      "title" : "Klein_VAE Decode"
     }
   },
   "2996:3575" : {
