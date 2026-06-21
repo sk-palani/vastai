@@ -272,6 +272,8 @@ LORA_MODELS=(
 
     # klein_slider_eyes.safetensors
     "https://civitai.com/api/download/models/2619978?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    "https://civitai.com/api/download/models/2619978?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # FLUX2_KLEIN_UNLOCKED_V1.safetensors
     "https://civitai.com/api/download/models/2788349?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     #
@@ -284,6 +286,12 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/2960420?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Professional_studio_quality_epoch_10.safetensors
     "https://civitai.com/api/download/models/2968520?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # Professional_studio_quality_epoch_10.safetensors
+    "https://civitai.com/api/download/models/2998522?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    "https://civitai.com/api/download/models/3008887?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # Purple_Grainy-FK_epoch_12.safetensors
+    "https://civitai.com/api/download/models/2977015?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 
     # ------------------------------
@@ -355,6 +363,9 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/742855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # CleavageHelper-FLUX-RC5.safetensors
     "https://civitai.com/api/download/models/747750?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # CleavageHelper-FLUX-RC5.safetensors
+    "https://civitai.com/api/download/models/1301668?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 
 )
 
