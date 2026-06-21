@@ -805,6 +805,18 @@
       "title" : "Extract Text"
     }
   },
+  "501"       : {
+    "inputs"     : {
+      "intensity"   : 0.02,
+      "scale"       : 1,
+      "temperature" : 1,
+      "vignette"    : 0.06000000000000001
+    },
+    "class_type" : "FilmGrain",
+    "_meta"      : {
+      "title" : "FilmGrain"
+    }
+  },
   "515"       : {
     "inputs"     : {
       "delimiter"        : ",",
@@ -954,7 +966,7 @@
         "788",
         0
       ],
-      "guidance" : 2.8,
+      "guidance" : 3.5,
       "clip"     : [
         "3339",
         0
@@ -3555,8 +3567,8 @@
   },
   "3404"      : {
     "inputs"     : {
-      "clip_name1" : "ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors",
-      "clip_name2" : "t5xxl_fp16.safetensors",
+      "clip_name1" : "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2" : "clip_l.safetensors",
       "type"       : "flux",
       "device"     : "cpu"
     },
@@ -3639,6 +3651,43 @@
     "class_type" : "UNETLoader",
     "_meta"      : {
       "title" : "Load Diffusion Model"
+    }
+  },
+  "3419"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.05,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.5,
+      "sampler"           : [
+        "3381",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "3420"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.02,
+      "start"              : 0.3,
+      "end"                : 0.55,
+      "bias"               : 0.6,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0.05,
+      "smooth"             : true,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "3381",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
     }
   },
   "3474"      : {
@@ -4925,7 +4974,7 @@
       "mask_color"   : "255, 0, 207",
       "pass_through" : false,
       "image"        : [
-        "4388",
+        "4459",
         0
       ],
       "mask"         : [
@@ -4968,7 +5017,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : true,
       "images"          : [
-        "4388",
+        "4459",
         0
       ]
     },
@@ -5021,7 +5070,7 @@
         0
       ],
       "pixels"     : [
-        "4388",
+        "4459",
         0
       ],
       "mask"       : [
@@ -5041,7 +5090,7 @@
         0
       ],
       "latent"       : [
-        "4424",
+        "4455",
         0
       ]
     },
@@ -5087,7 +5136,7 @@
     "inputs"     : {
       "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n",
       "clip" : [
-        "4378",
+        "4353",
         1
       ]
     },
@@ -5173,7 +5222,7 @@
       "balance"      : 0.8,
       "debug"        : true,
       "model"        : [
-        "4378",
+        "4353",
         0
       ],
       "conditioning" : [
@@ -5390,7 +5439,7 @@
         "788",
         0
       ],
-      "guidance" : 1,
+      "guidance" : 3.5,
       "clip"     : [
         "3339",
         0
@@ -6255,7 +6304,7 @@
       "width"      : 1024,
       "height"     : 1024,
       "model"      : [
-        "4378",
+        "4353",
         0
       ]
     },
@@ -6300,6 +6349,22 @@
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "Load LoRA ::0.8:0.2"
+    }
+  },
+  "4337"      : {
+    "inputs"     : {
+      "max_shift"  : 0.75,
+      "base_shift" : 0.43,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "3407",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
     }
   },
   "4344"      : {
@@ -6507,61 +6572,23 @@
       "title" : "Load LoRA (Model and CLIP)"
     }
   },
-  "4373"      : {
-    "inputs"     : {
-      "lora_name"      : "HighDetail.safetensors",
-      "strength_model" : 0.12,
-      "strength_clip"  : 0.08,
-      "model"          : [
-        "4378",
-        0
-      ],
-      "clip"           : [
-        "4378",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "v1dhya5 0.92::0.88"
-    }
-  },
   "4374"      : {
     "inputs"     : {
-      "lora_name"      : "ultra_real_v4.safetensors",
+      "lora_name"      : "ultra_real_v3.safetensors",
       "strength_model" : 0.8,
       "strength_clip"  : 0.1,
       "model"          : [
-        "4375",
+        "4378",
         0
       ],
       "clip"           : [
-        "4375",
+        "4378",
         1
       ]
     },
     "class_type" : "LoraLoader",
     "_meta"      : {
       "title" : "RealSKin 0.92:0.10"
-    }
-  },
-  "4375"      : {
-    "inputs"     : {
-      "lora_name"      : "ColorTone_Standard.safetensors",
-      "strength_model" : 0.64,
-      "strength_clip"  : 0.08,
-      "model"          : [
-        "4373",
-        0
-      ],
-      "clip"           : [
-        "4373",
-        1
-      ]
-    },
-    "class_type" : "LoraLoader",
-    "_meta"      : {
-      "title" : "ColorTone_Standard"
     }
   },
   "4378"      : {
@@ -6948,6 +6975,146 @@
     "class_type" : "DetailDaemonSamplerNode",
     "_meta"      : {
       "title" : "Detail Daemon Sampler"
+    }
+  },
+  "4436"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "4457",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "4440"      : {
+    "inputs"     : {
+      "output_path"             : "[time(%Y-%m-%d)]",
+      "filename_prefix"         : [
+        "4443",
+        0
+      ],
+      "filename_delimiter"      : "_",
+      "filename_number_padding" : 2,
+      "filename_number_start"   : "false",
+      "extension"               : "jpg",
+      "dpi"                     : 300,
+      "quality"                 : 100,
+      "optimize_image"          : "false",
+      "lossless_webp"           : "false",
+      "overwrite_mode"          : "prefix_as_filename",
+      "show_history"            : "false",
+      "show_history_by_prefix"  : "true",
+      "embed_workflow"          : "true",
+      "show_previews"           : "false",
+      "images"                  : [
+        "4459",
+        0
+      ]
+    },
+    "class_type" : "Image Save",
+    "_meta"      : {
+      "title" : "Image Save"
+    }
+  },
+  "4443"      : {
+    "inputs"     : {
+      "condition"  : [
+        "3720",
+        0
+      ],
+      "when_true"  : [
+        "3862",
+        0
+      ],
+      "when_false" : [
+        "3135",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "4451"      : {
+    "inputs"     : {
+      "max_shift"  : 0.75,
+      "base_shift" : 0.43,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "4353",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "4455"      : {
+    "inputs"     : {
+      "seed"         : [
+        "3705",
+        0
+      ],
+      "steps"        : 5,
+      "cfg"          : 1,
+      "sampler_name" : "euler",
+      "scheduler"    : "simple",
+      "denoise"      : 0.15,
+      "model"        : [
+        "4451",
+        0
+      ],
+      "positive"     : [
+        "4457",
+        0
+      ],
+      "negative"     : [
+        "4436",
+        0
+      ],
+      "latent_image" : [
+        "4424",
+        0
+      ]
+    },
+    "class_type" : "KSampler",
+    "_meta"      : {
+      "title" : "Klein_KSampler"
+    }
+  },
+  "4457"      : {
+    "inputs"     : {
+      "text" : "Color correction only.\n\nPreserve all image content exactly.\n\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\nReduce saturation slightly.\nMaintain natural skin tones.\nMaintain realistic photographic white balance.\n\nDo not alter image content or structure.",
+      "clip" : [
+        "4353",
+        1
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Klein_CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "4459"      : {
+    "inputs"     : {
+      "samples" : [
+        "4455",
+        0
+      ],
+      "vae"     : [
+        "4356",
+        0
+      ]
+    },
+    "class_type" : "VAEDecode",
+    "_meta"      : {
+      "title" : "Klein_VAE Decode"
     }
   },
   "2996:3575" : {
