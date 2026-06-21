@@ -335,7 +335,7 @@
       "embed_workflow"          : "true",
       "show_previews"           : "false",
       "images"                  : [
-        "1771",
+        "2215",
         0
       ]
     },
@@ -4562,6 +4562,146 @@
     "class_type" : "InputSelector",
     "_meta"      : {
       "title" : "Input Selector"
+    }
+  },
+  "2202"      : {
+    "inputs"     : {
+      "width"  : 168,
+      "height" : 38,
+      "red"    : 0,
+      "green"  : 0,
+      "blue"   : 0
+    },
+    "class_type" : "Image Blank",
+    "_meta"      : {
+      "title" : "Image Blank"
+    }
+  },
+  "2204"      : {
+    "inputs"     : {
+      "a"         : [
+        "2208",
+        2
+      ],
+      "b"         : -168,
+      "operation" : "add"
+    },
+    "class_type" : "easy mathInt",
+    "_meta"      : {
+      "title" : "Math Int"
+    }
+  },
+  "2205"      : {
+    "inputs"     : {
+      "mask" : [
+        "2216",
+        1
+      ]
+    },
+    "class_type" : "InvertMask",
+    "_meta"      : {
+      "title" : "Invert Mask"
+    }
+  },
+  "2207"      : {
+    "inputs"     : {
+      "a"         : [
+        "2208",
+        1
+      ],
+      "b"         : -38,
+      "operation" : "add"
+    },
+    "class_type" : "easy mathInt",
+    "_meta"      : {
+      "title" : "Math Int"
+    }
+  },
+  "2208"      : {
+    "inputs"     : {
+      "image" : [
+        "1771",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "2215"      : {
+    "inputs"     : {
+      "overlay_resize" : "None",
+      "resize_method"  : "bilinear",
+      "rescale_factor" : 1,
+      "width"          : 512,
+      "height"         : 512,
+      "x_offset"       : [
+        "2207",
+        0
+      ],
+      "y_offset"       : [
+        "2204",
+        0
+      ],
+      "rotation"       : -90,
+      "opacity"        : 0,
+      "base_image"     : [
+        "1771",
+        0
+      ],
+      "overlay_image"  : [
+        "2216",
+        0
+      ],
+      "optional_mask"  : [
+        "2205",
+        0
+      ]
+    },
+    "class_type" : "Image Overlay",
+    "_meta"      : {
+      "title" : "Image Overlay"
+    }
+  },
+  "2216"      : {
+    "inputs"     : {
+      "text"             : [
+        "2218",
+        0
+      ],
+      "font"             : "SevenSegment.ttf",
+      "size"             : 38,
+      "color"            : "#e56b9cFF",
+      "background_color" : "#00000000",
+      "shadow_distance"  : 0,
+      "shadow_blur"      : 0,
+      "shadow_color"     : "#ADADAD",
+      "horizontal_align" : "right",
+      "vertical_align"   : "bottom",
+      "offset_x"         : -4,
+      "offset_y"         : -2,
+      "direction"        : "ltr",
+      "img_composite"    : [
+        "2202",
+        0
+      ]
+    },
+    "class_type" : "DrawText+",
+    "_meta"      : {
+      "title" : "🔧 Draw Text"
+    }
+  },
+  "2218"      : {
+    "inputs"     : {
+      "file_prefix"   : "",
+      "time_format"   : "%-d %-m %y",
+      "output_folder" : "",
+      "filetype"      : ""
+    },
+    "class_type" : "FilePathCreator",
+    "_meta"      : {
+      "title" : "File Path Creator"
     }
   },
   "2175:2170" : {
