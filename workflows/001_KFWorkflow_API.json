@@ -2098,7 +2098,7 @@
         0
       ],
       "steps"        : 24,
-      "cfg"          : 1.6,
+      "cfg"          : 1.2,
       "sampler_name" : "euler",
       "scheduler"    : "beta",
       "denoise"      : 0.38,
@@ -2637,14 +2637,14 @@
       "dof_auto_focus"       : false,
       "dof_sharpness_radius" : 0,
       "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0.15,
-      "promist_strength"     : 0.1,
-      "halation_strength"    : 0.15,
-      "chromatic_aberration" : 0.001,
+      "light_wrap_strength"  : 0.1,
+      "promist_strength"     : 0.12,
+      "halation_strength"    : 0.1,
+      "chromatic_aberration" : 0.002,
       "vignette_intensity"   : 0.05,
-      "grain_power"          : 0.014,
+      "grain_power"          : 0.008,
       "monochrome_grain"     : false,
-      "highlight_rolloff"    : 0,
+      "highlight_rolloff"    : 0.12,
       "image"                : [
         "1677",
         0
@@ -2893,7 +2893,7 @@
         0
       ],
       "steps"        : 20,
-      "cfg"          : 2.2,
+      "cfg"          : 1.8,
       "sampler_name" : "euler",
       "scheduler"    : "beta",
       "denoise"      : 0.45,
@@ -3584,15 +3584,6 @@
       "title" : "Image Save"
     }
   },
-  "1963"      : {
-    "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range."
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Klein_CLIP Text Encode (Positive Prompt)"
-    }
-  },
   "1965"      : {
     "inputs"     : {
       "balance"      : 0.8,
@@ -4039,15 +4030,6 @@
       "title" : "Klein_CLIP Text Encode (Positive Prompt)"
     }
   },
-  "2014"      : {
-    "inputs"     : {
-      "text" : "Make this photo a high-quality portrait of v1dhya5. Copy the expression from the reference image.\n\nRender authentic melanin-rich South Indian dark brown skin with subtle pores, fine skin texture, \nsubtle golden-brown undertones, and realistic tonal variation. No smoothing, no brightening, \nno beauty-filter effects."
-    },
-    "class_type" : "CLIPTextEncode",
-    "_meta"      : {
-      "title" : "Klein_CLIP Text Encode (Positive Prompt)"
-    }
-  },
   "2015"      : {
     "inputs"     : {
       "conditioning" : [
@@ -4055,7 +4037,7 @@
         0
       ],
       "latent"       : [
-        "2007",
+        "2246",
         0
       ]
     },
@@ -5109,6 +5091,255 @@
       "title" : "Klein_Load LoRA"
     }
   },
+  "2225"      : {
+    "inputs"     : {
+      "balance"      : 0.8,
+      "debug"        : true,
+      "model"        : [
+        "2131",
+        0
+      ],
+      "conditioning" : [
+        "2237",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinTextRefBalance",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Text/Ref Balance"
+    }
+  },
+  "2226"      : {
+    "inputs"     : {
+      "expand"                 : 12,
+      "incremental_expandrate" : 6,
+      "tapered_corners"        : true,
+      "flip_input"             : false,
+      "blur_radius"            : 6,
+      "lerp_alpha"             : 1,
+      "decay_factor"           : 1,
+      "fill_holes"             : false,
+      "mask"                   : [
+        "2227",
+        0
+      ]
+    },
+    "class_type" : "GrowMaskWithBlur",
+    "_meta"      : {
+      "title" : "Grow Mask With Blur"
+    }
+  },
+  "2227"      : {
+    "inputs"     : {
+      "face_mask"       : false,
+      "background_mask" : false,
+      "hair_mask"       : false,
+      "body_mask"       : false,
+      "clothes_mask"    : true,
+      "confidence"      : 0.4,
+      "refine_mask"     : true,
+      "images"          : [
+        "1985",
+        0
+      ]
+    },
+    "class_type" : "APersonMaskGenerator",
+    "_meta"      : {
+      "title" : "A Person Mask Generator"
+    }
+  },
+  "2231"      : {
+    "inputs"     : {
+      "max_shift"  : 0.75,
+      "base_shift" : 0.43,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2131",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
+  "2232"      : {
+    "inputs"     : {
+      "active_scale"        : 0.95,
+      "per_token_whiten"    : 0.03,
+      "norm_equalize"       : 0.08,
+      "early_layer_scale"   : 0.95,
+      "mid_layer_scale"     : 1.15,
+      "late_layer_scale"    : 0.9,
+      "preserve_original"   : 0.78,
+      "active_end_override" : false,
+      "device"              : "auto",
+      "debug"               : false,
+      "conditioning"        : [
+        "2234",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinEnhancer",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
+  "2234"      : {
+    "inputs"     : {
+      "noise_mask" : true,
+      "positive"   : [
+        "2225",
+        1
+      ],
+      "negative"   : [
+        "2238",
+        0
+      ],
+      "vae"        : [
+        "2127",
+        0
+      ],
+      "pixels"     : [
+        "1985",
+        0
+      ],
+      "mask"       : [
+        "2226",
+        0
+      ]
+    },
+    "class_type" : "InpaintModelConditioning",
+    "_meta"      : {
+      "title" : "Klein_InpaintModelConditioning"
+    }
+  },
+  "2235"      : {
+    "inputs"     : {
+      "mask_opacity" : 0.3,
+      "mask_color"   : "255, 0, 207",
+      "pass_through" : false,
+      "image"        : [
+        "1985",
+        0
+      ],
+      "mask"         : [
+        "2226",
+        0
+      ]
+    },
+    "class_type" : "ImageAndMaskPreview",
+    "_meta"      : {
+      "title" : "ImageAndMaskPreview"
+    }
+  },
+  "2237"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "2241",
+        0
+      ],
+      "latent"       : [
+        "2007",
+        0
+      ]
+    },
+    "class_type" : "ReferenceLatent",
+    "_meta"      : {
+      "title" : "ReferenceLatent"
+    }
+  },
+  "2238"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "2237",
+        0
+      ]
+    },
+    "class_type" : "ConditioningZeroOut",
+    "_meta"      : {
+      "title" : "ConditioningZeroOut"
+    }
+  },
+  "2241"      : {
+    "inputs"     : {
+      "conditioning" : [
+        "2242",
+        0
+      ],
+      "latent"       : [
+        "2020",
+        0
+      ]
+    },
+    "class_type" : "ReferenceLatent",
+    "_meta"      : {
+      "title" : "ReferenceLatent"
+    }
+  },
+  "2242"      : {
+    "inputs"     : {
+      "text" : "Make this photo high-quality photo of with natural fabric texture.   copy the colors from the first reference image.\n",
+      "clip" : [
+        "2135",
+        0
+      ]
+    },
+    "class_type" : "CLIPTextEncode",
+    "_meta"      : {
+      "title" : "Klein_CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "2246"      : {
+    "inputs"     : {
+      "seed"         : [
+        "378",
+        0
+      ],
+      "steps"        : 5,
+      "cfg"          : 1,
+      "sampler_name" : "euler",
+      "scheduler"    : "simple",
+      "denoise"      : 0.72,
+      "model"        : [
+        "2231",
+        0
+      ],
+      "positive"     : [
+        "2232",
+        0
+      ],
+      "negative"     : [
+        "2234",
+        1
+      ],
+      "latent_image" : [
+        "2234",
+        2
+      ]
+    },
+    "class_type" : "KSampler",
+    "_meta"      : {
+      "title" : "Klein_KSampler"
+    }
+  },
+  "2248"      : {
+    "inputs"     : {
+      "samples" : [
+        "2246",
+        0
+      ],
+      "vae"     : [
+        "2127",
+        0
+      ]
+    },
+    "class_type" : "VAEDecode",
+    "_meta"      : {
+      "title" : "Klein_VAE Decode"
+    }
+  },
   "2175:2170" : {
     "inputs"     : {
       "mode" : false,
@@ -5143,12 +5374,40 @@
       "title" : "AIO Aux Preprocessor"
     }
   },
+  "2175:2173" : {
+    "inputs"     : {
+      "image" : [
+        "1969",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "2175:2174" : {
+    "inputs"     : {
+      "size"              : 512,
+      "downscale_preview" : true,
+      "downscale_mode"    : true,
+      "compress_level"    : 0,
+      "images"            : [
+        "2175:2172",
+        0
+      ]
+    },
+    "class_type" : "PreviewImageForConditions|LP",
+    "_meta"      : {
+      "title" : "Preview Image Bridge [LP]"
+    }
+  },
   "2175:2172" : {
     "inputs"     : {
       "lens_distortion"      : -0.005,
       "color_temperature"    : -0.05,
       "tint"                 : 0,
-      "atmosphere_enabled"   : false,
+      "atmosphere_enabled"   : true,
       "haze_strength"        : 0,
       "lift_blacks"          : 0.01,
       "depth_offset"         : 0,
@@ -5177,34 +5436,6 @@
     "class_type" : "OpticalRealism",
     "_meta"      : {
       "title" : "Optical Realism & Physics"
-    }
-  },
-  "2175:2173" : {
-    "inputs"     : {
-      "image" : [
-        "1969",
-        0
-      ]
-    },
-    "class_type" : "GetImageSizeAndCount",
-    "_meta"      : {
-      "title" : "Get Image Size & Count"
-    }
-  },
-  "2175:2174" : {
-    "inputs"     : {
-      "size"              : 512,
-      "downscale_preview" : true,
-      "downscale_mode"    : true,
-      "compress_level"    : 0,
-      "images"            : [
-        "2175:2172",
-        0
-      ]
-    },
-    "class_type" : "PreviewImageForConditions|LP",
-    "_meta"      : {
-      "title" : "Preview Image Bridge [LP]"
     }
   }
 }
