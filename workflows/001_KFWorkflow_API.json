@@ -2098,7 +2098,7 @@
         0
       ],
       "steps"        : 24,
-      "cfg"          : 1.8,
+      "cfg"          : 1.6,
       "sampler_name" : "euler",
       "scheduler"    : "beta",
       "denoise"      : 0.38,
