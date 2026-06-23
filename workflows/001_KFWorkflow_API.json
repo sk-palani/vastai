@@ -1566,7 +1566,7 @@
   "1195"      : {
     "inputs"     : {
       "block_number"         : 4,
-      "downscale_factor"     : 2,
+      "downscale_factor"     : 1.75,
       "start_percent"        : 0,
       "end_percent"          : 0.6,
       "downscale_after_skip" : true,
@@ -2190,10 +2190,6 @@
   },
   "1523"      : {
     "inputs"     : {
-      "any_02" : [
-        "1728",
-        0
-      ],
       "any_03" : [
         "1514",
         0
@@ -2776,219 +2772,6 @@
       "title" : "Switch"
     }
   },
-  "1711"      : {
-    "inputs"     : {
-      "noise_mask" : true,
-      "positive"   : [
-        "1725",
-        0
-      ],
-      "negative"   : [
-        "1720",
-        0
-      ],
-      "vae"        : [
-        "1227",
-        0
-      ],
-      "pixels"     : [
-        "1716",
-        0
-      ],
-      "mask"       : [
-        "1719",
-        0
-      ]
-    },
-    "class_type" : "InpaintModelConditioning",
-    "_meta"      : {
-      "title" : "FLUX_InpaintModelConditioning"
-    }
-  },
-  "1714"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1716",
-        0
-      ],
-      "mask"         : [
-        "1719",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "1716"      : {
-    "inputs"     : {
-      "any_01" : [
-        "1514",
-        0
-      ],
-      "any_02" : [
-        "1754",
-        0
-      ],
-      "any_03" : [
-        "1658",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Switch"
-    }
-  },
-  "1718"      : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "1716",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "1719"      : {
-    "inputs"     : {
-      "expand"                 : 12,
-      "incremental_expandrate" : 6,
-      "tapered_corners"        : true,
-      "flip_input"             : false,
-      "blur_radius"            : 6,
-      "lerp_alpha"             : 1,
-      "decay_factor"           : 1,
-      "fill_holes"             : false,
-      "mask"                   : [
-        "1718",
-        0
-      ]
-    },
-    "class_type" : "GrowMaskWithBlur",
-    "_meta"      : {
-      "title" : "Grow Mask With Blur"
-    }
-  },
-  "1720"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "1725",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "1725"      : {
-    "inputs"     : {
-      "clip_l"   : "symmetrical face, consistent facial identity, correct facial anatomy, properly aligned facial features, natural proportions, stable facial structure, no distortion, no asymmetry, clean facial geometry, clear facial definition at all distances",
-      "t5xxl"    : "A professionally color graded photograph of an Indian woman with a naturally attractive and well proportioned face and a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with fine pores and visible microtexture, subtle skin variation and natural irregularities, enhanced fine detail with clear high frequency texture, no noise or grain, no exaggerated or artificial skin detail, soft diffused lighting with balanced highlights, photorealistic rendering with clean and detailed skin and consistent clarity across viewing distances",
-      "guidance" : 3.5,
-      "clip"     : [
-        "1298",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
-  "1726"      : {
-    "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 18,
-      "cfg"          : 2.5,
-      "sampler_name" : "dpmpp_2m",
-      "scheduler"    : "karras",
-      "denoise"      : 0.38,
-      "model"        : [
-        "1298",
-        0
-      ],
-      "positive"     : [
-        "1711",
-        0
-      ],
-      "negative"     : [
-        "1711",
-        1
-      ],
-      "latent_image" : [
-        "1711",
-        2
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
-    }
-  },
-  "1727"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "105",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "jpg",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "1728",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "1728"      : {
-    "inputs"     : {
-      "samples" : [
-        "1726",
-        0
-      ],
-      "vae"     : [
-        "1227",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "FLUX_Decode"
-    }
-  },
   "1741"      : {
     "inputs"     : {
       "noise_mask" : true,
@@ -3243,24 +3026,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "1783"      : {
-    "inputs"     : {
-      "seed"         : -1,
-      "steps"        : 21,
-      "cfg"          : 2.5,
-      "sampler_name" : "euler",
-      "scheduler"    : "beta",
-      "denoise"      : 0.38,
-      "model"        : [
-        "1298",
-        0
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
   "1835"      : {
