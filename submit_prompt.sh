@@ -28,7 +28,7 @@ UPDATED_FILE="$SCRIPT_DIR/Workflow_API_updated.json"
 LOG_TS=$(date '+%Y-%m-%d %H:%M:%S')
 
 # -- Download latest workflow file
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/001_KFWorkflow_API.json"
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/002_KFWorkflow_API.json"
 #DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/35_FULL_Workflow_API.json"
 
 wget -O "${WORKFLOW_FILE}" "${DEFAULT_WORKFLOW}"
