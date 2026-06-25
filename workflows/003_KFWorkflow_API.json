@@ -58,7 +58,7 @@
   },
   "127"       : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "1.6",
       "divisible_by"  : "8",
       "mode"          : "resize",
       "delta_percent" : 0.3,
@@ -466,7 +466,7 @@
   },
   "476"       : {
     "inputs"     : {
-      "value" : 1.19
+      "value" : 1.33
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -1566,9 +1566,9 @@
   "1195"      : {
     "inputs"     : {
       "block_number"         : 4,
-      "downscale_factor"     : 1.8,
+      "downscale_factor"     : 1.75,
       "start_percent"        : 0,
-      "end_percent"          : 0.55,
+      "end_percent"          : 0.6,
       "downscale_after_skip" : true,
       "downscale_method"     : "bislerp",
       "upscale_method"       : "bislerp",
@@ -2244,7 +2244,7 @@
   "1547"      : {
     "inputs"     : {
       "clip_l"   : "clean clothing, proper fit, correct anatomy, aligned outfit, natural folds, realistic proportions, consistent fabric, sharp seams, no distortion, no warping, no broken clothing, no misalignment, stable structure, coherent garment,\n",
-      "t5xxl"    : "A realistic outfit with physically accurate fabric behavior, clean stitching, natural folds and tension, consistent texture, no distortions or artifacts, proper alignment with the body,   lighting consistent with the scene, professional quality garment rendering,\n\nexposure perfectly matches the original image, no localized brightness adjustment, no relighting or tonal deviation",
+      "t5xxl"    : "A realistic outfit with physically accurate fabric behavior,  natural folds and tension, consistent texture, no distortions or artifacts, proper alignment with the body,   lighting consistent with the scene, professional quality garment rendering,\n\nexposure perfectly matches the original image, no localized brightness adjustment, no relighting or tonal deviation",
       "guidance" : 3.2,
       "clip"     : [
         "1298",
@@ -4935,7 +4935,7 @@
     "inputs"     : {
       "lora_name"      : "V4_flux_klein.safetensors",
       "strength_model" : 0.6,
-      "strength_clip"  : 0.2,
+      "strength_clip"  : 0.4,
       "model"          : [
         "2219",
         0
@@ -5061,7 +5061,7 @@
         "984",
         0
       ],
-      "noise_strength" : 0.2,
+      "noise_strength" : 0.25,
       "normalize"      : "false",
       "latent"         : [
         "2183",
@@ -5344,7 +5344,7 @@
       "early_layer_scale"   : 0.95,
       "mid_layer_scale"     : 1.15,
       "late_layer_scale"    : 0.9,
-      "preserve_original"   : 0,
+      "preserve_original"   : 0.78,
       "active_end_override" : false,
       "device"              : "auto",
       "debug"               : false,
