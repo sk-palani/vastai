@@ -10,13 +10,13 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 workflows_dir=${WORKSPACE}/ComfyUI/user/default/workflows
 
 mkdir -p "${WORKSPACE}/ComfyUI/user/default/workflows"
-mkdir -p "${WORKSPACE}ComfyUI/Inputs/Downloaded/Parked"
-mkdir -p "${WORKSPACE}ComfyUI/Inputs/Next/Best"
-mkdir -p "${WORKSPACE}ComfyUI/Inputs/Next/Park"
-mkdir -p "${WORKSPACE}ComfyUI/Inputs/Processed"
+mkdir -p "${WORKSPACE}/ComfyUI/Inputs/Downloaded/Parked"
+mkdir -p "${WORKSPACE}/ComfyUI/Inputs/Next/Best"
+mkdir -p "${WORKSPACE}/ComfyUI/Inputs/Next/Park"
+mkdir -p "${WORKSPACE}/ComfyUI/Inputs/Processed"
 
-mkdir -p "${WORKSPACE}environments/python/comfyui"
-cd "${WORKSPACE}environments/python/"
+mkdir -p "${WORKSPACE}/environments/python/comfyui"
+cd "${WORKSPACE}/environments/python/"
 
 # Check and install python3.12 python3.12-venv
 # Check if python3.12 and python3.12-venv are installed
@@ -722,19 +722,19 @@ set +f
 
 /etc/init.d/cron start
 
-#
-#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
-#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
-#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
-#supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
-#supervisorctl stop 'jupyter'
-#
+
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
+supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
+supervisorctl stop 'jupyter'
 
 
-supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_0"'
-supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_1"'
-supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_2"'
-supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_3"'
+
+# supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_0"'
+# supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_1"'
+# supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_2"'
+# supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_3"'
 
 
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &

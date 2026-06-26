@@ -966,7 +966,7 @@
         "788",
         0
       ],
-      "guidance" : 3.5,
+      "guidance" : 2.6,
       "clip"     : [
         "3339",
         0
@@ -5700,7 +5700,7 @@
   "4184"      : {
     "inputs"     : {
       "scheduler" : "beta",
-      "steps"     : 42,
+      "steps"     : 36,
       "denoise"   : [
         "4190",
         0
@@ -5737,7 +5737,7 @@
         "2100",
         0
       ],
-      "b"         : 0.48,
+      "b"         : 0.49,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -5959,7 +5959,7 @@
         0
       ],
       "sampler"      : [
-        "3381",
+        "4428",
         0
       ],
       "sigmas"       : [
@@ -6099,7 +6099,7 @@
   },
   "4292"      : {
     "inputs"     : {
-      "value" : 0.56
+      "value" : 0.45
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -6903,6 +6903,43 @@
       "title" : "Klein_VAE Decode"
     }
   },
+  "4427"      : {
+    "inputs"     : {
+      "dishonesty_factor" : -0.03,
+      "start_percent"     : 0.25,
+      "end_percent"       : 0.5,
+      "sampler"           : [
+        "3381",
+        0
+      ]
+    },
+    "class_type" : "LyingSigmaSampler",
+    "_meta"      : {
+      "title" : "Lying Sigma Sampler"
+    }
+  },
+  "4428"      : {
+    "inputs"     : {
+      "detail_amount"      : 0.05,
+      "start"              : 0.42,
+      "end"                : 0.65,
+      "bias"               : 0.5,
+      "exponent"           : 1,
+      "start_offset"       : 0,
+      "end_offset"         : 0,
+      "fade"               : 0,
+      "smooth"             : false,
+      "cfg_scale_override" : 1,
+      "sampler"            : [
+        "4427",
+        0
+      ]
+    },
+    "class_type" : "DetailDaemonSamplerNode",
+    "_meta"      : {
+      "title" : "Detail Daemon Sampler"
+    }
+  },
   "4436"      : {
     "inputs"     : {
       "conditioning" : [
@@ -7016,7 +7053,7 @@
   },
   "4457"      : {
     "inputs"     : {
-      "text" : "Color correction only.\n\nPreserve all image content exactly.\n\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\nReduce saturation slightly (-20%) .\nMaintain natural skin tones.\nMaintain realistic photographic white balance.\n\nDo not alter image content or structure.",
+      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\nReduce saturation slightly (-20%) .\nMaintain natural skin tones.\nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\nDo not alter image content or structure.",
       "clip" : [
         "4353",
         1
