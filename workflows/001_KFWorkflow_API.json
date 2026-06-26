@@ -2008,7 +2008,7 @@
   },
   "1448"      : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
       "mode"          : "resize",
       "delta_percent" : 0,
