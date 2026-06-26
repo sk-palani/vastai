@@ -2008,7 +2008,7 @@
   },
   "1448"      : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "resize",
       "delta_percent" : 0,
@@ -4390,7 +4390,7 @@
     "inputs"     : {
       "lora_name"      : "V4_flux_klein.safetensors",
       "strength_model" : 0.6,
-      "strength_clip"  : 0.6,
+      "strength_clip"  : 0.4,
       "model"          : [
         "2147",
         0
