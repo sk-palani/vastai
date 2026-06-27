@@ -58,10 +58,10 @@
   },
   "127"       : {
     "inputs"     : {
-      "megapixel"     : "1.6",
+      "megapixel"     : "1.8",
       "divisible_by"  : "8",
       "mode"          : "resize",
-      "delta_percent" : 0.3,
+      "delta_percent" : 0.2,
       "image"         : [
         "983",
         0
@@ -372,6 +372,21 @@
       "title" : "ConditioningZeroOut"
     }
   },
+  "437"       : {
+    "inputs"     : {
+      "platform"    : "FLUX",
+      "orientation" : "original",
+      "attention"   : "maximize",
+      "image"       : [
+        "1448",
+        0
+      ]
+    },
+    "class_type" : "quadmoonConvertNormalizeHW",
+    "_meta"      : {
+      "title" : "Normalize Image Dimensions"
+    }
+  },
   "445"       : {
     "inputs"     : {
       "OutputDirectory" : "processing",
@@ -492,7 +507,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : false,
       "images"          : [
-        "127",
+        "2279",
         0
       ]
     },
@@ -521,7 +536,7 @@
       "padding_bottom" : 64,
       "return_list"    : false,
       "image"          : [
-        "127",
+        "2279",
         0
       ],
       "mask"           : [
@@ -564,7 +579,7 @@
         0
       ],
       "when_false" : [
-        "127",
+        "2279",
         0
       ]
     },
@@ -1459,7 +1474,7 @@
       "strength"     : 0.24,
       "multithread"  : true,
       "image_ref"    : [
-        "127",
+        "2279",
         0
       ],
       "image_target" : [
@@ -1533,7 +1548,7 @@
   },
   "1193"      : {
     "inputs"     : {
-      "stop_at_clip_layer" : -3,
+      "stop_at_clip_layer" : -2,
       "clip"               : [
         "1192",
         0
@@ -1544,31 +1559,12 @@
       "title" : "CLIP Set Last Layer"
     }
   },
-  "1194"      : {
-    "inputs"     : {
-      "block_number"         : 4,
-      "downscale_factor"     : 1,
-      "start_percent"        : 0.6,
-      "end_percent"          : 0.75,
-      "downscale_after_skip" : true,
-      "downscale_method"     : "bislerp",
-      "upscale_method"       : "bislerp",
-      "model"                : [
-        "1195",
-        0
-      ]
-    },
-    "class_type" : "PatchModelAddDownscale",
-    "_meta"      : {
-      "title" : "PatchModelAddDownscale"
-    }
-  },
   "1195"      : {
     "inputs"     : {
       "block_number"         : 4,
       "downscale_factor"     : 1.75,
       "start_percent"        : 0,
-      "end_percent"          : 0.6,
+      "end_percent"          : 0.5,
       "downscale_after_skip" : true,
       "downscale_method"     : "bislerp",
       "upscale_method"       : "bislerp",
@@ -1680,7 +1676,7 @@
       "strength_model" : 1.5,
       "strength_clip"  : 0.02,
       "model"          : [
-        "1194",
+        "1195",
         0
       ],
       "clip"           : [
@@ -2022,186 +2018,8 @@
       "title" : "Image Preparations"
     }
   },
-  "1507"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1704",
-        0
-      ],
-      "mask"         : [
-        "1508",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "1508"      : {
-    "inputs"     : {
-      "expand"                 : 12,
-      "incremental_expandrate" : 6,
-      "tapered_corners"        : true,
-      "flip_input"             : false,
-      "blur_radius"            : 6,
-      "lerp_alpha"             : 1,
-      "decay_factor"           : 1,
-      "fill_holes"             : false,
-      "mask"                   : [
-        "1511",
-        0
-      ]
-    },
-    "class_type" : "GrowMaskWithBlur",
-    "_meta"      : {
-      "title" : "Grow Mask With Blur"
-    }
-  },
-  "1509"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "2254",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "jpg",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "1514",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "1510"      : {
-    "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 24,
-      "cfg"          : 1.2,
-      "sampler_name" : "euler",
-      "scheduler"    : "beta",
-      "denoise"      : 0.38,
-      "model"        : [
-        "1298",
-        0
-      ],
-      "positive"     : [
-        "1513",
-        0
-      ],
-      "negative"     : [
-        "1513",
-        1
-      ],
-      "latent_image" : [
-        "1513",
-        2
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
-    }
-  },
-  "1511"      : {
-    "inputs"     : {
-      "face_mask"       : false,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : true,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "1704",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "1513"      : {
-    "inputs"     : {
-      "noise_mask" : true,
-      "positive"   : [
-        "1547",
-        0
-      ],
-      "negative"   : [
-        "1548",
-        0
-      ],
-      "vae"        : [
-        "1227",
-        0
-      ],
-      "pixels"     : [
-        "1704",
-        0
-      ],
-      "mask"       : [
-        "1508",
-        0
-      ]
-    },
-    "class_type" : "InpaintModelConditioning",
-    "_meta"      : {
-      "title" : "FLUX_InpaintModelConditioning"
-    }
-  },
-  "1514"      : {
-    "inputs"     : {
-      "samples" : [
-        "1510",
-        0
-      ],
-      "vae"     : [
-        "1227",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "FLUX_Decode"
-    }
-  },
   "1523"      : {
     "inputs"     : {
-      "any_02" : [
-        "1728",
-        0
-      ],
-      "any_03" : [
-        "1514",
-        0
-      ],
-      "any_04" : [
-        "1754",
-        0
-      ],
       "any_05" : [
         "1658",
         0
@@ -2239,33 +2057,6 @@
     "class_type" : "ModelPatchTorchSettings",
     "_meta"      : {
       "title" : "Model Patch Torch Settings"
-    }
-  },
-  "1547"      : {
-    "inputs"     : {
-      "clip_l"   : "clean clothing, proper fit, correct anatomy, aligned outfit, natural folds, realistic proportions, consistent fabric, sharp seams, no distortion, no warping, no broken clothing, no misalignment, stable structure, coherent garment,\n",
-      "t5xxl"    : "A realistic outfit with physically accurate fabric behavior,  natural folds and tension, consistent texture, no distortions or artifacts, proper alignment with the body,   lighting consistent with the scene, professional quality garment rendering,\n\nexposure perfectly matches the original image, no localized brightness adjustment, no relighting or tonal deviation",
-      "guidance" : 3.2,
-      "clip"     : [
-        "1298",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
-  "1548"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "1547",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
     }
   },
   "1572"      : {
@@ -2438,7 +2229,10 @@
         "222",
         0
       ],
-      "b"         : 0.72,
+      "b"         : [
+        "2272",
+        0
+      ],
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -2468,7 +2262,7 @@
   },
   "1657"      : {
     "inputs"     : {
-      "scheduler" : "beta",
+      "scheduler" : "simple",
       "steps"     : 28,
       "denoise"   : [
         "1649",
@@ -2533,7 +2327,7 @@
         0
       ],
       "sampler"      : [
-        "1666",
+        "2280",
         0
       ],
       "sigmas"       : [
@@ -2550,18 +2344,9 @@
       "title" : "Pass02:Sampler2"
     }
   },
-  "1662"      : {
-    "inputs"     : {
-      "sampler_name" : "euler"
-    },
-    "class_type" : "KSamplerSelect",
-    "_meta"      : {
-      "title" : "KSamplerSelect"
-    }
-  },
   "1663"      : {
     "inputs"     : {
-      "denoise" : 0.56,
+      "denoise" : 0.48,
       "sigmas"  : [
         "1657",
         0
@@ -2578,7 +2363,7 @@
         "378",
         0
       ],
-      "noise_strength" : 0.21,
+      "noise_strength" : 0.39,
       "normalize"      : "false",
       "latent"         : [
         "1648",
@@ -2588,43 +2373,6 @@
     "class_type" : "InjectLatentNoise+",
     "_meta"      : {
       "title" : "🔧 Inject Latent Noise"
-    }
-  },
-  "1665"      : {
-    "inputs"     : {
-      "dishonesty_factor" : -0.04,
-      "start_percent"     : 0.25,
-      "end_percent"       : 0.5,
-      "sampler"           : [
-        "1662",
-        0
-      ]
-    },
-    "class_type" : "LyingSigmaSampler",
-    "_meta"      : {
-      "title" : "Lying Sigma Sampler"
-    }
-  },
-  "1666"      : {
-    "inputs"     : {
-      "detail_amount"      : 0.04,
-      "start"              : 0.3,
-      "end"                : 0.45,
-      "bias"               : 0.5,
-      "exponent"           : 1,
-      "start_offset"       : 0,
-      "end_offset"         : 0,
-      "fade"               : 0,
-      "smooth"             : true,
-      "cfg_scale_override" : 1,
-      "sampler"            : [
-        "1665",
-        0
-      ]
-    },
-    "class_type" : "DetailDaemonSamplerNode",
-    "_meta"      : {
-      "title" : "Detail Daemon Sampler"
     }
   },
   "1673"      : {
@@ -2760,440 +2508,6 @@
       "title" : "Switch"
     }
   },
-  "1704"      : {
-    "inputs"     : {
-      "any_01" : [
-        "1754",
-        0
-      ],
-      "any_02" : [
-        "1658",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Switch"
-    }
-  },
-  "1711"      : {
-    "inputs"     : {
-      "noise_mask" : true,
-      "positive"   : [
-        "1725",
-        0
-      ],
-      "negative"   : [
-        "1720",
-        0
-      ],
-      "vae"        : [
-        "1227",
-        0
-      ],
-      "pixels"     : [
-        "1716",
-        0
-      ],
-      "mask"       : [
-        "1719",
-        0
-      ]
-    },
-    "class_type" : "InpaintModelConditioning",
-    "_meta"      : {
-      "title" : "FLUX_InpaintModelConditioning"
-    }
-  },
-  "1714"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1716",
-        0
-      ],
-      "mask"         : [
-        "1719",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "1716"      : {
-    "inputs"     : {
-      "any_01" : [
-        "1514",
-        0
-      ],
-      "any_02" : [
-        "1754",
-        0
-      ],
-      "any_03" : [
-        "1658",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Switch"
-    }
-  },
-  "1718"      : {
-    "inputs"     : {
-      "face_mask"       : true,
-      "background_mask" : false,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "1716",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "1719"      : {
-    "inputs"     : {
-      "expand"                 : 12,
-      "incremental_expandrate" : 6,
-      "tapered_corners"        : true,
-      "flip_input"             : false,
-      "blur_radius"            : 6,
-      "lerp_alpha"             : 1,
-      "decay_factor"           : 1,
-      "fill_holes"             : false,
-      "mask"                   : [
-        "1718",
-        0
-      ]
-    },
-    "class_type" : "GrowMaskWithBlur",
-    "_meta"      : {
-      "title" : "Grow Mask With Blur"
-    }
-  },
-  "1720"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "1725",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "1725"      : {
-    "inputs"     : {
-      "clip_l"   : "symmetrical face, consistent facial identity, correct facial anatomy, properly aligned facial features, natural proportions, stable facial structure, no distortion, no asymmetry, clean facial geometry, clear facial definition at all distances",
-      "t5xxl"    : "A professionally color graded photograph of an Indian woman with a naturally attractive and well proportioned face and a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with fine pores and visible microtexture, subtle skin variation and natural irregularities, enhanced fine detail with clear high frequency texture, no noise or grain, no exaggerated or artificial skin detail, soft diffused lighting with balanced highlights, photorealistic rendering with clean and detailed skin and consistent clarity across viewing distances",
-      "guidance" : 3.5,
-      "clip"     : [
-        "1298",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
-  "1726"      : {
-    "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 18,
-      "cfg"          : 2.5,
-      "sampler_name" : "dpmpp_2m",
-      "scheduler"    : "karras",
-      "denoise"      : 0.38,
-      "model"        : [
-        "1298",
-        0
-      ],
-      "positive"     : [
-        "1711",
-        0
-      ],
-      "negative"     : [
-        "1711",
-        1
-      ],
-      "latent_image" : [
-        "1711",
-        2
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
-    }
-  },
-  "1727"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "2254",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "jpg",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "1728",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "1728"      : {
-    "inputs"     : {
-      "samples" : [
-        "1726",
-        0
-      ],
-      "vae"     : [
-        "1227",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "FLUX_Decode"
-    }
-  },
-  "1741"      : {
-    "inputs"     : {
-      "noise_mask" : true,
-      "positive"   : [
-        "1751",
-        0
-      ],
-      "negative"   : [
-        "1749",
-        0
-      ],
-      "vae"        : [
-        "1227",
-        0
-      ],
-      "pixels"     : [
-        "1756",
-        0
-      ],
-      "mask"       : [
-        "1748",
-        0
-      ]
-    },
-    "class_type" : "InpaintModelConditioning",
-    "_meta"      : {
-      "title" : "FLUX_InpaintModelConditioning"
-    }
-  },
-  "1744"      : {
-    "inputs"     : {
-      "mask_opacity" : 0.3,
-      "mask_color"   : "255, 0, 207",
-      "pass_through" : false,
-      "image"        : [
-        "1756",
-        0
-      ],
-      "mask"         : [
-        "1748",
-        0
-      ]
-    },
-    "class_type" : "ImageAndMaskPreview",
-    "_meta"      : {
-      "title" : "ImageAndMaskPreview"
-    }
-  },
-  "1747"      : {
-    "inputs"     : {
-      "face_mask"       : false,
-      "background_mask" : true,
-      "hair_mask"       : false,
-      "body_mask"       : false,
-      "clothes_mask"    : false,
-      "confidence"      : 0.4,
-      "refine_mask"     : true,
-      "images"          : [
-        "1756",
-        0
-      ]
-    },
-    "class_type" : "APersonMaskGenerator",
-    "_meta"      : {
-      "title" : "A Person Mask Generator"
-    }
-  },
-  "1748"      : {
-    "inputs"     : {
-      "expand"                 : 12,
-      "incremental_expandrate" : 6,
-      "tapered_corners"        : true,
-      "flip_input"             : false,
-      "blur_radius"            : 6,
-      "lerp_alpha"             : 1,
-      "decay_factor"           : 1,
-      "fill_holes"             : false,
-      "mask"                   : [
-        "1747",
-        0
-      ]
-    },
-    "class_type" : "GrowMaskWithBlur",
-    "_meta"      : {
-      "title" : "Grow Mask With Blur"
-    }
-  },
-  "1749"      : {
-    "inputs"     : {
-      "conditioning" : [
-        "1751",
-        0
-      ]
-    },
-    "class_type" : "ConditioningZeroOut",
-    "_meta"      : {
-      "title" : "ConditioningZeroOut"
-    }
-  },
-  "1751"      : {
-    "inputs"     : {
-      "clip_l"   : "clear background, defined environment, stable scene structure, no blur, no smearing, no distortion, consistent perspective, sharp spatial layout, coherent surroundings, no low resolution areas, equal scene importance",
-      "t5xxl"    : "highly detailed and sharp background with clear structure and realistic textures, no blur or grain, no smeared or low resolution areas, natural depth of field with background remaining clear and readable, equal level of detail across subject and environment, consistent lighting and high resolution detail throughout the entire image",
-      "guidance" : 3.5,
-      "clip"     : [
-        "1695",
-        1
-      ]
-    },
-    "class_type" : "CLIPTextEncodeFlux",
-    "_meta"      : {
-      "title" : "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
-  "1752"      : {
-    "inputs"     : {
-      "seed"         : [
-        "378",
-        0
-      ],
-      "steps"        : 20,
-      "cfg"          : 1.8,
-      "sampler_name" : "euler",
-      "scheduler"    : "beta",
-      "denoise"      : 0.33,
-      "model"        : [
-        "1695",
-        0
-      ],
-      "positive"     : [
-        "1741",
-        0
-      ],
-      "negative"     : [
-        "1741",
-        1
-      ],
-      "latent_image" : [
-        "1741",
-        2
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
-    }
-  },
-  "1753"      : {
-    "inputs"     : {
-      "output_path"             : "[time(%Y-%m-%d)]",
-      "filename_prefix"         : [
-        "2254",
-        0
-      ],
-      "filename_delimiter"      : "_",
-      "filename_number_padding" : 4,
-      "filename_number_start"   : "false",
-      "extension"               : "jpg",
-      "dpi"                     : 300,
-      "quality"                 : 100,
-      "optimize_image"          : "false",
-      "lossless_webp"           : "false",
-      "overwrite_mode"          : "prefix_as_filename",
-      "show_history"            : "false",
-      "show_history_by_prefix"  : "true",
-      "embed_workflow"          : "true",
-      "show_previews"           : "false",
-      "images"                  : [
-        "1754",
-        0
-      ]
-    },
-    "class_type" : "Image Save",
-    "_meta"      : {
-      "title" : "Image Save"
-    }
-  },
-  "1754"      : {
-    "inputs"     : {
-      "samples" : [
-        "1752",
-        0
-      ],
-      "vae"     : [
-        "1227",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "FLUX_Decode"
-    }
-  },
-  "1756"      : {
-    "inputs"     : {
-      "any_01" : [
-        "1658",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Switch"
-    }
-  },
   "1766"      : {
     "inputs"     : {
       "any_01" : [
@@ -3243,24 +2557,6 @@
     "class_type" : "Text Multiline",
     "_meta"      : {
       "title" : "Text Multiline"
-    }
-  },
-  "1783"      : {
-    "inputs"     : {
-      "seed"         : -1,
-      "steps"        : 21,
-      "cfg"          : 2.5,
-      "sampler_name" : "euler",
-      "scheduler"    : "beta",
-      "denoise"      : 0.38,
-      "model"        : [
-        "1298",
-        0
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "FLUX_Pass 1 : KSampler 01 :: 0.48"
     }
   },
   "1835"      : {
@@ -3395,7 +2691,7 @@
       "keep_model_loaded" : true,
       "seed"              : -1,
       "image"             : [
-        "127",
+        "2279",
         0
       ]
     },
@@ -3649,7 +2945,7 @@
     },
     "class_type" : "Any Switch (rgthree)",
     "_meta"      : {
-      "title" : "Any Switch (rgthree)"
+      "title" : "Any Switch"
     }
   },
   "1939"      : {
@@ -3858,8 +3154,8 @@
   "1969"      : {
     "inputs"     : {
       "samples" : [
-        "2261",
-        1
+        "2041",
+        0
       ],
       "vae"     : [
         "2127",
@@ -3869,47 +3165,12 @@
     "class_type" : "VAEDecode",
     "_meta"      : {
       "title" : "Klein_VAE Decode"
-    }
-  },
-  "1970"      : {
-    "inputs"     : {
-      "hue"        : 0,
-      "saturation" : 0.5,
-      "brightness" : -0.1,
-      "contrast"   : 1.05,
-      "sharpness"  : 0.95,
-      "device"     : "gpu",
-      "batch_size" : 0,
-      "latent"     : [
-        "2263",
-        0
-      ]
-    },
-    "class_type" : "LatentImageAdjust",
-    "_meta"      : {
-      "title" : "🎛️ Latent Image Adjust"
     }
   },
   "1971"      : {
     "inputs"     : {
       "samples" : [
-        "1970",
-        0
-      ],
-      "vae"     : [
-        "2127",
-        0
-      ]
-    },
-    "class_type" : "VAEDecode",
-    "_meta"      : {
-      "title" : "Klein_VAE Decode"
-    }
-  },
-  "1972"      : {
-    "inputs"     : {
-      "samples" : [
-        "1970",
+        "2040",
         0
       ],
       "vae"     : [
@@ -3970,7 +3231,7 @@
       "confidence"      : 0.4,
       "refine_mask"     : true,
       "images"          : [
-        "2248",
+        "1985",
         0
       ]
     },
@@ -4078,7 +3339,7 @@
   "1995"      : {
     "inputs"     : {
       "condition"  : [
-        "2078",
+        "2267",
         0
       ],
       "when_true"  : [
@@ -4149,7 +3410,7 @@
         0
       ],
       "pixels"     : [
-        "2248",
+        "1985",
         0
       ],
       "mask"       : [
@@ -4168,11 +3429,11 @@
         "378",
         0
       ],
-      "steps"        : 5,
+      "steps"        : 7,
       "cfg"          : 1,
-      "sampler_name" : "euler",
+      "sampler_name" : "euler_ancestral",
       "scheduler"    : "simple",
-      "denoise"      : 0.4,
+      "denoise"      : 0.45,
       "model"        : [
         "2011",
         0
@@ -4186,7 +3447,7 @@
         0
       ],
       "latent_image" : [
-        "1970",
+        "2040",
         0
       ]
     },
@@ -4201,7 +3462,7 @@
       "mask_color"   : "255, 0, 207",
       "pass_through" : false,
       "image"        : [
-        "2248",
+        "1985",
         0
       ],
       "mask"         : [
@@ -4255,7 +3516,7 @@
   "2012"      : {
     "inputs"     : {
       "text" : [
-        "2255",
+        "2262",
         0
       ],
       "clip" : [
@@ -4367,7 +3628,7 @@
   },
   "2026"      : {
     "inputs"     : {
-      "active_scale"        : 0.95,
+      "active_scale"        : 1,
       "per_token_whiten"    : 0.05,
       "norm_equalize"       : 0.05,
       "early_layer_scale"   : 1.4,
@@ -4404,7 +3665,7 @@
   "2034"      : {
     "inputs"     : {
       "lora_name"      : "Purple_Grainy-FK_epoch_12.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 0.64,
       "model"          : [
         "2219",
         0
@@ -4427,6 +3688,72 @@
     "class_type" : "LoraLoaderModelOnly",
     "_meta"      : {
       "title" : "Klein_Load LoRA"
+    }
+  },
+  "2040"      : {
+    "inputs"     : {
+      "seed"         : [
+        "378",
+        0
+      ],
+      "steps"        : 10,
+      "cfg"          : 1,
+      "sampler_name" : "euler",
+      "scheduler"    : "simple",
+      "denoise"      : 1,
+      "model"        : [
+        "2032",
+        0
+      ],
+      "positive"     : [
+        "2010",
+        0
+      ],
+      "negative"     : [
+        "1953",
+        0
+      ],
+      "latent_image" : [
+        "1957",
+        0
+      ]
+    },
+    "class_type" : "KSampler",
+    "_meta"      : {
+      "title" : "Klein_KSampler"
+    }
+  },
+  "2041"      : {
+    "inputs"     : {
+      "seed"         : [
+        "378",
+        0
+      ],
+      "steps"        : 5,
+      "cfg"          : 1,
+      "sampler_name" : "euler",
+      "scheduler"    : "simple",
+      "denoise"      : 0.72,
+      "model"        : [
+        "2002",
+        0
+      ],
+      "positive"     : [
+        "2003",
+        0
+      ],
+      "negative"     : [
+        "2005",
+        1
+      ],
+      "latent_image" : [
+        "2005",
+        2
+      ]
+    },
+    "class_type" : "KSampler",
+    "_meta"      : {
+      "title" : "Klein_KSampler"
     }
   },
   "2045"      : {
@@ -4687,7 +4014,7 @@
   "2074"      : {
     "inputs"     : {
       "image" : [
-        "127",
+        "2279",
         0
       ]
     },
@@ -4740,7 +4067,7 @@
   "2124"      : {
     "inputs"     : {
       "unet_name"    : "flux-2-klein-9b.safetensors",
-      "weight_dtype" : "default"
+      "weight_dtype" : "fp8_e4m3fn"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -4935,7 +4262,7 @@
     "inputs"     : {
       "lora_name"      : "V4_flux_klein.safetensors",
       "strength_model" : 0.6,
-      "strength_clip"  : 0.4,
+      "strength_clip"  : 0.6,
       "model"          : [
         "2219",
         0
@@ -5061,7 +4388,7 @@
         "984",
         0
       ],
-      "noise_strength" : 0.25,
+      "noise_strength" : 0.33,
       "normalize"      : "false",
       "latent"         : [
         "2183",
@@ -5252,7 +4579,7 @@
   "2219"      : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v4_klein.safetensors",
-      "strength_model" : 0.71,
+      "strength_model" : 0.95,
       "model"          : [
         "2124",
         0
@@ -5265,7 +4592,7 @@
   },
   "2225"      : {
     "inputs"     : {
-      "balance"      : 0.7,
+      "balance"      : 0.6,
       "debug"        : true,
       "model"        : [
         "2131",
@@ -5532,7 +4859,16 @@
       "title" : "Input Selector"
     }
   },
-  "2255"      : {
+  "2259"      : {
+    "inputs"     : {
+      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\nSkin refinement means color fidelity and natural texture preservation only. It must never perform cosmetic enhancement, beauty retouching, skin smoothing, wrinkle removal, blemish removal, makeup enhancement, face reshaping, or age modification.\n\n\nMaintain natural, healthy skin tones appropriate to the subject's ethnicity.\nRefine skin only by improving natural color consistency, tonal transitions, and subtle texture while preserving pores, fine lines, freckles, moles, and other natural skin features.\nDo not smooth, beautify, airbrush, or alter skin shape, age, or facial characteristics.\nAvoid waxy, plastic, overly sharp, or AI-generated skin appearance.\n\n\nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\nDo not alter image content or structure.\n\nstrictly no color if the reference is only monochrome\n\n__INSTRUCTION_FROM_FILE__,\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2262"      : {
     "inputs"     : {
       "find"    : "__INSTRUCTION_FROM_FILE__",
       "replace" : [
@@ -5540,7 +4876,7 @@
         0
       ],
       "text"    : [
-        "2257",
+        "2259",
         0
       ]
     },
@@ -5549,87 +4885,129 @@
       "title" : "Text Find and Replace"
     }
   },
-  "2257"      : {
+  "2266"      : {
     "inputs"     : {
-      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\nMaintain natural skin tones.\nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\nDo not alter image content or structure.\n\nstrictly no color if the reference is only monochrome\n\n__INSTRUCTION_FROM_FILE__,\n"
+      "value" : true
     },
-    "class_type" : "Text Multiline",
+    "class_type" : "PrimitiveBoolean",
     "_meta"      : {
-      "title" : "Text Multiline"
+      "title" : "Boolean"
     }
   },
-  "2261"      : {
+  "2267"      : {
     "inputs"     : {
-      "eta"          : 0.8,
-      "sampler_name" : "linear/euler",
-      "scheduler"    : "simple",
-      "steps"        : 5,
-      "steps_to_run" : -1,
-      "denoise"      : 0.72,
-      "cfg"          : 1,
-      "seed"         : [
-        "378",
+      "boolean_a" : [
+        "2266",
         0
       ],
-      "sampler_mode" : "standard",
-      "bongmath"     : true,
-      "model"        : [
-        "2002",
-        0
-      ],
-      "positive"     : [
-        "2003",
-        0
-      ],
-      "negative"     : [
-        "2005",
-        1
-      ],
-      "latent_image" : [
-        "2005",
-        2
-      ]
-    },
-    "class_type" : "ClownsharKSampler_Beta",
-    "_meta"      : {
-      "title" : "ClownsharKSampler"
-    }
-  },
-  "2263"      : {
-    "inputs"     : {
-      "eta"          : 0.8,
-      "sampler_name" : "linear/euler",
-      "scheduler"    : "sgm_uniform",
-      "steps"        : 10,
-      "steps_to_run" : -1,
-      "denoise"      : 1,
-      "cfg"          : 1,
-      "seed"         : [
-        "378",
-        0
-      ],
-      "sampler_mode" : "standard",
-      "bongmath"     : true,
-      "model"        : [
-        "2032",
-        0
-      ],
-      "positive"     : [
-        "2010",
-        0
-      ],
-      "negative"     : [
-        "1953",
-        0
-      ],
-      "latent_image" : [
-        "1957",
+      "boolean_b" : [
+        "2078",
         0
       ]
     },
-    "class_type" : "ClownsharKSampler_Beta",
+    "class_type" : "Logic Comparison OR",
     "_meta"      : {
-      "title" : "ClownsharKSampler"
+      "title" : "Logic Comparison OR"
+    }
+  },
+  "2270"      : {
+    "inputs"     : {
+      "value" : 0.54
+    },
+    "class_type" : "FloatConstant",
+    "_meta"      : {
+      "title" : "Strength"
+    }
+  },
+  "2272"      : {
+    "inputs"     : {
+      "condition"  : [
+        "582",
+        0
+      ],
+      "when_true"  : [
+        "2274",
+        0
+      ],
+      "when_false" : [
+        "2270",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "2274"      : {
+    "inputs"     : {
+      "value" : 0.42
+    },
+    "class_type" : "FloatConstant",
+    "_meta"      : {
+      "title" : "Strength"
+    }
+  },
+  "2275"      : {
+    "inputs"     : {
+      "value" : 0.54
+    },
+    "class_type" : "FloatConstant",
+    "_meta"      : {
+      "title" : "Strength"
+    }
+  },
+  "2276"      : {
+    "inputs"     : {
+      "condition"  : [
+        "583",
+        0
+      ],
+      "when_true"  : [
+        "2277",
+        0
+      ],
+      "when_false" : [
+        "2275",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "2277"      : {
+    "inputs"     : {
+      "value" : 1.2
+    },
+    "class_type" : "FloatConstant",
+    "_meta"      : {
+      "title" : "Strength"
+    }
+  },
+  "2279"      : {
+    "inputs"     : {
+      "platform"    : "FLUX",
+      "orientation" : "original",
+      "attention"   : "maximize",
+      "image"       : [
+        "127",
+        0
+      ]
+    },
+    "class_type" : "quadmoonConvertNormalizeHW",
+    "_meta"      : {
+      "title" : "Normalize Image Dimensions"
+    }
+  },
+  "2280"      : {
+    "inputs"     : {
+      "sampler_name" : "res_2s"
+    },
+    "class_type" : "KSamplerSelect",
+    "_meta"      : {
+      "title" : "KSamplerSelect"
     }
   },
   "2175:2170" : {
