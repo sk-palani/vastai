@@ -2311,8 +2311,8 @@
       ],
       "steps"        : 12,
       "cfg"          : 1,
-      "sampler_name" : "er_sde",
-      "scheduler"    : "sgm_uniform",
+      "sampler_name" : "euler_ancestral",
+      "scheduler"    : "simple",
       "denoise"      : [
         "1649",
         0
