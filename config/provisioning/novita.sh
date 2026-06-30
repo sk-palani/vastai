@@ -725,11 +725,15 @@ provisioning_get_default_workflow
 chmod +x "${WORKSPACE}scripts/submit_prompt.sh"
 
 set -f
-JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log"
+JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log 2>&1"
 
-sudo crontab -l 2>/dev/null | {
-    grep -Fq "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
-} | sudo crontab -
+sudo bash -c "cat > /tmp/workspace.cron <<EOF
+WORKSPACE=${WORKSPACE}
+${JOB}
+EOF
+
+crontab /tmp/workspace.cron
+rm /tmp/workspace.cron"
 
 set +f
 
