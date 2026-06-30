@@ -123,6 +123,7 @@ NODES=(
     "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
     "https://github.com/yolain/ComfyUI-Easy-Use"
     "https://github.com/yorkane/ComfyUI-KYNode"
+    "https://github.com/DenRakEiw/Latent_Nodes"
 )
 
 
@@ -216,6 +217,9 @@ VAE_MODELS=(
     "https://civitai.com/api/download/models/2615379?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # flashPhotoFLUXVAE_v10.safetensors
     "https://civitai.com/api/download/models/1749336?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # krea2RealVae_v10.safetensors
+    "https://civitai.com/api/download/models/3068442?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 )
 
 LORA_MODELS=(
@@ -228,6 +232,14 @@ LORA_MODELS=(
     # "https://civitai.com/api/download/models/2903375?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # V4_flux_klein.safetensors
     "https://civitai.com/api/download/models/2998669?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # SummerVibesHM_krea2_epoch8.safetensors
+    "https://civitai.com/api/download/models/3065628?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # softwatercolor.safetensors
+    "https://civitai.com/api/download/models/3064426?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # BreastSlider-KREA2.safetensors
+    "https://civitai.com/api/download/models/3071726?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # age_krea2_loraholic.safetensors
+    "https://civitai.com/api/download/models/3067659?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
 
     # Chest_9B.safetensors
@@ -684,7 +696,6 @@ provisioning_get_apt_packages
 #provisioning_get_pip_packages
 #provisioning_start
 #pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
-/etc/init.d/cron start
 
 # Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f "${WORKSPACE}/.noprovisioning" ]]; then
@@ -711,23 +722,24 @@ provisioning_get_default_workflow
 #WORKSPACE=/workspace/
 # * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
 # * * * * * /workspace/submit_prompt.sh >> /workspace/crontab.log
-chmod +x ${WORKSPACE}scripts/submit_prompt.sh
+chmod +x "${WORKSPACE}scripts/submit_prompt.sh"
+
 set -f
 JOB="* * * * * ${WORKSPACE}scripts/submit_prompt.sh >> ${WORKSPACE}crontab.log"
 
-crontab -l 2>/dev/null | {
-    grep -q "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
-} | crontab -
+sudo crontab -l 2>/dev/null | {
+    grep -Fq "${WORKSPACE}scripts/submit_prompt.sh" || echo "${JOB}"
+} | sudo crontab -
+
 set +f
 
-/etc/init.d/cron start
+sudo service cron start
 
-
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
-supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
-supervisorctl stop 'jupyter'
+sudo supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_0"'
+sudo supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_1"'
+sudo supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_2"'
+sudo supervisorctl stop 'cf_quicktunnel:="cf_quicktunnel_3"'
+sudo supervisorctl stop 'jupyter'
 
 
 
