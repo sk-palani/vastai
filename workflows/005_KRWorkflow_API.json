@@ -2669,7 +2669,7 @@
       "filename_delimiter"      : "_",
       "filename_number_padding" : 2,
       "filename_number_start"   : "false",
-      "extension"               : "png",
+      "extension"               : "jpg",
       "dpi"                     : 300,
       "quality"                 : 100,
       "optimize_image"          : "false",
@@ -2932,22 +2932,6 @@
       "title" : "Image Save"
     }
   },
-  "2473" : {
-    "inputs"     : {
-      "max_shift"  : 0.75,
-      "base_shift" : 0.43,
-      "width"      : 1024,
-      "height"     : 1024,
-      "model"      : [
-        "2478",
-        0
-      ]
-    },
-    "class_type" : "ModelSamplingFlux",
-    "_meta"      : {
-      "title" : "ModelSamplingFlux"
-    }
-  },
   "2474" : {
     "inputs"     : {
       "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n ",
@@ -2993,20 +2977,6 @@
     "class_type" : "Flux2KleinEnhancer",
     "_meta"      : {
       "title" : "FLUX.2 Klein Enhancer"
-    }
-  },
-  "2478" : {
-    "inputs"     : {
-      "lora_name"      : "Purple_Grainy-FK_epoch_12.safetensors",
-      "strength_model" : 0.8,
-      "model"          : [
-        "2412",
-        0
-      ]
-    },
-    "class_type" : "LoraLoaderModelOnly",
-    "_meta"      : {
-      "title" : "Load LoRA"
     }
   },
   "2604" : {
@@ -3067,7 +3037,7 @@
       "sampler_mode" : "standard",
       "bongmath"     : false,
       "model"        : [
-        "2473",
+        "2412",
         0
       ],
       "positive"     : [
