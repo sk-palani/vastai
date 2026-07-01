@@ -245,7 +245,7 @@
   },
   "272"  : {
     "inputs"     : {
-      "image" : "kf_20260630T202827_3366647313_00000001.jpg"
+      "image" : ""
     },
     "class_type" : "LoadImage",
     "_meta"      : {
