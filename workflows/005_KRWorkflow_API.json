@@ -1868,7 +1868,7 @@
   },
   "2078" : {
     "inputs"     : {
-      "value" : true
+      "value" : false
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -2145,7 +2145,7 @@
   },
   "2266" : {
     "inputs"     : {
-      "value" : true
+      "value" : false
     },
     "class_type" : "PrimitiveBoolean",
     "_meta"      : {
@@ -2831,12 +2831,12 @@
   },
   "2459" : {
     "inputs"     : {
-      "eta"          : 0.1,
+      "eta"          : 0.03,
       "sampler_name" : "linear/euler",
       "scheduler"    : "simple",
       "steps"        : 12,
       "steps_to_run" : -1,
-      "denoise"      : 0.99,
+      "denoise"      : 1,
       "cfg"          : 1,
       "seed"         : [
         "378",
@@ -3393,10 +3393,10 @@
   },
   "2612" : {
     "inputs"     : {
-      "eta"          : 0,
+      "eta"          : 0.01,
       "sampler_name" : "linear/euler",
       "scheduler"    : "simple",
-      "steps"        : 6,
+      "steps"        : 7,
       "steps_to_run" : -1,
       "denoise"      : 0.05,
       "cfg"          : 1,
@@ -3426,6 +3426,44 @@
     "class_type" : "ClownsharKSampler_Beta",
     "_meta"      : {
       "title" : "Klein_ClownsharKSampler"
+    }
+  },
+  "2616" : {
+    "inputs"     : {
+      "condition"  : [
+        "591",
+        0
+      ],
+      "when_true"  : [
+        "2617",
+        0
+      ],
+      "when_false" : [
+        "2619",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "2617" : {
+    "inputs"     : {
+      "model_name" : "4x-UltraSharpV2.safetensors"
+    },
+    "class_type" : "UpscaleModelLoader",
+    "_meta"      : {
+      "title" : "Load Upscale Model"
+    }
+  },
+  "2619" : {
+    "inputs"     : {
+      "model_name" : "4x_foolhardy_Remacri.pth"
+    },
+    "class_type" : "UpscaleModelLoader",
+    "_meta"      : {
+      "title" : "Load Upscale Model"
     }
   }
 }
