@@ -1180,7 +1180,7 @@
   "1094" : {
     "inputs"     : {
       "method"       : "mkl",
-      "strength"     : 0.24,
+      "strength"     : 0.2,
       "multithread"  : true,
       "image_ref"    : [
         "2279",
@@ -1479,26 +1479,26 @@
   },
   "1673" : {
     "inputs"     : {
-      "lens_distortion"      : -0.01,
+      "lens_distortion"      : -0.006,
       "color_temperature"    : 0,
       "tint"                 : 0,
-      "atmosphere_enabled"   : true,
+      "atmosphere_enabled"   : false,
       "haze_strength"        : 0,
-      "lift_blacks"          : 0,
+      "lift_blacks"          : 0.01,
       "depth_offset"         : 0,
       "f_stop"               : "f/5.6",
       "dof_intensity"        : 0,
       "dof_auto_focus"       : false,
       "dof_sharpness_radius" : 0,
       "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0.1,
-      "promist_strength"     : 0.12,
-      "halation_strength"    : 0.1,
-      "chromatic_aberration" : 0.002,
-      "vignette_intensity"   : 0.05,
-      "grain_power"          : 0.008,
+      "light_wrap_strength"  : 0.06,
+      "promist_strength"     : 0.08,
+      "halation_strength"    : 0.05,
+      "chromatic_aberration" : 0.001,
+      "vignette_intensity"   : 0.03,
+      "grain_power"          : 0.004,
       "monochrome_grain"     : false,
-      "highlight_rolloff"    : 0.07,
+      "highlight_rolloff"    : 0.1,
       "image"                : [
         "1677",
         0
@@ -1519,8 +1519,8 @@
       "hue"         : 0,
       "brightness"  : 0,
       "contrast"    : 1,
-      "saturation"  : -1,
-      "gamma"       : 1.1,
+      "saturation"  : -0.3,
+      "gamma"       : 1,
       "image"       : [
         "1094",
         0
@@ -2751,7 +2751,7 @@
   },
   "2447" : {
     "inputs"     : {
-      "text" : "Use the input image as the primary source of truth.\n\nThis is a refinement pass, not a generation pass.\n\nPreserve the existing facial identity, facial expression, eye direction, head orientation, pose, body proportions, hairstyle, clothing, accessories, fabric structure, composition, camera perspective, framing, lighting direction, shadows, colors, and background exactly as they appear in the input image.\n\nDo not redesign, reinterpret, regenerate, or restyle any part of the image.\n\nImprove only the photographic fidelity of the existing image.\n\nRefine existing skin rendering by improving natural tonal transitions, realistic subsurface light response, and fine skin texture while preserving the original skin appearance. Preserve natural pores, permanent freckles, moles, pigmentation, and other stable facial characteristics exactly as they appear. Do not invent or exaggerate skin details. Do not smooth skin or apply beauty-filter effects.\n\nRefine existing hair strands, fabric texture, transparency, embroidery, and material response without changing their structure or appearance.\n\nPreserve the existing facial geometry exactly. Do not alter eye shape, mouth shape, smile intensity, teeth visibility, eyelid position, eyebrow position, cheek volume, jawline, nose, or facial proportions.\n\nMaintain the current image composition exactly. Do not crop, zoom, rotate, change perspective, or modify the camera angle.\n\nIf an improvement cannot be made while preserving the existing image, leave that region unchanged.\n\nThe output should appear to be the same photograph captured with a better camera, higher-quality optics, and improved photographic rendering—not a newly generated image.",
+      "text" : "Use the input image as the sole source of truth.\n\nThis is a refinement pass only, not a generation or restoration pass.\n\nPreserve every visible property of the input image exactly, including color palette, white balance, grayscale appearance (if present), lighting, shadows, contrast, saturation, facial identity, expression, gaze direction, pose, body proportions, hairstyle, clothing, accessories, fabric transparency, composition, camera perspective, framing, textures, and background.\n\nDo not colorize, recolor, relight, restyle, reinterpret, regenerate, or redesign any part of the image.\n\nRefine only existing image quality by improving local consistency, natural tonal transitions, skin realism, fabric fidelity, hair detail, and photographic clarity while preserving all existing details. Preserve natural pores, moles, pigmentation, and other stable facial characteristics exactly as they appear. Do not invent, exaggerate, remove, smooth, or beautify any skin details.\n\nDo not alter facial geometry, image composition, camera angle, or scene content. Remove only small text, logos, and watermarks if present.\n\nIf a region does not require refinement, leave it completely unchanged.",
       "clip" : [
         "2412",
         1
@@ -2834,7 +2834,7 @@
       "eta"          : 0.03,
       "sampler_name" : "linear/euler",
       "scheduler"    : "simple",
-      "steps"        : 12,
+      "steps"        : 9,
       "steps_to_run" : -1,
       "denoise"      : 1,
       "cfg"          : 1,
@@ -2950,7 +2950,7 @@
   },
   "2474" : {
     "inputs"     : {
-      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\nMaintain natural skin tones.\nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\nDo not alter image content or structure, but remove small texts, logo and watermarks",
+      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n ",
       "clip" : [
         "2412",
         1
@@ -2975,7 +2975,7 @@
   },
   "2476" : {
     "inputs"     : {
-      "active_scale"        : 0.8,
+      "active_scale"        : 0.6,
       "per_token_whiten"    : 0.02,
       "norm_equalize"       : 0.02,
       "early_layer_scale"   : 1.1,
@@ -3007,346 +3007,6 @@
     "class_type" : "LoraLoaderModelOnly",
     "_meta"      : {
       "title" : "Load LoRA"
-    }
-  },
-  "2568" : {
-    "inputs"     : {
-      "text" : "Enhance body proportions naturally; fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2569" : {
-    "inputs"     : {
-      "condition"  : [
-        "657",
-        0
-      ],
-      "when_true"  : [
-        "2586",
-        0
-      ],
-      "when_false" : [
-        "2568",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2570" : {
-    "inputs"     : {
-      "value" : false
-    },
-    "class_type" : "easy boolean",
-    "_meta"      : {
-      "title" : "Boolean"
-    }
-  },
-  "2572" : {
-    "inputs"     : {
-      "text" : "Preserve Subject's Mouth closed or open state."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2573" : {
-    "inputs"     : {
-      "text" : "Change subject's Eyes to  Closed state."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2574" : {
-    "inputs"     : {
-      "condition"  : [
-        "2587",
-        0
-      ],
-      "when_true"  : [
-        "2573",
-        0
-      ],
-      "when_false" : [
-        "2572",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2575" : {
-    "inputs"     : {
-      "find"    : "__EYE_STATE__",
-      "replace" : [
-        "2574",
-        0
-      ],
-      "text"    : [
-        "2585",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "2576" : {
-    "inputs"     : {
-      "seed" : [
-        "378",
-        0
-      ],
-      "text" : [
-        "2592",
-        0
-      ]
-    },
-    "class_type" : "Text Random Line",
-    "_meta"      : {
-      "title" : "Text Random Line"
-    }
-  },
-  "2578" : {
-    "inputs"     : {
-      "find"    : "__CAMERA_ANGLE__",
-      "replace" : [
-        "630",
-        0
-      ],
-      "text"    : [
-        "2582",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "2579" : {
-    "inputs"     : {
-      "find"    : "__AGE_STRING__",
-      "replace" : [
-        "670",
-        0
-      ],
-      "text"    : [
-        "2580",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "2580" : {
-    "inputs"     : {
-      "find"    : "__INSTRUCTION_FROM_FILE__",
-      "replace" : [
-        "2160",
-        0
-      ],
-      "text"    : [
-        "2589",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "2582" : {
-    "inputs"     : {
-      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 __CAMERA_ANGLE__ , \n\n__INSTRUCTION_FROM_FILE__,\n\nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction,  \n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\n\nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Prompt - Taken from Back"
-    }
-  },
-  "2583" : {
-    "inputs"     : {
-      "condition"  : [
-        "591",
-        0
-      ],
-      "when_true"  : [
-        "2593",
-        0
-      ],
-      "when_false" : [
-        "2601",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2585" : {
-    "inputs"     : {
-      "find"    : "__BODY_STATE__",
-      "replace" : [
-        "2569",
-        0
-      ],
-      "text"    : [
-        "2583",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "2586" : {
-    "inputs"     : {
-      "text" : "Enhance body proportions naturally; fit and firm bust with proportionate body, maintaining realistic anatomy and balance.\n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2587" : {
-    "inputs"     : {
-      "any_01" : [
-        "1377",
-        0
-      ],
-      "any_02" : [
-        "2570",
-        0
-      ]
-    },
-    "class_type" : "Any Switch (rgthree)",
-    "_meta"      : {
-      "title" : "Any Switch (rgthree)"
-    }
-  },
-  "2589" : {
-    "inputs"     : {
-      "condition"  : [
-        "2163",
-        0
-      ],
-      "when_true"  : [
-        "2575",
-        0
-      ],
-      "when_false" : [
-        "2578",
-        0
-      ]
-    },
-    "class_type" : "InputSelector",
-    "_meta"      : {
-      "title" : "Input Selector"
-    }
-  },
-  "2592" : {
-    "inputs"     : {
-      "text" : "Adjust the facial expression to a subtly affectionate expression with gentle eyes and a faint natural smile.\n\nAdjust the facial expression to a slight pout with minimally pursed lips and soft eye engagement.\n\nAdjust the facial expression to a mildly shy expression with a restrained smile and slightly lowered gaze.\n\nAdjust the facial expression to a subtle happy expression with softly lifted mouth corners and relaxed eyes.\n\nAdjust the facial expression to a gentle joyful expression with a modest smile and delicate warmth in the eyes.\n\nAdjust the facial expression to a lightly playful expression with faint amusement and natural facial relaxation.\n\nAdjust the facial expression to a softly romantic expression with warm eyes and a barely perceptible smile.\n\nAdjust the facial expression to a subtly flirtatious expression with a hint of playful eye engagement and slight mouth-corner lift.\n\nAdjust the facial expression to a mildly seductive expression with relaxed eyelids and understated confidence.\n\nAdjust the facial expression to a quietly confident expression with composed facial features and subtle emotional presence.\n\nAdjust the facial expression to a mildly surprised expression with slightly widened eyes and gentle eyebrow elevation.\n\nAdjust the facial expression to a slightly parted-lips expression with relaxed facial posture.\n\nAdjust the facial expression to a subtle wink with minimal eyelid closure and natural facial balance.\n\nAdjust the facial expression to a faintly mischievous expression with a restrained smirk and soft eye engagement.\n\nAdjust the facial expression to a thoughtful expression with a calm gaze and slight facial contemplation.\n\nAdjust the facial expression to a dreamy expression with softened eyes and a peaceful relaxed demeanor.\n\nAdjust the facial expression to a composed confident expression with natural eye contact and relaxed facial muscles.\n\nAdjust the facial expression to a restrained laughing expression with subtle eye creases and gentle amusement.\n\nAdjust the facial expression to a mildly curious expression with attentive eyes and a slight eyebrow lift.\n\nAdjust the facial expression to a faint smirk with minimal asymmetry and understated confidence."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2593" : {
-    "inputs"     : {
-      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__INSTRUCTION_FROM_FILE__,\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2595" : {
-    "inputs"     : {
-      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range."
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2597" : {
-    "inputs"     : {
-      "text" : "fluxtrait,\nindian-girl-brown-eyes,\n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2598" : {
-    "inputs"     : {
-      "find"    : "__EXPRESSION__",
-      "replace" : [
-        "2576",
-        0
-      ],
-      "text"    : [
-        "2579",
-        0
-      ]
-    },
-    "class_type" : "Text Find and Replace",
-    "_meta"      : {
-      "title" : "Text Find and Replace"
-    }
-  },
-  "2599" : {
-    "inputs"     : {
-      "delimiter"        : "\\n",
-      "clean_whitespace" : "false",
-      "text_a"           : [
-        "2598",
-        0
-      ],
-      "text_b"           : [
-        "2597",
-        0
-      ]
-    },
-    "class_type" : "Text Concatenate",
-    "_meta"      : {
-      "title" : "Text Concatenate"
-    }
-  },
-  "2600" : {
-    "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\n\n__INSTRUCTION_FROM_FILE__,\n\n\nEnhance body proportions naturally: fuller bust (approx. 34D) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject's facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women.\n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
-    }
-  },
-  "2601" : {
-    "inputs"     : {
-      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\n\n__INSTRUCTION_FROM_FILE__,\n\n\nEnhance body proportions naturally: fuller bust (approx. 34D) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject's facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n copy the expression from the reference image.\n \n"
-    },
-    "class_type" : "Text Multiline",
-    "_meta"      : {
-      "title" : "Text Multiline"
     }
   },
   "2604" : {
@@ -3393,12 +3053,12 @@
   },
   "2612" : {
     "inputs"     : {
-      "eta"          : 0.01,
+      "eta"          : 0,
       "sampler_name" : "linear/euler",
       "scheduler"    : "simple",
       "steps"        : 7,
       "steps_to_run" : -1,
-      "denoise"      : 0.05,
+      "denoise"      : 0.1,
       "cfg"          : 1,
       "seed"         : [
         "378",
