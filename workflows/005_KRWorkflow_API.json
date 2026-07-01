@@ -1564,10 +1564,13 @@
       "quantization"      : "4-bit (VRAM-friendly)",
       "attention_mode"    : "sage",
       "preset_prompt"     : "🖼️ Detailed Description",
-      "custom_prompt"     : "You are an expert AI image analyst and prompt engineer for FLUX text-to-image models.\n\nAnalyze the provided image and generate a single, high-quality FLUX prompt that can faithfully recreate a visually similar image.\n\nBefore writing the final prompt, reason internally about:\n\n* The primary subject and scene.\n* Composition, framing, camera perspective, and viewing angle.\n* Lighting direction, exposure, shadows, and atmosphere.\n* Color palette, white balance, tonal balance, and overall mood.\n* Clothing, accessories, hairstyle, materials, textures, and other visually distinctive elements.\n* Artistic medium (photograph, illustration, painting, digital art, 3D render, etc.) and visual style.\n* Background, environment, and depth.\n* Any distinctive visual characteristics except texts, that are essential for faithfully recreating the image.\n\nGenerate a prompt that follows these principles:\n\n* Preserve all major subjects, objects, actions, colors, spatial relationships, composition, perspective, and visual style from the reference image.\n* Describe only what is actually visible. Do not invent new objects, characters, clothing, accessories, backgrounds, poses, expressions, or scene elements.\n* If a visual attribute is uncertain, describe it conservatively instead of guessing.\n* Use natural, descriptive language optimized for FLUX models.\n* Group related visual attributes together for better prompt parsing.\n* Preserve the requested or detected artistic medium. If the image is a photograph, produce a photographic prompt. If it is digital art, illustration, painting, sketch, anime, comic, watercolor, oil painting, or another medium, preserve that medium.\n* Include relevant photographic details only when the image is photographic (camera angle, focal length, depth of field, lighting style, etc.).\n* Include artistic rendering details only when appropriate for the detected medium.\n\n* Do not describe about logos, watermarks are small text in the background, Only descrive text in the outfit.\n \n* Do not over-describe facial features. Focus on overall appearance rather than exhaustive descriptions of individual facial components.\n* Prioritize composition, lighting, clothing, materials, accessories, environment, and artistic style over fine-grained anatomical detail.\n* Respect human anatomy and describe people naturally and realistically.\n\n* If the image already contains strong stylistic direction, preserve it instead of replacing it.\n* If the image is already highly detailed, lightly refine and optimize the wording instead of expanding unnecessarily.\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n\nAim for approximately 120–250 words. Prioritize the most visually significant elements and avoid exhaustive descriptions of minor details.\n",
-      "max_tokens"        : 256,
+      "custom_prompt"     : "You are an expert AI image analyst and prompt engineer for FLUX text-to-image models.\n\nAnalyze the provided image and generate a single, high-quality FLUX prompt that can faithfully recreate a visually similar image.\n\nBefore writing the final prompt, reason internally about:\n\n* The primary subject and scene.\n* Composition, framing, camera perspective, and viewing angle.\n* Lighting direction, exposure, shadows, and atmosphere.\n* Color palette, white balance, tonal balance, and overall mood.\n* Clothing, accessories, hairstyle, materials, textures, and other visually distinctive elements.\n* Artistic medium (photograph, illustration, painting, digital art, 3D render, etc.) and visual style.\n* Background, environment, and depth.\n* Ignore tattoos. Do not mention or describe tattoos unless they are the primary subject of the image.\n\n* Any distinctive visual characteristics except texts, that are essential for faithfully recreating the image.\n\nGenerate a prompt that follows these principles:\n\n* Preserve all major subjects, objects, actions, colors, spatial relationships, composition, perspective, and visual style from the reference image.\n* Describe only what is actually visible. Do not invent new objects, characters, clothing, accessories, backgrounds, poses, expressions, or scene elements.\n* If a visual attribute is uncertain, describe it conservatively instead of guessing.\n* Use natural, descriptive language optimized for FLUX models.\n* Group related visual attributes together for better prompt parsing.\n* Preserve the requested or detected artistic medium. If the image is a photograph, produce a photographic prompt. If it is digital art, illustration, painting, sketch, anime, comic, watercolor, oil painting, or another medium, preserve that medium.\n* Include relevant photographic details only when the image is photographic (camera angle, focal length, depth of field, lighting style, etc.).\n* Include artistic rendering details only when appropriate for the detected medium. \n\n* Do not describe about logos, watermarks are small text in the background, Only descrive text in the outfit.\n \n* Do not over-describe facial features. Focus on overall appearance rather than exhaustive descriptions of individual facial components.\n* Prioritize composition, lighting, clothing, materials, accessories, environment, and artistic style over fine-grained anatomical detail.\n* Respect human anatomy and describe people naturally and realistically.\n\n* If the image already contains strong stylistic direction, preserve it instead of replacing it.\n* If the image is already highly detailed, lightly refine and optimize the wording instead of expanding unnecessarily.\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n\nAim for approximately 120–250 words. Prioritize the most visually significant elements and avoid exhaustive descriptions of minor details.\n",
+      "max_tokens"        : 384,
       "keep_model_loaded" : true,
-      "seed"              : -1,
+      "seed"              : [
+        "378",
+        0
+      ],
       "image"             : [
         "2279",
         0
@@ -2534,7 +2537,7 @@
   },
   "2382" : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "resize",
       "delta_percent" : 0,
@@ -2811,30 +2814,12 @@
       "title" : "Switch"
     }
   },
-  "2457" : {
-    "inputs"     : {
-      "seed"         : -1,
-      "steps"        : 10,
-      "cfg"          : 1,
-      "sampler_name" : "euler_ancestral",
-      "scheduler"    : "sgm_uniform",
-      "denoise"      : 1,
-      "model"        : [
-        "2412",
-        0
-      ]
-    },
-    "class_type" : "KSampler",
-    "_meta"      : {
-      "title" : "Klein_KSampler"
-    }
-  },
   "2459" : {
     "inputs"     : {
-      "eta"          : -0.01,
+      "eta"          : -0.02,
       "sampler_name" : "linear/euler",
       "scheduler"    : "simple",
-      "steps"        : 9,
+      "steps"        : 10,
       "steps_to_run" : -1,
       "denoise"      : 1,
       "cfg"          : 1,
@@ -2932,9 +2917,25 @@
       "title" : "Image Save"
     }
   },
+  "2473" : {
+    "inputs"     : {
+      "max_shift"  : 0.75,
+      "base_shift" : 0.43,
+      "width"      : 1024,
+      "height"     : 1024,
+      "model"      : [
+        "2478",
+        0
+      ]
+    },
+    "class_type" : "ModelSamplingFlux",
+    "_meta"      : {
+      "title" : "ModelSamplingFlux"
+    }
+  },
   "2474" : {
     "inputs"     : {
-      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n ",
+      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n ",
       "clip" : [
         "2412",
         1
@@ -2957,26 +2958,18 @@
       "title" : "ConditioningZeroOut"
     }
   },
-  "2476" : {
+  "2478" : {
     "inputs"     : {
-      "active_scale"        : 0.6,
-      "per_token_whiten"    : 0.02,
-      "norm_equalize"       : 0.02,
-      "early_layer_scale"   : 1.1,
-      "mid_layer_scale"     : 0.95,
-      "late_layer_scale"    : 0.75,
-      "preserve_original"   : 1,
-      "active_end_override" : false,
-      "device"              : "auto",
-      "debug"               : false,
-      "conditioning"        : [
-        "2474",
+      "lora_name"      : "V3_flux_klein.safetensors",
+      "strength_model" : 0.33,
+      "model"          : [
+        "2412",
         0
       ]
     },
-    "class_type" : "Flux2KleinEnhancer",
+    "class_type" : "LoraLoaderModelOnly",
     "_meta"      : {
-      "title" : "FLUX.2 Klein Enhancer"
+      "title" : "Load LoRA"
     }
   },
   "2604" : {
@@ -3023,12 +3016,12 @@
   },
   "2612" : {
     "inputs"     : {
-      "eta"          : 0.01,
-      "sampler_name" : "linear/euler",
-      "scheduler"    : "simple",
-      "steps"        : 5,
+      "eta"          : -0.03,
+      "sampler_name" : "multistep/res_2m",
+      "scheduler"    : "beta",
+      "steps"        : 7,
       "steps_to_run" : -1,
-      "denoise"      : 0.07,
+      "denoise"      : 0.05,
       "cfg"          : 1,
       "seed"         : [
         "378",
@@ -3037,11 +3030,11 @@
       "sampler_mode" : "standard",
       "bongmath"     : false,
       "model"        : [
-        "2412",
+        "2473",
         0
       ],
       "positive"     : [
-        "2476",
+        "2474",
         0
       ],
       "negative"     : [
