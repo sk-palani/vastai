@@ -109,7 +109,8 @@ curl -v -X POST "$URL/api/history" \
 
 # --- Submit workflow ---
 echo "[$LOG_TS] 📤 Submitting workflow from $UPDATED_FILE ..."
-response=$(jq -n --argfile w "$UPDATED_FILE" '{prompt: $w}' | \
+#response=$(jq -n --argfile w "$UPDATED_FILE" '{prompt: $w}' | \
+response=$(jq -n --slurpfile w "$UPDATED_FILE" '{prompt: $w[0]}' | \
   curl -s -X POST "$URL/prompt" \
        -H "Content-Type: application/json" \
        -d @-)
