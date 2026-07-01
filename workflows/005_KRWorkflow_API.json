@@ -2816,7 +2816,7 @@
   },
   "2459" : {
     "inputs"     : {
-      "eta"          : -0.02,
+      "eta"          : -0.04,
       "sampler_name" : "linear/euler",
       "scheduler"    : "simple",
       "steps"        : 10,
@@ -3021,7 +3021,7 @@
       "scheduler"    : "beta",
       "steps"        : 7,
       "steps_to_run" : -1,
-      "denoise"      : 0.05,
+      "denoise"      : 0.1,
       "cfg"          : 1,
       "seed"         : [
         "378",
