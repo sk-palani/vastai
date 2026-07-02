@@ -58,7 +58,7 @@
   },
   "127"  : {
     "inputs"     : {
-      "megapixel"     : "2.0",
+      "megapixel"     : "2.6",
       "divisible_by"  : "8",
       "mode"          : "resize",
       "delta_percent" : 0.2,
@@ -196,7 +196,7 @@
   },
   "222"  : {
     "inputs"     : {
-      "value" : 0.64
+      "value" : 0.63
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -1506,11 +1506,11 @@
   },
   "1677" : {
     "inputs"     : {
-      "temperature" : -5,
+      "temperature" : 0,
       "hue"         : 0,
       "brightness"  : 0,
-      "contrast"    : -2.49999999999,
-      "saturation"  : -0.3,
+      "contrast"    : 1,
+      "saturation"  : -5.3,
       "gamma"       : 1.2,
       "image"       : [
         "1094",
@@ -2343,7 +2343,7 @@
         "378",
         0
       ],
-      "steps"        : 14,
+      "steps"        : 12,
       "cfg"          : 1,
       "sampler_name" : "euler",
       "scheduler"    : "simple",
@@ -2376,7 +2376,7 @@
   "2293" : {
     "inputs"     : {
       "lora_name"      : "ultra_real_krea2_v1.safetensors",
-      "strength_model" : 0.42,
+      "strength_model" : 0.25,
       "model"          : [
         "2295",
         0
@@ -2390,7 +2390,7 @@
   "2294" : {
     "inputs"     : {
       "lora_name"      : "BreastSlider-KREA2.safetensors",
-      "strength_model" : 0.42,
+      "strength_model" : 0.5,
       "model"          : [
         "2293",
         0
@@ -2404,7 +2404,7 @@
   "2295" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v1_krea.safetensors",
-      "strength_model" : 0.84,
+      "strength_model" : 0.86,
       "model"          : [
         "1196",
         0
@@ -2426,6 +2426,19 @@
     "class_type" : "CustomCombo",
     "_meta"      : {
       "title" : "Custom Combo"
+    }
+  },
+  "2312" : {
+    "inputs"     : {
+      "stop_at_clip_layer" : -1,
+      "clip"               : [
+        "2288",
+        0
+      ]
+    },
+    "class_type" : "CLIPSetLastLayer",
+    "_meta"      : {
+      "title" : "CLIP Set Last Layer"
     }
   },
   "2314" : {
@@ -2513,7 +2526,7 @@
       "thinking"                         : false,
       "use_default_template"             : true,
       "clip"                             : [
-        "2288",
+        "2312",
         0
       ],
       "image"                            : [
