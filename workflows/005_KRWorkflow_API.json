@@ -196,7 +196,7 @@
   },
   "222"  : {
     "inputs"     : {
-      "value" : 0.6
+      "value" : 0.63
     },
     "class_type" : "FloatConstant",
     "_meta"      : {
@@ -241,15 +241,6 @@
     "class_type" : "StringConstantMultiline",
     "_meta"      : {
       "title" : "String Constant Multiline"
-    }
-  },
-  "272"  : {
-    "inputs"     : {
-      "image" : "example.png"
-    },
-    "class_type" : "LoadImage",
-    "_meta"      : {
-      "title" : "Load Image"
     }
   },
   "281"  : {
@@ -1144,7 +1135,7 @@
         0
       ],
       "when_true"  : [
-        "272",
+        "2627",
         0
       ],
       "when_false" : [
@@ -1208,7 +1199,7 @@
   "1196" : {
     "inputs"     : {
       "unet_name"    : "krea2_turbo_fp8_scaled.safetensors",
-      "weight_dtype" : "fp8_e4m3fn"
+      "weight_dtype" : "default"
     },
     "class_type" : "UNETLoader",
     "_meta"      : {
@@ -1218,7 +1209,7 @@
   "1221" : {
     "inputs"     : {
       "conditioning" : [
-        "2305",
+        "2628",
         1
       ]
     },
@@ -1386,7 +1377,7 @@
     "inputs"     : {
       "megapixel"     : "1.8",
       "divisible_by"  : "8",
-      "mode"          : "resize",
+      "mode"          : "pad",
       "delta_percent" : 0.3,
       "image"         : [
         "1447",
@@ -1447,7 +1438,7 @@
   "1642" : {
     "inputs"     : {
       "samples" : [
-        "2291",
+        "2625",
         0
       ],
       "vae"     : [
@@ -1498,7 +1489,7 @@
       "vignette_intensity"   : 0.03,
       "grain_power"          : 0.004,
       "monochrome_grain"     : false,
-      "highlight_rolloff"    : 0.1,
+      "highlight_rolloff"    : 0.15,
       "image"                : [
         "1677",
         0
@@ -1520,7 +1511,7 @@
       "brightness"  : 0,
       "contrast"    : 1,
       "saturation"  : -0.3,
-      "gamma"       : 1,
+      "gamma"       : 1.2,
       "image"       : [
         "1094",
         0
@@ -1533,6 +1524,10 @@
   },
   "1703" : {
     "inputs"     : {
+      "any_02" : [
+        "1839",
+        0
+      ],
       "any_03" : [
         "1523",
         0
@@ -1558,13 +1553,97 @@
       "title" : "ProPostApplyLUT"
     }
   },
+  "1835" : {
+    "inputs"     : {
+      "image" : [
+        "1523",
+        0
+      ]
+    },
+    "class_type" : "GetImageSizeAndCount",
+    "_meta"      : {
+      "title" : "Get Image Size & Count"
+    }
+  },
+  "1836" : {
+    "inputs"     : {
+      "mode" : false,
+      "a"    : [
+        "1835",
+        1
+      ],
+      "b"    : [
+        "1835",
+        2
+      ]
+    },
+    "class_type" : "ImpactMinMax",
+    "_meta"      : {
+      "title" : "MinMax"
+    }
+  },
+  "1837" : {
+    "inputs"     : {
+      "preprocessor" : "DepthAnythingPreprocessor",
+      "resolution"   : [
+        "1836",
+        0
+      ],
+      "image"        : [
+        "1523",
+        0
+      ]
+    },
+    "class_type" : "AIO_Preprocessor",
+    "_meta"      : {
+      "title" : "AIO Aux Preprocessor"
+    }
+  },
+  "1839" : {
+    "inputs"     : {
+      "center_x"            : 0.3,
+      "center_y"            : 0.5,
+      "saturation"          : 1,
+      "vignette_intensity"  : 0.010000000000000002,
+      "grain_method"        : "filmgrainer",
+      "grain_power"         : 0.08,
+      "grain_scale"         : 0.3,
+      "grain_sat"           : 0.15,
+      "filmgrainer_shadows" : 0.15000000000000002,
+      "filmgrainer_highs"   : 0.10000000000000002,
+      "blur_strength"       : 0,
+      "blur_focus_spread"   : 0.30000000000000004,
+      "focal_depth"         : 0.15,
+      "image"               : [
+        "1523",
+        0
+      ],
+      "depth_map"           : [
+        "1837",
+        0
+      ]
+    },
+    "class_type" : "LayerFilter: FilmV2",
+    "_meta"      : {
+      "title" : "LayerFilter: Film V2"
+    }
+  },
+  "1873" : {
+    "inputs"     : {
+      "value" : 0.45
+    },
+    "class_type" : "FloatConstant",
+    "_meta"      : {
+      "title" : "Strength"
+    }
+  },
   "1904" : {
     "inputs"     : {
       "model_name"        : "Qwen3-VL-2B-Instruct",
       "quantization"      : "4-bit (VRAM-friendly)",
       "attention_mode"    : "sage",
       "preset_prompt"     : "🖼️ Detailed Description",
-      "custom_prompt"     : "You are an expert AI image analyst and prompt engineer for FLUX text-to-image models.\n\nAnalyze the provided image and generate a single, high-quality FLUX prompt that can faithfully recreate a visually similar image.\n\nBefore writing the final prompt, reason internally about:\n\n* The primary subject and scene.\n* Composition, framing, camera perspective, and viewing angle.\n* Lighting direction, exposure, shadows, and atmosphere.\n* Color palette, white balance, tonal balance, and overall mood.\n* Clothing, accessories, hairstyle, materials, textures, and other visually distinctive elements.\n* Artistic medium (photograph, illustration, painting, digital art, 3D render, etc.) and visual style.\n* Background, environment, and depth.\n* Ignore tattoos. Do not mention or describe tattoos unless they are the primary subject of the image.\n\n* Any distinctive visual characteristics except texts, that are essential for faithfully recreating the image.\n\nGenerate a prompt that follows these principles:\n\n* Preserve all major subjects, objects, actions, colors, spatial relationships, composition, perspective, and visual style from the reference image.\n* Describe only what is actually visible. Do not invent new objects, characters, clothing, accessories, backgrounds, poses, expressions, or scene elements.\n* If a visual attribute is uncertain, describe it conservatively instead of guessing.\n* Use natural, descriptive language optimized for FLUX models.\n* Group related visual attributes together for better prompt parsing.\n* Preserve the requested or detected artistic medium. If the image is a photograph, produce a photographic prompt. If it is digital art, illustration, painting, sketch, anime, comic, watercolor, oil painting, or another medium, preserve that medium.\n* Include relevant photographic details only when the image is photographic (camera angle, focal length, depth of field, lighting style, etc.).\n* Include artistic rendering details only when appropriate for the detected medium. \n\n* Do not describe about logos, watermarks are small text in the background, Only descrive text in the outfit.\n \n* Do not over-describe facial features. Focus on overall appearance rather than exhaustive descriptions of individual facial components.\n* Prioritize composition, lighting, clothing, materials, accessories, environment, and artistic style over fine-grained anatomical detail.\n* Respect human anatomy and describe people naturally and realistically.\n\n* If the image already contains strong stylistic direction, preserve it instead of replacing it.\n* If the image is already highly detailed, lightly refine and optimize the wording instead of expanding unnecessarily.\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n\nAim for approximately 120–250 words. Prioritize the most visually significant elements and avoid exhaustive descriptions of minor details.\n",
+      "custom_prompt"     : "You are an expert AI image analyst and prompt engineer for FLUX text-to-image models.\n\nThe subject's name is \"v1dhya5\"\n\nAnalyze the provided image and generate a single, high-quality FLUX prompt that can faithfully recreate a visually similar image.\n\nBefore writing the final prompt, reason internally about:\n\n* The primary subject and scene.\n* Composition, framing, camera perspective, and viewing angle.\n* Lighting direction, exposure, shadows, and atmosphere.\n* Color palette, white balance, tonal balance, and overall mood.\n* Clothing, accessories, hairstyle, materials, textures, and other visually distinctive elements.\n* Artistic medium (photograph, illustration, painting, digital art, 3D render, etc.) and visual style.\n* Background, environment, and depth.\n* Ignore tattoos. Do not mention or describe tattoos unless they are the primary subject of the image.\n\n* Any distinctive visual characteristics except texts, that are essential for faithfully recreating the image.\n\nGenerate a prompt that follows these principles:\n\n* Preserve all major subjects, objects, actions, colors, spatial relationships, composition, perspective, and visual style from the reference image.\n* Describe only what is actually visible. Do not invent new objects, characters, clothing, accessories, backgrounds, poses, expressions, or scene elements.\n* If a visual attribute is uncertain, describe it conservatively instead of guessing.\n* Use natural, descriptive language optimized for FLUX models.\n* Group related visual attributes together for better prompt parsing.\n* Preserve the requested or detected artistic medium. If the image is a photograph, produce a photographic prompt. If it is digital art, illustration, painting, sketch, anime, comic, watercolor, oil painting, or another medium, preserve that medium.\n* Include relevant photographic details only when the image is photographic (camera angle, focal length, depth of field, lighting style, etc.).\n* Include artistic rendering details only when appropriate for the detected medium. \n\n* Do not describe about logos, watermarks are small text in the background, Only descrive text in the outfit.\n \n* Do not over-describe facial features. Focus on overall appearance rather than exhaustive descriptions of individual facial components.\n* Prioritize composition, lighting, clothing, materials, accessories, environment, and artistic style over fine-grained anatomical detail.\n* Respect human anatomy and describe people naturally and realistically.\n\n* If the image already contains strong stylistic direction, preserve it instead of replacing it.\n* If the image is already highly detailed, lightly refine and optimize the wording instead of expanding unnecessarily.\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n\nAim for approximately 250-350 words. Prioritize the most visually significant elements and avoid exhaustive descriptions of minor details.\nAlways mention the name of the subject.",
       "max_tokens"        : 384,
       "keep_model_loaded" : true,
       "seed"              : [
@@ -2266,18 +2345,18 @@
       ],
       "steps"        : 12,
       "cfg"          : 1,
-      "sampler_name" : "euler_ancestral",
+      "sampler_name" : "euler",
       "scheduler"    : "simple",
       "denoise"      : [
         "1649",
         0
       ],
       "model"        : [
-        "2305",
+        "2628",
         0
       ],
       "positive"     : [
-        "2305",
+        "2628",
         1
       ],
       "negative"     : [
@@ -2285,7 +2364,7 @@
         0
       ],
       "latent_image" : [
-        "2197",
+        "2629",
         0
       ]
     },
@@ -2311,7 +2390,7 @@
   "2294" : {
     "inputs"     : {
       "lora_name"      : "BreastSlider-KREA2.safetensors",
-      "strength_model" : 0.68,
+      "strength_model" : 0.5,
       "model"          : [
         "2293",
         0
@@ -2325,7 +2404,7 @@
   "2295" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v1_krea.safetensors",
-      "strength_model" : 0.99,
+      "strength_model" : 0.82,
       "model"          : [
         "1196",
         0
@@ -2334,41 +2413,6 @@
     "class_type" : "LoraLoaderModelOnly",
     "_meta"      : {
       "title" : "Load LoRA"
-    }
-  },
-  "2305" : {
-    "inputs"     : {
-      "prompt"                    : [
-        "2324",
-        0
-      ],
-      "vision_megapixels"         : 1,
-      "mask_padding"              : 0,
-      "conditioning_rescaling"    : true,
-      "multiplier"                : 4,
-      "per_layer_weights"         : "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.5,2.0,1.0,2.0,1.0",
-      "prompt_adherence_enhancer" : true,
-      "strength"                  : 1,
-      "clip"                      : [
-        "2312",
-        0
-      ],
-      "model"                     : [
-        "2294",
-        0
-      ],
-      "system_prompt"             : [
-        "2316",
-        0
-      ],
-      "images"                    : [
-        "1448",
-        0
-      ]
-    },
-    "class_type" : "VantageTextEncodeKrea2",
-    "_meta"      : {
-      "title" : "Krea_Vantage Text Encode (Krea2)"
     }
   },
   "2311" : {
@@ -2437,7 +2481,7 @@
   },
   "2319" : {
     "inputs"     : {
-      "value" : "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nUser's Input:\n\n"
+      "value" : "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\nThe subject's name is \"v1dhya5\"\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nUser's Input:\n\n"
     },
     "class_type" : "PrimitiveStringMultiline",
     "_meta"      : {
@@ -2484,6 +2528,10 @@
       "clip"                             : [
         "2312",
         0
+      ],
+      "image"                            : [
+        "1448",
+        0
       ]
     },
     "class_type" : "TextGenerate",
@@ -2493,11 +2541,11 @@
   },
   "2324" : {
     "inputs"     : {
-      "string_a"  : "v1dhya5 indian; adjust colors and make it realistic scene;\n\nremove small texts, logo and watermarks\n",
-      "string_b"  : [
+      "string_a"  : [
         "2321",
         0
       ],
+      "string_b"  : "remove small texts, logo and watermarks\n",
       "delimiter" : ", "
     },
     "class_type" : "StringConcatenate",
@@ -2755,7 +2803,7 @@
   },
   "2447" : {
     "inputs"     : {
-      "text" : "Use the input image as the sole source of truth.\n\nThis is a refinement pass only, not a generation or restoration pass.\n\nPreserve every visible property of the input image exactly, including color palette, white balance, grayscale appearance (if present), lighting, shadows, contrast, saturation, facial identity, expression, gaze direction, pose, body proportions, hairstyle, clothing, accessories, fabric transparency, composition, camera perspective, framing, textures, and background.\n\nDo not colorize, recolor, relight, restyle, reinterpret, regenerate, or redesign any part of the image.\n\nRefine only existing image quality by improving local consistency, natural tonal transitions, skin realism, fabric fidelity, hair detail, and photographic clarity while preserving all existing details. Preserve natural pores, moles, pigmentation, and other stable facial characteristics exactly as they appear. Do not invent, exaggerate, remove, smooth, or beautify any skin details.\n\nDo not alter facial geometry, image composition, camera angle, or scene content. Remove only small text, logos, and watermarks if present.\n\nIf a region does not require refinement, leave it completely unchanged.",
+      "text" : "Use the input image as the sole source of truth.\n\nThis is a refinement pass only, not a generation or restoration pass.\n\nDo not colorize, recolor, relight, restyle, reinterpret, regenerate, or redesign any part of the image.\n\nRefine only existing image quality by improving local consistency, natural tonal transitions, skin realism, fabric fidelity, hair detail, and photographic clarity while preserving all existing details. Preserve natural pores, moles, pigmentation, and other stable facial characteristics exactly as they appear.\n\nPreserve every visible property of the input image exactly, including color palette, white balance, grayscale appearance (if present), lighting, shadows, contrast, saturation, facial identity, expression, gaze direction, pose, body proportions, hairstyle, clothing, accessories, fabric transparency, composition, camera perspective, framing, textures, and background.\n\n\n\nDo not alter facial geometry, image composition, camera angle, or scene content. Remove only small text, logos, and watermarks if present.\n\nIf a region does not require refinement, leave it completely unchanged.",
       "clip" : [
         "2412",
         1
@@ -2817,8 +2865,8 @@
   },
   "2459" : {
     "inputs"     : {
-      "eta"          : -0.04,
-      "sampler_name" : "linear/euler",
+      "eta"          : -0.02,
+      "sampler_name" : "exponential/res_2s_stable",
       "scheduler"    : "simple",
       "steps"        : 10,
       "steps_to_run" : -1,
@@ -2959,6 +3007,28 @@
       "title" : "ConditioningZeroOut"
     }
   },
+  "2476" : {
+    "inputs"     : {
+      "active_scale"        : 0.6,
+      "per_token_whiten"    : 0.02,
+      "norm_equalize"       : 0.02,
+      "early_layer_scale"   : 0.8,
+      "mid_layer_scale"     : 0.95,
+      "late_layer_scale"    : 0.75,
+      "preserve_original"   : 1,
+      "active_end_override" : false,
+      "device"              : "auto",
+      "debug"               : false,
+      "conditioning"        : [
+        "2474",
+        0
+      ]
+    },
+    "class_type" : "Flux2KleinEnhancer",
+    "_meta"      : {
+      "title" : "FLUX.2 Klein Enhancer"
+    }
+  },
   "2478" : {
     "inputs"     : {
       "lora_name"      : "V3_flux_klein.safetensors",
@@ -2977,7 +3047,7 @@
     "inputs"     : {
       "any_01" : [
         "2459",
-        1
+        0
       ],
       "any_02" : [
         "2388",
@@ -3017,12 +3087,12 @@
   },
   "2612" : {
     "inputs"     : {
-      "eta"          : -0.03,
+      "eta"          : 0.01,
       "sampler_name" : "multistep/res_2m",
       "scheduler"    : "beta",
       "steps"        : 7,
       "steps_to_run" : -1,
-      "denoise"      : 0.1,
+      "denoise"      : 0.05,
       "cfg"          : 1,
       "seed"         : [
         "378",
@@ -3035,7 +3105,7 @@
         0
       ],
       "positive"     : [
-        "2474",
+        "2476",
         0
       ],
       "negative"     : [
@@ -3088,6 +3158,79 @@
     "class_type" : "UpscaleModelLoader",
     "_meta"      : {
       "title" : "Load Upscale Model"
+    }
+  },
+  "2625" : {
+    "inputs"     : {
+      "samples" : [
+        "2291",
+        0
+      ]
+    },
+    "class_type" : "RemoveNoiseMask",
+    "_meta"      : {
+      "title" : "Remove Noise Mask"
+    }
+  },
+  "2627" : {
+    "inputs"     : {
+      "image" : "example.png"
+    },
+    "class_type" : "LoadImage",
+    "_meta"      : {
+      "title" : "Load Image"
+    }
+  },
+  "2628" : {
+    "inputs"     : {
+      "prompt"                    : [
+        "2324",
+        0
+      ],
+      "vision_megapixels"         : 1,
+      "mask_padding"              : 0,
+      "conditioning_rescaling"    : true,
+      "multiplier"                : 4,
+      "per_layer_weights"         : "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.5,2.0,1.0,2.0,1.0",
+      "prompt_adherence_enhancer" : true,
+      "strength"                  : 1,
+      "clip"                      : [
+        "2312",
+        0
+      ],
+      "model"                     : [
+        "2294",
+        0
+      ],
+      "system_prompt"             : [
+        "2316",
+        0
+      ],
+      "images"                    : [
+        "1448",
+        0
+      ]
+    },
+    "class_type" : "VantageTextEncodeKrea2",
+    "_meta"      : {
+      "title" : "Vantage Text Encode (Krea2)"
+    }
+  },
+  "2629" : {
+    "inputs"     : {
+      "noise_seed"     : [
+        "378",
+        0
+      ],
+      "noise_strength" : 0.01,
+      "latent"         : [
+        "2197",
+        0
+      ]
+    },
+    "class_type" : "InjectLatentNoise+",
+    "_meta"      : {
+      "title" : "🔧 Inject Latent Noise"
     }
   }
 }
