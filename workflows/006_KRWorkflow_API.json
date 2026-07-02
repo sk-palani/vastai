@@ -58,7 +58,7 @@
   },
   "127"  : {
     "inputs"     : {
-      "megapixel"     : "2.6",
+      "megapixel"     : "2.5",
       "divisible_by"  : "8",
       "mode"          : "resize",
       "delta_percent" : 0.2,
