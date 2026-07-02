@@ -1510,7 +1510,7 @@
       "hue"         : 0,
       "brightness"  : 0,
       "contrast"    : 1,
-      "saturation"  : -0.3,
+      "saturation"  : -5.3,
       "gamma"       : 1.2,
       "image"       : [
         "1094",
@@ -2376,7 +2376,7 @@
   "2293" : {
     "inputs"     : {
       "lora_name"      : "SummerVibesHM_krea2_epoch8.safetensors",
-      "strength_model" : 0.8,
+      "strength_model" : 0.25,
       "model"          : [
         "2295",
         0
@@ -2404,7 +2404,7 @@
   "2295" : {
     "inputs"     : {
       "lora_name"      : "vidhyas_lora_v1_krea.safetensors",
-      "strength_model" : 0.82,
+      "strength_model" : 0.86,
       "model"          : [
         "1196",
         0
