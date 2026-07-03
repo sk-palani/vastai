@@ -3088,7 +3088,7 @@
   "2612" : {
     "inputs"     : {
       "eta"          : 0.02,
-      "sampler_name" : "exponential/res_2s_stable",
+      "sampler_name" : "multistep/res_2m",
       "scheduler"    : "beta",
       "steps"        : 7,
       "steps_to_run" : -1,
