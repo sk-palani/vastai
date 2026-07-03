@@ -3191,7 +3191,7 @@
       "mask_padding"              : 0,
       "conditioning_rescaling"    : true,
       "multiplier"                : 4,
-      "per_layer_weights"         : "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,5.0,1.1,4.0,1.0",
+      "per_layer_weights"         : "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.5,2.0,1.0,2.0,1.0",
       "prompt_adherence_enhancer" : true,
       "strength"                  : 1,
       "clip"                      : [
