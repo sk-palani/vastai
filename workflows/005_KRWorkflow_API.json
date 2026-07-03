@@ -3187,7 +3187,7 @@
         "2324",
         0
       ],
-      "vision_megapixels"         : 1.8,
+      "vision_megapixels"         : 1,
       "mask_padding"              : 0,
       "conditioning_rescaling"    : true,
       "multiplier"                : 4,
