@@ -235,7 +235,7 @@
   },
   "259"  : {
     "inputs"     : {
-      "string"         : "change image1 into  a real photo of an indian v1dhya5 with ultra-high-resolution ultra realistic details. \n\n{{PROMPT}},\n\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections,\n\nRemove any watermarks, black/white borders,\n\nSome Transparent elements in the outfit, \n \nEnhance this image, Make the lighting dramatic and slightly dark,\n",
+      "string"         : "change image1 into  a real photo of an indian v1dhya5 with ultra-high-resolution ultra realistic details. \n\n{{PROMPT}},\n\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections, dry matte skin finish, restrained specular skin highlights,\n\nRemove any watermarks, black/white borders,\n\nSome Transparent elements in the outfit, \n \nEnhance this image with natural controlled lighting and realistic tonal balance,\n",
       "strip_newlines" : false
     },
     "class_type" : "StringConstantMultiline",
@@ -1354,7 +1354,7 @@
   },
   "1431" : {
     "inputs"     : {
-      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
+      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, dry natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with restrained low specular highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1475,16 +1475,16 @@
       "tint"                 : 0,
       "atmosphere_enabled"   : false,
       "haze_strength"        : 0,
-      "lift_blacks"          : 0.01,
+      "lift_blacks"          : 0,
       "depth_offset"         : 0,
       "f_stop"               : "f/5.6",
       "dof_intensity"        : 0,
       "dof_auto_focus"       : false,
       "dof_sharpness_radius" : 0,
       "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0.06,
-      "promist_strength"     : 0.08,
-      "halation_strength"    : 0.05,
+      "light_wrap_strength"  : 0.02,
+      "promist_strength"     : 0.02,
+      "halation_strength"    : 0.01,
       "chromatic_aberration" : 0.001,
       "vignette_intensity"   : 0.03,
       "grain_power"          : 0.004,
@@ -2803,7 +2803,7 @@
   },
   "2447" : {
     "inputs"     : {
-      "text" : "Use the input image as the sole source of truth.\n\nThis is a refinement pass only, not a generation or restoration pass.\n\nDo not colorize, recolor, relight, restyle, reinterpret, regenerate, or redesign any part of the image.\n\nRefine only existing image quality by improving local consistency, natural tonal transitions, skin realism, fabric fidelity, hair detail, and photographic clarity while preserving all existing details. \n\nPreserve every visible property of the input image exactly, including color palette, white balance, grayscale appearance (if present), lighting, shadows, contrast, saturation, facial identity, expression, gaze direction, pose, body proportions, hairstyle, clothing, accessories, fabric transparency, composition, camera perspective, framing,   and background.\n\n\n\nDo not alter facial geometry, image composition, camera angle, or scene content. Remove only small text, logos, and watermarks if present.\n ",
+      "text" : "Use the input image as the sole source of truth.\n\nThis is a refinement pass only, not a generation or restoration pass.\n\nDo not colorize, recolor, relight, restyle, reinterpret, regenerate, or redesign any part of the image.\n\nRefine only existing image quality by improving local consistency, natural tonal transitions, dry matte skin realism, restrained skin highlights, fabric fidelity, hair detail, and photographic clarity while preserving all existing details. \n\nPreserve every visible property of the input image exactly, including color palette, white balance, grayscale appearance (if present), lighting, shadows, contrast, saturation, facial identity, expression, gaze direction, pose, body proportions, hairstyle, clothing, accessories, fabric transparency, composition, camera perspective, framing,   and background.\n\n\n\nDo not alter facial geometry, image composition, camera angle, or scene content. Remove only small text, logos, and watermarks if present.\n ",
       "clip" : [
         "2653",
         1
@@ -2984,7 +2984,7 @@
   },
   "2474" : {
     "inputs"     : {
-      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n ",
+      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\nEnsure realistic lighting and consistent shadows.\nMaintain dry matte skin and restrained specular highlights.\nRemove any visible watermarks or text artifacts.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n ",
       "clip" : [
         "2653",
         1
@@ -3318,16 +3318,16 @@
       "tint"                 : 0,
       "atmosphere_enabled"   : false,
       "haze_strength"        : 0,
-      "lift_blacks"          : 0.01,
+      "lift_blacks"          : 0,
       "depth_offset"         : 0,
       "f_stop"               : "f/5.6",
       "dof_intensity"        : 0,
       "dof_auto_focus"       : false,
       "dof_sharpness_radius" : 0,
       "dof_focus_point"      : 0,
-      "light_wrap_strength"  : 0.06,
-      "promist_strength"     : 0.08,
-      "halation_strength"    : 0.05,
+      "light_wrap_strength"  : 0.02,
+      "promist_strength"     : 0.02,
+      "halation_strength"    : 0.01,
       "chromatic_aberration" : 0.001,
       "vignette_intensity"   : 0.03,
       "grain_power"          : 0.004,
