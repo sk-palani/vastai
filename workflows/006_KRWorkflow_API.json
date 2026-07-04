@@ -2174,6 +2174,7 @@
       ],
       "font"             : "ShareTechMono-Regular.ttf",
       "size"             : 38,
+      "direction"        : "ltr",
       "color"            : "#e56b9cFF",
       "background_color" : "#00000000",
       "shadow_distance"  : 0,
