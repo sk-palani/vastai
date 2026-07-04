@@ -3222,6 +3222,7 @@
         0
       ],
       "noise_strength" : 0.01,
+      "normalize"      : "false",
       "latent"         : [
         "2197",
         0
