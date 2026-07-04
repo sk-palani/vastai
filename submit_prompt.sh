@@ -45,6 +45,20 @@ random_seed=$(( RANDOM * RANDOM ))
 random_seed=$(( random_seed % max_seed ))
 echo "[$LOG_TS] 🎲 Using random seed: $random_seed"
 
+target_mega_pixel="1.6"
+vram_mb=0
+if command -v nvidia-smi >/dev/null 2>&1; then
+  vram_mb=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits 2>/dev/null | sort -nr | head -n 1)
+fi
+case "${vram_mb:-0}" in
+  *[!0-9]*|"") vram_mb=0 ;;
+esac
+if [ "$vram_mb" -gt 24000 ]; then
+  target_mega_pixel="2.0"
+fi
+echo "[$LOG_TS] 🖼️  Using target megapixel: $target_mega_pixel (VRAM: ${vram_mb:-unknown} MiB)"
+
+
 # --- Identify removable node types ---
 REMOVE_TYPES='["PreviewAny", "ShowText|pysssss"]'
 
@@ -63,11 +77,19 @@ REMOVE_TYPES='["PreviewAny", "ShowText|pysssss"]'
 #fi
 
 TMP_FILE="$(mktemp)"
-# --- Replace numeric seeds ---
-jq --argjson new_seed "$random_seed" '
+# --- Replace numeric seeds and target megapixel settings ---
+jq --argjson new_seed "$random_seed" \
+   --arg target_mega_pixel "$target_mega_pixel" '
   walk(
-    if type == "object" and has("seed") and (.seed | type) == "number"
-    then .seed = $new_seed
+    if type == "object" then
+      (if has("seed") and (.seed | type) == "number"
+       then .seed = $new_seed
+       else .
+       end)
+      | (if has("megapixel")
+         then .megapixel = $target_mega_pixel
+         else .
+         end)
     else .
     end
   )

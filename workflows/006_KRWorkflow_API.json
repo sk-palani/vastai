@@ -58,7 +58,7 @@
   },
   "127"  : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "resize",
       "delta_percent" : 0.2,
@@ -235,8 +235,8 @@
   },
   "259"  : {
     "inputs"     : {
-      "string"         : "change image1 into  a real photo of an indian v1dhya5 with ultra-high-resolution ultra realistic details. \n\n{{PROMPT}},\n\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections, dry matte skin finish, restrained specular skin highlights,\n\nRemove any watermarks, black/white borders,\n\nSome Transparent elements in the outfit, \n \nEnhance this image with natural controlled lighting and realistic tonal balance,\n",
-      "strip_newlines" : false
+      "string"         : "change image1 into  a real photo of an indian v1dhya5 with ultra-high-resolution ultra realistic details. \n\n{{PROMPT}},\n\nnatural skin variation, natural skin texture, visible pores, subtle skin imperfections, dry matte skin finish, restrained specular skin highlights, natural dimensional teeth when visible with individual tooth shape, enamel translucency, gentle shadow separation, and the subject's cute slightly twisted left upper lateral incisor,\n\nRemove any watermarks, black/white borders,\n\nSome Transparent elements in the outfit, \n\nEnhance this image with natural controlled lighting and realistic tonal balance,\n\n",
+      "strip_newlines" : true
     },
     "class_type" : "StringConstantMultiline",
     "_meta"      : {
@@ -1245,7 +1245,7 @@
   },
   "1323" : {
     "inputs"     : {
-      "text" : "The subject has a warm, affectionate expression with gentle eyes and a soft natural smile.\nThe subject has a subtle playful pout with gently pursed lips and relaxed eyes.\nThe subject has a soft, shy expression with a faint smile, gentle gaze, and slight hesitation.\nThe subject has a naturally happy expression with a relaxed smile and bright, expressive eyes.\nThe subject has a joyful expression with a genuine broad smile and naturally smiling eyes.\nThe subject has a playful, lighthearted expression with a subtle grin and relaxed facial features.\nThe subject has a softly romantic expression with warm eyes, relaxed lips, and gentle emotional warmth.\nThe subject has a subtly flirtatious expression with a playful gaze and a slight confident smile.\nThe subject has a subtly alluring expression with relaxed eyelids, soft lips, and quiet confidence.\nThe subject has a confident, alluring expression with natural elegance and restrained emotional intensity.\nThe subject has a mildly surprised expression with slightly widened eyes, gently raised eyebrows, and natural facial tension.\nThe subject has a slightly open-mouth expression with relaxed lips and a natural facial posture."
+      "text" : "\"The subject has a warm, affectionate expression with gentle eyes and a soft natural smile, with natural dimensional teeth if visible.\nThe subject has a subtle playful pout with gently pursed lips and relaxed eyes.\nThe subject has a soft, shy expression with a faint smile, gentle gaze, and slight hesitation.\nThe subject has a naturally happy expression with a relaxed smile, bright expressive eyes, and natural individual teeth if visible.\nThe subject has a joyful expression with a genuine broad smile, naturally smiling eyes, and realistic uneven teeth depth.\nThe subject has a playful, lighthearted expression with a subtle grin and relaxed facial features.\nThe subject has a softly romantic expression with warm eyes, relaxed lips, and gentle emotional warmth.\nThe subject has a subtly flirtatious expression with a playful gaze and a slight confident smile.\nThe subject has a subtly alluring expression with relaxed eyelids, soft lips, and quiet confidence.\nThe subject has a confident, alluring expression with natural elegance and restrained emotional intensity.\nThe subject has a mildly surprised expression with slightly widened eyes, gently raised eyebrows, and natural facial tension.\nThe subject has a slightly open-mouth expression with relaxed lips, natural tooth separation, and a natural facial posture.\"\n"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1354,7 +1354,7 @@
   },
   "1431" : {
     "inputs"     : {
-      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, dry natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with restrained low specular highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
+      "text" : "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural dimensional teeth when visible with individual tooth shape, enamel translucency, soft inner-mouth shadows, and the subject's cute slightly twisted left upper lateral incisor, dry natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with restrained low specular highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
     },
     "class_type" : "Text Multiline",
     "_meta"      : {
@@ -1375,7 +1375,7 @@
   },
   "1448" : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
       "mode"          : "pad",
       "delta_percent" : 0.3,
@@ -2375,8 +2375,8 @@
   },
   "2293" : {
     "inputs"     : {
-      "lora_name"      : "ultra_real_krea2_v1.safetensors",
-      "strength_model" : 1,
+      "lora_name"      : "SummerVibesHM_krea2_epoch8.safetensors",
+      "strength_model" : 0.25,
       "model"          : [
         "2295",
         0
@@ -2481,7 +2481,7 @@
   },
   "2319" : {
     "inputs"     : {
-      "value" : "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\nThe subject's name is \"v1dhya5\"\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nfine tune the prompt such that the skin texture is not described\n\nUser's Input:\n\n"
+      "value" : "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\nThe subject's name is \"v1dhya5\"\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nfine tune the prompt such that the skin texture is not described\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n\nAim for approximately 250-350 words. Prioritize the most visually significant elements and avoid exhaustive descriptions of minor details.\nAlways mention the name of the subject.\n\n\nUser's Input:\n\n"
     },
     "class_type" : "PrimitiveStringMultiline",
     "_meta"      : {
@@ -2526,7 +2526,7 @@
       "thinking"                         : false,
       "use_default_template"             : true,
       "clip"                             : [
-        "2312",
+        "2288",
         0
       ],
       "image"                            : [
@@ -2575,7 +2575,7 @@
       "orientation" : "original",
       "attention"   : "maximize",
       "image"       : [
-        "2382",
+        "2387",
         0
       ]
     },
@@ -2586,10 +2586,10 @@
   },
   "2382" : {
     "inputs"     : {
-      "megapixel"     : "1.8",
+      "megapixel"     : "2.0",
       "divisible_by"  : "8",
-      "mode"          : "resize",
-      "delta_percent" : 0,
+      "mode"          : "pad",
+      "delta_percent" : 0.1,
       "image"         : [
         "2387",
         0
@@ -2619,7 +2619,7 @@
   "2388" : {
     "inputs"     : {
       "pixels" : [
-        "2382",
+        "2387",
         0
       ],
       "vae"    : [
@@ -2776,7 +2776,7 @@
   "2444" : {
     "inputs"     : {
       "image" : [
-        "2382",
+        "2387",
         0
       ]
     },
@@ -2788,7 +2788,7 @@
   "2445" : {
     "inputs"     : {
       "pixels" : [
-        "2382",
+        "2387",
         0
       ],
       "vae"    : [
@@ -2803,7 +2803,10 @@
   },
   "2447" : {
     "inputs"     : {
-      "text" : "Use the input image as the sole source of truth.\n\nThis is a refinement pass only, not a generation or restoration pass.\n\nDo not colorize, recolor, relight, restyle, reinterpret, regenerate, or redesign any part of the image.\n\nRefine only existing image quality by improving local consistency, natural tonal transitions, dry matte skin realism, restrained skin highlights, fabric fidelity, hair detail, and photographic clarity while preserving all existing details. \n\nPreserve every visible property of the input image exactly, including color palette, white balance, grayscale appearance (if present), lighting, shadows, contrast, saturation, facial identity, expression, gaze direction, pose, body proportions, hairstyle, clothing, accessories, fabric transparency, composition, camera perspective, framing,   and background.\n\n\n\nDo not alter facial geometry, image composition, camera angle, or scene content. Remove only small text, logos, and watermarks if present.\n ",
+      "text" : [
+        "2599",
+        0
+      ],
       "clip" : [
         "2653",
         1
@@ -2865,8 +2868,8 @@
   },
   "2459" : {
     "inputs"     : {
-      "eta"          : -0.04,
-      "sampler_name" : "exponential/res_2s_stable",
+      "eta"          : -0.05,
+      "sampler_name" : "multistep/res_2m",
       "scheduler"    : "simple",
       "steps"        : 10,
       "steps_to_run" : -1,
@@ -2984,7 +2987,7 @@
   },
   "2474" : {
     "inputs"     : {
-      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\nEnsure realistic lighting and consistent shadows.\nMaintain dry matte skin and restrained specular highlights.\nRemove any visible watermarks or text artifacts.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n ",
+      "text" : "Color correction only.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, tooth shape, the slightly twisted left upper lateral incisor when visible, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\nEnsure realistic lighting and consistent shadows.\nMaintain dry matte skin and restrained specular highlights.\nRemove any visible watermarks or text artifacts.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n",
       "clip" : [
         "2653",
         1
@@ -3043,6 +3046,346 @@
       "title" : "Load LoRA"
     }
   },
+  "2568" : {
+    "inputs"     : {
+      "text" : "Enhance body proportions naturally; fuller bust (approx. 34DD) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2569" : {
+    "inputs"     : {
+      "condition"  : [
+        "657",
+        0
+      ],
+      "when_true"  : [
+        "2586",
+        0
+      ],
+      "when_false" : [
+        "2568",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "2570" : {
+    "inputs"     : {
+      "value" : false
+    },
+    "class_type" : "easy boolean",
+    "_meta"      : {
+      "title" : "Boolean"
+    }
+  },
+  "2572" : {
+    "inputs"     : {
+      "text" : "Preserve Subject's Mouth closed or open state."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2573" : {
+    "inputs"     : {
+      "text" : "Change subject's Eyes to  Closed state."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2574" : {
+    "inputs"     : {
+      "condition"  : [
+        "2587",
+        0
+      ],
+      "when_true"  : [
+        "2573",
+        0
+      ],
+      "when_false" : [
+        "2572",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "2575" : {
+    "inputs"     : {
+      "find"    : "__EYE_STATE__",
+      "replace" : [
+        "2574",
+        0
+      ],
+      "text"    : [
+        "2585",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2576" : {
+    "inputs"     : {
+      "seed" : [
+        "378",
+        0
+      ],
+      "text" : [
+        "2592",
+        0
+      ]
+    },
+    "class_type" : "Text Random Line",
+    "_meta"      : {
+      "title" : "Text Random Line"
+    }
+  },
+  "2578" : {
+    "inputs"     : {
+      "find"    : "__CAMERA_ANGLE__",
+      "replace" : [
+        "630",
+        0
+      ],
+      "text"    : [
+        "2582",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2579" : {
+    "inputs"     : {
+      "find"    : "__AGE_STRING__",
+      "replace" : [
+        "670",
+        0
+      ],
+      "text"    : [
+        "2580",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2580" : {
+    "inputs"     : {
+      "find"    : "__INSTRUCTION_FROM_FILE__",
+      "replace" : [
+        "2160",
+        0
+      ],
+      "text"    : [
+        "2589",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2582" : {
+    "inputs"     : {
+      "text" : "Transform the reference image into a high-quality photorealistic photograph of v1dhya5 __CAMERA_ANGLE__ , \n\n__INSTRUCTION_FROM_FILE__,\n\nPreserve the direction that the subject is looking, Preserve overall composition of this photo.\n while preserving the original visual style, color palette, camera framing, subject scale, perspective, lighting direction,  \n\nMatch the subject's apparent age to approximately __AGE_STRING__ years old. Preserve realistic age-appropriate facial proportions, skin texture, facial volume, eye area, jawline, and overall maturity while maintaining natural photorealistic appearance.\n\n\nPreserve and refine the outfit and accessories,\n from the reference Image.\nChange the subject hair color to natural black,\nRemove any watermarks."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Prompt - Taken from Back"
+    }
+  },
+  "2583" : {
+    "inputs"     : {
+      "condition"  : [
+        "591",
+        0
+      ],
+      "when_true"  : [
+        "2593",
+        0
+      ],
+      "when_false" : [
+        "2601",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "2585" : {
+    "inputs"     : {
+      "find"    : "__BODY_STATE__",
+      "replace" : [
+        "2569",
+        0
+      ],
+      "text"    : [
+        "2583",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2586" : {
+    "inputs"     : {
+      "text" : "Enhance body proportions naturally; fit and firm bust with proportionate body, maintaining realistic anatomy and balance.\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2587" : {
+    "inputs"     : {
+      "any_01" : [
+        "1377",
+        0
+      ],
+      "any_02" : [
+        "2570",
+        0
+      ]
+    },
+    "class_type" : "Any Switch (rgthree)",
+    "_meta"      : {
+      "title" : "Any Switch (rgthree)"
+    }
+  },
+  "2589" : {
+    "inputs"     : {
+      "condition"  : [
+        "2163",
+        0
+      ],
+      "when_true"  : [
+        "2575",
+        0
+      ],
+      "when_false" : [
+        "2578",
+        0
+      ]
+    },
+    "class_type" : "InputSelector",
+    "_meta"      : {
+      "title" : "Input Selector"
+    }
+  },
+  "2592" : {
+    "inputs"     : {
+      "text" : "Adjust the facial expression to a subtly affectionate expression with gentle eyes and a faint natural smile.\n\nAdjust the facial expression to a slight pout with minimally pursed lips and soft eye engagement.\n\nAdjust the facial expression to a mildly shy expression with a restrained smile and slightly lowered gaze.\n\nAdjust the facial expression to a subtle happy expression with softly lifted mouth corners and relaxed eyes.\n\nAdjust the facial expression to a gentle joyful expression with a modest smile and delicate warmth in the eyes.\n\nAdjust the facial expression to a lightly playful expression with faint amusement and natural facial relaxation.\n\nAdjust the facial expression to a softly romantic expression with warm eyes and a barely perceptible smile.\n\nAdjust the facial expression to a subtly flirtatious expression with a hint of playful eye engagement and slight mouth-corner lift.\n\nAdjust the facial expression to a mildly seductive expression with relaxed eyelids and understated confidence.\n\nAdjust the facial expression to a quietly confident expression with composed facial features and subtle emotional presence.\n\nAdjust the facial expression to a mildly surprised expression with slightly widened eyes and gentle eyebrow elevation.\n\nAdjust the facial expression to a slightly parted-lips expression with relaxed facial posture.\n\nAdjust the facial expression to a subtle wink with minimal eyelid closure and natural facial balance.\n\nAdjust the facial expression to a faintly mischievous expression with a restrained smirk and soft eye engagement.\n\nAdjust the facial expression to a thoughtful expression with a calm gaze and slight facial contemplation.\n\nAdjust the facial expression to a dreamy expression with softened eyes and a peaceful relaxed demeanor.\n\nAdjust the facial expression to a composed confident expression with natural eye contact and relaxed facial muscles.\n\nAdjust the facial expression to a restrained laughing expression with subtle eye creases and gentle amusement.\n\nAdjust the facial expression to a mildly curious expression with attentive eyes and a slight eyebrow lift.\n\nAdjust the facial expression to a faint smirk with minimal asymmetry and understated confidence."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2593" : {
+    "inputs"     : {
+      "text" : "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, tooth shape, the slightly twisted left upper lateral incisor when visible, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\n__INSTRUCTION_FROM_FILE__,\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\n\nEnsure realistic lighting and consistent shadows.\nMaintain dry matte skin and restrained specular highlights.\nRemove any visible watermarks or text artifacts.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n__EYE_STATE__\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2595" : {
+    "inputs"     : {
+      "text" : "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range."
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2597" : {
+    "inputs"     : {
+      "text" : "fluxtrait,\nindian-girl-brown-eyes,\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2598" : {
+    "inputs"     : {
+      "find"    : "__EXPRESSION__",
+      "replace" : [
+        "2576",
+        0
+      ],
+      "text"    : [
+        "2579",
+        0
+      ]
+    },
+    "class_type" : "Text Find and Replace",
+    "_meta"      : {
+      "title" : "Text Find and Replace"
+    }
+  },
+  "2599" : {
+    "inputs"     : {
+      "delimiter"        : "\\n",
+      "clean_whitespace" : "false",
+      "text_a"           : [
+        "2598",
+        0
+      ],
+      "text_b"           : [
+        "2597",
+        0
+      ]
+    },
+    "class_type" : "Text Concatenate",
+    "_meta"      : {
+      "title" : "Text Concatenate"
+    }
+  },
+  "2600" : {
+    "inputs"     : {
+      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\n\n__INSTRUCTION_FROM_FILE__,\n\n\nEnhance body proportions naturally: fuller bust (approx. 34D) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\n__EYE_STATE__\n\nMaintain the subject's facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women.\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
+  "2601" : {
+    "inputs"     : {
+      "text" : "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, tooth shape, the slightly twisted left upper lateral incisor when visible, composition, lighting direction, shadows, and texture.\n\nReduce excessive red tint.\n\n__INSTRUCTION_FROM_FILE__,\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\n\nEnsure realistic lighting and consistent shadows.\nMaintain dry matte skin and restrained specular highlights.\nRemove any visible watermarks or text artifacts.\n \nMaintain realistic photographic white balance (darken slightly without changing contrast).\n\n__EYE_STATE__\n"
+    },
+    "class_type" : "Text Multiline",
+    "_meta"      : {
+      "title" : "Text Multiline"
+    }
+  },
   "2604" : {
     "inputs"     : {
       "any_01" : [
@@ -3077,7 +3420,7 @@
         "222",
         0
       ],
-      "b"         : 0.8,
+      "b"         : 0.72,
       "operation" : "multiply"
     },
     "class_type" : "easy mathFloat",
@@ -3087,12 +3430,12 @@
   },
   "2612" : {
     "inputs"     : {
-      "eta"          : 0.02,
+      "eta"          : -0.02,
       "sampler_name" : "multistep/res_2m",
       "scheduler"    : "beta",
       "steps"        : 7,
       "steps_to_run" : -1,
-      "denoise"      : 0.05,
+      "denoise"      : 0.06,
       "cfg"          : 1,
       "seed"         : [
         "378",
@@ -3223,7 +3566,6 @@
         0
       ],
       "noise_strength" : 0.01,
-      "normalize"      : "false",
       "latent"         : [
         "2197",
         0
@@ -3352,9 +3694,9 @@
       "temperature" : -5,
       "hue"         : 0,
       "brightness"  : 0,
-      "contrast"    : -2.49999999999,
+      "contrast"    : -1,
       "saturation"  : -0.3,
-      "gamma"       : 1,
+      "gamma"       : 1.1,
       "image"       : [
         "2650",
         0
@@ -3367,8 +3709,8 @@
   },
   "2653" : {
     "inputs"     : {
-      "lora_name"      : "ultra_real_v3.safetensors",
-      "strength_model" : 0.8,
+      "lora_name"      : "ultra_real_v4.safetensors",
+      "strength_model" : 0.6,
       "strength_clip"  : 0.1,
       "model"          : [
         "2412",
