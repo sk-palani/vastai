@@ -86,6 +86,9 @@ NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
     "https://github.com/1038lab/ComfyUI-QwenVL"
     "https://github.com/ClownsharkBatwing/RES4LYF"
+    "https://github.com/ostris/ComfyUI-Advanced-Vision"
+    "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    "https://github.com/dsrunpod/comfyui-fashn-human-parser"
 #    "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
 #    "https://github.com/Fannovel16/ComfyUI-MagickWand"
 #    "https://github.com/Fannovel16/comfyui_controlnet_aux"
@@ -203,6 +206,7 @@ UNET_MODELS=(
 DIFFUSION_MODELS=(
 #  "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"
   "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/resolve/main/flux-2-klein-9b.safetensors"
+  "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors"
   # fluxtraitFLUX2KleinFLUXZ_flux2Klein9bV2.safetensors
 #  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
 #  "https://civitai.com/api/download/models/2631758?type=Model&format=SafeTensor&size=pruned&fp=bf16&token=${CIVITAI_TOKEN}"
@@ -214,13 +218,15 @@ DIFFUSION_MODELS=(
 VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
     "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"
-    "https://civitai.com/api/download/models/2527939?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    # nightPhotoHDR_flux1.safetensors
-    "https://civitai.com/api/download/models/2615379?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    # flashPhotoFLUXVAE_v10.safetensors
-    "https://civitai.com/api/download/models/1749336?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    # krea2RealVae_v10.safetensors
-    "https://civitai.com/api/download/models/3068442?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors"
+#    "https://civitai.com/api/download/models/2527939?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    # nightPhotoHDR_flux1.safetensors
+#    "https://civitai.com/api/download/models/2615379?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    # flashPhotoFLUXVAE_v10.safetensors
+#    "https://civitai.com/api/download/models/1749336?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    # krea2RealVae_v10.safetensors
+#    "https://civitai.com/api/download/models/3068442?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 
 )
 
@@ -237,6 +243,17 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/3071726?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # age_krea2_loraholic.safetensors
     "https://civitai.com/api/download/models/3067659?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # ultra_real_krea2_v1.safetensors
+    # ultra_real_krea2_v1.safetensors
+    "https://civitai.com/api/download/models/3091374?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # RealisticSnapshotKrea2.safetensors
+    "https://civitai.com/api/download/models/3084537?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # commercial advertising photography.safetensors
+    "https://civitai.com/api/download/models/3092999?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # wetness_krea2_loraholic.safetensors
+    "https://civitai.com/api/download/models/3079282?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # skindetails_krea2_loraholic.safetensors
+    "https://civitai.com/api/download/models/3097834?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
     # ------------------------------
     # Flux2.Klein
@@ -458,13 +475,10 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
     provisioning_get_models \
-        "${COMFYUI_DIR}/custom_nodes/ComfyUI_essentials.git/fonts/" \
+        "${COMFYUI_DIR}/custom_nodes/comfyui_essentials/fonts/" \
         "${FONTS[@]}"
     provisioning_get_models \
-        "${COMFYUI_DIR}/custom_nodes/ComfyUI_essentials/fonts/" \
-        "${FONTS[@]}"
-    provisioning_get_models \
-        "${COMFYUI_DIR}/custom_nodes/ComfyUI-Custom-Scripts.git/web/js/assets/" \
+        "${COMFYUI_DIR}/custom_nodes/comfyui_custom_scripts/web/js/assets/" \
         "${MP3[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/models/vae" \
@@ -553,6 +567,7 @@ function provisioning_get_nodes() {
     source "${COMFYUI_VENV_DIR}/bin/activate"
     for repo in "${NODES[@]}"; do
         dir="${repo##*/}"
+        dir="${dir,,}"
         path="${COMFYUI_DIR}/custom_nodes/${dir}"
         requirements="${path}/requirements.txt"
         if [[ -d $path ]]; then
@@ -724,6 +739,9 @@ provisioning_get_default_workflow
 #wget --header="Authorization: Bearer $HF_TOKEN" "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
 #wget --header="Authorization: Bearer $HF_TOKEN" "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 #wget --header="Authorization: Bearer $HF_TOKEN"  "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"
+#wget --header="Authorization: Bearer $HF_TOKEN"  "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors"
+
+#axel --header="Authorization: Bearer $HF_TOKEN"  "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors"
 
 #WORKSPACE=/workspace/
 # * * * * * /workspace/scripts/submit_prompt.sh >> /workspace/crontab.log
@@ -758,6 +776,14 @@ sudo supervisorctl stop 'jupyter'
 # supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_2"'
 # supervisorctl restart 'cf_quicktunnel:="cf_quicktunnel_3"'
 
+## wait for port to be available
+# wait for port 18188 and 18384 to be available
+while ! nc -z localhost 18188; do
+    sleep 1
+done
+while ! nc -z localhost 18384; do
+    sleep 1
+done
 
 nohup  socat TCP-LISTEN:18000,fork,reuseaddr TCP:127.0.0.1:1111 &
 sleep 2
