@@ -47,6 +47,7 @@ mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/ultralytics/bbox"
 mkdir -p "${WORKSPACE}/storage/stable_diffusion/models/sams"
 
 APT_PACKAGES=(
+    "netcat"
     "libmagickwand-dev"
     "axel"
     "screen"
