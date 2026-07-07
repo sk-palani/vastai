@@ -1597,6 +1597,7 @@
     "inputs": {
       "noise_seed": ["378", 0],
       "noise_strength": 0.25,
+      "normalize": "false",
       "latent": ["1648", 0]
     },
     "class_type": "InjectLatentNoise+",
