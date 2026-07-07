@@ -2637,7 +2637,7 @@
   },
   "2350": {
     "inputs": {
-      "megapixel": "1.6",
+      "megapixel": "1.7",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0.1,
@@ -2964,7 +2964,7 @@
   },
   "2951": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "1.9",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
