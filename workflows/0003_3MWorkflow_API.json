@@ -508,6 +508,26 @@
       "title": "Input Selector"
     }
   },
+  "556": {
+    "inputs": {
+      "strength": 100,
+      "brightness": 0,
+      "contrast": 0,
+      "saturation": 0,
+      "red": 27,
+      "green": 17,
+      "blue": 0,
+      "mode": "RGB",
+      "image": [
+        "554",
+        0
+      ]
+    },
+    "class_type": "LayerColor: AutoAdjustV2",
+    "_meta": {
+      "title": "LayerColor: AutoAdjust V2"
+    }
+  },
   "559": {
     "inputs": {
       "channel": "RGB",
@@ -526,6 +546,21 @@
       "title": "Levels"
     }
   },
+  "573": {
+    "inputs": {
+      "brightness": 0.93,
+      "contrast": 1.08,
+      "saturation": 1,
+      "image": [
+        "556",
+        0
+      ]
+    },
+    "class_type": "LayerColor: BrightnessContrastV2",
+    "_meta": {
+      "title": "Brightness Contrast V2"
+    }
+  },
   "575": {
     "inputs": {
       "overlay_resize": "None",
@@ -542,7 +577,7 @@
         0
       ],
       "overlay_image": [
-        "554",
+        "744",
         0
       ],
       "optional_mask": [
@@ -1276,6 +1311,19 @@
     "class_type": "Logic Boolean Primitive",
     "_meta": {
       "title": "Red Lipstick?"
+    }
+  },
+  "744": {
+    "inputs": {
+      "gamma": 1.25,
+      "image": [
+        "573",
+        0
+      ]
+    },
+    "class_type": "LayerColor: Gamma",
+    "_meta": {
+      "title": "LayerColor: Gamma"
     }
   },
   "983": {
@@ -3698,7 +3746,7 @@
       "blur_radius": 3,
       "invert": true,
       "image": [
-        "554",
+        "744",
         0
       ]
     },
@@ -3820,7 +3868,7 @@
   "2330": {
     "inputs": {
       "samples": [
-        "2334",
+        "2962",
         0
       ],
       "vae": [
@@ -3844,18 +3892,6 @@
     "class_type": "CLIPSetLastLayer",
     "_meta": {
       "title": "CLIP Set Last Layer"
-    }
-  },
-  "2334": {
-    "inputs": {
-      "samples": [
-        "2962",
-        0
-      ]
-    },
-    "class_type": "RemoveNoiseMask",
-    "_meta": {
-      "title": "Remove Noise Mask"
     }
   },
   "2339": {
@@ -4208,7 +4244,7 @@
       "lora_name": "RealisticSnapshotKrea2.safetensors",
       "strength_model": 0.2,
       "model": [
-        "2361",
+        "2974",
         0
       ]
     },
@@ -4281,7 +4317,7 @@
         "2405",
         0
       ],
-      "string_b": "remove small texts, logo and watermarks\n",
+      "string_b": "remove small texts, logo and watermarks\nhigh-quality",
       "delimiter": ", "
     },
     "class_type": "StringConcatenate",
@@ -4291,7 +4327,7 @@
   },
   "2407": {
     "inputs": {
-      "value": "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\nThe subject's name is \"v1dhya5\"\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nfine tune the prompt such that the skin texture is not described\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n\nAim for approximately 250-350 words. Prioritize the most visually significant elements and avoid exhaustive descriptions of minor details.\nAlways mention the name of the subject.\n\n\nUser's Input:\n\n"
+      "value": "You are an expert prompt engineer for text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt.\nThe subject's name is \"v1dhya5\"\n\nThink step by step about the request before writing the answer:\n- What is the subject and mood?\n- What visual styles, mediums, and lighting options would fit? Consider two or three alternatives and pick the one that best serves the caption.\n- What composition, framing, and grounded details will help the text-to-image model?\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, and spatial relationships. Do not add new objects, props, characters, or animals unless the user clearly implies them.\n2. **Practical T2I Structure:** Write a prompt that a text-to-image model can parse cleanly. Group subjects with their own attributes and actions. Use grounded phrasing for poses, interactions, and spatial layout.\n3. **Style Planning Stays Internal:** Use your internal reasoning to choose style, medium, framing, and lighting. Do not emit planning tags or wrappers in the visible answer body.\n4. **Text Rendering:** If the user requests visible text, quotes, labels, or typography, specify the exact text clearly and wrap requested words in quotes.\n5. **Avoid Over-Specification:** Do not invent highly specific clothing, colors, materials, or scene details unless the input supports them.\n6. **Structure:** Write one cohesive paragraph after the thinking block. No bullets, JSON, or markdown.\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and finalize rather than heavily expanding — preserve their phrasing and direction.\n8. **Respect the Human Form:** Treat depictions of people with dignity. Assume clothing covers genitals and intimate anatomy.\n9. **Preserve User Medium:** When the user explicitly requests a medium (e.g. \"photo of\", \"photograph of\", \"illustration of\", \"painting of\", \"sketch of\", \"3D render of\"), honor it. Do not pivot to a different medium to avoid difficulty — match the user's stated intent.\n\nfine tune the prompt such that the skin texture is not described\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n\nAim for approximately 250-350 words. Prioritize the most visually significant elements and avoid exhaustive descriptions of minor details.\nAlways mention the name of the subject.\nAlways change the \"-- body description --\" section based on the age specified. \"-- body description --\" is a reference only\n\nUser's Input:\n\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4300,7 +4336,7 @@
   },
   "2413": {
     "inputs": {
-      "text": "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  "
+      "text": "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  \n\n-- body description --\nAt an age of 36, She has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage."
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -4424,7 +4460,7 @@
   },
   "2951": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "2.0",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -4503,7 +4539,7 @@
   },
   "2962": {
     "inputs": {
-      "add_noise": "disable",
+      "add_noise": "enable",
       "noise_seed": [
         "378",
         0
@@ -4537,9 +4573,9 @@
       "title": "Krea_KSampler (Advanced)"
     }
   },
-  "2970": {
+  "2973": {
     "inputs": {
-      "output_path": "Inputs/Processed/[time(%Y-%m-%d)]",
+      "output_path": "../Inputs/Processed/[time(%Y-%m-%d)]",
       "filename_prefix": [
         "235",
         0
@@ -4550,16 +4586,16 @@
       ],
       "filename_number_padding": 4,
       "filename_number_start": "false",
-      "extension": "jpeg",
+      "extension": "png",
       "dpi": 300,
       "quality": 100,
-      "optimize_image": "false",
+      "optimize_image": "true",
       "lossless_webp": "false",
-      "overwrite_mode": "prefix_as_filename",
+      "overwrite_mode": "false",
       "show_history": "false",
-      "show_history_by_prefix": "false",
-      "embed_workflow": "false",
-      "show_previews": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "true",
       "images": [
         "2279",
         0
@@ -4568,6 +4604,20 @@
     "class_type": "Image Save",
     "_meta": {
       "title": "Image Save"
+    }
+  },
+  "2974": {
+    "inputs": {
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.2,
+      "model": [
+        "2361",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
     }
   }
 }

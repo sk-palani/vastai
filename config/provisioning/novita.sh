@@ -82,6 +82,39 @@ CHECKPOINT_MODELS=(
   #  "https://civitai.com/api/download/models/813603?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
 )
 
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-advanced-vision
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/websocket_image_save.py
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-fashn-human-parser
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/ComfyUI-Optical-Realism
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui_simpler
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-filepathcreator
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-post-processing-nodes
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/cg-use-everywhere
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/ComfyUI-Flux2Klein-Enhancer
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-custom-scripts
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-detail-daemon
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-quadmoons-nodes
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/controlaltai-nodes
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-jdcn
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui_ultimatesdupscale
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/ComfyUI_essentials
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/rgthree-comfy
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/virtuoso-nodes
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui_controlnet_aux
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/efficiency-nodes-comfyui
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-kjnodes
+# [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/Vantage-Nodes
+# [INFO]    0.1 seconds: /opt/ComfyUI/custom_nodes/ComfyUI-Manager
+# [INFO]    0.1 seconds: /opt/ComfyUI/custom_nodes/comfyui-impact-pack
+# [INFO]    0.1 seconds: /opt/ComfyUI/custom_nodes/a-person-mask-generator
+# [INFO]    0.1 seconds: /opt/ComfyUI/custom_nodes/comfyui-propost
+# [INFO]    0.1 seconds: /opt/ComfyUI/custom_nodes/comfyui-easy-use
+# [INFO]    0.3 seconds: /opt/ComfyUI/custom_nodes/comfyui-qwenvl
+# [INFO]    0.3 seconds: /opt/ComfyUI/custom_nodes/res4lyf
+# [INFO]    0.4 seconds: /opt/ComfyUI/custom_nodes/comfyui-levelpixel
+# [INFO]    1.1 seconds: /opt/ComfyUI/custom_nodes/was-ns
+# [INFO]    2.1 seconds: /opt/ComfyUI/custom_nodes/comfyui_layerstyle
+
 
 NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
@@ -90,43 +123,43 @@ NODES=(
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
     "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
     "https://github.com/dsrunpod/comfyui-fashn-human-parser"
-#    "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/chflame163/ComfyUI_LayerStyle"
+    "https://github.com/chrisgoringe/cg-use-everywhere"
+    "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
+    "https://github.com/HECer/ComfyUI-FilePathCreator"
+    "https://github.com/Tenney95/ComfyUI-NodeAligner"
 #    "https://github.com/Fannovel16/ComfyUI-MagickWand"
-#    "https://github.com/Fannovel16/comfyui_controlnet_aux"
-#    "https://github.com/HECer/ComfyUI-FilePathCreator"
+   "https://github.com/Fannovel16/comfyui_controlnet_aux"
 #    "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
-#    "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
 #    "https://github.com/Layer-norm/comfyui-lama-remover"
-#    "https://github.com/LevelPixel/ComfyUI-LevelPixel"
-#    "https://github.com/Tenney95/ComfyUI-NodeAligner"
+   "https://github.com/LevelPixel/ComfyUI-LevelPixel"
 #    "https://github.com/brayevalerien/ComfyUI-resynthesizer"
-#    "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
-#    "https://github.com/chflame163/ComfyUI_LayerStyle"
-#    "https://github.com/chrisfreilich/virtuoso-nodes"
-#    "https://github.com/chrisgoringe/cg-use-everywhere"
+   "https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer"
+   "https://github.com/chrisfreilich/virtuoso-nodes"
+   "https://github.com/vantagewithai/Vantage-Nodes"
 #    "https://github.com/cubiq/ComfyUI_essentials"
-#    "https://github.com/daxcay/ComfyUI-JDCN"
-#    "https://github.com/digitaljohn/comfyui-propost"
-#    "https://github.com/djbielejeski/a-person-mask-generator"
+   "https://github.com/daxcay/ComfyUI-JDCN"
+   "https://github.com/digitaljohn/comfyui-propost"
+   "https://github.com/djbielejeski/a-person-mask-generator"
 #    "https://github.com/fchangjun/Baidu_Meux_ComfyTools"
 #    "https://github.com/gseth/ControlAltAI-Nodes"
 #    "https://github.com/jags111/efficiency-nodes-comfyui"
-#    "https://github.com/kijai/ComfyUI-KJNodes"
+   "https://github.com/kijai/ComfyUI-KJNodes"
 #    "https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
-#    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-#    "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
-#    "https://github.com/ltdrdata/was-node-suite-comfyui"
+   "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+   "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+   "https://github.com/ltdrdata/was-node-suite-comfyui"
 #    "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler"
 #    "https://github.com/ostris/ComfyUI-Advanced-Vision"
-#    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
-#    "https://github.com/rgthree/rgthree-comfy"
-#    "https://github.com/skatardude10/ComfyUI-Optical-Realism"
+   "https://github.com/skatardude10/ComfyUI-Optical-Realism"
 #    "https://github.com/sonnybox/ComfyUI-SuperNodes"
-#    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+   "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 #    "https://github.com/storyicon/comfyui_segment_anything"
-#    "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
-#    "https://github.com/yolain/ComfyUI-Easy-Use"
-#    "https://github.com/yorkane/ComfyUI-KYNode"
+   "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
+   "https://github.com/yolain/ComfyUI-Easy-Use"
+   "https://github.com/yorkane/ComfyUI-KYNode"
 #    "https://github.com/DenRakEiw/Latent_Nodes"
 )
 
