@@ -4037,12 +4037,12 @@
   },
   "2353": {
     "inputs": {
-      "temperature": -5,
+      "temperature": 0,
       "hue": 0,
       "brightness": 0,
       "contrast": 4,
-      "saturation": 4.7,
-      "gamma": 1.1,
+      "saturation": -5.3,
+      "gamma": 1.05,
       "image": [
         "2330",
         0
@@ -4241,10 +4241,10 @@
   },
   "2379": {
     "inputs": {
-      "lora_name": "RealisticSnapshotKrea2.safetensors",
+      "lora_name": "SummerVibesHM_krea2_epoch8.safetensors",
       "strength_model": 0.2,
       "model": [
-        "2974",
+        "2361",
         0
       ]
     },
@@ -4604,20 +4604,6 @@
     "class_type": "Image Save",
     "_meta": {
       "title": "Image Save"
-    }
-  },
-  "2974": {
-    "inputs": {
-      "lora_name": "ultra_real_krea2_v1.safetensors",
-      "strength_model": 0.2,
-      "model": [
-        "2361",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
     }
   }
 }
