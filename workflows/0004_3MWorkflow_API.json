@@ -2174,7 +2174,7 @@
   },
   "1771": {
     "inputs": {
-      "lut_name": "Presetpro  - Kodacrome 64.cube",
+      "lut_name": "Presetpro - Fuji Astia.cube",
       "strength": 0.24,
       "log": false,
       "image": [
@@ -3776,7 +3776,7 @@
   "2309": {
     "inputs": {
       "any_01": [
-        "3012",
+        "3027",
         0
       ],
       "any_02": [
@@ -4013,7 +4013,7 @@
       "brightness": 0,
       "contrast": 4,
       "saturation": -5.3,
-      "gamma": 1.1,
+      "gamma": 1.05,
       "image": [
         "2330",
         0
@@ -4110,7 +4110,7 @@
   "2361": {
     "inputs": {
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
-      "strength_model": 0.5,
+      "strength_model": 1,
       "model": [
         "2322",
         0
@@ -4163,7 +4163,7 @@
       "brightness": 0,
       "contrast": -2.49999999999,
       "saturation": -0.3,
-      "gamma": 1.2,
+      "gamma": 1.05,
       "image": [
         "1094",
         0
@@ -4756,7 +4756,7 @@
   "3024": {
     "inputs": {
       "any_01": [
-        "3012",
+        "3027",
         0
       ],
       "any_02": [
@@ -4767,6 +4767,21 @@
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
+    }
+  },
+  "3027": {
+    "inputs": {
+      "lut_name": "Presetpro - Agfa Ultra 100.cube",
+      "strength": 0.15,
+      "log": false,
+      "image": [
+        "3012",
+        0
+      ]
+    },
+    "class_type": "ProPostApplyLUT",
+    "_meta": {
+      "title": "ProPostApplyLUT"
     }
   }
 }
