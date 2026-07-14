@@ -277,7 +277,24 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/3071726?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # age_krea2_loraholic.safetensors
     "https://civitai.com/api/download/models/3067659?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-    # ultra_real_krea2_v1.safetensors
+
+    # height_krea2_loraholic.safetensors
+    "https://civitai.com/api/download/models/3111503?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+
+    "https://civitai.com/api/download/models/3123867?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+
+    # Detailer-KREA2.safetensors
+    "https://civitai.com/api/download/models/3068874?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # WeightSlider-KREA2_v2.safetensors
+    "https://civitai.com/api/download/models/3110226?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # krea-detail-enhancer-exp.safetensors
+    "https://civitai.com/api/download/models/3102079?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # SEAN_ARCHER_PHOTOSTYLE_epoch_10.safetensors
+    "https://civitai.com/api/download/models/3109737?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # ImprovedEvilSmile_Krea2.safetensors
+    "https://civitai.com/api/download/models/3105008?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # ultra_real_krea2_v1.safetensors
     "https://civitai.com/api/download/models/3091374?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # RealisticSnapshotKrea2.safetensors
