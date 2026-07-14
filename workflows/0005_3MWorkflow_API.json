@@ -372,6 +372,21 @@
       "title": "ConditioningZeroOut"
     }
   },
+  "437": {
+    "inputs": {
+      "platform": "FLUX",
+      "orientation": "original",
+      "attention": "maximize",
+      "image": [
+        "1447",
+        0
+      ]
+    },
+    "class_type": "quadmoonConvertNormalizeHW",
+    "_meta": {
+      "title": "Normalize Image Dimensions"
+    }
+  },
   "445": {
     "inputs": {
       "OutputDirectory": "processing",
@@ -2041,7 +2056,7 @@
   },
   "1663": {
     "inputs": {
-      "denoise": 0.82,
+      "denoise": 0.78,
       "sigmas": [
         "1657",
         0
@@ -3588,7 +3603,7 @@
   },
   "2350": {
     "inputs": {
-      "megapixel": "2.0",
+      "megapixel": "1.7",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -3982,6 +3997,22 @@
       "title": "PlaySound 🐍"
     }
   },
+  "2951": {
+    "inputs": {
+      "megapixel": "2.2",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 0,
+      "image": [
+        "437",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations"
+    }
+  },
   "2954": {
     "inputs": {
       "path": "Inputs/Processed/[time(%Y-%m-%d)]",
@@ -4223,7 +4254,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Photographic color correction only.\n\nTreat the input image as the source of truth. Preserve all existing image content, composition, lighting, facial identity, clothing, accessories, and textures.\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\nMatch only the color of visible accessories to the input  image. Do not add, remove, redesign, or invent accessories or mehndi.\n\nIf the input image already contains visible mehndi, refine it without changing the design.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color."
+      "value": "Photographic color correction only.\n\nTreat the input image as the source of truth. Preserve all existing image content, composition, lighting, facial identity, clothing, accessories, and textures.\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\nMatch only the color of visible accessories to the input  image. Do not add, remove, redesign, or invent accessories or mehndi.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
