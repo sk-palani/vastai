@@ -61,7 +61,7 @@
       "megapixel": "2.0",
       "divisible_by": "8",
       "mode": "pad",
-      "delta_percent": 0.1,
+      "delta_percent": 0,
       "image": [
         "983",
         0
@@ -370,21 +370,6 @@
     "class_type": "ConditioningZeroOut",
     "_meta": {
       "title": "ConditioningZeroOut"
-    }
-  },
-  "437": {
-    "inputs": {
-      "platform": "FLUX",
-      "orientation": "original",
-      "attention": "maximize",
-      "image": [
-        "1447",
-        0
-      ]
-    },
-    "class_type": "quadmoonConvertNormalizeHW",
-    "_meta": {
-      "title": "Normalize Image Dimensions"
     }
   },
   "445": {
@@ -1488,10 +1473,10 @@
   },
   "1197": {
     "inputs": {
-      "q": 1.05,
-      "k": 1.02,
-      "v": 0.98,
-      "out": 1.05,
+      "q": 1.03,
+      "k": 1.01,
+      "v": 0.99,
+      "out": 1.03,
       "clip": [
         "1193",
         0
@@ -1635,7 +1620,7 @@
   },
   "1309": {
     "inputs": {
-      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic material response without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s."
+      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -1942,7 +1927,7 @@
         "222",
         0
       ],
-      "b": 0.72,
+      "b": 0.64,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -2300,7 +2285,7 @@
         "378",
         0
       ],
-      "steps": 8,
+      "steps": 15,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -3113,7 +3098,7 @@
         "2208",
         1
       ],
-      "b": -38,
+      "b": -42,
       "operation": "add"
     },
     "class_type": "easy mathInt",
@@ -3149,7 +3134,7 @@
         0
       ],
       "rotation": -90,
-      "opacity": 0,
+      "opacity": 1.8,
       "base_image": [
         "1771",
         0
@@ -3603,7 +3588,7 @@
   },
   "2350": {
     "inputs": {
-      "megapixel": "1.7",
+      "megapixel": "1.8",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -4004,7 +3989,7 @@
       "mode": "pad",
       "delta_percent": 0,
       "image": [
-        "437",
+        "1447",
         0
       ]
     },
@@ -4202,7 +4187,7 @@
       "scheduler": "sgm_uniform",
       "denoise": 1,
       "model": [
-        "2131",
+        "2133",
         0
       ],
       "positive": [
@@ -4385,7 +4370,7 @@
   "3027": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.15,
+      "strength": 0.17,
       "log": false,
       "image": [
         "3012",
@@ -4422,7 +4407,7 @@
         "222",
         0
       ],
-      "b": 0.42,
+      "b": 0.37,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
