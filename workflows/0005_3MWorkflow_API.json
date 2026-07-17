@@ -1464,7 +1464,7 @@
   "1196": {
     "inputs": {
       "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
@@ -2703,7 +2703,7 @@
   "2124": {
     "inputs": {
       "unet_name": "flux-2-klein-9b.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
@@ -3519,7 +3519,7 @@
   "2322": {
     "inputs": {
       "unet_name": "krea2_turbo_fp8_scaled.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
