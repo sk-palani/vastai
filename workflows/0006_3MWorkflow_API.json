@@ -1,0 +1,4493 @@
+{
+  "103": {
+    "inputs": {
+      "any_01": [
+        "374",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "105": {
+    "inputs": {
+      "delimiter": "_",
+      "clean_whitespace": "true",
+      "text_a": [
+        "235",
+        0
+      ],
+      "text_b": [
+        "128",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "106": {
+    "inputs": {
+      "delimiter": "_",
+      "clean_whitespace": "true",
+      "text_a": [
+        "235",
+        0
+      ],
+      "text_b": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "118": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Enable for fixed_seed"
+    }
+  },
+  "127": {
+    "inputs": {
+      "megapixel": "1.8",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 0,
+      "image": [
+        "983",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations 1.8"
+    }
+  },
+  "128": {
+    "inputs": {
+      "value": "_generated_"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "129": {
+    "inputs": {
+      "value": "_detailed_"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "133": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "135": {
+    "inputs": {
+      "directory_1": "Inputs/Next/Best",
+      "directory_2": "Inputs/Next",
+      "directory_3": "Inputs/Downloaded",
+      "ordering_mode": "random",
+      "include_subdirectories": "yes",
+      "index": 0,
+      "seed": [
+        "984",
+        0
+      ]
+    },
+    "class_type": "Input_Image",
+    "_meta": {
+      "title": "Input Image"
+    }
+  },
+  "143": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "374",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any (rgthree)"
+    }
+  },
+  "174": {
+    "inputs": {
+      "mode": false,
+      "a": [
+        "189",
+        1
+      ],
+      "b": [
+        "189",
+        2
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
+  "176": {
+    "inputs": {
+      "preprocessor": "DepthAnythingPreprocessor",
+      "resolution": [
+        "174",
+        0
+      ],
+      "image": [
+        "1703",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "189": {
+    "inputs": {
+      "image": [
+        "1703",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "220": {
+    "inputs": {
+      "value": 0.8
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "221": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "222": {
+    "inputs": {
+      "value": 0.52
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "233": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "378",
+        0
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Int (rgthree)"
+    }
+  },
+  "235": {
+    "inputs": {
+      "prefix": [
+        "407",
+        0
+      ],
+      "suffix": "",
+      "input": [
+        "378",
+        0
+      ]
+    },
+    "class_type": "SomethingToString",
+    "_meta": {
+      "title": "_generated_"
+    }
+  },
+  "259": {
+    "inputs": {
+      "string": "\n\n{{PROMPT}},\n\n\nRemove any watermarks, black/white borders,\n\nTransparent elements in the outfit, \n \nEnhance this image, Make the lighting dramatic and slightly dark,\n",
+      "strip_newlines": false
+    },
+    "class_type": "StringConstantMultiline",
+    "_meta": {
+      "title": "String Constant Multiline"
+    }
+  },
+  "272": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "281": {
+    "inputs": {
+      "value": true
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Enable for IMG2IMG"
+    }
+  },
+  "374": {
+    "inputs": {
+      "find": "{{PROMPT}}",
+      "replace": [
+        "1904",
+        0
+      ],
+      "text": [
+        "259",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "378": {
+    "inputs": {
+      "images": [
+        "983",
+        0
+      ]
+    },
+    "class_type": "Image to Seed",
+    "_meta": {
+      "title": "Image to Seed"
+    }
+  },
+  "407": {
+    "inputs": {
+      "file_prefix": "3M",
+      "time_format": "%Y%m%dT%H%M%S_",
+      "output_folder": "",
+      "filetype": ""
+    },
+    "class_type": "FilePathCreator",
+    "_meta": {
+      "title": "File Path Creator"
+    }
+  },
+  "413": {
+    "inputs": {
+      "conditioning": [
+        "474",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "421": {
+    "inputs": {
+      "output_path": "[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "2059",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "jpg",
+      "dpi": 301,
+      "quality": 100,
+      "optimize_image": "false",
+      "lossless_webp": "false",
+      "overwrite_mode": "prefix_as_filename",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "2215",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
+  "423": {
+    "inputs": {
+      "text": [
+        "1429",
+        0
+      ],
+      "clip": [
+        "2116",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode"
+    }
+  },
+  "425": {
+    "inputs": {
+      "conditioning": [
+        "423",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "445": {
+    "inputs": {
+      "OutputDirectory": "processing",
+      "OverwriteFile": true,
+      "FilePaths": [
+        "135",
+        3
+      ]
+    },
+    "class_type": "JDCN_FileMover",
+    "_meta": {
+      "title": "JDCN_FileMover"
+    }
+  },
+  "447": {
+    "inputs": {
+      "boolean": [
+        "470",
+        0
+      ]
+    },
+    "class_type": "Logic NOT",
+    "_meta": {
+      "title": "NOT"
+    }
+  },
+  "470": {
+    "inputs": {
+      "boolean": [
+        "2285",
+        0
+      ]
+    },
+    "class_type": "Logic NOT",
+    "_meta": {
+      "title": "Logic NOT"
+    }
+  },
+  "474": {
+    "inputs": {
+      "text": [
+        "655",
+        0
+      ]
+    },
+    "class_type": "quadmoonCLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP exText Encode"
+    }
+  },
+  "476": {
+    "inputs": {
+      "value": 1.33
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "506": {
+    "inputs": {
+      "value": 1.19
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "550": {
+    "inputs": {
+      "mask": [
+        "2286",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "Invert Mask"
+    }
+  },
+  "551": {
+    "inputs": {
+      "padding_left": 32,
+      "padding_right": 32,
+      "padding_top": 72,
+      "padding_bottom": 64,
+      "return_list": false,
+      "image": [
+        "2279",
+        0
+      ],
+      "mask": [
+        "550",
+        0
+      ]
+    },
+    "class_type": "Bounded Image Crop with Mask",
+    "_meta": {
+      "title": "Bounded Image Crop with Mask"
+    }
+  },
+  "554": {
+    "inputs": {
+      "condition": [
+        "599",
+        0
+      ],
+      "when_true": [
+        "551",
+        0
+      ],
+      "when_false": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "556": {
+    "inputs": {
+      "strength": 100,
+      "brightness": 0,
+      "contrast": 0,
+      "saturation": 0,
+      "red": 27,
+      "green": 17,
+      "blue": 0,
+      "mode": "RGB",
+      "image": [
+        "554",
+        0
+      ]
+    },
+    "class_type": "LayerColor: AutoAdjustV2",
+    "_meta": {
+      "title": "LayerColor: AutoAdjust V2"
+    }
+  },
+  "559": {
+    "inputs": {
+      "channel": "RGB",
+      "input_black_point": 0,
+      "input_gamma": 1.1,
+      "input_white_point": 1,
+      "output_black_point": 0,
+      "output_white_point": 1,
+      "image": [
+        "575",
+        0
+      ]
+    },
+    "class_type": "Levels",
+    "_meta": {
+      "title": "Levels"
+    }
+  },
+  "573": {
+    "inputs": {
+      "brightness": 0.93,
+      "contrast": 1.08,
+      "saturation": 1,
+      "image": [
+        "556",
+        0
+      ]
+    },
+    "class_type": "LayerColor: BrightnessContrastV2",
+    "_meta": {
+      "title": "Brightness Contrast V2"
+    }
+  },
+  "575": {
+    "inputs": {
+      "overlay_resize": "None",
+      "resize_method": "nearest-exact",
+      "rescale_factor": 1,
+      "width": 512,
+      "height": 512,
+      "x_offset": 0,
+      "y_offset": 0,
+      "rotation": 0,
+      "opacity": 100,
+      "base_image": [
+        "554",
+        0
+      ],
+      "overlay_image": [
+        "744",
+        0
+      ],
+      "optional_mask": [
+        "2287",
+        0
+      ]
+    },
+    "class_type": "Image Overlay",
+    "_meta": {
+      "title": "Image Overlay"
+    }
+  },
+  "577": {
+    "inputs": {
+      "brightness_target": 0.5,
+      "cyan_red": -0.02,
+      "magenta_green": 0,
+      "yellow_blue": 0.05,
+      "preserve_luminosity": false,
+      "image": [
+        "559",
+        0
+      ]
+    },
+    "class_type": "ColorBalanceAdvanced",
+    "_meta": {
+      "title": "Color Balance Advanced"
+    }
+  },
+  "582": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "##",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [##]"
+    }
+  },
+  "583": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "**",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [**]"
+    }
+  },
+  "591": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "sketch",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [sketch]"
+    }
+  },
+  "594": {
+    "inputs": {
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Logic NOT",
+    "_meta": {
+      "title": "Logic NOT"
+    }
+  },
+  "596": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "$$",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [$$]"
+    }
+  },
+  "599": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "TT",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [TT]"
+    }
+  },
+  "603": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "~~",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [~~]"
+    }
+  },
+  "604": {
+    "inputs": {
+      "expression": "c*(a-b)",
+      "values.a": [
+        "622",
+        0
+      ],
+      "values.b": [
+        "624",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "Math Expression"
+    }
+  },
+  "605": {
+    "inputs": {
+      "string": [
+        "135",
+        3
+      ],
+      "regex_pattern": "\\{(.*)\\}",
+      "mode": "First Group",
+      "case_insensitive": false,
+      "multiline": false,
+      "dotall": false,
+      "group_index": 1
+    },
+    "class_type": "RegexExtract",
+    "_meta": {
+      "title": "Extract Text"
+    }
+  },
+  "607": {
+    "inputs": {
+      "value": "0"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "608": {
+    "inputs": {
+      "value": "+"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "609": {
+    "inputs": {
+      "text": [
+        "610",
+        0
+      ]
+    },
+    "class_type": "ShowTextBridge|LP",
+    "_meta": {
+      "title": "Show Text Bridge [LP]"
+    }
+  },
+  "610": {
+    "inputs": {
+      "string": [
+        "135",
+        3
+      ],
+      "regex_pattern": "(\\++)",
+      "mode": "All Matches",
+      "case_insensitive": false,
+      "multiline": true,
+      "dotall": true,
+      "group_index": 1
+    },
+    "class_type": "RegexExtract",
+    "_meta": {
+      "title": "Extract Text"
+    }
+  },
+  "611": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "608",
+        0
+      ],
+      "text_b": [
+        "615",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "612": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "608",
+        0
+      ],
+      "text_b": [
+        "610",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "615": {
+    "inputs": {
+      "string": [
+        "135",
+        3
+      ],
+      "regex_pattern": "(\\-\\-)",
+      "mode": "All Matches",
+      "case_insensitive": false,
+      "multiline": true,
+      "dotall": true,
+      "group_index": 1
+    },
+    "class_type": "RegexExtract",
+    "_meta": {
+      "title": "Extract Text"
+    }
+  },
+  "620": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "607",
+        0
+      ],
+      "text_b": [
+        "605",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "621": {
+    "inputs": {
+      "string": [
+        "620",
+        0
+      ]
+    },
+    "class_type": "StringToInt|LP",
+    "_meta": {
+      "title": "Convert String To Int [LP]"
+    }
+  },
+  "622": {
+    "inputs": {
+      "string": [
+        "612",
+        0
+      ]
+    },
+    "class_type": "StringLength",
+    "_meta": {
+      "title": "Text Length"
+    }
+  },
+  "623": {
+    "inputs": {
+      "string": [
+        "611",
+        0
+      ]
+    },
+    "class_type": "StringLength",
+    "_meta": {
+      "title": "Text Length"
+    }
+  },
+  "624": {
+    "inputs": {
+      "value": 5
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "625": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "saree",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains [Saree]"
+    }
+  },
+  "626": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "back",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains [back]"
+    }
+  },
+  "627": {
+    "inputs": {
+      "text_a": [
+        "632",
+        0
+      ],
+      "text_b": [
+        "644",
+        0
+      ],
+      "boolean": [
+        "625",
+        0
+      ]
+    },
+    "class_type": "Text Input Switch",
+    "_meta": {
+      "title": "Text Input Switch"
+    }
+  },
+  "628": {
+    "inputs": {
+      "text_a": [
+        "652",
+        0
+      ],
+      "text_b": [
+        "644",
+        0
+      ],
+      "boolean": [
+        "638",
+        0
+      ]
+    },
+    "class_type": "Text Input Switch",
+    "_meta": {
+      "title": "Text Input Switch"
+    }
+  },
+  "629": {
+    "inputs": {
+      "value": "Photo taken from the back of the subject,"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "OnTrue"
+    }
+  },
+  "630": {
+    "inputs": {
+      "string_a": [
+        "628",
+        0
+      ],
+      "string_b": [
+        "640",
+        0
+      ],
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text"
+    }
+  },
+  "632": {
+    "inputs": {
+      "value": "wearing indian saree with intricate details"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "OnTrue"
+    }
+  },
+  "634": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "630",
+        0
+      ],
+      "text_b": [
+        "627",
+        0
+      ],
+      "text_c": [
+        "636",
+        0
+      ],
+      "text_d": [
+        "1384",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "635": {
+    "inputs": {
+      "join_with": ",",
+      "string_list": [
+        "637",
+        0
+      ]
+    },
+    "class_type": "StringListToString",
+    "_meta": {
+      "title": "String List to String"
+    }
+  },
+  "636": {
+    "inputs": {
+      "string": [
+        "635",
+        0
+      ],
+      "find": "_",
+      "replace": ","
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text"
+    }
+  },
+  "637": {
+    "inputs": {
+      "string": [
+        "135",
+        3
+      ],
+      "regex_pattern": "__(.*)__",
+      "mode": "All Groups",
+      "case_insensitive": false,
+      "multiline": false,
+      "dotall": false,
+      "group_index": 1
+    },
+    "class_type": "RegexExtract",
+    "_meta": {
+      "title": "Extract Text"
+    }
+  },
+  "638": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "side",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains [back]"
+    }
+  },
+  "640": {
+    "inputs": {
+      "text_a": [
+        "629",
+        0
+      ],
+      "text_b": [
+        "644",
+        0
+      ],
+      "boolean": [
+        "626",
+        0
+      ]
+    },
+    "class_type": "Text Input Switch",
+    "_meta": {
+      "title": "Text Input Switch"
+    }
+  },
+  "644": {
+    "inputs": {
+      "value": ""
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "On False"
+    }
+  },
+  "652": {
+    "inputs": {
+      "value": "Photo taken from the side of the subject,"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "OnTrue"
+    }
+  },
+  "655": {
+    "inputs": {
+      "delimiter": ",",
+      "clean_whitespace": "true",
+      "text_a": [
+        "103",
+        0
+      ],
+      "text_b": [
+        "672",
+        0
+      ],
+      "text_c": [
+        "1322",
+        0
+      ],
+      "text_d": [
+        "634",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "657": {
+    "inputs": {
+      "comparison": "a <= b",
+      "a": [
+        "669",
+        0
+      ],
+      "b": [
+        "668",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "Compare"
+    }
+  },
+  "660": {
+    "inputs": {
+      "comparison": "a < b",
+      "a": [
+        "621",
+        0
+      ],
+      "b": [
+        "666",
+        0
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": ">0"
+    }
+  },
+  "662": {
+    "inputs": {
+      "mode": true,
+      "a": [
+        "665",
+        0
+      ],
+      "b": [
+        "621",
+        0
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
+  "665": {
+    "inputs": {
+      "value": 15
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "666": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "667": {
+    "inputs": {
+      "string": "__{{ age }}__ years old ",
+      "find": "__{{ age }}__",
+      "replace": [
+        "670",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text"
+    }
+  },
+  "668": {
+    "inputs": {
+      "value": 20
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "669": {
+    "inputs": {
+      "condition": [
+        "660",
+        0
+      ],
+      "when_true": [
+        "674",
+        0
+      ],
+      "when_false": [
+        "662",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "670": {
+    "inputs": {
+      "prefix": "",
+      "suffix": "",
+      "input": [
+        "669",
+        0
+      ]
+    },
+    "class_type": "SomethingToString",
+    "_meta": {
+      "title": "Something To String"
+    }
+  },
+  "672": {
+    "inputs": {
+      "string": "the subject is portrayed at __{{ age }}__ years of age,  ",
+      "find": "__{{ age }}__",
+      "replace": [
+        "670",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text"
+    }
+  },
+  "674": {
+    "inputs": {
+      "value": 29
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Age"
+    }
+  },
+  "676": {
+    "inputs": {
+      "boolean": true
+    },
+    "class_type": "Logic Boolean Primitive",
+    "_meta": {
+      "title": "Red Lipstick?"
+    }
+  },
+  "744": {
+    "inputs": {
+      "gamma": 1.25,
+      "image": [
+        "573",
+        0
+      ]
+    },
+    "class_type": "LayerColor: Gamma",
+    "_meta": {
+      "title": "LayerColor: Gamma"
+    }
+  },
+  "983": {
+    "inputs": {
+      "condition": [
+        "118",
+        0
+      ],
+      "when_true": [
+        "272",
+        0
+      ],
+      "when_false": [
+        "135",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "984": {
+    "inputs": {
+      "condition": [
+        "118",
+        0
+      ],
+      "when_true": [
+        "1177",
+        0
+      ],
+      "when_false": [
+        "133",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "1094": {
+    "inputs": {
+      "method": "mkl",
+      "strength": 0.08,
+      "multithread": true,
+      "image_ref": [
+        "2279",
+        0
+      ],
+      "image_target": [
+        "1703",
+        0
+      ]
+    },
+    "class_type": "ColorMatch",
+    "_meta": {
+      "title": "Color Match"
+    }
+  },
+  "1177": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Seed (rgthree)"
+    }
+  },
+  "1186": {
+    "inputs": {
+      "sampler_name": "euler_ancestral"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "1187": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "1189",
+        0
+      ],
+      "when_false": [
+        "1186",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "1189": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "1192": {
+    "inputs": {
+      "clip_name1": "clip_l.safetensors",
+      "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+      "type": "flux",
+      "device": "cpu"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+  "1193": {
+    "inputs": {
+      "stop_at_clip_layer": -2,
+      "clip": [
+        "1298",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "1195": {
+    "inputs": {
+      "block_number": 4,
+      "downscale_factor": 1.75,
+      "start_percent": 0,
+      "end_percent": 0.45,
+      "downscale_after_skip": true,
+      "downscale_method": "bislerp",
+      "upscale_method": "bislerp",
+      "model": [
+        "1196",
+        0
+      ]
+    },
+    "class_type": "PatchModelAddDownscale",
+    "_meta": {
+      "title": "4::2::0::0.5"
+    }
+  },
+  "1196": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "1197": {
+    "inputs": {
+      "q": 1.03,
+      "k": 1.01,
+      "v": 0.99,
+      "out": 1.03,
+      "clip": [
+        "1193",
+        0
+      ]
+    },
+    "class_type": "CLIPAttentionMultiply",
+    "_meta": {
+      "title": "CLIPAttentionMultiply"
+    }
+  },
+  "1216": {
+    "inputs": {
+      "clip_l": [
+        "1306",
+        0
+      ],
+      "t5xxl": [
+        "2406",
+        0
+      ],
+      "guidance": 3.5,
+      "clip": [
+        "1192",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncodeFlux",
+    "_meta": {
+      "title": "FLUX_*CLIPTextEncodeFlux"
+    }
+  },
+  "1221": {
+    "inputs": {
+      "conditioning": [
+        "1216",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "1227": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "FLUX VAE"
+    }
+  },
+  "1297": {
+    "inputs": {
+      "lora_name": "Pandora-RAWr.safetensors",
+      "strength_model": 1.5,
+      "strength_clip": 0.02,
+      "model": [
+        "3038",
+        0
+      ],
+      "clip": [
+        "3038",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Pandora-RAWr 0.70::0.70"
+    }
+  },
+  "1298": {
+    "inputs": {
+      "lora_name": "vidhyas_lora_v3.safetensors",
+      "strength_model": 0.82,
+      "strength_clip": 0.12,
+      "model": [
+        "1676",
+        0
+      ],
+      "clip": [
+        "1676",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "v1dhya5 0.92::0.88"
+    }
+  },
+  "1305": {
+    "inputs": {
+      "find": "woman",
+      "replace": "young girl",
+      "text": [
+        "1307",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "1306": {
+    "inputs": {
+      "condition": [
+        "657",
+        0
+      ],
+      "when_true": [
+        "1305",
+        0
+      ],
+      "when_false": [
+        "1307",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "1307": {
+    "inputs": {
+      "find": "__AGE__",
+      "replace": [
+        "667",
+        0
+      ],
+      "text": [
+        "1674",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "1309": {
+    "inputs": {
+      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "1322": {
+    "inputs": {
+      "seed": [
+        "378",
+        0
+      ],
+      "text": [
+        "1323",
+        0
+      ]
+    },
+    "class_type": "Text Random Line",
+    "_meta": {
+      "title": "Text Random Line"
+    }
+  },
+  "1323": {
+    "inputs": {
+      "text": "The subject has a warm, affectionate expression with gentle eyes and a soft natural smile, with natural dimensional teeth if visible.\nThe subject has a subtle playful pout with gently pursed lips and relaxed eyes.\nThe subject has a soft, shy expression with a faint smile, gentle gaze, and slight hesitation.\nThe subject has a naturally happy expression with a relaxed smile, bright expressive eyes, and natural individual teeth if visible.\nThe subject has a joyful expression with a genuine broad smile, naturally smiling eyes, and realistic uneven teeth depth.\nThe subject has a playful, lighthearted expression with a subtle grin and relaxed facial features.\nThe subject has a softly romantic expression with warm eyes, relaxed lips, and gentle emotional warmth.\nThe subject has a subtly flirtatious expression with a playful gaze and a slight confident smile.\nThe subject has a subtly alluring expression with relaxed eyelids, soft lips, and quiet confidence.\nThe subject has a confident, alluring expression with natural elegance and restrained emotional intensity.\nThe subject has a mildly surprised expression with slightly widened eyes, gently raised eyebrows, and natural facial tension.\nThe subject has a slightly open-mouth expression with relaxed lips, natural tooth separation, and a natural facial posture.\n"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "1377": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "||",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [||]"
+    }
+  },
+  "1380": {
+    "inputs": {
+      "text_a": [
+        "1381",
+        0
+      ]
+    },
+    "class_type": "Text Input Switch",
+    "_meta": {
+      "title": "Text Input Switch"
+    }
+  },
+  "1381": {
+    "inputs": {
+      "value": "wearing indian saree with intricate details"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "OnTrue"
+    }
+  },
+  "1383": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "||",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains [||] closed Eyes"
+    }
+  },
+  "1384": {
+    "inputs": {
+      "text_a": [
+        "1385",
+        0
+      ],
+      "text_b": [
+        "644",
+        0
+      ],
+      "boolean": [
+        "1383",
+        0
+      ]
+    },
+    "class_type": "Text Input Switch",
+    "_meta": {
+      "title": "Text Input Switch"
+    }
+  },
+  "1385": {
+    "inputs": {
+      "value": "with closed eyes"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "OnTrue"
+    }
+  },
+  "1429": {
+    "inputs": {
+      "delimiter": ",",
+      "clean_whitespace": "true",
+      "text_a": [
+        "1431",
+        0
+      ],
+      "text_b": [
+        "634",
+        0
+      ],
+      "text_c": [
+        "1322",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "1431": {
+    "inputs": {
+      "text": "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "1447": {
+    "inputs": {
+      "any_01": [
+        "1766",
+        0
+      ],
+      "any_02": [
+        "2339",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "1523": {
+    "inputs": {
+      "any_05": [
+        "1658",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "1572": {
+    "inputs": {
+      "text": "Indian woman, __AGE__ , serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, realistic fabric texture, realistic   background,   ultra high resolution, professional RAW photograph\n"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "1576": {
+    "inputs": {
+      "text": "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman without changing facial expression with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "1628": {
+    "inputs": {
+      "model": [
+        "1660",
+        0
+      ],
+      "conditioning": [
+        "1216",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "FLUX_BasicGuider"
+    }
+  },
+  "1629": {
+    "inputs": {
+      "noise_seed": [
+        "378",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "1631": {
+    "inputs": {},
+    "class_type": "DisableNoise",
+    "_meta": {
+      "title": "DisableNoise"
+    }
+  },
+  "1635": {
+    "inputs": {
+      "output_path": "[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "2198",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "jpg",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": "false",
+      "lossless_webp": "false",
+      "overwrite_mode": "prefix_as_filename",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "1658",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
+  "1639": {
+    "inputs": {
+      "image": [
+        "1447",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "1646": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "1648": {
+    "inputs": {
+      "noise": [
+        "1629",
+        0
+      ],
+      "guider": [
+        "1628",
+        0
+      ],
+      "sampler": [
+        "1646",
+        0
+      ],
+      "sigmas": [
+        "1663",
+        0
+      ],
+      "latent_image": [
+        "2188",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "Pass02:Sampler1"
+    }
+  },
+  "1649": {
+    "inputs": {
+      "a": [
+        "222",
+        0
+      ],
+      "b": 0.64,
+      "operation": "multiply"
+    },
+    "class_type": "easy mathFloat",
+    "_meta": {
+      "title": "0.72"
+    }
+  },
+  "1650": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "1648",
+        0
+      ],
+      "when_false": [
+        "1664",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "1657": {
+    "inputs": {
+      "scheduler": "beta",
+      "steps": 44,
+      "denoise": [
+        "1649",
+        0
+      ],
+      "model": [
+        "1660",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "FLUX_BasicScheduler"
+    }
+  },
+  "1658": {
+    "inputs": {
+      "samples": [
+        "1661",
+        1
+      ],
+      "vae": [
+        "1227",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "FLUX_VAE Decode"
+    }
+  },
+  "1660": {
+    "inputs": {
+      "max_shift": 1.15,
+      "base_shift": 0.6,
+      "width": [
+        "1639",
+        0
+      ],
+      "height": [
+        "1639",
+        1
+      ],
+      "model": [
+        "1298",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "FLUX_ModelSamplingFlux"
+    }
+  },
+  "1661": {
+    "inputs": {
+      "noise": [
+        "1631",
+        0
+      ],
+      "guider": [
+        "1628",
+        0
+      ],
+      "sampler": [
+        "2280",
+        0
+      ],
+      "sigmas": [
+        "1663",
+        1
+      ],
+      "latent_image": [
+        "1650",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "Pass02:Sampler2"
+    }
+  },
+  "1663": {
+    "inputs": {
+      "denoise": 0.78,
+      "sigmas": [
+        "1657",
+        0
+      ]
+    },
+    "class_type": "SplitSigmasDenoise",
+    "_meta": {
+      "title": "0.8"
+    }
+  },
+  "1664": {
+    "inputs": {
+      "noise_seed": [
+        "378",
+        0
+      ],
+      "noise_strength": 0.25,
+      "normalize": "false",
+      "latent": [
+        "1648",
+        0
+      ]
+    },
+    "class_type": "InjectLatentNoise+",
+    "_meta": {
+      "title": "🔧 Inject Latent Noise"
+    }
+  },
+  "1674": {
+    "inputs": {
+      "find": "__EXPRESSION__",
+      "replace": [
+        "1322",
+        0
+      ],
+      "text": [
+        "1309",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "1676": {
+    "inputs": {
+      "lora_name": "breast-size2.safetensors",
+      "strength_model": 2,
+      "strength_clip": 0,
+      "model": [
+        "1297",
+        0
+      ],
+      "clip": [
+        "1297",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Pandora-RAWr 0.70::0.70"
+    }
+  },
+  "1695": {
+    "inputs": {
+      "lora_name": "AntiBlur.safetensors",
+      "strength_model": 1.8,
+      "strength_clip": 1,
+      "model": [
+        "1297",
+        0
+      ],
+      "clip": [
+        "1297",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Pandora-RAWr 0.70::0.70"
+    }
+  },
+  "1703": {
+    "inputs": {
+      "any_03": [
+        "1523",
+        0
+      ],
+      "any_04": [
+        "1766",
+        0
+      ],
+      "any_05": [
+        "2339",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "1766": {
+    "inputs": {
+      "any_02": [
+        "1985",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "1771": {
+    "inputs": {
+      "lut_name": "Presetpro - Fuji Astia.cube",
+      "strength": 0.12,
+      "log": false,
+      "image": [
+        "2377",
+        0
+      ]
+    },
+    "class_type": "ProPostApplyLUT",
+    "_meta": {
+      "title": "ProPostApplyLUT"
+    }
+  },
+  "1780": {
+    "inputs": {
+      "text": "Close-up Photograph of a beautiful Indian v1dhya5 woman with a dark skin tone,"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "1904": {
+    "inputs": {
+      "model_name": "Qwen3-VL-4B-Instruct",
+      "quantization": "4-bit (VRAM-friendly)",
+      "attention_mode": "sdpa",
+      "preset_prompt": "🖼️ Detailed Description",
+      "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nBackground:\nThe user requires a prompt that enables AI to analyze an image and generate a highly accurate recreation prompt suitable for modern text-to-image models. The recreation prompt should faithfully preserve the subject's appearance, apparent age, identity placeholder, composition, clothing, lighting, mood, environment, and artistic style while remaining concise, descriptive, and suitable for image generation.\n\nProfile:\nYou are an expert in computer vision, photography, portraiture, image analysis, and prompt engineering. Your task is to convert visual information into a detailed recreation prompt while preserving the original image as faithfully as possible.\n\nSkills:\n- Image recognition\n- Facial analysis\n- Apparent age estimation\n- Photography terminology\n- Composition analysis\n- Lighting analysis\n- Material and texture recognition\n- Prompt engineering\n\nGoals:\n\n1. Analyze the provided image.\n2. Estimate the subject's apparent age BEFORE performing any other task.\n3. Generate the required metadata.\n4. Generate a detailed recreation prompt capable of reproducing a visually similar image.\n\nConstraints:\n\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\".\n- Estimate only the apparent age based on visible appearance.\n- Never use an exact age.\n- AGE is REQUIRED and must never be omitted.\n- Select exactly one of these age ranges:\n  18-22\n  23-27\n  28-34\n  35-44\n  45-54\n  55-65\n  65+\n- Use HIGH, MEDIUM, or LOW for age confidence.\n- Do not mention uncertainty inside the recreation prompt.\n- Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds that are not visible.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic style whenever possible.\n- Describe only visible characteristics.\n- Do not over-describe individual facial features.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance over minor anatomical details.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- The recreation prompt should be approximately 200–300 words.\n- Output only the required metadata followed immediately by the recreation prompt.\n\nProcedure (follow in this exact order):\n\n1. Estimate the subject's apparent age.\n2. Determine age confidence.\n3. Determine visible gender presentation.\n4. Output the metadata block.\n5. Output the recreation prompt.\n\nOutput Format:\n\nThe response MUST begin with this metadata block. Do not output anything before it.\n\n@@SUBJECT=v1dhya5\n@@AGE=<18-22|23-27|28-34|35-44|45-54|55-65|65+>\n@@AGE_CONFIDENCE=<HIGH|MEDIUM|LOW>\n@@GENDER_PRESENTATION=<FEMININE|MASCULINE|ANDROGYNOUS|UNKNOWN>\n@@END_METADATA\n\nAfter @@END_METADATA, output exactly one cohesive paragraph containing only the recreation prompt.\n\nThe recreation prompt must naturally mention \"v1dhya5\" once, preserve the detected artistic medium (photograph, illustration, painting, digital art, sketch, anime, comic, watercolor, oil painting, 3D render, etc.), preserve the original composition and style, and be optimized for FLUX text-to-image models.\n\nDo not output Markdown, headings, JSON, XML, bullet points, explanations, reasoning, or any additional text outside the required metadata block and recreation prompt.",
+      "max_tokens": 384,
+      "keep_model_loaded": true,
+      "seed": [
+        "378",
+        0
+      ],
+      "image": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "AILab_QwenVL",
+    "_meta": {
+      "title": "QwenVL Auto Prompt (reccomend do not change)"
+    }
+  },
+  "1974": {
+    "inputs": {
+      "text": "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian dark brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women. Avoid pale skin, pink undertones, porcelain skin, washed-out complexion, artificial glow, overexposed highlights, beauty-filter smoothing, or airbrushed whitening. Ensure the final result retains a distinctly dark brown Indian complexion under natural lighting with realistic melanin response and photographic dynamic range."
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "1982": {
+    "inputs": {
+      "condition": [
+        "2078",
+        0
+      ],
+      "when_true": [
+        "2066",
+        0
+      ],
+      "when_false": [
+        "2059",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "1985": {
+    "inputs": {
+      "samples": [
+        "2007",
+        0
+      ],
+      "vae": [
+        "2127",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Klein_VAE Decode"
+    }
+  },
+  "1993": {
+    "inputs": {
+      "output_path": "[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "1982",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 2,
+      "filename_number_start": "false",
+      "extension": "jpg",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": "false",
+      "lossless_webp": "false",
+      "overwrite_mode": "prefix_as_filename",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "1985",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
+  "2007": {
+    "inputs": {
+      "seed": [
+        "378",
+        0
+      ],
+      "steps": 15,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.13,
+      "model": [
+        "2011",
+        0
+      ],
+      "positive": [
+        "2026",
+        0
+      ],
+      "negative": [
+        "2025",
+        0
+      ],
+      "latent_image": [
+        "2937",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "Klein_KSampler"
+    }
+  },
+  "2011": {
+    "inputs": {
+      "max_shift": 0.75,
+      "base_shift": 0.43,
+      "width": 1024,
+      "height": 1024,
+      "model": [
+        "2034",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "ModelSamplingFlux"
+    }
+  },
+  "2012": {
+    "inputs": {
+      "text": [
+        "2262",
+        0
+      ],
+      "clip": [
+        "2116",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "2025": {
+    "inputs": {
+      "conditioning": [
+        "2012",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "2026": {
+    "inputs": {
+      "active_scale": 1.05,
+      "per_token_whiten": 0.05,
+      "norm_equalize": 0.05,
+      "early_layer_scale": 1.4,
+      "mid_layer_scale": 1,
+      "late_layer_scale": 0.8,
+      "preserve_original": 1,
+      "active_end_override": 1,
+      "device": "auto",
+      "debug": false,
+      "conditioning": [
+        "2012",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinEnhancer",
+    "_meta": {
+      "title": "FLUX.2 Klein Enhancer"
+    }
+  },
+  "2034": {
+    "inputs": {
+      "lora_name": "Purple_Grainy-FK_epoch_12.safetensors",
+      "strength_model": 0.64,
+      "model": [
+        "2219",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "2045": {
+    "inputs": {
+      "image": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors"
+    }
+  },
+  "2047": {
+    "inputs": {
+      "expression": "(a * b / 2 + 32)-((a * b / 2 + 32)%64)",
+      "a": [
+        "476",
+        0
+      ],
+      "b": [
+        "2074",
+        0
+      ],
+      "c": [
+        "2074",
+        1
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "tile height (Math Expression 🐍)"
+    }
+  },
+  "2052": {
+    "inputs": {
+      "value": 1024
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "Zero"
+    }
+  },
+  "2053": {
+    "inputs": {
+      "mode": true,
+      "a": [
+        "2047",
+        0
+      ],
+      "b": [
+        "2052",
+        0
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
+  "2056": {
+    "inputs": {
+      "value": "_pass2_"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "2057": {
+    "inputs": {
+      "value": "_generated_"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "2058": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "2073",
+        0
+      ],
+      "text_b": [
+        "2057",
+        0
+      ],
+      "text_c": [
+        "2063",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "2059": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "2073",
+        0
+      ],
+      "text_b": [
+        "2061",
+        0
+      ],
+      "text_c": [
+        "2063",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "2060": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "2073",
+        0
+      ],
+      "text_b": [
+        "2056",
+        0
+      ],
+      "text_c": [
+        "2063",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "2061": {
+    "inputs": {
+      "value": "_upscaled_"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "2062": {
+    "inputs": {
+      "value": "_prompt_"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "2063": {
+    "inputs": {
+      "int": [
+        "378",
+        0
+      ]
+    },
+    "class_type": "IntToString|LP",
+    "_meta": {
+      "title": "Convert Int To String [LP]"
+    }
+  },
+  "2065": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "2073",
+        0
+      ],
+      "text_b": [
+        "2062",
+        0
+      ],
+      "text_c": [
+        "2063",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "2066": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "2073",
+        0
+      ],
+      "text_b": [
+        "2067",
+        0
+      ],
+      "text_c": [
+        "2063",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "2067": {
+    "inputs": {
+      "value": "_prep_"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "2070": {
+    "inputs": {
+      "mode": true,
+      "a": [
+        "2075",
+        0
+      ],
+      "b": [
+        "2052",
+        0
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
+  "2073": {
+    "inputs": {
+      "file_prefix": "D_",
+      "time_format": "%Y%m%dT%H%M%S_",
+      "output_folder": "",
+      "filetype": ""
+    },
+    "class_type": "FilePathCreator",
+    "_meta": {
+      "title": "File Path Creator"
+    }
+  },
+  "2074": {
+    "inputs": {
+      "image": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "2075": {
+    "inputs": {
+      "expression": "(a * b / 2 + 32)-((a * b / 2 + 32)%64)",
+      "a": [
+        "476",
+        0
+      ],
+      "b": [
+        "2074",
+        0
+      ],
+      "c": [
+        "2074",
+        1
+      ]
+    },
+    "class_type": "MathExpression|pysssss",
+    "_meta": {
+      "title": "tile height (Math Expression 🐍)"
+    }
+  },
+  "2078": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Boolean"
+    }
+  },
+  "2116": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "2124": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "2127": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "2131": {
+    "inputs": {
+      "model_a": [
+        "2219",
+        0
+      ],
+      "model_b": [
+        "2144",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "2133": {
+    "inputs": {
+      "model_a": [
+        "2142",
+        0
+      ],
+      "model_b": [
+        "2140",
+        0
+      ],
+      "boolean": [
+        "657",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "2134": {
+    "inputs": {
+      "clip_a": [
+        "2142",
+        1
+      ],
+      "clip_b": [
+        "2140",
+        1
+      ],
+      "boolean": [
+        "657",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "2135": {
+    "inputs": {
+      "clip_a": [
+        "2116",
+        0
+      ],
+      "clip_b": [
+        "2144",
+        1
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "2140": {
+    "inputs": {
+      "lora_name": "klein_slider_bodyweight_50.safetensors",
+      "strength_model": 1.95,
+      "strength_clip": 0.21,
+      "model": [
+        "2141",
+        0
+      ],
+      "clip": [
+        "2141",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
+  "2141": {
+    "inputs": {
+      "lora_name": "The_Body_SFW_KK_Flux.2.klein.9B_000005000.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.09,
+      "model": [
+        "2142",
+        0
+      ],
+      "clip": [
+        "2142",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "RealSKin 0.92:0.10"
+    }
+  },
+  "2142": {
+    "inputs": {
+      "lora_name": "klein_slider_bust.safetensors",
+      "strength_model": 1.2,
+      "strength_clip": 0.21,
+      "model": [
+        "2131",
+        0
+      ],
+      "clip": [
+        "2135",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
+  "2144": {
+    "inputs": {
+      "lora_name": "ultra_real_v3.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0.1,
+      "model": [
+        "2148",
+        0
+      ],
+      "clip": [
+        "2148",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "RealSKin 0.92:0.10"
+    }
+  },
+  "2148": {
+    "inputs": {
+      "lora_name": "V4_flux_klein.safetensors",
+      "strength_model": 0.6,
+      "strength_clip": 0.6,
+      "model": [
+        "2219",
+        0
+      ],
+      "clip": [
+        "2116",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA  - 0.60:0.44"
+    }
+  },
+  "2158": {
+    "inputs": {
+      "join_with": ",",
+      "string_list": [
+        "2159",
+        0
+      ]
+    },
+    "class_type": "StringListToString",
+    "_meta": {
+      "title": "String List to String"
+    }
+  },
+  "2159": {
+    "inputs": {
+      "string": [
+        "135",
+        3
+      ],
+      "regex_pattern": "\\[(.*)\\]",
+      "mode": "All Groups",
+      "case_insensitive": false,
+      "multiline": false,
+      "dotall": false,
+      "group_index": 1
+    },
+    "class_type": "RegexExtract",
+    "_meta": {
+      "title": "Extract Text"
+    }
+  },
+  "2160": {
+    "inputs": {
+      "string": [
+        "2158",
+        0
+      ],
+      "find": "_",
+      "replace": ","
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text"
+    }
+  },
+  "2163": {
+    "inputs": {
+      "boolean": [
+        "2165",
+        0
+      ]
+    },
+    "class_type": "Logic NOT",
+    "_meta": {
+      "title": "Logic NOT"
+    }
+  },
+  "2165": {
+    "inputs": {
+      "boolean_a": [
+        "626",
+        0
+      ],
+      "boolean_b": [
+        "638",
+        0
+      ]
+    },
+    "class_type": "Logic Comparison OR",
+    "_meta": {
+      "title": "Logic Comparison OR"
+    }
+  },
+  "2183": {
+    "inputs": {
+      "samples": [
+        "2197",
+        0
+      ]
+    },
+    "class_type": "RemoveNoiseMask",
+    "_meta": {
+      "title": "Remove Noise Mask"
+    }
+  },
+  "2188": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "2197",
+        0
+      ],
+      "when_false": [
+        "2189",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "2189": {
+    "inputs": {
+      "noise_seed": [
+        "984",
+        0
+      ],
+      "noise_strength": 0.18,
+      "normalize": "false",
+      "latent": [
+        "2183",
+        0
+      ]
+    },
+    "class_type": "InjectLatentNoise+",
+    "_meta": {
+      "title": "🔧 Inject Latent Noise"
+    }
+  },
+  "2197": {
+    "inputs": {
+      "pixels": [
+        "1447",
+        0
+      ],
+      "vae": [
+        "1227",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "FLUX_VAE Encode"
+    }
+  },
+  "2198": {
+    "inputs": {
+      "condition": [
+        "2078",
+        0
+      ],
+      "when_true": [
+        "2066",
+        0
+      ],
+      "when_false": [
+        "2059",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "2202": {
+    "inputs": {
+      "width": 168,
+      "height": 38,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "class_type": "Image Blank",
+    "_meta": {
+      "title": "Image Blank"
+    }
+  },
+  "2204": {
+    "inputs": {
+      "a": [
+        "2208",
+        2
+      ],
+      "b": -168,
+      "operation": "add"
+    },
+    "class_type": "easy mathInt",
+    "_meta": {
+      "title": "Math Int"
+    }
+  },
+  "2205": {
+    "inputs": {
+      "mask": [
+        "2216",
+        1
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "Invert Mask"
+    }
+  },
+  "2207": {
+    "inputs": {
+      "a": [
+        "2208",
+        1
+      ],
+      "b": -42,
+      "operation": "add"
+    },
+    "class_type": "easy mathInt",
+    "_meta": {
+      "title": "Math Int"
+    }
+  },
+  "2208": {
+    "inputs": {
+      "image": [
+        "1771",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "2215": {
+    "inputs": {
+      "overlay_resize": "None",
+      "resize_method": "bilinear",
+      "rescale_factor": 1,
+      "width": 512,
+      "height": 512,
+      "x_offset": [
+        "2207",
+        0
+      ],
+      "y_offset": [
+        "2204",
+        0
+      ],
+      "rotation": -90,
+      "opacity": 1.8,
+      "base_image": [
+        "1771",
+        0
+      ],
+      "overlay_image": [
+        "2216",
+        0
+      ],
+      "optional_mask": [
+        "2205",
+        0
+      ]
+    },
+    "class_type": "Image Overlay",
+    "_meta": {
+      "title": "Image Overlay"
+    }
+  },
+  "2216": {
+    "inputs": {
+      "text": [
+        "2218",
+        0
+      ],
+      "font": "SevenSegment.ttf",
+      "size": 42,
+      "color": "#ffb703FF",
+      "background_color": "#00000000",
+      "shadow_distance": 2,
+      "shadow_blur": 2,
+      "shadow_color": "#ADADAD",
+      "horizontal_align": "right",
+      "vertical_align": "bottom",
+      "offset_x": -4,
+      "offset_y": -2,
+      "direction": "ltr",
+      "img_composite": [
+        "2202",
+        0
+      ]
+    },
+    "class_type": "DrawText+",
+    "_meta": {
+      "title": "🔧 Draw Text"
+    }
+  },
+  "2218": {
+    "inputs": {
+      "file_prefix": ".",
+      "time_format": "'%y %-d %-m ",
+      "output_folder": "",
+      "filetype": ""
+    },
+    "class_type": "FilePathCreator",
+    "_meta": {
+      "title": "File Path Creator"
+    }
+  },
+  "2219": {
+    "inputs": {
+      "lora_name": "vidhyas_lora_v4_klein.safetensors",
+      "strength_model": 0.95,
+      "model": [
+        "2124",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Klein_Load LoRA"
+    }
+  },
+  "2254": {
+    "inputs": {
+      "condition": [
+        "2078",
+        0
+      ],
+      "when_true": [
+        "2066",
+        0
+      ],
+      "when_false": [
+        "2059",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "2259": {
+    "inputs": {
+      "text": "Color correction and watermark and logos overlay clean-up only.\nPreserve all image content exactly.\nPreserve the transparency of the clothing.\nPreserve facial identity, expression, gaze direction, pose, clothing, hairstyle, body proportions, composition, lighting direction, shadows, and texture.\n\nReduce excessive color bias especially Red.\n\n\nSkin refinement means color fidelity and natural texture preservation only.  It must never perform cosmetic enhancement, beauty retouching, skin smoothing, wrinkle removal, blemish removal, makeup enhancement, face reshaping, or age modification.\n\n\nMaintain natural, healthy skin tones appropriate to the subject's ethnicity.\nRefine skin only by improving natural color consistency, tonal transitions, and subtle texture while preserving pores, fine lines, freckles, moles, and other natural skin features. Refine Lips texture, supple and wet, subtle barely visible red lipstick\nDo not smooth, beautify, airbrush, or alter skin shape, age, or facial characteristics.\nAvoid waxy, plastic, overly sharp, or AI-generated skin appearance.\n\n\n\nDo not alter image content or structure.\n\nstrictly no color if the reference is only monochrome\n\n__INSTRUCTION_FROM_FILE__,\n"
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "2262": {
+    "inputs": {
+      "find": "__INSTRUCTION_FROM_FILE__",
+      "replace": [
+        "2160",
+        0
+      ],
+      "text": [
+        "2259",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "2266": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Boolean"
+    }
+  },
+  "2270": {
+    "inputs": {
+      "value": 0.96
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "2272": {
+    "inputs": {
+      "condition": [
+        "582",
+        0
+      ],
+      "when_true": [
+        "2274",
+        0
+      ],
+      "when_false": [
+        "2270",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "2274": {
+    "inputs": {
+      "value": 0.2
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "2275": {
+    "inputs": {
+      "value": 0.54
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "2276": {
+    "inputs": {
+      "condition": [
+        "583",
+        0
+      ],
+      "when_true": [
+        "2277",
+        0
+      ],
+      "when_false": [
+        "2275",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "2277": {
+    "inputs": {
+      "value": 1.2
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Strength"
+    }
+  },
+  "2279": {
+    "inputs": {
+      "platform": "FLUX",
+      "orientation": "original",
+      "attention": "maximize",
+      "image": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "quadmoonConvertNormalizeHW",
+    "_meta": {
+      "title": "Normalize Image Dimensions"
+    }
+  },
+  "2280": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "2285": {
+    "inputs": {
+      "any": [
+        "421",
+        1
+      ]
+    },
+    "class_type": "easy isNone",
+    "_meta": {
+      "title": "Is None"
+    }
+  },
+  "2286": {
+    "inputs": {
+      "label": "background",
+      "device": "auto",
+      "dtype": "bfloat16",
+      "model_id": "fashn-ai/fashn-human-parser",
+      "extra_labels": "skin",
+      "blur_radius": 3,
+      "invert": false,
+      "image": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "FashnHumanParserMask",
+    "_meta": {
+      "title": "FASHN Human Parser (Mask)"
+    }
+  },
+  "2287": {
+    "inputs": {
+      "label": "background",
+      "device": "auto",
+      "dtype": "bfloat16",
+      "model_id": "fashn-ai/fashn-human-parser",
+      "extra_labels": "skin",
+      "blur_radius": 3,
+      "invert": true,
+      "image": [
+        "744",
+        0
+      ]
+    },
+    "class_type": "FashnHumanParserMask",
+    "_meta": {
+      "title": "FASHN Human Parser (Mask)"
+    }
+  },
+  "2300": {
+    "inputs": {
+      "selection_setting": [
+        "2301",
+        1
+      ],
+      "input_1": [
+        "2304",
+        0
+      ],
+      "input_2": [
+        "2303",
+        0
+      ]
+    },
+    "class_type": "TwoWaySwitch",
+    "_meta": {
+      "title": "Switch (Two Way)"
+    }
+  },
+  "2301": {
+    "inputs": {
+      "choice": "Image Reference",
+      "index": 0,
+      "option1": "Image Reference",
+      "option2": "Style Transfer",
+      "option3": ""
+    },
+    "class_type": "CustomCombo",
+    "_meta": {
+      "title": "Custom Combo"
+    }
+  },
+  "2303": {
+    "inputs": {
+      "text": "Use the reference image exclusively as a style reference.\n\nIgnore the reference image's subject, pose, facial expression, clothing, objects, scene, composition, camera angle, and narrative.\n\nExtract only transferable visual style characteristics, including:\n- Color palette and color harmony\n- White balance and tonal mapping\n- Lighting quality and shadow characteristics\n- Contrast and dynamic range\n- Rendering medium and artistic technique\n- Brushwork, line quality, texture, material rendering, and level of detail\n- Mood, atmosphere, and overall aesthetic treatment\n\nApply these visual style characteristics to the user's target image or prompt while preserving the target's own subjects, composition, content, pose, and scene exactly.\n\nDo not transfer objects, layouts, identities, poses, backgrounds, or semantic content from the reference image.\n\nOutput only a single optimized image-generation prompt."
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "2304": {
+    "inputs": {
+      "text": "Analyze the reference image and identify only the visual characteristics that are important for faithfully recreating it.\n\nExtract:\n- Subject appearance, pose, facial expression, gaze direction, body posture, clothing, accessories, hairstyle, and proportions.\n- Composition, framing, camera angle, perspective, subject scale, and crop.\n- Background, environment, lighting direction, shadows, depth of field, atmosphere, and overall photographic or artistic style.\n- Color palette, white balance, tonal range, materials, textures, and rendering characteristics.\n\nCombine the extracted visual information with the user's instructions. Apply only the requested modifications while preserving all other visual characteristics of the reference image.\n\nIf the user's instruction conflicts with the reference image, modify only the requested aspects and keep everything else consistent with the reference.\n\nOutput only a single optimized image-generation prompt."
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "2309": {
+    "inputs": {
+      "any_01": [
+        "3027",
+        0
+      ],
+      "any_02": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "2310": {
+    "inputs": {
+      "pixels": [
+        "2350",
+        0
+      ],
+      "vae": [
+        "2315",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "Krea_VAE Encode"
+    }
+  },
+  "2314": {
+    "inputs": {
+      "conditioning": [
+        "2375",
+        1
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "2315": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "FLUX VAE"
+    }
+  },
+  "2322": {
+    "inputs": {
+      "unet_name": "realiaKrea2V1.7Idr.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "2330": {
+    "inputs": {
+      "samples": [
+        "2962",
+        0
+      ],
+      "vae": [
+        "2315",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Krea_VAE Decode"
+    }
+  },
+  "2333": {
+    "inputs": {
+      "stop_at_clip_layer": -1,
+      "clip": [
+        "3021",
+        1
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "2339": {
+    "inputs": {
+      "any_01": [
+        "2330",
+        0
+      ],
+      "any_02": [
+        "577",
+        0
+      ],
+      "any_03": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "2349": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "2350": {
+    "inputs": {
+      "megapixel": "1.8",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 0,
+      "image": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations"
+    }
+  },
+  "2354": {
+    "inputs": {
+      "seed": [
+        "378",
+        0
+      ],
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": [
+        "3030",
+        0
+      ],
+      "model": [
+        "2375",
+        0
+      ],
+      "positive": [
+        "2381",
+        0
+      ],
+      "negative": [
+        "2314",
+        0
+      ],
+      "latent_image": [
+        "2310",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "Krea_KSampler"
+    }
+  },
+  "2355": {
+    "inputs": {
+      "condition": [
+        "2078",
+        0
+      ],
+      "when_true": [
+        "2066",
+        0
+      ],
+      "when_false": [
+        "2059",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "2356": {
+    "inputs": {
+      "output_path": "[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "2355",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "jpg",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": "false",
+      "lossless_webp": "false",
+      "overwrite_mode": "prefix_as_filename",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "2330",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
+  "2375": {
+    "inputs": {
+      "prompt": [
+        "655",
+        0
+      ],
+      "vision_megapixels": 1.5,
+      "mask_padding": 0,
+      "conditioning_rescaling": false,
+      "multiplier": 4,
+      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,3.0,1.1,2.5,1.0",
+      "prompt_adherence_enhancer": true,
+      "strength": 1,
+      "clip": [
+        "3021",
+        1
+      ],
+      "model": [
+        "3021",
+        0
+      ],
+      "system_prompt": [
+        "2300",
+        0
+      ],
+      "images": [
+        "2350",
+        0
+      ]
+    },
+    "class_type": "VantageTextEncodeKrea2",
+    "_meta": {
+      "title": "Vantage Text Encode (Krea2)"
+    }
+  },
+  "2376": {
+    "inputs": {
+      "temperature": -5,
+      "hue": 0,
+      "brightness": 0,
+      "contrast": -2.49999999999,
+      "saturation": -0.3,
+      "gamma": 1,
+      "image": [
+        "1094",
+        0
+      ]
+    },
+    "class_type": "ColorCorrect",
+    "_meta": {
+      "title": "ColorCorrect"
+    }
+  },
+  "2377": {
+    "inputs": {
+      "lens_distortion": -0.002,
+      "color_temperature": 0,
+      "tint": 0,
+      "atmosphere_enabled": false,
+      "haze_strength": 0,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "f/5.6",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0.01,
+      "promist_strength": 0.02,
+      "halation_strength": 0,
+      "chromatic_aberration": 0.001,
+      "vignette_intensity": 0.02,
+      "grain_power": 0.002,
+      "monochrome_grain": false,
+      "highlight_rolloff": 0.08,
+      "image": [
+        "2376",
+        0
+      ],
+      "depth_map": [
+        "2045",
+        0
+      ]
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics"
+    }
+  },
+  "2381": {
+    "inputs": {
+      "prompt": [
+        "2406",
+        0
+      ],
+      "clip": [
+        "2333",
+        0
+      ],
+      "vae": [
+        "2315",
+        0
+      ],
+      "image1": [
+        "2350",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "Krea_TextEncodeQwenImageEditPlus"
+    }
+  },
+  "2405": {
+    "inputs": {
+      "prompt": [
+        "2414",
+        0
+      ],
+      "max_length": 280,
+      "sampling_mode": "on",
+      "sampling_mode.temperature": 0.7,
+      "sampling_mode.top_k": 64,
+      "sampling_mode.top_p": 0.95,
+      "sampling_mode.min_p": 0.05,
+      "sampling_mode.repetition_penalty": 1.05,
+      "sampling_mode.seed": [
+        "378",
+        0
+      ],
+      "sampling_mode.presence_penalty": 0,
+      "thinking": false,
+      "use_default_template": true,
+      "clip": [
+        "2349",
+        0
+      ],
+      "image": [
+        "2938",
+        0
+      ]
+    },
+    "class_type": "TextGenerate",
+    "_meta": {
+      "title": "Krea_Generate Text"
+    }
+  },
+  "2406": {
+    "inputs": {
+      "string_a": [
+        "2405",
+        0
+      ],
+      "string_b": "No visible text, no letters, no words, no numbers, no logos,\nno watermark, no signature, no label, no caption,\nno printed graphics, no repeating text patterns.",
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text (LoRA Trigger Word)"
+    }
+  },
+  "2407": {
+    "inputs": {
+      "value": "You are an expert prompt engineer for FLUX and Krea text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt while faithfully preserving the user's intent.\n\nThe subject identifier is \"v1dhya5\". Treat this only as an internal identity token. Never describe, request, imply, or render \"v1dhya5\" as visible text, a logo, watermark, signature, label, embroidery, print, branding, caption, or graphic anywhere in the image.\n\nBefore writing the final prompt, reason internally about:\n- The primary subject and mood.\n- Composition, framing, and camera perspective.\n- Appropriate photographic or artistic style.\n- Lighting, color palette, and atmosphere.\n- The level of detail required to faithfully reproduce the user's intent.\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n\n1. **Faithfulness First:** Preserve all original subjects, actions, colors, composition, camera perspective, lighting, and spatial relationships. Do not invent new objects, people, props, animals, backgrounds, or scene elements.\n\n2. **Prompt Optimization:** Improve prompt readability and structure for FLUX/Krea while preserving the user's intent. Organize related visual attributes naturally.\n\n3. **Identity Preservation:** Preserve the identity represented by \"v1dhya5\". Mention the identifier exactly once near the beginning of the prompt only as an identity token. Never imply that it should appear visibly anywhere in the generated image.\n\n4. **Natural Description:** Do not over-describe facial features or skin texture. Use natural photographic language. Focus on composition, clothing, lighting, body proportions, materials, environment, artistic style, and overall appearance. Avoid describing pores, peach fuzz, vellus hairs, skin microtexture, blemishes, freckles, wrinkles, or similar fine skin details unless explicitly requested by the user.\n\n5. **Body Description:** If the prompt contains a \"-- body description --\" section, rewrite it appropriately to match the detected or specified age while preserving the user's intended body type and proportions. Treat the existing body description as guidance rather than fixed text.\n\n6. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and optimize it instead of expanding unnecessarily.\n\n7. **Preserve Medium:** Preserve the requested or implied medium (photograph, illustration, painting, digital art, sketch, comic, 3D render, etc.). Do not change the medium.\n\n8. **No Text Artifacts:** Unless the user explicitly requests visible text, never generate or imply text, letters, words, numbers, logos, watermarks, signatures, branding, labels, captions, printed graphics, embroidery, or stamps anywhere in the image.\n\n9. **Human Realism:** Treat people naturally and respectfully. Preserve realistic anatomy and age-appropriate proportions.\n\n10. **Structure:** Output one cohesive paragraph only. No Markdown, bullet points, JSON, XML, headings, explanations, analysis, or reasoning.\n\nAim for approximately 220–320 words. Prioritize the most visually significant elements while avoiding unnecessary repetition or excessive fine detail.\n\nUser's Input:\n\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (System Prompt)"
+    }
+  },
+  "2413": {
+    "inputs": {
+      "text": "A professionally color-graded photograph of an Indian woman, v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, moderate textile detail, and authentic photographic softness. Avoid exaggerated fabric texture, embroidery definition, weave visibility, or hyper-detailed clothing."
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "2414": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "2407",
+        0
+      ],
+      "text_b": [
+        "2413",
+        0
+      ],
+      "text_c": [
+        "655",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "2925": {
+    "inputs": {
+      "lora_name": "vidhyas_lora_v3.safetensors",
+      "strength_model": 0.82,
+      "strength_clip": 0.8,
+      "model": [
+        "1196",
+        0
+      ],
+      "clip": [
+        "1192",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "v1dhya5 0.92::0.88"
+    }
+  },
+  "2936": {
+    "inputs": {
+      "pixels": [
+        "2339",
+        0
+      ],
+      "vae": [
+        "2127",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "Klein_VAE Enc"
+    }
+  },
+  "2937": {
+    "inputs": {
+      "any_02": [
+        "2936",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "2938": {
+    "inputs": {
+      "width": 768,
+      "height": 768,
+      "upscale_method": "bicubic",
+      "keep_proportion": "pad_edge",
+      "pad_color": "0, 0, 0",
+      "crop_position": "center",
+      "divisible_by": 8,
+      "device": "gpu",
+      "image": [
+        "3024",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "2941": {
+    "inputs": {
+      "platform": "FLUX",
+      "orientation": "original",
+      "attention": "maximize"
+    },
+    "class_type": "quadmoonConvertNormalizeHW",
+    "_meta": {
+      "title": "Normalize Image Dimensions"
+    }
+  },
+  "2949": {
+    "inputs": {
+      "mode": "always",
+      "volume": 0.5,
+      "file": "notify.mp3",
+      "any": [
+        "470",
+        0
+      ]
+    },
+    "class_type": "PlaySound|pysssss",
+    "_meta": {
+      "title": "PlaySound 🐍"
+    }
+  },
+  "2951": {
+    "inputs": {
+      "megapixel": "2.0",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 0,
+      "image": [
+        "1447",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations"
+    }
+  },
+  "2954": {
+    "inputs": {
+      "path": "Inputs/Processed/[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "235",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 2,
+      "file_extension": ".txt",
+      "encoding": "utf-8",
+      "filename_suffix": [
+        "2957",
+        0
+      ],
+      "text": [
+        "655",
+        0
+      ]
+    },
+    "class_type": "Save Text File",
+    "_meta": {
+      "title": "Save Text File"
+    }
+  },
+  "2957": {
+    "inputs": {
+      "condition": [
+        "447",
+        0
+      ],
+      "when_true": [
+        "2958",
+        0
+      ],
+      "when_false": [
+        "2959",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "2958": {
+    "inputs": {
+      "value": "T"
+    },
+    "class_type": "easy string",
+    "_meta": {
+      "title": "String"
+    }
+  },
+  "2959": {
+    "inputs": {
+      "value": "F"
+    },
+    "class_type": "easy string",
+    "_meta": {
+      "title": "String"
+    }
+  },
+  "2962": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": [
+        "378",
+        0
+      ],
+      "steps": 9,
+      "cfg": 1,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "sgm_uniform",
+      "start_at_step": 4,
+      "end_at_step": 999,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "2375",
+        0
+      ],
+      "positive": [
+        "2381",
+        0
+      ],
+      "negative": [
+        "2381",
+        0
+      ],
+      "latent_image": [
+        "2354",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "Krea_KSampler (Advanced)"
+    }
+  },
+  "2973": {
+    "inputs": {
+      "output_path": "../Inputs/Processed/[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "235",
+        0
+      ],
+      "filename_delimiter": [
+        "2957",
+        0
+      ],
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": "true",
+      "lossless_webp": "false",
+      "overwrite_mode": "false",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "true",
+      "images": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
+  "2999": {
+    "inputs": {
+      "text": [
+        "3008",
+        0
+      ],
+      "clip": [
+        "2135",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "3002": {
+    "inputs": {
+      "image": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Size"
+    }
+  },
+  "3003": {
+    "inputs": {
+      "width": [
+        "3002",
+        0
+      ],
+      "height": [
+        "3002",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "3004": {
+    "inputs": {
+      "seed": [
+        "378",
+        0
+      ],
+      "steps": 7,
+      "cfg": 1,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "sgm_uniform",
+      "denoise": 1,
+      "model": [
+        "2131",
+        0
+      ],
+      "positive": [
+        "3016",
+        0
+      ],
+      "negative": [
+        "3005",
+        0
+      ],
+      "latent_image": [
+        "3003",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "Klein_KSampler"
+    }
+  },
+  "3005": {
+    "inputs": {
+      "conditioning": [
+        "2999",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "3008": {
+    "inputs": {
+      "find": "__INSTRUCTION_FROM_FILE__",
+      "replace": [
+        "2160",
+        0
+      ],
+      "text": [
+        "3009",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "3009": {
+    "inputs": {
+      "value": "Leica M6 film aesthetic .\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color.\n\nwithout changing color grading, make the photo bit darker."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3011": {
+    "inputs": {
+      "samples": [
+        "3004",
+        0
+      ]
+    },
+    "class_type": "RemoveNoiseMask",
+    "_meta": {
+      "title": "Remove Noise Mask"
+    }
+  },
+  "3012": {
+    "inputs": {
+      "samples": [
+        "3011",
+        0
+      ],
+      "vae": [
+        "2127",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Klein_VAE Decode"
+    }
+  },
+  "3016": {
+    "inputs": {
+      "conditioning": [
+        "2999",
+        0
+      ],
+      "latent": [
+        "3017",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "ReferenceLatent"
+    }
+  },
+  "3017": {
+    "inputs": {
+      "pixels": [
+        "2279",
+        0
+      ],
+      "vae": [
+        "2127",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "Klein_VAE Enc"
+    }
+  },
+  "3021": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "age_krea2_loraholic.safetensors",
+        "strength": -0.45
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "BreastSlider-KREA2.safetensors",
+        "strength": 1
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "SEAN_ARCHER_PHOTOSTYLE_epoch_10.safetensors",
+        "strength": 0.2
+      },
+      "lora_4": {
+        "on": false,
+        "lora": "SummerVibesHM_krea2_epoch8.safetensors",
+        "strength": 0.2
+      },
+      "lora_5": {
+        "on": false,
+        "lora": "candid_krea2_loraholic.safetensors",
+        "strength": 6
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "3028",
+        0
+      ],
+      "clip": [
+        "3028",
+        1
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "3024": {
+    "inputs": {
+      "any_01": [
+        "3027",
+        0
+      ],
+      "any_02": [
+        "2279",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
+    }
+  },
+  "3027": {
+    "inputs": {
+      "lut_name": "Presetpro - Agfa Ultra 100.cube",
+      "strength": 0.17,
+      "log": false,
+      "image": [
+        "3012",
+        0
+      ]
+    },
+    "class_type": "ProPostApplyLUT",
+    "_meta": {
+      "title": "ProPostApplyLUT"
+    }
+  },
+  "3028": {
+    "inputs": {
+      "lora_name": "vidhyas_lora_v1_krea.safetensors",
+      "strength_model": 0.8,
+      "strength_clip": 0,
+      "model": [
+        "2322",
+        0
+      ],
+      "clip": [
+        "2349",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
+  "3030": {
+    "inputs": {
+      "a": [
+        "222",
+        0
+      ],
+      "b": 0.37,
+      "operation": "multiply"
+    },
+    "class_type": "easy mathFloat",
+    "_meta": {
+      "title": "0.72"
+    }
+  },
+  "3031": {
+    "inputs": {
+      "lens_distortion": -0.002,
+      "color_temperature": 0,
+      "tint": 0,
+      "atmosphere_enabled": false,
+      "haze_strength": 0,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "f/5.6",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0.01,
+      "promist_strength": 0.02,
+      "halation_strength": 0,
+      "chromatic_aberration": 0.001,
+      "vignette_intensity": 0.02,
+      "grain_power": 0.002,
+      "monochrome_grain": false,
+      "highlight_rolloff": 0.08
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics"
+    }
+  },
+  "3038": {
+    "inputs": {
+      "lora_name": "FluxSideboob.safetensors",
+      "strength_model": 0.4,
+      "strength_clip": 0.02,
+      "model": [
+        "3039",
+        0
+      ],
+      "clip": [
+        "1192",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Pandora-RAWr 0.70::0.70"
+    }
+  },
+  "3039": {
+    "inputs": {
+      "block_number": 4,
+      "downscale_factor": 1.25,
+      "start_percent": 0.45,
+      "end_percent": 0.6,
+      "downscale_after_skip": true,
+      "downscale_method": "bislerp",
+      "upscale_method": "bislerp",
+      "model": [
+        "1195",
+        0
+      ]
+    },
+    "class_type": "PatchModelAddDownscale",
+    "_meta": {
+      "title": "4::2::0::0.5"
+    }
+  },
+  "3040": {
+    "inputs": {
+      "value": "Photographic color correction only.\n\nTreat the input image as the source of truth. Preserve all existing image content, composition, lighting, facial identity, clothing, accessories, and textures.\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\nMatch only the color of visible accessories to the input  image. Do not add, remove, redesign, or invent accessories or mehndi.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  }
+}
