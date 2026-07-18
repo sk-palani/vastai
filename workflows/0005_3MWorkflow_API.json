@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "2.0",
+      "megapixel": "1.8",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1447,7 +1447,7 @@
       "block_number": 4,
       "downscale_factor": 1.75,
       "start_percent": 0,
-      "end_percent": 0.5,
+      "end_percent": 0.45,
       "downscale_after_skip": true,
       "downscale_method": "bislerp",
       "upscale_method": "bislerp",
@@ -3518,7 +3518,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "kreamania_variant4.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -3841,7 +3841,7 @@
         "2405",
         0
       ],
-      "string_b": "",
+      "string_b": "No visible text, no letters, no words, no numbers, no logos,\nno watermark, no signature, no label, no caption,\nno printed graphics, no repeating text patterns.",
       "delimiter": ", "
     },
     "class_type": "StringConcatenate",
@@ -3984,7 +3984,7 @@
   },
   "2951": {
     "inputs": {
-      "megapixel": "2.2",
+      "megapixel": "2.0",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -4069,7 +4069,7 @@
         0
       ],
       "steps": 9,
-      "cfg": 1,
+      "cfg": 0.8,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "sgm_uniform",
       "start_at_step": 4,
@@ -4187,7 +4187,7 @@
       "scheduler": "sgm_uniform",
       "denoise": 1,
       "model": [
-        "2133",
+        "2131",
         0
       ],
       "positive": [
@@ -4239,7 +4239,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Photographic color correction only.\n\nTreat the input image as the source of truth. Preserve all existing image content, composition, lighting, facial identity, clothing, accessories, and textures.\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\nMatch only the color of visible accessories to the input  image. Do not add, remove, redesign, or invent accessories or mehndi.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color."
+      "value": "Leica M6 film aesthetic .\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color.\n\nwithout changing color grading, make the photo bit darker."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4311,31 +4311,6 @@
       "PowerLoraLoaderHeaderWidget": {
         "type": "PowerLoraLoaderHeaderWidget"
       },
-      "lora_1": {
-        "on": false,
-        "lora": "age_krea2_loraholic.safetensors",
-        "strength": -0.45
-      },
-      "lora_2": {
-        "on": false,
-        "lora": "BreastSlider-KREA2.safetensors",
-        "strength": 1
-      },
-      "lora_3": {
-        "on": false,
-        "lora": "SEAN_ARCHER_PHOTOSTYLE_epoch_10.safetensors",
-        "strength": 0.2
-      },
-      "lora_4": {
-        "on": false,
-        "lora": "SummerVibesHM_krea2_epoch8.safetensors",
-        "strength": 0.2
-      },
-      "lora_5": {
-        "on": false,
-        "lora": "candid_krea2_loraholic.safetensors",
-        "strength": 6
-      },
       "➕ Add Lora": "",
       "model": [
         "3028",
@@ -4386,7 +4361,7 @@
     "inputs": {
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
       "strength_model": 0.8,
-      "strength_clip": 0.2,
+      "strength_clip": 0,
       "model": [
         "2322",
         0
@@ -4449,7 +4424,7 @@
       "strength_model": 0.4,
       "strength_clip": 0.02,
       "model": [
-        "1195",
+        "3039",
         0
       ],
       "clip": [
@@ -4460,6 +4435,34 @@
     "class_type": "LoraLoader",
     "_meta": {
       "title": "Pandora-RAWr 0.70::0.70"
+    }
+  },
+  "3039": {
+    "inputs": {
+      "block_number": 4,
+      "downscale_factor": 1.25,
+      "start_percent": 0.45,
+      "end_percent": 0.6,
+      "downscale_after_skip": true,
+      "downscale_method": "bislerp",
+      "upscale_method": "bislerp",
+      "model": [
+        "1195",
+        0
+      ]
+    },
+    "class_type": "PatchModelAddDownscale",
+    "_meta": {
+      "title": "4::2::0::0.5"
+    }
+  },
+  "3040": {
+    "inputs": {
+      "value": "Photographic color correction only.\n\nTreat the input image as the source of truth. Preserve all existing image content, composition, lighting, facial identity, clothing, accessories, and textures.\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\nMatch only the color of visible accessories to the input  image. Do not add, remove, redesign, or invent accessories or mehndi.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
     }
   }
 }
