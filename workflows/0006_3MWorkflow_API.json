@@ -3518,7 +3518,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "realiaKrea2V1.7Idr.safetensors",
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
