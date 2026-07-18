@@ -3694,12 +3694,12 @@
         "655",
         0
       ],
-      "vision_megapixels": 1.5,
+      "vision_megapixels": 1.2,
       "mask_padding": 0,
       "conditioning_rescaling": false,
       "multiplier": 4,
       "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,3.0,1.1,2.5,1.0",
-      "prompt_adherence_enhancer": true,
+      "prompt_adherence_enhancer": false,
       "strength": 1,
       "clip": [
         "3021",
