@@ -2059,6 +2059,7 @@
         0
       ],
       "noise_strength": 0.25,
+      "normalize": "false",
       "latent": [
         "1648",
         0
@@ -2983,6 +2984,7 @@
         0
       ],
       "noise_strength": 0.18,
+      "normalize": "false",
       "latent": [
         "2183",
         0
@@ -3146,6 +3148,7 @@
       "vertical_align": "bottom",
       "offset_x": -4,
       "offset_y": -2,
+      "direction": "ltr",
       "img_composite": [
         "2202",
         0
