@@ -1550,8 +1550,8 @@
   },
   "1298": {
     "inputs": {
-      "lora_name": "vidhyas_lora_v4.safetensors",
-      "strength_model": 0.82,
+      "lora_name": "vidhyas_lora_v3.safetensors",
+      "strength_model": 0.92,
       "strength_clip": 0.12,
       "model": [
         "1676",
@@ -1564,7 +1564,7 @@
     },
     "class_type": "LoraLoader",
     "_meta": {
-      "title": "v1dhya5 0.82::0.12"
+      "title": "v1dhya5 0.92::0.12"
     }
   },
   "1305": {
@@ -3139,7 +3139,7 @@
       ],
       "font": "SevenSegment.ttf",
       "size": 42,
-      "color": "#DD2D4AFF",
+      "color": "#A63A50FF",
       "background_color": "#00000000",
       "shadow_distance": 2,
       "shadow_blur": 2,
