@@ -1545,12 +1545,12 @@
     },
     "class_type": "LoraLoader",
     "_meta": {
-      "title": "Pandora-RAWr 0.70::0.70"
+      "title": "Pandora-RAWr 1.5::0.02"
     }
   },
   "1298": {
     "inputs": {
-      "lora_name": "vidhyas_lora_v3.safetensors",
+      "lora_name": "vidhyas_lora_v4.safetensors",
       "strength_model": 0.82,
       "strength_clip": 0.12,
       "model": [
@@ -1564,7 +1564,7 @@
     },
     "class_type": "LoraLoader",
     "_meta": {
-      "title": "v1dhya5 0.92::0.88"
+      "title": "v1dhya5 0.82::0.12"
     }
   },
   "1305": {
