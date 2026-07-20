@@ -1464,7 +1464,7 @@
   "1196": {
     "inputs": {
       "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
@@ -2681,7 +2681,7 @@
   "2124": {
     "inputs": {
       "unet_name": "flux-2-klein-9b.safetensors",
-      "weight_dtype": "fp8_e4m3fn"
+      "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
     "_meta": {
@@ -3785,7 +3785,7 @@
         "2414",
         0
       ],
-      "max_length": 384,
+      "max_length": 512,
       "sampling_mode": "on",
       "sampling_mode.temperature": 0.7,
       "sampling_mode.top_k": 64,
