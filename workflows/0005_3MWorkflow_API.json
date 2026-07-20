@@ -3518,7 +3518,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "kreamania_variant4.safetensors",
+      "unet_name": "kreamania_variant5.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
