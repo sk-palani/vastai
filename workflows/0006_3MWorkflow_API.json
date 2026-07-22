@@ -3587,7 +3587,7 @@
         0
       ],
       "steps": 8,
-      "cfg": 1,
+      "cfg": 1.6,
       "sampler_name": "res_2s",
       "scheduler": "simple",
       "denoise": [
