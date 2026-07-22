@@ -3609,8 +3609,8 @@
         0
       ],
       "steps": 8,
-      "cfg": 1,
-      "sampler_name": "er_sde",
+      "cfg": 1.6,
+      "sampler_name": "res_2s",
       "scheduler": "simple",
       "denoise": [
         "3030",
@@ -3694,12 +3694,12 @@
         "655",
         0
       ],
-      "vision_megapixels": 1.2,
+      "vision_megapixels": 1,
       "mask_padding": 0,
       "conditioning_rescaling": false,
       "multiplier": 4,
       "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,3.0,1.1,2.5,1.0",
-      "prompt_adherence_enhancer": false,
+      "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
         "3021",
@@ -4063,18 +4063,18 @@
   },
   "2962": {
     "inputs": {
-      "add_noise": "enable",
+      "add_noise": "disable",
       "noise_seed": [
         "378",
         0
       ],
       "steps": 9,
-      "cfg": 0.8,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "sgm_uniform",
+      "cfg": 1,
+      "sampler_name": "res_2m",
+      "scheduler": "simple",
       "start_at_step": 4,
       "end_at_step": 999,
-      "return_with_leftover_noise": "disable",
+      "return_with_leftover_noise": "enable",
       "model": [
         "2375",
         0
@@ -4084,7 +4084,7 @@
         0
       ],
       "negative": [
-        "2381",
+        "2314",
         0
       ],
       "latent_image": [
@@ -4239,7 +4239,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Leica M6 film aesthetic .\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color.\n\nwithout changing color grading, make the photo bit darker."
+      "value": "Leica M6 film aesthetic .\n\nChange the hair color to natural black.\n\nReduce excessive red and magenta color cast while maintaining realistic photographic white balance and natural skin tones.\n\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while preserving the underlying image. Do not create, replace, or introduce any text, logos, symbols, or overlays.\n\n__INSTRUCTION_FROM_FILE__\n\nwithout changing color grading, make the photo bit darker.\n\n\nIf the reference image is monochrome, preserve monochrome rendering and do not introduce color.\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
