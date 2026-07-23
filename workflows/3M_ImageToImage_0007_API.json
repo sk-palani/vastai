@@ -1977,7 +1977,7 @@
   },
   "1657": {
     "inputs": {
-      "scheduler": "simple",
+      "scheduler": "beta",
       "steps": 44,
       "denoise": [
         "1649",
@@ -3544,8 +3544,8 @@
         0
       ],
       "font": "SevenSegment.ttf",
-      "size": 42,
-      "color": "#9e2a2bFF",
+      "size": 40,
+      "color": "#be95c4FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4492,6 +4492,36 @@
       "title": "Load LoRA (Model and CLIP)"
     }
   },
+  "3058": {
+    "inputs": {
+      "output_path": "[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "3209",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "jpg",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": "false",
+      "lossless_webp": "false",
+      "overwrite_mode": "prefix_as_filename",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "3192",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
   "3076": {
     "inputs": {
       "samples": [
@@ -5276,8 +5306,8 @@
   },
   "3205": {
     "inputs": {
-      "max_shift": 1.15,
-      "base_shift": 0.5,
+      "max_shift": 1.08,
+      "base_shift": 0.55,
       "width": 1024,
       "height": 1024,
       "model": [
@@ -5288,6 +5318,26 @@
     "class_type": "ModelSamplingFlux",
     "_meta": {
       "title": "ModelSamplingFlux"
+    }
+  },
+  "3209": {
+    "inputs": {
+      "condition": [
+        "2078",
+        0
+      ],
+      "when_true": [
+        "2066",
+        0
+      ],
+      "when_false": [
+        "2059",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
     }
   },
   "2920:2866": {
