@@ -2079,6 +2079,7 @@
         0
       ],
       "noise_strength": 0.26,
+      "normalize": "false",
       "latent": [
         "1648",
         0
