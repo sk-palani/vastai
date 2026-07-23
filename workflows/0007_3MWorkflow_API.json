@@ -1947,7 +1947,7 @@
         "222",
         0
       ],
-      "b": 0.68,
+      "b": 0.72,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -2012,7 +2012,7 @@
   "1660": {
     "inputs": {
       "max_shift": 1.15,
-      "base_shift": 0.6,
+      "base_shift": 0.55,
       "width": [
         "1639",
         0
@@ -4317,11 +4317,11 @@
         "378",
         0
       ],
-      "steps": 12,
+      "steps": 10,
       "cfg": 1,
-      "sampler_name": "er_sde",
-      "scheduler": "sgm_uniform",
-      "denoise": 0.99,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
       "model": [
         "2131",
         0
