@@ -3242,6 +3242,7 @@
       "vertical_align": "bottom",
       "offset_x": -4,
       "offset_y": -2,
+      "direction": "ltr",
       "img_composite": [
         "2202",
         0
