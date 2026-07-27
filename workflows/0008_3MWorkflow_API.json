@@ -101,7 +101,7 @@
   },
   "135": {
     "inputs": {
-      "directory_1": "Inputs/Next/Best1",
+      "directory_1": "Inputs/Next/Best",
       "directory_2": "Inputs/Next",
       "directory_3": "Inputs/Downloaded",
       "ordering_mode": "random",
@@ -1539,7 +1539,7 @@
   "1298": {
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
-      "strength_model": 0.82,
+      "strength_model": 0.86,
       "strength_clip": 0.08,
       "model": [
         "1297",
@@ -1989,7 +1989,8 @@
         "378",
         0
       ],
-      "noise_strength": 0.15,
+      "noise_strength": 0.16,
+      "normalize": "false",
       "latent": [
         "1648",
         0
@@ -3233,7 +3234,7 @@
       ],
       "font": "SevenSegment.ttf",
       "size": 40,
-      "color": "#be95c4FF",
+      "color": "#F72585FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4141,8 +4142,8 @@
   },
   "3027": {
     "inputs": {
-      "lut_name": "Presetpro - Kodachrome.cube",
-      "strength": 0.2,
+      "lut_name": "Presetpro - Agfa Ultra 100.cube",
+      "strength": 0.12,
       "log": false,
       "image": [
         "3012",
