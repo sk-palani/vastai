@@ -1433,7 +1433,7 @@
   "1195": {
     "inputs": {
       "block_number": 4,
-      "downscale_factor": 1.5,
+      "downscale_factor": 1.75,
       "start_percent": 0,
       "end_percent": 0.45,
       "downscale_after_skip": true,
@@ -1451,7 +1451,7 @@
   },
   "1196": {
     "inputs": {
-      "unet_name": "flux1_v40Fp8.safetensors",
+      "unet_name": "flux1-dev.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -3311,7 +3311,7 @@
   },
   "2270": {
     "inputs": {
-      "value": 0.84
+      "value": 0.42
     },
     "class_type": "FloatConstant",
     "_meta": {
