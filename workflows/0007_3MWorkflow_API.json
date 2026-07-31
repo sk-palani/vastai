@@ -1551,8 +1551,8 @@
   "1298": {
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
-      "strength_model": 0.82,
-      "strength_clip": 0.12,
+      "strength_model": 0.86,
+      "strength_clip": 0.08,
       "model": [
         "1676",
         0
@@ -2171,7 +2171,7 @@
   "1657": {
     "inputs": {
       "scheduler": "sgm_uniform",
-      "steps": 40,
+      "steps": 44,
       "denoise": [
         "1649",
         0
@@ -2271,7 +2271,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.26,
+      "noise_strength": 0.16,
       "normalize": "false",
       "latent": [
         "1648",
@@ -3644,7 +3644,7 @@
       ],
       "font": "SevenSegment.ttf",
       "size": 40,
-      "color": "#be95c4FF",
+      "color": "#a7c957FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3721,7 +3721,7 @@
   },
   "2270": {
     "inputs": {
-      "value": 0.96
+      "value": 0.48
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -4555,7 +4555,7 @@
   "3049": {
     "inputs": {
       "lora_name": "ultra_real_krea2_v1.safetensors",
-      "strength_model": 0.7,
+      "strength_model": 0.4,
       "strength_clip": 0.1,
       "model": [
         "2322",
@@ -4811,8 +4811,8 @@
   },
   "3147": {
     "inputs": {
-      "balance": 0.8,
-      "debug": true,
+      "balance": 0.72,
+      "debug": false,
       "model": [
         "2011",
         0
@@ -4880,7 +4880,7 @@
   "3166": {
     "inputs": {
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
-      "strength_model": 0.8,
+      "strength_model": 1,
       "model": [
         "3049",
         0
