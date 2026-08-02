@@ -4006,7 +4006,7 @@
       ],
       "font": "SevenSegment.ttf",
       "size": 40,
-      "color": "#be95c4FF",
+      "color": "#00a6fbFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -6017,7 +6017,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.64,
+      "strength_model": 0.69,
       "model": [
         "3049",
         0
