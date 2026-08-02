@@ -1442,28 +1442,9 @@
       "title": "CLIP Set Last Layer"
     }
   },
-  "1195": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.75,
-      "start_percent": 0,
-      "end_percent": 0.45,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1196",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
-    }
-  },
   "1196": {
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
+      "unet_name": "flux1_v40Fp8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -1535,7 +1516,7 @@
       "strength_model": 1,
       "strength_clip": 0.8,
       "model": [
-        "1195",
+        "1196",
         0
       ],
       "clip": [
@@ -2217,7 +2198,7 @@
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
       "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique.  \n",
-      "guidance": 3.5,
+      "guidance": 2.6,
       "clip": [
         "2925",
         1
@@ -4402,6 +4383,19 @@
       "title": "Load Diffusion Model"
     }
   },
+  "2333": {
+    "inputs": {
+      "stop_at_clip_layer": -1,
+      "clip": [
+        "2349",
+        0
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
   "2339": {
     "inputs": {
       "any_01": [
@@ -4963,6 +4957,25 @@
       "title": "ProPostApplyLUT"
     }
   },
+  "3049": {
+    "inputs": {
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.4,
+      "strength_clip": 0.1,
+      "model": [
+        "2322",
+        0
+      ],
+      "clip": [
+        "2333",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
   "3058": {
     "inputs": {
       "output_path": "[time(%Y-%m-%d)]",
@@ -5102,8 +5115,8 @@
         0
       ],
       "clip": [
-        "2349",
-        0
+        "3049",
+        1
       ],
       "vae": [
         "2315",
@@ -5787,7 +5800,7 @@
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
       "strength_model": 0.72,
       "model": [
-        "2322",
+        "3049",
         0
       ]
     },
