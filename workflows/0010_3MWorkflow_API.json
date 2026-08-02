@@ -78,7 +78,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "129": {
@@ -87,12 +87,12 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "133": {
     "inputs": {
-      "seed": 960996736950650
+      "seed": -1
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -162,36 +162,6 @@
     "class_type": "AIO_Preprocessor",
     "_meta": {
       "title": "AIO Aux Preprocessor"
-    }
-  },
-  "179": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_qjotr_00017_.png&type=temp&subfolder=&rand=0.06667416599311782"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_qjotr_00018_.png&type=temp&subfolder=&rand=0.29441710605065885"
-          }
-        ]
-      },
-      "image_a": [
-        "2377",
-        0
-      ],
-      "image_b": [
-        "1703",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
     }
   },
   "189": {
@@ -341,7 +311,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "421": {
@@ -399,7 +369,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "445": {
@@ -428,18 +398,6 @@
       "title": "NOT"
     }
   },
-  "458": {
-    "inputs": {
-      "source": [
-        "2285",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
   "470": {
     "inputs": {
       "boolean": [
@@ -450,18 +408,6 @@
     "class_type": "Logic NOT",
     "_meta": {
       "title": "Logic NOT"
-    }
-  },
-  "471": {
-    "inputs": {
-      "source": [
-        "470",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
     }
   },
   "474": {
@@ -598,36 +544,6 @@
     "class_type": "LayerColor: BrightnessContrastV2",
     "_meta": {
       "title": "Brightness Contrast V2"
-    }
-  },
-  "574": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_jvkap_00017_.png&type=temp&subfolder=&rand=0.12971315723987775"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_jvkap_00018_.png&type=temp&subfolder=&rand=0.6227892751808052"
-          }
-        ]
-      },
-      "image_a": [
-        "577",
-        0
-      ],
-      "image_b": [
-        "127",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
     }
   },
   "575": {
@@ -813,7 +729,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "608": {
@@ -822,7 +738,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "609": {
@@ -907,30 +823,6 @@
     "class_type": "RegexExtract",
     "_meta": {
       "title": "Extract Text"
-    }
-  },
-  "616": {
-    "inputs": {
-      "source": [
-        "612",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
-  "617": {
-    "inputs": {
-      "source": [
-        "611",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
     }
   },
   "620": {
@@ -1213,66 +1105,6 @@
       "title": "On False"
     }
   },
-  "646": {
-    "inputs": {
-      "source": [
-        "630",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
-  "647": {
-    "inputs": {
-      "source": [
-        "627",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
-  "648": {
-    "inputs": {
-      "source": [
-        "634",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
-  "649": {
-    "inputs": {
-      "source": [
-        "636",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
-  "651": {
-    "inputs": {
-      "text": [
-        "637",
-        0
-      ]
-    },
-    "class_type": "ShowText|LP",
-    "_meta": {
-      "title": "Show Text [LP]"
-    }
-  },
   "652": {
     "inputs": {
       "value": "Photo taken from the side of the subject,"
@@ -1448,18 +1280,6 @@
       "title": "Replace Text"
     }
   },
-  "673": {
-    "inputs": {
-      "source": [
-        "672",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
   "674": {
     "inputs": {
       "value": 29
@@ -1552,7 +1372,7 @@
   },
   "1177": {
     "inputs": {
-      "seed": 42
+      "seed": -1
     },
     "class_type": "Seed (rgthree)",
     "_meta": {
@@ -1606,7 +1426,7 @@
     },
     "class_type": "DualCLIPLoader",
     "_meta": {
-      "title": "DualCLIPLoader"
+      "title": "Load CLIP (Dual)"
     }
   },
   "1193": {
@@ -1697,7 +1517,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "1227": {
@@ -1830,18 +1650,6 @@
     "class_type": "Text Multiline",
     "_meta": {
       "title": "Text Multiline"
-    }
-  },
-  "1331": {
-    "inputs": {
-      "source": [
-        "1322",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
     }
   },
   "1377": {
@@ -1989,36 +1797,6 @@
       "title": "Switch"
     }
   },
-  "1570": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_tmflv_00017_.png&type=temp&subfolder=&rand=0.4199926399845624"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_tmflv_00018_.png&type=temp&subfolder=&rand=0.8172320812133747"
-          }
-        ]
-      },
-      "image_a": [
-        "2215",
-        0
-      ],
-      "image_b": [
-        "127",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "1572": {
     "inputs": {
       "text": "Indian woman, __AGE__ , serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, realistic fabric texture, realistic   background,   ultra high resolution, professional RAW photograph\n"
@@ -2130,18 +1908,6 @@
       "title": "FLUX_VAE Decode"
     }
   },
-  "1645": {
-    "inputs": {
-      "images": [
-        "1642",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
   "1646": {
     "inputs": {
       "sampler_name": "euler"
@@ -2149,18 +1915,6 @@
     "class_type": "KSamplerSelect",
     "_meta": {
       "title": "KSamplerSelect"
-    }
-  },
-  "1647": {
-    "inputs": {
-      "source": [
-        "1649",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
     }
   },
   "1648": {
@@ -2415,36 +2169,6 @@
       "title": "Switch"
     }
   },
-  "1713": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_gqsey_00013_.png&type=temp&subfolder=&rand=0.8272209968222861"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_gqsey_00014_.png&type=temp&subfolder=&rand=0.19032427248554318"
-          }
-        ]
-      },
-      "image_a": [
-        "3155",
-        0
-      ],
-      "image_b": [
-        "1716",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "1716": {
     "inputs": {
       "any_02": [
@@ -2494,7 +2218,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "1725": {
@@ -2571,36 +2295,6 @@
       "title": "FLUX_InpaintModelConditioning"
     }
   },
-  "1743": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_armuz_00011_.png&type=temp&subfolder=&rand=0.2066071212269981"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_armuz_00012_.png&type=temp&subfolder=&rand=0.03441764636242295"
-          }
-        ]
-      },
-      "image_a": [
-        "1754",
-        0
-      ],
-      "image_b": [
-        "1756",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "1744": {
     "inputs": {
       "mask_opacity": 0.3,
@@ -2649,7 +2343,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "1751": {
@@ -2783,66 +2477,6 @@
       "title": "Text Multiline"
     }
   },
-  "1894": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_bpaqk_00017_.png&type=temp&subfolder=&rand=0.2176065472820683"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_bpaqk_00018_.png&type=temp&subfolder=&rand=0.3239348755316681"
-          }
-        ]
-      },
-      "image_a": [
-        "127",
-        0
-      ],
-      "image_b": [
-        "983",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
-  "1896": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_vrqum_00017_.png&type=temp&subfolder=&rand=0.2955777326913597"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_vrqum_00018_.png&type=temp&subfolder=&rand=0.9400041947111437"
-          }
-        ]
-      },
-      "image_a": [
-        "1658",
-        0
-      ],
-      "image_b": [
-        "1447",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "1904": {
     "inputs": {
       "model_name": "Qwen3-VL-4B-Instruct",
@@ -2864,18 +2498,6 @@
     "class_type": "AILab_QwenVL",
     "_meta": {
       "title": "QwenVL Auto Prompt (reccomend do not change)"
-    }
-  },
-  "1912": {
-    "inputs": {
-      "source": [
-        "1922",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
     }
   },
   "1914": {
@@ -3146,18 +2768,6 @@
       "title": "Input Selector"
     }
   },
-  "1940": {
-    "inputs": {
-      "source": [
-        "1922",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
   "1942": {
     "inputs": {
       "text": "Adjust the facial expression to a subtly affectionate expression with gentle eyes and a faint natural smile.\n\nAdjust the facial expression to a slight pout with minimally pursed lips and soft eye engagement.\n\nAdjust the facial expression to a mildly shy expression with a restrained smile and slightly lowered gaze.\n\nAdjust the facial expression to a subtle happy expression with softly lifted mouth corners and relaxed eyes.\n\nAdjust the facial expression to a gentle joyful expression with a modest smile and delicate warmth in the eyes.\n\nAdjust the facial expression to a lightly playful expression with faint amusement and natural facial relaxation.\n\nAdjust the facial expression to a softly romantic expression with warm eyes and a barely perceptible smile.\n\nAdjust the facial expression to a subtly flirtatious expression with a hint of playful eye engagement and slight mouth-corner lift.\n\nAdjust the facial expression to a mildly seductive expression with relaxed eyelids and understated confidence.\n\nAdjust the facial expression to a quietly confident expression with composed facial features and subtle emotional presence.\n\nAdjust the facial expression to a mildly surprised expression with slightly widened eyes and gentle eyebrow elevation.\n\nAdjust the facial expression to a slightly parted-lips expression with relaxed facial posture.\n\nAdjust the facial expression to a subtle wink with minimal eyelid closure and natural facial balance.\n\nAdjust the facial expression to a faintly mischievous expression with a restrained smirk and soft eye engagement.\n\nAdjust the facial expression to a thoughtful expression with a calm gaze and slight facial contemplation.\n\nAdjust the facial expression to a dreamy expression with softened eyes and a peaceful relaxed demeanor.\n\nAdjust the facial expression to a composed confident expression with natural eye contact and relaxed facial muscles.\n\nAdjust the facial expression to a restrained laughing expression with subtle eye creases and gentle amusement.\n\nAdjust the facial expression to a mildly curious expression with attentive eyes and a slight eyebrow lift.\n\nAdjust the facial expression to a faint smirk with minimal asymmetry and understated confidence."
@@ -3165,19 +2775,6 @@
     "class_type": "Text Multiline",
     "_meta": {
       "title": "Text Multiline"
-    }
-  },
-  "1943": {
-    "inputs": {
-      "text_0": "Make this photo high-quality Photograph of v1dhya5 with same facial expression.\n\n29 or match the age of the subject to the reference photo.\n\n\n,\n\n\nEnhance body proportions naturally: fuller bust (approx. 34D) with proportionate adjustments to hips, thighs, and calves, maintaining realistic anatomy and balance.\n\nPreserve the exact subject orientation, viewing direction, and camera perspective from the reference image.\nPreserve Subject's Mouth closed or open state.\n\nMaintain the subject's facial expression,  and pose.\nPreserve the overall composition, outfit, and accessories from the reference photo.\n\nAdjust hair color to natural black, preserving styling hilights and eye color to dark brown.\nApply faint eyeliner and soft eye shadow, with neutral pale-brown nude lipstick.\nAdd a small black or burgundy bindi.\n\n\nEnsure realistic lighting and consistent shadows.\nRemove any visible watermarks or text artifacts.\n\n copy the expression from the reference image.\n\nChange the skin tone to authentic melanin-rich South Indian medium brown skin with deep warm-brown pigmentation and realistic RAW-photo skin texture. Maintain a naturally darker complexion consistently across the face, neck, shoulders, arms, hands, and body without any whitening, brightening, or fairness enhancement. Preserve rich eumelanin depth, subtle golden-brown undertones, realistic tonal variation, soft natural shadowing, mild uneven pigmentation, fine pores, and true-to-life skin texture commonly seen in unretouched professional photography of South Indian women.",
-      "text": [
-        "1930",
-        0
-      ]
-    },
-    "class_type": "ShowText|LP",
-    "_meta": {
-      "title": "Show Text [LP]"
     }
   },
   "1946": {
@@ -3393,28 +2990,6 @@
       "title": "ModelSamplingFlux"
     }
   },
-  "2003": {
-    "inputs": {
-      "active_scale": 1.2,
-      "per_token_whiten": 0.03,
-      "norm_equalize": 0.08,
-      "early_layer_scale": 0.95,
-      "mid_layer_scale": 1.15,
-      "late_layer_scale": 0.9,
-      "preserve_original": 0.78,
-      "active_end_override": false,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2005",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
-    }
-  },
   "2005": {
     "inputs": {
       "noise_mask": true,
@@ -3541,7 +3116,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2016": {
@@ -3553,7 +3128,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "2023": {
@@ -3565,7 +3140,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2024": {
@@ -3590,67 +3165,29 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
-  "2028": {
+  "2026": {
     "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_orhqx_00011_.png&type=temp&subfolder=&rand=0.9765705280725083"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_orhqx_00012_.png&type=temp&subfolder=&rand=0.027010416094065848"
-          }
-        ]
-      },
-      "image_a": [
-        "1969",
-        0
-      ],
-      "image_b": [
-        "1985",
+      "active_scale": 1,
+      "per_token_whiten": 0.05,
+      "norm_equalize": 0.05,
+      "early_layer_scale": 1.4,
+      "mid_layer_scale": 1,
+      "late_layer_scale": 0.8,
+      "preserve_original": 1,
+      "active_end_override": 1,
+      "device": "auto",
+      "debug": false,
+      "conditioning": [
+        "2012",
         0
       ]
     },
-    "class_type": "Image Comparer (rgthree)",
+    "class_type": "Flux2KleinEnhancer",
     "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
-  "2030": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_psedz_00017_.png&type=temp&subfolder=&rand=0.41257804401271625"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_psedz_00018_.png&type=temp&subfolder=&rand=0.6731860746702183"
-          }
-        ]
-      },
-      "image_a": [
-        "1985",
-        0
-      ],
-      "image_b": [
-        "2339",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
+      "title": "FLUX.2 Klein Enhancer"
     }
   },
   "2034": {
@@ -3683,7 +3220,7 @@
         0
       ],
       "positive": [
-        "2003",
+        "2005",
         0
       ],
       "negative": [
@@ -3765,7 +3302,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "2057": {
@@ -3774,7 +3311,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "2058": {
@@ -3849,7 +3386,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "2062": {
@@ -3858,7 +3395,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "2063": {
@@ -3923,7 +3460,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text String (DEPRECATED)"
     }
   },
   "2070": {
@@ -4202,30 +3739,6 @@
       "title": "Load LoRA  - 0.60:0.44"
     }
   },
-  "2156": {
-    "inputs": {
-      "source": [
-        "2160",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
-  "2157": {
-    "inputs": {
-      "text": [
-        "2159",
-        0
-      ]
-    },
-    "class_type": "ShowText|LP",
-    "_meta": {
-      "title": "Show Text [LP]"
-    }
-  },
   "2158": {
     "inputs": {
       "join_with": ",",
@@ -4492,8 +4005,8 @@
         0
       ],
       "font": "SevenSegment.ttf",
-      "size": 44,
-      "color": "#e26d5cFF",
+      "size": 40,
+      "color": "#be95c4FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4511,18 +4024,6 @@
     "class_type": "DrawText+",
     "_meta": {
       "title": "🔧 Draw Text"
-    }
-  },
-  "2217": {
-    "inputs": {
-      "source": [
-        "2218",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
     }
   },
   "2218": {
@@ -4605,28 +4106,6 @@
       "title": "ModelSamplingFlux"
     }
   },
-  "2232": {
-    "inputs": {
-      "active_scale": 0.95,
-      "per_token_whiten": 0.03,
-      "norm_equalize": 0.08,
-      "early_layer_scale": 0.95,
-      "mid_layer_scale": 1.15,
-      "late_layer_scale": 0.9,
-      "preserve_original": 0.78,
-      "active_end_override": false,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2234",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
-    }
-  },
   "2234": {
     "inputs": {
       "noise_mask": true,
@@ -4688,7 +4167,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2238": {
@@ -4700,7 +4179,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "2241": {
@@ -4712,7 +4191,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2242": {
@@ -4744,7 +4223,7 @@
         0
       ],
       "positive": [
-        "2232",
+        "3226",
         0
       ],
       "negative": [
@@ -4777,36 +4256,6 @@
       "title": "Klein_VAE Decode"
     }
   },
-  "2249": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_eqxok_00011_.png&type=temp&subfolder=&rand=0.7499491319772771"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_eqxok_00012_.png&type=temp&subfolder=&rand=0.9853894742339462"
-          }
-        ]
-      },
-      "image_a": [
-        "2248",
-        0
-      ],
-      "image_b": [
-        "1985",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "2254": {
     "inputs": {
       "condition": [
@@ -4825,18 +4274,6 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
-    }
-  },
-  "2264": {
-    "inputs": {
-      "images": [
-        "1447",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
     }
   },
   "2266": {
@@ -5108,36 +4545,6 @@
       "title": "Text Multiline"
     }
   },
-  "2305": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_fvisx_00017_.png&type=temp&subfolder=&rand=0.9521655421202446"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_fvisx_00018_.png&type=temp&subfolder=&rand=0.8440397028404699"
-          }
-        ]
-      },
-      "image_a": [
-        "2309",
-        0
-      ],
-      "image_b": [
-        "127",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "2309": {
     "inputs": {
       "any_01": [
@@ -5168,18 +4575,6 @@
     "class_type": "VAEEncode",
     "_meta": {
       "title": "Krea_VAE Encode"
-    }
-  },
-  "2314": {
-    "inputs": {
-      "conditioning": [
-        "2375",
-        1
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
     }
   },
   "2315": {
@@ -5230,53 +4625,6 @@
     "class_type": "CLIPLoader",
     "_meta": {
       "title": "Load CLIP"
-    }
-  },
-  "2371": {
-    "inputs": {
-      "source": [
-        "655",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Prompt_Improved"
-    }
-  },
-  "2375": {
-    "inputs": {
-      "prompt": [
-        "2406",
-        0
-      ],
-      "vision_megapixels": 1,
-      "mask_padding": 0,
-      "conditioning_rescaling": false,
-      "multiplier": 3.2,
-      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.5,1.1,1.2,1.0",
-      "prompt_adherence_enhancer": true,
-      "strength": 1,
-      "clip": [
-        "3049",
-        1
-      ],
-      "model": [
-        "3166",
-        0
-      ],
-      "system_prompt": [
-        "2300",
-        0
-      ],
-      "images": [
-        "2309",
-        0
-      ]
-    },
-    "class_type": "VantageTextEncodeKrea2",
-    "_meta": {
-      "title": "Vantage Text Encode (Krea2)"
     }
   },
   "2376": {
@@ -5390,18 +4738,6 @@
       "title": "Text String (System Prompt)"
     }
   },
-  "2408": {
-    "inputs": {
-      "source": [
-        "2406",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
   "2414": {
     "inputs": {
       "delimiter": ", ",
@@ -5503,60 +4839,6 @@
       "title": "Resize Image v2"
     }
   },
-  "2940": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_zpjph_00017_.png&type=temp&subfolder=&rand=0.34459936009835435"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_zpjph_00018_.png&type=temp&subfolder=&rand=0.7967711331224885"
-          }
-        ]
-      },
-      "image_a": [
-        "2938",
-        0
-      ],
-      "image_b": [
-        "3024",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
-  "2942": {
-    "inputs": {
-      "source": [
-        "2938",
-        1
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
-  "2943": {
-    "inputs": {
-      "source": [
-        "2938",
-        2
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
   "2949": {
     "inputs": {
       "mode": "always",
@@ -5633,19 +4915,6 @@
     "class_type": "easy string",
     "_meta": {
       "title": "String"
-    }
-  },
-  "2969": {
-    "inputs": {
-      "text_0": "Inputs/Next/IMG_20260801_044444_900.jpg",
-      "text": [
-        "135",
-        3
-      ]
-    },
-    "class_type": "ShowText|pysssss",
-    "_meta": {
-      "title": "Show Text 🐍"
     }
   },
   "2973": {
@@ -5768,7 +5037,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "3008": {
@@ -5794,7 +5063,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3011": {
@@ -5825,36 +5094,6 @@
       "title": "Klein_VAE Decode"
     }
   },
-  "3013": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_iatzi_00017_.png&type=temp&subfolder=&rand=0.44580375719260035"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_iatzi_00018_.png&type=temp&subfolder=&rand=0.35680755965679145"
-          }
-        ]
-      },
-      "image_a": [
-        "3192",
-        0
-      ],
-      "image_b": [
-        "577",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "3016": {
     "inputs": {
       "conditioning": [
@@ -5868,7 +5107,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "3017": {
@@ -5885,18 +5124,6 @@
     "class_type": "VAEEncode",
     "_meta": {
       "title": "Klein_VAE Enc"
-    }
-  },
-  "3020": {
-    "inputs": {
-      "source": [
-        "3008",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
     }
   },
   "3024": {
@@ -6010,7 +5237,7 @@
         0
       ],
       "model": [
-        "2375",
+        "3166",
         0
       ],
       "positive": [
@@ -6018,7 +5245,7 @@
         0
       ],
       "negative": [
-        "2314",
+        "3228",
         0
       ],
       "latent_image": [
@@ -6079,36 +5306,6 @@
     "class_type": "Image Save",
     "_meta": {
       "title": "Image Save"
-    }
-  },
-  "3091": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_pxtrq_00017_.png&type=temp&subfolder=&rand=0.3785015754252209"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_pxtrq_00018_.png&type=temp&subfolder=&rand=0.903819305815387"
-          }
-        ]
-      },
-      "image_a": [
-        "3076",
-        0
-      ],
-      "image_b": [
-        "2309",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
     }
   },
   "3093": {
@@ -6185,18 +5382,6 @@
       "title": "Display Int (rgthree)"
     }
   },
-  "3138": {
-    "inputs": {
-      "source": [
-        "669",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
   "3142": {
     "inputs": {
       "pixels": [
@@ -6216,7 +5401,7 @@
   "3145": {
     "inputs": {
       "conditioning": [
-        "2012",
+        "2026",
         0
       ],
       "latent": [
@@ -6226,7 +5411,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "3147": {
@@ -6336,7 +5521,7 @@
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
-        "2375",
+        "3166",
         0
       ],
       "positive": [
@@ -6344,7 +5529,7 @@
         0
       ],
       "negative": [
-        "2314",
+        "3228",
         0
       ],
       "latent_image": [
@@ -6376,7 +5561,7 @@
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
       "strength_model": 1,
       "model": [
-        "3049",
+        "3229",
         0
       ]
     },
@@ -6401,36 +5586,6 @@
       "title": "Krea_VAE Decode"
     }
   },
-  "3168": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_akotx_00017_.png&type=temp&subfolder=&rand=0.99419360467796"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_akotx_00018_.png&type=temp&subfolder=&rand=0.9496899443443582"
-          }
-        ]
-      },
-      "image_a": [
-        "3076",
-        0
-      ],
-      "image_b": [
-        "3167",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
-    }
-  },
   "3170": {
     "inputs": {
       "text": [
@@ -6451,7 +5606,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3174": {
@@ -6474,25 +5629,13 @@
       "title": "Input Selector"
     }
   },
-  "3175": {
-    "inputs": {
-      "source": [
-        "3165",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text"
-    }
-  },
   "3176": {
     "inputs": {
       "value": "Monochrome photographic refinement only. Copy the photographic style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Preserve facial identity, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, lighting direction, shadows, perspective, and image structure exactly. Preserve the transparency and natural appearance of clothing.\n\nMaintain realistic grayscale tonal relationships, smooth tonal transitions, balanced local contrast, subtle micro-contrast, natural highlight roll-off, rich shadow detail, and clean photographic sharpness while preserving the original monochrome aesthetic.\n\n__INSTRUCTION_FROM_FILE__\n\nSkin refinement means preservation of natural luminance, tonal fidelity, and authentic photographic texture only. Preserve natural pores, fine lines, freckles, moles, subtle facial hair, and all authentic skin characteristics. Improve only tonal consistency, grayscale transitions, and subtle texture continuity.\n\nPreserve the natural luminance and texture of the lips without altering their shape or creating artificial contrast.\n\nDo not beautify, smooth, airbrush, retouch, remove wrinkles, remove blemishes, reshape the face, modify age, or alter facial characteristics. Avoid waxy, plastic, overly sharpened, or AI-generated skin appearance.\n\nDo not alter image content, composition, geometry, or structure."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3177": {
@@ -6501,7 +5644,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3178": {
@@ -6547,7 +5690,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3188": {
@@ -6556,7 +5699,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3189": {
@@ -6685,7 +5828,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3200": {
@@ -6694,7 +5837,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Input Text"
     }
   },
   "3201": {
@@ -6835,6 +5978,54 @@
     "class_type": "FashnHumanParserMask",
     "_meta": {
       "title": "FASHN Human Parser (Mask)"
+    }
+  },
+  "3226": {
+    "inputs": {
+      "active_scale": 0.95,
+      "per_token_whiten": 0.03,
+      "norm_equalize": 0.08,
+      "early_layer_scale": 0.95,
+      "mid_layer_scale": 1.15,
+      "late_layer_scale": 0.9,
+      "preserve_original": 0.78,
+      "active_end_override": 0,
+      "device": "auto",
+      "debug": false,
+      "conditioning": [
+        "2234",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinEnhancer",
+    "_meta": {
+      "title": "FLUX.2 Klein Enhancer"
+    }
+  },
+  "3228": {
+    "inputs": {
+      "conditioning": [
+        "3093",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out"
+    }
+  },
+  "3229": {
+    "inputs": {
+      "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
+      "strength_model": 1,
+      "model": [
+        "3049",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
     }
   },
   "2920:2866": {
