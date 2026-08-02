@@ -282,6 +282,8 @@ LORA_MODELS=(
     # height_krea2_loraholic.safetensors
     "https://civitai.com/api/download/models/3111503?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
+    # inline-skin-lora-krea-2-raw.safetensors
+    "https://huggingface.co/inlineresearch/skin-lora-krea-2-raw/resolve/main/inline-skin-lora-krea-2-raw.safetensors"
 
     "https://civitai.com/api/download/models/3123867?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 
