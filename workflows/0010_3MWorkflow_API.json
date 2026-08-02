@@ -6017,7 +6017,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 1,
+      "strength_model": 0.64,
       "model": [
         "3049",
         0
