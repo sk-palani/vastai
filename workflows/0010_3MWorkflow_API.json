@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "1.6",
+      "megapixel": "1.8",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1445,7 +1445,7 @@
   "1195": {
     "inputs": {
       "block_number": 4,
-      "downscale_factor": 1.5,
+      "downscale_factor": 1.75,
       "start_percent": 0,
       "end_percent": 0.45,
       "downscale_after_skip": true,
@@ -1463,7 +1463,7 @@
   },
   "1196": {
     "inputs": {
-      "unet_name": "flux1_v40Fp8.safetensors",
+      "unet_name": "flux1-dev.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -1906,7 +1906,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler_ancestral"
+      "sampler_name": "euler"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -1947,7 +1947,10 @@
         "222",
         0
       ],
-      "b": 0.42,
+      "b": [
+        "2272",
+        0
+      ],
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -4090,7 +4093,7 @@
   },
   "2270": {
     "inputs": {
-      "value": 0.48
+      "value": 0.42
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5216,7 +5219,7 @@
   },
   "3147": {
     "inputs": {
-      "balance": 0.68,
+      "balance": 0.66,
       "debug": false,
       "model": [
         "2011",
@@ -5234,19 +5237,19 @@
   },
   "3155": {
     "inputs": {
-      "guide_size": 896,
-      "guide_size_for": false,
-      "max_size": 896,
+      "guide_size": 800,
+      "guide_size_for": true,
+      "max_size": 800,
       "seed": [
         "378",
         0
       ],
-      "steps": 24,
+      "steps": 14,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.12,
-      "feather": 8,
+      "denoise": 0.1,
+      "feather": 10,
       "noise_mask": true,
       "force_inpaint": true,
       "wildcard": "",
