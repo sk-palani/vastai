@@ -1433,13 +1433,32 @@
     "inputs": {
       "stop_at_clip_layer": -2,
       "clip": [
-        "1298",
-        1
+        "1192",
+        0
       ]
     },
     "class_type": "CLIPSetLastLayer",
     "_meta": {
       "title": "CLIP Set Last Layer"
+    }
+  },
+  "1195": {
+    "inputs": {
+      "block_number": 4,
+      "downscale_factor": 1.5,
+      "start_percent": 0,
+      "end_percent": 0.45,
+      "downscale_after_skip": true,
+      "downscale_method": "bislerp",
+      "upscale_method": "bislerp",
+      "model": [
+        "1196",
+        0
+      ]
+    },
+    "class_type": "PatchModelAddDownscale",
+    "_meta": {
+      "title": "4::2::0::0.5"
     }
   },
   "1196": {
@@ -1480,7 +1499,7 @@
       ],
       "guidance": 3.5,
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -1516,11 +1535,11 @@
       "strength_model": 1,
       "strength_clip": 0.8,
       "model": [
-        "1196",
+        "1195",
         0
       ],
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -1535,11 +1554,11 @@
       "strength_model": 0.86,
       "strength_clip": 0.08,
       "model": [
-        "1676",
+        "1297",
         0
       ],
       "clip": [
-        "1676",
+        "1297",
         1
       ]
     },
@@ -1887,7 +1906,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler"
+      "sampler_name": "euler_ancestral"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -2088,25 +2107,6 @@
       "title": "Text Find and Replace"
     }
   },
-  "1676": {
-    "inputs": {
-      "lora_name": "AntiBlur.safetensors",
-      "strength_model": 0.7,
-      "strength_clip": 0.5,
-      "model": [
-        "1297",
-        0
-      ],
-      "clip": [
-        "1297",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Pandora-RAWr 0.70::0.70"
-    }
-  },
   "1695": {
     "inputs": {
       "lora_name": "AntiBlur.safetensors",
@@ -2117,7 +2117,7 @@
         0
       ],
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -2198,7 +2198,7 @@
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
       "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique.  \n",
-      "guidance": 2.6,
+      "guidance": 2.8,
       "clip": [
         "2925",
         1
@@ -2957,7 +2957,7 @@
   },
   "2026": {
     "inputs": {
-      "active_scale": 0.9,
+      "active_scale": 1.04,
       "per_token_whiten": 0.05,
       "norm_equalize": 0.05,
       "early_layer_scale": 1.4,
@@ -4570,7 +4570,7 @@
         0
       ],
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -5234,19 +5234,19 @@
   },
   "3155": {
     "inputs": {
-      "guide_size": 1024,
+      "guide_size": 896,
       "guide_size_for": false,
-      "max_size": 1024,
+      "max_size": 896,
       "seed": [
         "378",
         0
       ],
-      "steps": 19,
+      "steps": 24,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.1,
-      "feather": 10,
+      "denoise": 0.08,
+      "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
       "wildcard": "",
@@ -5268,8 +5268,8 @@
         0
       ],
       "clip": [
-        "1197",
-        0
+        "1298",
+        1
       ],
       "vae": [
         "1227",
@@ -5486,7 +5486,7 @@
   },
   "3187": {
     "inputs": {
-      "value": "A professionally color-graded photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic mid-2010s consumer DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
+      "value": "photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic mid-2010s professional DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5495,7 +5495,7 @@
   },
   "3188": {
     "inputs": {
-      "value": "A professionally rendered monochrome photograph of an Indian woman, v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic grayscale skin luminance. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and clean monochrome photographic rendering. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR monochrome image quality from the mid-2000s, subtle optical softness, rich tonal separation, and smooth grayscale transitions.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones and natural luminance relationships throughout the image.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, moderate textile detail, and authentic photographic softness. Avoid exaggerated fabric texture, embroidery definition, weave visibility, or hyper-detailed clothing."
+      "value": "A professionally rendered monochrome photograph of an Indian woman, v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic grayscale skin luminance. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and clean monochrome photographic rendering. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic professional DSLR monochrome image quality, rich tonal separation, and smooth grayscale transitions.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones and natural luminance relationships throughout the image.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, moderate textile detail, and authentic photographic softness. Avoid exaggerated fabric texture, embroidery definition, weave visibility, or hyper-detailed clothing."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5528,8 +5528,8 @@
       "t5xxl": "A professionally photographed portrait of an Indian woman, v1dhya5.\n\nTreat the input face and smile as correct. Refine only missing photographic detail while preserving the subject's facial identity, expression, gaze direction, facial proportions, head shape, hairstyle, bindi, jewelry, lighting, white balance, composition, and photographic color grading.\n\nMaintain realistic matte skin with subtle natural pores, gentle tonal variation, authentic photographic texture, soft facial transitions, and natural melanin-rich South Indian skin tones. Preserve existing freckles, moles, fine facial hair, eyelashes, eyebrows, and other natural facial characteristics exactly as they appear. Improve only subtle eye clarity, iris definition, eyelash detail, eyebrow definition, natural lip definition, and overall facial coherence while maintaining realistic optical sharpness.\n\nPreserve the natural shape, spacing, alignment, translucency, and color variation of the teeth. Maintain realistic enamel shading and subtle imperfections. Do not whiten teeth excessively, sharpen tooth edges, invent or remove teeth, alter the smile, or create perfectly uniform teeth.\n\nPreserve realistic age, facial geometry, skin texture, and natural imperfections. Keep clothing, accessories, background, shadows, and highlights unchanged.\n\nDo not beautify, reshape, de-age, age, stylize, smooth skin, remove pores, add makeup, enlarge eyes, sharpen excessively, alter facial proportions, change expression, modify hair, introduce artificial skin texture, hallucinate facial details, or create new artifacts.",
       "guidance": 3.5,
       "clip": [
-        "1197",
-        0
+        "1298",
+        1
       ]
     },
     "class_type": "CLIPTextEncodeFlux",
@@ -5682,9 +5682,9 @@
   "3205": {
     "inputs": {
       "max_shift": 1.08,
-      "base_shift": 0.55,
-      "width": 1024,
-      "height": 1024,
+      "base_shift": 0.5,
+      "width": 896,
+      "height": 896,
       "model": [
         "2925",
         0
