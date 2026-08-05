@@ -62,48 +62,58 @@ echo "[$LOG_TS] 🖼️  Using target megapixel: $target_mega_pixel (VRAM: ${vra
 
 
 # --- Identify removable node types ---
-REMOVE_TYPES='["PreviewAny", "ShowText|pysssss"]'
+REMOVE_TYPES='["PreviewAny", "ShowText|pysssss", "Image Comparer (rgthree)"]'
 
-## --- List nodes matching removal types ---
-#echo "[$LOG_TS] 🔍 Checking for removable nodes..."
-#removable_nodes=$(jq -r --argjson types "$REMOVE_TYPES" '
-#  to_entries[]
-#  | select(.value.class_type as $ct | $types | index($ct))
-#  | .key
-#' "$WORKFLOW_FILE")
-#
-#if [ -n "$removable_nodes" ]; then
-#  echo "[$LOG_TS] 🧹 Found nodes to remove: $removable_nodes"
-#else
-#  echo "[$LOG_TS] ✅ No removable nodes found."
-#fi
+# --- List nodes matching removal types ---
+echo "[$LOG_TS] 🔍 Checking for removable nodes..."
+removable_nodes=$(jq -r --argjson types "$REMOVE_TYPES" '
+  to_entries[]
+  | select((.value.class_type // "") as $ct | $types | index($ct))
+  | "\(.key): \(.value.class_type)"
+' "$WORKFLOW_FILE")
+
+if [ -n "$removable_nodes" ]; then
+  echo "[$LOG_TS] 🧹 Found nodes to remove:"
+  printf '%s\n' "$removable_nodes" | sed "s/^/[$LOG_TS]   - /"
+else
+  echo "[$LOG_TS] ✅ No removable nodes found."
+fi
 
 TMP_FILE="$(mktemp)"
-# --- Replace numeric seeds and target megapixel settings ---
-jq --argjson new_seed "$random_seed" \
-   --arg target_mega_pixel "$target_mega_pixel" '
+# --- Replace numeric seeds ---
+jq --argjson new_seed "$random_seed" '
   walk(
     if type == "object" then
-      (if has("seed") and (.seed | type) == "number"
-       then .seed = $new_seed
-       else .
-       end)
-      | (if has("megapixel")
-         then .megapixel = $target_mega_pixel
-         else .
-         end)
+      if has("seed") and (.seed | type) == "number"
+      then .seed = $new_seed
+      else .
+      end
     else .
     end
   )
 ' "$WORKFLOW_FILE" > "$UPDATED_FILE"
 
+
+## --- Replace target megapixel settings ---
+#jq --arg target_mega_pixel "$target_mega_pixel" '
+#  walk(
+#    if type == "object" then
+#      if has("megapixel")
+#      then .megapixel = $target_mega_pixel
+#      else .
+#      end
+#    else .
+#    end
+#  )
+#' "$UPDATED_FILE" > "$TMP_FILE" && mv "$TMP_FILE" "$UPDATED_FILE"
+
 # --- Remove unwanted nodes ---
-jq -c '
+jq -c --argjson types "$REMOVE_TYPES" '
   delpaths(
     [ paths as $p
       | select(
           ($p | last) == "class_type"
-          and (getpath($p) == "PreviewAny" or getpath($p) == "ShowText|pysssss" or getpath($p) == "Image Comparer (rgthree)")
+          and (getpath($p) as $ct | $types | index($ct))
         )
       | $p[:-1]
     ]
