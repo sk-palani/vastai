@@ -1463,7 +1463,7 @@
   },
   "1196": {
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
+      "unet_name": "flux1_v40Fp8.safetensors",
       "weight_dtype": "fp8_e4m3fn"
     },
     "class_type": "UNETLoader",
