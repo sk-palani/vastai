@@ -3632,8 +3632,8 @@
         0
       ],
       "font": "SevenSegment.ttf",
-      "size": 40,
-      "color": "#be95c4FF",
+      "size": 42,
+      "color": "#faa307FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
