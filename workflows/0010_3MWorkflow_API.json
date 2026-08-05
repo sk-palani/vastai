@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "1.6",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1354,8 +1354,8 @@
   "1094": {
     "inputs": {
       "method": "mkl",
-      "strength": 0.1,
-      "multithread": false,
+      "strength": 0.08,
+      "multithread": true,
       "image_ref": [
         "127",
         0
@@ -1431,7 +1431,7 @@
   },
   "1193": {
     "inputs": {
-      "stop_at_clip_layer": -3,
+      "stop_at_clip_layer": -2,
       "clip": [
         "1192",
         0
@@ -1463,7 +1463,7 @@
   },
   "1196": {
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
+      "unet_name": "flux1_v40Fp8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -1535,7 +1535,7 @@
       "strength_model": 1.2,
       "strength_clip": 0.08,
       "model": [
-        "3039",
+        "1195",
         0
       ],
       "clip": [
@@ -1906,7 +1906,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler"
+      "sampler_name": "euler_ancestral"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -1947,7 +1947,7 @@
         "222",
         0
       ],
-      "b": 0.44,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1977,7 +1977,7 @@
   },
   "1657": {
     "inputs": {
-      "scheduler": "beta",
+      "scheduler": "sgm_uniform",
       "steps": 44,
       "denoise": [
         "1649",
@@ -2087,7 +2087,7 @@
     },
     "class_type": "InjectLatentNoise+",
     "_meta": {
-      "title": "🔧 Inject Latent Noise [0.12]"
+      "title": "🔧 Inject Latent Noise"
     }
   },
   "1674": {
@@ -2777,28 +2777,6 @@
       "title": "ModelSamplingFlux"
     }
   },
-  "2003": {
-    "inputs": {
-      "active_scale": 1.2,
-      "per_token_whiten": 0.03,
-      "norm_equalize": 0.08,
-      "early_layer_scale": 0.95,
-      "mid_layer_scale": 1.15,
-      "late_layer_scale": 0.9,
-      "preserve_original": 0.78,
-      "active_end_override": false,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2005",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
-    }
-  },
   "2005": {
     "inputs": {
       "noise_mask": true,
@@ -3029,7 +3007,7 @@
         0
       ],
       "positive": [
-        "2003",
+        "2005",
         0
       ],
       "negative": [
@@ -3815,7 +3793,7 @@
       ],
       "font": "SevenSegment.ttf",
       "size": 40,
-      "color": "#be95c4FF",
+      "color": "#00a6fbFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3850,7 +3828,7 @@
   "2219": {
     "inputs": {
       "lora_name": "vidhyas_lora_v4_klein.safetensors",
-      "strength_model": 1,
+      "strength_model": 0.96,
       "model": [
         "2124",
         0
@@ -4421,7 +4399,7 @@
   "2339": {
     "inputs": {
       "any_01": [
-        "3084",
+        "3076",
         0
       ],
       "any_02": [
@@ -4826,8 +4804,8 @@
       "steps": 12,
       "cfg": 1,
       "sampler_name": "er_sde",
-      "scheduler": "simple",
-      "denoise": 1,
+      "scheduler": "sgm_uniform",
+      "denoise": 0.99,
       "model": [
         "2131",
         0
@@ -4979,30 +4957,11 @@
       "title": "ProPostApplyLUT"
     }
   },
-  "3039": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.25,
-      "start_percent": 0.45,
-      "end_percent": 0.6,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1195",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
-    }
-  },
   "3049": {
     "inputs": {
       "lora_name": "ultra_real_krea2_v2.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0,
+      "strength_model": 0.4,
+      "strength_clip": 0.1,
       "model": [
         "2322",
         0
@@ -5061,121 +5020,6 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "Krea_VAE Decode"
-    }
-  },
-  "3078": {
-    "inputs": {
-      "image": [
-        "3076",
-        0
-      ]
-    },
-    "class_type": "GetImageSizeAndCount",
-    "_meta": {
-      "title": "Get Image Size & Count"
-    }
-  },
-  "3079": {
-    "inputs": {
-      "preprocessor": "DepthAnythingPreprocessor",
-      "resolution": [
-        "3081",
-        0
-      ],
-      "image": [
-        "3076",
-        0
-      ]
-    },
-    "class_type": "AIO_Preprocessor",
-    "_meta": {
-      "title": "AIO Aux Preprocessor"
-    }
-  },
-  "3080": {
-    "inputs": {
-      "image": [
-        "3079",
-        0
-      ]
-    },
-    "class_type": "ImageInvert",
-    "_meta": {
-      "title": "Invert Image Colors"
-    }
-  },
-  "3081": {
-    "inputs": {
-      "mode": false,
-      "a": [
-        "3078",
-        1
-      ],
-      "b": [
-        "3078",
-        2
-      ]
-    },
-    "class_type": "ImpactMinMax",
-    "_meta": {
-      "title": "ImpactMinMax"
-    }
-  },
-  "3084": {
-    "inputs": {
-      "lens_distortion": -0.006,
-      "color_temperature": 0.55,
-      "tint": 0,
-      "atmosphere_enabled": true,
-      "haze_strength": 0,
-      "lift_blacks": 0,
-      "depth_offset": 0,
-      "f_stop": "Manual",
-      "dof_intensity": 0,
-      "dof_auto_focus": false,
-      "dof_sharpness_radius": 0,
-      "dof_focus_point": 0,
-      "light_wrap_strength": 0.02,
-      "promist_strength": 0.02,
-      "halation_strength": 0.01,
-      "chromatic_aberration": 0.001,
-      "vignette_intensity": 0.03,
-      "grain_power": 0.004,
-      "monochrome_grain": false,
-      "highlight_rolloff": 0.15,
-      "image": [
-        "3085",
-        0
-      ],
-      "depth_map": [
-        "3080",
-        0
-      ]
-    },
-    "class_type": "OpticalRealism",
-    "_meta": {
-      "title": "Optical Realism & Physics"
-    }
-  },
-  "3085": {
-    "inputs": {
-      "temperature": 0,
-      "hue": 0,
-      "brightness": -5,
-      "contrast": 4,
-      "saturation": -2.3,
-      "gamma": [
-        "3141",
-        0
-      ],
-      "image": [
-        "3076",
-        0
-      ]
-    },
-    "class_type": "ColorCorrect",
-    "_meta": {
-      "title": "ColorCorrect"
     }
   },
   "3086": {
@@ -5255,7 +5099,7 @@
       "embed_workflow": "true",
       "show_previews": "false",
       "images": [
-        "3084",
+        "3076",
         0
       ]
     },
@@ -5294,7 +5138,7 @@
         "222",
         0
       ],
-      "b": 0.26,
+      "b": 0.54,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -5338,15 +5182,6 @@
       "title": "Display Int (rgthree)"
     }
   },
-  "3141": {
-    "inputs": {
-      "value": 1.05
-    },
-    "class_type": "FloatConstant",
-    "_meta": {
-      "title": "Float Constant"
-    }
-  },
   "3142": {
     "inputs": {
       "pixels": [
@@ -5381,7 +5216,7 @@
   },
   "3147": {
     "inputs": {
-      "balance": 0.54,
+      "balance": 0.68,
       "debug": false,
       "model": [
         "2011",
@@ -5406,11 +5241,11 @@
         "378",
         0
       ],
-      "steps": 19,
+      "steps": 24,
       "cfg": 1,
       "sampler_name": "euler",
-      "scheduler": "beta",
-      "denoise": 0.06,
+      "scheduler": "simple",
+      "denoise": 0.08,
       "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
@@ -5478,8 +5313,8 @@
         "378",
         0
       ],
-      "steps": 9,
-      "cfg": 0,
+      "steps": 8,
+      "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
       "start_at_step": 5,
@@ -5524,7 +5359,7 @@
   "3166": {
     "inputs": {
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
-      "strength_model": 0.92,
+      "strength_model": 1,
       "model": [
         "3229",
         0
@@ -5740,7 +5575,7 @@
   "3196": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.14,
+      "strength": 0.12,
       "log": false,
       "image": [
         "2377",
@@ -5893,7 +5728,7 @@
     "inputs": {
       "dishonesty_factor": -0.03,
       "start_percent": 0.25,
-      "end_percent": 0.45,
+      "end_percent": 0.5,
       "sampler": [
         "2280",
         0
@@ -5906,9 +5741,9 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.1,
-      "start": 0.3,
-      "end": 0.63,
+      "detail_amount": 0.08,
+      "start": 0.42,
+      "end": 0.65,
       "bias": 0.5,
       "exponent": 1,
       "start_offset": 0,
@@ -5963,7 +5798,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 1,
+      "strength_model": 0.72,
       "model": [
         "3049",
         0
