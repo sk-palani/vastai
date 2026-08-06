@@ -94,18 +94,18 @@ jq --argjson new_seed "$random_seed" '
 ' "$WORKFLOW_FILE" > "$UPDATED_FILE"
 
 
-## --- Replace target megapixel settings ---
-#jq --arg target_mega_pixel "$target_mega_pixel" '
-#  walk(
-#    if type == "object" then
-#      if has("megapixel")
-#      then .megapixel = $target_mega_pixel
-#      else .
-#      end
-#    else .
-#    end
-#  )
-#' "$UPDATED_FILE" > "$TMP_FILE" && mv "$TMP_FILE" "$UPDATED_FILE"
+# --- Replace target megapixel settings ---
+jq --arg target_mega_pixel "$target_mega_pixel" '
+  walk(
+    if type == "object" then
+      if has("megapixel")
+      then .megapixel = $target_mega_pixel
+      else .
+      end
+    else .
+    end
+  )
+' "$UPDATED_FILE" > "$TMP_FILE" && mv "$TMP_FILE" "$UPDATED_FILE"
 
 # --- Remove unwanted nodes ---
 jq -c --argjson types "$REMOVE_TYPES" '
