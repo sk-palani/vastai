@@ -2049,6 +2049,7 @@
         0
       ],
       "noise_strength": 0.1,
+      "normalize": "false",
       "latent": [
         "1648",
         0
@@ -3269,6 +3270,7 @@
         0
       ],
       "noise_strength": 0.18,
+      "normalize": "false",
       "latent": [
         "2183",
         0
@@ -4426,7 +4428,7 @@
         0
       ],
       "positive": [
-        "3294",
+        "3304",
         0
       ],
       "negative": [
@@ -5028,7 +5030,7 @@
   "3228": {
     "inputs": {
       "conditioning": [
-        "3294",
+        "3304",
         0
       ]
     },
@@ -5129,30 +5131,6 @@
       "title": "Text String (Multiline)"
     }
   },
-  "3294": {
-    "inputs": {
-      "text": [
-        "2406",
-        0
-      ],
-      "image1_tokens": "normal",
-      "image2_tokens": "normal",
-      "image3_tokens": "normal",
-      "image4_tokens": "normal",
-      "clip": [
-        "2349",
-        0
-      ],
-      "image1": [
-        "2309",
-        0
-      ]
-    },
-    "class_type": "Krea2EditRebalance",
-    "_meta": {
-      "title": "Krea_ 2 Image Edit Rebalance"
-    }
-  },
   "3295": {
     "inputs": {
       "eta": 0.01,
@@ -5176,7 +5154,7 @@
         0
       ],
       "positive": [
-        "3294",
+        "3304",
         0
       ],
       "negative": [
@@ -5215,6 +5193,33 @@
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
+    }
+  },
+  "3304": {
+    "inputs": {
+      "text": [
+        "2406",
+        0
+      ],
+      "steering": 1,
+      "layer_multiplier": 1,
+      "enable_step": true,
+      "image1_tokens": "normal",
+      "image2_tokens": "normal",
+      "image3_tokens": "normal",
+      "image4_tokens": "normal",
+      "clip": [
+        "2349",
+        0
+      ],
+      "image1": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "Krea2EditRebalance",
+    "_meta": {
+      "title": "Krea_ 2 Image Edit Rebalance"
     }
   },
   "2920:2866": {
