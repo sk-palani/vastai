@@ -3412,6 +3412,7 @@
       "vertical_align": "bottom",
       "offset_x": -4,
       "offset_y": -2,
+      "direction": "ltr",
       "img_composite": [
         "2202",
         0
@@ -3764,7 +3765,7 @@
       "brightness": -10,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 1.1,
+      "gamma": 1.05,
       "image": [
         "1094",
         0
