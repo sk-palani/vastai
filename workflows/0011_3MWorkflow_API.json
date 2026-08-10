@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "2.2",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1354,7 +1354,7 @@
   "1094": {
     "inputs": {
       "method": "mkl",
-      "strength": 0.1,
+      "strength": 0.12,
       "multithread": false,
       "image_ref": [
         "127",
@@ -4234,10 +4234,10 @@
     "inputs": {
       "temperature": -5,
       "hue": 0,
-      "brightness": 0,
+      "brightness": -10,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 1,
+      "gamma": 1.05,
       "image": [
         "1094",
         0
@@ -4798,7 +4798,7 @@
   "3078": {
     "inputs": {
       "image": [
-        "3076",
+        "3247",
         0
       ]
     },
@@ -4815,7 +4815,7 @@
         0
       ],
       "image": [
-        "3076",
+        "3247",
         0
       ]
     },
@@ -4901,7 +4901,7 @@
         0
       ],
       "image": [
-        "3076",
+        "3247",
         0
       ]
     },
@@ -5669,6 +5669,22 @@
     "class_type": "VantageTextEncodeKrea2",
     "_meta": {
       "title": "Vantage Text Encode (Krea2)"
+    }
+  },
+  "3247": {
+    "inputs": {
+      "any_01": [
+        "3076",
+        0
+      ],
+      "any_02": [
+        "3167",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Switch"
     }
   },
   "2920:2866": {
