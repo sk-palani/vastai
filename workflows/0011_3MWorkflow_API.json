@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "2.2",
+      "megapixel": "1.8",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -2818,7 +2818,7 @@
   },
   "2026": {
     "inputs": {
-      "active_scale": 1.04,
+      "active_scale": 1,
       "per_token_whiten": 0.05,
       "norm_equalize": 0.05,
       "early_layer_scale": 1.4,
@@ -4662,7 +4662,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Fujifilm Reala 100 color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nPreserve the existing photographic color grading, overall exposure, and natural color relationships. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, healthy color separation, and vibrant yet natural colors. Apply only a very subtle reduction in highlight brightness with smooth highlight roll-off while preserving midtones, shadow detail, local contrast, micro-contrast, and perceived optical sharpness.\n\nProduce a clean, natural photograph with realistic texture, accurate color reproduction, authentic photographic depth, and balanced tonal transitions.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, gently neutralize it toward its natural dark tone while preserving realistic tonal variation, subtle specular highlights, and individual hair strands. Preserve the subject's original hair color and natural appearance. Do not make the hair appear jet black, overly dark, dyed, flat, or unnaturally uniform.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, skin tone, natural shading, pores, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
+      "value": "Fujifilm Reala 100-inspired photographic color response with the tonal character of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correct. Preserve the subject's identity, facial features, expression, gaze, pose, body proportions, hairstyle, clothing, accessories, skin appearance, background, composition, perspective, lighting, shadows, depth of field, and existing photographic detail. Do not reinterpret or restyle the image.\n\nPreserve the existing color grading, exposure, contrast, saturation, tonal relationships, local contrast, micro-contrast, and perceived sharpness. Correct only excessive warm, red, or magenta color casts while maintaining natural skin tones and the original colors of the image.\n\nApply only a very subtle reduction in highlight brightness with smooth highlight roll-off. Preserve midtones, shadow detail, local contrast, and perceived sharpness.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair is excessively warm or reddish, change its color to natural dark black while preserving the exact hairstyle, shape, volume, length, parting, strand direction, texture, and existing highlights. Keep natural tonal variation and reflected light. Do not make the hair flat, uniformly black, overly dark, or artificially smooth.\n\nRemove tattoos and mehendi only where explicitly requested, reconstructing the underlying area using the surrounding skin's existing tone, shading, and texture.\n\nIf visible logos, watermarks, timestamps, signatures, or text overlays are present, remove them cleanly while preserving the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nDo not introduce new objects, textures, patterns, details, or stylistic changes. The output should remain visually almost identical to the input, except for the explicitly requested corrections."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4929,11 +4929,11 @@
         0
       ],
       "positive": [
-        "3230",
-        1
+        "3093",
+        0
       ],
       "negative": [
-        "2314",
+        "3228",
         0
       ],
       "latent_image": [
@@ -5063,7 +5063,7 @@
   },
   "3147": {
     "inputs": {
-      "balance": 0.54,
+      "balance": 0.665,
       "debug": false,
       "model": [
         "2011",
@@ -5172,11 +5172,11 @@
         0
       ],
       "positive": [
-        "3230",
-        1
+        "3093",
+        0
       ],
       "negative": [
-        "2314",
+        "3093",
         0
       ],
       "latent_image": [
