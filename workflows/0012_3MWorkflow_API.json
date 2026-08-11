@@ -1876,7 +1876,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler"
+      "sampler_name": "euler_ancestral"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -3405,7 +3405,7 @@
       ],
       "font": "SevenSegment.ttf",
       "size": 42,
-      "color": "#e85d04FF",
+      "color": "#2a9d8fFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3721,7 +3721,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "kreamania_variant5.safetensors",
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -5042,7 +5042,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.64,
       "model": [
         "2322",
         0
@@ -5201,10 +5201,10 @@
         "2406",
         0
       ],
-      "steering": 1,
-      "layer_multiplier": 1,
-      "enable_step": true,
-      "image1_tokens": "normal",
+      "steering": 0.98,
+      "layer_multiplier": 0.98,
+      "enable_step": false,
+      "image1_tokens": "low",
       "image2_tokens": "normal",
       "image3_tokens": "normal",
       "image4_tokens": "normal",
