@@ -381,6 +381,9 @@ LORA_MODELS=(
 #    "https://civitai.com/api/download/models/3008887?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    # Purple_Grainy-FK_epoch_12.safetensors
 #    "https://civitai.com/api/download/models/2977015?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    #Purple_Grainy_Kr2_AM.safetensors
+    "https://civitai.com/api/download/models/3110766?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
 
 
     # ------------------------------
