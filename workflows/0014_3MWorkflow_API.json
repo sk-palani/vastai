@@ -2048,7 +2048,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.1,
+      "noise_strength": 0.05,
       "normalize": "false",
       "latent": [
         "1648",
@@ -2819,7 +2819,7 @@
   },
   "2026": {
     "inputs": {
-      "active_scale": 1,
+      "active_scale": 1.1,
       "per_token_whiten": 0.05,
       "norm_equalize": 0.05,
       "early_layer_scale": 1.4,
@@ -2841,7 +2841,7 @@
   },
   "2034": {
     "inputs": {
-      "lora_name": "Purple_Grainy-FK_epoch_12.safetensors",
+      "lora_name": "Purple_Grainy_Kr2_AM.safetensors",
       "strength_model": 0.64,
       "model": [
         "2219",
@@ -2850,7 +2850,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "Load LoRA"
+      "title": "Purple_Grainy_Kr2_AM :: 0.64"
     }
   },
   "2041": {
@@ -4731,7 +4731,7 @@
         "378",
         0
       ],
-      "steps": 19,
+      "steps": 18,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
@@ -5100,15 +5100,6 @@
       "title": "ModelSamplingFlux"
     }
   },
-  "3213": {
-    "inputs": {
-      "text": "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  "
-    },
-    "class_type": "Text Multiline",
-    "_meta": {
-      "title": "Text Multiline"
-    }
-  },
   "3214": {
     "inputs": {
       "dishonesty_factor": -0.03,
@@ -5340,7 +5331,7 @@
   },
   "3306": {
     "inputs": {
-      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "lora_name": "ultra_real_krea2_v2.safetensors",
       "strength_model": 0.7,
       "strength_clip": 0.1,
       "model": [
@@ -5624,7 +5615,7 @@
       ],
       "steps": 9,
       "cfg": 1,
-      "sampler_name": "dpmpp_2m_sde",
+      "sampler_name": "dpmpp_sde",
       "scheduler": "simple",
       "start_at_step": 5,
       "end_at_step": 999,
