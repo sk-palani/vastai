@@ -226,6 +226,8 @@ LUTS=(
 
 FONTS=(
   "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/fonts/SevenSegment.ttf"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/fonts/DSEG14Classic-Bold.ttf"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/fonts/DSEG14Classic-BoldItalic.ttf"
 )
 
 
@@ -532,7 +534,7 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
     provisioning_get_models \
-        "${COMFYUI_DIR}/custom_nodes/comfyui_essentials/fonts/" \
+        "${COMFYUI_DIR}/custom_nodes/ComfyUI_essentials/fonts/" \
         "${FONTS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/custom_nodes/comfyui_custom_scripts/web/js/assets/" \
