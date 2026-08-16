@@ -534,7 +534,7 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/luts" \
         "${LUTS[@]}"
     provisioning_get_models \
-        "${COMFYUI_DIR}/custom_nodes/ComfyUI_essentials/fonts/" \
+        "${COMFYUI_DIR}/custom_nodes/comfyui_essentials/fonts/" \
         "${FONTS[@]}"
     provisioning_get_models \
         "${COMFYUI_DIR}/custom_nodes/comfyui_custom_scripts/web/js/assets/" \
