@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "2.0",
+      "megapixel": "1.8",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1876,7 +1876,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler_ancestral"
+      "sampler_name": "euler"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -2048,7 +2048,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.14,
+      "noise_strength": 0.1,
       "normalize": "false",
       "latent": [
         "1648",
@@ -2622,10 +2622,10 @@
   },
   "2026": {
     "inputs": {
-      "active_scale": 1.01,
+      "active_scale": 1,
       "per_token_whiten": 0.05,
       "norm_equalize": 0.05,
-      "early_layer_scale": 0.9,
+      "early_layer_scale": 1.4,
       "mid_layer_scale": 1,
       "late_layer_scale": 0.8,
       "preserve_original": 1,
@@ -2645,7 +2645,7 @@
   "2034": {
     "inputs": {
       "lora_name": "Purple_Grainy_Kr2_AM.safetensors",
-      "strength_model": 0.42,
+      "strength_model": 0.64,
       "model": [
         "2219",
         0
@@ -3122,7 +3122,7 @@
   },
   "2144": {
     "inputs": {
-      "lora_name": "ultra_real_v4.safetensors",
+      "lora_name": "ultra_real_v3.safetensors",
       "strength_model": 0.73,
       "strength_clip": 0.1,
       "model": [
@@ -3622,7 +3622,7 @@
       "brightness": -10,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 1.1,
+      "gamma": 1.05,
       "image": [
         "1094",
         0
@@ -4222,12 +4222,12 @@
         "378",
         0
       ],
-      "steps": 18,
+      "steps": 19,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.1,
-      "feather": 5,
+      "denoise": 0.06,
+      "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
       "wildcard": "",
@@ -4577,8 +4577,8 @@
   },
   "3205": {
     "inputs": {
-      "max_shift": 1.06,
-      "base_shift": 0.56,
+      "max_shift": 1.08,
+      "base_shift": 0.5,
       "width": 896,
       "height": 896,
       "model": [
@@ -4608,7 +4608,7 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.12,
+      "detail_amount": 0.1,
       "start": 0.3,
       "end": 0.63,
       "bias": 0.5,
@@ -4758,10 +4758,10 @@
       ],
       "vision_megapixels": 1,
       "mask_padding": 0,
-      "conditioning_rescaling": true,
+      "conditioning_rescaling": false,
       "multiplier": 3.8,
       "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.5,1.1,1.2,1.0",
-      "prompt_adherence_enhancer": false,
+      "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
         "3306",
