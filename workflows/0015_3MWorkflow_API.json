@@ -324,7 +324,7 @@
       "filename_delimiter": "_",
       "filename_number_padding": 4,
       "filename_number_start": "false",
-      "extension": "jpg",
+      "extension": "png",
       "dpi": 301,
       "quality": 100,
       "optimize_image": "false",
@@ -332,7 +332,7 @@
       "overwrite_mode": "prefix_as_filename",
       "show_history": "false",
       "show_history_by_prefix": "true",
-      "embed_workflow": "true",
+      "embed_workflow": "false",
       "show_previews": "false",
       "images": [
         "2215",
@@ -3914,7 +3914,7 @@
       "overwrite_mode": "false",
       "show_history": "false",
       "show_history_by_prefix": "true",
-      "embed_workflow": "true",
+      "embed_workflow": "false",
       "show_previews": "true",
       "images": [
         "127",
