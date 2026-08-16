@@ -331,7 +331,7 @@
       "lossless_webp": "false",
       "overwrite_mode": "prefix_as_filename",
       "show_history": "false",
-      "show_history_by_prefix": "true",
+      "show_history_by_prefix": "false",
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
@@ -2167,7 +2167,7 @@
   "1725": {
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n",
+      "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality , subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n",
       "guidance": 2.8,
       "clip": [
         "2925",
@@ -3378,7 +3378,7 @@
         0
       ],
       "rotation": -90,
-      "opacity": 12,
+      "opacity": 14,
       "base_image": [
         "3198",
         0
@@ -3913,9 +3913,9 @@
       "lossless_webp": "false",
       "overwrite_mode": "false",
       "show_history": "false",
-      "show_history_by_prefix": "true",
+      "show_history_by_prefix": "false",
       "embed_workflow": "false",
-      "show_previews": "true",
+      "show_previews": "false",
       "images": [
         "127",
         0
@@ -4222,11 +4222,11 @@
         "378",
         0
       ],
-      "steps": 31,
+      "steps": 18,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.18,
+      "denoise": 0.1,
       "feather": 5,
       "noise_mask": true,
       "force_inpaint": true,
