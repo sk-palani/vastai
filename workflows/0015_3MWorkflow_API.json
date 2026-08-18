@@ -495,12 +495,12 @@
   },
   "556": {
     "inputs": {
-      "strength": 100,
+      "strength": 98,
       "brightness": 0,
       "contrast": 0,
       "saturation": 0,
-      "red": 15,
-      "green": 17,
+      "red": 7,
+      "green": 12,
       "blue": 3,
       "mode": "RGB",
       "image": [
@@ -519,7 +519,7 @@
       "input_black_point": 0,
       "input_gamma": 1.1,
       "input_white_point": 1,
-      "output_black_point": 0,
+      "output_black_point": 0.05,
       "output_white_point": 1,
       "image": [
         "575",
@@ -1535,7 +1535,7 @@
       "strength_model": 1.2,
       "strength_clip": 0.08,
       "model": [
-        "3039",
+        "1195",
         0
       ],
       "clip": [
@@ -1551,8 +1551,8 @@
   "1298": {
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
-      "strength_model": 0.90,
-      "strength_clip": 0.08,
+      "strength_model": 1,
+      "strength_clip": 0.05,
       "model": [
         "1297",
         0
@@ -1876,7 +1876,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler"
+      "sampler_name": "euler_ancestral"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -2048,7 +2048,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.12,
+      "noise_strength": 0.09,
       "normalize": "false",
       "latent": [
         "1648",
@@ -2180,12 +2180,7 @@
     }
   },
   "1766": {
-    "inputs": {
-      "any_02": [
-        "1985",
-        0
-      ]
-    },
+    "inputs": {},
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
@@ -2207,7 +2202,7 @@
       "attention_mode": "sdpa",
       "preset_prompt": "🖼️ Detailed Description",
       "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nBackground:\nThe user requires a prompt that enables AI to analyze an image and generate a highly accurate recreation prompt suitable for modern text-to-image models. The recreation prompt should faithfully preserve the subject's appearance, apparent age, identity placeholder, composition, clothing, lighting, mood, environment, and artistic style while remaining concise, descriptive, and suitable for image generation.\n\nProfile:\nYou are an expert in computer vision, photography, portraiture, image analysis, and prompt engineering. Your task is to convert visual information into a detailed recreation prompt while preserving the original image as faithfully as possible.\n\nSkills:\n- Image recognition\n- Facial analysis\n- Apparent age estimation\n- Photography terminology\n- Composition analysis\n- Lighting analysis\n- Material and texture recognition\n- Prompt engineering\n\nGoals:\n\n1. Analyze the provided image.\n2. Estimate the subject's apparent age BEFORE performing any other task.\n3. Generate the required metadata.\n4. Generate a detailed recreation prompt capable of reproducing a visually similar image.\n\nConstraints:\n\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\".\n- Estimate only the apparent age based on visible appearance.\n- Never use an exact age.\n- AGE is REQUIRED and must never be omitted.\n- Select exactly one of these age ranges:\n  14-18\n  18-22\n  23-27\n  28-34\n  35-44\n  45-54\n  55-65\n  65+\n- Use HIGH, MEDIUM, or LOW for age confidence.\n- Do not mention uncertainty inside the recreation prompt.\n- Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds that are not visible.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic style whenever possible.\n- Describe only visible characteristics.\n- Do not over-describe individual facial features.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance over minor anatomical details.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- The recreation prompt should be approximately 200–300 words.\n- Output only the required metadata followed immediately by the recreation prompt.\n\nProcedure (follow in this exact order):\n\n1. Estimate the subject's apparent age.\n2. Determine age confidence.\n3. Determine visible gender presentation.\n4. Output the metadata block.\n5. Output the recreation prompt.\n\nOutput Format:\n\nThe response MUST begin with this metadata block. Do not output anything before it.\n\n@@SUBJECT=v1dhya5\n@@AGE=<18-22|23-27|28-34|35-44|45-54|55-65|65+>\n\nAfter @@END_METADATA, output exactly one cohesive paragraph containing only the recreation prompt.\n\nThe recreation prompt must naturally mention \"v1dhya5\" once, preserve the detected artistic medium (photograph, illustration, painting, digital art, sketch, anime, comic, watercolor, oil painting, 3D render, etc.), preserve the original composition and style, and be optimized for FLUX text-to-image models.\n\nDo not output Markdown, headings, JSON, XML, bullet points, explanations, reasoning, or any additional text outside the required metadata block and recreation prompt.",
-      "max_tokens": 384,
+      "max_tokens": 448,
       "keep_model_loaded": true,
       "seed": [
         "378",
@@ -2525,135 +2520,6 @@
     "class_type": "Text Multiline",
     "_meta": {
       "title": "Text Multiline"
-    }
-  },
-  "1985": {
-    "inputs": {
-      "samples": [
-        "2007",
-        0
-      ],
-      "vae": [
-        "2127",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Klein_VAE Decode"
-    }
-  },
-  "2007": {
-    "inputs": {
-      "seed": [
-        "378",
-        0
-      ],
-      "steps": 12,
-      "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.1,
-      "model": [
-        "3147",
-        0
-      ],
-      "positive": [
-        "3147",
-        1
-      ],
-      "negative": [
-        "2025",
-        0
-      ],
-      "latent_image": [
-        "2937",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "Klein_KSampler"
-    }
-  },
-  "2011": {
-    "inputs": {
-      "max_shift": 0.75,
-      "base_shift": 0.43,
-      "width": 1024,
-      "height": 1024,
-      "model": [
-        "2034",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "ModelSamplingFlux"
-    }
-  },
-  "2012": {
-    "inputs": {
-      "text": [
-        "3181",
-        0
-      ],
-      "clip": [
-        "2116",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Klein_CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "2025": {
-    "inputs": {
-      "conditioning": [
-        "3147",
-        1
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "2026": {
-    "inputs": {
-      "active_scale": 1,
-      "per_token_whiten": 0.05,
-      "norm_equalize": 0.05,
-      "early_layer_scale": 1.4,
-      "mid_layer_scale": 1,
-      "late_layer_scale": 0.8,
-      "preserve_original": 1,
-      "active_end_override": 1,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2012",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
-    }
-  },
-  "2034": {
-    "inputs": {
-      "lora_name": "Purple_Grainy_Kr2_AM.safetensors",
-      "strength_model": 0.64,
-      "model": [
-        "2219",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Purple_Grainy_Kr2_AM :: 0.64"
     }
   },
   "2045": {
@@ -3405,7 +3271,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#FF9D9DFF",
+      "color": "#853953FF",
       "background_color": "#00000000",
       "shadow_distance": 0,
       "shadow_blur": 0,
@@ -3752,7 +3618,7 @@
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
       "strength_model": 1,
-      "strength_clip": 0.08,
+      "strength_clip": 0.05,
       "model": [
         "1196",
         0
@@ -3765,34 +3631,6 @@
     "class_type": "LoraLoader",
     "_meta": {
       "title": "v1dhya5 0.92::0.88"
-    }
-  },
-  "2936": {
-    "inputs": {
-      "pixels": [
-        "3274",
-        0
-      ],
-      "vae": [
-        "2127",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Klein_VAE Enc"
-    }
-  },
-  "2937": {
-    "inputs": {
-      "any_02": [
-        "2936",
-        0
-      ]
-    },
-    "class_type": "Any Switch (rgthree)",
-    "_meta": {
-      "title": "Switch"
     }
   },
   "2938": {
@@ -4133,25 +3971,6 @@
       "title": "ProPostApplyLUT"
     }
   },
-  "3039": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.25,
-      "start_percent": 0.45,
-      "end_percent": 0.6,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1195",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
-    }
-  },
   "3104": {
     "inputs": {
       "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
@@ -4161,56 +3980,6 @@
     "class_type": "CLIPLoader",
     "_meta": {
       "title": "Load CLIP"
-    }
-  },
-  "3142": {
-    "inputs": {
-      "pixels": [
-        "127",
-        0
-      ],
-      "vae": [
-        "2127",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Klein_VAE Enc"
-    }
-  },
-  "3145": {
-    "inputs": {
-      "conditioning": [
-        "2026",
-        0
-      ],
-      "latent": [
-        "3142",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "3147": {
-    "inputs": {
-      "balance": 0.665,
-      "debug": false,
-      "model": [
-        "2011",
-        0
-      ],
-      "conditioning": [
-        "3145",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinTextRefBalance",
-    "_meta": {
-      "title": "FLUX.2 Klein Text/Ref Balance"
     }
   },
   "3155": {
@@ -4342,61 +4111,6 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
-    }
-  },
-  "3176": {
-    "inputs": {
-      "value": "Monochrome photographic refinement only. Copy the photographic style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Preserve facial identity, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, lighting direction, shadows, perspective, and image structure exactly. Preserve the transparency and natural appearance of clothing.\n\nMaintain realistic grayscale tonal relationships, smooth tonal transitions, balanced local contrast, subtle micro-contrast, natural highlight roll-off, rich shadow detail, and clean photographic sharpness while preserving the original monochrome aesthetic.\n\n__INSTRUCTION_FROM_FILE__\n\nSkin refinement means preservation of natural luminance, tonal fidelity, and authentic photographic texture only. Preserve natural pores, fine lines, freckles, moles, subtle facial hair, and all authentic skin characteristics. Improve only tonal consistency, grayscale transitions, and subtle texture continuity.\n\nPreserve the natural luminance and texture of the lips without altering their shape or creating artificial contrast.\n\nDo not beautify, smooth, airbrush, retouch, remove wrinkles, remove blemishes, reshape the face, modify age, or alter facial characteristics. Avoid waxy, plastic, overly sharpened, or AI-generated skin appearance.\n\nDo not alter image content, composition, geometry, or structure."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text String (Multiline)"
-    }
-  },
-  "3177": {
-    "inputs": {
-      "value": "Color correction and photographic refinement only. Copy the photographic style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve facial identity, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, lighting direction, shadows, perspective, and image structure exactly. Preserve the transparency and natural appearance of clothing.\n\nCorrect only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, healthy color separation, and accurate color reproduction.\n\n__INSTRUCTION_FROM_FILE__\n\nSkin refinement means photographic color fidelity and natural texture preservation only. Preserve realistic matte skin, natural pores, fine lines, freckles, moles, subtle facial hair, and all authentic skin characteristics. Improve only natural color consistency, tonal transitions, and subtle texture continuity.\n\nPreserve natural lip color and realistic lip texture with subtle moisture while maintaining the original appearance. Do not increase lipstick intensity or alter lip shape.\n\nDo not beautify, smooth, airbrush, retouch, remove wrinkles, remove blemishes, enhance makeup, reshape the face, modify age, or alter facial characteristics. Avoid waxy, plastic, overly sharpened, or AI-generated skin appearance.\n\nDo not alter image content, composition, geometry, or structure."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text String (Multiline)"
-    }
-  },
-  "3178": {
-    "inputs": {
-      "condition": [
-        "3170",
-        0
-      ],
-      "when_true": [
-        "3176",
-        0
-      ],
-      "when_false": [
-        "3177",
-        0
-      ]
-    },
-    "class_type": "InputSelector",
-    "_meta": {
-      "title": "Input Selector"
-    }
-  },
-  "3181": {
-    "inputs": {
-      "find": "__INSTRUCTION_FROM_FILE__",
-      "replace": [
-        "2160",
-        0
-      ],
-      "text": [
-        "3178",
-        0
-      ]
-    },
-    "class_type": "Text Find and Replace",
-    "_meta": {
-      "title": "Text Find and Replace"
     }
   },
   "3187": {
@@ -4608,9 +4322,9 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.1,
-      "start": 0.3,
-      "end": 0.63,
+      "detail_amount": 0.12,
+      "start": 0.35,
+      "end": 0.6,
       "bias": 0.5,
       "exponent": 1,
       "start_offset": 0,
@@ -4721,7 +4435,7 @@
   "3274": {
     "inputs": {
       "any_01": [
-        "3352",
+        "3356",
         0
       ],
       "any_02": [
@@ -4800,8 +4514,8 @@
   },
   "3306": {
     "inputs": {
-      "lora_name": "ultra_real_krea2_v2.safetensors",
-      "strength_model": 0.7,
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.55,
       "strength_clip": 0.1,
       "model": [
         "3314",
@@ -4869,6 +4583,73 @@
       "title": "Concatenate Text (LoRA Trigger Word)"
     }
   },
+  "3338": {
+    "inputs": {
+      "image": [
+        "3352",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "3339": {
+    "inputs": {
+      "preprocessor": "DepthAnythingPreprocessor",
+      "resolution": [
+        "3341",
+        0
+      ],
+      "image": [
+        "3352",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "3340": {
+    "inputs": {
+      "image": [
+        "3339",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors"
+    }
+  },
+  "3341": {
+    "inputs": {
+      "mode": false,
+      "a": [
+        "3338",
+        1
+      ],
+      "b": [
+        "3338",
+        2
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
+  "3344": {
+    "inputs": {
+      "value": 1.05
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
   "3352": {
     "inputs": {
       "samples": [
@@ -4885,56 +4666,40 @@
       "title": "Krea_VAE Decode"
     }
   },
-  "3354": {
+  "3356": {
     "inputs": {
-      "samples": [
-        "3355",
+      "lens_distortion": -0.006,
+      "color_temperature": 0.55,
+      "tint": 0,
+      "atmosphere_enabled": true,
+      "haze_strength": 0,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "Manual",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0.02,
+      "promist_strength": 0.02,
+      "halation_strength": 0.01,
+      "chromatic_aberration": 0.001,
+      "vignette_intensity": 0.03,
+      "grain_power": 0.004,
+      "monochrome_grain": false,
+      "highlight_rolloff": 0.15,
+      "image": [
+        "3362",
         0
       ],
-      "vae": [
-        "3263",
+      "depth_map": [
+        "3340",
         0
       ]
     },
-    "class_type": "VAEDecode",
+    "class_type": "OpticalRealism",
     "_meta": {
-      "title": "Krea_VAE Decode"
-    }
-  },
-  "3355": {
-    "inputs": {
-      "seed": [
-        "378",
-        0
-      ],
-      "steps": 9,
-      "cfg": 1,
-      "sampler_name": "er_sde",
-      "scheduler": "simple",
-      "denoise": [
-        "3359",
-        0
-      ],
-      "model": [
-        "3301",
-        0
-      ],
-      "positive": [
-        "3301",
-        1
-      ],
-      "negative": [
-        "3286",
-        0
-      ],
-      "latent_image": [
-        "3246",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "Krea_KSampler"
+      "title": "Optical Realism & Physics"
     }
   },
   "3359": {
@@ -4951,6 +4716,27 @@
       "title": "0.72"
     }
   },
+  "3362": {
+    "inputs": {
+      "temperature": 0,
+      "hue": 0,
+      "brightness": -5,
+      "contrast": -1.2,
+      "saturation": -2.3,
+      "gamma": [
+        "3344",
+        0
+      ],
+      "image": [
+        "3352",
+        0
+      ]
+    },
+    "class_type": "ColorCorrect",
+    "_meta": {
+      "title": "ColorCorrect"
+    }
+  },
   "3363": {
     "inputs": {
       "add_noise": "disable",
@@ -4958,12 +4744,12 @@
         "378",
         0
       ],
-      "steps": 30,
-      "cfg": 0,
-      "sampler_name": "dpmpp_sde",
+      "steps": 23,
+      "cfg": 1,
+      "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 25,
-      "end_at_step": 30,
+      "start_at_step": 18,
+      "end_at_step": 23,
       "return_with_leftover_noise": "enable",
       "preview_method": "auto",
       "vae_decode": "true",
@@ -4980,7 +4766,7 @@
         0
       ],
       "latent_image": [
-        "3355",
+        "3392",
         0
       ],
       "optional_vae": [
@@ -5099,6 +4885,43 @@
     "class_type": "INTConstant",
     "_meta": {
       "title": "INT Constant"
+    }
+  },
+  "3392": {
+    "inputs": {
+      "eta": 0,
+      "sampler_name": "linear/euler",
+      "scheduler": "simple",
+      "steps": 9,
+      "steps_to_run": 9,
+      "denoise": [
+        "3359",
+        0
+      ],
+      "cfg": 1,
+      "seed": -1,
+      "sampler_mode": "standard",
+      "bongmath": false,
+      "model": [
+        "3301",
+        0
+      ],
+      "positive": [
+        "3301",
+        1
+      ],
+      "negative": [
+        "3286",
+        0
+      ],
+      "latent_image": [
+        "3246",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "Krea_ClownsharKSampler"
     }
   },
   "2920:2866": {
