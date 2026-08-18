@@ -3306,7 +3306,7 @@
   "2219": {
     "inputs": {
       "lora_name": "vidhyas_lora_v4_klein.safetensors",
-      "strength_model": 1,
+      "strength_model": 1.05,
       "model": [
         "2124",
         0
@@ -3483,7 +3483,7 @@
   },
   "2376": {
     "inputs": {
-      "temperature": -5,
+      "temperature": -3,
       "hue": 0,
       "brightness": -10,
       "contrast": 4.5,
