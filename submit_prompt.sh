@@ -140,6 +140,12 @@ curl -v -X POST "$URL/api/history" \
      -H "Content-Type: application/json" \
      -d '{"clear":true}' > /dev/null 2>&1 || true
 
+## --- Clear Queue ---
+#echo "[$LOG_TS] 🧹 Clearing queue (ignoring failures)..."
+#curl -v -X POST "$URL/api/queue" \
+#     -H "Content-Type: application/json" \
+#     -d '{"clear":true}' > /dev/null 2>&1 || true
+
 
 # --- Submit workflow ---
 echo "[$LOG_TS] 📤 Submitting workflow from $UPDATED_FILE ..."

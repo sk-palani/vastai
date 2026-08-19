@@ -495,12 +495,12 @@
   },
   "556": {
     "inputs": {
-      "strength": 98,
+      "strength": 100,
       "brightness": 0,
       "contrast": 0,
       "saturation": 0,
-      "red": 7,
-      "green": 12,
+      "red": 15,
+      "green": 17,
       "blue": 3,
       "mode": "RGB",
       "image": [
@@ -1876,7 +1876,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler_ancestral"
+      "sampler_name": "euler"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -2048,7 +2048,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.09,
+      "noise_strength": 0.1,
       "normalize": "false",
       "latent": [
         "1648",
@@ -2167,7 +2167,7 @@
   "1725": {
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality , subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n",
+      "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique.  \n",
       "guidance": 2.8,
       "clip": [
         "2925",
@@ -3294,7 +3294,7 @@
   "2218": {
     "inputs": {
       "file_prefix": "_",
-      "time_format": "_%y %m %d",
+      "time_format": "_%y %m-%d",
       "output_folder": "",
       "filetype": ""
     },
@@ -3485,7 +3485,7 @@
     "inputs": {
       "temperature": -3,
       "hue": 0,
-      "brightness": -10,
+      "brightness": -4,
       "contrast": 4.5,
       "saturation": -0.3,
       "gamma": 1.05,
@@ -4203,8 +4203,8 @@
   },
   "3196": {
     "inputs": {
-      "lut_name": "Cool_Natural_Breeze.cube",
-      "strength": 0.26,
+      "lut_name": "Presetpro - Agfa Ultra 100.cube",
+      "strength": 0.14,
       "log": false,
       "image": [
         "3384",
@@ -4322,9 +4322,9 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.08,
-      "start": 0.35,
-      "end": 0.55,
+      "detail_amount": 0.1,
+      "start": 0.3,
+      "end": 0.63,
       "bias": 0.5,
       "exponent": 1,
       "start_offset": 0,
