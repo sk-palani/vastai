@@ -1300,7 +1300,7 @@
   },
   "744": {
     "inputs": {
-      "gamma": 1.25,
+      "gamma": 1.12,
       "image": [
         "573",
         0
@@ -3488,7 +3488,7 @@
       "brightness": -4,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 1.05,
+      "gamma": 0.88,
       "image": [
         "1094",
         0
