@@ -4514,8 +4514,8 @@
   },
   "3306": {
     "inputs": {
-      "lora_name": "ultra_real_krea2_v2.safetensors",
-      "strength_model": 0.7,
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.55,
       "strength_clip": 0.1,
       "model": [
         "3314",
