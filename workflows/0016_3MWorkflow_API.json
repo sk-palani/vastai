@@ -499,9 +499,9 @@
       "brightness": 0,
       "contrast": 0,
       "saturation": 0,
-      "red": 7,
-      "green": 12,
-      "blue": 3,
+      "red": 6,
+      "green": 7,
+      "blue": 7,
       "mode": "RGB",
       "image": [
         "554",
@@ -533,8 +533,8 @@
   },
   "573": {
     "inputs": {
-      "brightness": 0.93,
-      "contrast": 1.07,
+      "brightness": 0.96,
+      "contrast": 1.03,
       "saturation": 1,
       "image": [
         "556",
@@ -3454,7 +3454,7 @@
   },
   "2376": {
     "inputs": {
-      "temperature": -3,
+      "temperature": -1,
       "hue": 0,
       "brightness": -4,
       "contrast": 4.5,
@@ -4175,7 +4175,7 @@
   "3196": {
     "inputs": {
       "lut_name": "Cool_Natural_Breeze.cube",
-      "strength": 0.26,
+      "strength": 0.2,
       "log": false,
       "image": [
         "3384",
