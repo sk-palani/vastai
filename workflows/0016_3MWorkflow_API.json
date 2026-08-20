@@ -235,7 +235,7 @@
   },
   "259": {
     "inputs": {
-      "string": "\n\n{{PROMPT}},\n\n\nRemove any watermarks, black/white borders,\n\nTransparent elements in the outfit, \n \nEnhance this image, Make the lighting dramatic and slightly dark,\n",
+      "string": "\n\n{{PROMPT}},\n\nRemove watermarks, logos, and black/white borders.\nPreserve transparent or sheer garment areas as they appear.\nKeep the original lighting direction, contrast, and mood; refine photographic fidelity only.\n",
       "strip_newlines": false
     },
     "class_type": "StringConstantMultiline",
@@ -495,7 +495,7 @@
   },
   "556": {
     "inputs": {
-      "strength": 98,
+      "strength": 70,
       "brightness": 0,
       "contrast": 0,
       "saturation": 0,
@@ -1300,7 +1300,7 @@
   },
   "744": {
     "inputs": {
-      "gamma": 1.12,
+      "gamma": 1.04,
       "image": [
         "573",
         0
@@ -1468,7 +1468,7 @@
         "3318",
         0
       ],
-      "guidance": 3.5,
+      "guidance": 3.1,
       "clip": [
         "1192",
         0
@@ -1503,7 +1503,7 @@
   "1297": {
     "inputs": {
       "lora_name": "Pandora-RAWr.safetensors",
-      "strength_model": 1.2,
+      "strength_model": 0.92,
       "strength_clip": 0.08,
       "model": [
         "1195",
@@ -1591,7 +1591,7 @@
   },
   "1309": {
     "inputs": {
-      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
+      "text": "Indian woman, __AGE__, keep the existing facial expression, gaze, and mouth pose from the input, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image. Preserve the bindi if present; do not add one. Preserve existing makeup; do not add lipstick or restyle glamour.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Natural matte skin, realistic photographic texture, no extra micro-detail, no waxy smoothing. Avoid oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic mid-2010s professional DSLR image quality, Canon EOS 5D / 5D Mark II color science.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -1919,7 +1919,7 @@
   "1657": {
     "inputs": {
       "scheduler": "beta",
-      "steps": 44,
+      "steps": 26,
       "denoise": [
         "1649",
         0
@@ -1953,7 +1953,7 @@
   "1660": {
     "inputs": {
       "max_shift": 1.15,
-      "base_shift": 0.6,
+      "base_shift": 0.5,
       "width": [
         "1639",
         0
@@ -2019,7 +2019,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.14,
+      "noise_strength": 0.08,
       "normalize": "false",
       "latent": [
         "1648",
@@ -2137,8 +2137,8 @@
   },
   "1725": {
     "inputs": {
-      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve a natural, context-appropriate candid expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, age, overall appearance, and a natural, context-appropriate candid expression. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality , subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n",
+      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve the existing facial expression and gaze direction, preserve hairstyle, preserve bindi if present, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
+      "t5xxl": "photograph of an Indian v1dhya5. Preserve her facial identity, facial structure, age, overall appearance, and the existing facial expression and gaze. Natural matte skin, realistic photographic texture, no extra micro-detail, no waxy smoothing, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Preserve the bindi if present; do not add one. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic mid-2010s professional DSLR image quality, subtle optical softness, natural color response, and restrained saturation.\n\nShe has naturally dark, supple, non-oily skin.\n",
       "guidance": 2.8,
       "clip": [
         "2925",
@@ -2171,9 +2171,9 @@
       "model_name": "Qwen3-VL-4B-Instruct",
       "quantization": "4-bit (VRAM-friendly)",
       "attention_mode": "sdpa",
-      "preset_prompt": "🖼️ Detailed Description",
-      "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nBackground:\nThe user requires a prompt that enables AI to analyze an image and generate a highly accurate recreation prompt suitable for modern text-to-image models. The recreation prompt should faithfully preserve the subject's appearance, apparent age, identity placeholder, composition, clothing, lighting, mood, environment, and artistic style while remaining concise, descriptive, and suitable for image generation.\n\nProfile:\nYou are an expert in computer vision, photography, portraiture, image analysis, and prompt engineering. Your task is to convert visual information into a detailed recreation prompt while preserving the original image as faithfully as possible.\n\nSkills:\n- Image recognition\n- Facial analysis\n- Apparent age estimation\n- Photography terminology\n- Composition analysis\n- Lighting analysis\n- Material and texture recognition\n- Prompt engineering\n\nGoals:\n\n1. Analyze the provided image.\n2. Estimate the subject's apparent age BEFORE performing any other task.\n3. Generate the required metadata.\n4. Generate a detailed recreation prompt capable of reproducing a visually similar image.\n\nConstraints:\n\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\".\n- Estimate only the apparent age based on visible appearance.\n- Never use an exact age.\n- AGE is REQUIRED and must never be omitted.\n- Select exactly one of these age ranges:\n  14-18\n  18-22\n  23-27\n  28-34\n  35-44\n  45-54\n  55-65\n  65+\n- Use HIGH, MEDIUM, or LOW for age confidence.\n- Do not mention uncertainty inside the recreation prompt.\n- Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds that are not visible.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic style whenever possible.\n- Describe only visible characteristics.\n- Do not over-describe individual facial features.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance over minor anatomical details.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- The recreation prompt should be approximately 200–300 words.\n- Output only the required metadata followed immediately by the recreation prompt.\n\nProcedure (follow in this exact order):\n\n1. Estimate the subject's apparent age.\n2. Determine age confidence.\n3. Determine visible gender presentation.\n4. Output the metadata block.\n5. Output the recreation prompt.\n\nOutput Format:\n\nThe response MUST begin with this metadata block. Do not output anything before it.\n\n@@SUBJECT=v1dhya5\n@@AGE=<18-22|23-27|28-34|35-44|45-54|55-65|65+>\n\nAfter @@END_METADATA, output exactly one cohesive paragraph containing only the recreation prompt.\n\nThe recreation prompt must naturally mention \"v1dhya5\" once, preserve the detected artistic medium (photograph, illustration, painting, digital art, sketch, anime, comic, watercolor, oil painting, 3D render, etc.), preserve the original composition and style, and be optimized for FLUX text-to-image models.\n\nDo not output Markdown, headings, JSON, XML, bullet points, explanations, reasoning, or any additional text outside the required metadata block and recreation prompt.",
-      "max_tokens": 384,
+      "preset_prompt": "\ud83d\uddbc\ufe0f Detailed Description",
+      "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nYou convert the provided image into a concise recreation prompt for FLUX, Krea, and Klein image models.\n\nConstraints:\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\" exactly once.\n- Describe only what is visible. Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic medium.\n- Do not over-describe individual facial features or skin micro-detail.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- Do not output age metadata, confidence labels, headings, tags, or @@ fields.\n- Do not mention uncertainty.\n- The subject is an adult. Do not describe the subject as a child, minor, teen, or young girl.\n\nOutput:\nReturn exactly one cohesive paragraph of 80-140 words. No Markdown, JSON, XML, bullet points, metadata, labels, or explanations.\nThe paragraph must mention \"v1dhya5\" once, preserve the detected artistic medium, and be optimized for photorealistic image models.",
+      "max_tokens": 1024,
       "keep_model_loaded": true,
       "seed": [
         "378",
@@ -2468,7 +2468,7 @@
   },
   "1946": {
     "inputs": {
-      "text": "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject’s facial expression and overall composition and redraw the face to match v1dhya5.\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__INSTRUCTION_FROM_FILE__,\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
+      "text": "Create a high-quality rendering of v1dhya5 in the same visual style and color mode as the reference image.\nMaintain the subject's facial expression and overall composition and redraw the face to match v1dhya5.\n\nPreserve the original color characteristics of the reference image:\nif the image is grayscale, keep it strictly grayscale or monochrome;\nif it is a pencil sketch or line art, maintain the same sketch style;\nif it is a digital illustration or painting, retain the same artistic style;\nif it is a color photograph, preserve natural color tones and lighting.\n\nstrictly no color if the reference is only monochrome\n\n__INSTRUCTION_FROM_FILE__,\n\n__AGE_STRING__ or match the age of the subject to the reference photo.\n\nPreserve the exact subject orientation, viewing direction, pose, and camera perspective from the reference image.\n__EYE_STATE__\n\n\nSlightly modify outfit and accessories while keeping the original structure and visual balance.\n\nAdjust hair color to natural black and eye color to dark brown.\nApply faint eyeliner and soft eye shadow with warm pale-brown nude lipstick.\n\nEnsure consistency in shading, texture, and rendering style based on the reference.\nRemove any visible watermarks or text artifacts."
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -2979,8 +2979,8 @@
   "2148": {
     "inputs": {
       "lora_name": "V4_flux_klein.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 0.6,
+      "strength_model": 0.5,
+      "strength_clip": 0.25,
       "model": [
         "2219",
         0
@@ -3106,7 +3106,7 @@
         "984",
         0
       ],
-      "noise_strength": 0.18,
+      "noise_strength": 0.1,
       "normalize": "false",
       "latent": [
         "2183",
@@ -3242,7 +3242,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#249D8FFF",
+      "color": "#F2F2EDFF",
       "background_color": "#00000000",
       "shadow_distance": 0,
       "shadow_blur": 0,
@@ -3265,7 +3265,7 @@
   "2218": {
     "inputs": {
       "file_prefix": "_",
-      "time_format": "_%y %m.%d",
+      "time_format": "_%y.%m.%d",
       "output_folder": "",
       "filetype": ""
     },
@@ -3277,7 +3277,7 @@
   "2219": {
     "inputs": {
       "lora_name": "vidhyas_lora_v4_klein.safetensors",
-      "strength_model": 1.1,
+      "strength_model": 0.98,
       "model": [
         "2124",
         0
@@ -3457,9 +3457,9 @@
       "temperature": -1,
       "hue": 0,
       "brightness": -4,
-      "contrast": 4.5,
+      "contrast": 2.5,
       "saturation": -0.3,
-      "gamma": 0.88,
+      "gamma": 0.94,
       "image": [
         "1094",
         0
@@ -3473,7 +3473,7 @@
   "2377": {
     "inputs": {
       "lens_distortion": -0.002,
-      "color_temperature": 0,
+      "color_temperature": 0.2,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -3514,7 +3514,7 @@
       ],
       "max_length": 400,
       "sampling_mode": "on",
-      "sampling_mode.temperature": 0.7,
+      "sampling_mode.temperature": 0.4,
       "sampling_mode.top_k": 64,
       "sampling_mode.top_p": 0.95,
       "sampling_mode.min_p": 0.05,
@@ -3556,7 +3556,7 @@
   },
   "2407": {
     "inputs": {
-      "value": "You are an expert prompt engineer for FLUX and Krea text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt while faithfully preserving the user's intent.\n\nThe subject identifier is \"v1dhya5\". Treat this only as an internal identity token. Never describe, request, imply, or render \"v1dhya5\" as visible text, a logo, watermark, signature, label, embroidery, print, branding, caption, or graphic anywhere in the image.\n\nBefore writing the final prompt, reason internally about:\n- The primary subject and mood.\n- Composition, framing, and camera perspective.\n- Appropriate photographic or artistic style. \n- The level of detail required to faithfully reproduce the user's intent.\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n\n1. **Faithfulness First:** Preserve all original subjects, actions, composition, camera perspective, and spatial relationships. Do not invent new objects, people, props, animals, backgrounds, or scene elements.\n\n2. **Prompt Optimization:** Improve prompt readability and structure for FLUX/Krea while preserving the user's intent. Organize related visual attributes naturally.\n\n3. **Identity Preservation:** Preserve the identity represented by \"v1dhya5\". Mention the identifier exactly once near the beginning of the prompt only as an identity token. Never imply that it should appear visibly anywhere in the generated image.\n\n4. **Natural Description:** Do not over-describe facial features or skin texture. Use natural photographic language. Focus on composition, clothing, lighting, body proportions, materials, environment, artistic style, and overall appearance. Avoid describing pores, peach fuzz, vellus hairs, skin microtexture, blemishes, freckles, wrinkles, or similar fine skin details unless explicitly requested by the user.\n\n5. **Body Description:** If the prompt contains a \"-- body description --\" section, rewrite it appropriately to match the detected or specified age while preserving the user's intended body type and proportions. Treat the existing body description as guidance rather than fixed text.\n\n6. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and optimize it instead of expanding unnecessarily.\n\n7. **Preserve Medium:** Preserve the requested or implied medium (photograph, illustration, painting, digital art, sketch, comic, 3D render, etc.). Do not change the medium.\n\n8. **No Text Artifacts:** Unless the user explicitly requests visible text, never generate or imply text, letters, words, numbers, logos, watermarks, signatures, branding, labels, captions, printed graphics, embroidery, or stamps anywhere in the image.\n\n9. **Human Realism:** Treat people naturally and respectfully. Preserve realistic anatomy and age-appropriate proportions.\n\n10. **Structure:** Output one cohesive paragraph only. No Markdown, bullet points, JSON, XML, headings, explanations, analysis, or reasoning.\n\nAim for approximately 220–320 words. Prioritize the most visually significant elements while avoiding unnecessary repetition or excessive fine detail.\n\nUser's Input:\n\n"
+      "value": "You are an expert prompt engineer for FLUX and Krea text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt while faithfully preserving the user's intent.\n\nThe subject identifier is \"v1dhya5\". Treat this only as an internal identity token. Never describe, request, imply, or render \"v1dhya5\" as visible text, a logo, watermark, signature, label, embroidery, print, branding, caption, or graphic anywhere in the image.\n\nBefore writing the final prompt, reason internally about:\n- The primary subject and mood.\n- Composition, framing, and camera perspective.\n- Appropriate photographic or artistic style. \n- The level of detail required to faithfully reproduce the user's intent.\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n\n1. **Faithfulness First:** Preserve all original subjects, actions, composition, camera perspective, and spatial relationships. Do not invent new objects, people, props, animals, backgrounds, or scene elements.\n\n2. **Prompt Optimization:** Improve prompt readability and structure for FLUX/Krea while preserving the user's intent. Organize related visual attributes naturally.\n\n3. **Identity Preservation:** Preserve the identity represented by \"v1dhya5\". Mention the identifier exactly once near the beginning of the prompt only as an identity token. Never imply that it should appear visibly anywhere in the generated image.\n\n4. **Natural Description:** Do not over-describe facial features or skin texture. Use natural photographic language. Focus on composition, clothing, lighting, body proportions, materials, environment, artistic style, and overall appearance. Avoid describing pores, peach fuzz, vellus hairs, skin microtexture, blemishes, freckles, wrinkles, or similar fine skin details unless explicitly requested by the user.\n\n5. **Body Description:** If the prompt contains a \"-- body description --\" section, rewrite it appropriately to match the detected or specified age while preserving the user's intended body type and proportions. Treat the existing body description as guidance rather than fixed text.\n\n6. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and optimize it instead of expanding unnecessarily.\n\n7. **Preserve Medium:** Preserve the requested or implied medium (photograph, illustration, painting, digital art, sketch, comic, 3D render, etc.). Do not change the medium.\n\n8. **No Text Artifacts:** Unless the user explicitly requests visible text, never generate or imply text, letters, words, numbers, logos, watermarks, signatures, branding, labels, captions, printed graphics, embroidery, or stamps anywhere in the image.\n\n9. **Human Realism:** Treat people naturally and respectfully. Preserve realistic anatomy and age-appropriate proportions.\n\n10. **Structure:** Output one cohesive paragraph only. No Markdown, bullet points, JSON, XML, headings, explanations, analysis, or reasoning.\n\nDo not restage lighting, pose, camera perspective, or expression.\nIf a body description says to preserve source proportions, keep that instruction and do not invent measurements.\n\nAim for one dense paragraph of approximately 120-180 words. Prioritize the most visually significant elements while avoiding unnecessary repetition or excessive fine detail.\n\nUser's Input:\n\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -3786,11 +3786,11 @@
         "378",
         0
       ],
-      "steps": 12,
+      "steps": 10,
       "cfg": 1,
       "sampler_name": "er_sde",
       "scheduler": "simple",
-      "denoise": 1,
+      "denoise": 0.92,
       "model": [
         "2131",
         0
@@ -3844,7 +3844,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed   digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
+      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed   digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Preserve mehendi if present. Do not alter surrounding skin or lighting.\n\nPreserve the bindi if present; do not add one.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -3966,12 +3966,12 @@
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.06,
+      "denoise": 0.05,
       "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
       "wildcard": "",
-      "cycle": 2,
+      "cycle": 1,
       "inpaint_model": false,
       "noise_mask_feather": 40,
       "tiled_encode": false,
@@ -4057,7 +4057,7 @@
   },
   "3172": {
     "inputs": {
-      "value": "Classic black-and-white photographic rendering with the tonal response of a well-exposed mid-2010s digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
+      "value": "Classic black-and-white photographic rendering with the tonal response of a well-exposed mid-2010s digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Preserve mehendi if present. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4086,7 +4086,7 @@
   },
   "3187": {
     "inputs": {
-      "value": "photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic mid-2010s professional DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
+      "value": "photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, and restrained specular highlights. Natural matte skin, realistic photographic texture, no extra micro-detail, no waxy smoothing. Preserve existing moles, freckles, and skin characteristics without exaggerating or inventing them. Preserve the bindi if present; do not add one.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic mid-2010s professional DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nShe has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nPreserve the source body proportions and garment drape; do not restyle the figure. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4095,7 +4095,7 @@
   },
   "3188": {
     "inputs": {
-      "value": "A professionally rendered monochrome photograph of an Indian woman, v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic grayscale skin luminance. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and clean monochrome photographic rendering. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic professional DSLR monochrome image quality, rich tonal separation, and smooth grayscale transitions.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones and natural luminance relationships throughout the image.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, moderate textile detail, and authentic photographic softness. Avoid exaggerated fabric texture, embroidery definition, weave visibility, or hyper-detailed clothing."
+      "value": "A professionally rendered monochrome photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin, realistic photographic texture, no extra micro-detail, no waxy smoothing, balanced tonal variation, restrained specular highlights, and authentic grayscale skin luminance. Preserve the bindi if present; do not add one. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and clean monochrome photographic rendering. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic mid-2010s professional DSLR monochrome image quality, rich tonal separation, and smooth grayscale transitions.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones and natural luminance relationships throughout the image.\n\nShe has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nPreserve the source body proportions and garment drape; do not restyle the figure. Clothing should drape naturally with physically plausible folds, realistic material response, moderate textile detail, and authentic photographic softness. Avoid exaggerated fabric texture, embroidery definition, weave visibility, or hyper-detailed clothing."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4175,7 +4175,7 @@
   "3196": {
     "inputs": {
       "lut_name": "Cool_Natural_Breeze.cube",
-      "strength": 0.2,
+      "strength": 0.1,
       "log": false,
       "image": [
         "3384",
@@ -4441,11 +4441,11 @@
         "3318",
         0
       ],
-      "vision_megapixels": 1,
+      "vision_megapixels": 1.5,
       "mask_padding": 0,
       "conditioning_rescaling": false,
-      "multiplier": 3.8,
-      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.5,1.1,1.2,1.0",
+      "multiplier": 2.6,
+      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.2,1.1,1.2,1.0",
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
@@ -4529,7 +4529,7 @@
   "3316": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.48,
       "model": [
         "3307",
         0
@@ -4624,7 +4624,7 @@
   "3356": {
     "inputs": {
       "lens_distortion": -0.006,
-      "color_temperature": 0.55,
+      "color_temperature": 0.2,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -4853,7 +4853,7 @@
       "scheduler": "simple",
       "start_at_step": 18,
       "end_at_step": 22,
-      "return_with_leftover_noise": "enable",
+      "return_with_leftover_noise": "disable",
       "preview_method": "auto",
       "vae_decode": "true",
       "model": [
