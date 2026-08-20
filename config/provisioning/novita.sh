@@ -244,6 +244,9 @@ DIFFUSION_MODELS=(
 #  "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"
   "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/resolve/main/flux-2-klein-9b.safetensors"
   "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors"
+  # kreamania_variant7.safetensors
+  "https://civitai.com/api/download/models/3242185?fileId=3128871&token=${CIVITAI_TOKEN}"
+
   # fluxtraitFLUX2KleinFLUXZ_flux2Klein9bV2.safetensors
 #  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
 #  "https://civitai.com/api/download/models/2631758?type=Model&format=SafeTensor&size=pruned&fp=bf16&token=${CIVITAI_TOKEN}"

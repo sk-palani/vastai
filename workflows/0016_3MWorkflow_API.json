@@ -1595,7 +1595,7 @@
     },
     "class_type": "Text Multiline",
     "_meta": {
-      "title": "Text Multiline"
+      "title": "Flux Conditioning : Text Multiline"
     }
   },
   "1322": {
@@ -2171,7 +2171,7 @@
       "model_name": "Qwen3-VL-4B-Instruct",
       "quantization": "4-bit (VRAM-friendly)",
       "attention_mode": "sdpa",
-      "preset_prompt": "\ud83d\uddbc\ufe0f Detailed Description",
+      "preset_prompt": "🖼️ Detailed Description",
       "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nYou convert the provided image into a concise recreation prompt for FLUX, Krea, and Klein image models.\n\nConstraints:\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\" exactly once.\n- Describe only what is visible. Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic medium.\n- Do not over-describe individual facial features or skin micro-detail.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- Do not output age metadata, confidence labels, headings, tags, or @@ fields.\n- Do not mention uncertainty.\n- The subject is an adult. Do not describe the subject as a child, minor, teen, or young girl.\n\nOutput:\nReturn exactly one cohesive paragraph of 80-140 words. No Markdown, JSON, XML, bullet points, metadata, labels, or explanations.\nThe paragraph must mention \"v1dhya5\" once, preserve the detected artistic medium, and be optimized for photorealistic image models.",
       "max_tokens": 1024,
       "keep_model_loaded": true,
@@ -3242,7 +3242,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#F2F2EDFF",
+      "color": "#3A86FFFF",
       "background_color": "#00000000",
       "shadow_distance": 0,
       "shadow_blur": 0,
@@ -3848,7 +3848,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text String (Multiline) : Color-Correct"
     }
   },
   "3011": {
@@ -4061,7 +4061,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text String (Multiline) : Color-Correct : Monochrome"
     }
   },
   "3174": {
@@ -4090,7 +4090,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text String (Multiline) : Refine the Prompt"
     }
   },
   "3188": {
@@ -4099,7 +4099,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text String (Multiline) : Refine the Prompt : Monochrome"
     }
   },
   "3189": {
@@ -4120,21 +4120,6 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
-    }
-  },
-  "3191": {
-    "inputs": {
-      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve a natural, context-appropriate candid expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "A professionally photographed portrait of an Indian woman, v1dhya5.\n\nTreat the input facial identity as correct. Refine only missing photographic detail while preserving the subject's facial identity, a natural context-appropriate candid expression, and gaze direction, facial proportions, head shape, hairstyle, bindi, jewelry, lighting, white balance, composition, and photographic color grading.\n\nMaintain realistic matte skin with subtle natural pores, gentle tonal variation, authentic photographic texture, soft facial transitions, and natural melanin-rich South Indian skin tones. Preserve existing freckles, moles, fine facial hair, eyelashes, eyebrows, and other natural facial characteristics exactly as they appear. Improve only subtle eye clarity, iris definition, eyelash detail, eyebrow definition, natural lip definition, and overall facial coherence while maintaining realistic optical sharpness.\n\nPreserve the natural shape, spacing, alignment, translucency, and color variation of the teeth. Maintain realistic enamel shading and subtle imperfections. Do not whiten teeth excessively, sharpen tooth edges, invent or remove teeth, force an exaggerated smile, or create perfectly uniform teeth.\n\nPreserve realistic age, facial geometry, skin texture, and natural imperfections. Keep clothing, accessories, background, shadows, and highlights unchanged.\n\nDo not beautify, reshape, de-age, age, stylize, smooth skin, remove pores, add makeup, enlarge eyes, sharpen excessively, alter facial proportions, force an exaggerated or rigid expression, modify hair, introduce artificial skin texture, hallucinate facial details, or create new artifacts.",
-      "guidance": 3.5,
-      "clip": [
-        "1298",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncodeFlux",
-    "_meta": {
-      "title": "FLUX_*CLIPTextEncodeFlux"
     }
   },
   "3192": {
@@ -4762,7 +4747,7 @@
     "inputs": {
       "flip_method": "x-axis: vertically",
       "image": [
-        "2377",
+        "3399",
         0
       ]
     },
@@ -4782,7 +4767,7 @@
         0
       ],
       "when_false": [
-        "2377",
+        "3399",
         0
       ]
     },
@@ -4896,6 +4881,35 @@
     "class_type": "Image_Preparations",
     "_meta": {
       "title": "Image Preparations 1.8"
+    }
+  },
+  "3399": {
+    "inputs": {
+      "center_x": 0.3,
+      "center_y": 0.5,
+      "saturation": 0.9,
+      "vignette_intensity": 0.010000000000000002,
+      "grain_method": "filmgrainer",
+      "grain_power": 0.05,
+      "grain_scale": 0.6,
+      "grain_sat": 0.3,
+      "filmgrainer_shadows": 0.08,
+      "filmgrainer_highs": 0.05,
+      "blur_strength": 0,
+      "blur_focus_spread": 0.30000000000000004,
+      "focal_depth": 0.10000000000000002,
+      "image": [
+        "2377",
+        0
+      ],
+      "depth_map": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "LayerFilter: FilmV2",
+    "_meta": {
+      "title": "LayerFilter: Film V2"
     }
   },
   "2920:2866": {
