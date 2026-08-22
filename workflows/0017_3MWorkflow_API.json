@@ -5447,11 +5447,11 @@
       ],
       "steps": 53,
       "cfg": 1,
-      "sampler_name": "dpmpp_sde",
+      "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
       "start_at_step": 49,
       "end_at_step": 53,
-      "return_with_leftover_noise": "disable",
+      "return_with_leftover_noise": "enable",
       "preview_method": "auto",
       "vae_decode": "true",
       "model": [
