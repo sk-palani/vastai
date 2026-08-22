@@ -2031,7 +2031,7 @@
   },
   "1663": {
     "inputs": {
-      "denoise": 0.78,
+      "denoise": 0.62,
       "sigmas": [
         "1657",
         0
@@ -2048,7 +2048,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.1,
+      "noise_strength": 0.08,
       "normalize": "false",
       "latent": [
         "1648",
@@ -2143,7 +2143,7 @@
       "decay_factor": 1,
       "fill_holes": true,
       "mask": [
-        "2920:2875",
+        "2920:2876",
         0
       ]
     },
@@ -2757,10 +2757,6 @@
       "conditioning": [
         "2023",
         0
-      ],
-      "latent": [
-        "2246",
-        0
       ]
     },
     "class_type": "ReferenceLatent",
@@ -2785,6 +2781,10 @@
       "conditioning": [
         "2024",
         0
+      ],
+      "latent": [
+        "2246",
+        0
       ]
     },
     "class_type": "ReferenceLatent",
@@ -2794,7 +2794,7 @@
   },
   "2024": {
     "inputs": {
-      "text": "Make this photo high-quality photo of v1dhya5 with natural skin texture.   copy the expression from the first reference image.\n",
+      "text": "Make this photo high-quality photo of v1dhya5 with natural skin texture.    \n\"Transfer the complete visual treatment and facial expression of Figure 2 onto Figure 1.\"",
       "clip": [
         "2116",
         0
@@ -4089,12 +4089,12 @@
   },
   "2376": {
     "inputs": {
-      "temperature": -3,
+      "temperature": -5,
       "hue": 0,
-      "brightness": -4,
-      "contrast": 2.5,
-      "saturation": 4.7,
-      "gamma": 1.2,
+      "brightness": -10,
+      "contrast": 4.5,
+      "saturation": -0.5,
+      "gamma": 1.1,
       "image": [
         "1094",
         0
@@ -4102,13 +4102,13 @@
     },
     "class_type": "ColorCorrect",
     "_meta": {
-      "title": "ColorCorrect"
+      "title": "ColorCorrect : Add Grain - Final"
     }
   },
   "2377": {
     "inputs": {
       "lens_distortion": -0.002,
-      "color_temperature": 0.2,
+      "color_temperature": 0,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -4224,7 +4224,7 @@
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
       "strength_model": 1,
-      "strength_clip": 0.05,
+      "strength_clip": 0.08,
       "model": [
         "1196",
         0
@@ -4486,11 +4486,11 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed   digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
+      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text String (Multiline) : Color-Correct (realism)"
     }
   },
   "3012": {
@@ -4741,7 +4741,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text String (Multiline) : Color-Correct (monochrome)"
     }
   },
   "3174": {
@@ -5015,7 +5015,7 @@
   },
   "3226": {
     "inputs": {
-      "active_scale": 1.1,
+      "active_scale": 0.95,
       "per_token_whiten": 0.03,
       "norm_equalize": 0.08,
       "early_layer_scale": 0.95,
@@ -5445,13 +5445,13 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 53,
       "cfg": 1,
       "sampler_name": "dpmpp_sde",
       "scheduler": "simple",
-      "start_at_step": 5,
-      "end_at_step": 999,
-      "return_with_leftover_noise": "enable",
+      "start_at_step": 49,
+      "end_at_step": 53,
+      "return_with_leftover_noise": "disable",
       "preview_method": "auto",
       "vae_decode": "true",
       "model": [
@@ -5527,7 +5527,7 @@
   },
   "3404": {
     "inputs": {
-      "sampler_name": "euler_ancestral"
+      "sampler_name": "res_2m"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
