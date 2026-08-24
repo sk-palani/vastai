@@ -3825,7 +3825,7 @@
   },
   "2242": {
     "inputs": {
-      "text": "Preserve all image content and composition.\n\nMatch the color palette, white balance, tonal balance, and photographic mood of the first reference image.\n\nImprove natural skin tones, realistic fabric texture, textile weave detail, and photographic realism.\n\nColor correction only. Do not modify facial identity, expression, gaze direction, pose, clothing design, lighting direction, or image composition.",
+      "text": "Preserve all image content and composition.\n\nMatch the color palette, white balance, tonal balance, and photographic mood of the first reference image.\n\nImprove natural skin tones, realistic fabric texture, textile weave detail, and photographic realism.\n\nColor correction only. The face is v1dhya5. Do not modify expression, gaze direction, pose, clothing design, lighting direction, or image composition.",
       "clip": [
         "2135",
         0
@@ -5424,7 +5424,7 @@
   "3196": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.14,
+      "strength": 0.08,
       "log": false,
       "image": [
         "2377",
@@ -5627,7 +5627,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.52,
       "model": [
         "2322",
         0
