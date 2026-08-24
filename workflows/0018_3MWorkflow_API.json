@@ -324,15 +324,15 @@
       "filename_delimiter": "_",
       "filename_number_padding": 4,
       "filename_number_start": "false",
-      "extension": "jpg",
+      "extension": "png",
       "dpi": 301,
       "quality": 100,
       "optimize_image": "false",
       "lossless_webp": "false",
       "overwrite_mode": "prefix_as_filename",
       "show_history": "false",
-      "show_history_by_prefix": "true",
-      "embed_workflow": "true",
+      "show_history_by_prefix": "false",
+      "embed_workflow": "false",
       "show_previews": "false",
       "images": [
         "2215",
@@ -1355,7 +1355,7 @@
     "inputs": {
       "method": "mkl",
       "strength": 0.12,
-      "multithread": false,
+      "multithread": true,
       "image_ref": [
         "127",
         0
@@ -3913,9 +3913,9 @@
       "lossless_webp": "false",
       "overwrite_mode": "false",
       "show_history": "false",
-      "show_history_by_prefix": "true",
-      "embed_workflow": "true",
-      "show_previews": "true",
+      "show_history_by_prefix": "false",
+      "embed_workflow": "false",
+      "show_previews": "false",
       "images": [
         "127",
         0
@@ -4515,7 +4515,7 @@
   "3196": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.14,
+      "strength": 0.08,
       "log": false,
       "image": [
         "2377",
