@@ -2622,7 +2622,7 @@
   },
   "2026": {
     "inputs": {
-      "active_scale": 1.04,
+      "active_scale": 1,
       "per_token_whiten": 0.05,
       "norm_equalize": 0.05,
       "early_layer_scale": 1.4,
@@ -3979,7 +3979,7 @@
       ],
       "steps": 12,
       "cfg": 1,
-      "sampler_name": "euler",
+      "sampler_name": "er_sde",
       "scheduler": "simple",
       "denoise": 1,
       "model": [
@@ -4035,7 +4035,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Fujifilm Reala 100 color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nPreserve the existing photographic color grading, overall exposure, and natural color relationships. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, healthy color separation, and vibrant yet natural colors. Apply only a very subtle reduction in highlight brightness with smooth highlight roll-off while preserving midtones, shadow detail, local contrast, micro-contrast, and perceived optical sharpness.\n\nProduce a clean, natural photograph with realistic texture, accurate color reproduction, authentic photographic depth, and balanced tonal transitions.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, gently neutralize it toward its natural dark tone while preserving realistic tonal variation, subtle specular highlights, and individual hair strands. Preserve the subject's original hair color and natural appearance. Do not make the hair appear jet black, overly dark, dyed, flat, or unnaturally uniform.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, skin tone, natural shading, pores, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
+      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
