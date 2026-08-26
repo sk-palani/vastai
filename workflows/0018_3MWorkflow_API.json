@@ -2622,14 +2622,14 @@
   },
   "2026": {
     "inputs": {
-      "active_scale": 1,
-      "per_token_whiten": 0.05,
-      "norm_equalize": 0.05,
-      "early_layer_scale": 1.4,
-      "mid_layer_scale": 1,
-      "late_layer_scale": 0.8,
-      "preserve_original": 1,
-      "active_end_override": 1,
+      "active_scale": 0.95,
+      "per_token_whiten": 0.03,
+      "norm_equalize": 0.08,
+      "early_layer_scale": 0.95,
+      "mid_layer_scale": 1.15,
+      "late_layer_scale": 0.9,
+      "preserve_original": 0.78,
+      "active_end_override": 0,
       "device": "auto",
       "debug": false,
       "conditioning": [
