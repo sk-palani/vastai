@@ -1351,25 +1351,6 @@
       "title": "Input Selector"
     }
   },
-  "1094": {
-    "inputs": {
-      "method": "mkl",
-      "strength": 0.12,
-      "multithread": true,
-      "image_ref": [
-        "127",
-        0
-      ],
-      "image_target": [
-        "1703",
-        0
-      ]
-    },
-    "class_type": "ColorMatch",
-    "_meta": {
-      "title": "Color Match"
-    }
-  },
   "1177": {
     "inputs": {
       "seed": -1
@@ -3405,7 +3386,7 @@
       ],
       "font": "DSEG14Classic-BoldItalic.ttf",
       "size": 30,
-      "color": "#F37121FF",
+      "color": "#838921FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3622,9 +3603,9 @@
       "brightness": -1,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 0.95,
+      "gamma": 0.9,
       "image": [
-        "1094",
+        "3377",
         0
       ]
     },
@@ -5116,7 +5097,7 @@
         "378",
         0
       ],
-      "steps": 8,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "sgm_uniform",
@@ -5124,7 +5105,7 @@
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "preview_method": "auto",
-      "vae_decode": "true",
+      "vae_decode": "false",
       "model": [
         "3314",
         0
@@ -5168,6 +5149,25 @@
     "class_type": "ImageAndMaskPreview",
     "_meta": {
       "title": "ImageAndMaskPreview"
+    }
+  },
+  "3377": {
+    "inputs": {
+      "method": "mkl",
+      "strength": 0.15,
+      "multithread": true,
+      "image_target": [
+        "1703",
+        0
+      ],
+      "image_ref": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "ColorMatchV2",
+    "_meta": {
+      "title": "ColorMatchV2"
     }
   },
   "2920:2866": {
