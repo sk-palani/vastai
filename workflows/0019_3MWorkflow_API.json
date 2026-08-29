@@ -1516,11 +1516,11 @@
       "strength_model": 1.2,
       "strength_clip": 0.08,
       "model": [
-        "3424",
+        "3481:3478",
         0
       ],
       "clip": [
-        "3433",
+        "3481:3479",
         0
       ]
     },
@@ -4311,25 +4311,6 @@
       "title": "ProPostApplyLUT"
     }
   },
-  "3038": {
-    "inputs": {
-      "lora_name": "FluxSideboob.safetensors",
-      "strength_model": 0.4,
-      "strength_clip": 0.02,
-      "model": [
-        "3039",
-        0
-      ],
-      "clip": [
-        "1197",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Pandora-RAWr 0.70::0.70"
-    }
-  },
   "3039": {
     "inputs": {
       "block_number": 4,
@@ -5027,11 +5008,11 @@
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
-        "3392",
+        "3503:3501",
         0
       ],
       "model": [
-        "3391",
+        "3503:3500",
         0
       ],
       "system_prompt": [
@@ -5059,25 +5040,6 @@
     "class_type": "CustomCombo",
     "_meta": {
       "title": "Custom Combo"
-    }
-  },
-  "3306": {
-    "inputs": {
-      "lora_name": "ultra_real_krea2_v1.safetensors",
-      "strength_model": 0.7,
-      "strength_clip": 0.1,
-      "model": [
-        "3314",
-        0
-      ],
-      "clip": [
-        "3284",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA (Model and CLIP)"
     }
   },
   "3307": {
@@ -5491,46 +5453,6 @@
       "title": "ReferenceLatent"
     }
   },
-  "3391": {
-    "inputs": {
-      "model_a": [
-        "3314",
-        0
-      ],
-      "model_b": [
-        "3306",
-        0
-      ],
-      "boolean": [
-        "591",
-        0
-      ]
-    },
-    "class_type": "Model Input Switch",
-    "_meta": {
-      "title": "Model Input Switch"
-    }
-  },
-  "3392": {
-    "inputs": {
-      "clip_a": [
-        "3284",
-        0
-      ],
-      "clip_b": [
-        "3306",
-        1
-      ],
-      "boolean": [
-        "591",
-        0
-      ]
-    },
-    "class_type": "CLIP Input Switch",
-    "_meta": {
-      "title": "CLIP Input Switch"
-    }
-  },
   "3397": {
     "inputs": {
       "model_a": [
@@ -5696,46 +5618,6 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
-    }
-  },
-  "3424": {
-    "inputs": {
-      "model_a": [
-        "3038",
-        0
-      ],
-      "model_b": [
-        "3039",
-        0
-      ],
-      "boolean": [
-        "3436",
-        0
-      ]
-    },
-    "class_type": "Model Input Switch",
-    "_meta": {
-      "title": "Model Input Switch"
-    }
-  },
-  "3433": {
-    "inputs": {
-      "clip_a": [
-        "3038",
-        1
-      ],
-      "clip_b": [
-        "1197",
-        0
-      ],
-      "boolean": [
-        "3436",
-        0
-      ]
-    },
-    "class_type": "CLIP Input Switch",
-    "_meta": {
-      "title": "CLIP Input Switch"
     }
   },
   "3436": {
@@ -5959,6 +5841,148 @@
     "class_type": "FashnHumanParserMask",
     "_meta": {
       "title": "FASHN Human Parser (Mask)"
+    }
+  },
+  "3481:3497": {
+    "inputs": {
+      "value": [
+        "3436",
+        0
+      ]
+    },
+    "class_type": "BOOLConstant",
+    "_meta": {
+      "title": "BOOL Constant"
+    }
+  },
+  "3481:3478": {
+    "inputs": {
+      "model_a": [
+        "3481:3475",
+        0
+      ],
+      "model_b": [
+        "3039",
+        0
+      ],
+      "boolean": [
+        "3436",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3481:3479": {
+    "inputs": {
+      "clip_a": [
+        "3481:3475",
+        1
+      ],
+      "clip_b": [
+        "1197",
+        0
+      ],
+      "boolean": [
+        "3436",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "3481:3475": {
+    "inputs": {
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.7,
+      "strength_clip": 0.1,
+      "model": [
+        "3039",
+        0
+      ],
+      "clip": [
+        "1197",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Lora"
+    }
+  },
+  "3503:3499": {
+    "inputs": {
+      "value": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "BOOLConstant",
+    "_meta": {
+      "title": "BOOL Constant"
+    }
+  },
+  "3503:3500": {
+    "inputs": {
+      "model_a": [
+        "3503:3502",
+        0
+      ],
+      "model_b": [
+        "3314",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3503:3501": {
+    "inputs": {
+      "clip_a": [
+        "3503:3502",
+        1
+      ],
+      "clip_b": [
+        "3284",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "3503:3502": {
+    "inputs": {
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.4,
+      "strength_clip": 0.02,
+      "model": [
+        "3314",
+        0
+      ],
+      "clip": [
+        "3284",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Lora"
     }
   }
 }
