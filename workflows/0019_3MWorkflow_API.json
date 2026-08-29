@@ -1516,11 +1516,11 @@
       "strength_model": 1.2,
       "strength_clip": 0.08,
       "model": [
-        "3039",
+        "3424",
         0
       ],
       "clip": [
-        "1197",
+        "3433",
         0
       ]
     },
@@ -4311,6 +4311,25 @@
       "title": "ProPostApplyLUT"
     }
   },
+  "3038": {
+    "inputs": {
+      "lora_name": "FluxSideboob.safetensors",
+      "strength_model": 0.4,
+      "strength_clip": 0.02,
+      "model": [
+        "3039",
+        0
+      ],
+      "clip": [
+        "1197",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Pandora-RAWr 0.70::0.70"
+    }
+  },
   "3039": {
     "inputs": {
       "block_number": 4,
@@ -5677,6 +5696,60 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
+    }
+  },
+  "3424": {
+    "inputs": {
+      "model_a": [
+        "3038",
+        0
+      ],
+      "model_b": [
+        "3039",
+        0
+      ],
+      "boolean": [
+        "3436",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3433": {
+    "inputs": {
+      "clip_a": [
+        "3038",
+        1
+      ],
+      "clip_b": [
+        "1197",
+        0
+      ],
+      "boolean": [
+        "3436",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "3436": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "sideboob",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [sideboob]"
     }
   },
   "2920:2866": {
