@@ -5634,6 +5634,18 @@
       "title": "Contains [sideboob]"
     }
   },
+  "3505": {
+    "inputs": {
+      "value": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "ComfyNotNode",
+    "_meta": {
+      "title": "Not"
+    }
+  },
   "2920:2866": {
     "inputs": {
       "label": "torso",
@@ -5897,9 +5909,9 @@
   },
   "3481:3475": {
     "inputs": {
-      "lora_name": "ultra_real_krea2_v1.safetensors",
-      "strength_model": 0.7,
-      "strength_clip": 0.1,
+      "lora_name": "FluxSideboob.safetensors",
+      "strength_model": 0.4,
+      "strength_clip": 0.02,
       "model": [
         "3039",
         0
@@ -5917,7 +5929,7 @@
   "3503:3499": {
     "inputs": {
       "value": [
-        "591",
+        "3505",
         0
       ]
     },
@@ -5929,7 +5941,7 @@
   "3503:3500": {
     "inputs": {
       "model_a": [
-        "3503:3502",
+        "3503:3504",
         0
       ],
       "model_b": [
@@ -5937,7 +5949,7 @@
         0
       ],
       "boolean": [
-        "591",
+        "3505",
         0
       ]
     },
@@ -5949,7 +5961,7 @@
   "3503:3501": {
     "inputs": {
       "clip_a": [
-        "3503:3502",
+        "3503:3504",
         1
       ],
       "clip_b": [
@@ -5957,7 +5969,7 @@
         0
       ],
       "boolean": [
-        "591",
+        "3505",
         0
       ]
     },
@@ -5966,11 +5978,11 @@
       "title": "CLIP Input Switch"
     }
   },
-  "3503:3502": {
+  "3503:3504": {
     "inputs": {
       "lora_name": "ultra_real_krea2_v1.safetensors",
-      "strength_model": 0.4,
-      "strength_clip": 0.02,
+      "strength_model": 0.7,
+      "strength_clip": 0.1,
       "model": [
         "3314",
         0
