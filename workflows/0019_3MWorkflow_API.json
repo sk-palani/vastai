@@ -460,7 +460,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "127",
+        "3421",
         0
       ],
       "mask": [
@@ -484,7 +484,7 @@
         0
       ],
       "when_false": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -1902,7 +1902,7 @@
         "222",
         0
       ],
-      "b": 0.44,
+      "b": 0.4,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1932,8 +1932,8 @@
   },
   "1657": {
     "inputs": {
-      "scheduler": "beta",
-      "steps": 44,
+      "scheduler": "linear_quadratic",
+      "steps": 46,
       "denoise": [
         "1649",
         0
@@ -2272,11 +2272,11 @@
         "378",
         0
       ],
-      "steps": 20,
+      "steps": 28,
       "cfg": 1,
       "sampler_name": "euler",
-      "scheduler": "beta",
-      "denoise": 0.25,
+      "scheduler": "linear_quadratic",
+      "denoise": 0.2,
       "model": [
         "1695",
         0
@@ -2392,7 +2392,7 @@
         0
       ],
       "image": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -3092,7 +3092,7 @@
   "2074": {
     "inputs": {
       "image": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -3765,7 +3765,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -4095,7 +4095,7 @@
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -4287,7 +4287,7 @@
         0
       ],
       "any_02": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -4369,7 +4369,7 @@
   "3142": {
     "inputs": {
       "pixels": [
-        "127",
+        "3421",
         0
       ],
       "vae": [
@@ -4920,7 +4920,7 @@
         0
       ],
       "any_02": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -4960,13 +4960,26 @@
         0
       ],
       "any_03": [
-        "127",
+        "3421",
         0
       ]
     },
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
+    }
+  },
+  "3284": {
+    "inputs": {
+      "stop_at_clip_layer": -1,
+      "clip": [
+        "3273",
+        0
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
     }
   },
   "3286": {
@@ -5039,7 +5052,7 @@
         0
       ],
       "clip": [
-        "3273",
+        "3284",
         0
       ]
     },
@@ -5050,7 +5063,7 @@
   },
   "3307": {
     "inputs": {
-      "unet_name": "default_krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -5158,15 +5171,6 @@
       "title": "ImpactMinMax"
     }
   },
-  "3344": {
-    "inputs": {
-      "value": 1.05
-    },
-    "class_type": "FloatConstant",
-    "_meta": {
-      "title": "Float Constant"
-    }
-  },
   "3352": {
     "inputs": {
       "samples": [
@@ -5237,10 +5241,10 @@
   },
   "3356": {
     "inputs": {
-      "lens_distortion": -0.006,
-      "color_temperature": 0.55,
+      "lens_distortion": 0,
+      "color_temperature": 0.5,
       "tint": 0,
-      "atmosphere_enabled": true,
+      "atmosphere_enabled": false,
       "haze_strength": 0,
       "lift_blacks": 0,
       "depth_offset": 0,
@@ -5250,15 +5254,15 @@
       "dof_sharpness_radius": 0,
       "dof_focus_point": 0,
       "light_wrap_strength": 0.02,
-      "promist_strength": 0.02,
-      "halation_strength": 0.01,
-      "chromatic_aberration": 0.001,
-      "vignette_intensity": 0.03,
-      "grain_power": 0.004,
+      "promist_strength": 0,
+      "halation_strength": 0,
+      "chromatic_aberration": 0,
+      "vignette_intensity": 0.01,
+      "grain_power": 0.002,
       "monochrome_grain": false,
-      "highlight_rolloff": 0.15,
+      "highlight_rolloff": 0.05,
       "image": [
-        "3362",
+        "3352",
         0
       ],
       "depth_map": [
@@ -5277,33 +5281,12 @@
         "222",
         0
       ],
-      "b": 0.26,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
     "_meta": {
       "title": "0.72"
-    }
-  },
-  "3362": {
-    "inputs": {
-      "temperature": 0,
-      "hue": 0,
-      "brightness": -5,
-      "contrast": -1.2,
-      "saturation": -2.3,
-      "gamma": [
-        "3344",
-        0
-      ],
-      "image": [
-        "3352",
-        0
-      ]
-    },
-    "class_type": "ColorCorrect",
-    "_meta": {
-      "title": "ColorCorrect"
     }
   },
   "3363": {
@@ -5315,7 +5298,7 @@
       ],
       "steps": 9,
       "cfg": 1,
-      "sampler_name": "dpmpp_2m_sde",
+      "sampler_name": "dpmpp_sde",
       "scheduler": "sgm_uniform",
       "start_at_step": 7,
       "end_at_step": 999,
@@ -5377,7 +5360,7 @@
         0
       ],
       "image_ref": [
-        "127",
+        "3421",
         0
       ]
     },
@@ -5489,15 +5472,6 @@
       "title": "ReferenceLatent"
     }
   },
-  "3390": {
-    "inputs": {
-      "image": "Capture d’écran 2026-08-21 082310.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
   "3391": {
     "inputs": {
       "model_a": [
@@ -5521,7 +5495,7 @@
   "3392": {
     "inputs": {
       "clip_a": [
-        "3273",
+        "3284",
         0
       ],
       "clip_b": [
@@ -5627,7 +5601,7 @@
         0
       ],
       "when_false": [
-        "3356",
+        "3352",
         0
       ]
     },
@@ -5648,6 +5622,55 @@
       ],
       "when_false": [
         "2377",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3419": {
+    "inputs": {
+      "image": [
+        "983",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "3420": {
+    "inputs": {
+      "comparison": "==",
+      "a": [
+        "3419",
+        1
+      ],
+      "b": [
+        "3419",
+        2
+      ]
+    },
+    "class_type": "SimpleComparison+",
+    "_meta": {
+      "title": "🔧"
+    }
+  },
+  "3421": {
+    "inputs": {
+      "condition": [
+        "3420",
+        0
+      ],
+      "when_true": [
+        "3419",
+        0
+      ],
+      "when_false": [
+        "127",
         0
       ]
     },
