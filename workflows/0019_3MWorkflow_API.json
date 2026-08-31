@@ -2731,7 +2731,7 @@
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.1,
+      "denoise": 0.16,
       "model": [
         "3147",
         0
