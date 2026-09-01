@@ -3583,7 +3583,7 @@
       ],
       "font": "DSEG14Classic-BoldItalic.ttf",
       "size": 30,
-      "color": "#00B7CDFF",
+      "color": "#3A86FFFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3823,16 +3823,16 @@
       "f_stop": "f/5.6",
       "dof_intensity": 0,
       "dof_auto_focus": false,
-      "dof_sharpness_radius": 0,
+      "dof_sharpness_radius": 0.2,
       "dof_focus_point": 0,
       "light_wrap_strength": 0.01,
       "promist_strength": 0.02,
       "halation_strength": 0,
       "chromatic_aberration": 0.001,
       "vignette_intensity": 0.02,
-      "grain_power": 0.002,
+      "grain_power": 0.004,
       "monochrome_grain": false,
-      "highlight_rolloff": 0.08,
+      "highlight_rolloff": 0.07,
       "image": [
         "2376",
         0
@@ -4820,7 +4820,7 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.1,
+      "detail_amount": 0.14,
       "start": 0.3,
       "end": 0.63,
       "bias": 0.5,
