@@ -1463,7 +1463,7 @@
   },
   "1196": {
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
+      "unet_name": "cyberrealisticFlux_v25.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
