@@ -1444,7 +1444,7 @@
   },
   "1196": {
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
+      "unet_name": "cyberrealisticFlux_v25.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -3583,7 +3583,7 @@
       ],
       "font": "DSEG14Classic-BoldItalic.ttf",
       "size": 30,
-      "color": "#EF6905FF",
+      "color": "#00B7CDFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
