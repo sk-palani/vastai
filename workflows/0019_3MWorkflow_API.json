@@ -3583,7 +3583,7 @@
       ],
       "font": "DSEG14Classic-BoldItalic.ttf",
       "size": 30,
-      "color": "#3A86FFFF",
+      "color": "#4DD8A8FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -5069,7 +5069,7 @@
   "3316": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.8,
+      "strength_model": 0.52,
       "model": [
         "3307",
         0
@@ -5279,15 +5279,15 @@
       ],
       "steps": 9,
       "cfg": 1,
-      "sampler_name": "dpmpp_sde",
-      "scheduler": "sgm_uniform",
-      "start_at_step": 7,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "simple",
+      "start_at_step": 5,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "preview_method": "auto",
       "vae_decode": "false",
       "model": [
-        "3314",
+        "3301",
         0
       ],
       "positive": [
@@ -5981,7 +5981,7 @@
   "3503:3504": {
     "inputs": {
       "lora_name": "ultra_real_krea2_v1.safetensors",
-      "strength_model": 0.7,
+      "strength_model": 0.45,
       "strength_clip": 0.1,
       "model": [
         "3314",
