@@ -1834,7 +1834,7 @@
   "1639": {
     "inputs": {
       "image": [
-        "1447",
+        "3530",
         0
       ]
     },
@@ -1967,7 +1967,7 @@
   "1660": {
     "inputs": {
       "max_shift": 1.15,
-      "base_shift": 0.6,
+      "base_shift": 0.5,
       "width": [
         "1639",
         0
@@ -2112,7 +2112,7 @@
         0
       ],
       "any_04": [
-        "1447",
+        "3530",
         0
       ]
     },
@@ -2160,7 +2160,7 @@
         "3407",
         0
       ],
-      "guidance": 2.8,
+      "guidance": 2.9,
       "clip": [
         "2925",
         1
@@ -2358,12 +2358,7 @@
     }
   },
   "1766": {
-    "inputs": {
-      "any_02": [
-        "1985",
-        0
-      ]
-    },
+    "inputs": {},
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
@@ -2703,135 +2698,6 @@
     "class_type": "Text Multiline",
     "_meta": {
       "title": "Text Multiline"
-    }
-  },
-  "1985": {
-    "inputs": {
-      "samples": [
-        "2007",
-        0
-      ],
-      "vae": [
-        "2127",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Klein_VAE Decode"
-    }
-  },
-  "2007": {
-    "inputs": {
-      "seed": [
-        "378",
-        0
-      ],
-      "steps": 14,
-      "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.16,
-      "model": [
-        "3147",
-        0
-      ],
-      "positive": [
-        "3147",
-        1
-      ],
-      "negative": [
-        "2025",
-        0
-      ],
-      "latent_image": [
-        "2937",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "Klein_KSampler"
-    }
-  },
-  "2011": {
-    "inputs": {
-      "max_shift": 0.75,
-      "base_shift": 0.43,
-      "width": 1024,
-      "height": 1024,
-      "model": [
-        "2034",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "ModelSamplingFlux"
-    }
-  },
-  "2012": {
-    "inputs": {
-      "text": [
-        "3181",
-        0
-      ],
-      "clip": [
-        "2116",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "Klein_CLIP Text Encode (Positive Prompt)"
-    }
-  },
-  "2025": {
-    "inputs": {
-      "conditioning": [
-        "3147",
-        1
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "2026": {
-    "inputs": {
-      "active_scale": 1.04,
-      "per_token_whiten": 0.05,
-      "norm_equalize": 0.05,
-      "early_layer_scale": 1.4,
-      "mid_layer_scale": 1.05,
-      "late_layer_scale": 0.8,
-      "preserve_original": 0.88,
-      "active_end_override": 1,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2012",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
-    }
-  },
-  "2034": {
-    "inputs": {
-      "lora_name": "Purple_Grainy-FK_epoch_12.safetensors",
-      "strength_model": 0.64,
-      "model": [
-        "2219",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
     }
   },
   "2045": {
@@ -3449,7 +3315,7 @@
   "2197": {
     "inputs": {
       "pixels": [
-        "1447",
+        "3530",
         0
       ],
       "vae": [
@@ -3570,7 +3436,7 @@
       ],
       "font": "DSEG14Classic-BoldItalic.ttf",
       "size": 30,
-      "color": "#F4F2F2FF",
+      "color": "#838921FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3932,34 +3798,6 @@
       "title": "v1dhya5 0.92::0.88"
     }
   },
-  "2936": {
-    "inputs": {
-      "pixels": [
-        "3274",
-        0
-      ],
-      "vae": [
-        "2127",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Klein_VAE Enc"
-    }
-  },
-  "2937": {
-    "inputs": {
-      "any_02": [
-        "2936",
-        0
-      ]
-    },
-    "class_type": "Any Switch (rgthree)",
-    "_meta": {
-      "title": "Switch"
-    }
-  },
   "2949": {
     "inputs": {
       "mode": "always",
@@ -4128,7 +3966,7 @@
       "scheduler": "simple",
       "denoise": 0.98,
       "model": [
-        "2131",
+        "2133",
         0
       ],
       "positive": [
@@ -4263,6 +4101,25 @@
       "title": "Switch"
     }
   },
+  "3039": {
+    "inputs": {
+      "block_number": 4,
+      "downscale_factor": 1.25,
+      "start_percent": 0.45,
+      "end_percent": 0.6,
+      "downscale_after_skip": true,
+      "downscale_method": "bislerp",
+      "upscale_method": "bislerp",
+      "model": [
+        "1195",
+        0
+      ]
+    },
+    "class_type": "PatchModelAddDownscale",
+    "_meta": {
+      "title": "4::2::0::0.5"
+    }
+  },
   "3104": {
     "inputs": {
       "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
@@ -4299,56 +4156,6 @@
       "title": "Display Int (rgthree)"
     }
   },
-  "3142": {
-    "inputs": {
-      "pixels": [
-        "3421",
-        0
-      ],
-      "vae": [
-        "2127",
-        0
-      ]
-    },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "Klein_VAE Enc"
-    }
-  },
-  "3145": {
-    "inputs": {
-      "conditioning": [
-        "2026",
-        0
-      ],
-      "latent": [
-        "3142",
-        0
-      ]
-    },
-    "class_type": "ReferenceLatent",
-    "_meta": {
-      "title": "ReferenceLatent"
-    }
-  },
-  "3147": {
-    "inputs": {
-      "balance": 0.665,
-      "debug": false,
-      "model": [
-        "2011",
-        0
-      ],
-      "conditioning": [
-        "3145",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinTextRefBalance",
-    "_meta": {
-      "title": "FLUX.2 Klein Text/Ref Balance"
-    }
-  },
   "3155": {
     "inputs": {
       "guide_size": 896,
@@ -4358,11 +4165,11 @@
         "378",
         0
       ],
-      "steps": 20,
+      "steps": 18,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.08,
+      "denoise": 0.06,
       "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
@@ -4478,61 +4285,6 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
-    }
-  },
-  "3176": {
-    "inputs": {
-      "value": "Monochrome photographic refinement only. Copy the photographic style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Preserve facial identity, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, lighting direction, shadows, perspective, and image structure exactly. Preserve the transparency and natural appearance of clothing.\n\nMaintain realistic grayscale tonal relationships, smooth tonal transitions, balanced local contrast, subtle micro-contrast, natural highlight roll-off, rich shadow detail, and clean photographic sharpness while preserving the original monochrome aesthetic.\n\n__INSTRUCTION_FROM_FILE__\n\nSkin refinement means preservation of natural luminance, tonal fidelity, and authentic photographic texture only. Preserve natural pores, fine lines, freckles, moles, subtle facial hair, and all authentic skin characteristics. Improve only tonal consistency, grayscale transitions, and subtle texture continuity.\n\nPreserve the natural luminance and texture of the lips without altering their shape or creating artificial contrast.\n\nDo not beautify, smooth, airbrush, retouch, remove wrinkles, remove blemishes, reshape the face, modify age, or alter facial characteristics. Avoid waxy, plastic, overly sharpened, or AI-generated skin appearance.\n\nDo not alter image content, composition, geometry, or structure."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text String (Multiline)"
-    }
-  },
-  "3177": {
-    "inputs": {
-      "value": "Color correction and photographic refinement only. Copy the photographic style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve facial identity, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, lighting direction, shadows, perspective, and image structure exactly. Preserve the transparency and natural appearance of clothing.\n\nCorrect only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, healthy color separation, and accurate color reproduction.\n\n__INSTRUCTION_FROM_FILE__\n\nSkin refinement means photographic color fidelity and natural texture preservation only. Preserve realistic matte skin, natural pores, fine lines, freckles, moles, subtle facial hair, and all authentic skin characteristics. Improve only natural color consistency, tonal transitions, and subtle texture continuity.\n\nPreserve natural lip color and realistic lip texture with subtle moisture while maintaining the original appearance. Do not increase lipstick intensity or alter lip shape.\n\nDo not beautify, smooth, airbrush, retouch, remove wrinkles, remove blemishes, enhance makeup, reshape the face, modify age, or alter facial characteristics. Avoid waxy, plastic, overly sharpened, or AI-generated skin appearance.\n\nDo not alter image content, composition, geometry, or structure."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text String (Multiline)"
-    }
-  },
-  "3178": {
-    "inputs": {
-      "condition": [
-        "3170",
-        0
-      ],
-      "when_true": [
-        "3176",
-        0
-      ],
-      "when_false": [
-        "3177",
-        0
-      ]
-    },
-    "class_type": "InputSelector",
-    "_meta": {
-      "title": "Input Selector"
-    }
-  },
-  "3181": {
-    "inputs": {
-      "find": "__INSTRUCTION_FROM_FILE__",
-      "replace": [
-        "2160",
-        0
-      ],
-      "text": [
-        "3385",
-        0
-      ]
-    },
-    "class_type": "Text Find and Replace",
-    "_meta": {
-      "title": "Text Find and Replace"
     }
   },
   "3187": {
@@ -4718,8 +4470,8 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.45,
-      "start": 0.3,
+      "detail_amount": 0.12,
+      "start": 0.36,
       "end": 0.63,
       "bias": 0.5,
       "exponent": 1,
@@ -4867,19 +4619,6 @@
       "title": "Switch"
     }
   },
-  "3284": {
-    "inputs": {
-      "stop_at_clip_layer": -1,
-      "clip": [
-        "3273",
-        0
-      ]
-    },
-    "class_type": "CLIPSetLastLayer",
-    "_meta": {
-      "title": "CLIP Set Last Layer"
-    }
-  },
   "3286": {
     "inputs": {
       "conditioning": [
@@ -4901,16 +4640,16 @@
       "vision_megapixels": 1.5,
       "mask_padding": 0,
       "conditioning_rescaling": true,
-      "multiplier": 4,
+      "multiplier": 3.6,
       "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.5,1.1,1.2,1.0",
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
-        "3505:3501",
+        "3532",
         0
       ],
       "model": [
-        "3505:3500",
+        "3531",
         0
       ],
       "system_prompt": [
@@ -5100,7 +4839,7 @@
       "steps": 9,
       "cfg": 1,
       "sampler_name": "er_sde",
-      "scheduler": "simple",
+      "scheduler": "sgm_uniform",
       "denoise": [
         "3359",
         0
@@ -5336,35 +5075,6 @@
       "title": "Input Selector"
     }
   },
-  "3384": {
-    "inputs": {
-      "value": "Color correction and photographic refinement only. Copy the photographic style from the reference image while preserving the input image as the primary visual source.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing only the underlying image. Match the surrounding color, lighting, texture, and detail naturally. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve facial identity, facial structure, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, lighting direction, shadows, perspective, depth, and image structure. Preserve the transparency, material response, and natural appearance of clothing.\n\nCorrect only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, accurate color separation, and natural color relationships. Preserve the existing exposure, contrast, tonal range, lighting, shadows, and highlights.\n\n__INSTRUCTION_FROM_FILE__\n\nSkin refinement means photographic color fidelity and natural texture preservation only. Preserve the existing skin appearance and natural texture. Maintain realistic matte skin, existing pores, fine lines, freckles, moles, subtle facial hair, and other authentic characteristics without adding new imperfections or excessive micro-detail. Improve only subtle color consistency, tonal transitions, and texture continuity where genuinely needed.\n\nPreserve natural lip color, shape, and existing texture with subtle realistic moisture. Do not increase lipstick intensity or alter lip shape.\n\nDo not beautify, smooth, airbrush, retouch, remove wrinkles or blemishes, enhance makeup, reshape the face, modify age, alter facial characteristics, or introduce artificial skin texture. Avoid waxy, plastic, overly sharp, or AI-generated skin.\n\nDo not alter image content, composition, geometry, lighting structure, or spatial relationships except for the explicitly requested corrections."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text String (Multiline)"
-    }
-  },
-  "3385": {
-    "inputs": {
-      "condition": [
-        "591",
-        0
-      ],
-      "when_true": [
-        "3384",
-        0
-      ],
-      "when_false": [
-        "3178",
-        0
-      ]
-    },
-    "class_type": "InputSelector",
-    "_meta": {
-      "title": "Input Selector"
-    }
-  },
   "3387": {
     "inputs": {
       "conditioning": [
@@ -5545,18 +5255,6 @@
       "title": "Contains [sideboob]"
     }
   },
-  "3506": {
-    "inputs": {
-      "value": [
-        "591",
-        0
-      ]
-    },
-    "class_type": "ComfyNotNode",
-    "_meta": {
-      "title": "Not"
-    }
-  },
   "3521": {
     "inputs": {
       "comparison": "a == b",
@@ -5637,6 +5335,142 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "Krea_VAE Decode"
+    }
+  },
+  "3527": {
+    "inputs": {
+      "megapixel": "2.0",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 0,
+      "image": [
+        "1447",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations 1.8"
+    }
+  },
+  "3528": {
+    "inputs": {
+      "image": [
+        "1447",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "3529": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "3528",
+        1
+      ],
+      "b": [
+        "3528",
+        2
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "a==b"
+    }
+  },
+  "3530": {
+    "inputs": {
+      "condition": [
+        "3529",
+        0
+      ],
+      "when_true": [
+        "3528",
+        0
+      ],
+      "when_false": [
+        "3527",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3531": {
+    "inputs": {
+      "model_a": [
+        "3534",
+        0
+      ],
+      "model_b": [
+        "3314",
+        0
+      ],
+      "boolean": [
+        "3535",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3532": {
+    "inputs": {
+      "clip_a": [
+        "3534",
+        1
+      ],
+      "clip_b": [
+        "3273",
+        0
+      ],
+      "boolean": [
+        "3535",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "3534": {
+    "inputs": {
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.7,
+      "strength_clip": 0.1,
+      "model": [
+        "3314",
+        0
+      ],
+      "clip": [
+        "3273",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Lora"
+    }
+  },
+  "3535": {
+    "inputs": {
+      "value": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "ComfyNotNode",
+    "_meta": {
+      "title": "Not"
     }
   },
   "2920:2866": {
@@ -5867,7 +5701,7 @@
         0
       ],
       "model_b": [
-        "1195",
+        "3039",
         0
       ],
       "boolean": [
@@ -5906,82 +5740,11 @@
       "strength_model": 0.7,
       "strength_clip": 0.1,
       "model": [
-        "1195",
+        "3039",
         0
       ],
       "clip": [
         "1197",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Lora"
-    }
-  },
-  "3505:3500": {
-    "inputs": {
-      "model_a": [
-        "3505:3502",
-        0
-      ],
-      "model_b": [
-        "3314",
-        0
-      ],
-      "boolean": [
-        "3505:3499",
-        0
-      ]
-    },
-    "class_type": "Model Input Switch",
-    "_meta": {
-      "title": "Model Input Switch"
-    }
-  },
-  "3505:3501": {
-    "inputs": {
-      "clip_a": [
-        "3505:3502",
-        1
-      ],
-      "clip_b": [
-        "3284",
-        0
-      ],
-      "boolean": [
-        "3505:3499",
-        0
-      ]
-    },
-    "class_type": "CLIP Input Switch",
-    "_meta": {
-      "title": "CLIP Input Switch"
-    }
-  },
-  "3505:3499": {
-    "inputs": {
-      "value": [
-        "3506",
-        0
-      ]
-    },
-    "class_type": "BOOLConstant",
-    "_meta": {
-      "title": "BOOL Constant"
-    }
-  },
-  "3505:3502": {
-    "inputs": {
-      "lora_name": "ultra_real_krea2_v1.safetensors",
-      "strength_model": 0.7,
-      "strength_clip": 0.1,
-      "model": [
-        "3314",
-        0
-      ],
-      "clip": [
-        "3284",
         0
       ]
     },
