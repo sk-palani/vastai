@@ -162,6 +162,7 @@ NODES=(
    "https://github.com/yorkane/ComfyUI-KYNode"
    "https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer"
 #    "https://github.com/DenRakEiw/Latent_Nodes"
+   "https://github.com/TiwazM/ComfyUI-Krea2-Turbo-Preset-Sampler"
 )
 
 
