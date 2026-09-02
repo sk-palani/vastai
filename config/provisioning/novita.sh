@@ -238,6 +238,8 @@ MP3=(
 
 UNET_MODELS=(
   "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+  "https://civitai.red/api/download/models/2287992?fileId=2181185&token=${CIVITAI_TOKEN}"
+
 )
 
 DIFFUSION_MODELS=(
