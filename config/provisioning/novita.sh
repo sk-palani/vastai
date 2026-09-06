@@ -249,6 +249,8 @@ DIFFUSION_MODELS=(
   "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors"
   # kreamania_variant7.safetensors
   "https://civitai.com/api/download/models/3242185?fileId=3128871&token=${CIVITAI_TOKEN}"
+  # kreamania_varian8.safetensors
+  "https://civitai.com/api/download/models/3292830?fileId=3177948&token=${CIVITAI_TOKEN}"
 
   # fluxtraitFLUX2KleinFLUXZ_flux2Klein9bV2.safetensors
 #  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
@@ -262,6 +264,8 @@ VAE_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
     "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"
     "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors"
+
+    "https://civitai.red/api/download/models/3054852?fileId=2933547&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2527939?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    # nightPhotoHDR_flux1.safetensors
 #    "https://civitai.com/api/download/models/2615379?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
