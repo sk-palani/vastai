@@ -4195,11 +4195,11 @@
         "378",
         0
       ],
-      "steps": 24,
+      "steps": 23,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.07,
+      "denoise": 0.05,
       "feather": 7,
       "noise_mask": true,
       "force_inpaint": true,
@@ -4673,7 +4673,7 @@
   "3274": {
     "inputs": {
       "any_01": [
-        "3391",
+        "3354",
         0
       ],
       "any_02": [
@@ -4716,11 +4716,11 @@
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
-        "3273",
-        0
+        "3306",
+        1
       ],
       "model": [
-        "3314",
+        "3306",
         0
       ],
       "system_prompt": [
@@ -4750,9 +4750,28 @@
       "title": "Custom Combo"
     }
   },
+  "3306": {
+    "inputs": {
+      "lora_name": "ultra_real_krea2_v1.safetensors",
+      "strength_model": 0.6,
+      "strength_clip": 0.08,
+      "model": [
+        "3314",
+        0
+      ],
+      "clip": [
+        "3273",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
   "3307": {
     "inputs": {
-      "unet_name": "kreamania_variant8.safetensors",
+      "unet_name": "default_krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4805,7 +4824,7 @@
   "3338": {
     "inputs": {
       "image": [
-        "3391",
+        "3354",
         0
       ]
     },
@@ -4822,7 +4841,7 @@
         0
       ],
       "image": [
-        "3391",
+        "3354",
         0
       ]
     },
@@ -4899,7 +4918,7 @@
       "monochrome_grain": false,
       "highlight_rolloff": 0.15,
       "image": [
-        "3391",
+        "3354",
         0
       ],
       "depth_map": [
@@ -4918,7 +4937,7 @@
         "222",
         0
       ],
-      "b": 0.42,
+      "b": 0.48,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -4998,8 +5017,8 @@
     "inputs": {
       "solver_type": "ER-SDE",
       "max_stage": 3,
-      "eta": 0.75,
-      "s_noise": 0.8
+      "eta": 0.5,
+      "s_noise": 0.95
     },
     "class_type": "SamplerER_SDE",
     "_meta": {
@@ -5015,7 +5034,7 @@
         0
       ],
       "model": [
-        "3301",
+        "3396",
         0
       ]
     },
@@ -5033,7 +5052,7 @@
       ],
       "cfg": 1,
       "model": [
-        "3301",
+        "3396",
         0
       ],
       "positive": [
@@ -5069,13 +5088,13 @@
         "378",
         0
       ],
-      "steps": 32,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "normal",
-      "start_at_step": 28,
+      "scheduler": "simple",
+      "start_at_step": 5,
       "end_at_step": 999,
-      "return_with_leftover_noise": "disable",
+      "return_with_leftover_noise": "enable",
       "model": [
         "3314",
         0
@@ -5112,6 +5131,19 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "Krea_VAE Decode"
+    }
+  },
+  "3396": {
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "3301",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "Shift 3 — nudges contrast and framing"
     }
   },
   "2920:2866": {
