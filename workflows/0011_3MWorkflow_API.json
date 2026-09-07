@@ -4236,10 +4236,10 @@
     "inputs": {
       "temperature": -5,
       "hue": 0,
-      "brightness": -10,
+      "brightness": -2,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 1.05,
+      "gamma": 0.96,
       "image": [
         "1094",
         0
