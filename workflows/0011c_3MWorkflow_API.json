@@ -2168,7 +2168,7 @@
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
       "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones , realistic dynamic range, and natural photographic color science.   optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality , natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n",
-      "guidance": 3.5,
+      "guidance": 3.2,
       "clip": [
         "2925",
         1
@@ -2553,7 +2553,7 @@
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.1,
+      "denoise": 0.07,
       "model": [
         "3147",
         0
@@ -4195,11 +4195,11 @@
         "378",
         0
       ],
-      "steps": 19,
+      "steps": 24,
       "cfg": 1,
       "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.06,
+      "scheduler": "beta",
+      "denoise": 0.07,
       "feather": 7,
       "noise_mask": true,
       "force_inpaint": true,
@@ -4535,8 +4535,8 @@
   },
   "3205": {
     "inputs": {
-      "max_shift": 0.7,
-      "base_shift": 0.7,
+      "max_shift": 0.8,
+      "base_shift": 0.4,
       "width": 896,
       "height": 896,
       "model": [
@@ -4560,7 +4560,7 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.12,
+      "detail_amount": 0.1,
       "start": 0.3,
       "end": 0.55,
       "bias": 0.5,
@@ -4752,7 +4752,7 @@
   },
   "3307": {
     "inputs": {
-      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
+      "unet_name": "kreamania_variant8.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4802,6 +4802,64 @@
       "title": "Concatenate Text (LoRA Trigger Word)"
     }
   },
+  "3338": {
+    "inputs": {
+      "image": [
+        "3391",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "3339": {
+    "inputs": {
+      "preprocessor": "DepthAnythingPreprocessor",
+      "resolution": [
+        "3341",
+        0
+      ],
+      "image": [
+        "3391",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor",
+    "_meta": {
+      "title": "AIO Aux Preprocessor"
+    }
+  },
+  "3340": {
+    "inputs": {
+      "image": [
+        "3339",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors"
+    }
+  },
+  "3341": {
+    "inputs": {
+      "mode": false,
+      "a": [
+        "3338",
+        1
+      ],
+      "b": [
+        "3338",
+        2
+      ]
+    },
+    "class_type": "ImpactMinMax",
+    "_meta": {
+      "title": "ImpactMinMax"
+    }
+  },
   "3354": {
     "inputs": {
       "samples": [
@@ -4818,13 +4876,49 @@
       "title": "Krea_VAE Decode"
     }
   },
+  "3356": {
+    "inputs": {
+      "lens_distortion": -0.006,
+      "color_temperature": -0.05,
+      "tint": 0,
+      "atmosphere_enabled": true,
+      "haze_strength": 0,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "Manual",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0.02,
+      "promist_strength": 0.02,
+      "halation_strength": 0.01,
+      "chromatic_aberration": 0.001,
+      "vignette_intensity": 0.03,
+      "grain_power": 0.004,
+      "monochrome_grain": false,
+      "highlight_rolloff": 0.15,
+      "image": [
+        "3391",
+        0
+      ],
+      "depth_map": [
+        "3340",
+        0
+      ]
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics"
+    }
+  },
   "3359": {
     "inputs": {
       "a": [
         "222",
         0
       ],
-      "b": 0.46,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -4904,7 +4998,7 @@
     "inputs": {
       "solver_type": "ER-SDE",
       "max_stage": 3,
-      "eta": 1,
+      "eta": 0.75,
       "s_noise": 0.8
     },
     "class_type": "SamplerER_SDE",
@@ -4975,13 +5069,13 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 32,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "sgm_uniform",
-      "start_at_step": 5,
+      "scheduler": "normal",
+      "start_at_step": 28,
       "end_at_step": 999,
-      "return_with_leftover_noise": "enable",
+      "return_with_leftover_noise": "disable",
       "model": [
         "3314",
         0
