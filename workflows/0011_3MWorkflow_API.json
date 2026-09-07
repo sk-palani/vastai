@@ -3529,7 +3529,7 @@
   },
   "2202": {
     "inputs": {
-      "width": 168,
+      "width": 178,
       "height": 38,
       "red": 0,
       "green": 0,
@@ -3546,7 +3546,7 @@
         "2208",
         2
       ],
-      "b": -168,
+      "b": -176,
       "operation": "add"
     },
     "class_type": "easy mathInt",
@@ -3572,7 +3572,7 @@
         "2208",
         1
       ],
-      "b": -42,
+      "b": -44,
       "operation": "add"
     },
     "class_type": "easy mathInt",
@@ -3608,7 +3608,7 @@
         0
       ],
       "rotation": -90,
-      "opacity": 10,
+      "opacity": 14,
       "base_image": [
         "3198",
         0
@@ -3633,9 +3633,9 @@
         "3165",
         0
       ],
-      "font": "SevenSegment.ttf",
-      "size": 42,
-      "color": "#E98B50FF",
+      "font": "DSEG14Classic-BoldItalic.ttf",
+      "size": 30,
+      "color": "#FF467AFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
