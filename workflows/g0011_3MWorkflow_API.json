@@ -4193,7 +4193,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "kreamania_variant8.safetensors",
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
