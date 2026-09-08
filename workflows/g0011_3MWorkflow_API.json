@@ -3635,7 +3635,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#FF467AFF",
+      "color": "#EB7D00FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4239,7 +4239,7 @@
       "brightness": -2,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 0.9,
+      "gamma": 0.93,
       "image": [
         "1094",
         0
