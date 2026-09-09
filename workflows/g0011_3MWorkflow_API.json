@@ -2167,7 +2167,10 @@
   "1725": {
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n",
+      "t5xxl": [
+        "3387",
+        0
+      ],
       "guidance": 2.8,
       "clip": [
         "2925",
@@ -4352,7 +4355,7 @@
         0
       ],
       "text_b": [
-        "3189",
+        "3382",
         0
       ],
       "text_c": [
@@ -4653,7 +4656,7 @@
         0
       ],
       "text": [
-        "3174",
+        "3383",
         0
       ]
     },
@@ -5754,6 +5757,102 @@
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
       "title": "Krea_TextEncodeQwenImageEditPlus"
+    }
+  },
+  "3380": {
+    "inputs": {
+      "value": "depiction of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nPreserve the visual character of the input image, including its existing style, medium, rendering approach, linework, shapes, forms, colors, tonal relationships, texture, lighting, and level of detail. Improve only visual coherence and fidelity without changing the established artistic language.\n\nPreserve the natural appearance and proportions of the subject while retaining the characteristic rendering of the source style. Do not unnecessarily add realism, photographic qualities, artificial detail, or texture that is not present in the input.\n\nPreserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, patterns, and material representation exactly as they appear. Avoid inventing, simplifying, exaggerating, or replacing design elements.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should retain the original garment design, silhouette, proportions, folds, transparency, and level of detail as established in the input image.\n\nRefine only visual fidelity and coherence. Do not beautify, reshape, age, de-age, photorealize, stylize differently, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, add photographic characteristics, or generate new artifacts."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3382": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3380",
+        0
+      ],
+      "when_false": [
+        "3189",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3383": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3384",
+        0
+      ],
+      "when_false": [
+        "3174",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3384": {
+    "inputs": {
+      "value": "Color correction and cleanup only. Copy the visual style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing only the obscured underlying area. Match the surrounding image naturally. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial structure, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, perspective, lighting, shadows, depth, and image structure.\n\nPreserve the existing rendering style, level of detail, surface appearance, color relationships, tonal relationships, and visual character of the input. Do not increase realism or photographic detail.\n\n__INSTRUCTION_FROM_FILE__\n\nApply only the explicitly requested corrections.\n\nDo not beautify, retouch, smooth, sharpen, add detail, remove detail, add texture, remove texture, relight, reshape, reinterpret, or regenerate existing image content.\n\nDo not alter the appearance or rendering of the face, skin, hair, clothing, or other subjects except where explicitly requested.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, colors, or stylistic characteristics.\n\nKeep all unaffected regions as close to the input image as possible."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3386": {
+    "inputs": {
+      "value": "Treat the input face as correct and preserve the exact facial identity.\n\nPreserve facial structure, facial proportions, face shape, jawline, chin, cheeks, eyes, eye spacing, eyebrows, nose, lips, mouth shape, natural asymmetry, expression, and gaze direction exactly as they appear in the input.\n\nPreserve the existing hairstyle, hair shape, bindi, jewelry, and other distinctive facial characteristics.\n\nWhen the eyes are visible, preserve their exact orientation and eyelid position. Do not redirect, center, enlarge, narrow, or reinterpret the gaze. If the eyes are closed, obscured, or not visible, do not infer or reconstruct them.\n\nIf teeth are visible, preserve their existing shape, arrangement, spacing, number, and appearance. Do not whiten, straighten, reshape, replace, merge, or regenerate teeth.\n\nDo not beautify, idealize, normalize, symmetrize, reshape, age, de-age, or otherwise modify the person's facial characteristics.\n\nDo not change the visual medium, artistic style, rendering method, colors, textures, lighting, contrast, or level of detail of the input.\n\nRefine only enough to maintain facial identity and consistency with the input. Do not add realism, photographic detail, skin texture, pores, sharpness, or other stylistic characteristics.\n\nThe result must represent the same face with the same expression and appearance, without stylistic reinterpretation."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3387": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3386",
+        0
+      ],
+      "when_false": [
+        "3388",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3388": {
+    "inputs": {
+      "value": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
     }
   },
   "2920:2866": {
