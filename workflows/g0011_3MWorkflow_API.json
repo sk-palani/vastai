@@ -5663,7 +5663,7 @@
         0
       ],
       "system_prompt": [
-        "2300",
+        "3392",
         0
       ],
       "images": [
@@ -5853,6 +5853,26 @@
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
       "title": "Text String (Multiline)"
+    }
+  },
+  "3392": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "2304",
+        0
+      ],
+      "when_false": [
+        "2300",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
     }
   },
   "2920:2866": {
