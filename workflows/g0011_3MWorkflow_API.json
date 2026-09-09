@@ -499,9 +499,9 @@
       "brightness": 0,
       "contrast": 0,
       "saturation": 0,
-      "red": 0,
-      "green": 0,
-      "blue": 0,
+      "red": 15,
+      "green": 17,
+      "blue": 3,
       "mode": "RGB",
       "image": [
         "554",
@@ -1620,7 +1620,7 @@
   },
   "1309": {
     "inputs": {
-      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the facial identity of v1dhya5 with high fidelity. Maintain the same underlying facial structure, facial proportions, characteristic feature relationships, eye spacing, nose-to-mouth relationship, jaw and cheek structure, and overall facial geometry. Preserve the subject's recognizable facial appearance rather than merely producing a similar-looking person. Do not beautify, idealize, symmetrize, or reinterpret the face.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
+      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -3635,7 +3635,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#F05133FF",
+      "color": "#118AB2FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4193,7 +4193,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4336,7 +4336,7 @@
   },
   "2407": {
     "inputs": {
-      "value": "You are an expert prompt engineer for FLUX and Krea image-generation models. Your task is to expand the user's prompt into a highly effective image-generation prompt while faithfully preserving the user's intent, the source medium, and the established visual style.\n\nThe subject identifier is \"v1dhya5\". Treat this only as an internal identity token. Never describe, request, imply, or render \"v1dhya5\" as visible text, a logo, watermark, signature, label, embroidery, print, branding, caption, or graphic anywhere in the image.\n\nBefore writing the final prompt, reason internally about:\n- The primary subject, action, and mood.\n- Composition, framing, perspective, and spatial relationships.\n- The appropriate visual medium and artistic or photographic style.\n- The rendering characteristics, level of detail, lighting, color, materials, and environment appropriate to that medium.\n- Which visual characteristics are important for faithfully reproducing the user's intent.\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n\n1. **Faithfulness First:** Preserve all original subjects, actions, composition, framing, perspective, spatial relationships, and important visual characteristics. Do not invent new objects, people, props, animals, backgrounds, or scene elements.\n\n2. **Prompt Optimization:** Improve prompt readability and structure for FLUX/Krea while preserving the user's intent. Organize related visual attributes naturally and remove unnecessary repetition.\n\n3. **Identity Preservation:** Preserve the identity represented by \"v1dhya5\". Mention the identifier exactly once near the beginning of the prompt only as an identity token. Never imply that it should appear visibly anywhere in the generated image.\n\n4. **Medium-Aware Description:** Preserve the requested or implied medium and rendering style. A photograph should retain photographic characteristics; an illustration should retain its illustrative character; a painting should retain its painterly qualities; a sketch, comic, digital artwork, 3D render, or other medium should retain its corresponding visual language. Do not automatically add photographic realism, camera characteristics, optical properties, skin realism, or other medium-specific attributes unless appropriate to the input.\n\n5. **Natural Description:** Describe visual characteristics appropriate to the medium without unnecessary over-specification. Avoid excessive facial, skin, material, or micro-detail unless explicitly requested or clearly important to the source style.\n\n6. **Body Description:** If the prompt contains a \"-- body description --\" section, rewrite it appropriately to match the detected or specified age while preserving the user's intended body type, proportions, and appearance. Treat the existing body description as guidance rather than fixed text.\n\n7. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and optimize it instead of expanding unnecessarily. Preserve existing distinctive details rather than replacing them with generic descriptions.\n\n8. **Style Fidelity:** Preserve the visual language already established by the user's prompt or source image, including artistic style, color treatment, tonal character, linework, brushwork, rendering method, texture, lighting, and level of detail. Do not substitute a different style merely because it may be more photorealistic or aesthetically pleasing.\n\n9. **No Text Artifacts:** Unless the user explicitly requests visible text, never generate or imply text, letters, words, numbers, logos, watermarks, signatures, branding, labels, captions, printed graphics, stamps, or graphic symbols anywhere in the image.\n\n10. **Human Realism:** When depicting people, preserve natural anatomy, facial structure, proportions, expression, pose, and age-appropriate appearance. Do not beautify, idealize, reshape, or normalize distinctive features unless explicitly requested.\n\n11. **Conditional Detail:** Only describe characteristics that are actually relevant or supported by the user's input. Do not invent hidden details, unseen anatomy, background elements, materials, lighting, or stylistic features.\n\n12. **Structure:** Output one cohesive paragraph only. No Markdown, bullet points, JSON, XML, headings, explanations, analysis, or reasoning.\n\nAim for approximately 220–320 words when expansion is genuinely useful. For already-detailed inputs, remain concise and make only necessary refinements. Prioritize the most visually significant elements and avoid unnecessary repetition or excessive fine detail.\n\nUser's Input:\n\n"
+      "value": "You are an expert prompt engineer for FLUX and Krea text-to-image models. Your task is to expand the user's prompt into a highly effective image-generation prompt while faithfully preserving the user's intent.\n\nThe subject identifier is \"v1dhya5\". Treat this only as an internal identity token. Never describe, request, imply, or render \"v1dhya5\" as visible text, a logo, watermark, signature, label, embroidery, print, branding, caption, or graphic anywhere in the image.\n\nBefore writing the final prompt, reason internally about:\n- The primary subject and mood.\n- Composition, framing, and camera perspective.\n- Appropriate photographic or artistic style. \n- The level of detail required to faithfully reproduce the user's intent.\n\nThen output a single expanded prompt paragraph.\n\nFollow these rules strictly:\n\n1. **Faithfulness First:** Preserve all original subjects, actions, composition, camera perspective, and spatial relationships. Do not invent new objects, people, props, animals, backgrounds, or scene elements.\n\n2. **Prompt Optimization:** Improve prompt readability and structure for FLUX/Krea while preserving the user's intent. Organize related visual attributes naturally.\n\n3. **Identity Preservation:** Preserve the identity represented by \"v1dhya5\". Mention the identifier exactly once near the beginning of the prompt only as an identity token. Never imply that it should appear visibly anywhere in the generated image.\n\n4. **Natural Description:** Do not over-describe facial features or skin texture. Use natural photographic language. Focus on composition, clothing, lighting, body proportions, materials, environment, artistic style, and overall appearance. Avoid describing pores, peach fuzz, vellus hairs, skin microtexture, blemishes, freckles, wrinkles, or similar fine skin details unless explicitly requested by the user.\n\n5. **Body Description:** If the prompt contains a \"-- body description --\" section, rewrite it appropriately to match the detected or specified age while preserving the user's intended body type and proportions. Treat the existing body description as guidance rather than fixed text.\n\n6. **Respect Existing Detail:** If the user's prompt is already detailed, lightly polish and optimize it instead of expanding unnecessarily.\n\n7. **Preserve Medium:** Preserve the requested or implied medium (photograph, illustration, painting, digital art, sketch, comic, 3D render, etc.). Do not change the medium.\n\n8. **No Text Artifacts:** Unless the user explicitly requests visible text, never generate or imply text, letters, words, numbers, logos, watermarks, signatures, branding, labels, captions, printed graphics, embroidery, or stamps anywhere in the image.\n\n9. **Human Realism:** Treat people naturally and respectfully. Preserve realistic anatomy and age-appropriate proportions.\n\n10. **Structure:** Output one cohesive paragraph only. No Markdown, bullet points, JSON, XML, headings, explanations, analysis, or reasoning.\n\nAim for approximately 220–320 words. Prioritize the most visually significant elements while avoiding unnecessary repetition or excessive fine detail.\n\nUser's Input:\n\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4664,7 +4664,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color response with the tonal character of a natural digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly composed and photographed. The input image is the source of truth. Make only the explicitly requested corrections.\n\nPreserve the entire scene structure exactly, especially the background. Do not regenerate, redesign, replace, simplify, clean up, blur, sharpen, or reinterpret the background. Preserve all existing background objects, surfaces, textures, patterns, architecture, vegetation, furniture, edges, perspective, depth, lighting, shadows, and spatial relationships exactly as they appear.\n\nPreserve the existing lighting, illumination, exposure, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance. Do not flatten, equalize, normalize, relight, or redistribute the existing lighting.\n\nPreserve the existing photographic color grading, tonal range, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic white balance, natural skin tones, and existing color relationships.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the affected area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, scenery, environmental details, or stylistic changes. Do not modify any unaffected region of the image."
+      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4955,8 +4955,8 @@
         0
       ],
       "clip": [
-        "2349",
-        0
+        "3306",
+        1
       ],
       "vae": [
         "2315",
@@ -5174,11 +5174,11 @@
         0
       ],
       "positive": [
-        "3093",
+        "3379",
         0
       ],
       "negative": [
-        "3093",
+        "3379",
         0
       ],
       "latent_image": [
@@ -5335,7 +5335,7 @@
   },
   "3187": {
     "inputs": {
-      "value": "photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic mid-2010s professional DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
+      "value": "photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic professional DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5652,11 +5652,11 @@
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
-        "2349",
-        0
+        "3306",
+        1
       ],
       "model": [
-        "3166",
+        "3306",
         0
       ],
       "system_prompt": [
@@ -5689,6 +5689,25 @@
       "title": "Switch"
     }
   },
+  "3306": {
+    "inputs": {
+      "lora_name": "ultra_real_krea2_v2.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.1,
+      "model": [
+        "3166",
+        0
+      ],
+      "clip": [
+        "2349",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
   "3318": {
     "inputs": {
       "string_a": [
@@ -5714,6 +5733,27 @@
     "class_type": "ModelSamplingAuraFlow",
     "_meta": {
       "title": "Shift 3 — nudges contrast and framing"
+    }
+  },
+  "3379": {
+    "inputs": {
+      "prompt": "You are refining an existing image, not creating a new image.\n\nTreat the input image as the primary and authoritative visual source. The image is already substantially correct. Your task is to make only subtle refinements while keeping the existing image visually consistent.\n\nPreserve the subject identity, facial characteristics, expression, gaze, pose, proportions, clothing, accessories, composition, framing, perspective, background, environment, lighting, shadows, highlights, colors, tonal relationships, depth, and spatial relationships.\n\nPreserve the existing visual medium and artistic language exactly as established by the input. A photograph should remain photographic; a sketch should remain a sketch; a painting should remain a painting; an illustration should remain an illustration; a 3D render should remain a 3D render. Do not convert, reinterpret, or blend the image into another medium or style.\n\nPrioritize preservation over enhancement. Reinforce only visual characteristics that are already present but appear weak, incomplete, inconsistent, or slightly degraded.\n\nDo not invent new objects, details, textures, patterns, scenery, anatomy, materials, lighting, or stylistic characteristics. Do not infer or reconstruct unnecessary hidden information.\n\nDo not beautify, idealize, reshape, normalize, simplify, stylize, photorealize, or otherwise reinterpret the image.\n\nDo not automatically add realism, photographic qualities, sharpness, texture, skin detail, brush detail, line detail, or other medium-specific characteristics.\n\nIf an explicit user instruction is provided, apply only that requested modification and keep all unrelated areas unchanged.\n\nThe desired result is the same image with subtle improvements in fidelity and coherence, not a newly generated interpretation of the image.",
+      "clip": [
+        "3306",
+        1
+      ],
+      "vae": [
+        "2315",
+        0
+      ],
+      "image1": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "Krea_TextEncodeQwenImageEditPlus"
     }
   },
   "2920:2866": {
