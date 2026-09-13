@@ -5146,7 +5146,7 @@
         "378",
         0
       ],
-      "steps": 14,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "sgm_uniform",
@@ -5162,8 +5162,8 @@
         1
       ],
       "negative": [
-        "3435",
-        0
+        "3430",
+        1
       ],
       "latent_image": [
         "3086",
