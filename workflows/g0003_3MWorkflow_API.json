@@ -4962,7 +4962,7 @@
         "222",
         0
       ],
-      "b": 0.5,
+      "b": 0.45,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
