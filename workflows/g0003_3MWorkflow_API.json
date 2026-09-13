@@ -171,12 +171,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_hzseo_00069_.png&type=temp&subfolder=&rand=0.9625314199984107"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_hzseo_00089_.png&type=temp&subfolder=&rand=0.6564710134422732"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_hzseo_00070_.png&type=temp&subfolder=&rand=0.029463111405719777"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_hzseo_00090_.png&type=temp&subfolder=&rand=0.08139362563439567"
           }
         ]
       },
@@ -607,12 +607,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_iczen_00017_.png&type=temp&subfolder=&rand=0.24766287891837802"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_iczen_00037_.png&type=temp&subfolder=&rand=0.24066050647471138"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_iczen_00018_.png&type=temp&subfolder=&rand=0.17558653690918213"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_iczen_00038_.png&type=temp&subfolder=&rand=0.7299141920515763"
           }
         ]
       },
@@ -1988,12 +1988,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_lntby_00069_.png&type=temp&subfolder=&rand=0.7979415716489521"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_lntby_00089_.png&type=temp&subfolder=&rand=0.4156034905166027"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_lntby_00070_.png&type=temp&subfolder=&rand=0.1956641824811427"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_lntby_00090_.png&type=temp&subfolder=&rand=0.5465786344491358"
           }
         ]
       },
@@ -2456,12 +2456,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_iyasp_00071_.png&type=temp&subfolder=&rand=0.28035400259005483"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_iyasp_00091_.png&type=temp&subfolder=&rand=0.39568546953727746"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_iyasp_00072_.png&type=temp&subfolder=&rand=0.07210516921817256"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_iyasp_00092_.png&type=temp&subfolder=&rand=0.8774762752384216"
           }
         ]
       },
@@ -4240,12 +4240,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_nzjgp_00069_.png&type=temp&subfolder=&rand=0.5598211916714705"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_nzjgp_00089_.png&type=temp&subfolder=&rand=0.07228562739695688"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_nzjgp_00070_.png&type=temp&subfolder=&rand=0.26231508684911564"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_nzjgp_00090_.png&type=temp&subfolder=&rand=0.18999541814483534"
           }
         ]
       },
@@ -4531,7 +4531,7 @@
   "2309": {
     "inputs": {
       "any_01": [
-        "3012",
+        "3436",
         0
       ],
       "any_02": [
@@ -4938,7 +4938,7 @@
   },
   "2969": {
     "inputs": {
-      "text_0": "Inputs/Next/Best/jo.the_duskyqueen posts 2026-09-12 19.19 DdMIahKk_GT_4_5 806298996_18118270921948024_544891865985730014_n.webp",
+      "text_0": "Inputs/Next/arreyaar_ayushi posts 2026-09-03 19.13 Dc08mQYlHGa_5_6 792687909_17983278624118625_7132766781474827388_n.jpg",
       "text": [
         "135",
         3
@@ -5173,7 +5173,7 @@
   "3024": {
     "inputs": {
       "any_01": [
-        "3012",
+        "3436",
         0
       ],
       "any_02": [
@@ -5344,7 +5344,7 @@
       ],
       "steps": 10,
       "cfg": 1,
-      "sampler_name": "dpmpp_2m_sde",
+      "sampler_name": "er_sde",
       "scheduler": "simple",
       "denoise": [
         "3100",
@@ -5402,7 +5402,7 @@
         "222",
         0
       ],
-      "b": 0.6,
+      "b": 0.5,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -5598,11 +5598,11 @@
         "378",
         0
       ],
-      "steps": 15,
+      "steps": 14,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "simple",
-      "start_at_step": 12,
+      "scheduler": "sgm_uniform",
+      "start_at_step": 7,
       "end_at_step": 999,
       "return_with_leftover_noise": "disable",
       "model": [
@@ -6109,12 +6109,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_dsupb_00071_.png&type=temp&subfolder=&rand=0.37266980642516023"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_dsupb_00089_.png&type=temp&subfolder=&rand=0.8501054008194472"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_dsupb_00072_.png&type=temp&subfolder=&rand=0.24814106668091263"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_dsupb_00090_.png&type=temp&subfolder=&rand=0.36312244654510595"
           }
         ]
       },
@@ -6172,12 +6172,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_kpqyj_00069_.png&type=temp&subfolder=&rand=0.8159891264683922"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_kpqyj_00089_.png&type=temp&subfolder=&rand=0.38674637303977666"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/comfy/api/view?filename=rgthree.compare._temp_kpqyj_00070_.png&type=temp&subfolder=&rand=0.36854127547796134"
+            "url": "/comfy/api/view?filename=rgthree.compare._temp_kpqyj_00090_.png&type=temp&subfolder=&rand=0.9677812228666055"
           }
         ]
       },
@@ -6565,6 +6565,25 @@
     "class_type": "ConditioningZeroOut",
     "_meta": {
       "title": "ConditioningZeroOut"
+    }
+  },
+  "3436": {
+    "inputs": {
+      "method": "mkl",
+      "strength": 0.76,
+      "multithread": true,
+      "image_target": [
+        "3012",
+        0
+      ],
+      "image_ref": [
+        "577",
+        0
+      ]
+    },
+    "class_type": "ColorMatchV2",
+    "_meta": {
+      "title": "ColorMatchV2"
     }
   },
   "2920:2866": {
