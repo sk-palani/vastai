@@ -460,7 +460,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "127",
+        "3451",
         0
       ],
       "mask": [
@@ -484,7 +484,7 @@
         0
       ],
       "when_false": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -1353,7 +1353,7 @@
       "strength": 0.12,
       "multithread": false,
       "image_ref": [
-        "127",
+        "3451",
         0
       ],
       "image_target": [
@@ -1550,12 +1550,12 @@
       "strength_model": 1,
       "strength_clip": 0.08,
       "model": [
-        "1297",
+        "3444",
         0
       ],
       "clip": [
-        "1297",
-        1
+        "3445",
+        0
       ]
     },
     "class_type": "LoraLoader",
@@ -1872,7 +1872,7 @@
   },
   "1646": {
     "inputs": {
-      "sampler_name": "euler"
+      "sampler_name": "euler_ancestral"
     },
     "class_type": "KSamplerSelect",
     "_meta": {
@@ -2217,7 +2217,7 @@
         0
       ],
       "image": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -3143,7 +3143,7 @@
   "2074": {
     "inputs": {
       "image": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4020,7 +4020,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4144,7 +4144,7 @@
         0
       ],
       "any_02": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4211,7 +4211,7 @@
         0
       ],
       "any_03": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4319,7 +4319,7 @@
   "2406": {
     "inputs": {
       "string_a": [
-        "3201",
+        "3441",
         0
       ],
       "string_b": [
@@ -4545,7 +4545,7 @@
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4737,7 +4737,7 @@
         0
       ],
       "any_02": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4902,7 +4902,7 @@
         "378",
         0
       ],
-      "steps": 10,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "er_sde",
       "scheduler": "simple",
@@ -4962,7 +4962,7 @@
         "222",
         0
       ],
-      "b": 0.45,
+      "b": 0.64,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -5018,7 +5018,7 @@
   "3142": {
     "inputs": {
       "pixels": [
-        "127",
+        "3451",
         0
       ],
       "vae": [
@@ -5141,7 +5141,7 @@
   },
   "3162": {
     "inputs": {
-      "add_noise": "disable",
+      "add_noise": "enable",
       "noise_seed": [
         "378",
         0
@@ -5149,10 +5149,10 @@
       "steps": 11,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "sgm_uniform",
-      "start_at_step": 7,
-      "end_at_step": 999,
-      "return_with_leftover_noise": "disable",
+      "scheduler": "simple",
+      "start_at_step": 5,
+      "end_at_step": 100,
+      "return_with_leftover_noise": "enable",
       "model": [
         "3430",
         0
@@ -5162,8 +5162,8 @@
         1
       ],
       "negative": [
-        "3430",
-        1
+        "3435",
+        0
       ],
       "latent_image": [
         "3086",
@@ -5194,7 +5194,7 @@
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
       "strength_model": 1,
       "model": [
-        "3229",
+        "3455",
         0
       ]
     },
@@ -5355,21 +5355,6 @@
       "title": "Input Selector"
     }
   },
-  "3191": {
-    "inputs": {
-      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "A professionally photographed portrait of an Indian woman, v1dhya5.\n\nTreat the input face and smile as correct. Refine only missing photographic detail while preserving the subject's facial identity, expression, gaze direction, facial proportions, head shape, hairstyle, bindi, jewelry, lighting, white balance, composition, and photographic color grading.\n\nMaintain realistic matte skin with subtle natural pores, gentle tonal variation, authentic photographic texture, soft facial transitions, and natural melanin-rich South Indian skin tones. Preserve existing freckles, moles, fine facial hair, eyelashes, eyebrows, and other natural facial characteristics exactly as they appear. Improve only subtle eye clarity, iris definition, eyelash detail, eyebrow definition, natural lip definition, and overall facial coherence while maintaining realistic optical sharpness.\n\nPreserve the natural shape, spacing, alignment, translucency, and color variation of the teeth. Maintain realistic enamel shading and subtle imperfections. Do not whiten teeth excessively, sharpen tooth edges, invent or remove teeth, alter the smile, or create perfectly uniform teeth.\n\nPreserve realistic age, facial geometry, skin texture, and natural imperfections. Keep clothing, accessories, background, shadows, and highlights unchanged.\n\nDo not beautify, reshape, de-age, age, stylize, smooth skin, remove pores, add makeup, enlarge eyes, sharpen excessively, alter facial proportions, change expression, modify hair, introduce artificial skin texture, hallucinate facial details, or create new artifacts.",
-      "guidance": 3.5,
-      "clip": [
-        "1298",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncodeFlux",
-    "_meta": {
-      "title": "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
   "3196": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
@@ -5502,21 +5487,6 @@
       "title": "Text Multiline"
     }
   },
-  "3214": {
-    "inputs": {
-      "dishonesty_factor": -0.02,
-      "start_percent": 0.25,
-      "end_percent": 0.45,
-      "sampler": [
-        "2280",
-        0
-      ]
-    },
-    "class_type": "LyingSigmaSampler",
-    "_meta": {
-      "title": "Lying Sigma Sampler"
-    }
-  },
   "3215": {
     "inputs": {
       "detail_amount": 0.13,
@@ -5530,7 +5500,7 @@
       "smooth": true,
       "cfg_scale_override": 1,
       "sampler": [
-        "3214",
+        "2280",
         0
       ]
     },
@@ -5970,7 +5940,7 @@
       "mask_padding": 0,
       "conditioning_rescaling": false,
       "multiplier": 2,
-      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.5,1.1,1.2,1.0",
+      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,5.0,1.1,4.0,1.0",
       "prompt_adherence_enhancer": false,
       "strength": 0.5,
       "clip": [
@@ -6024,6 +5994,144 @@
     "class_type": "ColorMatchV2",
     "_meta": {
       "title": "ColorMatchV2"
+    }
+  },
+  "3441": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3443",
+        0
+      ],
+      "when_false": [
+        "3201",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3443": {
+    "inputs": {
+      "value": "Digital art."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3444": {
+    "inputs": {
+      "model_a": [
+        "3039",
+        0
+      ],
+      "model_b": [
+        "1297",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3445": {
+    "inputs": {
+      "clip_a": [
+        "1197",
+        0
+      ],
+      "clip_b": [
+        "1297",
+        1
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "3451": {
+    "inputs": {
+      "condition": [
+        "3453",
+        0
+      ],
+      "when_true": [
+        "3452",
+        0
+      ],
+      "when_false": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3452": {
+    "inputs": {
+      "image": [
+        "983",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "3453": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "3452",
+        1
+      ],
+      "b": [
+        "3452",
+        2
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "a==b"
+    }
+  },
+  "3455": {
+    "inputs": {
+      "model_a": [
+        "2322",
+        0
+      ],
+      "model_b": [
+        "3229",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
     }
   },
   "2920:2866": {
