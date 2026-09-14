@@ -5146,7 +5146,7 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 11,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "sgm_uniform",
