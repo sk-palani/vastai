@@ -1913,7 +1913,7 @@
         "222",
         0
       ],
-      "b": 0.44,
+      "b": 0.39,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -5141,7 +5141,7 @@
   },
   "3162": {
     "inputs": {
-      "add_noise": "enable",
+      "add_noise": "disable",
       "noise_seed": [
         "378",
         0
