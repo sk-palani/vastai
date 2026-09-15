@@ -4233,12 +4233,12 @@
   },
   "2376": {
     "inputs": {
-      "temperature": -5,
+      "temperature": -2,
       "hue": 0,
-      "brightness": -2,
+      "brightness": -1,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 0.9,
+      "gamma": 0.93,
       "image": [
         "1094",
         0
@@ -4246,7 +4246,7 @@
     },
     "class_type": "ColorCorrect",
     "_meta": {
-      "title": "ColorCorrect"
+      "title": "ColorCorrect - Final"
     }
   },
   "2377": {
