@@ -2167,7 +2167,7 @@
         "3387",
         0
       ],
-      "guidance": 3.5,
+      "guidance": 3.2,
       "clip": [
         "2925",
         1
@@ -4945,7 +4945,7 @@
         "378",
         0
       ],
-      "steps": 37,
+      "steps": 20,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
@@ -5437,7 +5437,7 @@
         "3318",
         0
       ],
-      "vision_megapixels": 1.5,
+      "vision_megapixels": 1.2,
       "mask_padding": 0,
       "conditioning_rescaling": false,
       "multiplier": 3.8,
@@ -5851,13 +5851,13 @@
   "3430": {
     "inputs": {
       "prompt": "Treat the input image as already correct.\n\nThe input image is the primary and authoritative visual source. Make only extremely subtle refinements.\n\nPRESERVATION HAS PRIORITY OVER ENHANCEMENT.\n\nPreserve the existing subject, identity, facial features, expression, gaze, pose, body proportions, composition, framing, perspective, background, environment, lighting, shadows, highlights, colors, tonal relationships, depth, textures, and visual style exactly as they appear.\n\nThe clothing and accessories are LOCKED. Do not redesign, regenerate, reconstruct, replace, reshape, resize, recolor, restyle, simplify, embellish, or reinterpret any garment or accessory.\n\nPreserve the exact clothing design, garment shape, silhouette, neckline, sleeves, straps, edges, folds, drape, transparency, layering, fabric appearance, patterns, embroidery, stitching, borders, decorative elements, prints, jewelry, and other garment details exactly as they appear.\n\nDo not invent or complete missing clothing details. Do not add patterns, embroidery, folds, seams, fabric texture, decorative elements, or material characteristics that are not already visible.\n\nPreserve the existing relationship between the clothing and the body exactly. Do not alter how the garment fits, wraps, overlaps, hangs, or interacts with the body.\n\nPreserve the existing medium and rendering characteristics. Do not change a photograph into an illustration, a sketch into a photograph, or otherwise reinterpret the visual style.\n\nDo not regenerate, redesign, replace, add, remove, rearrange, or reinterpret image content.\n\nDo not add detail that is not already present. Do not increase realism, sharpness, texture, contrast, saturation, or stylization.\n\nOnly correct a small, clearly visible inconsistency when it can be corrected without changing surrounding image content.\n\nIf no specific correction is requested, make the minimum possible change.\n\nThe output should remain visually almost identical to the input, with the clothing, accessories, subject identity, composition, and background unchanged.",
-      "vision_megapixels": 1.5,
+      "vision_megapixels": 1,
       "mask_padding": 0,
       "conditioning_rescaling": false,
-      "multiplier": 2,
+      "multiplier": 3.8,
       "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,5.0,1.1,4.0,1.0",
       "prompt_adherence_enhancer": false,
-      "strength": 0.5,
+      "strength": 1,
       "clip": [
         "3306",
         1
