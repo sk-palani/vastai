@@ -3404,7 +3404,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#06D6A0FF",
+      "color": "#F2842FFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4452,7 +4452,7 @@
         "378",
         0
       ],
-      "steps": 10,
+      "steps": 12,
       "cfg": 1,
       "sampler_name": "er_sde",
       "scheduler": "simple",
@@ -4512,7 +4512,7 @@
         "222",
         0
       ],
-      "b": 0.45,
+      "b": 0.49,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -5770,11 +5770,11 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 67,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 5,
+      "start_at_step": 63,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
