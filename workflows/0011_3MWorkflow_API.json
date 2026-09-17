@@ -1419,7 +1419,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
+      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -3633,7 +3633,7 @@
         "3165",
         0
       ],
-      "font": "DSEG14Classic-BoldItalic.ttf",
+      "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
       "color": "#FF467AFF",
       "background_color": "#00000000",
