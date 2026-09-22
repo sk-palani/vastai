@@ -3635,7 +3635,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#FFF6DCFF",
+      "color": "#06D6A0FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4193,7 +4193,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -5555,7 +5555,7 @@
   },
   "3214": {
     "inputs": {
-      "dishonesty_factor": -0.03,
+      "dishonesty_factor": -0.01,
       "start_percent": 0.25,
       "end_percent": 0.45,
       "sampler": [
