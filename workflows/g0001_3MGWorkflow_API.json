@@ -5162,11 +5162,11 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 27,
       "cfg": 1,
       "sampler_name": "dpmpp_sde",
       "scheduler": "simple",
-      "start_at_step": 5,
+      "start_at_step": 15,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
