@@ -1419,7 +1419,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1": "clip_l.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -4234,9 +4234,9 @@
   },
   "2376": {
     "inputs": {
-      "temperature": -5,
+      "temperature": -2,
       "hue": 0,
-      "brightness": -2,
+      "brightness": -1,
       "contrast": 4.5,
       "saturation": -0.3,
       "gamma": 0.93,
@@ -4878,7 +4878,7 @@
       "monochrome_grain": false,
       "highlight_rolloff": 0.15,
       "image": [
-        "3085",
+        "3247",
         0
       ],
       "depth_map": [
@@ -4889,27 +4889,6 @@
     "class_type": "OpticalRealism",
     "_meta": {
       "title": "Optical Realism & Physics"
-    }
-  },
-  "3085": {
-    "inputs": {
-      "temperature": 0,
-      "hue": 0,
-      "brightness": -5,
-      "contrast": -1.2,
-      "saturation": -2.3,
-      "gamma": [
-        "3141",
-        0
-      ],
-      "image": [
-        "3247",
-        0
-      ]
-    },
-    "class_type": "ColorCorrect",
-    "_meta": {
-      "title": "ColorCorrect"
     }
   },
   "3086": {
@@ -5656,7 +5635,7 @@
         0
       ],
       "model": [
-        "3166",
+        "3377",
         0
       ],
       "system_prompt": [
@@ -5687,6 +5666,20 @@
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
+    }
+  },
+  "3377": {
+    "inputs": {
+      "lora_name": "skintone_v2_krea2_loraholic.safetensors",
+      "strength_model": 1.2,
+      "model": [
+        "3166",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
     }
   },
   "2920:2866": {
