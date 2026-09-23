@@ -1419,7 +1419,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
+      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -2841,7 +2841,7 @@
   },
   "2034": {
     "inputs": {
-      "lora_name": "Purple_Grainy-FK_epoch_12.safetensors",
+      "lora_name": "Purple_Grainy_Kr2_AM.safetensors",
       "strength_model": 0.64,
       "model": [
         "2219",
@@ -3635,7 +3635,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#FF467AFF",
+      "color": "#EB7F31FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4247,7 +4247,7 @@
     },
     "class_type": "ColorCorrect",
     "_meta": {
-      "title": "ColorCorrect"
+      "title": "ColorCorrect - Final"
     }
   },
   "2377": {
@@ -5069,7 +5069,7 @@
         "378",
         0
       ],
-      "steps": 19,
+      "steps": 18,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
@@ -5606,7 +5606,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.52,
+      "strength_model": 0.5,
       "model": [
         "2322",
         0
@@ -5671,7 +5671,7 @@
   "3377": {
     "inputs": {
       "lora_name": "skintone_v2_krea2_loraholic.safetensors",
-      "strength_model": 1.2,
+      "strength_model": 1,
       "model": [
         "3166",
         0

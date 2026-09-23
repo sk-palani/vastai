@@ -80,6 +80,7 @@ PIP_PACKAGES=(
 CHECKPOINT_MODELS=(
   #
   #  "https://civitai.com/api/download/models/813603?type=Model&format=SafeTensor&size=full&fp=fp16&token=${CIVITAI_TOKEN}"
+#  "https://civitai.com/api/download/models/2951793?fileId=2831566&token=${CIVITAI_TOKEN}"
 )
 
 # [INFO]    0.0 seconds: /opt/ComfyUI/custom_nodes/comfyui-advanced-vision
@@ -306,6 +307,12 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/3110226?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # krea-detail-enhancer-exp.safetensors
     "https://civitai.com/api/download/models/3102079?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # skintone_v2_krea2_loraholic.safetensors
+    "https://civitai.com/api/download/models/3187970?fileId=3068609&token=${CIVITAI_TOKEN}"
+    # Krea2_TextFusion_Refusal_Reduction.safetensors
+    "https://civitai.com/api/download/models/3125118?fileId=3005583&token=${CIVITAI_TOKEN}"
+    # MS_transparent_clothing_slider_KR2_V1.safetensors
+    "https://civitai.red/api/download/models/3301443?fileId=3186403&token=${CIVITAI_TOKEN}"
     # SEAN_ARCHER_PHOTOSTYLE_epoch_10.safetensors
     "https://civitai.com/api/download/models/3109737?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # ImprovedEvilSmile_Krea2.safetensors
@@ -395,8 +402,8 @@ LORA_MODELS=(
 #    "https://civitai.com/api/download/models/2977015?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     #Purple_Grainy_Kr2_AM.safetensors
     "https://civitai.com/api/download/models/3110766?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
-
-
+    # Purple_Grainy_KR2_V2_D.safetensors
+    "https://civitai.com/api/download/models/3328996?fileId=3215019&token=${CIVITAI_TOKEN}"
 
     # ------------------------------
     # Flux1.Dev
