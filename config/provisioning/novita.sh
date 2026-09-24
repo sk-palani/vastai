@@ -252,7 +252,7 @@ DIFFUSION_MODELS=(
   "https://civitai.com/api/download/models/3242185?fileId=3128871&token=${CIVITAI_TOKEN}"
   # kreamania_varian8.safetensors
   "https://civitai.com/api/download/models/3292830?fileId=3177948&token=${CIVITAI_TOKEN}"
-
+  "https://civitai.com/api/download/models/3305034?fileId=3190059&token=${CIVITAI_TOKEN}"
   # fluxtraitFLUX2KleinFLUXZ_flux2Klein9bV2.safetensors
 #  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
 #  "https://civitai.com/api/download/models/2631758?type=Model&format=SafeTensor&size=pruned&fp=bf16&token=${CIVITAI_TOKEN}"
@@ -869,3 +869,33 @@ nohup  socat TCP-LISTEN:8188,fork,reuseaddr TCP:127.0.0.1:18188 &
 sleep 2
 nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
 sleep 2
+
+#
+#photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.
+#
+#Maintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.
+#
+#Maintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.
+#
+#Maintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic mid-2010s professional DSLR image quality.
+#
+#Preserve the existing clothing design, garment type, colors, patterns, embroidery, lace, jewelry, accessories, transparency, seams, stitching, folds, drape, and overall construction exactly as established in the input image.
+#
+#Treat the clothing as physically constructed garments rather than a flat surface over the body. Preserve the natural thickness, separation, and spatial relationship between visible and underlying garment layers. Where one garment or fabric layer overlaps another, maintain subtle depth, relief, overlap, compression, and soft contact shadows between the layers.
+#
+#Allow concealed underlying layers to influence the shape of the outer fabric naturally without making hidden garments unnecessarily visible. The outer fabric should follow the structure beneath it through subtle changes in contour, tension, thickness, and shadow rather than appearing uniformly flat against the body.
+#
+#Clothing should respond naturally to gravity, body contact, tension, compression, and movement. Folds should form from realistic attachment points, pressure areas, seams, hems, gathered sections, and points of support. Heavier or layered fabrics should form broader structural folds, while lighter fabrics should form finer, softer folds.
+#
+#Preserve realistic separation at hems, borders, seams, pleats, waistbands, overlapping panels, blouse edges, and other garment boundaries. Avoid painted-on wrinkles, perfectly parallel folds, uniformly smooth surfaces, or repeated artificial folds.
+#
+#Preserve realistic material response appropriate to the existing fabric. Maintain natural matte or subdued reflections without introducing plastic, wet-look, or excessively glossy surfaces. Do not exaggerate textile weave, embroidery, microtexture, sharpness, or artificial fabric detail.
+#
+#A tiny black mole on the chin. She has naturally dark, supple, non-oily skin.
+#
+#-- body description --
+#
+#She has a naturally voluptuous hourglass figure, approximately 5'8" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Preserve the source garment silhouette and design while allowing the clothing to conform naturally to the body and interact realistically with underlying layers, gravity, tension, and compression.
+#
+#
+#Refine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts.
