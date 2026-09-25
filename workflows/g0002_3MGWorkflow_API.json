@@ -460,7 +460,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "127",
+        "3402",
         0
       ],
       "mask": [
@@ -484,7 +484,7 @@
         0
       ],
       "when_false": [
-        "127",
+        "3402",
         0
       ]
     },
@@ -3602,7 +3602,7 @@
   "2208": {
     "inputs": {
       "image": [
-        "3198",
+        "3405",
         0
       ]
     },
@@ -3629,7 +3629,7 @@
       "rotation": -90,
       "opacity": 14,
       "base_image": [
-        "3198",
+        "3405",
         0
       ],
       "overlay_image": [
@@ -3654,7 +3654,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#FF467AFF",
+      "color": "#A82020FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4040,7 +4040,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "127",
+        "3402",
         0
       ]
     },
@@ -4858,7 +4858,7 @@
   "3084": {
     "inputs": {
       "lens_distortion": -0.006,
-      "color_temperature": 0.55,
+      "color_temperature": 0.1,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -5221,7 +5221,7 @@
         3
       ],
       "sub_text": "BBB",
-      "case_insensitive": false
+      "case_insensitive": true
     },
     "class_type": "Text Contains",
     "_meta": {
@@ -5732,6 +5732,86 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
+    }
+  },
+  "3397": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "VVV",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [VVV]"
+    }
+  },
+  "3399": {
+    "inputs": {
+      "flip_method": "x-axis: vertically",
+      "image": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image"
+    }
+  },
+  "3402": {
+    "inputs": {
+      "condition": [
+        "3397",
+        0
+      ],
+      "when_true": [
+        "3399",
+        0
+      ],
+      "when_false": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3405": {
+    "inputs": {
+      "condition": [
+        "3397",
+        0
+      ],
+      "when_true": [
+        "3406",
+        0
+      ],
+      "when_false": [
+        "3198",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3406": {
+    "inputs": {
+      "flip_method": "x-axis: vertically",
+      "image": [
+        "3198",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image"
     }
   },
   "3394:3378": {
