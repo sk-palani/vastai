@@ -1122,10 +1122,6 @@
         "103",
         0
       ],
-      "text_b": [
-        "672",
-        0
-      ],
       "text_c": [
         "1322",
         0
@@ -1419,7 +1415,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1": "clip_l.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -1442,28 +1438,9 @@
       "title": "CLIP Set Last Layer"
     }
   },
-  "1195": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.5,
-      "start_percent": 0,
-      "end_percent": 0.45,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1196",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
-    }
-  },
   "1196": {
     "inputs": {
-      "unet_name": "flux1-dev.safetensors",
+      "unet_name": "cyberrealisticFlux_v25.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -1529,37 +1506,18 @@
       "title": "FLUX VAE"
     }
   },
-  "1297": {
-    "inputs": {
-      "lora_name": "Herbst_Photo_35mm_Flux_V3.safetensors",
-      "strength_model": 0.9,
-      "strength_clip": 0.9,
-      "model": [
-        "3039",
-        0
-      ],
-      "clip": [
-        "1197",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Pandora-RAWr 0.70::0.70"
-    }
-  },
   "1298": {
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
       "strength_model": 0.94,
       "strength_clip": 0.08,
       "model": [
-        "1297",
+        "1196",
         0
       ],
       "clip": [
-        "1297",
-        1
+        "1197",
+        0
       ]
     },
     "class_type": "LoraLoader",
@@ -1604,10 +1562,7 @@
   "1307": {
     "inputs": {
       "find": "__AGE__",
-      "replace": [
-        "667",
-        0
-      ],
+      "replace": "",
       "text": [
         "1674",
         0
@@ -1917,7 +1872,7 @@
         "222",
         0
       ],
-      "b": 0.28,
+      "b": 0.44,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1948,7 +1903,7 @@
   "1657": {
     "inputs": {
       "scheduler": "beta",
-      "steps": 44,
+      "steps": 48,
       "denoise": [
         "1649",
         0
@@ -2012,7 +1967,7 @@
         0
       ],
       "sampler": [
-        "3214",
+        "3215",
         0
       ],
       "sigmas": [
@@ -2168,7 +2123,7 @@
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
       "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique.  \n",
-      "guidance": 2.8,
+      "guidance": 3.2,
       "clip": [
         "2925",
         1
@@ -2551,7 +2506,7 @@
       ],
       "steps": 12,
       "cfg": 1,
-      "sampler_name": "euler",
+      "sampler_name": "er_sde",
       "scheduler": "simple",
       "denoise": 0.1,
       "model": [
@@ -3142,8 +3097,8 @@
   "2148": {
     "inputs": {
       "lora_name": "V4_flux_klein.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 0.6,
+      "strength_model": 0.26,
+      "strength_clip": 0.26,
       "model": [
         "2219",
         0
@@ -3721,7 +3676,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "default_krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "cyberrealisticKrea2_v30_bf16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -3732,7 +3687,7 @@
   "2339": {
     "inputs": {
       "any_01": [
-        "3084",
+        "3247",
         0
       ],
       "any_02": [
@@ -4180,7 +4135,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
+      "value": "Photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4263,25 +4218,6 @@
       "title": "Switch"
     }
   },
-  "3039": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.25,
-      "start_percent": 0.45,
-      "end_percent": 0.6,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1195",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
-    }
-  },
   "3076": {
     "inputs": {
       "samples": [
@@ -4298,110 +4234,16 @@
       "title": "Krea_VAE Decode"
     }
   },
-  "3078": {
-    "inputs": {
-      "image": [
-        "3247",
-        0
-      ]
-    },
-    "class_type": "GetImageSizeAndCount",
-    "_meta": {
-      "title": "Get Image Size & Count"
-    }
-  },
-  "3079": {
-    "inputs": {
-      "preprocessor": "DepthAnythingPreprocessor",
-      "resolution": [
-        "3081",
-        0
-      ],
-      "image": [
-        "3410",
-        0
-      ]
-    },
-    "class_type": "AIO_Preprocessor",
-    "_meta": {
-      "title": "AIO Aux Preprocessor"
-    }
-  },
-  "3080": {
-    "inputs": {
-      "image": [
-        "3079",
-        0
-      ]
-    },
-    "class_type": "ImageInvert",
-    "_meta": {
-      "title": "Invert Image Colors"
-    }
-  },
-  "3081": {
-    "inputs": {
-      "mode": false,
-      "a": [
-        "3078",
-        1
-      ],
-      "b": [
-        "3078",
-        2
-      ]
-    },
-    "class_type": "ImpactMinMax",
-    "_meta": {
-      "title": "ImpactMinMax"
-    }
-  },
-  "3084": {
-    "inputs": {
-      "lens_distortion": -0.01,
-      "color_temperature": 0.1,
-      "tint": -0.05,
-      "atmosphere_enabled": true,
-      "haze_strength": 0.6,
-      "lift_blacks": 0.05,
-      "depth_offset": 0,
-      "f_stop": "Manual",
-      "dof_intensity": 0.3,
-      "dof_auto_focus": true,
-      "dof_sharpness_radius": 0.35,
-      "dof_focus_point": 0,
-      "light_wrap_strength": 0.7,
-      "promist_strength": 0.1,
-      "halation_strength": 0.15,
-      "chromatic_aberration": 0.002,
-      "vignette_intensity": 0.15,
-      "grain_power": 0.012,
-      "monochrome_grain": false,
-      "highlight_rolloff": 0.05,
-      "image": [
-        "3247",
-        0
-      ],
-      "depth_map": [
-        "3080",
-        0
-      ]
-    },
-    "class_type": "OpticalRealism",
-    "_meta": {
-      "title": "Optical Realism & Physics"
-    }
-  },
   "3086": {
     "inputs": {
       "seed": [
         "378",
         0
       ],
-      "steps": 12,
+      "steps": 26,
       "cfg": 1,
       "sampler_name": "er_sde",
-      "scheduler": "simple",
+      "scheduler": "beta57",
       "denoise": [
         "3100",
         0
@@ -4435,8 +4277,8 @@
         0
       ],
       "clip": [
-        "3306",
-        1
+        "2349",
+        0
       ],
       "vae": [
         "2315",
@@ -4502,15 +4344,6 @@
       "title": "Display Int (rgthree)"
     }
   },
-  "3141": {
-    "inputs": {
-      "value": 0.93
-    },
-    "class_type": "FloatConstant",
-    "_meta": {
-      "title": "Float Constant"
-    }
-  },
   "3142": {
     "inputs": {
       "pixels": [
@@ -4570,11 +4403,11 @@
         "378",
         0
       ],
-      "steps": 18,
+      "steps": 28,
       "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "beta",
-      "denoise": 0.05,
+      "sampler_name": "er_sde",
+      "scheduler": "beta57",
+      "denoise": 0.09,
       "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
@@ -4642,23 +4475,23 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 11,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "sgm_uniform",
-      "start_at_step": 5,
+      "start_at_step": 7,
       "end_at_step": 999,
-      "return_with_leftover_noise": "disable",
+      "return_with_leftover_noise": "enable",
       "model": [
         "3230",
         0
       ],
       "positive": [
-        "3093",
+        "3412",
         0
       ],
       "negative": [
-        "3093",
+        "3416",
         0
       ],
       "latent_image": [
@@ -4998,6 +4831,28 @@
       "title": "Lying Sigma Sampler"
     }
   },
+  "3215": {
+    "inputs": {
+      "detail_amount": 0.1,
+      "start": 0.1,
+      "end": 0.5,
+      "bias": 0.5,
+      "exponent": 1,
+      "start_offset": 0,
+      "end_offset": 0,
+      "fade": 0,
+      "smooth": true,
+      "cfg_scale_override": 1,
+      "sampler": [
+        "3214",
+        0
+      ]
+    },
+    "class_type": "DetailDaemonSamplerNode",
+    "_meta": {
+      "title": "Detail Daemon Sampler"
+    }
+  },
   "3228": {
     "inputs": {
       "conditioning": [
@@ -5030,7 +4885,7 @@
         "2406",
         0
       ],
-      "vision_megapixels": 1,
+      "vision_megapixels": 1.4,
       "mask_padding": 0,
       "conditioning_rescaling": false,
       "multiplier": 3.8,
@@ -5038,11 +4893,11 @@
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
-        "3306",
-        1
+        "2349",
+        0
       ],
       "model": [
-        "3306",
+        "3377",
         0
       ],
       "system_prompt": [
@@ -5073,25 +4928,6 @@
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
-    }
-  },
-  "3306": {
-    "inputs": {
-      "lora_name": "ultra_real_krea2_v2.safetensors",
-      "strength_model": 0.5,
-      "strength_clip": 0.1,
-      "model": [
-        "3377",
-        0
-      ],
-      "clip": [
-        "2349",
-        0
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA (Model and CLIP)"
     }
   },
   "3377": {
@@ -5220,16 +5056,82 @@
       "title": "Remove Alpha (RGBA to RGB)"
     }
   },
-  "3410": {
+  "3412": {
     "inputs": {
-      "image": [
-        "3247",
+      "prompt": [
+        "3421",
+        0
+      ],
+      "clip": [
+        "2349",
+        0
+      ],
+      "vae": [
+        "2315",
+        0
+      ],
+      "image1": [
+        "3167",
+        0
+      ],
+      "image2": [
+        "127",
         0
       ]
     },
-    "class_type": "RemoveAlphaChannel",
+    "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "Remove Alpha (RGBA to RGB)"
+      "title": "Krea_TextEncodeQwenImageEditPlus"
+    }
+  },
+  "3416": {
+    "inputs": {
+      "conditioning": [
+        "3412",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "3421": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3422",
+        0
+      ],
+      "when_false": [
+        "3423",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3422": {
+    "inputs": {
+      "text": "Reference 2 is the primary source and visual ground truth.\n\nUse Reference 1 only to retain useful improvements from the previous refinement pass.\n\nPreserve Reference 2's composition, subject identity, proportions, pose, clothing design, background, colors, lighting, and artistic style.\n\nPreserve the illustration's existing linework, shapes, shading, texture, and rendering character. Do not photorealize or introduce photographic characteristics.\n\nPreserve the Reference 2 background exactly. Do not regenerate, replace, blur, sharpen, simplify, or reinterpret it.\n\nPreserve the existing facial and skin detail from Reference 2. Restore detail where Reference 1 has degraded it without adding artificial or photorealistic texture.\n\nPreserve the existing clothing design and layering while improving only physically convincing illustrated folds, overlaps, seams, tension, compression, and drape.\n\nDo not redesign, beautify, restyle, relight, reshape, add objects, or remove legitimate details.\n\nKeep the final image recognizably the same illustration as Reference 2, incorporating only useful refinements from Reference 1."
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
+    }
+  },
+  "3423": {
+    "inputs": {
+      "text": "Reference 2 is the primary source and visual ground truth.\n\nReference 1 is the result of a previous refinement pass. Preserve only useful subject-level improvements from Reference 1.\n\nPreserve Reference 2 exactly for the background, environment, composition, framing, perspective, camera viewpoint, and spatial arrangement.\n\nDo not alter, regenerate, replace, simplify, sharpen, soften, blur, or reinterpret the background. Preserve its original detail, texture, edges, depth, and apparent focus.\n\nPreserve the subject's identity, facial structure, expression, gaze, hairstyle, body proportions, pose, and clothing design from Reference 2.\n\nUse Reference 1 only to improve local subject detail where it is clearly beneficial.\n\nPreserve the existing skin detail and natural skin characteristics from Reference 2. Restore detail where Reference 1 has degraded it without adding artificial texture or excessive sharpening.\n\nPreserve clothing construction, layering, folds, seams, material response, and natural drape while retaining the original garment design.\n\nPreserve the original lighting, shadows, highlights, colors, contrast, and tonal relationships.\n\nDo not change the background or introduce blur, bokeh, depth-of-field effects, haze, or other photographic effects.\n\nThe result should remain the same image as Reference 2, with only useful subject-level improvements from Reference 1."
+    },
+    "class_type": "Text Multiline",
+    "_meta": {
+      "title": "Text Multiline"
     }
   },
   "2920:2866": {
