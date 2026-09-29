@@ -4844,7 +4844,7 @@
   "3084": {
     "inputs": {
       "lens_distortion": -0.006,
-      "color_temperature": 0.55,
+      "color_temperature": 0.15,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
