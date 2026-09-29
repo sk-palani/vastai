@@ -4881,8 +4881,8 @@
     "inputs": {
       "temperature": 0,
       "hue": 0,
-      "brightness": -5,
-      "contrast": -1.2,
+      "brightness": -2,
+      "contrast": 1.2,
       "saturation": 2.7,
       "gamma": [
         "3141",
