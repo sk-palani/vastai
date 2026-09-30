@@ -235,7 +235,7 @@
   },
   "259": {
     "inputs": {
-      "string": "\n\n{{PROMPT}},\n\n\nRemove any watermarks, black/white borders,\n\nTransparent elements in the outfit, \n \nEnhance this image, Make the lighting dramatic and slightly dark,\n",
+      "string": "\n\n{{PROMPT}},\n\n\nRemove any watermarks, black/white borders,\n\nTransparent elements in the outfit, \n \n",
       "strip_newlines": false
     },
     "class_type": "StringConstantMultiline",
@@ -460,7 +460,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "127",
+        "3451",
         0
       ],
       "mask": [
@@ -484,7 +484,7 @@
         0
       ],
       "when_false": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -1122,10 +1122,6 @@
         "103",
         0
       ],
-      "text_b": [
-        "672",
-        0
-      ],
       "text_c": [
         "1322",
         0
@@ -1357,7 +1353,7 @@
       "strength": 0.12,
       "multithread": false,
       "image_ref": [
-        "127",
+        "3451",
         0
       ],
       "image_target": [
@@ -1419,7 +1415,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1": "clip_l.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -1494,7 +1490,7 @@
         0
       ],
       "t5xxl": [
-        "2406",
+        "3318",
         0
       ],
       "guidance": 3.5,
@@ -1535,11 +1531,11 @@
       "strength_model": 1.2,
       "strength_clip": 0.08,
       "model": [
-        "3039",
+        "3469",
         0
       ],
       "clip": [
-        "1197",
+        "3468",
         0
       ]
     },
@@ -1551,15 +1547,15 @@
   "1298": {
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
-      "strength_model": 0.86,
+      "strength_model": 1,
       "strength_clip": 0.08,
       "model": [
-        "1297",
+        "3444",
         0
       ],
       "clip": [
-        "1297",
-        1
+        "3445",
+        0
       ]
     },
     "class_type": "LoraLoader",
@@ -1849,7 +1845,7 @@
   "1639": {
     "inputs": {
       "image": [
-        "3383",
+        "1447",
         0
       ]
     },
@@ -1917,7 +1913,7 @@
         "222",
         0
       ],
-      "b": 0.56,
+      "b": 0.55,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1982,7 +1978,7 @@
   "1660": {
     "inputs": {
       "max_shift": 1.15,
-      "base_shift": 0.5,
+      "base_shift": 0.6,
       "width": [
         "1639",
         0
@@ -2048,7 +2044,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.1,
+      "noise_strength": 0.11,
       "normalize": "false",
       "latent": [
         "1648",
@@ -2123,7 +2119,7 @@
         0
       ],
       "any_04": [
-        "3383",
+        "1447",
         0
       ]
     },
@@ -2167,8 +2163,11 @@
   "1725": {
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique.  \n",
-      "guidance": 2.8,
+      "t5xxl": [
+        "3387",
+        0
+      ],
+      "guidance": 3.2,
       "clip": [
         "2925",
         1
@@ -2210,7 +2209,7 @@
       "quantization": "4-bit (VRAM-friendly)",
       "attention_mode": "sdpa",
       "preset_prompt": "🖼️ Detailed Description",
-      "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nBackground:\nThe user requires a prompt that enables AI to analyze an image and generate a highly accurate recreation prompt suitable for modern text-to-image models. The recreation prompt should faithfully preserve the subject's appearance, apparent age, identity placeholder, composition, clothing, lighting, mood, environment, and artistic style while remaining concise, descriptive, and suitable for image generation.\n\nProfile:\nYou are an expert in computer vision, photography, portraiture, image analysis, and prompt engineering. Your task is to convert visual information into a detailed recreation prompt while preserving the original image as faithfully as possible.\n\nSkills:\n- Image recognition\n- Facial analysis\n- Apparent age estimation\n- Photography terminology\n- Composition analysis\n- Lighting analysis\n- Material and texture recognition\n- Prompt engineering\n\nGoals:\n\n1. Analyze the provided image.\n2. Estimate the subject's apparent age BEFORE performing any other task.\n3. Generate the required metadata.\n4. Generate a detailed recreation prompt capable of reproducing a visually similar image.\n\nConstraints:\n\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\".\n- Estimate only the apparent age based on visible appearance.\n- Never use an exact age.\n- AGE is REQUIRED and must never be omitted.\n- Select exactly one of these age ranges:\n  14-18\n  18-22\n  23-27\n  28-34\n  35-44\n  45-54\n  55-65\n  65+\n- Use HIGH, MEDIUM, or LOW for age confidence.\n- Do not mention uncertainty inside the recreation prompt.\n- Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds that are not visible.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic style whenever possible.\n- Describe only visible characteristics.\n- Do not over-describe individual facial features.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance over minor anatomical details.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- The recreation prompt should be approximately 200–300 words.\n- Output only the required metadata followed immediately by the recreation prompt.\n\nProcedure (follow in this exact order):\n\n1. Estimate the subject's apparent age.\n2. Determine age confidence.\n3. Determine visible gender presentation.\n4. Output the metadata block.\n5. Output the recreation prompt.\n\nOutput Format:\n\nThe response MUST begin with this metadata block. Do not output anything before it.\n\n@@SUBJECT=v1dhya5\n@@AGE=<18-22|23-27|28-34|35-44|45-54|55-65|65+>\n@@AGE_CONFIDENCE=<HIGH|MEDIUM|LOW>\n@@GENDER_PRESENTATION=<FEMININE|MASCULINE|ANDROGYNOUS|UNKNOWN>\n@@END_METADATA\n\nAfter @@END_METADATA, output exactly one cohesive paragraph containing only the recreation prompt.\n\nThe recreation prompt must naturally mention \"v1dhya5\" once, preserve the detected artistic medium (photograph, illustration, painting, digital art, sketch, anime, comic, watercolor, oil painting, 3D render, etc.), preserve the original composition and style, and be optimized for FLUX text-to-image models.\n\nDo not output Markdown, headings, JSON, XML, bullet points, explanations, reasoning, or any additional text outside the required metadata block and recreation prompt.",
+      "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nBackground:\nThe user requires a prompt that enables AI to analyze an image and generate a highly accurate recreation prompt suitable for modern text-to-image models. The recreation prompt should faithfully preserve the subject's appearance, apparent age, identity placeholder, composition, clothing, lighting, mood, environment, and artistic style while remaining concise, descriptive, and suitable for image generation.\n\nProfile:\nYou are an expert in computer vision, photography, portraiture, image analysis, and prompt engineering. Your task is to convert visual information into a detailed recreation prompt while preserving the original image as faithfully as possible.\n\nSkills:\n- Image recognition\n- Facial analysis\n- Apparent age estimation\n- Photography terminology\n- Composition analysis\n- Lighting analysis\n- Material and texture recognition\n- Prompt engineering\n\nGoals:\n\n1. Analyze the provided image.\n2. Estimate the subject's apparent age BEFORE performing any other task.\n3. Generate the required metadata.\n4. Generate a detailed recreation prompt capable of reproducing a visually similar image.\n\nConstraints:\n\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\".\n- Estimate only the apparent age based on visible appearance.\n- Never use an exact age.\n- AGE is REQUIRED and must never be omitted.\n- Select exactly one of these age ranges:\n  14-18\n  18-21\n  22-25\n  26-29\n  30-33\n  34-37\n  38-41\n  42-45\n  45+\n- Use HIGH, MEDIUM, or LOW for age confidence.\n- Do not mention uncertainty inside the recreation prompt.\n- Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds that are not visible.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic style whenever possible.\n- Describe only visible characteristics.\n- Do not over-describe individual facial features.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance over minor anatomical details.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- The recreation prompt should be approximately 200–300 words.\n- Output only the required metadata followed immediately by the recreation prompt.\n\nProcedure (follow in this exact order):\n\n1. Estimate the subject's apparent age.\n2. Determine age confidence.\n3. Determine visible gender presentation.\n4. Output the metadata block.\n5. Output the recreation prompt.\n\nOutput Format:\n\nThe response MUST begin with this metadata block. Do not output anything before it.\n\n@@SUBJECT=v1dhya5\n@@AGE=<14-18|18-21|22-25|26-29|30-33|34-37|38-41|42-45|46+>\n@@AGE_CONFIDENCE=<HIGH|MEDIUM|LOW>\n@@GENDER_PRESENTATION=<FEMININE|MASCULINE|ANDROGYNOUS|UNKNOWN>\n@@END_METADATA\n\nAfter @@END_METADATA, output exactly one cohesive paragraph containing only the recreation prompt.\n\nThe recreation prompt must naturally mention \"v1dhya5\" once, preserve the detected artistic medium (photograph, illustration, painting, digital art, sketch, anime, comic, watercolor, oil painting, 3D render, etc.), preserve the original composition and style, and be optimized for FLUX text-to-image models.\n\nDo not output Markdown, headings, JSON, XML, bullet points, explanations, reasoning, or any additional text outside the required metadata block and recreation prompt.",
       "max_tokens": 384,
       "keep_model_loaded": true,
       "seed": [
@@ -2218,7 +2217,7 @@
         0
       ],
       "image": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -2680,7 +2679,7 @@
       "scheduler": "simple",
       "denoise": 0.1,
       "model": [
-        "3385",
+        "3147",
         0
       ],
       "positive": [
@@ -2727,7 +2726,7 @@
       "width": 1024,
       "height": 1024,
       "model": [
-        "2219",
+        "2034",
         0
       ]
     },
@@ -2837,6 +2836,20 @@
     "class_type": "Flux2KleinEnhancer",
     "_meta": {
       "title": "FLUX.2 Klein Enhancer"
+    }
+  },
+  "2034": {
+    "inputs": {
+      "lora_name": "Purple_Grainy-FK_epoch_12.safetensors",
+      "strength_model": 0.64,
+      "model": [
+        "2219",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
     }
   },
   "2041": {
@@ -3130,7 +3143,7 @@
   "2074": {
     "inputs": {
       "image": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -3500,7 +3513,7 @@
   "2197": {
     "inputs": {
       "pixels": [
-        "3383",
+        "1447",
         0
       ],
       "vae": [
@@ -3621,7 +3634,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#76C0ECFF",
+      "color": "#06D6A0FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3658,7 +3671,7 @@
       "lora_name": "vidhyas_lora_v4_klein.safetensors",
       "strength_model": 1,
       "model": [
-        "3377",
+        "3471",
         0
       ]
     },
@@ -3712,7 +3725,7 @@
       "width": 1024,
       "height": 1024,
       "model": [
-        "2225",
+        "2131",
         0
       ]
     },
@@ -3828,10 +3841,10 @@
         "378",
         0
       ],
-      "steps": 16,
+      "steps": 7,
       "cfg": 1,
-      "sampler_name": "er_sde",
-      "scheduler": "beta57",
+      "sampler_name": "euler",
+      "scheduler": "simple",
       "denoise": 1,
       "model": [
         "2231",
@@ -4007,7 +4020,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4127,11 +4140,11 @@
   "2309": {
     "inputs": {
       "any_01": [
-        "3192",
+        "3436",
         0
       ],
       "any_02": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4143,7 +4156,7 @@
   "2310": {
     "inputs": {
       "pixels": [
-        "3384",
+        "2309",
         0
       ],
       "vae": [
@@ -4179,7 +4192,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4198,7 +4211,7 @@
         0
       ],
       "any_03": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4306,7 +4319,7 @@
   "2406": {
     "inputs": {
       "string_a": [
-        "3201",
+        "3441",
         0
       ],
       "string_b": [
@@ -4338,7 +4351,7 @@
         0
       ],
       "text_b": [
-        "3189",
+        "3382",
         0
       ],
       "text_c": [
@@ -4532,7 +4545,7 @@
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4639,7 +4652,7 @@
         0
       ],
       "text": [
-        "3174",
+        "3383",
         0
       ]
     },
@@ -4650,7 +4663,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
+      "value": "Treat the input image as already correctly photographed. The input image is the primary and authoritative visual source of truth.\n\nPreserve the existing subject identity, facial features, expression, gaze direction, pose, body proportions, hairstyle, clothing, accessories, composition, perspective, environment, lighting, shadows, highlights, exposure, depth, dimensionality, and three-dimensional appearance.\n\n__YEAR_TAKEN__\n\nIf a photographic year is specified, use it only to make subtle adjustments to the existing photographic rendering so the image is compatible with the specified period.\n\nPreserve the input image's existing white balance, hue relationships, saturation, skin color, hair color, clothing colors, background colors, exposure, contrast, and overall color grading. Do not apply an era-specific color grade, color cast, vintage toning, desaturation, saturation boost, or white-balance shift.\n\nThe specified year may influence only subtle photographic characteristics such as overall rendering character, tonal response, highlight behavior, shadow behavior, optical character, fine sharpness, and appropriate noise or grain characteristics. These changes must remain restrained and must not noticeably alter the existing colors or lighting.\n\nThe photographic era must not change the scene itself. Do not introduce period-specific objects, clothing, locations, compositions, cameras, lenses, lighting setups, or other content that is not already present.\n\n__AGE_DESC__\n\nCorrect only the explicitly requested visual issues.\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying affected area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve all unaffected regions as closely as possible to the input image.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, scenery, environmental details, color grading, or stylistic changes except where explicitly required by the requested correction.\n\nThe result should remain visually faithful to the input image, with only the minimum changes necessary to satisfy the explicit instructions."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4720,11 +4733,11 @@
   "3024": {
     "inputs": {
       "any_01": [
-        "3192",
+        "3436",
         0
       ],
       "any_02": [
-        "127",
+        "3451",
         0
       ]
     },
@@ -4733,19 +4746,23 @@
       "title": "Switch"
     }
   },
-  "3027": {
+  "3038": {
     "inputs": {
-      "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.12,
-      "log": false,
-      "image": [
-        "3012",
+      "lora_name": "FluxSideboob.safetensors",
+      "strength_model": 0.4,
+      "strength_clip": 0.02,
+      "model": [
+        "3039",
+        0
+      ],
+      "clip": [
+        "1197",
         0
       ]
     },
-    "class_type": "ProPostApplyLUT",
+    "class_type": "LoraLoader",
     "_meta": {
-      "title": "ProPostApplyLUT"
+      "title": "Pandora-RAWr 0.70::0.70"
     }
   },
   "3039": {
@@ -4844,7 +4861,7 @@
   "3084": {
     "inputs": {
       "lens_distortion": -0.006,
-      "color_temperature": 0.15,
+      "color_temperature": 0.14,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -4879,11 +4896,11 @@
   },
   "3085": {
     "inputs": {
-      "temperature": 0,
+      "temperature": -5,
       "hue": 0,
-      "brightness": -2,
+      "brightness": -5,
       "contrast": 1.2,
-      "saturation": 2.7,
+      "saturation": -2.3,
       "gamma": [
         "3141",
         0
@@ -4913,7 +4930,7 @@
         0
       ],
       "model": [
-        "3230",
+        "3378",
         0
       ],
       "positive": [
@@ -4931,25 +4948,25 @@
     },
     "class_type": "KSampler",
     "_meta": {
-      "title": "Krea_KSampler"
+      "title": "Krea_KSampler : Pass 01"
     }
   },
   "3093": {
     "inputs": {
       "prompt": [
-        "2406",
+        "3318",
         0
       ],
       "clip": [
-        "2349",
-        0
+        "3306",
+        1
       ],
       "vae": [
         "2315",
         0
       ],
       "image1": [
-        "3384",
+        "2309",
         0
       ]
     },
@@ -4964,7 +4981,7 @@
         "222",
         0
       ],
-      "b": 0.4,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -5010,7 +5027,7 @@
   },
   "3141": {
     "inputs": {
-      "value": 1.08
+      "value": 0.92
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5020,7 +5037,7 @@
   "3142": {
     "inputs": {
       "pixels": [
-        "127",
+        "3451",
         0
       ],
       "vae": [
@@ -5051,7 +5068,7 @@
   },
   "3147": {
     "inputs": {
-      "balance": 0.665,
+      "balance": 0.765,
       "debug": false,
       "model": [
         "2011",
@@ -5064,7 +5081,7 @@
     },
     "class_type": "Flux2KleinTextRefBalance",
     "_meta": {
-      "title": "FLUX.2 Klein Text/Ref Balance"
+      "title": "FLUX.2 Klein Text/Ref Balance 0.665"
     }
   },
   "3155": {
@@ -5076,11 +5093,11 @@
         "378",
         0
       ],
-      "steps": 19,
+      "steps": 20,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.06,
+      "denoise": 0.08,
       "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
@@ -5148,24 +5165,24 @@
         "378",
         0
       ],
-      "steps": 38,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "simple",
-      "start_at_step": 34,
-      "end_at_step": 38,
-      "return_with_leftover_noise": "enable",
+      "scheduler": "sgm_uniform",
+      "start_at_step": 5,
+      "end_at_step": 999,
+      "return_with_leftover_noise": "disable",
       "model": [
-        "3378",
+        "3430",
         0
       ],
       "positive": [
-        "3093",
-        0
+        "3430",
+        1
       ],
       "negative": [
-        "3093",
-        0
+        "3430",
+        1
       ],
       "latent_image": [
         "3086",
@@ -5174,7 +5191,7 @@
     },
     "class_type": "KSamplerAdvanced",
     "_meta": {
-      "title": "Krea_KSampler (Advanced)"
+      "title": "Krea_KSampler (Advanced) : Pass 02"
     }
   },
   "3165": {
@@ -5196,7 +5213,7 @@
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
       "strength_model": 1,
       "model": [
-        "3229",
+        "2322",
         0
       ]
     },
@@ -5237,7 +5254,7 @@
   },
   "3172": {
     "inputs": {
-      "value": "Classic black-and-white photographic rendering with the tonal response of a well-exposed mid-2010s digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
+      "value": "Classic black-and-white photographic rendering of v1dhya5.\n\nTreat the input image as the visual source of truth. Preserve the original monochrome nature of the image. Do not colorize, introduce color, or add any color tint.\n\n__YEAR_TAKEN__\n\nUse the specified photographic era to make the image convincingly resemble a monochrome photograph actually captured during that period. Adjust only photographic rendering characteristics appropriate to the specified era, such as tonal response, dynamic range, highlight roll-off, shadow response, grayscale separation, optical rendering, sharpness, noise or grain, and image processing. The era should feel naturally integrated into the photograph rather than appearing as an obvious vintage filter or preset.\n\nPreserve the existing scene, subject, identity, facial features, expression, gaze, pose, body proportions, clothing, accessories, composition, perspective, lighting direction, shadows, highlights, and background. Do not introduce period-specific objects, clothing, locations, cameras, lenses, compositions, or other scene content.\n\nMaintain neutral grayscale tones with natural tonal separation, smooth tonal gradients, realistic dynamic range, rich shadow detail, controlled highlights, balanced local contrast, subtle micro-contrast, and appropriate optical sharpness for the specified era. Avoid crushed blacks, clipped highlights, excessive contrast, flat or washed-out tones, or artificial monochrome effects.\n\n__INSTRUCTION_FROM_FILE__\n\n__AGE_DESC__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying affected area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve all unaffected areas as closely as possible to the input image. Apply only the explicitly requested corrections and the specified photographic-era adjustment.\n\nDo not introduce new objects, textures, patterns, scenery, lighting, shadows, highlights, or stylistic changes beyond those required by the requested corrections and photographic-era rendering."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5321,7 +5338,7 @@
   },
   "3187": {
     "inputs": {
-      "value": "photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic mid-2010s professional DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
+      "value": "photograph of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nMaintain authentic melanin-rich South Indian skin tones with realistic matte photographic rendering, natural tonal variation, restrained specular highlights, and subtle photographic texture. Preserve natural pores, fine lines, freckles, moles, and all existing skin characteristics without exaggerating or removing them.\n\nMaintain realistic photographic lighting with soft highlight roll-off, smooth shadow transitions, balanced dynamic range, natural color reproduction, and accurate white balance. Preserve the original photographic style while improving only photographic fidelity and consistency.\n\n__YEAR_TAKEN__\n\n__AGE_DESC__\n\nMaintain moderate optical sharpness with realistic lens rendering, clean local contrast, balanced micro-contrast, and authentic professional DSLR image quality. Preserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, and material response exactly as they appear. Avoid exaggerated textile texture, excessive weave definition, artificial sharpening, or hallucinated detail.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, and authentic photographic softness while preserving the original garment design and level of detail.\n\nRefine only photographic realism. Do not beautify, reshape, age, de-age, stylize, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, increase skin micro-detail, or generate new artifacts."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5330,7 +5347,7 @@
   },
   "3188": {
     "inputs": {
-      "value": "A professionally rendered monochrome photograph of an Indian woman, v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic grayscale skin luminance. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and clean monochrome photographic rendering. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic professional DSLR monochrome image quality, rich tonal separation, and smooth grayscale transitions.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones and natural luminance relationships throughout the image.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, moderate textile detail, and authentic photographic softness. Avoid exaggerated fabric texture, embroidery definition, weave visibility, or hyper-detailed clothing."
+      "value": "A professionally rendered monochrome photograph of an Indian woman, v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic grayscale skin luminance. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and clean monochrome photographic rendering. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic professional DSLR monochrome image quality, rich tonal separation, and smooth grayscale transitions.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones and natural luminance relationships throughout the image.\n\n__YEAR_TAKEN__\n\n__AGE_DESC__\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should drape naturally with physically plausible folds, realistic material response, moderate textile detail, and authentic photographic softness. Avoid exaggerated fabric texture, embroidery definition, weave visibility, or hyper-detailed clothing."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5355,56 +5372,6 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
-    }
-  },
-  "3191": {
-    "inputs": {
-      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "A professionally photographed portrait of an Indian woman, v1dhya5.\n\nTreat the input face and smile as correct. Refine only missing photographic detail while preserving the subject's facial identity, expression, gaze direction, facial proportions, head shape, hairstyle, bindi, jewelry, lighting, white balance, composition, and photographic color grading.\n\nMaintain realistic matte skin with subtle natural pores, gentle tonal variation, authentic photographic texture, soft facial transitions, and natural melanin-rich South Indian skin tones. Preserve existing freckles, moles, fine facial hair, eyelashes, eyebrows, and other natural facial characteristics exactly as they appear. Improve only subtle eye clarity, iris definition, eyelash detail, eyebrow definition, natural lip definition, and overall facial coherence while maintaining realistic optical sharpness.\n\nPreserve the natural shape, spacing, alignment, translucency, and color variation of the teeth. Maintain realistic enamel shading and subtle imperfections. Do not whiten teeth excessively, sharpen tooth edges, invent or remove teeth, alter the smile, or create perfectly uniform teeth.\n\nPreserve realistic age, facial geometry, skin texture, and natural imperfections. Keep clothing, accessories, background, shadows, and highlights unchanged.\n\nDo not beautify, reshape, de-age, age, stylize, smooth skin, remove pores, add makeup, enlarge eyes, sharpen excessively, alter facial proportions, change expression, modify hair, introduce artificial skin texture, hallucinate facial details, or create new artifacts.",
-      "guidance": 3.5,
-      "clip": [
-        "1298",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncodeFlux",
-    "_meta": {
-      "title": "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
-  "3192": {
-    "inputs": {
-      "condition": [
-        "3170",
-        0
-      ],
-      "when_true": [
-        "3194",
-        0
-      ],
-      "when_false": [
-        "3027",
-        0
-      ]
-    },
-    "class_type": "InputSelector",
-    "_meta": {
-      "title": "Input Selector"
-    }
-  },
-  "3194": {
-    "inputs": {
-      "lut_name": "Presetpro - Fuji Astia.cube",
-      "strength": 0.12,
-      "log": false,
-      "image": [
-        "3012",
-        0
-      ]
-    },
-    "class_type": "ProPostApplyLUT",
-    "_meta": {
-      "title": "ProPostApplyLUT"
     }
   },
   "3196": {
@@ -5543,7 +5510,7 @@
     "inputs": {
       "dishonesty_factor": -0.03,
       "start_percent": 0.25,
-      "end_percent": 0.45,
+      "end_percent": 0.35,
       "sampler": [
         "2280",
         0
@@ -5556,8 +5523,8 @@
   },
   "3215": {
     "inputs": {
-      "detail_amount": 0.1,
-      "start": 0.3,
+      "detail_amount": 0.11,
+      "start": 0.16,
       "end": 0.63,
       "bias": 0.5,
       "exponent": 1,
@@ -5615,7 +5582,7 @@
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
       "strength_model": 0.52,
       "model": [
-        "2322",
+        "3306",
         0
       ]
     },
@@ -5627,10 +5594,10 @@
   "3230": {
     "inputs": {
       "prompt": [
-        "2406",
+        "3318",
         0
       ],
-      "vision_megapixels": 1,
+      "vision_megapixels": 1.5,
       "mask_padding": 0,
       "conditioning_rescaling": false,
       "multiplier": 3.8,
@@ -5638,19 +5605,19 @@
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
-        "2349",
-        0
+        "3306",
+        1
       ],
       "model": [
-        "3166",
+        "3455",
         0
       ],
       "system_prompt": [
-        "2300",
+        "3392",
         0
       ],
       "images": [
-        "3384",
+        "2309",
         0
       ]
     },
@@ -5675,26 +5642,555 @@
       "title": "Switch"
     }
   },
-  "3377": {
+  "3306": {
     "inputs": {
-      "lora_name": "Flux2-Klein-9B-consistency-V2.safetensors",
-      "strength_model": 0.92,
+      "lora_name": "krea-detail-enhancer-exp.safetensors",
+      "strength_model": 0.5,
+      "strength_clip": 0.1,
       "model": [
-        "2124",
+        "3166",
+        0
+      ],
+      "clip": [
+        "2349",
         0
       ]
     },
-    "class_type": "LoraLoaderModelOnly",
+    "class_type": "LoraLoader",
     "_meta": {
-      "title": "Klein_Load LoRA"
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
+  "3318": {
+    "inputs": {
+      "string_a": [
+        "2406",
+        0
+      ],
+      "string_b": "inline-skin-lora, detailed skin texture,\n(matte skin:1.3), dry complexion, natural skin texture, soft diffuse lighting, non-glossy, powdery finish\n\n",
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text (LoRA Trigger Word)"
     }
   },
   "3378": {
     "inputs": {
-      "lora_name": "Detailer-KREA2.safetensors",
-      "strength_model": 1.5,
+      "shift": 3,
       "model": [
         "3230",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "Shift 3 — nudges contrast and framing"
+    }
+  },
+  "3380": {
+    "inputs": {
+      "value": "depiction of an Indian woman, v1dhya5. Preserve her facial identity, facial structure, expression, apparent age, hairstyle, body proportions, pose, clothing, accessories, composition, and overall appearance exactly as established in the input image.\n\nPreserve the visual character of the input image, including its existing style, medium, rendering approach, linework, shapes, forms, colors, tonal relationships, texture, lighting, and level of detail. Improve only visual coherence and fidelity without changing the established artistic language.\n\nPreserve the natural appearance and proportions of the subject while retaining the characteristic rendering of the source style. Do not unnecessarily add realism, photographic qualities, artificial detail, or texture that is not present in the input.\n\nPreserve existing clothing details, fabric drape, transparency, embroidery, jewelry, accessories, patterns, and material representation exactly as they appear. Avoid inventing, simplifying, exaggerating, or replacing design elements.\n\nA tiny black mole on the chin. She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique. Clothing should retain the original garment design, silhouette, proportions, folds, transparency, and level of detail as established in the input image.\n\nRefine only visual fidelity and coherence. Do not beautify, reshape, age, de-age, photorealize, stylize differently, smooth skin, enhance makeup, alter facial geometry, modify body proportions, change expression, alter clothing design, introduce new textures, add photographic characteristics, or generate new artifacts."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3382": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3380",
+        0
+      ],
+      "when_false": [
+        "3418",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3383": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3384",
+        0
+      ],
+      "when_false": [
+        "3423",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3384": {
+    "inputs": {
+      "value": "Color correction and cleanup only. Copy the visual style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing only the obscured underlying area. Match the surrounding image naturally. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial structure, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, perspective, lighting, shadows, depth, and image structure.\n\nPreserve the existing rendering style, level of detail, surface appearance, color relationships, tonal relationships, and visual character of the input. Do not increase realism or photographic detail.\n\n__INSTRUCTION_FROM_FILE__\n\nApply only the explicitly requested corrections.\n\nDo not beautify, retouch, smooth, sharpen, add detail, remove detail, add texture, remove texture, relight, reshape, reinterpret, or regenerate existing image content.\n\nDo not alter the appearance or rendering of the face, skin, hair, clothing, or other subjects except where explicitly requested.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, colors, or stylistic characteristics.\n\nKeep all unaffected regions as close to the input image as possible."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3386": {
+    "inputs": {
+      "value": "Treat the input face as correct and preserve the exact facial identity.\n\nPreserve facial structure, facial proportions, face shape, jawline, chin, cheeks, eyes, eye spacing, eyebrows, nose, lips, mouth shape, natural asymmetry, expression, and gaze direction exactly as they appear in the input.\n\nPreserve the existing hairstyle, hair shape, bindi, jewelry, and other distinctive facial characteristics.\n\nWhen the eyes are visible, preserve their exact orientation and eyelid position. Do not redirect, center, enlarge, narrow, or reinterpret the gaze. If the eyes are closed, obscured, or not visible, do not infer or reconstruct them.\n\nIf teeth are visible, preserve their existing shape, arrangement, spacing, number, and appearance. Do not whiten, straighten, reshape, replace, merge, or regenerate teeth.\n\nDo not beautify, idealize, normalize, symmetrize, reshape, age, de-age, or otherwise modify the person's facial characteristics.\n\nDo not change the visual medium, artistic style, rendering method, colors, textures, lighting, contrast, or level of detail of the input.\n\nRefine only enough to maintain facial identity and consistency with the input. Do not add realism, photographic detail, skin texture, pores, sharpness, or other stylistic characteristics.\n\nThe result must represent the same face with the same expression and appearance, without stylistic reinterpretation."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3387": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3386",
+        0
+      ],
+      "when_false": [
+        "3388",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3388": {
+    "inputs": {
+      "value": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3392": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "2304",
+        0
+      ],
+      "when_false": [
+        "2300",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3396": {
+    "inputs": {
+      "text": [
+        "374",
+        0
+      ],
+      "field_count": 9,
+      "whole_word": false,
+      "replace_all": true,
+      "keyword_1": "@@AGE=14-18",
+      "expansion_1": "Render the image as a photograph genuinely captured during 1994–1997. Use the photographic characteristics typical of this period: predominantly film-based capture, organic film grain, softer fine detail, natural optical rendering, gentle tonal transitions, limited highlight and shadow latitude, restrained saturation, slightly less precise color separation, and authentic film-era color response. Include the subtle imperfections and texture naturally associated with real photography of the period. Avoid modern digital sharpness, computational processing, HDR, excessive micro-contrast, artificial clarity, or contemporary color grading.",
+      "keyword_2": "@@AGE=18-21",
+      "expansion_2": "Render the image as a photograph genuinely captured during 1998–2001. Use the photographic characteristics of the transition from late film to early digital photography: organic film-like tonal rendering or early digital sensor characteristics, moderate grain or sensor noise, moderate sharpness, softer fine detail than modern digital photography, restrained dynamic range, natural highlight clipping, and period-appropriate color response. Avoid modern computational photography, HDR, excessive clarity, aggressive sharpening, or contemporary color grading.",
+      "keyword_3": "@@AGE=22-25",
+      "expansion_3": "Render the image as a photograph genuinely captured during 2002–2005. Use early-2000s photographic characteristics: contemporary film or early-generation digital-camera rendering, moderate optical softness, moderate image detail, visible but restrained digital noise where appropriate, limited dynamic range, natural highlight clipping, slightly stronger digital color response, and period-appropriate sharpening and processing. Avoid modern computational photography, HDR, excessive micro-contrast, artificial texture, or contemporary image processing.",
+      "keyword_4": "@@AGE=26-29",
+      "expansion_4": "Render the image as a photograph genuinely captured during 2006–2009. Use the characteristics of late film and early/mid-generation DSLR photography: clean but naturally imperfect detail, moderate optical sharpness, realistic digital sensor noise, moderate dynamic range, natural highlight roll-off and clipping, restrained saturation, and the characteristic color response of professional and consumer digital cameras of the period. Avoid modern computational HDR, excessive clarity, aggressive sharpening, or synthetic texture.",
+      "keyword_5": "@@AGE=30-33",
+      "expansion_5": "Render the image as a photograph genuinely captured during 2010–2013. Use early-2010s digital photographic characteristics: high-resolution but naturally rendered detail, improved dynamic range, realistic DSLR sensor response, moderate micro-contrast, natural optical sharpness, controlled but visible digital noise at higher sensitivities, and period-appropriate color processing. Avoid contemporary computational photography, excessive HDR, artificial skin detail, aggressive sharpening, or synthetic clarity.",
+      "keyword_6": "@@AGE=34-37",
+      "expansion_6": "Render the image as a photograph genuinely captured during 2014–2017. Use mid-2010s digital photographic characteristics: high-resolution natural detail, good dynamic range, accurate but characteristic digital color reproduction, controlled sensor noise, realistic lens rendering, moderate micro-contrast, and restrained sharpening. Preserve natural highlight and shadow behavior. Avoid modern computational photography, excessive HDR, artificial texture, excessive clarity, or synthetic detail.",
+      "keyword_7": "@@AGE=38-41",
+      "expansion_7": "Render the image as a photograph genuinely captured during 2018–2021. Use late-2010s photographic characteristics: high-resolution digital capture, broad dynamic range, clean but natural detail, refined sensor performance, accurate color reproduction, controlled noise reduction, realistic optical rendering, and modern but still distinctly photographic processing of the period. Avoid exaggerated computational HDR, excessive sharpening, artificial texture, or overly synthetic rendering.",
+      "keyword_8": "@@AGE=42-45",
+      "expansion_8": "Render the image as a photograph genuinely captured during 2022–2026. Use contemporary photographic characteristics: very high-resolution digital capture, broad dynamic range, clean fine detail, refined color reproduction, sophisticated noise reduction, realistic optical rendering, and contemporary digital image processing. Preserve natural photographic imperfections while allowing the image to look distinctly modern. Avoid making the result excessively sharpened, HDR-heavy, plastic, or artificially processed.",
+      "keyword_9": "@@AGE=46+",
+      "expansion_9": "The subject is 46 years old at the time this photograph was taken. Preserve and portray the subject with facial characteristics, body proportions, physical development, and overall appearance consistent with a 46-year-old adult. Do not make the subject appear substantially younger or older. Preserve the subject's established identity and recognizable facial characteristics while naturally reflecting this age."
+    },
+    "class_type": "DynamicKeywordExpander",
+    "_meta": {
+      "title": "Dynamic Keyword Expander"
+    }
+  },
+  "3401": {
+    "inputs": {
+      "join_with": "",
+      "string_list": [
+        "3396",
+        2
+      ]
+    },
+    "class_type": "StringListToString",
+    "_meta": {
+      "title": "String List to String"
+    }
+  },
+  "3406": {
+    "inputs": {
+      "text": [
+        "374",
+        0
+      ],
+      "field_count": 9,
+      "whole_word": false,
+      "replace_all": true,
+      "keyword_1": "@@AGE=14-18",
+      "expansion_1": "The subject is between 14 and 17 years old at the time of capture. Portray the subject with age-appropriate facial characteristics, physical development, proportions, and overall appearance consistent with this adolescent age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_2": "@@AGE=18-21",
+      "expansion_2": "The subject is between 18 and 21 years old at the time of capture. Portray the subject with age-appropriate facial characteristics, physical development, proportions, and overall appearance consistent with this young-adult age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_3": "@@AGE=22-25",
+      "expansion_3": "The subject is between 22 and 25 years old at the time of capture. Portray the subject with facial characteristics, physical development, proportions, and overall appearance consistent with this young-adult age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_4": "@@AGE=26-29",
+      "expansion_4": "The subject is between 26 and 29 years old at the time of capture. Portray the subject with facial characteristics, physical development, proportions, and overall appearance consistent with this adult age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_5": "@@AGE=30-33",
+      "expansion_5": "The subject is between 30 and 33 years old at the time of capture. Portray the subject with facial characteristics, physical development, proportions, and overall appearance consistent with this adult age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_6": "@@AGE=34-37",
+      "expansion_6": "The subject is between 34 and 37 years old at the time of capture. Portray the subject with facial characteristics, physical development, proportions, and overall appearance consistent with this adult age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_7": "@@AGE=38-41",
+      "expansion_7": "The subject is between 38 and 41 years old at the time of capture. Portray the subject with facial characteristics, physical development, proportions, and overall appearance consistent with this adult age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_8": "@@AGE=42-45",
+      "expansion_8": "The subject is between 42 and 45 years old at the time of capture. Portray the subject with facial characteristics, physical development, proportions, and overall appearance consistent with this mature-adult age range. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting the appropriate age. Do not make the subject appear substantially younger or older than this range.",
+      "keyword_9": "@@AGE=46+",
+      "expansion_9": "The subject is approximately 46 years old at the time of capture. Portray the subject with facial characteristics, physical development, proportions, and overall appearance consistent with a 46-year-old adult. Preserve the subject's recognizable identity and distinctive facial characteristics while naturally reflecting this age. Do not make the subject appear substantially younger or older."
+    },
+    "class_type": "DynamicKeywordExpander",
+    "_meta": {
+      "title": "Dynamic Keyword Expander"
+    }
+  },
+  "3407": {
+    "inputs": {
+      "join_with": "",
+      "string_list": [
+        "3406",
+        2
+      ]
+    },
+    "class_type": "StringListToString",
+    "_meta": {
+      "title": "String List to String"
+    }
+  },
+  "3418": {
+    "inputs": {
+      "find": "__AGE_DESC__",
+      "replace": [
+        "3407",
+        0
+      ],
+      "text": [
+        "3419",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "3419": {
+    "inputs": {
+      "find": "__YEAR_TAKEN__",
+      "replace": [
+        "3401",
+        0
+      ],
+      "text": [
+        "3189",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "3423": {
+    "inputs": {
+      "find": "__AGE_DESC__",
+      "replace": [
+        "3407",
+        0
+      ],
+      "text": [
+        "3424",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "3424": {
+    "inputs": {
+      "find": "__YEAR_TAKEN__",
+      "replace": [
+        "3401",
+        0
+      ],
+      "text": [
+        "3174",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "3430": {
+    "inputs": {
+      "prompt": "Treat the input image as already correct.\n\nThe input image is the primary and authoritative visual source. Make only extremely subtle refinements.\n\nPRESERVATION HAS PRIORITY OVER ENHANCEMENT.\n\nPreserve the existing subject, identity, facial features, expression, gaze, pose, body proportions, composition, framing, perspective, background, environment, lighting, shadows, highlights, colors, tonal relationships, depth, textures, and visual style exactly as they appear.\n\nThe clothing and accessories are LOCKED. Do not redesign, regenerate, reconstruct, replace, reshape, resize, recolor, restyle, simplify, embellish, or reinterpret any garment or accessory.\n\nPreserve the exact clothing design, garment shape, silhouette, neckline, sleeves, straps, edges, folds, drape, transparency, layering, fabric appearance, patterns, embroidery, stitching, borders, decorative elements, prints, jewelry, and other garment details exactly as they appear.\n\nDo not invent or complete missing clothing details. Do not add patterns, embroidery, folds, seams, fabric texture, decorative elements, or material characteristics that are not already visible.\n\nPreserve the existing relationship between the clothing and the body exactly. Do not alter how the garment fits, wraps, overlaps, hangs, or interacts with the body.\n\nPreserve the existing medium and rendering characteristics. Do not change a photograph into an illustration, a sketch into a photograph, or otherwise reinterpret the visual style.\n\nDo not regenerate, redesign, replace, add, remove, rearrange, or reinterpret image content.\n\nOnly correct a small, clearly visible inconsistency when it can be corrected without changing surrounding image content.\n\nIf no specific correction is requested, make the minimum possible change.\n\nThe output should remain visually almost identical to the input, with the clothing, accessories, subject identity, composition, and background unchanged.",
+      "vision_megapixels": 1.5,
+      "mask_padding": 0,
+      "conditioning_rescaling": true,
+      "multiplier": 3.8,
+      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.5,5.0,1.1,4.0,1.0",
+      "prompt_adherence_enhancer": false,
+      "strength": 1,
+      "clip": [
+        "3306",
+        1
+      ],
+      "model": [
+        "3458",
+        0
+      ],
+      "system_prompt": [
+        "3392",
+        0
+      ],
+      "images": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "VantageTextEncodeKrea2",
+    "_meta": {
+      "title": "Vantage Text Encode (Krea2)"
+    }
+  },
+  "3435": {
+    "inputs": {
+      "conditioning": [
+        "3430",
+        1
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "3436": {
+    "inputs": {
+      "method": "mkl",
+      "strength": 0.77,
+      "multithread": true,
+      "image_target": [
+        "3012",
+        0
+      ],
+      "image_ref": [
+        "577",
+        0
+      ]
+    },
+    "class_type": "ColorMatchV2",
+    "_meta": {
+      "title": "ColorMatchV2"
+    }
+  },
+  "3441": {
+    "inputs": {
+      "condition": [
+        "591",
+        0
+      ],
+      "when_true": [
+        "3443",
+        0
+      ],
+      "when_false": [
+        "3201",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3443": {
+    "inputs": {
+      "value": "Digital art."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "3444": {
+    "inputs": {
+      "model_a": [
+        "3469",
+        0
+      ],
+      "model_b": [
+        "1297",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3445": {
+    "inputs": {
+      "clip_a": [
+        "3468",
+        0
+      ],
+      "clip_b": [
+        "1297",
+        1
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "CLIP Input Switch",
+    "_meta": {
+      "title": "CLIP Input Switch"
+    }
+  },
+  "3451": {
+    "inputs": {
+      "condition": [
+        "3453",
+        0
+      ],
+      "when_true": [
+        "3452",
+        0
+      ],
+      "when_false": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3452": {
+    "inputs": {
+      "image": [
+        "983",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "3453": {
+    "inputs": {
+      "comparison": "a == b",
+      "a": [
+        "3452",
+        1
+      ],
+      "b": [
+        "3452",
+        2
+      ]
+    },
+    "class_type": "easy compare",
+    "_meta": {
+      "title": "a==b"
+    }
+  },
+  "3455": {
+    "inputs": {
+      "model_a": [
+        "3306",
+        0
+      ],
+      "model_b": [
+        "3229",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3458": {
+    "inputs": {
+      "model_a": [
+        "3306",
+        0
+      ],
+      "model_b": [
+        "3460",
+        0
+      ],
+      "boolean": [
+        "591",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3460": {
+    "inputs": {
+      "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
+      "strength_model": 1,
+      "model": [
+        "3306",
         0
       ]
     },
@@ -5703,55 +6199,58 @@
       "title": "Load LoRA"
     }
   },
-  "3383": {
+  "3468": {
     "inputs": {
-      "megapixels": 1.8,
-      "upscale_method": "lanczos",
-      "round_to": 8,
-      "image": [
-        "1447",
-        0
-      ]
-    },
-    "class_type": "SimpleMegapixels",
-    "_meta": {
-      "title": "Image Resize (Megapixels)"
-    }
-  },
-  "3384": {
-    "inputs": {
-      "megapixels": 1.8,
-      "upscale_method": "lanczos",
-      "round_to": 8,
-      "image": [
-        "2309",
-        0
-      ]
-    },
-    "class_type": "SimpleMegapixels",
-    "_meta": {
-      "title": "Image Resize (Megapixels)"
-    }
-  },
-  "3385": {
-    "inputs": {
-      "strength": 0.3,
-      "ramp_curve": 1.5,
-      "ref_index": 0,
-      "channel_weights": "uniform",
-      "debug": false,
-      "model": [
-        "3147",
+      "clip_a": [
+        "3038",
+        1
+      ],
+      "clip_b": [
+        "1197",
         0
       ],
-      "conditioning": [
-        "3147",
-        1
+      "boolean": [
+        "638",
+        0
       ]
     },
-    "class_type": "Flux2KleinColorAnchor",
+    "class_type": "CLIP Input Switch",
     "_meta": {
-      "title": "FLUX.2 Klein Color Anchor"
+      "title": "CLIP Input Switch"
+    }
+  },
+  "3469": {
+    "inputs": {
+      "model_a": [
+        "3038",
+        0
+      ],
+      "model_b": [
+        "3039",
+        0
+      ],
+      "boolean": [
+        "638",
+        0
+      ]
+    },
+    "class_type": "Model Input Switch",
+    "_meta": {
+      "title": "Model Input Switch"
+    }
+  },
+  "3471": {
+    "inputs": {
+      "lora_name": "Flux2-Klein-9B-consistency-V2.safetensors",
+      "strength_model": 1,
+      "model": [
+        "2124",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Klein_Load LoRA"
     }
   },
   "2920:2866": {
