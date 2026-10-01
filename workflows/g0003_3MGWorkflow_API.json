@@ -460,7 +460,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "3451",
+        "3477",
         0
       ],
       "mask": [
@@ -484,7 +484,7 @@
         0
       ],
       "when_false": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -1353,7 +1353,7 @@
       "strength": 0.12,
       "multithread": false,
       "image_ref": [
-        "3451",
+        "3477",
         0
       ],
       "image_target": [
@@ -1415,7 +1415,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
+      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -2217,7 +2217,7 @@
         0
       ],
       "image": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -3143,7 +3143,7 @@
   "2074": {
     "inputs": {
       "image": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -3634,7 +3634,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#06D6A0FF",
+      "color": "#FFC0DEFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4020,7 +4020,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -4144,7 +4144,7 @@
         0
       ],
       "any_02": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -4211,7 +4211,7 @@
         0
       ],
       "any_03": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -4238,7 +4238,10 @@
       "brightness": -2,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 0.9,
+      "gamma": [
+        "3472",
+        0
+      ],
       "image": [
         "1094",
         0
@@ -4545,7 +4548,7 @@
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -4737,7 +4740,7 @@
         0
       ],
       "any_02": [
-        "3451",
+        "3477",
         0
       ]
     },
@@ -5027,7 +5030,7 @@
   },
   "3141": {
     "inputs": {
-      "value": 0.92
+      "value": 1.06
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5037,7 +5040,7 @@
   "3142": {
     "inputs": {
       "pixels": [
-        "3451",
+        "3477",
         0
       ],
       "vae": [
@@ -5165,11 +5168,11 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 46,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "sgm_uniform",
-      "start_at_step": 5,
+      "start_at_step": 42,
       "end_at_step": 999,
       "return_with_leftover_noise": "disable",
       "model": [
@@ -5380,7 +5383,7 @@
       "strength": 0.08,
       "log": false,
       "image": [
-        "2377",
+        "3481",
         0
       ]
     },
@@ -5395,7 +5398,7 @@
       "strength": 0.12,
       "log": false,
       "image": [
-        "2377",
+        "3481",
         0
       ]
     },
@@ -5966,7 +5969,7 @@
   },
   "3430": {
     "inputs": {
-      "prompt": "Treat the input image as already correct.\n\nThe input image is the primary and authoritative visual source. Make only extremely subtle refinements.\n\nPRESERVATION HAS PRIORITY OVER ENHANCEMENT.\n\nPreserve the existing subject, identity, facial features, expression, gaze, pose, body proportions, composition, framing, perspective, background, environment, lighting, shadows, highlights, colors, tonal relationships, depth, textures, and visual style exactly as they appear.\n\nThe clothing and accessories are LOCKED. Do not redesign, regenerate, reconstruct, replace, reshape, resize, recolor, restyle, simplify, embellish, or reinterpret any garment or accessory.\n\nPreserve the exact clothing design, garment shape, silhouette, neckline, sleeves, straps, edges, folds, drape, transparency, layering, fabric appearance, patterns, embroidery, stitching, borders, decorative elements, prints, jewelry, and other garment details exactly as they appear.\n\nDo not invent or complete missing clothing details. Do not add patterns, embroidery, folds, seams, fabric texture, decorative elements, or material characteristics that are not already visible.\n\nPreserve the existing relationship between the clothing and the body exactly. Do not alter how the garment fits, wraps, overlaps, hangs, or interacts with the body.\n\nPreserve the existing medium and rendering characteristics. Do not change a photograph into an illustration, a sketch into a photograph, or otherwise reinterpret the visual style.\n\nDo not regenerate, redesign, replace, add, remove, rearrange, or reinterpret image content.\n\nOnly correct a small, clearly visible inconsistency when it can be corrected without changing surrounding image content.\n\nIf no specific correction is requested, make the minimum possible change.\n\nThe output should remain visually almost identical to the input, with the clothing, accessories, subject identity, composition, and background unchanged.",
+      "prompt": "Treat the input image as already correct.\n\nThe input image is the primary and authoritative visual source. Make only subtle refinements.\n\nPRESERVATION HAS PRIORITY OVER ENHANCEMENT.\n\nPreserve the existing subject, identity, facial features, expression, gaze, pose, body proportions, composition, framing, perspective, background, environment, lighting, shadows, highlights, colors, tonal relationships, depth, textures, and visual style exactly as they appear.\n\nThe clothing and accessories are LOCKED. Do not redesign, regenerate, reconstruct, replace, reshape, resize, recolor, restyle, simplify, embellish, or reinterpret any garment or accessory.\n\nPreserve the exact clothing design, garment shape, silhouette, neckline, sleeves, straps, edges, folds, drape, transparency, layering, fabric appearance, patterns, embroidery, stitching, borders, decorative elements, prints, jewelry, and other garment details exactly as they appear.\n\nDo not invent or complete missing clothing details. Do not add patterns, embroidery, folds, seams, fabric texture, decorative elements, or material characteristics that are not already visible.\n\nPreserve the existing relationship between the clothing and the body exactly. Do not alter how the garment fits, wraps, overlaps, hangs, or interacts with the body.\n\nPreserve the existing medium and rendering characteristics. Do not change a photograph into an illustration, a sketch into a photograph, or otherwise reinterpret the visual style.\n\nDo not regenerate, redesign, replace, add, remove, rearrange, or reinterpret image content.\n\nOnly correct a small, clearly visible inconsistency when it can be corrected without changing surrounding image content.\n\nIf no specific correction is requested, make the minimum possible change.\n\nThe output should remain visually almost identical to the input, with the clothing, accessories, subject identity, composition, and background unchanged.",
       "vision_megapixels": 1.5,
       "mask_padding": 0,
       "conditioning_rescaling": true,
@@ -6251,6 +6254,95 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "Klein_Load LoRA"
+    }
+  },
+  "3472": {
+    "inputs": {
+      "value": 0.96
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
+  "3474": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "VVV",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [VVV]"
+    }
+  },
+  "3477": {
+    "inputs": {
+      "condition": [
+        "3474",
+        0
+      ],
+      "when_true": [
+        "3478",
+        0
+      ],
+      "when_false": [
+        "3451",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3478": {
+    "inputs": {
+      "flip_method": "x-axis: vertically",
+      "image": [
+        "3451",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image"
+    }
+  },
+  "3480": {
+    "inputs": {
+      "flip_method": "x-axis: vertically",
+      "image": [
+        "2377",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image"
+    }
+  },
+  "3481": {
+    "inputs": {
+      "condition": [
+        "3474",
+        0
+      ],
+      "when_true": [
+        "3480",
+        0
+      ],
+      "when_false": [
+        "2377",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
     }
   },
   "2920:2866": {
