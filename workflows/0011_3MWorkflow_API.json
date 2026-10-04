@@ -3196,7 +3196,7 @@
   },
   "2124": {
     "inputs": {
-      "unet_name": "flux-2-klein-9b.safetensors",
+      "unet_name": "Flux2-Klein-9B-True-V3-bf16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -3635,7 +3635,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#EB7F31FF",
+      "color": "#2373F4FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4664,7 +4664,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
+      "value": "Digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4750,7 +4750,7 @@
   "3027": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.12,
+      "strength": 0.09,
       "log": false,
       "image": [
         "3012",
@@ -4858,7 +4858,7 @@
   "3084": {
     "inputs": {
       "lens_distortion": -0.006,
-      "color_temperature": 0.55,
+      "color_temperature": -0.05,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -5003,7 +5003,7 @@
   },
   "3141": {
     "inputs": {
-      "value": 0.93
+      "value": 0.98
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5230,7 +5230,7 @@
   },
   "3172": {
     "inputs": {
-      "value": "Classic black-and-white photographic rendering with the tonal response of a well-exposed mid-2010s digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
+      "value": "Digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5388,7 +5388,7 @@
   "3194": {
     "inputs": {
       "lut_name": "Presetpro - Fuji Astia.cube",
-      "strength": 0.12,
+      "strength": 0.09,
       "log": false,
       "image": [
         "3012",
