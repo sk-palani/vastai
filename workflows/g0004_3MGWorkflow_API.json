@@ -1494,7 +1494,7 @@
         0
       ],
       "t5xxl": [
-        "2406",
+        "3318",
         0
       ],
       "guidance": 3.5,
@@ -1917,7 +1917,7 @@
         "222",
         0
       ],
-      "b": 0.44,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1948,7 +1948,7 @@
   "1657": {
     "inputs": {
       "scheduler": "beta",
-      "steps": 44,
+      "steps": 48,
       "denoise": [
         "1649",
         0
@@ -2031,7 +2031,7 @@
   },
   "1663": {
     "inputs": {
-      "denoise": 0.78,
+      "denoise": 0.68,
       "sigmas": [
         "1657",
         0
@@ -4664,7 +4664,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
+      "value": "Digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4750,7 +4750,7 @@
   "3027": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.12,
+      "strength": 0.09,
       "log": false,
       "image": [
         "3012",
@@ -4858,7 +4858,7 @@
   "3084": {
     "inputs": {
       "lens_distortion": -0.006,
-      "color_temperature": 0.05,
+      "color_temperature": -0.05,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -4878,7 +4878,7 @@
       "monochrome_grain": false,
       "highlight_rolloff": 0.15,
       "image": [
-        "3247",
+        "3085",
         0
       ],
       "depth_map": [
@@ -4889,6 +4889,27 @@
     "class_type": "OpticalRealism",
     "_meta": {
       "title": "Optical Realism & Physics"
+    }
+  },
+  "3085": {
+    "inputs": {
+      "temperature": 0,
+      "hue": 0,
+      "brightness": -3,
+      "contrast": 2,
+      "saturation": 4,
+      "gamma": [
+        "3141",
+        0
+      ],
+      "image": [
+        "3247",
+        0
+      ]
+    },
+    "class_type": "ColorCorrect",
+    "_meta": {
+      "title": "ColorCorrect"
     }
   },
   "3086": {
@@ -4930,12 +4951,12 @@
   "3093": {
     "inputs": {
       "prompt": [
-        "2406",
+        "3388",
         0
       ],
       "clip": [
-        "2349",
-        0
+        "3306",
+        1
       ],
       "vae": [
         "2315",
@@ -4943,6 +4964,10 @@
       ],
       "image1": [
         "2309",
+        0
+      ],
+      "image2": [
+        "3192",
         0
       ]
     },
@@ -5003,7 +5028,7 @@
   },
   "3141": {
     "inputs": {
-      "value": 0.93
+      "value": 1.04
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -5141,11 +5166,11 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 64,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 5,
+      "start_at_step": 60,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
@@ -5157,7 +5182,7 @@
         0
       ],
       "negative": [
-        "3093",
+        "3228",
         0
       ],
       "latent_image": [
@@ -5230,7 +5255,7 @@
   },
   "3172": {
     "inputs": {
-      "value": "Classic black-and-white photographic rendering with the tonal response of a well-exposed mid-2010s digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
+      "value": "Digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5388,7 +5413,7 @@
   "3194": {
     "inputs": {
       "lut_name": "Presetpro - Fuji Astia.cube",
-      "strength": 0.12,
+      "strength": 0.09,
       "log": false,
       "image": [
         "3012",
@@ -5606,7 +5631,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.5,
+      "strength_model": 0.33,
       "model": [
         "2322",
         0
@@ -5620,7 +5645,7 @@
   "3230": {
     "inputs": {
       "prompt": [
-        "2406",
+        "3318",
         0
       ],
       "vision_megapixels": 1,
@@ -5631,8 +5656,8 @@
       "prompt_adherence_enhancer": true,
       "strength": 1,
       "clip": [
-        "2349",
-        0
+        "3306",
+        1
       ],
       "model": [
         "3377",
@@ -5668,12 +5693,45 @@
       "title": "Switch"
     }
   },
+  "3306": {
+    "inputs": {
+      "lora_name": "BreastSlider-KREA2.safetensors",
+      "strength_model": 1.2,
+      "strength_clip": 0.04,
+      "model": [
+        "3166",
+        0
+      ],
+      "clip": [
+        "2349",
+        0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA (Model and CLIP)"
+    }
+  },
+  "3318": {
+    "inputs": {
+      "string_a": [
+        "2406",
+        0
+      ],
+      "string_b": "inline-skin-lora, detailed skin texture\n\nBradhamel art style",
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text (LoRA Trigger Word)"
+    }
+  },
   "3377": {
     "inputs": {
       "lora_name": "skintone_v2_krea2_loraholic.safetensors",
       "strength_model": 0.8,
       "model": [
-        "3166",
+        "3306",
         0
       ]
     },
@@ -5694,6 +5752,47 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "Klein_Load LoRA"
+    }
+  },
+  "3385": {
+    "inputs": {
+      "string": "**\n{{PROMPT}}\n**",
+      "strip_newlines": false
+    },
+    "class_type": "StringConstantMultiline",
+    "_meta": {
+      "title": "String Constant Multiline"
+    }
+  },
+  "3386": {
+    "inputs": {
+      "find": "{{PROMPT}}",
+      "replace": [
+        "3318",
+        0
+      ],
+      "text": [
+        "3385",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "3388": {
+    "inputs": {
+      "string_a": "Copy the identity from the reference image1.\nCopy the photographic style from the reference image2.",
+      "string_b": [
+        "3318",
+        0
+      ],
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text"
     }
   },
   "2920:2866": {
