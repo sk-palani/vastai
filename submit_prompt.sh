@@ -29,7 +29,7 @@ LOG_TS=$(date '+%Y-%m-%d %H:%M:%S')
 
 # -- Download latest workflow file
 #DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/0011_3MWorkflow_API.json"
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/g0004_3MGWorkflow_API.json"
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/g0001_3MGWorkflow_API.json"
 #DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/0003_3MWorkflow_API.json"
 # DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/006_KRWorkflow_API.json"
 #DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/004_KFWorkflow_API.json"

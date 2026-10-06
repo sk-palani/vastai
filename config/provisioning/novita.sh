@@ -119,7 +119,8 @@ CHECKPOINT_MODELS=(
 
 NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
-    "https://github.com/1038lab/ComfyUI-QwenVL"
+#    "https://github.com/1038lab/ComfyUI-QwenVL"
+    "https://github.com/Deaquay/ComfyUI-Qwen3.5-Uncensored"
     "https://github.com/ClownsharkBatwing/RES4LYF"
     "https://github.com/ostris/ComfyUI-Advanced-Vision"
     "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
@@ -322,6 +323,9 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/3091374?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # RealisticSnapshotKrea2.safetensors
     "https://civitai.com/api/download/models/3084537?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    "https://civitai.com/api/download/models/3371723?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+#    https://civitai.com/api/download/models/3371723?fileId=3260432
+
     # commercial advertising photography.safetensors
     "https://civitai.com/api/download/models/3092999?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # wetness_krea2_loraholic.safetensors
@@ -411,6 +415,8 @@ LORA_MODELS=(
     # ------------------------------
     # Pandora-RAWr.safetensors
     "https://civitai.com/api/download/models/1943855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+    "https://civitai.com/api/download/models/827817?fileId=1772963&token=${CIVITAI_TOKEN}"
 #    # breast-size2.safetensors
 #    "https://civitai.com/api/download/models/932482?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    # AntiBlur.safetensors
