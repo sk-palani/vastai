@@ -2206,7 +2206,7 @@
   },
   "1904": {
     "inputs": {
-      "model_name": "Qwen3-VL-4B-Instruct",
+      "model_name": "Qwen3-VL-4B-Instruct-Abliterated",
       "quantization": "4-bit (VRAM-friendly)",
       "attention_mode": "sdpa",
       "preset_prompt": "🖼️ Detailed Description",
@@ -2217,6 +2217,7 @@
         "378",
         0
       ],
+      "keep_last_prompt": false,
       "image": [
         "127",
         0
