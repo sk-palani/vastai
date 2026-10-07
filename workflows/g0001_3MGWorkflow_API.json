@@ -58,12 +58,12 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "2.0",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
       "image": [
-        "983",
+        "3390",
         0
       ]
     },
@@ -281,7 +281,7 @@
   "378": {
     "inputs": {
       "images": [
-        "983",
+        "3390",
         0
       ]
     },
@@ -460,7 +460,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "3390",
+        "127",
         0
       ],
       "mask": [
@@ -484,7 +484,7 @@
         0
       ],
       "when_false": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -1357,7 +1357,7 @@
       "strength": 0.12,
       "multithread": false,
       "image_ref": [
-        "3390",
+        "127",
         0
       ],
       "image_target": [
@@ -3121,7 +3121,7 @@
   "2074": {
     "inputs": {
       "image": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -3998,7 +3998,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -4122,7 +4122,7 @@
         0
       ],
       "any_02": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -4189,7 +4189,7 @@
         0
       ],
       "any_03": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -4523,7 +4523,7 @@
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -4715,7 +4715,7 @@
         0
       ],
       "any_02": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -5011,7 +5011,7 @@
   "3142": {
     "inputs": {
       "pixels": [
-        "3390",
+        "127",
         0
       ],
       "vae": [
@@ -5723,7 +5723,7 @@
       ],
       "keep_last_prompt": false,
       "image": [
-        "3390",
+        "127",
         0
       ]
     },
@@ -5757,7 +5757,7 @@
         0
       ],
       "when_false": [
-        "127",
+        "3405",
         0
       ]
     },
@@ -5770,7 +5770,7 @@
     "inputs": {
       "flip_method": "x-axis: vertically",
       "image": [
-        "127",
+        "3405",
         0
       ]
     },
@@ -5810,6 +5810,185 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
+    }
+  },
+  "3395": {
+    "inputs": {
+      "width": 340,
+      "height": 28,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "class_type": "Image Blank",
+    "_meta": {
+      "title": "Image Blank"
+    }
+  },
+  "3396": {
+    "inputs": {
+      "overlay_resize": "None",
+      "resize_method": "bilinear",
+      "rescale_factor": 1,
+      "width": 512,
+      "height": 512,
+      "x_offset": 370,
+      "y_offset": 2350,
+      "rotation": 9.992007221626409E-15,
+      "opacity": 0,
+      "base_image": [
+        "983",
+        0
+      ],
+      "overlay_image": [
+        "3395",
+        0
+      ]
+    },
+    "class_type": "Image Overlay",
+    "_meta": {
+      "title": "Image Overlay"
+    }
+  },
+  "3397": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "3398",
+        1
+      ],
+      "text_b": [
+        "3398",
+        2
+      ],
+      "text_c": [
+        "3398",
+        3
+      ],
+      "text_d": [
+        "3398",
+        4
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "3398": {
+    "inputs": {
+      "k_means_algorithm": "lloyd",
+      "image": [
+        "3400",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: GetMainColors",
+    "_meta": {
+      "title": "LayerUtility: Get Main Colors"
+    }
+  },
+  "3399": {
+    "inputs": {
+      "value": "#000000#000000#000000#000000"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Full Black"
+    }
+  },
+  "3400": {
+    "inputs": {
+      "overlay_resize": "None",
+      "resize_method": "bilinear",
+      "rescale_factor": 1,
+      "width": 512,
+      "height": 512,
+      "x_offset": 0,
+      "y_offset": 140,
+      "rotation": 9.992007221626409E-15,
+      "opacity": 0,
+      "base_image": [
+        "3396",
+        0
+      ],
+      "overlay_image": [
+        "3403",
+        0
+      ]
+    },
+    "class_type": "Image Overlay",
+    "_meta": {
+      "title": "Image Overlay"
+    }
+  },
+  "3402": {
+    "inputs": {
+      "mode": "similarity",
+      "tolerance": 0,
+      "text_a": [
+        "3397",
+        0
+      ],
+      "text_b": [
+        "3399",
+        0
+      ]
+    },
+    "class_type": "Text Compare",
+    "_meta": {
+      "title": "Text Compare"
+    }
+  },
+  "3403": {
+    "inputs": {
+      "width": 1080,
+      "height": 2081,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "class_type": "Image Blank",
+    "_meta": {
+      "title": "Image Blank"
+    }
+  },
+  "3405": {
+    "inputs": {
+      "condition": [
+        "3402",
+        2
+      ],
+      "when_true": [
+        "3406",
+        0
+      ],
+      "when_false": [
+        "983",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3406": {
+    "inputs": {
+      "x": 0,
+      "y": 295,
+      "width": 2080,
+      "height": 1948,
+      "divisible_by": 1,
+      "image": [
+        "983",
+        0
+      ]
+    },
+    "class_type": "KY_CropImageByXYWH",
+    "_meta": {
+      "title": "Crop Image by XYWH"
     }
   },
   "2920:2866": {
