@@ -1431,7 +1431,7 @@
   },
   "1193": {
     "inputs": {
-      "stop_at_clip_layer": -3,
+      "stop_at_clip_layer": -1,
       "clip": [
         "1192",
         0
@@ -1532,10 +1532,10 @@
   "1297": {
     "inputs": {
       "lora_name": "Pandora-RAWr.safetensors",
-      "strength_model": 1.2,
+      "strength_model": 1,
       "strength_clip": 0.08,
       "model": [
-        "3039",
+        "1195",
         0
       ],
       "clip": [
@@ -1917,7 +1917,7 @@
         "222",
         0
       ],
-      "b": 0.45,
+      "b": 0.44,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1948,7 +1948,7 @@
   "1657": {
     "inputs": {
       "scheduler": "beta",
-      "steps": 44,
+      "steps": 48,
       "denoise": [
         "1649",
         0
@@ -2031,7 +2031,7 @@
   },
   "1663": {
     "inputs": {
-      "denoise": 0.78,
+      "denoise": 0.6,
       "sigmas": [
         "1657",
         0
@@ -2704,7 +2704,7 @@
       "width": 1024,
       "height": 1024,
       "model": [
-        "2034",
+        "2219",
         0
       ]
     },
@@ -2792,42 +2792,6 @@
     "class_type": "ConditioningZeroOut",
     "_meta": {
       "title": "ConditioningZeroOut"
-    }
-  },
-  "2026": {
-    "inputs": {
-      "active_scale": 1,
-      "per_token_whiten": 0.05,
-      "norm_equalize": 0.05,
-      "early_layer_scale": 1.4,
-      "mid_layer_scale": 1,
-      "late_layer_scale": 0.8,
-      "preserve_original": 1,
-      "active_end_override": 1,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2012",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
-    }
-  },
-  "2034": {
-    "inputs": {
-      "lora_name": "Purple_Grainy_Kr2_AM.safetensors",
-      "strength_model": 0.64,
-      "model": [
-        "2219",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
     }
   },
   "2041": {
@@ -3612,7 +3576,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#E11A45FF",
+      "color": "#D4621AFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4739,25 +4703,6 @@
       "title": "ProPostApplyLUT"
     }
   },
-  "3039": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.25,
-      "start_percent": 0.45,
-      "end_percent": 0.6,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1195",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
-    }
-  },
   "3076": {
     "inputs": {
       "samples": [
@@ -4908,11 +4853,11 @@
         0
       ],
       "positive": [
-        "3093",
-        0
+        "3230",
+        1
       ],
       "negative": [
-        "3228",
+        "2314",
         0
       ],
       "latent_image": [
@@ -5027,7 +4972,7 @@
   "3145": {
     "inputs": {
       "conditioning": [
-        "2026",
+        "2012",
         0
       ],
       "latent": [
@@ -5266,7 +5211,7 @@
   },
   "3177": {
     "inputs": {
-      "value": "Color correction and photographic refinement only. Copy the photographic style from the reference image.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve facial identity, expression, gaze direction, pose, hairstyle, body proportions, clothing, accessories, composition, lighting direction, shadows, perspective, and image structure exactly. Preserve the transparency and natural appearance of clothing.\n\nCorrect only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, healthy color separation, and accurate color reproduction.\n\n__INSTRUCTION_FROM_FILE__\n\nSkin refinement means photographic color fidelity and natural texture preservation only. Preserve realistic matte skin, natural pores, fine lines, freckles, moles, subtle facial hair, and all authentic skin characteristics. Improve only natural color consistency, tonal transitions, and subtle texture continuity.\n\nPreserve natural lip color and realistic lip texture with subtle moisture while maintaining the original appearance. Do not increase lipstick intensity or alter lip shape.\n\nDo not beautify, smooth, airbrush, retouch, remove wrinkles, remove blemishes, enhance makeup, reshape the face, modify age, or alter facial characteristics. Avoid waxy, plastic, overly sharpened, or AI-generated skin appearance.\n\nDo not alter image content, composition, geometry, or structure."
+      "value": "Color correction and photographic refinement only.\n\nTreat the input image as the visual source of truth.\n\nPreserve the existing image appearance, including facial identity, facial features, expression, gaze, hairstyle, body proportions, pose, clothing, accessories, composition, perspective, lighting, shadows, highlights, exposure, colors, tonal range, contrast, texture, and background exactly as they appear.\n\nRemove visible watermarks, logos, timestamps, signatures, and text overlays when present. Reconstruct only the underlying image area and match the surrounding appearance naturally.\n\nCorrect only obvious excessive warm, red, or magenta color casts while maintaining the existing skin tones, clothing colors, lighting, and overall color relationships.\n\n__INSTRUCTION_FROM_FILE__\n\nDo not beautify, retouch, smooth, sharpen, enhance, reconstruct, or reinterpret facial features.\n\nDo not modify teeth, lips, eyes, eyebrows, nose, mouth, skin texture, facial hair, moles, freckles, or other facial details.\n\nDo not modify clothing, fabric texture, embroidery, lace, seams, jewelry, accessories, patterns, transparency, folds, or other garment details.\n\nDo not alter image geometry, composition, perspective, pose, body proportions, lighting, shadows, background, or depth.\n\nDo not introduce new detail or remove legitimate detail.\n\nApply only the explicitly requested modification and otherwise leave the image visually unchanged."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5961,7 +5906,7 @@
         2
       ],
       "when_true": [
-        "3406",
+        "3411",
         0
       ],
       "when_false": [
@@ -5974,21 +5919,21 @@
       "title": "Input Selector"
     }
   },
-  "3406": {
+  "3411": {
     "inputs": {
-      "x": 0,
-      "y": 295,
       "width": 1080,
-      "height": 1933,
-      "divisible_by": 1,
+      "height": 1936,
+      "position": "top-left",
+      "x_offset": 0,
+      "y_offset": 295,
       "image": [
         "983",
         0
       ]
     },
-    "class_type": "KY_CropImageByXYWH",
+    "class_type": "ImageCrop+",
     "_meta": {
-      "title": "Crop Image by XYWH"
+      "title": "🔧 Image Crop"
     }
   },
   "2920:2866": {
