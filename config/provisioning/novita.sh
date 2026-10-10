@@ -284,7 +284,10 @@ LORA_MODELS=(
     # ------------------------------
     # Flux Krea 2
     # ------------------------------
-
+    # Crisp_Analog_Vintage.safetensors
+    "https://civitai.com/api/download/models/3155331?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # bss_aging_krea2.safetensors
+    "https://civitai.com/api/download/models/3362394?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # SummerVibesHM_krea2_epoch8.safetensors
     "https://civitai.com/api/download/models/3065628?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # softwatercolor.safetensors
