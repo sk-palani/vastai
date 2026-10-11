@@ -1419,7 +1419,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1": "clip_l.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -1427,25 +1427,6 @@
     "class_type": "DualCLIPLoader",
     "_meta": {
       "title": "DualCLIPLoader"
-    }
-  },
-  "1195": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.5,
-      "start_percent": 0,
-      "end_percent": 0.45,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1196",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
     }
   },
   "1196": {
@@ -1506,7 +1487,7 @@
       "strength_model": 1.2,
       "strength_clip": 1,
       "model": [
-        "3039",
+        "1196",
         0
       ],
       "clip": [
@@ -1785,7 +1766,7 @@
   "1628": {
     "inputs": {
       "model": [
-        "1660",
+        "1298",
         0
       ],
       "conditioning": [
@@ -1815,18 +1796,6 @@
     "class_type": "DisableNoise",
     "_meta": {
       "title": "DisableNoise"
-    }
-  },
-  "1639": {
-    "inputs": {
-      "image": [
-        "577",
-        0
-      ]
-    },
-    "class_type": "GetImageSize+",
-    "_meta": {
-      "title": "🔧 Get Image Size"
     }
   },
   "1642": {
@@ -1919,13 +1888,13 @@
   "1657": {
     "inputs": {
       "scheduler": "beta",
-      "steps": 64,
+      "steps": 30,
       "denoise": [
         "1649",
         0
       ],
       "model": [
-        "1660",
+        "1298",
         0
       ]
     },
@@ -1948,28 +1917,6 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "FLUX_VAE Decode"
-    }
-  },
-  "1660": {
-    "inputs": {
-      "max_shift": 1.15,
-      "base_shift": 0.6,
-      "width": [
-        "1639",
-        0
-      ],
-      "height": [
-        "1639",
-        1
-      ],
-      "model": [
-        "1298",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "FLUX_ModelSamplingFlux"
     }
   },
   "1661": {
@@ -2763,6 +2710,28 @@
     "class_type": "ConditioningZeroOut",
     "_meta": {
       "title": "ConditioningZeroOut"
+    }
+  },
+  "2026": {
+    "inputs": {
+      "active_scale": 1,
+      "per_token_whiten": 0.05,
+      "norm_equalize": 0.05,
+      "early_layer_scale": 1.4,
+      "mid_layer_scale": 1,
+      "late_layer_scale": 0.8,
+      "preserve_original": 1,
+      "active_end_override": 1,
+      "device": "auto",
+      "debug": false,
+      "conditioning": [
+        "2012",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinEnhancer",
+    "_meta": {
+      "title": "FLUX.2 Klein Enhancer"
     }
   },
   "2041": {
@@ -4624,25 +4593,6 @@
       "title": "ProPostApplyLUT"
     }
   },
-  "3039": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.25,
-      "start_percent": 0.45,
-      "end_percent": 0.6,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1195",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
-    }
-  },
   "3076": {
     "inputs": {
       "samples": [
@@ -4759,7 +4709,7 @@
       "hue": 0,
       "brightness": -5,
       "contrast": -1.2,
-      "saturation": -2.3,
+      "saturation": 2.3,
       "gamma": [
         "3141",
         0
@@ -4912,7 +4862,7 @@
   "3145": {
     "inputs": {
       "conditioning": [
-        "2012",
+        "2026",
         0
       ],
       "latent": [
@@ -5024,15 +4974,15 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 14,
       "cfg": 1,
-      "sampler_name": "dpmpp_2m_sde",
+      "sampler_name": "dpmpp_sde",
       "scheduler": "simple",
-      "start_at_step": 5,
+      "start_at_step": 11,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
-        "3377",
+        "3378",
         0
       ],
       "positive": [
@@ -5344,7 +5294,7 @@
   },
   "3200": {
     "inputs": {
-      "value": "A professionally rendered monochrome photograph of "
+      "value": "A professionally rendered monochrome photograph of   "
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5836,7 +5786,7 @@
   "3416": {
     "inputs": {
       "lora_name": "Crisp_Analog_Vintage.safetensors",
-      "strength_model": 1,
+      "strength_model": 0.6,
       "model": [
         "3166",
         0
@@ -5853,7 +5803,7 @@
         "2406",
         0
       ],
-      "string_b": "inline-skin-lora, detailed skin texture, \ncl3@nvint@ge",
+      "string_b": "cl3@nvint@ge",
       "delimiter": ", "
     },
     "class_type": "StringConcatenate",
