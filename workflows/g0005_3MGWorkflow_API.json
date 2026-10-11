@@ -1429,6 +1429,38 @@
       "title": "DualCLIPLoader"
     }
   },
+  "1193": {
+    "inputs": {
+      "stop_at_clip_layer": -3,
+      "clip": [
+        "1192",
+        0
+      ]
+    },
+    "class_type": "CLIPSetLastLayer",
+    "_meta": {
+      "title": "CLIP Set Last Layer"
+    }
+  },
+  "1195": {
+    "inputs": {
+      "block_number": 4,
+      "downscale_factor": 1.5,
+      "start_percent": 0,
+      "end_percent": 0.45,
+      "downscale_after_skip": true,
+      "downscale_method": "bislerp",
+      "upscale_method": "bislerp",
+      "model": [
+        "1196",
+        0
+      ]
+    },
+    "class_type": "PatchModelAddDownscale",
+    "_meta": {
+      "title": "4::2::0::0.5"
+    }
+  },
   "1196": {
     "inputs": {
       "unet_name": "flux1-dev.safetensors",
@@ -1437,6 +1469,22 @@
     "class_type": "UNETLoader",
     "_meta": {
       "title": "Load Diffusion Model"
+    }
+  },
+  "1197": {
+    "inputs": {
+      "q": 1.03,
+      "k": 1.01,
+      "v": 0.99,
+      "out": 1.03,
+      "clip": [
+        "1193",
+        0
+      ]
+    },
+    "class_type": "CLIPAttentionMultiply",
+    "_meta": {
+      "title": "CLIPAttentionMultiply"
     }
   },
   "1216": {
@@ -1451,7 +1499,7 @@
       ],
       "guidance": 3.5,
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -1487,11 +1535,11 @@
       "strength_model": 1.2,
       "strength_clip": 1,
       "model": [
-        "1196",
+        "1195",
         0
       ],
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -1766,7 +1814,7 @@
   "1628": {
     "inputs": {
       "model": [
-        "1298",
+        "1660",
         0
       ],
       "conditioning": [
@@ -1796,6 +1844,18 @@
     "class_type": "DisableNoise",
     "_meta": {
       "title": "DisableNoise"
+    }
+  },
+  "1639": {
+    "inputs": {
+      "image": [
+        "577",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
     }
   },
   "1642": {
@@ -1857,7 +1917,7 @@
         "222",
         0
       ],
-      "b": 0.7,
+      "b": 0.3,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1888,13 +1948,13 @@
   "1657": {
     "inputs": {
       "scheduler": "beta",
-      "steps": 30,
+      "steps": 45,
       "denoise": [
         "1649",
         0
       ],
       "model": [
-        "1298",
+        "1660",
         0
       ]
     },
@@ -1917,6 +1977,28 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "FLUX_VAE Decode"
+    }
+  },
+  "1660": {
+    "inputs": {
+      "max_shift": 1.15,
+      "base_shift": 0.6,
+      "width": [
+        "1639",
+        0
+      ],
+      "height": [
+        "1639",
+        2
+      ],
+      "model": [
+        "1298",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingFlux",
+    "_meta": {
+      "title": "FLUX_ModelSamplingFlux"
     }
   },
   "1661": {
@@ -1949,7 +2031,7 @@
   },
   "1663": {
     "inputs": {
-      "denoise": 0.36,
+      "denoise": 0.48,
       "sigmas": [
         "1657",
         0
@@ -2005,7 +2087,7 @@
         0
       ],
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -2410,7 +2492,7 @@
   },
   "1965": {
     "inputs": {
-      "balance": 0.8,
+      "balance": 0.665,
       "debug": true,
       "model": [
         "2219",
@@ -2500,8 +2582,14 @@
     "inputs": {
       "max_shift": 0.75,
       "base_shift": 0.43,
-      "width": 1024,
-      "height": 1024,
+      "width": [
+        "3423",
+        0
+      ],
+      "height": [
+        "3423",
+        1
+      ],
       "model": [
         "2219",
         0
@@ -2573,7 +2661,7 @@
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
-      "denoise": 0.1,
+      "denoise": 0.06,
       "model": [
         "3147",
         0
@@ -2617,10 +2705,16 @@
   },
   "2011": {
     "inputs": {
-      "max_shift": 0.75,
-      "base_shift": 0.43,
-      "width": 1024,
-      "height": 1024,
+      "max_shift": 0.95,
+      "base_shift": 0.47,
+      "width": [
+        "3421",
+        0
+      ],
+      "height": [
+        "3421",
+        1
+      ],
       "model": [
         "2219",
         0
@@ -2710,28 +2804,6 @@
     "class_type": "ConditioningZeroOut",
     "_meta": {
       "title": "ConditioningZeroOut"
-    }
-  },
-  "2026": {
-    "inputs": {
-      "active_scale": 1,
-      "per_token_whiten": 0.05,
-      "norm_equalize": 0.05,
-      "early_layer_scale": 1.4,
-      "mid_layer_scale": 1,
-      "late_layer_scale": 0.8,
-      "preserve_original": 1,
-      "active_end_override": 1,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2012",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
     }
   },
   "2041": {
@@ -3478,7 +3550,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#15D8B3FF",
+      "color": "#E11A45FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3566,8 +3638,14 @@
     "inputs": {
       "max_shift": 0.75,
       "base_shift": 0.43,
-      "width": 1024,
-      "height": 1024,
+      "width": [
+        "3425",
+        0
+      ],
+      "height": [
+        "3425",
+        1
+      ],
       "model": [
         "2131",
         0
@@ -4024,7 +4102,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
+      "unet_name": "default_krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4070,7 +4148,7 @@
       "brightness": -1,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 0.93,
+      "gamma": 0.9,
       "image": [
         "1094",
         0
@@ -4206,7 +4284,7 @@
         0
       ],
       "clip": [
-        "1192",
+        "1197",
         0
       ]
     },
@@ -4709,7 +4787,7 @@
       "hue": 0,
       "brightness": -5,
       "contrast": -1.2,
-      "saturation": 2.3,
+      "saturation": 9,
       "gamma": [
         "3141",
         0
@@ -4862,7 +4940,7 @@
   "3145": {
     "inputs": {
       "conditioning": [
-        "2026",
+        "3420",
         0
       ],
       "latent": [
@@ -4877,7 +4955,7 @@
   },
   "3147": {
     "inputs": {
-      "balance": 0.665,
+      "balance": 0.335,
       "debug": false,
       "model": [
         "2011",
@@ -4958,7 +5036,7 @@
       "drop_size": 10,
       "contour_fill": false,
       "mask": [
-        "1719",
+        "3427",
         0
       ]
     },
@@ -5183,21 +5261,6 @@
       "title": "Input Selector"
     }
   },
-  "3191": {
-    "inputs": {
-      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "A professionally photographed portrait of an Indian woman, v1dhya5.\n\nTreat the input face and smile as correct. Refine only missing photographic detail while preserving the subject's facial identity, expression, gaze direction, facial proportions, head shape, hairstyle, bindi, jewelry, lighting, white balance, composition, and photographic color grading.\n\nMaintain realistic matte skin with subtle natural pores, gentle tonal variation, authentic photographic texture, soft facial transitions, and natural melanin-rich South Indian skin tones. Preserve existing freckles, moles, fine facial hair, eyelashes, eyebrows, and other natural facial characteristics exactly as they appear. Improve only subtle eye clarity, iris definition, eyelash detail, eyebrow definition, natural lip definition, and overall facial coherence while maintaining realistic optical sharpness.\n\nPreserve the natural shape, spacing, alignment, translucency, and color variation of the teeth. Maintain realistic enamel shading and subtle imperfections. Do not whiten teeth excessively, sharpen tooth edges, invent or remove teeth, alter the smile, or create perfectly uniform teeth.\n\nPreserve realistic age, facial geometry, skin texture, and natural imperfections. Keep clothing, accessories, background, shadows, and highlights unchanged.\n\nDo not beautify, reshape, de-age, age, stylize, smooth skin, remove pores, add makeup, enlarge eyes, sharpen excessively, alter facial proportions, change expression, modify hair, introduce artificial skin texture, hallucinate facial details, or create new artifacts.",
-      "guidance": 3.5,
-      "clip": [
-        "3413",
-        0
-      ]
-    },
-    "class_type": "CLIPTextEncodeFlux",
-    "_meta": {
-      "title": "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
   "3192": {
     "inputs": {
       "condition": [
@@ -5331,7 +5394,7 @@
         0
       ],
       "mask": [
-        "1719",
+        "3427",
         0
       ]
     },
@@ -5344,8 +5407,14 @@
     "inputs": {
       "max_shift": 1.08,
       "base_shift": 0.5,
-      "width": 896,
-      "height": 896,
+      "width": [
+        "3427",
+        1
+      ],
+      "height": [
+        "3427",
+        2
+      ],
       "model": [
         "2925",
         0
@@ -5354,15 +5423,6 @@
     "class_type": "ModelSamplingFlux",
     "_meta": {
       "title": "ModelSamplingFlux"
-    }
-  },
-  "3213": {
-    "inputs": {
-      "text": "A professionally color graded photograph of an Indian  v1dhya5 Voluptuous woman with a naturally attractive and well proportioned face, a small black bindi on her forehead, realistic facial structure and identity, natural matte skin with visible pores and fine microtexture, subtle peach fuzz and tiny vellus hairs softly illuminated by gentle side lighting, mild skin imperfections including faint acne marks and slight uneven tone, balanced skin roughness with no shine or oily highlights, soft diffused lighting with controlled highlights, photorealistic rendering with high detail and clean, artifact free skin,\n\nnatural but slightly vibrant colors with balanced saturation, realistic skin tones with subtle richness, no dull or washed out appearance\n\n\nShe has an Voluptuous hourglass figure: 5'8\" tall, weighing approximately 160 lbs or 72 kilograms, with a 36-inch bust, 29-inch waist, and 36-inch hips. Her thighs are thick. In this portrait, there is an emphasis on the realistic representation of the subject's curvy body type, including Large breasts size that remains aesthetically pleasing while being in line with a natural aging process, along with minimal sagging breasts, beautiful cleavage.\n  tiny black mole in the chin,(She has dark supple non-oily skin with micro-hairs:1.3),  "
-    },
-    "class_type": "Text Multiline",
-    "_meta": {
-      "title": "Text Multiline"
     }
   },
   "3226": {
@@ -5460,7 +5520,7 @@
   "3384": {
     "inputs": {
       "lora_name": "Flux2-Klein-9B-consistency-V2.safetensors",
-      "strength_model": 0.92,
+      "strength_model": 1,
       "model": [
         "2124",
         0
@@ -5809,6 +5869,76 @@
     "class_type": "StringConcatenate",
     "_meta": {
       "title": "Concatenate Text (LoRA Trigger Word)"
+    }
+  },
+  "3420": {
+    "inputs": {
+      "active_scale": 1,
+      "per_token_whiten": 0,
+      "norm_equalize": 0,
+      "early_layer_scale": 1,
+      "mid_layer_scale": 1,
+      "late_layer_scale": 1,
+      "preserve_original": 0,
+      "active_end_override": 0,
+      "device": "auto",
+      "debug": false,
+      "conditioning": [
+        "2012",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinEnhancer",
+    "_meta": {
+      "title": "FLUX.2 Klein Enhancer"
+    }
+  },
+  "3421": {
+    "inputs": {
+      "image": [
+        "2339",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "3423": {
+    "inputs": {
+      "image": [
+        "1985",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "3425": {
+    "inputs": {
+      "image": [
+        "1985",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "3427": {
+    "inputs": {
+      "mask": [
+        "1719",
+        0
+      ]
+    },
+    "class_type": "GetMaskSizeAndCount",
+    "_meta": {
+      "title": "Get Mask Size & Count"
     }
   },
   "2920:2866": {
