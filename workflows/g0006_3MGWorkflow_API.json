@@ -2818,42 +2818,6 @@
       "title": "ConditioningZeroOut"
     }
   },
-  "2026": {
-    "inputs": {
-      "active_scale": 1,
-      "per_token_whiten": 0.05,
-      "norm_equalize": 0.05,
-      "early_layer_scale": 1.4,
-      "mid_layer_scale": 1,
-      "late_layer_scale": 0.8,
-      "preserve_original": 1,
-      "active_end_override": 1,
-      "device": "auto",
-      "debug": false,
-      "conditioning": [
-        "2012",
-        0
-      ]
-    },
-    "class_type": "Flux2KleinEnhancer",
-    "_meta": {
-      "title": "FLUX.2 Klein Enhancer"
-    }
-  },
-  "2034": {
-    "inputs": {
-      "lora_name": "Purple_Grainy_Kr2_AM.safetensors",
-      "strength_model": 0.64,
-      "model": [
-        "2219",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
   "2041": {
     "inputs": {
       "seed": [
@@ -4751,7 +4715,7 @@
   "3027": {
     "inputs": {
       "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.12,
+      "strength": 0.09,
       "log": false,
       "image": [
         "3012",
@@ -4761,25 +4725,6 @@
     "class_type": "ProPostApplyLUT",
     "_meta": {
       "title": "ProPostApplyLUT"
-    }
-  },
-  "3039": {
-    "inputs": {
-      "block_number": 4,
-      "downscale_factor": 1.25,
-      "start_percent": 0.45,
-      "end_percent": 0.6,
-      "downscale_after_skip": true,
-      "downscale_method": "bislerp",
-      "upscale_method": "bislerp",
-      "model": [
-        "1195",
-        0
-      ]
-    },
-    "class_type": "PatchModelAddDownscale",
-    "_meta": {
-      "title": "4::2::0::0.5"
     }
   },
   "3076": {
@@ -4935,8 +4880,8 @@
         0
       ],
       "clip": [
-        "3306",
-        1
+        "2349",
+        0
       ],
       "vae": [
         "2315",
@@ -5150,7 +5095,7 @@
       "end_at_step": 32,
       "return_with_leftover_noise": "enable",
       "model": [
-        "3230",
+        "3385",
         0
       ],
       "positive": [
@@ -5716,7 +5661,7 @@
       "lora_name": "krea-detail-enhancer-exp.safetensors",
       "strength_model": 0.59,
       "model": [
-        "3378",
+        "3230",
         0
       ]
     },
