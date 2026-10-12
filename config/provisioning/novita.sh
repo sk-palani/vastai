@@ -224,6 +224,8 @@ LUTS=(
   "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/luts/Presetpro%20-%20Vibe.cube"
   "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/luts/Presetpro%20-%20Emulation.cube"
   "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/luts/Presetpro%20-%20Fuji%20Film.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/luts/Monochrome_Safe_Gentle_Contrast_33.cube"
+  "https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/assets/luts/Neutral_Identity_33.cube"
 )
 
 
@@ -284,6 +286,8 @@ LORA_MODELS=(
     # ------------------------------
     # Flux Krea 2
     # ------------------------------
+    # krea2_natural_expressions_V2.safetensors
+    "https://civitai.com/api/download/models/3350181?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Crisp_Analog_Vintage.safetensors
     "https://civitai.com/api/download/models/3155331?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # bss_aging_krea2.safetensors
