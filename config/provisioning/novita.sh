@@ -286,6 +286,8 @@ LORA_MODELS=(
     # ------------------------------
     # Flux Krea 2
     # ------------------------------
+    # babegenerator.ink-realism_helper.safetensors
+    "https://civitai.com/api/download/models/3362520?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # krea2_natural_expressions_V2.safetensors
     "https://civitai.com/api/download/models/3350181?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Crisp_Analog_Vintage.safetensors
