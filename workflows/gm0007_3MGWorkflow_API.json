@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "2.0",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1113,10 +1113,6 @@
         "103",
         0
       ],
-      "text_b": [
-        "672",
-        0
-      ],
       "text_c": [
         "1322",
         0
@@ -1591,7 +1587,7 @@
   },
   "1309": {
     "inputs": {
-      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
+      "text": "Indian woman,  , __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -1741,7 +1737,7 @@
   },
   "1572": {
     "inputs": {
-      "text": "Indian woman, __AGE__ , serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, realistic fabric texture, realistic   background,   ultra high resolution, professional RAW photograph\n"
+      "text": "Indian woman,   , serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, realistic fabric texture, realistic   background,   ultra high resolution, professional RAW photograph\n"
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -3855,7 +3851,7 @@
   "3076": {
     "inputs": {
       "samples": [
-        "3162",
+        "3576",
         0
       ],
       "vae": [
@@ -3949,7 +3945,7 @@
       "monochrome_grain": false,
       "highlight_rolloff": 0.15,
       "image": [
-        "3076",
+        "3085",
         0
       ],
       "depth_map": [
@@ -3960,6 +3956,27 @@
     "class_type": "OpticalRealism",
     "_meta": {
       "title": "Optical Realism & Physics"
+    }
+  },
+  "3085": {
+    "inputs": {
+      "temperature": 0,
+      "hue": 0,
+      "brightness": 0,
+      "contrast": 3.8000000000000007,
+      "saturation": 2.7,
+      "gamma": [
+        "3141",
+        0
+      ],
+      "image": [
+        "3076",
+        0
+      ]
+    },
+    "class_type": "ColorCorrect",
+    "_meta": {
+      "title": "ColorCorrect"
     }
   },
   "3086": {
@@ -4072,6 +4089,15 @@
       "title": "Display Int (rgthree)"
     }
   },
+  "3141": {
+    "inputs": {
+      "value": 1.08
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
+    }
+  },
   "3142": {
     "inputs": {
       "pixels": [
@@ -4129,11 +4155,11 @@
         "378",
         0
       ],
-      "steps": 12,
+      "steps": 35,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 6,
+      "start_at_step": 27,
       "end_at_step": 999,
       "return_with_leftover_noise": "disable",
       "model": [
@@ -4874,6 +4900,18 @@
     "inputs": {
       "samples": [
         "2310",
+        0
+      ]
+    },
+    "class_type": "RemoveNoiseMask",
+    "_meta": {
+      "title": "Remove Noise Mask"
+    }
+  },
+  "3576": {
+    "inputs": {
+      "samples": [
+        "3162",
         0
       ]
     },
