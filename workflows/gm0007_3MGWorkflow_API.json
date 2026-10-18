@@ -4131,9 +4131,9 @@
       ],
       "steps": 12,
       "cfg": 1,
-      "sampler_name": "er_sde",
+      "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 8,
+      "start_at_step": 6,
       "end_at_step": 999,
       "return_with_leftover_noise": "disable",
       "model": [
