@@ -1318,25 +1318,6 @@
       "title": "Input Selector"
     }
   },
-  "1094": {
-    "inputs": {
-      "method": "mkl",
-      "strength": 0.12,
-      "multithread": false,
-      "image_ref": [
-        "127",
-        0
-      ],
-      "image_target": [
-        "1703",
-        0
-      ]
-    },
-    "class_type": "ColorMatch",
-    "_meta": {
-      "title": "Color Match"
-    }
-  },
   "1177": {
     "inputs": {
       "seed": -1
@@ -3300,7 +3281,7 @@
       "saturation": -0.3,
       "gamma": 0.9,
       "image": [
-        "1094",
+        "3580",
         0
       ]
     },
@@ -4892,6 +4873,26 @@
     "class_type": "AUSBOSS_NODES_Compare",
     "_meta": {
       "title": "Image Compare A/B 🆎"
+    }
+  },
+  "3580": {
+    "inputs": {
+      "strength": 0.15,
+      "method": "lab",
+      "invert_mask": false,
+      "reference_mode": "reference",
+      "image": [
+        "1703",
+        0
+      ],
+      "reference": [
+        "127",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ColorMatch",
+    "_meta": {
+      "title": "Color Match 🆎"
     }
   }
 }
