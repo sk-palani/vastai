@@ -4136,11 +4136,11 @@
         "378",
         0
       ],
-      "steps": 13,
+      "steps": 12,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "sgm_uniform",
-      "start_at_step": 8,
+      "scheduler": "simple",
+      "start_at_step": 7,
       "end_at_step": 999,
       "return_with_leftover_noise": "disable",
       "model": [
