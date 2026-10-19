@@ -1832,7 +1832,7 @@
         "222",
         0
       ],
-      "b": 0.72,
+      "b": 0.4,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
