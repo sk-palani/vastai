@@ -3999,7 +3999,7 @@
   "3093": {
     "inputs": {
       "prompt": [
-        "2406",
+        "3577",
         0
       ],
       "clip": [
@@ -4184,7 +4184,7 @@
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
       "strength_model": 1,
       "model": [
-        "2322",
+        "3229",
         0
       ]
     },
@@ -4478,6 +4478,20 @@
     "class_type": "ConditioningZeroOut",
     "_meta": {
       "title": "Conditioning Zero Out"
+    }
+  },
+  "3229": {
+    "inputs": {
+      "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
+      "strength_model": 0.6,
+      "model": [
+        "2322",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Load LoRA"
     }
   },
   "3377": {
@@ -4836,6 +4850,20 @@
     "class_type": "RemoveNoiseMask",
     "_meta": {
       "title": "Remove Noise Mask"
+    }
+  },
+  "3577": {
+    "inputs": {
+      "string_a": [
+        "2406",
+        0
+      ],
+      "string_b": "\ninline-skin-lora, detailed skin texture",
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text (LoRA Trigger Word)"
     }
   },
   "3578": {
