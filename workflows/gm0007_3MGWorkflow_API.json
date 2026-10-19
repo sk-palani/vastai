@@ -3966,9 +3966,9 @@
         "378",
         0
       ],
-      "steps": 12,
+      "steps": 9,
       "cfg": 1,
-      "sampler_name": "euler",
+      "sampler_name": "er_sde",
       "scheduler": "simple",
       "denoise": [
         "3100",
@@ -4136,11 +4136,11 @@
         "378",
         0
       ],
-      "steps": 12,
+      "steps": 14,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 7,
+      "start_at_step": 10,
       "end_at_step": 999,
       "return_with_leftover_noise": "disable",
       "model": [
@@ -4156,8 +4156,8 @@
         0
       ],
       "latent_image": [
-        "3557",
-        2
+        "3567",
+        0
       ]
     },
     "class_type": "KSamplerAdvanced",
@@ -4660,7 +4660,7 @@
         0
       ],
       "image_b": [
-        "3167",
+        "3578",
         0
       ]
     },
@@ -4810,6 +4810,18 @@
     "class_type": "AUSBOSS_NODES_ImageSize",
     "_meta": {
       "title": "Image Size 🆎"
+    }
+  },
+  "3567": {
+    "inputs": {
+      "samples": [
+        "3557",
+        2
+      ]
+    },
+    "class_type": "RemoveNoiseMask",
+    "_meta": {
+      "title": "Remove Noise Mask"
     }
   },
   "3569": {
