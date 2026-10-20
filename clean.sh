@@ -16,7 +16,7 @@ random_seed=$(( random_seed % max_seed ))
 echo "[$LOG_TS] 🎲 Using random seed: $random_seed"
 
 # --- Identify removable node types ---
-REMOVE_TYPES='["PreviewAny", "ShowText|pysssss", "ShowText|LP", "PreviewImage"]'
+REMOVE_TYPES='["PreviewAny", "ShowText|pysssss", "ShowText|LP", "PreviewImage", "AUSBOSS_NODES_Compare"]'
 
 random_seed="-1"
 
