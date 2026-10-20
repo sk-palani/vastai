@@ -56,22 +56,6 @@
       "title": "Enable for fixed_seed"
     }
   },
-  "127": {
-    "inputs": {
-      "megapixel": "1.8",
-      "divisible_by": "8",
-      "mode": "pad",
-      "delta_percent": 0,
-      "image": [
-        "3424",
-        0
-      ]
-    },
-    "class_type": "Image_Preparations",
-    "_meta": {
-      "title": "Image Preparations 1.8"
-    }
-  },
   "128": {
     "inputs": {
       "value": "_generated_"
@@ -438,7 +422,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "127",
+        "3618",
         0
       ],
       "mask": [
@@ -462,7 +446,7 @@
         0
       ],
       "when_false": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -674,6 +658,10 @@
         0
       ],
       "values.b": [
+        "623",
+        0
+      ],
+      "values.c": [
         "624",
         0
       ]
@@ -1823,7 +1811,7 @@
         "222",
         0
       ],
-      "b": 0.44,
+      "b": 0.11,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -1854,7 +1842,7 @@
   "1657": {
     "inputs": {
       "scheduler": "beta",
-      "steps": 56,
+      "steps": 54,
       "denoise": [
         "1649",
         0
@@ -2511,7 +2499,7 @@
   "2074": {
     "inputs": {
       "image": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -2587,7 +2575,7 @@
         0
       ],
       "model_b": [
-        "2144",
+        "3585",
         0
       ],
       "boolean": [
@@ -3184,7 +3172,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -3270,7 +3258,7 @@
         0
       ],
       "any_02": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -3332,7 +3320,7 @@
         0
       ],
       "any_03": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -3655,7 +3643,7 @@
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -3667,7 +3655,7 @@
   "2999": {
     "inputs": {
       "text": [
-        "3008",
+        "3642",
         0
       ],
       "clip": [
@@ -3847,28 +3835,13 @@
         0
       ],
       "any_02": [
-        "127",
+        "3618",
         0
       ]
     },
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
-    }
-  },
-  "3027": {
-    "inputs": {
-      "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.09,
-      "log": false,
-      "image": [
-        "3012",
-        0
-      ]
-    },
-    "class_type": "ProPostApplyLUT",
-    "_meta": {
-      "title": "ProPostApplyLUT"
     }
   },
   "3039": {
@@ -4087,7 +4060,7 @@
         "222",
         0
       ],
-      "b": 0.65,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -4143,7 +4116,7 @@
   "3142": {
     "inputs": {
       "pixels": [
-        "127",
+        "3618",
         0
       ],
       "vae": [
@@ -4192,18 +4165,18 @@
   },
   "3155": {
     "inputs": {
-      "guide_size": 512,
+      "guide_size": 896,
       "guide_size_for": false,
       "max_size": 896,
       "seed": [
         "378",
         0
       ],
-      "steps": 18,
+      "steps": 33,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
-      "denoise": 0.12,
+      "denoise": 0.09,
       "feather": 8,
       "noise_mask": true,
       "force_inpaint": true,
@@ -4271,12 +4244,12 @@
         "378",
         0
       ],
-      "steps": 14,
+      "steps": 41,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 10,
-      "end_at_step": 999,
+      "start_at_step": 36,
+      "end_at_step": 41,
       "return_with_leftover_noise": "disable",
       "model": [
         "3166",
@@ -4506,7 +4479,7 @@
         0
       ],
       "when_false": [
-        "3027",
+        "3012",
         0
       ]
     },
@@ -4536,7 +4509,7 @@
       "strength": 0.08,
       "log": false,
       "image": [
-        "2377",
+        "3633",
         0
       ]
     },
@@ -4551,7 +4524,7 @@
       "strength": 0.12,
       "log": false,
       "image": [
-        "2377",
+        "3633",
         0
       ]
     },
@@ -4639,18 +4612,18 @@
   },
   "3205": {
     "inputs": {
-      "max_shift": 1.08,
+      "max_shift": 1.15,
       "base_shift": 0.5,
       "width": 896,
       "height": 896,
       "model": [
-        "2925",
+        "1298",
         0
       ]
     },
     "class_type": "ModelSamplingFlux",
     "_meta": {
-      "title": "ModelSamplingFlux"
+      "title": "FLUX_ModelSamplingFlux"
     }
   },
   "3228": {
@@ -4708,7 +4681,7 @@
   "3504": {
     "inputs": {
       "image": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -4850,7 +4823,7 @@
       ],
       "keep_last_prompt": false,
       "image": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -5047,7 +5020,7 @@
         0
       ],
       "reference": [
-        "127",
+        "3618",
         0
       ]
     },
@@ -5069,6 +5042,20 @@
     "class_type": "ImageSharpen",
     "_meta": {
       "title": "Sharpen Image"
+    }
+  },
+  "3585": {
+    "inputs": {
+      "lora_name": "d4rkbl4ckskin-f2-klein-9b.safetensors",
+      "strength_model": 1,
+      "model": [
+        "2144",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Klein_Load LoRA"
     }
   },
   "3589": {
@@ -5105,6 +5092,307 @@
     "class_type": "AUSBOSS_NODES_ShowText",
     "_meta": {
       "title": "Show Text 🆎"
+    }
+  },
+  "3600": {
+    "inputs": {
+      "overlay_resize": "None",
+      "resize_method": "bilinear",
+      "rescale_factor": 1,
+      "width": 512,
+      "height": 512,
+      "x_offset": 0,
+      "y_offset": 140,
+      "rotation": 9.992007221626409E-15,
+      "opacity": 0,
+      "base_image": [
+        "3601",
+        0
+      ],
+      "overlay_image": [
+        "3611",
+        0
+      ]
+    },
+    "class_type": "Image Overlay",
+    "_meta": {
+      "title": "Image Overlay"
+    }
+  },
+  "3601": {
+    "inputs": {
+      "overlay_resize": "None",
+      "resize_method": "bilinear",
+      "rescale_factor": 1,
+      "width": 512,
+      "height": 512,
+      "x_offset": 370,
+      "y_offset": 2350,
+      "rotation": 9.992007221626409E-15,
+      "opacity": 0,
+      "base_image": [
+        "3424",
+        0
+      ],
+      "overlay_image": [
+        "3612",
+        0
+      ]
+    },
+    "class_type": "Image Overlay",
+    "_meta": {
+      "title": "Image Overlay"
+    }
+  },
+  "3602": {
+    "inputs": {
+      "width": 1080,
+      "height": 1936,
+      "position": "top-left",
+      "x_offset": 0,
+      "y_offset": 295,
+      "image": [
+        "3424",
+        0
+      ]
+    },
+    "class_type": "ImageCrop+",
+    "_meta": {
+      "title": "🔧 Image Crop"
+    }
+  },
+  "3603": {
+    "inputs": {
+      "k_means_algorithm": "lloyd",
+      "image": [
+        "3600",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: GetMainColors",
+    "_meta": {
+      "title": "LayerUtility: Get Main Colors"
+    }
+  },
+  "3604": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "3603",
+        1
+      ],
+      "text_b": [
+        "3603",
+        2
+      ],
+      "text_c": [
+        "3603",
+        3
+      ],
+      "text_d": [
+        "3603",
+        4
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "3606": {
+    "inputs": {
+      "mode": "similarity",
+      "tolerance": 0,
+      "text_a": [
+        "3604",
+        0
+      ],
+      "text_b": [
+        "3607",
+        0
+      ]
+    },
+    "class_type": "Text Compare",
+    "_meta": {
+      "title": "Text Compare"
+    }
+  },
+  "3607": {
+    "inputs": {
+      "value": "#000000#000000#000000#000000"
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Full Black"
+    }
+  },
+  "3608": {
+    "inputs": {
+      "condition": [
+        "3606",
+        2
+      ],
+      "when_true": [
+        "3602",
+        0
+      ],
+      "when_false": [
+        "3424",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3610": {
+    "inputs": {
+      "flip_method": "x-axis: vertically",
+      "image": [
+        "3608",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image"
+    }
+  },
+  "3611": {
+    "inputs": {
+      "width": 1080,
+      "height": 2081,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "class_type": "Image Blank",
+    "_meta": {
+      "title": "Image Blank"
+    }
+  },
+  "3612": {
+    "inputs": {
+      "width": 340,
+      "height": 28,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "class_type": "Image Blank",
+    "_meta": {
+      "title": "Image Blank"
+    }
+  },
+  "3614": {
+    "inputs": {
+      "condition": [
+        "3629",
+        0
+      ],
+      "when_true": [
+        "3610",
+        0
+      ],
+      "when_false": [
+        "3608",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3618": {
+    "inputs": {
+      "megapixel": "1.8",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 0,
+      "image": [
+        "3614",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations 1.8"
+    }
+  },
+  "3629": {
+    "inputs": {
+      "text": [
+        "135",
+        3
+      ],
+      "sub_text": "YYY",
+      "case_insensitive": false
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Contains [BBB]"
+    }
+  },
+  "3631": {
+    "inputs": {
+      "flip_method": "x-axis: vertically",
+      "image": [
+        "2377",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image"
+    }
+  },
+  "3633": {
+    "inputs": {
+      "condition": [
+        "3629",
+        0
+      ],
+      "when_true": [
+        "3631",
+        0
+      ],
+      "when_false": [
+        "2377",
+        0
+      ]
+    },
+    "class_type": "InputSelector",
+    "_meta": {
+      "title": "Input Selector"
+    }
+  },
+  "3641": {
+    "inputs": {
+      "text": [
+        "604",
+        1
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎"
+    }
+  },
+  "3642": {
+    "inputs": {
+      "string_a": [
+        "3008",
+        0
+      ],
+      "string_b": "dark black skin",
+      "delimiter": ", "
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text (LoRA Trigger Word)"
     }
   },
   "2920:2866": {
