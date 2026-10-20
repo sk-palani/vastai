@@ -2575,7 +2575,7 @@
         0
       ],
       "model_b": [
-        "3585",
+        "2144",
         0
       ],
       "boolean": [
@@ -2711,25 +2711,6 @@
       "strength_model": 0.73,
       "strength_clip": 0.1,
       "model": [
-        "2148",
-        0
-      ],
-      "clip": [
-        "2148",
-        1
-      ]
-    },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "RealSKin 0.92:0.10"
-    }
-  },
-  "2148": {
-    "inputs": {
-      "lora_name": "V4_flux_klein.safetensors",
-      "strength_model": 0.6,
-      "strength_clip": 0.6,
-      "model": [
         "2219",
         0
       ],
@@ -2740,7 +2721,7 @@
     },
     "class_type": "LoraLoader",
     "_meta": {
-      "title": "Load LoRA  - 0.60:0.44"
+      "title": "RealSKin 0.92:0.10"
     }
   },
   "2158": {
@@ -4244,12 +4225,12 @@
         "378",
         0
       ],
-      "steps": 41,
-      "cfg": 1,
+      "steps": 43,
+      "cfg": 0.8,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 36,
-      "end_at_step": 41,
+      "start_at_step": 38,
+      "end_at_step": 999,
       "return_with_leftover_noise": "disable",
       "model": [
         "3166",
@@ -5044,20 +5025,6 @@
       "title": "Sharpen Image"
     }
   },
-  "3585": {
-    "inputs": {
-      "lora_name": "d4rkbl4ckskin-f2-klein-9b.safetensors",
-      "strength_model": 1,
-      "model": [
-        "2144",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "Klein_Load LoRA"
-    }
-  },
   "3589": {
     "inputs": {
       "text": [
@@ -5311,7 +5278,7 @@
       "megapixel": "1.8",
       "divisible_by": "8",
       "mode": "pad",
-      "delta_percent": 0,
+      "delta_percent": 0.1,
       "image": [
         "3614",
         0
@@ -5393,6 +5360,23 @@
     "class_type": "StringConcatenate",
     "_meta": {
       "title": "Concatenate Text (LoRA Trigger Word)"
+    }
+  },
+  "3643": {
+    "inputs": {
+      "OutputDirectory": "temp",
+      "OverwriteFile": [
+        "470",
+        0
+      ],
+      "FilePaths": [
+        "445",
+        0
+      ]
+    },
+    "class_type": "JDCN_FileMover",
+    "_meta": {
+      "title": "JDCN_FileMover"
     }
   },
   "2920:2866": {
