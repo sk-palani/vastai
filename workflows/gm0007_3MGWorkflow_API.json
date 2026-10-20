@@ -58,7 +58,7 @@
   },
   "127": {
     "inputs": {
-      "megapixel": "2.0",
+      "megapixel": "1.7",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -196,7 +196,7 @@
   },
   "222": {
     "inputs": {
-      "value": 0.52
+      "value": 0.52001
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -1113,6 +1113,10 @@
         "103",
         0
       ],
+      "text_b": [
+        "672",
+        0
+      ],
       "text_c": [
         "1322",
         0
@@ -1269,7 +1273,7 @@
   },
   "674": {
     "inputs": {
-      "value": 29
+      "value": 30
     },
     "class_type": "easy int",
     "_meta": {
@@ -1477,11 +1481,11 @@
       "title": "FLUX VAE"
     }
   },
-  "1298": {
+  "1297": {
     "inputs": {
-      "lora_name": "vidhyas_lora_v3.safetensors",
-      "strength_model": 0.86,
-      "strength_clip": 0.08,
+      "lora_name": "realism_lora_comfy flux_converted.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
       "model": [
         "3039",
         0
@@ -1489,6 +1493,25 @@
       "clip": [
         "1197",
         0
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Pandora-RAWr 0.70::0.70"
+    }
+  },
+  "1298": {
+    "inputs": {
+      "lora_name": "vidhyas_lora_v3.safetensors",
+      "strength_model": 0.86,
+      "strength_clip": 0.08,
+      "model": [
+        "1297",
+        0
+      ],
+      "clip": [
+        "1297",
+        1
       ]
     },
     "class_type": "LoraLoader",
@@ -1549,7 +1572,7 @@
   },
   "1309": {
     "inputs": {
-      "text": "Indian woman,  , __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
+      "text": "Indian woman,  , __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n__AGE__\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -2922,7 +2945,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#F2765EFF",
+      "color": "#E11A45FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3308,7 +3331,7 @@
       "promist_strength": 0.02,
       "halation_strength": 0,
       "chromatic_aberration": 0.001,
-      "vignette_intensity": 0.02,
+      "vignette_intensity": 0.1,
       "grain_power": 0.01,
       "monochrome_grain": false,
       "highlight_rolloff": 0.08,
@@ -4007,7 +4030,7 @@
         "222",
         0
       ],
-      "b": 0.65,
+      "b": 0.7,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -4602,86 +4625,6 @@
       "title": "Qwen3.5-Uncensored"
     }
   },
-  "3533": {
-    "inputs": {
-      "image_a": [
-        "2215",
-        0
-      ],
-      "image_b": [
-        "127",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎"
-    }
-  },
-  "3534": {
-    "inputs": {
-      "image_a": [
-        "127",
-        0
-      ],
-      "image_b": [
-        "3424",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎"
-    }
-  },
-  "3536": {
-    "inputs": {
-      "image_a": [
-        "3076",
-        0
-      ],
-      "image_b": [
-        "3578",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎"
-    }
-  },
-  "3538": {
-    "inputs": {
-      "image_a": [
-        "2309",
-        0
-      ],
-      "image_b": [
-        "127",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎"
-    }
-  },
-  "3546": {
-    "inputs": {
-      "image_a": [
-        "2377",
-        0
-      ],
-      "image_b": [
-        "1703",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎"
-    }
-  },
   "3553": {
     "inputs": {
       "label": "face",
@@ -4692,7 +4635,7 @@
       "blur_radius": 0,
       "invert": false,
       "image": [
-        "2309",
+        "3584",
         0
       ]
     },
@@ -4859,22 +4802,6 @@
       "title": "Concatenate Text (LoRA Trigger Word)"
     }
   },
-  "3578": {
-    "inputs": {
-      "image_a": [
-        "3167",
-        0
-      ],
-      "image_b": [
-        "2309",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎"
-    }
-  },
   "3580": {
     "inputs": {
       "strength": 0.15,
@@ -4893,6 +4820,21 @@
     "class_type": "AUSBOSS_NODES_ColorMatch",
     "_meta": {
       "title": "Color Match 🆎"
+    }
+  },
+  "3584": {
+    "inputs": {
+      "sharpen_radius": 1,
+      "sigma": 0.15,
+      "alpha": 0.9,
+      "image": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "ImageSharpen",
+    "_meta": {
+      "title": "Sharpen Image"
     }
   }
 }
