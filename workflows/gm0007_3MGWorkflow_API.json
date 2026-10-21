@@ -3383,7 +3383,7 @@
       ],
       "max_length": 420,
       "sampling_mode": "on",
-      "sampling_mode.temperature": 0.2,
+      "sampling_mode.temperature": 0.7,
       "sampling_mode.top_k": 64,
       "sampling_mode.top_p": 0.95,
       "sampling_mode.min_p": 0.05,
@@ -4087,7 +4087,7 @@
   },
   "3141": {
     "inputs": {
-      "value": 1.08
+      "value": 0.93
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -4225,13 +4225,13 @@
         "378",
         0
       ],
-      "steps": 43,
-      "cfg": 0.8,
+      "steps": 9,
+      "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 38,
+      "start_at_step": 5,
       "end_at_step": 999,
-      "return_with_leftover_noise": "disable",
+      "return_with_leftover_noise": "enable",
       "model": [
         "3166",
         0
@@ -4593,7 +4593,7 @@
   },
   "3205": {
     "inputs": {
-      "max_shift": 1.15,
+      "max_shift": 1.08,
       "base_shift": 0.5,
       "width": 896,
       "height": 896,
@@ -4622,7 +4622,7 @@
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
-      "strength_model": 0.6,
+      "strength_model": 0.5,
       "model": [
         "2322",
         0
