@@ -288,6 +288,8 @@ LORA_MODELS=(
     # ------------------------------
     # babegenerator.ink-realism_helper.safetensors
     "https://civitai.com/api/download/models/3362520?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # boring_be_gone_v60.safetensors
+    "https://civitai.com/api/download/models/3422399?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # krea2_natural_expressions_V2.safetensors
     "https://civitai.com/api/download/models/3350181?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # Crisp_Analog_Vintage.safetensors
@@ -345,6 +347,12 @@ LORA_MODELS=(
     # ------------------------------
     # Flux2.Klein
     # ------------------------------
+
+    # d4rkbl4ckskin-f2-klein-9b.safetensors
+    # "https://civitai.com/api/download/models/3023772?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # busty_bodyshape_flux2_klein_9b_v1.0.safetensors
+    "https://civitai.com/api/download/models/3283262?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
     # V2_flux_klein_4.safetensors
     # "https://civitai.com/api/download/models/2777010?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # V3_flux_klein.safetensors
