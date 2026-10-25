@@ -3223,7 +3223,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#F70063FF",
+      "color": "#E11A45FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3534,7 +3534,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
+      "unet_name": "default_krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4071,8 +4071,8 @@
   "3076": {
     "inputs": {
       "samples": [
-        "3162",
-        0
+        "3693",
+        1
       ],
       "vae": [
         "2315",
@@ -4184,7 +4184,7 @@
         "222",
         0
       ],
-      "b": 0.6,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -4285,42 +4285,6 @@
     "class_type": "Flux2KleinTextRefBalance",
     "_meta": {
       "title": "FLUX.2 Klein Text/Ref Balance"
-    }
-  },
-  "3162": {
-    "inputs": {
-      "add_noise": "disable",
-      "noise_seed": [
-        "378",
-        0
-      ],
-      "steps": 19,
-      "cfg": 1,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "sgm_uniform",
-      "start_at_step": 14,
-      "end_at_step": 999,
-      "return_with_leftover_noise": "enable",
-      "model": [
-        "3229",
-        0
-      ],
-      "positive": [
-        "3557",
-        0
-      ],
-      "negative": [
-        "3557",
-        1
-      ],
-      "latent_image": [
-        "3557",
-        2
-      ]
-    },
-    "class_type": "KSamplerAdvanced",
-    "_meta": {
-      "title": "Krea_KSampler (Advanced)"
     }
   },
   "3165": {
@@ -4770,105 +4734,6 @@
       "title": "Qwen3.5-Uncensored"
     }
   },
-  "3553": {
-    "inputs": {
-      "label": "face",
-      "device": "auto",
-      "dtype": "bfloat16",
-      "model_id": "fashn-ai/fashn-human-parser",
-      "extra_labels": "skin",
-      "blur_radius": 0,
-      "invert": false,
-      "image": [
-        "3584",
-        0
-      ]
-    },
-    "class_type": "FashnHumanParserMask",
-    "_meta": {
-      "title": "FASHN Human Parser (Mask)"
-    }
-  },
-  "3554": {
-    "inputs": {
-      "expand": 26,
-      "incremental_expandrate": 6,
-      "tapered_corners": true,
-      "flip_input": false,
-      "blur_radius": 6,
-      "lerp_alpha": 1,
-      "decay_factor": 1,
-      "fill_holes": false,
-      "mask": [
-        "3553",
-        0
-      ]
-    },
-    "class_type": "GrowMaskWithBlur",
-    "_meta": {
-      "title": "Grow Mask With Blur"
-    }
-  },
-  "3557": {
-    "inputs": {
-      "noise_mask": true,
-      "positive": [
-        "3690",
-        0
-      ],
-      "negative": [
-        "3558",
-        0
-      ],
-      "vae": [
-        "2315",
-        0
-      ],
-      "pixels": [
-        "3569",
-        0
-      ],
-      "mask": [
-        "3554",
-        0
-      ]
-    },
-    "class_type": "InpaintModelConditioning",
-    "_meta": {
-      "title": "Krea_InpaintModelConditioning"
-    }
-  },
-  "3558": {
-    "inputs": {
-      "conditioning": [
-        "3690",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Conditioning Zero Out"
-    }
-  },
-  "3564": {
-    "inputs": {
-      "mask_opacity": 0.3,
-      "mask_color": "255, 0, 207",
-      "pass_through": false,
-      "image": [
-        "3569",
-        0
-      ],
-      "mask": [
-        "3554",
-        0
-      ]
-    },
-    "class_type": "ImageAndMaskPreview",
-    "_meta": {
-      "title": "ImageAndMaskPreview"
-    }
-  },
   "3565": {
     "inputs": {
       "image": [
@@ -4879,22 +4744,6 @@
     "class_type": "AUSBOSS_NODES_ImageSize",
     "_meta": {
       "title": "Image Size 🆎"
-    }
-  },
-  "3569": {
-    "inputs": {
-      "samples": [
-        "3692",
-        1
-      ],
-      "vae": [
-        "2315",
-        0
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "Krea_VAE Decode"
     }
   },
   "3577": {
@@ -5494,11 +5343,11 @@
   },
   "3692": {
     "inputs": {
-      "eta": 0.33,
+      "eta": 0.12,
       "sampler_name": "linear/euler",
       "scheduler": "beta",
-      "steps": 15,
-      "steps_to_run": 12,
+      "steps": 14,
+      "steps_to_run": 10,
       "denoise": [
         "3100",
         0
@@ -5511,7 +5360,7 @@
       "sampler_mode": "standard",
       "bongmath": true,
       "model": [
-        "3166",
+        "3229",
         0
       ],
       "positive": [
@@ -5525,6 +5374,43 @@
       "latent_image": [
         "2310",
         0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "Krea_ClownsharKSampler"
+    }
+  },
+  "3693": {
+    "inputs": {
+      "eta": 0,
+      "sampler_name": "exponential/res_4s_munthe-kaas",
+      "scheduler": "kl_optimal",
+      "steps": 17,
+      "steps_to_run": 5,
+      "denoise": 0.05,
+      "cfg": 1,
+      "seed": [
+        "378",
+        0
+      ],
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "3229",
+        0
+      ],
+      "positive": [
+        "3690",
+        0
+      ],
+      "negative": [
+        "3690",
+        0
+      ],
+      "latent_image": [
+        "3692",
+        1
       ]
     },
     "class_type": "ClownsharKSampler_Beta",
