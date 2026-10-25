@@ -1419,7 +1419,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
+      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -1551,7 +1551,7 @@
   "1298": {
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
-      "strength_model": 1,
+      "strength_model": 0.86,
       "strength_clip": 0.08,
       "model": [
         "1297",
@@ -2168,7 +2168,7 @@
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
       "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique.  \n",
-      "guidance": 2.8,
+      "guidance": 3.5,
       "clip": [
         "2925",
         1
@@ -4144,7 +4144,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4885,7 +4885,7 @@
         "222",
         0
       ],
-      "b": 0.78,
+      "b": 0.42,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
