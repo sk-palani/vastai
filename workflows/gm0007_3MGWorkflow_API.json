@@ -384,15 +384,6 @@
       "title": "Klein_CLIP exText Encode"
     }
   },
-  "476": {
-    "inputs": {
-      "value": 1.33
-    },
-    "class_type": "FloatConstant",
-    "_meta": {
-      "title": "Strength"
-    }
-  },
   "506": {
     "inputs": {
       "value": 1.19
@@ -422,7 +413,7 @@
       "padding_bottom": 64,
       "return_list": false,
       "image": [
-        "3618",
+        "3657",
         0
       ],
       "mask": [
@@ -446,7 +437,7 @@
         0
       ],
       "when_false": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -1085,7 +1076,7 @@
       "delimiter": ",",
       "clean_whitespace": "true",
       "text_a": [
-        "103",
+        "1322",
         0
       ],
       "text_b": [
@@ -1093,7 +1084,7 @@
         0
       ],
       "text_c": [
-        "1322",
+        "103",
         0
       ],
       "text_d": [
@@ -1346,7 +1337,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1": "ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -1456,6 +1447,30 @@
       "title": "FLUX VAE"
     }
   },
+  "1236": {
+    "inputs": {
+      "scheduler": "karras",
+      "steps": 18,
+      "denoise": 0.18,
+      "model": [
+        "1532",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "FLUX_BasicScheduler"
+    }
+  },
+  "1241": {
+    "inputs": {
+      "sampler_name": "dpmpp_2m"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
   "1297": {
     "inputs": {
       "lora_name": "Pandora-RAWr.safetensors",
@@ -1547,11 +1562,83 @@
   },
   "1309": {
     "inputs": {
-      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\n\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
+      "text": "Indian woman, __AGE__, __EXPRESSION__, kohl-lined almond eyes with naturally detailed irises, centered red bindi, warm red lipstick, glamorous styling, realistic melanin-rich South Indian skin tone, natural matte photographic rendering, soft natural facial features, low muscle definition, soft natural curves, realistic body proportions, sharp focus on the eyes, authentic photographic color science, balanced saturation, soft highlight roll-off, natural shadow transitions, realistic lens rendering, moderate optical sharpness, artifact-free photograph with restrained specular highlights.\nPreserve the existing facial identity, facial structure, expression, hairstyle, pose, body proportions, composition, lighting, and camera perspective exactly as established in the input image.\n\nPreserve all visible clothing, fabric patterns, embroidery, lace, jewelry, bangles, necklaces, earrings, mehendi, decorative body art, fingernails, accessories, transparency, stitching, folds, textile weave, and material appearance. Maintain fine decorative details, small ornaments, and intricate patterns exactly as they appear. Preserve color relationships, fabric drape, and realistic matte material response with naturally diffused reflections without exaggerating texture or introducing artificial sharpness.\n\nRefine only photographic realism. Maintain natural skin rendering without adding excessive pores, peach fuzz, vellus hairs, wrinkles, blemishes, freckles, or other artificial micro-details. Avoid waxy skin, oversharpening, halos, ringing, excessive local contrast, or synthetic texture enhancement.\n\nPrioritize preserving existing fine details over generating new ones. The output should appear as the same professionally photographed image with improved photographic fidelity while maintaining authentic consumer DSLR image quality from the mid-2000s.\n\nMaintain matte skin, matte fabrics, and naturally diffused reflections. Avoid glossy skin, shiny clothing, wet-look highlights, plastic surfaces, satin-like reflections, and excessive local contrast."
     },
     "class_type": "Text Multiline",
     "_meta": {
       "title": "Text Multiline"
+    }
+  },
+  "1312": {
+    "inputs": {
+      "upscale_by": [
+        "3681",
+        0
+      ],
+      "seed": [
+        "378",
+        0
+      ],
+      "steps": 20,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 0.35,
+      "mode_type": "Linear",
+      "tile_width": [
+        "2070",
+        0
+      ],
+      "tile_height": [
+        "2053",
+        0
+      ],
+      "mask_blur": 8,
+      "tile_padding": 32,
+      "seam_fix_mode": "None",
+      "seam_fix_denoise": 1,
+      "seam_fix_width": 64,
+      "seam_fix_mask_blur": 8,
+      "seam_fix_padding": 16,
+      "force_uniform_tiles": true,
+      "tiled_decode": false,
+      "batch_size": 1,
+      "image": [
+        "1523",
+        0
+      ],
+      "model": [
+        "1532",
+        0
+      ],
+      "positive": [
+        "1777",
+        0
+      ],
+      "negative": [
+        "1221",
+        0
+      ],
+      "vae": [
+        "1227",
+        0
+      ],
+      "upscale_model": [
+        "3678",
+        0
+      ],
+      "custom_sampler": [
+        "1241",
+        0
+      ],
+      "custom_sigmas": [
+        "1236",
+        0
+      ]
+    },
+    "class_type": "UltimateSDUpscaleCustomSample",
+    "_meta": {
+      "title": "FLUX_Ultimate SD Upscale (Custom Sample)"
     }
   },
   "1322": {
@@ -1683,10 +1770,176 @@
       "title": "Switch"
     }
   },
+  "1507": {
+    "inputs": {
+      "mask_opacity": 0.3,
+      "mask_color": "255, 0, 207",
+      "pass_through": false,
+      "image": [
+        "1704",
+        0
+      ],
+      "mask": [
+        "1508",
+        0
+      ]
+    },
+    "class_type": "ImageAndMaskPreview",
+    "_meta": {
+      "title": "ImageAndMaskPreview"
+    }
+  },
+  "1508": {
+    "inputs": {
+      "expand": 12,
+      "incremental_expandrate": 6,
+      "tapered_corners": true,
+      "flip_input": false,
+      "blur_radius": 6,
+      "lerp_alpha": 1,
+      "decay_factor": 1,
+      "fill_holes": false,
+      "mask": [
+        "1511",
+        0
+      ]
+    },
+    "class_type": "GrowMaskWithBlur",
+    "_meta": {
+      "title": "Grow Mask With Blur"
+    }
+  },
+  "1509": {
+    "inputs": {
+      "output_path": "[time(%Y-%m-%d)]",
+      "filename_prefix": [
+        "2254",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": "false",
+      "lossless_webp": "false",
+      "overwrite_mode": "prefix_as_filename",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "1514",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save"
+    }
+  },
+  "1510": {
+    "inputs": {
+      "seed": [
+        "378",
+        0
+      ],
+      "steps": 20,
+      "cfg": 1,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": 0.24,
+      "model": [
+        "1196",
+        0
+      ],
+      "positive": [
+        "1513",
+        0
+      ],
+      "negative": [
+        "1513",
+        1
+      ],
+      "latent_image": [
+        "1513",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "FLUX_Pass 1 : KSampler 01 :: 0.48"
+    }
+  },
+  "1511": {
+    "inputs": {
+      "face_mask": false,
+      "background_mask": false,
+      "hair_mask": false,
+      "body_mask": false,
+      "clothes_mask": true,
+      "confidence": 0.4,
+      "refine_mask": true,
+      "images": [
+        "1704",
+        0
+      ]
+    },
+    "class_type": "APersonMaskGenerator",
+    "_meta": {
+      "title": "A Person Mask Generator"
+    }
+  },
+  "1513": {
+    "inputs": {
+      "noise_mask": true,
+      "positive": [
+        "1547",
+        0
+      ],
+      "negative": [
+        "1548",
+        0
+      ],
+      "vae": [
+        "1227",
+        0
+      ],
+      "pixels": [
+        "1704",
+        0
+      ],
+      "mask": [
+        "1508",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "FLUX_InpaintModelConditioning"
+    }
+  },
+  "1514": {
+    "inputs": {
+      "samples": [
+        "1510",
+        0
+      ],
+      "vae": [
+        "1227",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "FLUX_Decode"
+    }
+  },
   "1523": {
     "inputs": {
-      "any_02": [
-        "3155",
+      "any_03": [
+        "1514",
         0
       ],
       "any_05": [
@@ -1699,13 +1952,47 @@
       "title": "Switch"
     }
   },
-  "1572": {
+  "1532": {
     "inputs": {
-      "text": "Indian woman, __AGE__ , serene expression, kohl lined almond eyes, perfect symmetrical eyes, ultra sharp iris detail, centered red bindi, warm red lipstick, alluring almond skin tone, visible pores, natural skin texture, soft peach fuzz, illuminated vellus hairs, subtle natural oil micro highlights, low muscle definition, soft natural curves, glamorous styling, high end DSLR, 85mm lens, f1.8, sharp focus on eyes, shallow depth of field, cinematic color grading, warm highlights, soft shadow rolloff, realistic fabric texture, realistic   background,   ultra high resolution, professional RAW photograph\n"
+      "max_shift": 1.05,
+      "base_shift": 0.6,
+      "width": 1024,
+      "height": 1024,
+      "model": [
+        "1195",
+        0
+      ]
     },
-    "class_type": "Text Multiline",
+    "class_type": "ModelSamplingFlux",
     "_meta": {
-      "title": "Text Multiline"
+      "title": "FLUX_ModelSamplingFlux 1.40::0.8"
+    }
+  },
+  "1547": {
+    "inputs": {
+      "clip_l": "clean clothing, proper fit, correct anatomy, aligned outfit, natural folds, realistic proportions, consistent fabric, sharp seams, no distortion, no warping, no broken clothing, no misalignment, stable structure, coherent garment,\n",
+      "t5xxl": "A realistic outfit with physically accurate fabric behavior, clean stitching, natural folds and tension, consistent texture, no distortions or artifacts, proper alignment with the body,   lighting consistent with the scene, professional quality garment rendering,\n\nexposure perfectly matches the original image, no localized brightness adjustment, no relighting or tonal deviation",
+      "guidance": 3.5,
+      "clip": [
+        "1197",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncodeFlux",
+    "_meta": {
+      "title": "FLUX_*CLIPTextEncodeFlux"
+    }
+  },
+  "1548": {
+    "inputs": {
+      "conditioning": [
+        "1547",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out"
     }
   },
   "1576": {
@@ -1992,6 +2279,10 @@
   },
   "1703": {
     "inputs": {
+      "any_01": [
+        "1312",
+        0
+      ],
       "any_03": [
         "1523",
         0
@@ -2010,70 +2301,16 @@
       "title": "Switch"
     }
   },
-  "1716": {
+  "1704": {
     "inputs": {
-      "any_03": [
+      "any_02": [
         "1658",
-        0
-      ],
-      "any_04": [
-        "1447",
         0
       ]
     },
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
-    }
-  },
-  "1719": {
-    "inputs": {
-      "expand": 10,
-      "incremental_expandrate": 6,
-      "tapered_corners": true,
-      "flip_input": false,
-      "blur_radius": 6,
-      "lerp_alpha": 1,
-      "decay_factor": 1,
-      "fill_holes": true,
-      "mask": [
-        "2920:2875",
-        0
-      ]
-    },
-    "class_type": "GrowMaskWithBlur",
-    "_meta": {
-      "title": "Grow Mask With Blur"
-    }
-  },
-  "1720": {
-    "inputs": {
-      "conditioning": [
-        "1725",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Conditioning Zero Out"
-    }
-  },
-  "1725": {
-    "inputs": {
-      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": [
-        "3527",
-        0
-      ],
-      "guidance": 3.5,
-      "clip": [
-        "2925",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncodeFlux",
-    "_meta": {
-      "title": "FLUX_*CLIPTextEncodeFlux"
     }
   },
   "1766": {
@@ -2086,6 +2323,21 @@
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
+    }
+  },
+  "1777": {
+    "inputs": {
+      "clip_l": "sharp image, clear details, no blur, no smearing, high clarity, defined edges, stable structure",
+      "t5xxl": "high resolution image with enhanced fine detail and clarity, sharp textures and well defined edges, strong local contrast and micro contrast, clear separation between surfaces, no blur or softness, no noise or grain, clean high frequency details, consistent sharpness across subject and background, refined and crisp overall image quality",
+      "guidance": 2.8,
+      "clip": [
+        "1197",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncodeFlux",
+    "_meta": {
+      "title": "FLUX_*CLIPTextEncodeFlux"
     }
   },
   "1780": {
@@ -2257,7 +2509,7 @@
     "inputs": {
       "expression": "(a * b / 2 + 32)-((a * b / 2 + 32)%64)",
       "a": [
-        "476",
+        "3681",
         0
       ],
       "b": [
@@ -2499,7 +2751,7 @@
   "2074": {
     "inputs": {
       "image": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -2512,7 +2764,7 @@
     "inputs": {
       "expression": "(a * b / 2 + 32)-((a * b / 2 + 32)%64)",
       "a": [
-        "476",
+        "3681",
         0
       ],
       "b": [
@@ -2711,7 +2963,7 @@
       "strength_model": 0.73,
       "strength_clip": 0.1,
       "model": [
-        "2219",
+        "3664",
         0
       ],
       "clip": [
@@ -2971,7 +3223,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#E11A45FF",
+      "color": "#F70063FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3153,7 +3405,7 @@
       "blur_radius": 3,
       "invert": false,
       "image": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -3235,11 +3487,11 @@
   "2309": {
     "inputs": {
       "any_01": [
-        "3192",
+        "3667",
         0
       ],
       "any_02": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -3282,7 +3534,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "default_krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "Krea 2 Turbo 18+ for Character LoRAs FP8 - Krea2.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -3293,7 +3545,7 @@
   "2339": {
     "inputs": {
       "any_01": [
-        "3084",
+        "3671",
         0
       ],
       "any_02": [
@@ -3301,7 +3553,7 @@
         0
       ],
       "any_03": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -3398,7 +3650,11 @@
         0
       ],
       "image": [
-        "2938",
+        "3687",
+        0
+      ],
+      "system_prompt": [
+        "3661",
         0
       ]
     },
@@ -3500,26 +3756,6 @@
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
-    }
-  },
-  "2938": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "upscale_method": "bicubic",
-      "keep_proportion": "pad_edge",
-      "pad_color": "0, 0, 0",
-      "crop_position": "center",
-      "divisible_by": 8,
-      "device": "gpu",
-      "image": [
-        "3024",
-        0
-      ]
-    },
-    "class_type": "ImageResizeKJv2",
-    "_meta": {
-      "title": "Resize Image v2"
     }
   },
   "2949": {
@@ -3624,7 +3860,7 @@
       "embed_workflow": "false",
       "show_previews": "false",
       "images": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -3749,22 +3985,10 @@
       "title": "Text (Multiline)"
     }
   },
-  "3011": {
-    "inputs": {
-      "samples": [
-        "3004",
-        0
-      ]
-    },
-    "class_type": "RemoveNoiseMask",
-    "_meta": {
-      "title": "Remove Noise Mask"
-    }
-  },
   "3012": {
     "inputs": {
       "samples": [
-        "3011",
+        "3004",
         0
       ],
       "vae": [
@@ -3812,11 +4036,11 @@
   "3024": {
     "inputs": {
       "any_01": [
-        "3192",
+        "3667",
         0
       ],
       "any_02": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -3847,7 +4071,7 @@
   "3076": {
     "inputs": {
       "samples": [
-        "3576",
+        "3162",
         0
       ],
       "vae": [
@@ -3941,7 +4165,7 @@
       "monochrome_grain": false,
       "highlight_rolloff": 0.15,
       "image": [
-        "3085",
+        "3076",
         0
       ],
       "depth_map": [
@@ -3954,94 +4178,13 @@
       "title": "Optical Realism & Physics"
     }
   },
-  "3085": {
-    "inputs": {
-      "temperature": 0,
-      "hue": 0,
-      "brightness": 0,
-      "contrast": 3.8000000000000007,
-      "saturation": 2.7,
-      "gamma": [
-        "3141",
-        0
-      ],
-      "image": [
-        "3076",
-        0
-      ]
-    },
-    "class_type": "ColorCorrect",
-    "_meta": {
-      "title": "ColorCorrect"
-    }
-  },
-  "3086": {
-    "inputs": {
-      "seed": [
-        "378",
-        0
-      ],
-      "steps": 9,
-      "cfg": 1,
-      "sampler_name": "er_sde",
-      "scheduler": "simple",
-      "denoise": [
-        "3100",
-        0
-      ],
-      "model": [
-        "3166",
-        0
-      ],
-      "positive": [
-        "3093",
-        0
-      ],
-      "negative": [
-        "3228",
-        0
-      ],
-      "latent_image": [
-        "3574",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "Krea_KSampler"
-    }
-  },
-  "3093": {
-    "inputs": {
-      "prompt": [
-        "3577",
-        0
-      ],
-      "clip": [
-        "2349",
-        0
-      ],
-      "vae": [
-        "2315",
-        0
-      ],
-      "image1": [
-        "2309",
-        0
-      ]
-    },
-    "class_type": "TextEncodeQwenImageEditPlus",
-    "_meta": {
-      "title": "Krea_TextEncodeQwenImageEditPlus"
-    }
-  },
   "3100": {
     "inputs": {
       "a": [
         "222",
         0
       ],
-      "b": 0.42,
+      "b": 0.6,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -4087,7 +4230,7 @@
   },
   "3141": {
     "inputs": {
-      "value": 0.93
+      "value": 1.07
     },
     "class_type": "FloatConstant",
     "_meta": {
@@ -4097,7 +4240,7 @@
   "3142": {
     "inputs": {
       "pixels": [
-        "3618",
+        "3657",
         0
       ],
       "vae": [
@@ -4144,80 +4287,6 @@
       "title": "FLUX.2 Klein Text/Ref Balance"
     }
   },
-  "3155": {
-    "inputs": {
-      "guide_size": 896,
-      "guide_size_for": false,
-      "max_size": 896,
-      "seed": [
-        "378",
-        0
-      ],
-      "steps": 33,
-      "cfg": 1,
-      "sampler_name": "euler",
-      "scheduler": "beta",
-      "denoise": 0.09,
-      "feather": 8,
-      "noise_mask": true,
-      "force_inpaint": true,
-      "wildcard": "",
-      "cycle": 2,
-      "inpaint_model": false,
-      "noise_mask_feather": 40,
-      "tiled_encode": false,
-      "tiled_decode": false,
-      "image": [
-        "3505",
-        0
-      ],
-      "segs": [
-        "3156",
-        0
-      ],
-      "model": [
-        "3205",
-        0
-      ],
-      "clip": [
-        "1298",
-        1
-      ],
-      "vae": [
-        "1227",
-        0
-      ],
-      "positive": [
-        "1725",
-        0
-      ],
-      "negative": [
-        "1720",
-        0
-      ]
-    },
-    "class_type": "DetailerForEach",
-    "_meta": {
-      "title": "FLUX_Detailer (BG Detailer)"
-    }
-  },
-  "3156": {
-    "inputs": {
-      "combined": true,
-      "crop_factor": 3,
-      "bbox_fill": false,
-      "drop_size": 10,
-      "contour_fill": false,
-      "mask": [
-        "1719",
-        0
-      ]
-    },
-    "class_type": "MaskToSEGS",
-    "_meta": {
-      "title": "MASK to SEGS"
-    }
-  },
   "3162": {
     "inputs": {
       "add_noise": "disable",
@@ -4225,15 +4294,15 @@
         "378",
         0
       ],
-      "steps": 9,
+      "steps": 19,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "simple",
-      "start_at_step": 5,
+      "scheduler": "sgm_uniform",
+      "start_at_step": 14,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
-        "3166",
+        "3229",
         0
       ],
       "positive": [
@@ -4242,11 +4311,11 @@
       ],
       "negative": [
         "3557",
-        0
+        1
       ],
       "latent_image": [
-        "3567",
-        0
+        "3557",
+        2
       ]
     },
     "class_type": "KSamplerAdvanced",
@@ -4273,7 +4342,7 @@
       "lora_name": "vidhyas_lora_v1_krea.safetensors",
       "strength_model": 1,
       "model": [
-        "3229",
+        "2322",
         0
       ]
     },
@@ -4285,8 +4354,8 @@
   "3167": {
     "inputs": {
       "samples": [
-        "3086",
-        0
+        "3692",
+        1
       ],
       "vae": [
         "2315",
@@ -4434,21 +4503,6 @@
       "title": "Input Selector"
     }
   },
-  "3191": {
-    "inputs": {
-      "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
-      "t5xxl": "A professionally photographed portrait of an Indian woman, v1dhya5.\n\nTreat the input face and smile as correct. Refine only missing photographic detail while preserving the subject's facial identity, expression, gaze direction, facial proportions, head shape, hairstyle, bindi, jewelry, lighting, white balance, composition, and photographic color grading.\n\nMaintain realistic matte skin with subtle natural pores, gentle tonal variation, authentic photographic texture, soft facial transitions, and natural melanin-rich South Indian skin tones. Preserve existing freckles, moles, fine facial hair, eyelashes, eyebrows, and other natural facial characteristics exactly as they appear. Improve only subtle eye clarity, iris definition, eyelash detail, eyebrow definition, natural lip definition, and overall facial coherence while maintaining realistic optical sharpness.\n\nPreserve the natural shape, spacing, alignment, translucency, and color variation of the teeth. Maintain realistic enamel shading and subtle imperfections. Do not whiten teeth excessively, sharpen tooth edges, invent or remove teeth, alter the smile, or create perfectly uniform teeth.\n\nPreserve realistic age, facial geometry, skin texture, and natural imperfections. Keep clothing, accessories, background, shadows, and highlights unchanged.\n\nDo not beautify, reshape, de-age, age, stylize, smooth skin, remove pores, add makeup, enlarge eyes, sharpen excessively, alter facial proportions, change expression, modify hair, introduce artificial skin texture, hallucinate facial details, or create new artifacts.",
-      "guidance": 3.5,
-      "clip": [
-        "1298",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncodeFlux",
-    "_meta": {
-      "title": "FLUX_*CLIPTextEncodeFlux"
-    }
-  },
   "3192": {
     "inputs": {
       "condition": [
@@ -4572,59 +4626,12 @@
       "title": "Input Selector"
     }
   },
-  "3203": {
-    "inputs": {
-      "mask_opacity": 0.3,
-      "mask_color": "255, 0, 207",
-      "pass_through": false,
-      "image": [
-        "1716",
-        0
-      ],
-      "mask": [
-        "1719",
-        0
-      ]
-    },
-    "class_type": "ImageAndMaskPreview",
-    "_meta": {
-      "title": "ImageAndMaskPreview"
-    }
-  },
-  "3205": {
-    "inputs": {
-      "max_shift": 1.08,
-      "base_shift": 0.5,
-      "width": 896,
-      "height": 896,
-      "model": [
-        "1298",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingFlux",
-    "_meta": {
-      "title": "FLUX_ModelSamplingFlux"
-    }
-  },
-  "3228": {
-    "inputs": {
-      "conditioning": [
-        "3093",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "Conditioning Zero Out"
-    }
-  },
   "3229": {
     "inputs": {
       "lora_name": "inline-skin-lora-krea-2-raw.safetensors",
       "strength_model": 0.5,
       "model": [
-        "2322",
+        "3166",
         0
       ]
     },
@@ -4636,7 +4643,7 @@
   "3377": {
     "inputs": {
       "lora_name": "Flux2-Klein-9B-consistency-V2.safetensors",
-      "strength_model": 1,
+      "strength_model": 0.8,
       "model": [
         "2124",
         0
@@ -4662,28 +4669,13 @@
   "3504": {
     "inputs": {
       "image": [
-        "3618",
+        "3657",
         0
       ]
     },
     "class_type": "GetImageSize",
     "_meta": {
       "title": "Get Image Size"
-    }
-  },
-  "3505": {
-    "inputs": {
-      "sharpen_radius": 1,
-      "sigma": 0.2,
-      "alpha": 1,
-      "image": [
-        "1716",
-        0
-      ]
-    },
-    "class_type": "ImageSharpen",
-    "_meta": {
-      "title": "Sharpen Image"
     }
   },
   "3517": {
@@ -4744,44 +4736,6 @@
       "title": "Input Selector"
     }
   },
-  "3524": {
-    "inputs": {
-      "value": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n"
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text (Multiline)"
-    }
-  },
-  "3526": {
-    "inputs": {
-      "value": "Treat the input face as correct and preserve the exact facial identity.\n\nPreserve facial structure, facial proportions, face shape, jawline, chin, cheeks, eyes, eye spacing, eyebrows, nose, lips, mouth shape, natural asymmetry, expression, and gaze direction exactly as they appear in the input.\n\nPreserve the existing hairstyle, hair shape, bindi, jewelry, and other distinctive facial characteristics.\n\nWhen the eyes are visible, preserve their exact orientation and eyelid position. Do not redirect, center, enlarge, narrow, or reinterpret the gaze. If the eyes are closed, obscured, or not visible, do not infer or reconstruct them.\n\nIf teeth are visible, preserve their existing shape, arrangement, spacing, number, and appearance. Do not whiten, straighten, reshape, replace, merge, or regenerate teeth.\n\nDo not beautify, idealize, normalize, symmetrize, reshape, age, de-age, or otherwise modify the person's facial characteristics.\n\nDo not change the visual medium, artistic style, rendering method, colors, textures, lighting, contrast, or level of detail of the input.\n\nRefine only enough to maintain facial identity and consistency with the input. Do not add realism, photographic detail, skin texture, pores, sharpness, or other stylistic characteristics.\n\nThe result must represent the same face with the same expression and appearance, without stylistic reinterpretation."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text (Multiline)"
-    }
-  },
-  "3527": {
-    "inputs": {
-      "condition": [
-        "591",
-        0
-      ],
-      "when_true": [
-        "3526",
-        0
-      ],
-      "when_false": [
-        "3524",
-        0
-      ]
-    },
-    "class_type": "InputSelector",
-    "_meta": {
-      "title": "Input Selector"
-    }
-  },
   "3530": {
     "inputs": {},
     "class_type": "AUSBOSS_NODES_RunTimer",
@@ -4795,7 +4749,10 @@
       "quantization": "8-bit (Balanced)",
       "attention_mode": "auto",
       "preset_prompt": "🖼️ Detailed Description",
-      "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nBackground:\nThe user requires a prompt that enables AI to analyze an image and generate a highly accurate recreation prompt suitable for modern text-to-image models. The recreation prompt should faithfully preserve the subject's appearance, apparent age, identity placeholder, composition, clothing, lighting, mood, environment, and artistic style while remaining concise, descriptive, and suitable for image generation.\n\nProfile:\nYou are an expert in computer vision, photography, portraiture, image analysis, and prompt engineering. Your task is to convert visual information into a detailed recreation prompt while preserving the original image as faithfully as possible.\n\nSkills:\n- Image recognition\n- Facial analysis including expressions\n- Apparent age estimation\n- Photography terminology\n- Composition analysis\n- Lighting analysis\n- Material and texture recognition\n- Prompt engineering\n\nGoals:\n\n1. Analyze the provided image.\n2. Estimate the subject's apparent age BEFORE performing any other task.\n3. Generate the required metadata.\n4. Generate a detailed recreation prompt capable of reproducing a visually similar image.\n\nConstraints:\n\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\".\n- Estimate only the apparent age based on visible appearance.\n- Never use an exact age.\n- AGE is REQUIRED and must never be omitted.\n- Select exactly one of these age ranges:\n  14-18\n  18-22\n  23-27\n  28-34\n  35-44\n  45-54\n  55-65\n  65+\n- Use HIGH, MEDIUM, or LOW for age confidence.\n- Do not mention uncertainty inside the recreation prompt.\n- Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds that are not visible.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic style whenever possible.\n- Describe only visible characteristics.\n- Do not over-describe individual facial features.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance over minor anatomical details.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- The recreation prompt should be approximately 200–300 words.\n- Output only the required metadata followed immediately by the recreation prompt.\n\nProcedure (follow in this exact order):\n\n1. Estimate the subject's apparent age.\n2. Determine age confidence.\n3. Determine visible gender presentation.\n4. Output the metadata block.\n5. Output the recreation prompt.\n\nOutput Format:\n\nThe response MUST begin with this metadata block. Do not output anything before it.\n\n@@SUBJECT=v1dhya5\n@@AGE=<18-22|23-27|28-34|35-44|45-54|55-65|65+>\n@@AGE_CONFIDENCE=<HIGH|MEDIUM|LOW>\n@@GENDER_PRESENTATION=<FEMININE|MASCULINE|ANDROGYNOUS|UNKNOWN>\n@@END_METADATA\n\nAfter @@END_METADATA, output exactly one cohesive paragraph containing only the recreation prompt.\n\nThe recreation prompt must naturally mention \"v1dhya5\" once, preserve the detected artistic medium (photograph, illustration, painting, digital art, sketch, anime, comic, watercolor, oil painting, 3D render, etc.), preserve the original composition and style.\n\nDo not output Markdown, headings, JSON, XML, bullet points, explanations, reasoning, or any additional text outside the required metadata block and recreation prompt.",
+      "custom_prompt": [
+        "3661",
+        0
+      ],
       "max_tokens": 420,
       "keep_model_loaded": true,
       "seed": [
@@ -4804,7 +4761,7 @@
       ],
       "keep_last_prompt": false,
       "image": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -4856,7 +4813,7 @@
     "inputs": {
       "noise_mask": true,
       "positive": [
-        "3093",
+        "3690",
         0
       ],
       "negative": [
@@ -4884,7 +4841,7 @@
   "3558": {
     "inputs": {
       "conditioning": [
-        "3093",
+        "3690",
         0
       ]
     },
@@ -4924,23 +4881,11 @@
       "title": "Image Size 🆎"
     }
   },
-  "3567": {
-    "inputs": {
-      "samples": [
-        "3557",
-        2
-      ]
-    },
-    "class_type": "RemoveNoiseMask",
-    "_meta": {
-      "title": "Remove Noise Mask"
-    }
-  },
   "3569": {
     "inputs": {
       "samples": [
-        "3086",
-        0
+        "3692",
+        1
       ],
       "vae": [
         "2315",
@@ -4952,37 +4897,13 @@
       "title": "Krea_VAE Decode"
     }
   },
-  "3574": {
-    "inputs": {
-      "samples": [
-        "2310",
-        0
-      ]
-    },
-    "class_type": "RemoveNoiseMask",
-    "_meta": {
-      "title": "Remove Noise Mask"
-    }
-  },
-  "3576": {
-    "inputs": {
-      "samples": [
-        "3162",
-        0
-      ]
-    },
-    "class_type": "RemoveNoiseMask",
-    "_meta": {
-      "title": "Remove Noise Mask"
-    }
-  },
   "3577": {
     "inputs": {
-      "string_a": [
+      "string_a": "Edit the input image, follow the description below\n---\n",
+      "string_b": [
         "2406",
         0
       ],
-      "string_b": "\ninline-skin-lora, detailed skin texture",
       "delimiter": ", "
     },
     "class_type": "StringConcatenate",
@@ -5001,7 +4922,7 @@
         0
       ],
       "reference": [
-        "3618",
+        "3657",
         0
       ]
     },
@@ -5275,10 +5196,10 @@
   },
   "3618": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "2.0",
       "divisible_by": "8",
       "mode": "pad",
-      "delta_percent": 0.1,
+      "delta_percent": 0.6,
       "image": [
         "3614",
         0
@@ -5379,213 +5300,236 @@
       "title": "JDCN_FileMover"
     }
   },
-  "2920:2866": {
+  "3657": {
     "inputs": {
-      "label": "torso",
-      "device": "auto",
-      "dtype": "bfloat16",
-      "model_id": "fashn-ai/fashn-human-parser",
-      "extra_labels": "skin",
-      "blur_radius": 3,
-      "invert": false,
-      "image": [
-        "1716",
+      "image": "129257047[+]_00000001.jpg",
+      "pad_left": 0,
+      "pad_top": 0,
+      "pad_right": 0,
+      "pad_bottom": 0,
+      "mode": "pillarbox blur",
+      "fill_color": "#808080",
+      "backdrop_blur": 0.5,
+      "feather": 0,
+      "canvas_multiple": 16,
+      "target_megapixels": 1.57,
+      "source_image": [
+        "3618",
         0
       ]
     },
-    "class_type": "FashnHumanParserMask",
+    "class_type": "AUSBOSS_NODES_LoadImagePad",
     "_meta": {
-      "title": "FASHN Human Parser (Mask)"
+      "title": "Load Image + Pad 🆎"
     }
   },
-  "2920:2868": {
+  "3658": {
     "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "add",
-      "destination": [
-        "2920:2875",
+      "text": "You are an expert image captioner creating faithful recreation prompts for image-generation models.\n\nTASK\nAnalyze the image and output metadata followed by one detailed, cohesive recreation paragraph. Describe visible evidence accurately; never invent hidden details.\n\nANALYSIS PRIORITIES\n1. OUTFIT: Identify each visible garment and describe its specific construction, layering, fit, draping, fabric appearance, colours, patterns, embroidery, borders, pleats, sleeves, neckline, and distinctive details. For sarees, inspect the pallu, pleats, border, blouse, and drape individually when visible.\n2. ACCESSORIES: Identify each visible accessory separately: earrings, necklaces, pendants, bangles, bracelets, rings, watches, nose jewellery, bindis, hair ornaments, bags, belts, and footwear. Describe their shape, colour, apparent material, placement, and distinctive design. Never replace multiple items with a generic phrase such as \"traditional jewellery.\"\n3. FACIAL EXPRESSION: Describe the actual mouth shape, smile intensity, visible teeth, eye openness, gaze direction, eyebrow position, and overall expression. Distinguish closed-mouth smiles, subtle smiles, broad smiles, laughter, and neutral expressions. Preserve the observed expression; do not invent emotion.\n4. POSE AND COMPOSITION: Describe body and head orientation, gaze, posture, hand position when visible, framing, subject placement, and camera perspective.\n5. HAIR AND APPEARANCE: Describe hairstyle, visible skin tone, makeup, and prominent facial adornments without excessive anatomical detail.\n6. LIGHTING AND SETTING: Describe light direction and softness, shadows, background, environment, colour balance, and artistic medium.\n\nBe specific rather than verbose. Prioritize distinctive visible details over generic beauty descriptions. Describe only what is visible; qualify partially obscured details through careful wording. Do not infer brands, gemstone types, fabric composition, personality, or unseen garment construction.\n\nIDENTITY\nNever identify the real person. Refer to the primary subject as \"v1dhya5\" exactly once in the recreation paragraph.\n\nAGE\nEstimate apparent age before all other analysis. Select exactly one range: 14-18, 18-22, 23-27, 28-34, 35-44, 45-54, 55-65, or 65+. Use HIGH, MEDIUM, or LOW confidence. Assign age 18 to the 18-22 range.\n\nGENDER PRESENTATION\nChoose FEMININE, MASCULINE, ANDROGYNOUS, or UNKNOWN based only on visible presentation.\n\nOUTPUT\nBegin with exactly this metadata block:\n\n@@SUBJECT=v1dhya5\n@@AGE=<one permitted range>\n@@AGE_CONFIDENCE=<HIGH|MEDIUM|LOW>\n@@GENDER_PRESENTATION=<FEMININE|MASCULINE|ANDROGYNOUS|UNKNOWN>\n@@END_METADATA\n\nImmediately follow it with one cohesive paragraph of approximately 180-240 words. Mention \"v1dhya5\" exactly once in that paragraph. Preserve the image's original medium and style.\n\nOutput nothing else. No headings, Markdown, lists, explanations, or reasoning."
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎"
+    }
+  },
+  "3659": {
+    "inputs": {
+      "text": "You are an expert visual analyst and illustration captioner. Create a faithful recreation prompt for image-generation models based on the provided image.\n\nANALYSIS PRIORITIES\n\n1. OUTFIT: Identify each visible garment and describe its design, silhouette, layering, colours, patterns, decorative motifs, borders, embroidery, folds, pleats, sleeves, neckline, and distinctive construction. For sarees, describe the pallu, pleats, border, blouse, and draping separately when visible.\n\n2. ACCESSORIES: Identify each visible accessory separately, including earrings, necklaces, pendants, bangles, bracelets, rings, nose jewellery, bindis, hair ornaments, bags, belts, and footwear. Describe shape, colour, apparent material, placement, and decorative details. Do not collapse multiple items into generic descriptions.\n\n3. FACIAL EXPRESSION: Describe mouth shape, smile intensity, visible teeth, eye openness, gaze direction, eyebrow position, and overall expression. Preserve the depicted expression and its degree of stylization.\n\n4. ARTISTIC STYLE: Identify the medium and style, such as anime, manga, comic art, cartoon, cel shading, painterly illustration, digital painting, watercolor, sketch, vector art, or stylized 3D art. Describe linework, contour definition, shading, palette, gradients, highlights, texture, proportions, and stylization. Never convert an illustration into a photograph or impose a different artistic style.\n\n5. POSE AND COMPOSITION: Describe head and body orientation, posture, hand position when visible, gaze, framing, subject placement, perspective, and background arrangement.\n\n6. HAIR AND APPEARANCE: Describe hairstyle, hair shape, colour, visible skin tone, makeup, and prominent facial adornments as depicted. Preserve the artwork's colour treatment and detail level.\n\n7. LIGHTING AND ENVIRONMENT: Describe depicted lighting, shadows, highlights, background, setting, atmosphere, and colour relationships using illustration-appropriate language.\n\nACCURACY RULES\n\n- Never identify a real person.\n- Always refer to the primary subject as \"v1dhya5\".\n- Describe only visible evidence. Do not invent hidden garment details, accessories, patterns, props, or background elements.\n- Describe depicted visual features rather than claiming unobservable physical material properties.\n- Preserve the original artistic medium, style, outfit, accessories, facial expression, pose, and composition.\n- Prioritize distinctive visual details over generic beauty descriptions.\n- Do not infer personality or emotions beyond the depicted expression.\n\nOUTPUT FORMAT\n\nOutput exactly one cohesive paragraph of approximately 180-240 words. Mention \"v1dhya5\" exactly once.\n\nOutput only the recreation prompt. No metadata, headings, Markdown, lists, explanations, or reasoning."
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎"
+    }
+  },
+  "3661": {
+    "inputs": {
+      "condition": [
+        "591",
         0
       ],
-      "source": [
-        "2920:2866",
-        0
-      ]
-    },
-    "class_type": "MaskComposite",
-    "_meta": {
-      "title": "Combine Masks"
-    }
-  },
-  "2920:2869": {
-    "inputs": {
-      "label": "legs",
-      "device": "auto",
-      "dtype": "bfloat16",
-      "model_id": "fashn-ai/fashn-human-parser",
-      "extra_labels": "skin",
-      "blur_radius": 3,
-      "invert": false,
-      "image": [
-        "1716",
-        0
-      ]
-    },
-    "class_type": "FashnHumanParserMask",
-    "_meta": {
-      "title": "FASHN Human Parser (Mask)"
-    }
-  },
-  "2920:2871": {
-    "inputs": {
-      "label": "hands",
-      "device": "auto",
-      "dtype": "bfloat16",
-      "model_id": "fashn-ai/fashn-human-parser",
-      "extra_labels": "skin",
-      "blur_radius": 3,
-      "invert": false,
-      "image": [
-        "1716",
-        0
-      ]
-    },
-    "class_type": "FashnHumanParserMask",
-    "_meta": {
-      "title": "FASHN Human Parser (Mask)"
-    }
-  },
-  "2920:2872": {
-    "inputs": {
-      "label": "feet",
-      "device": "auto",
-      "dtype": "bfloat16",
-      "model_id": "fashn-ai/fashn-human-parser",
-      "extra_labels": "skin",
-      "blur_radius": 3,
-      "invert": false,
-      "image": [
-        "1716",
-        0
-      ]
-    },
-    "class_type": "FashnHumanParserMask",
-    "_meta": {
-      "title": "FASHN Human Parser (Mask)"
-    }
-  },
-  "2920:2875": {
-    "inputs": {
-      "label": "face",
-      "device": "auto",
-      "dtype": "bfloat16",
-      "model_id": "fashn-ai/fashn-human-parser",
-      "extra_labels": "skin",
-      "blur_radius": 3,
-      "invert": false,
-      "image": [
-        "1716",
-        0
-      ]
-    },
-    "class_type": "FashnHumanParserMask",
-    "_meta": {
-      "title": "FASHN Human Parser (Mask)"
-    }
-  },
-  "2920:2873": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "add",
-      "destination": [
-        "2920:2871",
+      "when_true": [
+        "3659",
         0
       ],
-      "source": [
-        "2920:2872",
+      "when_false": [
+        "3658",
         0
       ]
     },
-    "class_type": "MaskComposite",
+    "class_type": "InputSelector",
     "_meta": {
-      "title": "Combine Masks"
+      "title": "Input Selector"
     }
   },
-  "2920:2870": {
+  "3664": {
     "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "add",
-      "destination": [
-        "2920:2867",
-        0
-      ],
-      "source": [
-        "2920:2869",
+      "lora_name": "realistic.safetensors",
+      "strength_model": 0.8,
+      "model": [
+        "2219",
         0
       ]
     },
-    "class_type": "MaskComposite",
+    "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "Combine Masks"
+      "title": "Klein_Load LoRA"
     }
   },
-  "2920:2874": {
+  "3667": {
     "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "add",
-      "destination": [
-        "2920:2868",
-        0
-      ],
-      "source": [
-        "2920:2870",
-        0
-      ]
-    },
-    "class_type": "MaskComposite",
-    "_meta": {
-      "title": "Combine Masks"
-    }
-  },
-  "2920:2876": {
-    "inputs": {
-      "x": 0,
-      "y": 0,
-      "operation": "add",
-      "destination": [
-        "2920:2874",
-        0
-      ],
-      "source": [
-        "2920:2873",
-        0
-      ]
-    },
-    "class_type": "MaskComposite",
-    "_meta": {
-      "title": "Combine Masks"
-    }
-  },
-  "2920:2867": {
-    "inputs": {
-      "label": "arms",
-      "device": "auto",
-      "dtype": "bfloat16",
-      "model_id": "fashn-ai/fashn-human-parser",
-      "extra_labels": "skin",
-      "blur_radius": 3,
-      "invert": false,
+      "strength": 1,
+      "method": "histogram",
+      "invert_mask": false,
+      "reference_mode": "reference",
       "image": [
-        "1716",
+        "3192",
+        0
+      ],
+      "reference": [
+        "577",
         0
       ]
     },
-    "class_type": "FashnHumanParserMask",
+    "class_type": "AUSBOSS_NODES_ColorMatch",
     "_meta": {
-      "title": "FASHN Human Parser (Mask)"
+      "title": "Color Match 🆎"
+    }
+  },
+  "3671": {
+    "inputs": {
+      "strength": 0.85,
+      "method": "histogram",
+      "invert_mask": false,
+      "reference_mode": "reference",
+      "image": [
+        "3084",
+        0
+      ],
+      "reference": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ColorMatch",
+    "_meta": {
+      "title": "Color Match 🆎"
+    }
+  },
+  "3673": {
+    "inputs": {
+      "prompt": ""
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "Text Encode Qwen Image Edit Plus"
+    }
+  },
+  "3678": {
+    "inputs": {
+      "model_name": "upscale_models/4x_NMKD-Superscale-SP_178000_G.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "3681": {
+    "inputs": {
+      "value": 1.5
+    },
+    "class_type": "AUSBOSS_NODES_Float",
+    "_meta": {
+      "title": "Float 🆎"
+    }
+  },
+  "3687": {
+    "inputs": {
+      "megapixels": 1.5,
+      "upscale_method": "lanczos",
+      "round_to": 8,
+      "image": [
+        "3024",
+        0
+      ]
+    },
+    "class_type": "SimpleMegapixels",
+    "_meta": {
+      "title": "Image Resize (Megapixels)"
+    }
+  },
+  "3690": {
+    "inputs": {
+      "prompt": [
+        "3577",
+        0
+      ],
+      "negative_prompt": "",
+      "vlm_reference": false,
+      "clip": [
+        "2349",
+        0
+      ],
+      "vae": [
+        "2315",
+        0
+      ],
+      "reference": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_Krea2Encode",
+    "_meta": {
+      "title": "Krea_ 2 Encode 🆎"
+    }
+  },
+  "3691": {
+    "inputs": {
+      "text": "Krea Pass01\n↗️➡️⬅️"
+    },
+    "class_type": "AUSBOSS_NODES_Callout",
+    "_meta": {
+      "title": "Callout 🆎"
+    }
+  },
+  "3692": {
+    "inputs": {
+      "eta": 0.33,
+      "sampler_name": "linear/euler",
+      "scheduler": "beta",
+      "steps": 15,
+      "steps_to_run": 12,
+      "denoise": [
+        "3100",
+        0
+      ],
+      "cfg": 1,
+      "seed": [
+        "378",
+        0
+      ],
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "3166",
+        0
+      ],
+      "positive": [
+        "3690",
+        0
+      ],
+      "negative": [
+        "3690",
+        1
+      ],
+      "latent_image": [
+        "2310",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "Krea_ClownsharKSampler"
     }
   }
 }

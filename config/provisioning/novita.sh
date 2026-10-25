@@ -286,6 +286,13 @@ LORA_MODELS=(
     # ------------------------------
     # Flux Krea 2
     # ------------------------------
+
+#    expression_slider_0ts-krea2-V1.safetensors
+    "https://civitai.com/api/download/models/3349249?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
+#    skin_detail_slider_krea2_ZT-V1.safetensors
+    "https://civitai.com/api/download/models/3323867?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+
     # babegenerator.ink-realism_helper.safetensors
     "https://civitai.com/api/download/models/3362520?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
     # boring_be_gone_v60.safetensors
