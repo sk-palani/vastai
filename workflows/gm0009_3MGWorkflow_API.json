@@ -3181,7 +3181,7 @@
   },
   "2124": {
     "inputs": {
-      "unet_name": "flux-2-klein-9b.safetensors",
+      "unet_name": "Flux2-Klein-9B-True-V3-bf16.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -3657,7 +3657,7 @@
       "lora_name": "vidhyas_lora_v4_klein.safetensors",
       "strength_model": 1,
       "model": [
-        "2124",
+        "3409",
         0
       ]
     },
@@ -5868,6 +5868,20 @@
     "class_type": "InputSelector",
     "_meta": {
       "title": "Input Selector"
+    }
+  },
+  "3409": {
+    "inputs": {
+      "lora_name": "Flux2-Klein-9B-consistency-V2.safetensors",
+      "strength_model": 1,
+      "model": [
+        "2124",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Klein_Load LoRA"
     }
   },
   "2920:2866": {
