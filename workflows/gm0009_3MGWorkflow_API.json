@@ -1403,7 +1403,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "clip_l.safetensors",
+      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -1966,7 +1966,7 @@
   "1660": {
     "inputs": {
       "max_shift": 1.15,
-      "base_shift": 0.6,
+      "base_shift": 0.4,
       "width": [
         "1639",
         0
@@ -2032,7 +2032,7 @@
         "378",
         0
       ],
-      "noise_strength": 0.1,
+      "noise_strength": 0.07,
       "normalize": "false",
       "latent": [
         "1648",
@@ -4821,7 +4821,7 @@
   "3084": {
     "inputs": {
       "lens_distortion": -0.006,
-      "color_temperature": 0.55,
+      "color_temperature": -0.09,
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -5489,7 +5489,7 @@
   "3215": {
     "inputs": {
       "detail_amount": 0.1,
-      "start": 0.3,
+      "start": 0.2,
       "end": 0.63,
       "bias": 0.5,
       "exponent": 1,
@@ -5497,7 +5497,7 @@
       "end_offset": 0,
       "fade": 0,
       "smooth": true,
-      "cfg_scale_override": 1,
+      "cfg_scale_override": 0,
       "sampler": [
         "2280",
         0
