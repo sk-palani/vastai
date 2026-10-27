@@ -439,6 +439,8 @@ LORA_MODELS=(
     # ------------------------------
     # Pandora-RAWr.safetensors
     "https://civitai.com/api/download/models/1943855?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # Samsung_UltraReal.safetensors
+    "https://civitai.com/api/download/models/1755780?fileId=1656529&token=${CIVITAI_TOKEN}"
 
     "https://civitai.com/api/download/models/827817?fileId=1772963&token=${CIVITAI_TOKEN}"
 #    # breast-size2.safetensors

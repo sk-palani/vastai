@@ -1403,7 +1403,7 @@
   },
   "1192": {
     "inputs": {
-      "clip_name1": "ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors",
+      "clip_name1": "clip_l.safetensors",
       "clip_name2": "t5xxl_fp16.safetensors",
       "type": "flux",
       "device": "cpu"
@@ -2017,7 +2017,7 @@
     "inputs": {
       "denoise": 0.78,
       "sigmas": [
-        "1657",
+        "3412",
         0
       ]
     },
@@ -2195,7 +2195,7 @@
       "attention_mode": "sdpa",
       "preset_prompt": "🖼️ Detailed Description",
       "custom_prompt": "Role: AI Image Analysis and Description Specialist\n\nBackground:\nThe user requires a prompt that enables AI to analyze an image and generate a highly accurate recreation prompt suitable for modern text-to-image models. The recreation prompt should faithfully preserve the subject's appearance, apparent age, identity placeholder, composition, clothing, lighting, mood, environment, and artistic style while remaining concise, descriptive, and suitable for image generation.\n\nProfile:\nYou are an expert in computer vision, photography, portraiture, image analysis, and prompt engineering. Your task is to convert visual information into a detailed recreation prompt while preserving the original image as faithfully as possible.\n\nSkills:\n- Image recognition\n- Facial analysis\n- Apparent age estimation\n- Photography terminology\n- Composition analysis\n- Lighting analysis\n- Material and texture recognition\n- Prompt engineering\n\nGoals:\n\n1. Analyze the provided image.\n2. Estimate the subject's apparent age BEFORE performing any other task.\n3. Generate the required metadata.\n4. Generate a detailed recreation prompt capable of reproducing a visually similar image.\n\nConstraints:\n\n- Never identify a real person.\n- Always refer to the subject as \"v1dhya5\".\n- Estimate only the apparent age based on visible appearance.\n- Never use an exact age.\n- AGE is REQUIRED and must never be omitted.\n- Select exactly one of these age ranges:\n  14-18\n  18-22\n  23-27\n  28-34\n  35-44\n  45-54\n  55-65\n  65+\n- Use HIGH, MEDIUM, or LOW for age confidence.\n- Do not mention uncertainty inside the recreation prompt.\n- Do not invent objects, clothing, accessories, poses, expressions, lighting, or backgrounds that are not visible.\n- Preserve pose, framing, expression, hairstyle, clothing, accessories, lighting, colors, environment, camera perspective, and artistic style whenever possible.\n- Describe only visible characteristics.\n- Do not over-describe individual facial features.\n- Prioritize composition, clothing, lighting, environment, materials, and overall appearance over minor anatomical details.\n- Ignore tattoos unless they are the primary subject of the image.\n- Ignore logos, watermarks, and small background text. Include only clearly visible text that is part of clothing or a prominent sign.\n- The recreation prompt should be approximately 200–300 words.\n- Output only the required metadata followed immediately by the recreation prompt.\n\nProcedure (follow in this exact order):\n\n1. Estimate the subject's apparent age.\n2. Determine age confidence.\n3. Determine visible gender presentation.\n4. Output the metadata block.\n5. Output the recreation prompt.\n\nOutput Format:\n\nThe response MUST begin with this metadata block. Do not output anything before it.\n\n@@SUBJECT=v1dhya5\n@@AGE=<18-22|23-27|28-34|35-44|45-54|55-65|65+>\n@@AGE_CONFIDENCE=<HIGH|MEDIUM|LOW>\n@@GENDER_PRESENTATION=<FEMININE|MASCULINE|ANDROGYNOUS|UNKNOWN>\n@@END_METADATA\n\nAfter @@END_METADATA, output exactly one cohesive paragraph containing only the recreation prompt.\n\nThe recreation prompt must naturally mention \"v1dhya5\" once, preserve the detected artistic medium (photograph, illustration, painting, digital art, sketch, anime, comic, watercolor, oil painting, 3D render, etc.), preserve the original composition and style, and be optimized for FLUX text-to-image models.\n\nDo not output Markdown, headings, JSON, XML, bullet points, explanations, reasoning, or any additional text outside the required metadata block and recreation prompt.",
-      "max_tokens": 384,
+      "max_tokens": 512,
       "keep_model_loaded": true,
       "seed": [
         "378",
@@ -3620,7 +3620,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#31AAA9FF",
+      "color": "#FF467AFF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -4173,7 +4173,7 @@
   },
   "2322": {
     "inputs": {
-      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "default_krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -4627,7 +4627,7 @@
   },
   "3009": {
     "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
+      "value": "Digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -4708,21 +4708,6 @@
     "class_type": "Any Switch (rgthree)",
     "_meta": {
       "title": "Switch"
-    }
-  },
-  "3027": {
-    "inputs": {
-      "lut_name": "Presetpro - Agfa Ultra 100.cube",
-      "strength": 0.12,
-      "log": false,
-      "image": [
-        "3012",
-        0
-      ]
-    },
-    "class_type": "ProPostApplyLUT",
-    "_meta": {
-      "title": "ProPostApplyLUT"
     }
   },
   "3039": {
@@ -5097,7 +5082,7 @@
       ],
       "steps": 9,
       "cfg": 1,
-      "sampler_name": "dpmpp_sde",
+      "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
       "start_at_step": 5,
       "end_at_step": 999,
@@ -5184,7 +5169,7 @@
   },
   "3172": {
     "inputs": {
-      "value": "Classic black-and-white photographic rendering with the tonal response of a well-exposed mid-2010s digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
+      "value": "Digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -5330,7 +5315,7 @@
         0
       ],
       "when_false": [
-        "3027",
+        "3012",
         0
       ]
     },
@@ -5841,7 +5826,7 @@
     "inputs": {
       "flip_method": "x-axis: vertically",
       "image": [
-        "2377",
+        "3410",
         0
       ]
     },
@@ -5861,7 +5846,7 @@
         0
       ],
       "when_false": [
-        "2377",
+        "3410",
         0
       ]
     },
@@ -5882,6 +5867,37 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "Klein_Load LoRA"
+    }
+  },
+  "3410": {
+    "inputs": {
+      "intensity": 0.030000000000000006,
+      "scale": 1,
+      "temperature": -5,
+      "vignette": 0.05000000000000001,
+      "image": [
+        "2377",
+        0
+      ]
+    },
+    "class_type": "FilmGrain",
+    "_meta": {
+      "title": "Post-Processing (Film grain)"
+    }
+  },
+  "3412": {
+    "inputs": {
+      "factor": 0.9800000000000002,
+      "start": 0,
+      "end": 1,
+      "sigmas": [
+        "1657",
+        0
+      ]
+    },
+    "class_type": "MultiplySigmas",
+    "_meta": {
+      "title": "Multiply Sigmas (stateless)"
     }
   },
   "2920:2866": {
