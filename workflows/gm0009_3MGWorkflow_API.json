@@ -1629,7 +1629,7 @@
   },
   "1323": {
     "inputs": {
-      "text": "Preserve the original facial expression and mouth geometry. Make the expression look naturally relaxed and emotionally coherent, with gentle, natural eye expression. Preserve the original mouth opening, lip position, smile intensity, and visibility of teeth. If teeth are visible, retain their original number, shape, spacing, alignment, and natural imperfections. Do not broaden the smile, expose additional teeth, whiten teeth, or reconstruct the mouth."
+      "text": "The subject has a warm, affectionate expression with gentle eyes and a soft natural smile, with natural dimensional teeth if visible.\nThe subject has a subtle playful pout with gently pursed lips and relaxed eyes.\nThe subject has a soft, shy expression with a faint smile, gentle gaze, and slight hesitation.\nThe subject has a naturally happy expression with a relaxed smile, bright expressive eyes, and natural individual teeth if visible.\nThe subject has a joyful expression with a genuine broad smile, naturally smiling eyes, and realistic uneven teeth depth.\nThe subject has a playful, lighthearted expression with a subtle grin and relaxed facial features.\nThe subject has a softly romantic expression with warm eyes, relaxed lips, and gentle emotional warmth.\nThe subject has a subtly flirtatious expression with a playful gaze and a slight confident smile.\nThe subject has a subtly alluring expression with relaxed eyelids, soft lips, and quiet confidence.\nThe subject has a confident, alluring expression with natural elegance and restrained emotional intensity.\nThe subject has a mildly surprised expression with slightly widened eyes, gently raised eyebrows, and natural facial tension.\nThe subject has a slightly open-mouth expression with relaxed lips, natural tooth separation, and a natural facial posture.\n"
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -2152,7 +2152,7 @@
     "inputs": {
       "clip_l": "v1dhya5\n\npreserve facial identity, natural facial symmetry, correct facial anatomy, naturally aligned eyes, stable facial structure, preserve expression, preserve gaze direction, preserve hairstyle, preserve bindi, preserve jewelry, preserve skin tone, preserve lighting, preserve color grading",
       "t5xxl": "photograph of an Indian v1dhya5, with a naturally attractive, well-proportioned face and a small black bindi centered on her forehead. Preserve her facial identity, facial structure, expression, age, and overall appearance. Natural matte skin with realistic photographic rendering, balanced tonal variation, restrained specular highlights, and authentic melanin-rich South Indian skin tones. Soft diffused lighting with gentle highlight roll-off, smooth shadow transitions, realistic dynamic range, and natural photographic color science. Moderate optical sharpness with realistic lens rendering, avoiding exaggerated detail, oversharpening, artificial skin texture, or beauty-filter effects. Clean, artifact-free rendering with authentic consumer DSLR image quality from the mid-2000s, subtle optical softness, natural color response, and restrained saturation.\n\nA tiny black mole on the chin . She has naturally dark, supple, non-oily skin.\n\n-- body description --\n\nShe has a naturally voluptuous hourglass figure, approximately 5'8\" (173 cm) tall and 160 lb (72 kg), with proportionate curves, thick thighs, and a mature, healthy physique.  \n",
-      "guidance": 2.8,
+      "guidance": 3.5,
       "clip": [
         "2925",
         1
@@ -4826,7 +4826,7 @@
       "monochrome_grain": false,
       "highlight_rolloff": 0.15,
       "image": [
-        "3247",
+        "3413",
         0
       ],
       "depth_map": [
@@ -4905,7 +4905,7 @@
         "222",
         0
       ],
-      "b": 0.42,
+      "b": 0.48,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
@@ -5008,7 +5008,7 @@
         "378",
         0
       ],
-      "steps": 19,
+      "steps": 20,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "beta",
@@ -5448,7 +5448,7 @@
   },
   "3205": {
     "inputs": {
-      "max_shift": 1.08,
+      "max_shift": 1.15,
       "base_shift": 0.5,
       "width": 896,
       "height": 896,
@@ -5898,6 +5898,26 @@
     "class_type": "MultiplySigmas",
     "_meta": {
       "title": "Multiply Sigmas (stateless)"
+    }
+  },
+  "3413": {
+    "inputs": {
+      "strength": 1,
+      "method": "lab",
+      "invert_mask": false,
+      "reference_mode": "reference",
+      "image": [
+        "3247",
+        0
+      ],
+      "reference": [
+        "2309",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ColorMatch",
+    "_meta": {
+      "title": "Color Match 🆎"
     }
   },
   "2920:2866": {
