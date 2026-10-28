@@ -1535,7 +1535,7 @@
   "1298": {
     "inputs": {
       "lora_name": "vidhyas_lora_v3.safetensors",
-      "strength_model": 0.86,
+      "strength_model": 1.2,
       "strength_clip": 0.08,
       "model": [
         "1297",
@@ -4905,7 +4905,7 @@
         "222",
         0
       ],
-      "b": 0.48,
+      "b": 0.53,
       "operation": "multiply"
     },
     "class_type": "easy mathFloat",
