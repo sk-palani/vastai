@@ -78,7 +78,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "129": {
@@ -87,7 +87,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "133": {
@@ -311,7 +311,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "421": {
@@ -369,7 +369,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "445": {
@@ -729,7 +729,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "608": {
@@ -738,7 +738,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "609": {
@@ -1426,7 +1426,7 @@
     },
     "class_type": "DualCLIPLoader",
     "_meta": {
-      "title": "DualCLIPLoader"
+      "title": "Load CLIP (Dual)"
     }
   },
   "1193": {
@@ -1517,7 +1517,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "1227": {
@@ -2161,7 +2161,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "1725": {
@@ -2766,7 +2766,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2016": {
@@ -2778,7 +2778,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "2023": {
@@ -2790,7 +2790,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2024": {
@@ -2815,7 +2815,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "2026": {
@@ -2952,7 +2952,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "2057": {
@@ -2961,7 +2961,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "2058": {
@@ -3036,7 +3036,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "2062": {
@@ -3045,7 +3045,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "2063": {
@@ -3110,7 +3110,7 @@
     },
     "class_type": "PrimitiveString",
     "_meta": {
-      "title": "Text String"
+      "title": "Text"
     }
   },
   "2070": {
@@ -3636,7 +3636,7 @@
       ],
       "font": "DSEG14Classic-Bold.ttf",
       "size": 30,
-      "color": "#2373F4FF",
+      "color": "#D46743FF",
       "background_color": "#00000000",
       "shadow_distance": 1,
       "shadow_blur": 3,
@@ -3673,7 +3673,7 @@
       "lora_name": "vidhyas_lora_v4_klein.safetensors",
       "strength_model": 1,
       "model": [
-        "2124",
+        "3384",
         0
       ]
     },
@@ -3797,7 +3797,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2238": {
@@ -3809,7 +3809,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "2241": {
@@ -3821,7 +3821,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "2242": {
@@ -4171,18 +4171,6 @@
       "title": "Krea_VAE Encode"
     }
   },
-  "2314": {
-    "inputs": {
-      "conditioning": [
-        "3230",
-        1
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
   "2315": {
     "inputs": {
       "vae_name": "qwen_image_vae.safetensors"
@@ -4240,7 +4228,10 @@
       "brightness": -1,
       "contrast": 4.5,
       "saturation": -0.3,
-      "gamma": 0.93,
+      "gamma": [
+        "3388",
+        0
+      ],
       "image": [
         "1094",
         0
@@ -4304,6 +4295,7 @@
       "sampling_mode.presence_penalty": 0,
       "thinking": false,
       "use_default_template": true,
+      "mtp": "auto",
       "clip": [
         "3104",
         0
@@ -4643,7 +4635,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "3008": {
@@ -4669,7 +4661,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3011": {
@@ -4713,7 +4705,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "3017": {
@@ -4907,7 +4899,7 @@
         0
       ],
       "model": [
-        "3230",
+        "3377",
         0
       ],
       "positive": [
@@ -5040,7 +5032,7 @@
     },
     "class_type": "ReferenceLatent",
     "_meta": {
-      "title": "ReferenceLatent"
+      "title": "Set Reference Latent"
     }
   },
   "3147": {
@@ -5150,7 +5142,7 @@
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
-        "3230",
+        "3377",
         0
       ],
       "positive": [
@@ -5235,7 +5227,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3174": {
@@ -5264,7 +5256,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3177": {
@@ -5273,7 +5265,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3178": {
@@ -5319,7 +5311,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3188": {
@@ -5328,7 +5320,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3189": {
@@ -5457,7 +5449,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3200": {
@@ -5466,7 +5458,7 @@
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Text String (Multiline)"
+      "title": "Text (Multiline)"
     }
   },
   "3201": {
@@ -5601,7 +5593,7 @@
     },
     "class_type": "ConditioningZeroOut",
     "_meta": {
-      "title": "ConditioningZeroOut"
+      "title": "Conditioning Zero Out"
     }
   },
   "3229": {
@@ -5616,41 +5608,6 @@
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
       "title": "Load LoRA"
-    }
-  },
-  "3230": {
-    "inputs": {
-      "prompt": [
-        "2406",
-        0
-      ],
-      "vision_megapixels": 1,
-      "mask_padding": 0,
-      "conditioning_rescaling": false,
-      "multiplier": 3.8,
-      "per_layer_weights": "1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.2,1.5,1.1,1.2,1.0",
-      "prompt_adherence_enhancer": true,
-      "strength": 1,
-      "clip": [
-        "2349",
-        0
-      ],
-      "model": [
-        "3377",
-        0
-      ],
-      "system_prompt": [
-        "2300",
-        0
-      ],
-      "images": [
-        "2309",
-        0
-      ]
-    },
-    "class_type": "VantageTextEncodeKrea2",
-    "_meta": {
-      "title": "Vantage Text Encode (Krea2)"
     }
   },
   "3247": {
@@ -5680,7 +5637,30 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "Load LoRA"
+      "title": "Klein_Load LoRA"
+    }
+  },
+  "3384": {
+    "inputs": {
+      "lora_name": "Flux2-Klein-9B-consistency-V2.safetensors",
+      "strength_model": 0.92,
+      "model": [
+        "2124",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Klein_Load LoRA"
+    }
+  },
+  "3388": {
+    "inputs": {
+      "value": 0.98
+    },
+    "class_type": "FloatConstant",
+    "_meta": {
+      "title": "Float Constant"
     }
   },
   "2920:2866": {
