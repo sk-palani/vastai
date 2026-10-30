@@ -21,6 +21,9 @@
 #   COMFYUI_TORCH_INDEX_URL    Explicit PyTorch wheel index for a deliberate Torch upgrade.
 #   COMFYUI_UPGRADE_TORCH      Set true only when intentionally upgrading Torch during Python migration.
 #   ALLOW_NODE_TORCH_REQUIREMENTS Set true to allow node/core requirements to replace the image's Torch packages.
+#   COMFYUI_MIN_TORCH_VERSION     Minimum Torch required by this ComfyUI checkout (default 2.7.0).
+#   COMFYUI_TORCH_INDEX_URL      Optional explicit PyTorch wheel index; otherwise selected from NVIDIA driver.
+#   COMFYUI_AUTO_FIX_TORCH       Automatically upgrade an older Torch to a compatible 2.7.1 build (default true).
 # https://github.com/MushroomFleet/Runpod-init
 : "${WORKSPACE:?WORKSPACE must be set by the container provider}"
 
@@ -90,6 +93,8 @@ COMFYUI_AUTO_UPDATE="${COMFYUI_AUTO_UPDATE:-true}"
 AUTO_UPDATE="${NODES_AUTO_UPDATE:-${AUTO_UPDATE:-false}}"
 COMFYUI_UPGRADE_TORCH="${COMFYUI_UPGRADE_TORCH:-false}"
 COMFYUI_TORCH_INDEX_URL="${COMFYUI_TORCH_INDEX_URL:-}"
+COMFYUI_MIN_TORCH_VERSION="${COMFYUI_MIN_TORCH_VERSION:-2.7.0}"
+COMFYUI_AUTO_FIX_TORCH="${COMFYUI_AUTO_FIX_TORCH:-true}"
 COMFYUI_PYTHON_STAGE=""
 COMFYUI_PYTHON_BACKUP=""
 COMFYUI_RUNTIME_VENV_DIR="$COMFYUI_VENV_DIR"
@@ -165,6 +170,9 @@ PIP_PACKAGES=(
 
 CHECKPOINT_MODELS=(
 )
+# Only these two repositories are managed by this script. Other folders already
+# present in custom_nodes are supplied by the AI-Dock image or installed separately;
+# leave them untouched.
 NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
     "https://github.com/ClownsharkBatwing/RES4LYF"
@@ -1393,6 +1401,75 @@ function upgrade_torch_if_requested() {
     "$COMFYUI_PYTHON" -c 'import torch; print("Installed Torch:", torch.__version__, "CUDA:", torch.version.cuda, "available:", torch.cuda.is_available())' || return 1
 }
 
+function ensure_comfyui_torch_compatibility() {
+    local installed_torch index_url driver_version
+    installed_torch="$($COMFYUI_PYTHON -c 'import torch; print(torch.__version__.split("+")[0])' 2>/dev/null)" || {
+        echo "Cannot import PyTorch from the ComfyUI runtime: $COMFYUI_PYTHON" >&2
+        return 1
+    }
+
+    if "$COMFYUI_PYTHON" - "$installed_torch" "$COMFYUI_MIN_TORCH_VERSION" <<'PYTORCH_VERSION_CHECK'
+from packaging.version import Version
+import sys
+raise SystemExit(0 if Version(sys.argv[1]) >= Version(sys.argv[2]) else 1)
+PYTORCH_VERSION_CHECK
+    then
+        echo "PyTorch ${installed_torch} satisfies ComfyUI minimum ${COMFYUI_MIN_TORCH_VERSION}."
+        return 0
+    fi
+
+    echo "PyTorch ${installed_torch} is older than the ComfyUI minimum ${COMFYUI_MIN_TORCH_VERSION}." >&2
+    if [[ "${COMFYUI_AUTO_FIX_TORCH,,}" != "true" && "${COMFYUI_AUTO_FIX_TORCH,,}" != "1" ]]; then
+        echo "Automatic Torch repair is disabled. Set COMFYUI_AUTO_FIX_TORCH=true or install a compatible GPU build manually." >&2
+        return 1
+    fi
+
+    index_url="$COMFYUI_TORCH_INDEX_URL"
+    if [[ -z "$index_url" ]]; then
+        if ! command -v nvidia-smi >/dev/null 2>&1; then
+            echo "nvidia-smi is unavailable, so the script cannot safely select a CUDA wheel." >&2
+            echo "Set COMFYUI_TORCH_INDEX_URL explicitly (for example, a PyTorch cu126/cu128 wheel index)." >&2
+            return 1
+        fi
+        driver_version="$(nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -n 1 | tr -d '[:space:]')"
+        [[ -n "$driver_version" ]] || { echo "Could not read the NVIDIA driver version from nvidia-smi." >&2; return 1; }
+        index_url="$(DRIVER_VERSION="$driver_version" "$COMFYUI_PYTHON" - <<'PYTORCH_INDEX'
+import os
+from packaging.version import Version
+v = Version(os.environ["DRIVER_VERSION"])
+if v >= Version("570.26"):
+    print("https://download.pytorch.org/whl/cu128")
+elif v >= Version("560.28"):
+    print("https://download.pytorch.org/whl/cu126")
+elif v >= Version("520.61"):
+    print("https://download.pytorch.org/whl/cu118")
+else:
+    raise SystemExit("NVIDIA driver is too old for the supported PyTorch 2.7.1 CUDA wheels; update the host driver or set a compatible COMFYUI_TORCH_INDEX_URL.")
+PYTORCH_INDEX
+)" || return 1
+        echo "Detected NVIDIA driver ${driver_version}; selected ${index_url}."
+    else
+        echo "Using explicitly configured PyTorch wheel index: ${index_url}."
+    fi
+
+    # PyTorch 2.7.1 is the first supported baseline for this ComfyUI generation.
+    # Keep the three official packages version-aligned and avoid an unbounded upgrade.
+    pip_install --index-url "$index_url" \
+        "torch==2.7.1" "torchvision==0.22.1" "torchaudio==2.7.1" || {
+        echo "Could not install the compatible PyTorch 2.7.1 package set. See ${WORKSPACE}/pip-install.log." >&2
+        return 1
+    }
+
+    "$COMFYUI_PYTHON" - <<'PYTORCH_VERIFY'
+import torch
+print(f"Verified PyTorch: {torch.__version__}; CUDA runtime: {torch.version.cuda}; CUDA available: {torch.cuda.is_available()}")
+if tuple(int(x) for x in torch.__version__.split('+')[0].split('.')[:2]) < (2, 7):
+    raise SystemExit("Installed PyTorch is still below 2.7")
+if torch.version.cuda and not torch.cuda.is_available():
+    raise SystemExit("CUDA PyTorch installed, but CUDA is not available. Check the container GPU runtime/driver.")
+PYTORCH_VERIFY
+}
+
 function report_comfyui_runtime() {
     echo "ComfyUI directory: $COMFYUI_DIR"
     echo "ComfyUI Python: $COMFYUI_PYTHON"
@@ -1545,6 +1622,7 @@ run_timed "setup: Syncthing" setup_syncthing || { echo "Syncthing startup failed
 run_timed "update: ComfyUI core" update_comfyui_core || { echo "ComfyUI core update failed; inspect git status and COMFYUI_REF." >&2; exit 1; }
 run_timed "setup: prepare ComfyUI Python ${COMFYUI_PYTHON_VERSION}" ensure_comfyui_python || { echo "Could not prepare the ComfyUI runtime Python environment." >&2; exit 1; }
 run_timed "setup: optional PyTorch upgrade" upgrade_torch_if_requested || { echo "Requested PyTorch upgrade failed; see ${WORKSPACE}/pip-install.log." >&2; exit 1; }
+run_timed "check/fix: ComfyUI PyTorch compatibility" ensure_comfyui_torch_compatibility || { echo "ComfyUI requires a compatible PyTorch build; refusing to continue with a broken runtime." >&2; exit 1; }
 run_timed "check: ComfyUI Python and PyTorch runtime" report_comfyui_runtime || { echo "Could not inspect the ComfyUI runtime." >&2; exit 1; }
 run_timed "setup: downloader tools" install_downloader_tools || { echo "Downloader tool installation failed." >&2; exit 1; }
 
