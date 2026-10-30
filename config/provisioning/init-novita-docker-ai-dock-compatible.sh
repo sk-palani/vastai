@@ -871,9 +871,12 @@ function setup_tailscale() {
     local ts_state="${ts_dir}/tailscaled.state"
     local ts_socket="/tmp/tailscaled.sock"
     local ts_log="/tmp/tailscaled.log"
-    local i previous_umask
+    local i status_json backend_state daemon_ready=0
 
-    # A persisted state file can reconnect without asking for an auth key again.
+    # Do not require `tailscale status` to exit 0 before login. On a freshly
+    # started daemon, status commonly returns a non-zero exit code while still
+    # returning valid JSON with BackendState=NeedsLogin. That is normal and
+    # must not be mistaken for a daemon-startup failure.
     if [[ -z "${TAILSCALE_AUTHKEY:-}" && ! -s "$ts_state" ]]; then
         echo "Tailscale: skipped (set TAILSCALE_AUTHKEY, or preserve ${ts_state} from a previous login)."
         return 0
@@ -884,45 +887,106 @@ function setup_tailscale() {
         curl -fsSL https://tailscale.com/install.sh | sh || return 1
     fi
 
-    previous_umask="$(umask)"
-    umask 077
     mkdir -p "$ts_dir"
     chmod 700 "$ts_dir"
-    umask "$previous_umask"
 
-    if ! tailscale --socket="$ts_socket" status >/dev/null 2>&1; then
+    # First check whether a daemon is already answering on our socket.
+    status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
+    if [[ -n "$status_json" ]] && jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
+        daemon_ready=1
+    fi
+
+    if (( daemon_ready == 0 )); then
+        # Remove only a stale socket. Do not kill a daemon that may be serving
+        # another client; this script owns its dedicated /tmp socket path.
         rm -f "$ts_socket"
         echo "Starting Tailscale userspace daemon..."
-        nohup tailscaled --tun=userspace-networking --state="$ts_state" --socket="$ts_socket" \
+        nohup tailscaled \
+            --tun=userspace-networking \
+            --state="$ts_state" \
+            --socket="$ts_socket" \
             >"$ts_log" 2>&1 </dev/null &
+
+        # Wait for a valid local API response, not for the node to be logged in.
         for i in $(seq 1 30); do
-            if tailscale --socket="$ts_socket" status >/dev/null 2>&1; then break; fi
+            status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
+            if [[ -n "$status_json" ]] && jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
+                daemon_ready=1
+                break
+            fi
             sleep 1
         done
     fi
 
-    if ! tailscale --socket="$ts_socket" status >/dev/null 2>&1; then
-        echo "Tailscale daemon did not become ready; inspect ${ts_log}." >&2
-        tail -n 60 "$ts_log" >&2 || true
+    if (( daemon_ready == 0 )); then
+        echo "Tailscale daemon did not expose a valid local API response; inspect ${ts_log}." >&2
+        tail -n 80 "$ts_log" >&2 || true
         return 1
     fi
 
-    if ! tailscale --socket="$ts_socket" status --json 2>/dev/null | jq -e '.BackendState == "Running"' >/dev/null; then
+    backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json")"
+    if [[ "$backend_state" != "Running" ]]; then
         if [[ -z "${TAILSCALE_AUTHKEY:-}" ]]; then
-            echo "Tailscale has saved state but is not connected. Set TAILSCALE_AUTHKEY to reauthenticate." >&2
+            echo "Tailscale daemon is ready but not authenticated (state: ${backend_state})." >&2
+            echo "Set TAILSCALE_AUTHKEY in the container environment to authenticate." >&2
             return 1
         fi
-        echo "Joining Tailscale tailnet..."
-        tailscale --socket="$ts_socket" up \
+
+        echo "Tailscale daemon is ready (state: ${backend_state}); authenticating this node..."
+        if [[ "$TAILSCALE_AUTHKEY" != tskey-auth-* ]]; then
+            echo "WARNING: TAILSCALE_AUTHKEY does not have the usual tskey-auth- prefix." >&2
+            echo "Make sure this is an Auth Key, not a Tailscale API access key or OAuth client secret." >&2
+        fi
+
+        local ts_up_log="/tmp/tailscale-up.log"
+        # Bound the wait. Without --timeout, `tailscale up` can wait indefinitely
+        # when a device needs approval or authentication cannot complete.
+        if ! tailscale --socket="$ts_socket" up \
+            --timeout=60s \
             --auth-key="$TAILSCALE_AUTHKEY" \
             --hostname="${TS_HOSTNAME:-comfyui-${HOSTNAME:0:12}}" \
-            --ssh || return 1
+            --ssh >"$ts_up_log" 2>&1; then
+            echo "Tailscale authentication command failed. Diagnostic output follows:" >&2
+            cat "$ts_up_log" >&2 || true
+            status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
+            backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json" 2>/dev/null || echo Unknown)"
+            echo "Tailscale backend state after authentication attempt: ${backend_state}" >&2
+            case "$backend_state" in
+                NeedsMachineAuth)
+                    echo "The device is waiting for approval. Approve it in the Tailscale admin console, or create an auth key with Pre-approved enabled if your tailnet requires device approval." >&2
+                    ;;
+                NeedsLogin|NoState|Unknown)
+                    echo "The device is still unauthenticated. Check that TAILSCALE_AUTHKEY is present, unexpired, unused if one-off, and is an Auth Key (tskey-auth-...), not an API key." >&2
+                    ;;
+            esac
+            echo "Tailscale daemon log: ${ts_log}" >&2
+            tail -n 60 "$ts_log" >&2 || true
+            return 1
+        fi
+        cat "$ts_up_log"
     else
+        # Keep Tailscale SSH enabled on an already authenticated node.
         tailscale --socket="$ts_socket" set --ssh || return 1
     fi
 
+    # Wait briefly for the control plane to finish bringing the node online.
+    for i in $(seq 1 30); do
+        status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
+        backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json" 2>/dev/null || echo Unknown)"
+        [[ "$backend_state" == "Running" ]] && break
+        sleep 1
+    done
+
+    if [[ "$backend_state" != "Running" ]]; then
+        echo "Tailscale did not reach Running state (current state: ${backend_state})." >&2
+        echo "Check key validity, device approval, and tailnet SSH policy." >&2
+        tailscale --socket="$ts_socket" status 2>&1 || true
+        tail -n 80 "$ts_log" >&2 || true
+        return 1
+    fi
+
     echo "Tailscale connected:"
-    tailscale --socket="$ts_socket" status
+    tailscale --socket="$ts_socket" status || true
     tailscale --socket="$ts_socket" ip -4 || true
 }
 
