@@ -24,6 +24,24 @@
 # https://github.com/MushroomFleet/Runpod-init
 : "${WORKSPACE:?WORKSPACE must be set by the container provider}"
 
+# Container images commonly run as root but set no-new-privileges, which makes
+# sudo fail even for UID 0. Run privileged commands directly when already root.
+# Non-root execution falls back to passwordless sudo when it is available.
+function as_root() {
+    if (( EUID == 0 )); then
+        "$@"
+        return $?
+    fi
+    if command -v sudo >/dev/null 2>&1; then
+        sudo -n "$@"
+        return $?
+    fi
+    echo "This provisioning step requires root privileges (effective UID=${EUID})." >&2
+    return 1
+}
+
+echo "Provisioning identity: uid=$(id -u) user=$(id -un 2>/dev/null || echo unknown) no-new-privileges may be enabled; privileged commands use direct root execution when possible."
+
 # Load AI-Dock's runtime paths before selecting the ComfyUI code and venv paths.
 # The provider's ComfyUI service normally runs /opt/ComfyUI with
 # /opt/environments/python/comfyui; installing dependencies elsewhere is ineffective.
@@ -368,25 +386,29 @@ function setup_syncthing_repository() {
     [[ "${SYNCTHING_ENABLE,,}" == "false" || "${SYNCTHING_ENABLE,,}" == "0" ]] && return 0
     local keyring=/etc/apt/keyrings/syncthing-archive-keyring.gpg
     local source=/etc/apt/sources.list.d/syncthing.list
+    if (( EUID != 0 )) && ! command -v sudo >/dev/null 2>&1; then
+        echo "Syncthing repository setup requires root; current effective UID is ${EUID}." >&2
+        return 1
+    fi
     if ! command -v curl >/dev/null 2>&1; then
         echo "Bootstrapping curl and CA certificates before configuring Syncthing..."
-        sudo apt-get update || return 1
-        sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends curl ca-certificates || return 1
+        as_root apt-get update || { echo "APT update failed while bootstrapping curl." >&2; return 1; }
+        as_root env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends curl ca-certificates || { echo "Could not install curl/ca-certificates." >&2; return 1; }
     fi
     if [[ ! -s "$keyring" ]]; then
         echo "Adding the official Syncthing APT signing key..."
-        sudo mkdir -p /etc/apt/keyrings || return 1
-        sudo curl -fL --retry 4 --retry-all-errors https://syncthing.net/release-key.gpg -o "${keyring}.tmp" || return 1
-        sudo install -m 0644 "${keyring}.tmp" "$keyring" || return 1
-        sudo rm -f "${keyring}.tmp"
+        as_root mkdir -p /etc/apt/keyrings || return 1
+        as_root curl -fL --retry 4 --retry-all-errors https://syncthing.net/release-key.gpg -o "${keyring}.tmp" || return 1
+        as_root install -m 0644 "${keyring}.tmp" "$keyring" || return 1
+        as_root rm -f "${keyring}.tmp"
     fi
     if ! grep -qF 'https://apt.syncthing.net/ syncthing stable-v2' "$source" 2>/dev/null; then
         echo "Enabling the official Syncthing stable-v2 repository..."
-        printf '%s\n' "deb [signed-by=${keyring}] https://apt.syncthing.net/ syncthing stable-v2" | sudo tee "$source" >/dev/null || return 1
+        printf '%s\n' "deb [signed-by=${keyring}] https://apt.syncthing.net/ syncthing stable-v2" | as_root tee "$source" >/dev/null || return 1
         SYNCTHING_REPO_CHANGED=1
     fi
     if ! grep -qF 'Pin: origin apt.syncthing.net' /etc/apt/preferences.d/syncthing.pref 2>/dev/null; then
-        printf '%s\n' 'Package: *' 'Pin: origin apt.syncthing.net' 'Pin-Priority: 990' | sudo tee /etc/apt/preferences.d/syncthing.pref >/dev/null || return 1
+        printf '%s\n' 'Package: *' 'Pin: origin apt.syncthing.net' 'Pin-Priority: 990' | as_root tee /etc/apt/preferences.d/syncthing.pref >/dev/null || return 1
         SYNCTHING_REPO_CHANGED=1
     fi
 }
@@ -529,8 +551,8 @@ function provisioning_get_apt_packages() {
     if (( ${#missing[@]} == 0 )); then
         if (( SYNCTHING_REPO_CHANGED == 1 )); then
             echo "Refreshing APT metadata for the newly added Syncthing repository..."
-            sudo apt-get update || return 1
-            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends syncthing || return 1
+            as_root apt-get update || return 1
+            as_root env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends syncthing || return 1
         else
             echo "Base OS packages are already installed; skipping apt update."
         fi
@@ -538,8 +560,8 @@ function provisioning_get_apt_packages() {
         return 0
     fi
     echo "Installing ${#missing[@]} missing OS package(s) in one apt transaction..."
-    sudo apt-get update || return 1
-    sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends "${missing[@]}" || return 1
+    as_root apt-get update || return 1
+    as_root env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends "${missing[@]}" || return 1
     APT_PACKAGES_READY=1
 }
 
@@ -1345,7 +1367,7 @@ if [[ -s "${WORKSPACE}/scripts/submit_prompt.sh" ]]; then
         "$WORKSPACE" "$WORKSPACE" "$WORKSPACE" > "$cron_tmp"
     crontab "$cron_tmp"
     rm -f "$cron_tmp"
-    sudo service cron start || service cron start || true
+    as_root service cron start || service cron start || true
 fi
 
 # These services are provider-specific; tolerate absent supervisor groups.
@@ -1355,7 +1377,7 @@ for service_name in \
     'cf_quicktunnel:="cf_quicktunnel_2"' \
     'cf_quicktunnel:="cf_quicktunnel_3"' \
     'jupyter'; do
-    sudo supervisorctl stop "$service_name" >/dev/null 2>&1 || true
+    as_root supervisorctl stop "$service_name" >/dev/null 2>&1 || true
 done
 
 # Activate an explicitly requested replacement venv only after core and custom-node dependency installs succeeded.
