@@ -1347,6 +1347,82 @@ except Exception as exc:
 PYRUNTIME
 }
 
+function repair_known_dependency_conflicts() {
+    # Fix a small set of known ecosystem compatibility conflicts that can arise
+    # when ComfyUI core and custom-node requirements are installed sequentially.
+    # Do not downgrade NumPy: newer Numba and colour-science releases support it.
+    local repairs_text repairs_file
+    repairs_text="$($COMFYUI_PYTHON - <<'PYREPAIRS'
+from importlib.metadata import PackageNotFoundError, version
+from packaging.version import Version
+import sys
+
+
+def installed(name):
+    try:
+        return Version(version(name))
+    except PackageNotFoundError:
+        return None
+
+numpy_v = installed("numpy")
+numba_v = installed("numba")
+colour_v = installed("colour-science")
+httpcore_v = installed("httpcore")
+h11_v = installed("h11")
+py = sys.version_info[:2]
+repairs = []
+
+# Numba 0.60.0 only accepts NumPy <2.1. Numba 0.68 supports the current
+# NumPy 2.x line and Python 3.10+; constrain to this minor release family.
+if numpy_v and numpy_v >= Version("2.1") and numba_v and numba_v < Version("0.68"):
+    repairs.append("numba>=0.68,<0.69")
+
+# colour-science 0.4.4 requires NumPy <2. Use a release that supports NumPy 2.
+# 0.4.6 remains Python 3.10-compatible; 0.4.7 requires Python >=3.11.
+if numpy_v and numpy_v >= Version("2") and colour_v and colour_v < Version("0.4.6"):
+    if py < (3, 11):
+        repairs.append("colour-science==0.4.6")
+    else:
+        repairs.append("colour-science>=0.4.7,<0.5")
+
+# httpcore 1.0.5 requires h11 <0.15. Newer httpcore releases support h11 0.16.
+if httpcore_v and httpcore_v < Version("1.0.9") and h11_v and h11_v >= Version("0.16"):
+    repairs.append("httpcore>=1.0.9,<2")
+
+print("\n".join(repairs))
+PYREPAIRS
+)" || {
+        echo "Could not inspect installed Python package versions." >&2
+        return 1
+    }
+
+    if [[ -z "${repairs_text//[$'\r\n']/}" ]]; then
+        echo "No known NumPy/Numba/colour-science/httpcore compatibility repairs are needed."
+        return 0
+    fi
+
+    echo "Applying narrowly scoped dependency compatibility updates:"
+    while IFS= read -r package_spec; do
+        [[ -n "$package_spec" ]] && echo "  - $package_spec"
+    done <<< "$repairs_text"
+
+    # One resolver transaction is important: these related packages must be
+    # selected together rather than upgraded one at a time.
+    repairs_file="$(mktemp "${WORKSPACE}/.dependency-repairs.XXXXXX")" || return 1
+    printf '%s\n' "$repairs_text" > "$repairs_file"
+    local -a repair_args=()
+    mapfile -t repair_args < "$repairs_file"
+    rm -f "$repairs_file"
+    pip_install --upgrade "${repair_args[@]}" || {
+        echo "Known dependency compatibility updates failed. See ${WORKSPACE}/pip-install.log." >&2
+        return 1
+    }
+
+    echo "Dependency versions after compatibility updates:"
+    "$COMFYUI_PYTHON" -m pip show numpy numba colour-science httpcore h11 2>/dev/null \
+        | grep -E '^(Name|Version):' || true
+}
+
 function provisioning_start() {
     local failed=0
     provisioning_print_header
@@ -1361,8 +1437,10 @@ function provisioning_start() {
         return 1
     fi
 
+    run_timed "provision: repair known dependency compatibility conflicts" repair_known_dependency_conflicts || return 1
     run_timed "provision: pip dependency consistency check" "$COMFYUI_PYTHON" -m pip check || {
-        echo "Python dependency conflicts were reported. Review pip-install.log and pip check output." >&2
+        echo "Unresolved Python dependency conflicts remain after targeted repairs." >&2
+        echo "Review ${WORKSPACE}/pip-install.log and run: ${COMFYUI_PYTHON} -m pip check" >&2
         return 1
     }
     run_timed "provision: model assets (all downloads)" provisioning_get_model_assets || return 1
