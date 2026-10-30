@@ -883,8 +883,7 @@ function setup_tailscale() {
     local ts_socket="/tmp/tailscaled.sock"
     local ts_log="/tmp/tailscaled.log"
     local ts_err_log="/tmp/tailscaled.err.log"
-    local supervisor_conf_dir="/etc/supervisor/conf.d"
-    local supervisor_conf="${supervisor_conf_dir}/tailscaled.conf"
+    local supervisor_config="" supervisor_include_pattern="" supervisor_conf_dir="" supervisor_conf=""
     local tailscaled_bin tailscale_bin i status_json backend_state daemon_ready=0 pid cmdline
 
     # This container has no alternate SSH route. Never silently skip Tailscale:
@@ -906,11 +905,78 @@ function setup_tailscale() {
         echo "FATAL: supervisorctl is unavailable; refusing to start an unmanaged Tailscale daemon." >&2
         return 1
     fi
-    if [[ ! -d "$supervisor_conf_dir" ]] || ! grep -qsF '/etc/supervisor/conf.d/*.conf' /etc/supervisor/supervisord.conf /etc/supervisor/*.conf 2>/dev/null; then
-        echo "FATAL: /etc/supervisor/conf.d/*.conf is not included by Supervisor." >&2
-        echo "Cannot guarantee Tailscale daemon restart after a crash." >&2
+
+    # Discover the actual supervisord config and its include glob. AI-Dock images
+    # commonly use *.ini rather than *.conf; never assume a particular extension.
+    local supervisor_args config_candidate
+    supervisor_args="$(ps -eo args= | grep -E '[s]upervisord([[:space:]]|$)' | head -n 1 || true)"
+    if [[ "$supervisor_args" =~ -c[[:space:]]+([^[:space:]]+) ]]; then
+        config_candidate="${BASH_REMATCH[1]}"
+        [[ -f "$config_candidate" ]] && supervisor_config="$config_candidate"
+    fi
+    if [[ -z "$supervisor_config" ]]; then
+        for config_candidate in \
+            /etc/supervisor/supervisord.conf \
+            /etc/supervisord.conf \
+            /etc/supervisor.conf \
+            /etc/supervisor/supervisor.conf; do
+            if [[ -f "$config_candidate" ]]; then
+                supervisor_config="$config_candidate"
+                break
+            fi
+        done
+    fi
+    if [[ -z "$supervisor_config" ]]; then
+        echo "FATAL: Could not locate the active Supervisor configuration." >&2
+        echo "supervisord process: ${supervisor_args:-not found}" >&2
         return 1
     fi
+
+    # Read [include] files patterns. If none exists, add a dedicated include
+    # directory to the main config; Supervisor reread will then load our program.
+    supervisor_include_pattern="$(python3 - "$supervisor_config" <<'PYCONF'
+import configparser, sys
+p=sys.argv[1]
+c=configparser.ConfigParser(strict=False)
+c.read(p)
+if c.has_section('include'):
+    print(c.get('include','files',fallback='').replace(',', '\n'))
+PYCONF
+)"
+    if [[ -z "${supervisor_include_pattern//[$' \t\r\n']/}" ]]; then
+        echo "Supervisor has no [include] files entry; adding a dedicated Tailscale include."
+        printf '\n[include]\nfiles = /etc/supervisor/conf.d/*.conf\n' >> "$supervisor_config"
+        supervisor_include_pattern="/etc/supervisor/conf.d/*.conf"
+    fi
+
+    # Select the first include glob whose directory can be created and whose
+    # filename wildcard can be represented by a .conf/.ini-style suffix.
+    while IFS= read -r config_candidate; do
+        config_candidate="${config_candidate//[[:space:]]/}"
+        [[ -n "$config_candidate" ]] || continue
+        if [[ "$config_candidate" != /* ]]; then
+            config_candidate="$(dirname "$supervisor_config")/$config_candidate"
+        fi
+        if [[ "$config_candidate" == *'*'* ]]; then
+            supervisor_conf_dir="$(dirname "$config_candidate")"
+            local include_base include_suffix
+            include_base="$(basename "$config_candidate")"
+            include_suffix="${include_base#*\*}"
+            [[ -n "$include_suffix" ]] || include_suffix=".conf"
+            if [[ "$include_suffix" == *'?'* || "$include_suffix" == *'['* ]]; then
+                include_suffix=".conf"
+            fi
+            supervisor_conf="${supervisor_conf_dir}/tailscaled${include_suffix}"
+            break
+        fi
+    done <<< "$supervisor_include_pattern"
+
+    if [[ -z "$supervisor_conf" ]]; then
+        echo "FATAL: Supervisor [include] has no usable wildcard: ${supervisor_include_pattern}" >&2
+        echo "Cannot register a restart-managed Tailscale daemon safely." >&2
+        return 1
+    fi
+    mkdir -p "$supervisor_conf_dir"
 
     mkdir -p "$ts_dir"
     chmod 700 "$ts_dir"
@@ -957,7 +1023,7 @@ stderr_logfile_backups=2
 EOF
     chmod 644 "$supervisor_conf"
 
-    echo "Registering Tailscale userspace daemon with Supervisor..."
+    echo "Registering Tailscale userspace daemon with Supervisor: ${supervisor_conf}"
     supervisorctl reread || return 1
     supervisorctl update || return 1
     # If this is an already-known program, make sure it is actually running.
