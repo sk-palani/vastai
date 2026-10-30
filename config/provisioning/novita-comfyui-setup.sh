@@ -1046,7 +1046,7 @@ function provisioning_download_huggingface() {
 }
 
 function provisioning_download_civitai() {
-    local url="$1" dest="$2" version_id query file_id="" format="" metadata filename target metadata_path metadata_dir
+    local url="$1" dest="$2" version_id query file_id="" format="" metadata filename target metadata_path metadata_dir selected_file
     version_id="$(sed -nE 's#^https://civitai\.com/api/download/models/([0-9]+)(\?.*)?$#\1#p' <<< "$url")"
     [[ -n "$version_id" ]] || { echo "Could not parse Civitai model-version ID from URL: ${url%%\?*}" >&2; return 1; }
     query="${url#*\?}"
@@ -1055,15 +1055,17 @@ function provisioning_download_civitai() {
     if [[ "$query" == *"format=PickleTensor"* ]]; then format="pickletensor"; fi
     if [[ "$query" == *"format=SafeTensor"* || "$query" == *"format=safetensors"* ]]; then format="safetensor"; fi
 
-    # Version metadata is stable and public. Cache it in persistent workspace so
-    # ordinary container restarts don't make another API call per Civitai asset.
+    # Cache the version metadata in persistent workspace. The current Civitai
+    # API exposes the file format under files[].metadata.format (not reliably
+    # under files[].format).
     metadata_dir="${WORKSPACE}/.cache/civitai"
     metadata_path="${metadata_dir}/version-${version_id}.json"
     mkdir -p "$metadata_dir"
     if [[ ! -s "$metadata_path" || "${FORCE_PROVISIONING:-0}" == "1" || "${FORCE_MODEL_DOWNLOADS,,}" == "true" ]]; then
         export CIVITAI_TOKEN CIVITAI_NO_UPDATE_CHECK
         metadata="$("$CIVITAI_BIN" model-versions get "$version_id" --json)" || {
-            echo "Could not query Civitai version ${version_id}." >&2; return 1;
+            echo "Could not query Civitai version ${version_id}; check the CLI error above (version may be unavailable or API access may be restricted)." >&2
+            return 1
         }
         if ! jq -e '.files | type == "array"' <<< "$metadata" >/dev/null; then
             echo "Civitai returned invalid file metadata for version ${version_id}." >&2
@@ -1073,15 +1075,30 @@ function provisioning_download_civitai() {
     else
         metadata="$(cat "$metadata_path")" || return 1
     fi
-    if [[ -z "$file_id" && -n "$format" ]]; then
-        file_id="$(jq -r --arg fmt "$format" '([.files[] | select(.primary == true and ((.format // "" | ascii_downcase) == $fmt))][0] // [.files[] | select((.format // "" | ascii_downcase) == $fmt)][0] // {}).id // empty' <<< "$metadata")"
+
+    # Resolve the intended file by its real format or explicit fileId. On the
+    # current API the format lives in metadata.format. Keep a primary/first-file
+    # fallback only when the URL did not specify a format or fileId.
+    selected_file=""
+    if [[ -n "$file_id" ]]; then
+        selected_file="$(jq -c --arg id "$file_id" '[.files[] | select((.id | tostring) == $id)][0] // empty' <<< "$metadata")"
+    elif [[ -n "$format" ]]; then
+        selected_file="$(jq -c --arg fmt "$format" '([.files[] | select(((.metadata.format // .format // "") | ascii_downcase) == $fmt)] | (map(select(.primary == true))[0] // .[0])) // empty' <<< "$metadata")"
+    else
+        selected_file="$(jq -c '([.files[] | select(.primary == true)][0] // .files[0] // empty)' <<< "$metadata")"
     fi
-    if [[ -z "$file_id" ]]; then
-        file_id="$(jq -r '([.files[] | select(.primary == true)][0] // .files[0] // {}).id // empty' <<< "$metadata")"
+
+    if [[ -z "$selected_file" || "$selected_file" == "null" ]]; then
+        echo "Could not find the requested Civitai file (version=${version_id}, format=${format:-default}, fileId=${file_id:-not-specified})." >&2
+        echo "Available files:" >&2
+        jq -r '.files[]? | "  id=\(.id) primary=\(.primary // false) format=\(.metadata.format // .format // "unknown") name=\(.name // "unknown")"' <<< "$metadata" >&2
+        return 1
     fi
-    filename="$(jq -r --arg id "$file_id" '[.files[] | select((.id | tostring) == $id)][0].name // empty' <<< "$metadata")"
-    if [[ -z "$file_id" || -z "$filename" || "$filename" == "null" ]]; then
-        echo "Could not resolve the selected Civitai file for version ${version_id}." >&2
+
+    file_id="$(jq -r '.id // empty' <<< "$selected_file")"
+    filename="$(jq -r '.name // empty' <<< "$selected_file")"
+    if [[ -z "$filename" || "$filename" == "null" ]]; then
+        echo "Civitai metadata did not provide a filename for version ${version_id}, file ${file_id:-unknown}." >&2
         return 1
     fi
 
@@ -1097,8 +1114,11 @@ function provisioning_download_civitai() {
         return 1
     fi
     export CIVITAI_TOKEN CIVITAI_NO_UPDATE_CHECK
-    echo "Civitai: version ${version_id}, file ${file_id} -> ${target}"
-    local -a args=(download "$version_id" --file "$file_id" --out-dir "$dest")
+    echo "Civitai: version ${version_id}, file ${file_id} (${filename}) -> ${target}"
+    # Civitai CLI --file matches a filename substring, NOT the numeric API
+    # file ID. Passing file_id here causes a fast selection failure. The full
+    # filename is a deterministic selector.
+    local -a args=(download "$version_id" --file "$filename" --out-dir "$dest")
     [[ "${FORCE_MODEL_DOWNLOADS,,}" == "true" ]] && args+=(--force)
     "$CIVITAI_BIN" "${args[@]}"
 }
@@ -1187,7 +1207,7 @@ function wait_for_any_download() {
 }
 
 function provisioning_get_model_assets() {
-    local failed=0 max="${MAX_PARALLEL_DOWNLOADS:-2}" i
+    local failed=0 max="${MAX_PARALLEL_DOWNLOADS:-2}" i rc dest url status_file status_dir
     [[ "$max" =~ ^[1-9][0-9]*$ ]] || max=2
     MODEL_JOB_URLS=()
     MODEL_JOB_DESTS=()
@@ -1211,18 +1231,61 @@ function provisioning_get_model_assets() {
     queue_model_urls "${COMFYUI_DIR}/models/unet" "${UNET_MODELS[@]}"
     queue_model_urls "${COMFYUI_DIR}/models/diffusion_models" "${DIFFUSION_MODELS[@]}"
 
+    status_dir="${WORKSPACE}/.provisioning/download-status/${RUN_ID}"
+    rm -rf "$status_dir"
+    mkdir -p "$status_dir"
     echo "Preparing ${#MODEL_JOB_URLS[@]} unique asset/destination jobs (global parallelism: ${max})."
+    echo "Per-model download results: ${status_dir}"
+
     local -a pids=()
     for i in "${!MODEL_JOB_URLS[@]}"; do
         while (( ${#pids[@]} >= max )); do
             wait_for_any_download || failed=1
         done
-        ( timed_provisioning_download "${MODEL_JOB_URLS[$i]}" "${MODEL_JOB_DESTS[$i]}" ) &
+        # Each background job writes its own result file. URL query strings are
+        # intentionally omitted from the report so Civitai tokens are not logged.
+        (
+            rc=0
+            timed_provisioning_download "${MODEL_JOB_URLS[$i]}" "${MODEL_JOB_DESTS[$i]}" || rc=$?
+            dest="${MODEL_JOB_DESTS[$i]}"
+            url="${MODEL_JOB_URLS[$i]%%\?*}"
+            printf '%s\t%s\t%s\n' "$rc" "$dest" "$url" > "${status_dir}/${i}.status"
+            exit "$rc"
+        ) &
         pids+=("$!")
     done
     while (( ${#pids[@]} > 0 )); do
         wait_for_any_download || failed=1
     done
+
+    local failures_file="${status_dir}/FAILED.txt"
+    : > "$failures_file"
+    local success_count=0 failure_count=0
+    for i in "${!MODEL_JOB_URLS[@]}"; do
+        status_file="${status_dir}/${i}.status"
+        if [[ ! -s "$status_file" ]]; then
+            printf 'No completion record: %s | %s\n' "${MODEL_JOB_DESTS[$i]}" "${MODEL_JOB_URLS[$i]%%\?*}" >> "$failures_file"
+            ((failure_count+=1))
+            continue
+        fi
+        IFS=$'\t' read -r rc dest url < "$status_file"
+        if [[ "$rc" == "0" ]]; then
+            ((success_count+=1))
+        else
+            printf 'Exit %s: %s | %s\n' "$rc" "$dest" "$url" >> "$failures_file"
+            ((failure_count+=1))
+        fi
+    done
+
+    echo "Model download summary: ${success_count} succeeded, ${failure_count} failed or incomplete."
+    if (( failure_count > 0 )); then
+        echo "Failed model downloads:" >&2
+        cat "$failures_file" >&2
+        echo "Full per-model status directory: ${status_dir}" >&2
+        failed=1
+    else
+        rm -f "$failures_file"
+    fi
     return "$failed"
 }
 
