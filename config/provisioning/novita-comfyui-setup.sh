@@ -26,24 +26,27 @@
 #   COMFYUI_AUTO_FIX_TORCH       Automatically upgrade an older Torch to a compatible 2.7.1 build (default true).
 # https://github.com/MushroomFleet/Runpod-init
 : "${WORKSPACE:?WORKSPACE must be set by the container provider}"
+if [[ "$(id -u)" != "0" ]]; then
+    echo "FATAL: this AI-Dock provisioning script must run as root (UID 0)." >&2
+    exit 1
+fi
 
-# Container images commonly run as root but set no-new-privileges, which makes
-# sudo fail even for UID 0. Run privileged commands directly when already root.
-# Non-root execution falls back to passwordless sudo when it is available.
+# This provider container must run the provisioning script as root. All privileged
+# commands execute directly; sudo is intentionally not used because no-new-privileges
+# can make sudo fail even when the caller is UID 0.
 function as_root() {
-    if (( EUID == 0 )); then
+    # This is a container init/provisioning script. The provider runs it as root.
+    # sudo is deliberately never used: no-new-privileges can make sudo fail even
+    # for UID 0. Fail clearly if the provider invokes this script unprivileged.
+    if [[ "$(id -u)" == "0" ]]; then
         "$@"
         return $?
     fi
-    if command -v sudo >/dev/null 2>&1; then
-        sudo -n "$@"
-        return $?
-    fi
-    echo "This provisioning step requires root privileges (effective UID=${EUID})." >&2
+    echo "FATAL: provisioning requires UID 0; current UID=$(id -u). sudo is intentionally not used in this container." >&2
     return 1
 }
 
-echo "Provisioning identity: uid=$(id -u) user=$(id -un 2>/dev/null || echo unknown) no-new-privileges may be enabled; privileged commands use direct root execution when possible."
+echo "Provisioning identity: uid=$(id -u) user=$(id -un 2>/dev/null || echo unknown); privileged commands run directly without sudo."
 
 # Load AI-Dock's runtime paths before selecting the ComfyUI code and venv paths.
 # The provider's ComfyUI service normally runs /opt/ComfyUI with
@@ -174,7 +177,8 @@ CHECKPOINT_MODELS=(
 # present in custom_nodes are supplied by the AI-Dock image or installed separately;
 # leave them untouched.
 NODES=(
-
+    "https://github.com/sk-palani/ComfyUI_Simpler"
+    "https://github.com/ClownsharkBatwing/RES4LYF"
 )
 
 
@@ -393,8 +397,8 @@ function setup_syncthing_repository() {
     [[ "${SYNCTHING_ENABLE,,}" == "false" || "${SYNCTHING_ENABLE,,}" == "0" ]] && return 0
     local keyring=/etc/apt/keyrings/syncthing-archive-keyring.gpg
     local source=/etc/apt/sources.list.d/syncthing.list
-    if (( EUID != 0 )) && ! command -v sudo >/dev/null 2>&1; then
-        echo "Syncthing repository setup requires root; current effective UID is ${EUID}." >&2
+    if [[ "$(id -u)" != "0" ]]; then
+        echo "Syncthing repository setup requires UID 0; current UID is $(id -u)." >&2
         return 1
     fi
     if ! command -v curl >/dev/null 2>&1; then
@@ -1020,7 +1024,13 @@ EOF
         return 1
     fi
 
-    echo "Tailscale connected in userspace networking mode; Tailscale SSH enabled."
+    if ! ps -eo args= | grep -F -- "${tailscaled_bin} --tun=userspace-networking --state=${ts_state} --socket=${ts_socket}" | grep -v grep >/dev/null 2>&1; then
+        echo "FATAL: tailscaled is not running with the required userspace-networking arguments." >&2
+        supervisorctl status tailscaled >&2 || true
+        return 1
+    fi
+
+    echo "Tailscale connected in userspace networking mode; 'tailscale set --ssh' succeeded."
     "$tailscale_bin" --socket="$ts_socket" status || true
     "$tailscale_bin" --socket="$ts_socket" ip -4 || true
     echo "Remote shell: ssh root@${TS_HOSTNAME:-comfyui-${HOSTNAME:0:12}}"
