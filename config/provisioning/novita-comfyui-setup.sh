@@ -174,8 +174,7 @@ CHECKPOINT_MODELS=(
 # present in custom_nodes are supplied by the AI-Dock image or installed separately;
 # leave them untouched.
 NODES=(
-    "https://github.com/sk-palani/ComfyUI_Simpler"
-    "https://github.com/ClownsharkBatwing/RES4LYF"
+
 )
 
 
