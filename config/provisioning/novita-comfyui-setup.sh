@@ -879,123 +879,152 @@ function setup_tailscale() {
     local ts_state="${ts_dir}/tailscaled.state"
     local ts_socket="/tmp/tailscaled.sock"
     local ts_log="/tmp/tailscaled.log"
-    local i status_json backend_state daemon_ready=0
+    local ts_err_log="/tmp/tailscaled.err.log"
+    local supervisor_conf_dir="/etc/supervisor/conf.d"
+    local supervisor_conf="${supervisor_conf_dir}/tailscaled.conf"
+    local tailscaled_bin tailscale_bin i status_json backend_state daemon_ready=0 pid cmdline
 
-    # Do not require `tailscale status` to exit 0 before login. On a freshly
-    # started daemon, status commonly returns a non-zero exit code while still
-    # returning valid JSON with BackendState=NeedsLogin. That is normal and
-    # must not be mistaken for a daemon-startup failure.
+    # This container has no alternate SSH route. Never silently skip Tailscale:
+    # an auth key is required on first boot, while later boots reuse persisted state.
     if [[ -z "${TAILSCALE_AUTHKEY:-}" && ! -s "$ts_state" ]]; then
-        echo "Tailscale: skipped (set TAILSCALE_AUTHKEY, or preserve ${ts_state} from a previous login)."
-        return 0
+        echo "FATAL: Tailscale has no saved identity and TAILSCALE_AUTHKEY is unset." >&2
+        echo "Configure a valid Tailscale auth key before starting this container." >&2
+        return 1
     fi
 
     if ! command -v tailscale >/dev/null 2>&1 || ! command -v tailscaled >/dev/null 2>&1; then
         echo "Installing Tailscale package..."
         curl -fsSL https://tailscale.com/install.sh | sh || return 1
     fi
+    tailscale_bin="$(command -v tailscale)"
+    tailscaled_bin="$(command -v tailscaled)"
+
+    if ! command -v supervisorctl >/dev/null 2>&1; then
+        echo "FATAL: supervisorctl is unavailable; refusing to start an unmanaged Tailscale daemon." >&2
+        return 1
+    fi
+    if [[ ! -d "$supervisor_conf_dir" ]] || ! grep -qsF '/etc/supervisor/conf.d/*.conf' /etc/supervisor/supervisord.conf /etc/supervisor/*.conf 2>/dev/null; then
+        echo "FATAL: /etc/supervisor/conf.d/*.conf is not included by Supervisor." >&2
+        echo "Cannot guarantee Tailscale daemon restart after a crash." >&2
+        return 1
+    fi
 
     mkdir -p "$ts_dir"
     chmod 700 "$ts_dir"
+    touch "$ts_state"
+    chmod 600 "$ts_state"
 
-    # First check whether a daemon is already answering on our socket.
-    status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
-    if [[ -n "$status_json" ]] && jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
-        daemon_ready=1
-    fi
+    # Hand ownership of this dedicated socket to Supervisor. Stop any older
+    # daemon using this exact socket (userspace or otherwise), but leave all
+    # unrelated Tailscale instances untouched.
+    while read -r pid cmdline; do
+        [[ -n "$pid" ]] || continue
+        if [[ "$cmdline" == *"$ts_socket"* && "$cmdline" == *tailscaled* ]]; then
+            echo "Stopping previous Tailscale daemon on ${ts_socket} (PID $pid)..."
+            kill -TERM "$pid" 2>/dev/null || true
+            for i in $(seq 1 10); do
+                kill -0 "$pid" 2>/dev/null || break
+                sleep 1
+            done
+            kill -KILL "$pid" 2>/dev/null || true
+        fi
+    done < <(ps -eo pid=,args=)
+    rm -f "$ts_socket"
 
+    cat > "$supervisor_conf" <<EOF
+[program:tailscaled]
+command=${tailscaled_bin} --tun=userspace-networking --state=${ts_state} --socket=${ts_socket}
+directory=/
+autostart=true
+autorestart=true
+startsecs=3
+startretries=20
+stopsignal=TERM
+stopwaitsecs=20
+stopasgroup=true
+killasgroup=true
+user=root
+priority=5
+stdout_logfile=${ts_log}
+stdout_logfile_maxbytes=5MB
+stdout_logfile_backups=2
+stderr_logfile=${ts_err_log}
+stderr_logfile_maxbytes=5MB
+stderr_logfile_backups=2
+EOF
+    chmod 644 "$supervisor_conf"
+
+    echo "Registering Tailscale userspace daemon with Supervisor..."
+    supervisorctl reread || return 1
+    supervisorctl update || return 1
+    # If this is an already-known program, make sure it is actually running.
+    supervisorctl start tailscaled >/dev/null 2>&1 || true
+
+    # Wait for a valid local API response, not merely for the process to exist.
+    for i in $(seq 1 45); do
+        status_json="$("$tailscale_bin" --socket="$ts_socket" status --json 2>/dev/null || true)"
+        if [[ -n "$status_json" ]] && jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
+            daemon_ready=1
+            break
+        fi
+        sleep 1
+    done
     if (( daemon_ready == 0 )); then
-        # Remove only a stale socket. Do not kill a daemon that may be serving
-        # another client; this script owns its dedicated /tmp socket path.
-        rm -f "$ts_socket"
-        echo "Starting Tailscale userspace daemon..."
-        nohup tailscaled \
-            --tun=userspace-networking \
-            --state="$ts_state" \
-            --socket="$ts_socket" \
-            >"$ts_log" 2>&1 </dev/null &
-
-        # Wait for a valid local API response, not for the node to be logged in.
-        for i in $(seq 1 30); do
-            status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
-            if [[ -n "$status_json" ]] && jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
-                daemon_ready=1
-                break
-            fi
-            sleep 1
-        done
-    fi
-
-    if (( daemon_ready == 0 )); then
-        echo "Tailscale daemon did not expose a valid local API response; inspect ${ts_log}." >&2
-        tail -n 80 "$ts_log" >&2 || true
+        echo "FATAL: Tailscale userspace daemon did not become ready under Supervisor." >&2
+        supervisorctl status tailscaled >&2 || true
+        tail -n 80 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
         return 1
     fi
 
     backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json")"
     if [[ "$backend_state" != "Running" ]]; then
         if [[ -z "${TAILSCALE_AUTHKEY:-}" ]]; then
-            echo "Tailscale daemon is ready but not authenticated (state: ${backend_state})." >&2
-            echo "Set TAILSCALE_AUTHKEY in the container environment to authenticate." >&2
+            echo "FATAL: saved Tailscale identity is not authenticated (state: ${backend_state}) and no auth key is configured." >&2
             return 1
         fi
-
-        echo "Tailscale daemon is ready (state: ${backend_state}); authenticating this node..."
-        if [[ "$TAILSCALE_AUTHKEY" != tskey-auth-* ]]; then
-            echo "WARNING: TAILSCALE_AUTHKEY does not have the usual tskey-auth- prefix." >&2
-            echo "Make sure this is an Auth Key, not a Tailscale API access key or OAuth client secret." >&2
-        fi
-
-        local ts_up_log="/tmp/tailscale-up.log"
-        # Bound the wait. Without --timeout, `tailscale up` can wait indefinitely
-        # when a device needs approval or authentication cannot complete.
-        if ! tailscale --socket="$ts_socket" up \
-            --timeout=60s \
+        echo "Tailscale userspace daemon is ready (state: ${backend_state}); authenticating..."
+        if ! "$tailscale_bin" --socket="$ts_socket" up \
+            --timeout=90s \
             --auth-key="$TAILSCALE_AUTHKEY" \
             --hostname="${TS_HOSTNAME:-comfyui-${HOSTNAME:0:12}}" \
-            --ssh >"$ts_up_log" 2>&1; then
-            echo "Tailscale authentication command failed. Diagnostic output follows:" >&2
-            cat "$ts_up_log" >&2 || true
-            status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
-            backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json" 2>/dev/null || echo Unknown)"
-            echo "Tailscale backend state after authentication attempt: ${backend_state}" >&2
-            case "$backend_state" in
-                NeedsMachineAuth)
-                    echo "The device is waiting for approval. Approve it in the Tailscale admin console, or create an auth key with Pre-approved enabled if your tailnet requires device approval." >&2
-                    ;;
-                NeedsLogin|NoState|Unknown)
-                    echo "The device is still unauthenticated. Check that TAILSCALE_AUTHKEY is present, unexpired, unused if one-off, and is an Auth Key (tskey-auth-...), not an API key." >&2
-                    ;;
-            esac
-            echo "Tailscale daemon log: ${ts_log}" >&2
-            tail -n 60 "$ts_log" >&2 || true
+            > /tmp/tailscale-up.log 2>&1; then
+            echo "Tailscale authentication failed:" >&2
+            cat /tmp/tailscale-up.log >&2 || true
+            tail -n 80 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
             return 1
         fi
-        cat "$ts_up_log"
-    else
-        # Keep Tailscale SSH enabled on an already authenticated node.
-        tailscale --socket="$ts_socket" set --ssh || return 1
     fi
 
-    # Wait briefly for the control plane to finish bringing the node online.
-    for i in $(seq 1 30); do
-        status_json="$(tailscale --socket="$ts_socket" status --json 2>/dev/null || true)"
+    # Explicitly enable Tailscale SSH on EVERY boot, after authentication.
+    # This is idempotent and uses the same dedicated LocalAPI socket.
+    if ! "$tailscale_bin" --socket="$ts_socket" set --ssh; then
+        echo "FATAL: 'tailscale set --ssh' failed; remote shell access is not ready." >&2
+        return 1
+    fi
+
+    # Confirm the node is online and that Supervisor owns the long-running daemon.
+    for i in $(seq 1 45); do
+        status_json="$("$tailscale_bin" --socket="$ts_socket" status --json 2>/dev/null || true)"
         backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json" 2>/dev/null || echo Unknown)"
         [[ "$backend_state" == "Running" ]] && break
         sleep 1
     done
-
     if [[ "$backend_state" != "Running" ]]; then
-        echo "Tailscale did not reach Running state (current state: ${backend_state})." >&2
-        echo "Check key validity, device approval, and tailnet SSH policy." >&2
-        tailscale --socket="$ts_socket" status 2>&1 || true
-        tail -n 80 "$ts_log" >&2 || true
+        echo "FATAL: Tailscale did not reach Running state (state: ${backend_state})." >&2
+        "$tailscale_bin" --socket="$ts_socket" status 2>&1 || true
         return 1
     fi
 
-    echo "Tailscale connected:"
-    tailscale --socket="$ts_socket" status || true
-    tailscale --socket="$ts_socket" ip -4 || true
+    if ! supervisorctl status tailscaled | grep -q 'RUNNING'; then
+        echo "FATAL: tailscaled is connected but is not RUNNING under Supervisor." >&2
+        supervisorctl status tailscaled >&2 || true
+        return 1
+    fi
+
+    echo "Tailscale connected in userspace networking mode; Tailscale SSH enabled."
+    "$tailscale_bin" --socket="$ts_socket" status || true
+    "$tailscale_bin" --socket="$ts_socket" ip -4 || true
+    echo "Remote shell: ssh root@${TS_HOSTNAME:-comfyui-${HOSTNAME:0:12}}"
 }
 
 function provisioning_download_huggingface() {
