@@ -311,7 +311,7 @@ ULTRALYTICS_SEGS_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/jags/yolov8_model_segmentation-set/resolve/main/skin_yolov8m-seg_400.pt"
-  "https://civitai.com/api/download/models/1324778?format=PickleTensor"
+#  "https://civitai.com/api/download/models/1324778?format=PickleTensor"
   "https://huggingface.co/ashllay/YOLO_Models/resolve/main/segm/unwanted-3x.pt"
 
 )
