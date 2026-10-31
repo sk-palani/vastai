@@ -25,8 +25,9 @@
 #   COMFYUI_MIN_TORCH_VERSION     Minimum Torch required by this ComfyUI checkout (default 2.7.0).
 #   COMFYUI_TORCH_INDEX_URL      Optional explicit PyTorch wheel index; otherwise selected from NVIDIA driver.
 #   COMFYUI_AUTO_FIX_TORCH       Automatically upgrade an older Torch to a compatible 2.7.1 build (default true).
+#   COMFYUI_AUTO_FIX_XFORMERS    Replace xFormers builds incompatible with the installed Torch/CUDA build (default true).
 # https://github.com/MushroomFleet/Runpod-init
-PROVISIONING_BUILD_ID="2026-10-31-r6"
+PROVISIONING_BUILD_ID="2026-11-01-r9"
 PROVISIONING_SCRIPT_PATH="${BASH_SOURCE[0]:-$0}"
 
 # Print the digest of the exact file the provider just downloaded/sourced.
@@ -118,6 +119,7 @@ COMFYUI_UPGRADE_TORCH="${COMFYUI_UPGRADE_TORCH:-false}"
 COMFYUI_TORCH_INDEX_URL="${COMFYUI_TORCH_INDEX_URL:-}"
 COMFYUI_MIN_TORCH_VERSION="${COMFYUI_MIN_TORCH_VERSION:-2.7.0}"
 COMFYUI_AUTO_FIX_TORCH="${COMFYUI_AUTO_FIX_TORCH:-true}"
+COMFYUI_AUTO_FIX_XFORMERS="${COMFYUI_AUTO_FIX_XFORMERS:-true}"
 COMFYUI_PYTHON_STAGE=""
 COMFYUI_PYTHON_BACKUP=""
 COMFYUI_RUNTIME_VENV_DIR="$COMFYUI_VENV_DIR"
@@ -364,6 +366,7 @@ ULTRALYTICS_SEGS_MODELS=(
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov9c.pt"
   "https://huggingface.co/jags/yolov8_model_segmentation-set/resolve/main/skin_yolov8m-seg_400.pt"
+  "https://civitai.com/api/download/models/1324778?format=PickleTensor"
   "https://huggingface.co/ashllay/YOLO_Models/resolve/main/segm/unwanted-3x.pt"
 
 )
@@ -1856,13 +1859,146 @@ except Exception as exc:
 PYRUNTIME
 }
 
+function repair_transparent_background_flet_conflict() {
+    # transparent-background 1.3.2 declared Flet as a mandatory dependency.
+    # Flet 0.24.1 requires packaging<24, while color-matcher 0.6.0 requires
+    # packaging>=24.2. transparent-background 1.3.4 moved Flet to its optional
+    # [gui] extra. Upgrade to that release, satisfy its PyMatting floor, then
+    # remove the now-unneeded Flet GUI packages if no other installed package
+    # actively depends on them. Do not remove Flet if another package needs it.
+    local metadata tb_version pymatting_version needs_tb_upgrade needs_pymatting
+    local flet_packages external_flet_dependents
+    local -a flet_package_args=()
+    local pip_log="${WORKSPACE}/pip-install.log" rc
+
+    metadata="$($COMFYUI_PYTHON - <<'PYTB_META'
+from importlib import metadata as md
+
+def get_version(name):
+    try:
+        return md.version(name)
+    except md.PackageNotFoundError:
+        return "missing"
+
+print("|".join((get_version("transparent-background"), get_version("pymatting"))))
+PYTB_META
+)" || {
+        echo "Could not inspect transparent-background/PyMatting dependency metadata." >&2
+        return 1
+    }
+    IFS='|' read -r tb_version pymatting_version <<< "$metadata"
+
+    if [[ "$tb_version" == "missing" ]]; then
+        echo "transparent-background is not installed; no package-specific Flet cleanup is needed."
+        return 0
+    fi
+
+    needs_tb_upgrade="$($COMFYUI_PYTHON - "$tb_version" <<'PYTB_COMPARE'
+from packaging.version import Version
+import sys
+print("yes" if Version(sys.argv[1]) < Version("1.3.4") else "no")
+PYTB_COMPARE
+)" || return 1
+    if [[ "$needs_tb_upgrade" == "yes" ]]; then
+        echo "Upgrading transparent-background ${tb_version} to 1.3.4; Flet becomes an optional [gui] extra."
+        pip_install --no-deps --upgrade "transparent-background==1.3.4" || {
+            echo "Could not upgrade transparent-background. See ${pip_log}." >&2
+            return 1
+        }
+    else
+        echo "transparent-background ${tb_version} already has the optional-Flet dependency layout."
+    fi
+
+    # transparent-background 1.3.4 requires PyMatting >=1.1.13. 1.1.16 is
+    # Python 3.10 compatible and was verified in this ComfyUI environment.
+    needs_pymatting="$($COMFYUI_PYTHON - "$pymatting_version" <<'PYMAT_COMPARE'
+from packaging.version import Version
+import sys
+current = sys.argv[1]
+print("yes" if current == "missing" or Version(current) < Version("1.1.13") else "no")
+PYMAT_COMPARE
+)" || return 1
+    if [[ "$needs_pymatting" == "yes" ]]; then
+        echo "Installing PyMatting 1.1.16 to satisfy transparent-background >=1.3.4."
+        pip_install --no-deps --upgrade "pymatting==1.1.16" || {
+            echo "Could not upgrade PyMatting. See ${pip_log}." >&2
+            return 1
+        }
+    fi
+
+    # Determine whether Flet, flet-runtime or flet-core are still installed.
+    flet_packages="$($COMFYUI_PYTHON - <<'PYFLET_LIST'
+from importlib import metadata as md
+wanted = {"flet", "flet-runtime", "flet-core"}
+for dist in md.distributions():
+    name = (dist.metadata.get("Name") or "").lower().replace("_", "-")
+    if name in wanted:
+        print(name)
+PYFLET_LIST
+)" || return 1
+
+    if [[ -n "${flet_packages//[$'\r\n']/}" ]]; then
+        # Check active dependencies from packages outside the Flet package trio.
+        # Requirements guarded by extra == 'gui' are inactive in a normal install.
+        external_flet_dependents="$($COMFYUI_PYTHON - <<'PYFLET_DEPENDENTS'
+from importlib import metadata as md
+from packaging.requirements import Requirement
+wanted = {"flet", "flet-runtime", "flet-core"}
+blockers = []
+for dist in md.distributions():
+    dist_name = (dist.metadata.get("Name") or "unknown-distribution").lower().replace("_", "-")
+    if dist_name in wanted:
+        continue
+    for raw in dist.requires or []:
+        try:
+            req = Requirement(raw)
+        except Exception:
+            continue
+        req_name = req.name.lower().replace("_", "-")
+        if req_name not in wanted:
+            continue
+        if req.marker is not None and not req.marker.evaluate():
+            continue
+        blockers.append((dist_name, str(req)))
+for name, requirement in sorted(set(blockers)):
+    print(f"{name}: {requirement}")
+PYFLET_DEPENDENTS
+)" || return 1
+
+        if [[ -n "${external_flet_dependents//[$'\r\n']/}" ]]; then
+            echo "Flet cannot be safely removed: other installed packages still require it:" >&2
+            printf '%s\n' "$external_flet_dependents" >&2
+            echo "Resolve those dependencies explicitly; refusing to leave packaging constraints inconsistent." >&2
+            return 1
+        fi
+
+        mapfile -t flet_package_args <<< "$flet_packages"
+        echo "Removing unused optional GUI packages: ${flet_package_args[*]}"
+        "$COMFYUI_PYTHON" -m pip uninstall -y "${flet_package_args[@]}" 2>&1 | tee -a "$pip_log"
+        rc=${PIPESTATUS[0]}
+        (( rc == 0 )) || {
+            echo "Could not remove unused Flet GUI packages. See ${pip_log}." >&2
+            return "$rc"
+        }
+    else
+        echo "No Flet GUI packages are installed."
+    fi
+
+    echo "transparent-background/Flet compatibility repair complete."
+    "$COMFYUI_PYTHON" -m pip show transparent-background pymatting flet flet-runtime flet-core 2>/dev/null \
+        | grep -E '^(Name|Version):' || true
+}
+
 function repair_known_dependency_conflicts() {
     # Fix a small set of known ecosystem compatibility conflicts that can arise
     # when ComfyUI core and custom-node requirements are installed sequentially.
-    # Do not downgrade NumPy: newer Numba and colour-science releases support it.
+    # Preserve the modern NumPy/Torch stack; repair only the specific conflicts
+    # detected from installed package metadata.
     local repairs_text repairs_file
     repairs_text="$($COMFYUI_PYTHON - <<'PYREPAIRS'
+from importlib import metadata as md
 from importlib.metadata import PackageNotFoundError, version
+from packaging.requirements import Requirement
 from packaging.version import Version
 import sys
 
@@ -1878,6 +2014,7 @@ numba_v = installed("numba")
 colour_v = installed("colour-science")
 httpcore_v = installed("httpcore")
 h11_v = installed("h11")
+packaging_v = installed("packaging")
 py = sys.version_info[:2]
 repairs = []
 
@@ -1898,15 +2035,50 @@ if numpy_v and numpy_v >= Version("2") and colour_v and colour_v < Version("0.4.
 if httpcore_v and httpcore_v < Version("1.0.9") and h11_v and h11_v >= Version("0.16"):
     repairs.append("httpcore>=1.0.9,<2")
 
+# Select a packaging version that satisfies every active installed requirement.
+# color-matcher 0.6.0 needs >=24.2; legacy Flet 0.24.x needs <24. The dedicated
+# repair removes Flet only when transparent-background no longer requires it.
+active_packaging_requirements = []
+for dist in md.distributions():
+    dist_name = dist.metadata.get("Name", "unknown-distribution")
+    for raw in dist.requires or []:
+        try:
+            req = Requirement(raw)
+        except Exception:
+            continue
+        if req.name.lower().replace("_", "-") != "packaging":
+            continue
+        if req.marker is not None and not req.marker.evaluate():
+            continue
+        active_packaging_requirements.append((dist_name, req.specifier))
+
+packaging_incompatible = packaging_v is None or any(
+    spec and not spec.contains(packaging_v, prereleases=True)
+    for _name, spec in active_packaging_requirements
+)
+if packaging_incompatible and active_packaging_requirements:
+    # Prefer the current modern line; fall back to 23.2 only when all active
+    # constraints accept it. Never force a version that creates another conflict.
+    target = next((candidate for candidate in (Version("26.3"), Version("23.2"))
+                   if all(not spec or spec.contains(candidate, prereleases=True)
+                          for _name, spec in active_packaging_requirements)), None)
+    if target is None:
+        print("No single packaging version satisfies all installed requirements:", file=sys.stderr)
+        for name, spec in active_packaging_requirements:
+            print(f"  {name} requires packaging{spec}", file=sys.stderr)
+        raise SystemExit(2)
+    repairs.append(f"packaging=={target}")
+
+
 print("\n".join(repairs))
 PYREPAIRS
 )" || {
-        echo "Could not inspect installed Python package versions." >&2
+        echo "Could not inspect installed Python package versions or find a conflict-free repair." >&2
         return 1
     }
 
     if [[ -z "${repairs_text//[$'\r\n']/}" ]]; then
-        echo "No known NumPy/Numba/colour-science/httpcore compatibility repairs are needed."
+        echo "No known NumPy/Numba/colour-science/httpcore/packaging compatibility repairs are needed."
         return 0
     fi
 
@@ -1928,8 +2100,107 @@ PYREPAIRS
     }
 
     echo "Dependency versions after compatibility updates:"
-    "$COMFYUI_PYTHON" -m pip show numpy numba colour-science httpcore h11 2>/dev/null \
+    "$COMFYUI_PYTHON" -m pip show numpy numba colour-science httpcore h11 packaging transparent-background pymatting color-matcher 2>/dev/null \
         | grep -E '^(Name|Version):' || true
+}
+
+function repair_xformers_torch_compatibility() {
+    local metadata torch_version cuda_version xformers_version compatible expected_xformers cuda_digits index_url
+
+    metadata="$($COMFYUI_PYTHON - <<'PYXFORMERS_META'
+from importlib import metadata as md
+from packaging.requirements import Requirement
+from packaging.version import Version
+import torch
+
+try:
+    xformers_version = md.version("xformers")
+except md.PackageNotFoundError:
+    print("|".join((torch.__version__, str(torch.version.cuda or ""), "missing", "yes")))
+    raise SystemExit(0)
+
+torch_version = Version(torch.__version__)
+requires = md.requires("xformers") or []
+torch_requirements = []
+for raw in requires:
+    req = Requirement(raw)
+    if req.name.lower() == "torch" and (req.marker is None or req.marker.evaluate()):
+        torch_requirements.append(req)
+compatible = all(req.specifier.contains(torch_version, prereleases=True) for req in torch_requirements)
+print("|".join((str(torch_version), str(torch.version.cuda or ""), xformers_version, "yes" if compatible else "no")))
+PYXFORMERS_META
+)" || {
+        echo "Could not inspect installed Torch/xFormers metadata." >&2
+        return 1
+    }
+
+    IFS='|' read -r torch_version cuda_version xformers_version compatible <<< "$metadata"
+    if [[ "$xformers_version" == "missing" ]]; then
+        echo "xFormers is not installed; no xFormers compatibility repair is needed."
+        return 0
+    fi
+    if [[ "$compatible" == "yes" ]]; then
+        echo "xFormers ${xformers_version} declares dependencies compatible with Torch ${torch_version}; keeping it."
+        return 0
+    fi
+
+    echo "Incompatible packages detected: xFormers ${xformers_version}; PyTorch ${torch_version}; CUDA runtime ${cuda_version:-unknown}." >&2
+    if [[ "${COMFYUI_AUTO_FIX_XFORMERS,,}" != "true" && "${COMFYUI_AUTO_FIX_XFORMERS,,}" != "1" ]]; then
+        echo "Automatic xFormers repair is disabled (COMFYUI_AUTO_FIX_XFORMERS=${COMFYUI_AUTO_FIX_XFORMERS})." >&2
+        return 1
+    fi
+
+    # Match xFormers binaries to the PyTorch release they were built for.
+    # Upstream xFormers release notes document 0.0.30 for Torch 2.7.0,
+    # 0.0.31 for Torch 2.7.1, and 0.0.32 for Torch 2.8.0.
+    case "$torch_version" in
+        2.7.0*) expected_xformers="0.0.30" ;;
+        2.7.1*) expected_xformers="0.0.31" ;;
+        2.8.0*) expected_xformers="0.0.32" ;;
+        2.9.0*) expected_xformers="0.0.33" ;;
+        2.9.1*) expected_xformers="0.0.33.post2" ;;
+        *)
+            echo "No automatic xFormers wheel mapping is defined for PyTorch ${torch_version}." >&2
+            echo "Do not downgrade Torch. Install an xFormers build compiled for this exact PyTorch/CUDA release, or set COMFYUI_AUTO_FIX_XFORMERS=false and remove/fix the conflicting package yourself." >&2
+            return 1
+            ;;
+    esac
+
+    case "$cuda_version" in
+        11.8|12.6|12.8)
+            cuda_digits="${cuda_version/./}"
+            index_url="https://download.pytorch.org/whl/cu${cuda_digits}"
+            ;;
+        *)
+            echo "No verified xFormers wheel index mapping for CUDA runtime ${cuda_version:-unknown}." >&2
+            echo "Torch will be preserved; refusing to install a potentially mismatched xFormers binary." >&2
+            return 1
+            ;;
+    esac
+
+    echo "Installing xFormers ${expected_xformers} from ${index_url} without dependencies."
+    echo "--no-deps is intentional: it prevents pip from replacing the working Torch ${torch_version} build."
+    pip_install --index-url "$index_url" --no-deps "xformers==${expected_xformers}" || {
+        echo "Could not install xFormers ${expected_xformers}. See ${WORKSPACE}/pip-install.log." >&2
+        return 1
+    }
+
+    "$COMFYUI_PYTHON" - <<'PYXFORMERS_VERIFY'
+from importlib import metadata as md
+from packaging.requirements import Requirement
+from packaging.version import Version
+import torch
+import xformers
+
+installed = md.version("xformers")
+torch_version = Version(torch.__version__)
+requirements = [Requirement(raw) for raw in (md.requires("xformers") or [])]
+torch_requirements = [r for r in requirements if r.name.lower() == "torch" and (r.marker is None or r.marker.evaluate())]
+if not all(r.specifier.contains(torch_version, prereleases=True) for r in torch_requirements):
+    raise SystemExit(f"xFormers {installed} still declares a Torch requirement incompatible with {torch_version}")
+print(f"Verified xFormers: {installed}; PyTorch: {torch.__version__}; CUDA runtime: {torch.version.cuda}; CUDA available: {torch.cuda.is_available()}")
+print(f"xFormers module: {xformers.__file__}")
+PYXFORMERS_VERIFY
 }
 
 function provisioning_start() {
@@ -1946,7 +2217,9 @@ function provisioning_start() {
         return 1
     fi
 
+    run_timed "provision: repair transparent-background/Flet packaging conflict" repair_transparent_background_flet_conflict || return 1
     run_timed "provision: repair known dependency compatibility conflicts" repair_known_dependency_conflicts || return 1
+    run_timed "provision: align xFormers with installed PyTorch" repair_xformers_torch_compatibility || return 1
     run_timed "provision: pip dependency consistency check" "$COMFYUI_PYTHON" -m pip check || {
         echo "Unresolved Python dependency conflicts remain after targeted repairs." >&2
         echo "Review ${WORKSPACE}/pip-install.log and run: ${COMFYUI_PYTHON} -m pip check" >&2
