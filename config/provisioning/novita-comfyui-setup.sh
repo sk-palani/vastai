@@ -559,7 +559,7 @@ function setup_syncthing() {
         # HOME is set to WORKSPACE so the default Sync folder is persistent.
         HOME="$WORKSPACE" nohup "$syncthing_bin" \
             --home="$SYNCTHING_HOME" \
-            --no-browser --no-console \
+            --no-browser \
             --gui-address="$SYNCTHING_GUI_ADDRESS" \
             >>"${WORKSPACE}/syncthing.log" 2>&1 </dev/null &
         pid=$!
