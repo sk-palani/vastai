@@ -26,7 +26,7 @@
 #   COMFYUI_TORCH_INDEX_URL      Optional explicit PyTorch wheel index; otherwise selected from NVIDIA driver.
 #   COMFYUI_AUTO_FIX_TORCH       Automatically upgrade an older Torch to a compatible 2.7.1 build (default true).
 # https://github.com/MushroomFleet/Runpod-init
-PROVISIONING_BUILD_ID="2026-10-31-r5"
+PROVISIONING_BUILD_ID="2026-10-31-r6"
 PROVISIONING_SCRIPT_PATH="${BASH_SOURCE[0]:-$0}"
 
 # Print the digest of the exact file the provider just downloaded/sourced.
@@ -1306,9 +1306,35 @@ EOF_SUPERVISOR
         return 1
     fi
 
-    if ! supervisorctl status tailscaled | grep -q 'RUNNING'; then
-        echo "FATAL: tailscaled is connected but is not RUNNING under Supervisor." >&2
+    # The LocalAPI can answer before supervisord has promoted the process from
+    # STARTING to RUNNING. This is normal while the configured startsecs interval
+    # is still elapsing. Do not treat API readiness and Supervisor readiness as
+    # the same signal: wait for Supervisor's own state transition explicitly.
+    local supervisor_running=0
+    for i in $(seq 1 60); do
+        manager_status="$(supervisorctl status tailscaled 2>&1 || true)"
+        if [[ "$manager_status" =~ ^tailscaled[[:space:]]+RUNNING([[:space:]]|$) ]]; then
+            supervisor_running=1
+            break
+        fi
+        if [[ "$manager_status" =~ ^tailscaled[[:space:]]+(FATAL|BACKOFF|EXITED|STOPPED|UNKNOWN)([[:space:]]|$) ]]; then
+            echo "Supervisor reports an unhealthy Tailscale process: ${manager_status}" >&2
+            break
+        fi
+        if (( i == 1 || i % 10 == 0 )); then
+            echo "Waiting for Supervisor to mark tailscaled RUNNING (${i}/60): ${manager_status}"
+        fi
+        sleep 1
+    done
+    if (( supervisor_running == 0 )); then
+        echo "FATAL: Tailscale LocalAPI is connected, but Supervisor did not report tailscaled RUNNING within 60 seconds." >&2
+        echo "Supervisor status:" >&2
         supervisorctl status tailscaled >&2 || true
+        echo "Supervisor stdout/stderr tail:" >&2
+        supervisorctl tail -100 tailscaled stderr >&2 2>/dev/null || true
+        tail -n 100 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
+        echo "Tailscaled process list:" >&2
+        ps -eo pid,ppid,stat,etime,args | grep '[t]ailscaled' >&2 || true
         return 1
     fi
 
