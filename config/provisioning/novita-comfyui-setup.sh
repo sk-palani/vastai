@@ -26,8 +26,12 @@
 #   COMFYUI_TORCH_INDEX_URL      Optional explicit PyTorch wheel index; otherwise selected from NVIDIA driver.
 #   COMFYUI_AUTO_FIX_TORCH       Automatically upgrade an older Torch to a compatible 2.7.1 build (default true).
 #   COMFYUI_AUTO_FIX_XFORMERS    Replace xFormers builds incompatible with the installed Torch/CUDA build (default true).
+#   COMFYUI_PIP_CONSTRAINTS_ENABLE  Generate/apply managed pip constraints (default true).
+#   COMFYUI_PIP_CONSTRAINTS_FILE   Generated constraints path (default ${WORKSPACE}/pip-constraints.txt).
+#   COMFYUI_EXTRA_PIP_CONSTRAINT_FILE  Optional additional user-managed pip constraints file.
+#   ALLOW_NODE_TORCH_REQUIREMENTS=true also disables managed Torch/xFormers constraints.
 # https://github.com/MushroomFleet/Runpod-init
-PROVISIONING_BUILD_ID="2026-11-01-r9"
+PROVISIONING_BUILD_ID="2026-11-01-r11"
 PROVISIONING_SCRIPT_PATH="${BASH_SOURCE[0]:-$0}"
 
 # Print the digest of the exact file the provider just downloaded/sourced.
@@ -140,6 +144,11 @@ TAILSCALE_STATE_DIR="${TAILSCALE_STATE_DIR:-${WORKSPACE}/.tailscale}"
 TAILSCALE_STATE_FILE="${TAILSCALE_STATE_FILE:-${TAILSCALE_STATE_DIR}/tailscaled.state}"
 TAILSCALE_SOCKET="${TAILSCALE_SOCKET:-/tmp/tailscaled.sock}"
 SYNCTHING_REPO_CHANGED=0
+# Preserve an externally supplied PIP_CONSTRAINT as an additional constraints file.
+# The managed file is generated after Torch is finalized and before ComfyUI pip installs.
+COMFYUI_EXTRA_PIP_CONSTRAINT_FILE="${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE:-${PIP_CONSTRAINT:-}}"
+COMFYUI_PIP_CONSTRAINTS_ENABLE="${COMFYUI_PIP_CONSTRAINTS_ENABLE:-true}"
+COMFYUI_PIP_CONSTRAINTS_FILE="${COMFYUI_PIP_CONSTRAINTS_FILE:-${WORKSPACE}/pip-constraints.txt}"
 TIMING_LOG="${WORKSPACE}/provisioning-timings.log"
 RUN_ID="$(date +%Y%m%d-%H%M%S)"
 SCRIPT_START_EPOCH="$(date +%s)"
@@ -302,6 +311,8 @@ MP3=(
 
 UNET_MODELS=(
   "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev.safetensors"
+  "https://civitai.com/api/download/models/2287992?fileId=2181185"
+
 )
 
 DIFFUSION_MODELS=(
@@ -557,6 +568,7 @@ function setup_syncthing() {
 
         echo "Starting Syncthing with persistent config: $SYNCTHING_HOME"
         # HOME is set to WORKSPACE so the default Sync folder is persistent.
+        # --no-console is Windows-only; stdout/stderr are redirected below.
         HOME="$WORKSPACE" nohup "$syncthing_bin" \
             --home="$SYNCTHING_HOME" \
             --no-browser \
@@ -861,18 +873,118 @@ function finalize_comfyui_python() {
 
 function pip_install() {
     local pip_log="${WORKSPACE}/pip-install.log" rc
+    local -a extra_constraint_args=()
     if [[ ! -x "$COMFYUI_PYTHON" ]]; then
         echo "ComfyUI Python interpreter is missing: $COMFYUI_PYTHON" >&2
         return 127
+    fi
+    if [[ -n "${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE:-}" && "${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE}" != "${COMFYUI_PIP_CONSTRAINTS_FILE:-}" ]]; then
+        if [[ -f "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE" ]]; then
+            extra_constraint_args+=(--constraint "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE")
+        else
+            echo "WARNING: optional extra pip constraints file does not exist: ${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE}" >&2
+        fi
     fi
     mkdir -p "${WORKSPACE}/.cache/pip"
     export PIP_CACHE_DIR="${PIP_CACHE_DIR:-${WORKSPACE}/.cache/pip}"
     export PIP_DISABLE_PIP_VERSION_CHECK=1
     export PIP_NO_INPUT=1
     echo "[pip] interpreter: $COMFYUI_PYTHON"
-    "$COMFYUI_PYTHON" -m pip install --prefer-binary --no-input --disable-pip-version-check "$@" 2>&1 | tee -a "$pip_log"
+    [[ -n "${PIP_CONSTRAINT:-}" ]] && echo "[pip] managed constraints: ${PIP_CONSTRAINT}"
+    [[ -n "${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE:-}" ]] && [[ -f "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE" ]] && echo "[pip] extra constraints: ${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE}"
+    "$COMFYUI_PYTHON" -m pip install --prefer-binary --no-input --disable-pip-version-check "${extra_constraint_args[@]}" "$@" 2>&1 | tee -a "$pip_log"
     rc=${PIPESTATUS[0]}
     return "$rc"
+}
+
+function setup_comfyui_pip_constraints() {
+    local tmp_file
+    if [[ "${COMFYUI_PIP_CONSTRAINTS_ENABLE,,}" != "true" && "${COMFYUI_PIP_CONSTRAINTS_ENABLE,,}" != "1" ]]; then
+        echo "Managed pip constraints are disabled (COMFYUI_PIP_CONSTRAINTS_ENABLE=${COMFYUI_PIP_CONSTRAINTS_ENABLE})."
+        if [[ -n "${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE:-}" && -f "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE" ]]; then
+            export PIP_CONSTRAINT="$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE"
+            echo "Using externally supplied PIP_CONSTRAINT=${PIP_CONSTRAINT}."
+        else
+            unset PIP_CONSTRAINT
+        fi
+        return 0
+    fi
+
+    mkdir -p "$(dirname "$COMFYUI_PIP_CONSTRAINTS_FILE")" || return 1
+    tmp_file="$(mktemp "${COMFYUI_PIP_CONSTRAINTS_FILE}.XXXXXX")" || return 1
+    {
+        cat <<'PIP_BASE_CONSTRAINTS'
+# Managed by novita-comfyui-setup.sh (do not edit this generated file).
+# These are compatibility pins for the known ComfyUI/custom-node stack.
+# Pip constraints restrict resolver choices; they do not install packages by themselves.
+numpy==2.2.6
+numba==0.68.1
+httpcore==1.0.9
+h11==0.16.0
+packaging==26.3
+transparent-background==1.3.4
+pymatting==1.1.16
+color-matcher==0.6.0
+PIP_BASE_CONSTRAINTS
+        ALLOW_NODE_TORCH_REQUIREMENTS="${ALLOW_NODE_TORCH_REQUIREMENTS:-false}" "$COMFYUI_PYTHON" - <<'PY_DYNAMIC_CONSTRAINTS'
+from importlib import metadata as md
+import os
+import re
+import sys
+
+# colour-science 0.4.6 supports the AI-Dock Python 3.10 base; 0.4.7 is the
+# corresponding NumPy-2-compatible line for Python 3.11 and newer.
+print("colour-science==" + ("0.4.6" if sys.version_info < (3, 11) else "0.4.7"))
+
+allow_node_torch = os.environ.get("ALLOW_NODE_TORCH_REQUIREMENTS", "false").lower() in {"1", "true", "yes"}
+if not allow_node_torch:
+    for name in ("torch", "torchvision", "torchaudio"):
+        try:
+            print(f"{name}=={md.version(name)}")
+        except md.PackageNotFoundError:
+            pass
+
+# xFormers is coupled to both the installed Torch build and CUDA runtime.
+# Pin only combinations for which this script has an explicit wheel mapping.
+try:
+    import torch
+    torch_version = torch.__version__.split("+", 1)[0]
+    cuda_version = str(torch.version.cuda or "")
+    xformers_by_torch = {
+        "2.7.0": "0.0.30",
+        "2.7.1": "0.0.31",
+        "2.8.0": "0.0.32",
+        "2.9.0": "0.0.33",
+        "2.9.1": "0.0.33.post2",
+    }
+    cuda_supported = cuda_version in {"11.8", "12.6", "12.8"}
+    match = re.match(r"^(\d+\.\d+\.\d+)", torch_version)
+    expected = xformers_by_torch.get(match.group(1)) if match else None
+    if expected and cuda_supported and not allow_node_torch:
+        print(f"xformers=={expected}")
+except Exception:
+    pass
+PY_DYNAMIC_CONSTRAINTS
+    } > "$tmp_file" || {
+        rm -f "$tmp_file"
+        echo "Could not generate the managed pip constraints file." >&2
+        return 1
+    }
+
+    if [[ -n "${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE:-}" && \
+          "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE" != "$COMFYUI_PIP_CONSTRAINTS_FILE" && \
+          -f "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE" ]]; then
+        printf '\n# Additional user-managed constraints: %s\n' "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE" >> "$tmp_file"
+        cat "$COMFYUI_EXTRA_PIP_CONSTRAINT_FILE" >> "$tmp_file"
+    elif [[ -n "${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE:-}" ]]; then
+        echo "WARNING: extra constraints file not found; ignoring: ${COMFYUI_EXTRA_PIP_CONSTRAINT_FILE}" >&2
+    fi
+
+    mv -f "$tmp_file" "$COMFYUI_PIP_CONSTRAINTS_FILE" || return 1
+    export PIP_CONSTRAINT="$COMFYUI_PIP_CONSTRAINTS_FILE"
+    echo "Generated managed pip constraints: ${COMFYUI_PIP_CONSTRAINTS_FILE}"
+    echo "The constraints will apply to ComfyUI core, add-ons, and custom-node pip installations."
+    sed 's/^/[constraint] /' "$COMFYUI_PIP_CONSTRAINTS_FILE"
 }
 
 function pip_install_requirements_preserving_torch() {
@@ -2035,9 +2147,48 @@ if numpy_v and numpy_v >= Version("2") and colour_v and colour_v < Version("0.4.
     else:
         repairs.append("colour-science>=0.4.7,<0.5")
 
-# httpcore 1.0.5 requires h11 <0.15. Newer httpcore releases support h11 0.16.
-if httpcore_v and httpcore_v < Version("1.0.9") and h11_v and h11_v >= Version("0.16"):
-    repairs.append("httpcore>=1.0.9,<2")
+# httpcore 1.0.9 requires h11>=0.16. A newer httpcore2 release can also
+# require h11>=0.16. Upgrade the pair together when the installed metadata
+# shows that 0.16.0 is needed; do not silently leave an old httpcore (<1.0.9)
+# declaring an incompatible h11 upper bound.
+h11_target = Version("0.16.0")
+h11_requirements = []
+for dist in md.distributions():
+    dist_name = (dist.metadata.get("Name") or "unknown-distribution").lower().replace("_", "-")
+    for raw in dist.requires or []:
+        try:
+            req = Requirement(raw)
+        except Exception:
+            continue
+        if req.name.lower().replace("_", "-") != "h11":
+            continue
+        if req.marker is not None and not req.marker.evaluate():
+            continue
+        # The old installed httpcore's own metadata is replaced by 1.0.9 below.
+        if dist_name == "httpcore" and httpcore_v and httpcore_v < Version("1.0.9"):
+            continue
+        h11_requirements.append((dist_name, req.specifier))
+
+# Keep the known stack on h11 0.16.0 even if the old installed pair happens
+# to be internally consistent; later custom-node installs are constrained to
+# this version and should not flip the runtime back and forth.
+h11_needs_repair = h11_v is None or h11_v < h11_target or any(
+    spec and not spec.contains(h11_v, prereleases=True)
+    for _name, spec in h11_requirements
+)
+if h11_needs_repair:
+    h11_blockers = [(name, spec) for name, spec in h11_requirements
+                    if spec and not spec.contains(h11_target, prereleases=True)]
+    if h11_blockers:
+        print("h11==0.16.0 would conflict with installed requirements:", file=sys.stderr)
+        for name, spec in h11_blockers:
+            print(f"  {name} requires h11{spec}", file=sys.stderr)
+        raise SystemExit(2)
+    repairs.append("h11==0.16.0")
+    if httpcore_v and httpcore_v < Version("1.0.9"):
+        repairs.append("httpcore==1.0.9")
+elif httpcore_v and httpcore_v < Version("1.0.9") and h11_v and h11_v >= Version("0.16"):
+    repairs.append("httpcore==1.0.9")
 
 # Select a packaging version that satisfies every active installed requirement.
 # color-matcher 0.6.0 needs >=24.2; legacy Flet 0.24.x needs <24. The dedicated
@@ -2082,7 +2233,7 @@ PYREPAIRS
     }
 
     if [[ -z "${repairs_text//[$'\r\n']/}" ]]; then
-        echo "No known NumPy/Numba/colour-science/httpcore/packaging compatibility repairs are needed."
+        echo "No known NumPy/Numba/colour-science/httpcore/h11/packaging compatibility repairs are needed."
         return 0
     fi
 
@@ -2104,7 +2255,7 @@ PYREPAIRS
     }
 
     echo "Dependency versions after compatibility updates:"
-    "$COMFYUI_PYTHON" -m pip show numpy numba colour-science httpcore h11 packaging transparent-background pymatting color-matcher 2>/dev/null \
+    "$COMFYUI_PYTHON" -m pip show numpy numba colour-science httpcore httpcore2 h11 packaging transparent-background pymatting color-matcher 2>/dev/null \
         | grep -E '^(Name|Version):' || true
 }
 
@@ -2271,6 +2422,9 @@ run_timed "setup: optional PyTorch upgrade" upgrade_torch_if_requested || { echo
 run_timed "check/fix: ComfyUI PyTorch compatibility" ensure_comfyui_torch_compatibility || { echo "ComfyUI requires a compatible PyTorch build; refusing to continue with a broken runtime." >&2; exit 1; }
 run_timed "check: ComfyUI Python and PyTorch runtime" report_comfyui_runtime || { echo "Could not inspect the ComfyUI runtime." >&2; exit 1; }
 run_timed "setup: downloader tools" install_downloader_tools || { echo "Downloader tool installation failed." >&2; exit 1; }
+# Generate and export pip constraints only after the ComfyUI Torch/CUDA runtime
+# is finalized, and before any ComfyUI core/custom-node pip installs take place.
+run_timed "setup: ComfyUI pip constraints" setup_comfyui_pip_constraints || { echo "Could not prepare ComfyUI pip constraints." >&2; exit 1; }
 
 # Run provisioning whenever the core changed, the Python environment changed, the
 # marker is absent, or the caller explicitly requests a full recheck. AUTO_UPDATE
