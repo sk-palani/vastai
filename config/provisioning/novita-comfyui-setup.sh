@@ -221,7 +221,6 @@ NODES=(
    "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
    "https://github.com/yolain/ComfyUI-Easy-Use"
    "https://github.com/yorkane/ComfyUI-KYNode"
-   "https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer"
    "https://github.com/TiwazM/ComfyUI-Krea2-Turbo-Preset-Sampler"
    "https://github.com/ai-joe-git/ComfyUI-SimpleMegapixels"
 )
