@@ -202,6 +202,7 @@ CHECKPOINT_MODELS=(
 # present in custom_nodes are supplied by the AI-Dock image or installed separately;
 # leave them untouched.
 NODES=(
+    "https://github.com/comfy-org/ComfyUI-Manager"
     "https://github.com/sk-palani/ComfyUI_Simpler"
     "https://github.com/ClownsharkBatwing/RES4LYF"
     "https://github.com/Deaquay/ComfyUI-Qwen3.5-Uncensored"
@@ -227,6 +228,8 @@ NODES=(
     "https://github.com/traugdor/ComfyUI-quadMoons-nodes"
     "https://github.com/yolain/ComfyUI-Easy-Use"
     "https://github.com/yorkane/ComfyUI-KYNode"
+    "https://github.com/cyberdeliaAI/ComfyUI-CyberKrea-Sampler"
+    "https://github.com/jags111/efficiency-nodes-comfyui"
 )
 
 
