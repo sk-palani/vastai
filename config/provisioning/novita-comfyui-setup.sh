@@ -8,7 +8,8 @@
 #   SYNCTHING_GUI_USER/PASSWORD  Optional GUI login; required when Tailscale Serve is enabled.
 #   SYNCTHING_TAILSCALE_SERVE   Set true to expose the authenticated GUI privately over Tailscale HTTPS.
 #   CIVITAI_TOKEN            Required for Civitai model downloads.
-#   TAILSCALE_AUTHKEY        Optional; when set, auto-joins this container to your tailnet.
+#   TAILSCALE_AUTHKEY        Required on first boot; later boots reuse the persisted identity.
+#   TAILSCALE_STATE_DIR      Persistent Tailscale state directory (default ${WORKSPACE}/.tailscale).
 #   TS_HOSTNAME              Optional Tailscale device name.
 #   MAX_PARALLEL_DOWNLOADS   Global model-download concurrency (default 2; try 3 if bandwidth allows).
 #   HF_XET_HIGH_PERFORMANCE  Set to 1 only when you want hf-xet to use more system resources.
@@ -26,27 +27,28 @@
 #   COMFYUI_AUTO_FIX_TORCH       Automatically upgrade an older Torch to a compatible 2.7.1 build (default true).
 # https://github.com/MushroomFleet/Runpod-init
 : "${WORKSPACE:?WORKSPACE must be set by the container provider}"
-if [[ "$(id -u)" != "0" ]]; then
-    echo "FATAL: this AI-Dock provisioning script must run as root (UID 0)." >&2
+PROVISIONING_BUILD_ID="2026-10-31-r4"
+PROVISIONING_SCRIPT_PATH="${BASH_SOURCE[0]:-$0}"
+
+if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
+    echo "FATAL: this AI-Dock provisioning script must run with effective UID 0 (current EUID=${EUID}, uid=$(id -u))." >&2
     exit 1
 fi
 
-# This provider container must run the provisioning script as root. All privileged
-# commands execute directly; sudo is intentionally not used because no-new-privileges
-# can make sudo fail even when the caller is UID 0.
+# All privileged operations run as the already-root container process. This
+# helper deliberately executes the requested command directly; it never invokes
+# a privilege-escalation program.
 function as_root() {
-    # This is a container init/provisioning script. The provider runs it as root.
-    # sudo is deliberately never used: no-new-privileges can make sudo fail even
-    # for UID 0. Fail clearly if the provider invokes this script unprivileged.
-    if [[ "$(id -u)" == "0" ]]; then
-        "$@"
-        return $?
+    if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
+        echo "FATAL: privileged command requested without effective UID 0 (EUID=${EUID}, uid=$(id -u))." >&2
+        return 1
     fi
-    echo "FATAL: provisioning requires UID 0; current UID=$(id -u). sudo is intentionally not used in this container." >&2
-    return 1
+    "$@"
 }
 
-echo "Provisioning identity: uid=$(id -u) user=$(id -un 2>/dev/null || echo unknown); privileged commands run directly without sudo."
+echo "PROVISIONING_BUILD_ID=${PROVISIONING_BUILD_ID}"
+echo "PROVISIONING_SCRIPT_PATH=${PROVISIONING_SCRIPT_PATH}"
+echo "Provisioning identity: uid=$(id -u) euid=${EUID} user=$(id -un 2>/dev/null || echo unknown); privileged commands run directly."
 
 # Load AI-Dock's runtime paths before selecting the ComfyUI code and venv paths.
 # The provider's ComfyUI service normally runs /opt/ComfyUI with
@@ -114,6 +116,9 @@ SYNCTHING_HOME="${SYNCTHING_HOME:-${WORKSPACE}/.syncthing}"
 SYNCTHING_GUI_ADDRESS="${SYNCTHING_GUI_ADDRESS:-127.0.0.1:8384}"
 SYNCTHING_GUI_PORT="${SYNCTHING_GUI_ADDRESS##*:}"
 SYNCTHING_TAILSCALE_SERVE="${SYNCTHING_TAILSCALE_SERVE:-false}"
+TAILSCALE_STATE_DIR="${TAILSCALE_STATE_DIR:-${WORKSPACE}/.tailscale}"
+TAILSCALE_STATE_FILE="${TAILSCALE_STATE_FILE:-${TAILSCALE_STATE_DIR}/tailscaled.state}"
+TAILSCALE_SOCKET="${TAILSCALE_SOCKET:-/tmp/tailscaled.sock}"
 SYNCTHING_REPO_CHANGED=0
 TIMING_LOG="${WORKSPACE}/provisioning-timings.log"
 RUN_ID="$(date +%Y%m%d-%H%M%S)"
@@ -394,34 +399,66 @@ function finish_timing_summary() {
 trap finish_timing_summary EXIT
 
 function setup_syncthing_repository() {
-    [[ "${SYNCTHING_ENABLE,,}" == "false" || "${SYNCTHING_ENABLE,,}" == "0" ]] && return 0
-    local keyring=/etc/apt/keyrings/syncthing-archive-keyring.gpg
-    local source=/etc/apt/sources.list.d/syncthing.list
-    if [[ "$(id -u)" != "0" ]]; then
-        echo "Syncthing repository setup requires UID 0; current UID is $(id -u)." >&2
+    [[ "${SYNCTHING_ENABLE,,}" == "false" || "${SYNCTHING_ENABLE,,}" == "0" ]] && {
+        echo "Syncthing: disabled; skipping its APT repository."
+        return 0
+    }
+
+    if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
+        echo "Syncthing repository setup requires effective UID 0; current EUID=${EUID}, uid=$(id -u)." >&2
         return 1
     fi
+
+    local keyring="/etc/apt/keyrings/syncthing-archive-keyring.gpg"
+    local source="/etc/apt/sources.list.d/syncthing.list"
+    local preferences="/etc/apt/preferences.d/syncthing.pref"
+    local key_tmp="${keyring}.tmp.$$"
+
     if ! command -v curl >/dev/null 2>&1; then
         echo "Bootstrapping curl and CA certificates before configuring Syncthing..."
-        as_root apt-get update || { echo "APT update failed while bootstrapping curl." >&2; return 1; }
-        as_root env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends curl ca-certificates || { echo "Could not install curl/ca-certificates." >&2; return 1; }
+        as_root apt-get update || {
+            echo "APT update failed while bootstrapping curl." >&2
+            return 1
+        }
+        as_root env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends curl ca-certificates || {
+            echo "Could not install curl/ca-certificates." >&2
+            return 1
+        }
     fi
+
+    as_root mkdir -p /etc/apt/keyrings /etc/apt/sources.list.d /etc/apt/preferences.d || return 1
+
     if [[ ! -s "$keyring" ]]; then
-        echo "Adding the official Syncthing APT signing key..."
-        as_root mkdir -p /etc/apt/keyrings || return 1
-        as_root curl -fL --retry 4 --retry-all-errors https://syncthing.net/release-key.gpg -o "${keyring}.tmp" || return 1
-        as_root install -m 0644 "${keyring}.tmp" "$keyring" || return 1
-        as_root rm -f "${keyring}.tmp"
+        echo "Adding the official Syncthing APT signing key (direct root execution; no privilege escalation)..."
+        if ! as_root curl -fL --retry 4 --retry-all-errors --connect-timeout 20 \
+            https://syncthing.net/release-key.gpg -o "$key_tmp"; then
+            as_root rm -f "$key_tmp" || true
+            echo "Could not download the Syncthing APT signing key." >&2
+            return 1
+        fi
+        as_root install -m 0644 "$key_tmp" "$keyring" || {
+            as_root rm -f "$key_tmp" || true
+            echo "Could not install the Syncthing APT signing key at ${keyring}." >&2
+            return 1
+        }
+        as_root rm -f "$key_tmp" || true
+        SYNCTHING_REPO_CHANGED=1
     fi
+
     if ! grep -qF 'https://apt.syncthing.net/ syncthing stable-v2' "$source" 2>/dev/null; then
         echo "Enabling the official Syncthing stable-v2 repository..."
-        printf '%s\n' "deb [signed-by=${keyring}] https://apt.syncthing.net/ syncthing stable-v2" | as_root tee "$source" >/dev/null || return 1
+        printf '%s\n' "deb [signed-by=${keyring}] https://apt.syncthing.net/ syncthing stable-v2" \
+            | as_root tee "$source" >/dev/null || return 1
         SYNCTHING_REPO_CHANGED=1
     fi
-    if ! grep -qF 'Pin: origin apt.syncthing.net' /etc/apt/preferences.d/syncthing.pref 2>/dev/null; then
-        printf '%s\n' 'Package: *' 'Pin: origin apt.syncthing.net' 'Pin-Priority: 990' | as_root tee /etc/apt/preferences.d/syncthing.pref >/dev/null || return 1
+
+    if ! grep -qF 'Pin: origin apt.syncthing.net' "$preferences" 2>/dev/null; then
+        printf '%s\n' 'Package: *' 'Pin: origin apt.syncthing.net' 'Pin-Priority: 990' \
+            | as_root tee "$preferences" >/dev/null || return 1
         SYNCTHING_REPO_CHANGED=1
     fi
+
+    echo "Syncthing APT repository is configured."
 }
 
 function syncthing_gui_auth_configured() {
@@ -446,7 +483,7 @@ function setup_syncthing() {
     }
     local syncthing_bin pid i ts_socket ts_name
     syncthing_bin="$(command -v syncthing)" || { echo "Syncthing package is not installed." >&2; return 1; }
-    ts_socket="/tmp/tailscaled.sock"
+    ts_socket="$TAILSCALE_SOCKET"
     mkdir -p "$SYNCTHING_HOME" "${WORKSPACE}/Sync"
     chmod 700 "$SYNCTHING_HOME"
 
@@ -878,138 +915,200 @@ function install_downloader_tools() {
 }
 
 function setup_tailscale() {
-    local ts_dir="${WORKSPACE}/.tailscale"
-    local ts_state="${ts_dir}/tailscaled.state"
-    local ts_socket="/tmp/tailscaled.sock"
+    local ts_dir="$TAILSCALE_STATE_DIR"
+    local ts_state="$TAILSCALE_STATE_FILE"
+    local ts_socket="$TAILSCALE_SOCKET"
     local ts_log="/tmp/tailscaled.log"
     local ts_err_log="/tmp/tailscaled.err.log"
-    local supervisor_config="" supervisor_include_pattern="" supervisor_conf_dir="" supervisor_conf=""
-    local tailscaled_bin tailscale_bin i status_json backend_state daemon_ready=0 pid cmdline
+    local supervisor_config="" supervisor_args="" supervisor_pid=""
+    local supervisor_conf="" supervisor_conf_dir=""
+    local tailscaled_bin tailscale_bin status_json backend_state manager_status
+    local i daemon_ready=0 pid process_args
 
-    # This container has no alternate SSH route. Never silently skip Tailscale:
-    # an auth key is required on first boot, while later boots reuse persisted state.
-    if [[ -z "${TAILSCALE_AUTHKEY:-}" && ! -s "$ts_state" ]]; then
-        echo "FATAL: Tailscale has no saved identity and TAILSCALE_AUTHKEY is unset." >&2
-        echo "Configure a valid Tailscale auth key before starting this container." >&2
+    if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
+        echo "FATAL: Tailscale setup requires effective UID 0." >&2
         return 1
     fi
+
+    # On first boot, a key is required. Once state has been persisted, the
+    # existing node identity is reused and an auth key is not needed again.
+    if [[ -z "${TAILSCALE_AUTHKEY:-}" && ! -s "$ts_state" ]]; then
+        echo "FATAL: no saved Tailscale identity at ${ts_state} and TAILSCALE_AUTHKEY is unset." >&2
+        echo "Set TAILSCALE_AUTHKEY for the first login, then persist ${ts_dir} across container restarts." >&2
+        return 1
+    fi
+
+    mkdir -p "$ts_dir" "$(dirname "$ts_state")" || return 1
+    chmod 700 "$ts_dir" || return 1
+    # Older revisions created a zero-byte state file before tailscaled ran.
+    # Remove only that invalid placeholder; never overwrite a non-empty identity.
+    if [[ -f "$ts_state" && ! -s "$ts_state" ]]; then
+        echo "Removing an empty placeholder Tailscale state file."
+        rm -f "$ts_state" || return 1
+    fi
+    [[ -f "$ts_state" ]] && chmod 600 "$ts_state"
 
     if ! command -v tailscale >/dev/null 2>&1 || ! command -v tailscaled >/dev/null 2>&1; then
         echo "Installing Tailscale package..."
-        curl -fsSL https://tailscale.com/install.sh | sh || return 1
+        local installer="${WORKSPACE}/.tailscale-install.sh"
+        curl -fsSL --retry 4 --retry-all-errors https://tailscale.com/install.sh -o "$installer" || return 1
+        sh "$installer" || { rm -f "$installer"; return 1; }
+        rm -f "$installer"
     fi
-    tailscale_bin="$(command -v tailscale)"
-    tailscaled_bin="$(command -v tailscaled)"
+    tailscale_bin="$(command -v tailscale)" || return 1
+    tailscaled_bin="$(command -v tailscaled)" || return 1
 
     if ! command -v supervisorctl >/dev/null 2>&1; then
-        echo "FATAL: supervisorctl is unavailable; refusing to start an unmanaged Tailscale daemon." >&2
+        echo "FATAL: supervisorctl is unavailable; refusing to run an unmanaged Tailscale daemon." >&2
         return 1
     fi
 
-    # Discover the actual supervisord config and its include glob. AI-Dock images
-    # commonly use *.ini rather than *.conf; never assume a particular extension.
-    local supervisor_args config_candidate
-    supervisor_args="$(ps -eo args= | grep -E '[s]upervisord([[:space:]]|$)' | head -n 1 || true)"
-    if [[ "$supervisor_args" =~ -c[[:space:]]+([^[:space:]]+) ]]; then
-        config_candidate="${BASH_REMATCH[1]}"
-        [[ -f "$config_candidate" ]] && supervisor_config="$config_candidate"
+    # Ask the live Supervisor instance for its PID, then inspect its actual argv.
+    # This is more reliable than assuming a particular distro config path.
+    supervisor_pid="$(supervisorctl pid 2>/dev/null | tr -d '[:space:]' || true)"
+    if [[ "$supervisor_pid" =~ ^[0-9]+$ && -r "/proc/${supervisor_pid}/cmdline" ]]; then
+        supervisor_args="$(tr '\0' ' ' < "/proc/${supervisor_pid}/cmdline" 2>/dev/null || true)"
+    else
+        supervisor_args="$(ps -eo args= | grep -E '[s]upervisord([[:space:]]|$)' | head -n 1 || true)"
     fi
+
+    # Extract -c CONFIG or -cCONFIG from the running Supervisor command.
+    supervisor_config="$(python3 - "$supervisor_pid" <<'PY_SUPERVISOR_ARGV'
+import os, sys
+pid = sys.argv[1]
+if pid.isdigit():
+    try:
+        argv = [x.decode(errors="replace") for x in open(f"/proc/{pid}/cmdline", "rb").read().split(b"\0") if x]
+    except OSError:
+        argv = []
+    for i, arg in enumerate(argv):
+        if arg == "-c" and i + 1 < len(argv):
+            print(argv[i + 1]); raise SystemExit(0)
+        if arg.startswith("-c") and len(arg) > 2:
+            print(arg[2:]); raise SystemExit(0)
+PY_SUPERVISOR_ARGV
+)"
+
     if [[ -z "$supervisor_config" ]]; then
-        for config_candidate in \
+        for supervisor_config in \
             /etc/supervisor/supervisord.conf \
             /etc/supervisord.conf \
             /etc/supervisor.conf \
             /etc/supervisor/supervisor.conf; do
-            if [[ -f "$config_candidate" ]]; then
-                supervisor_config="$config_candidate"
-                break
-            fi
+            [[ -f "$supervisor_config" ]] && break
         done
+        [[ -f "$supervisor_config" ]] || supervisor_config=""
     fi
-    if [[ -z "$supervisor_config" ]]; then
-        echo "FATAL: Could not locate the active Supervisor configuration." >&2
-        echo "supervisord process: ${supervisor_args:-not found}" >&2
+    if [[ -z "$supervisor_config" || ! -f "$supervisor_config" ]]; then
+        echo "FATAL: could not locate the active Supervisor configuration." >&2
+        echo "supervisorctl PID: ${supervisor_pid:-unknown}" >&2
+        echo "supervisord argv: ${supervisor_args:-unavailable}" >&2
         return 1
     fi
 
-    # Read [include] files patterns. If none exists, add a dedicated include
-    # directory to the main config; Supervisor reread will then load our program.
-    supervisor_include_pattern="$(python3 - "$supervisor_config" <<'PYCONF'
-import configparser, sys
-p=sys.argv[1]
-c=configparser.ConfigParser(strict=False)
-c.read(p)
-if c.has_section('include'):
-    print(c.get('include','files',fallback='').replace(',', '\n'))
-PYCONF
-)"
-    if [[ -z "${supervisor_include_pattern//[$' \t\r\n']/}" ]]; then
-        echo "Supervisor has no [include] files entry; adding a dedicated Tailscale include."
-        printf '\n[include]\nfiles = /etc/supervisor/conf.d/*.conf\n' >> "$supervisor_config"
-        supervisor_include_pattern="/etc/supervisor/conf.d/*.conf"
-    fi
+    # Resolve one active include wildcard. Supervisor accepts both *.conf and
+    # *.ini in the common AI-Dock layouts. If no wildcard exists, add one to the
+    # existing [include] section (or create that section) without rewriting the
+    # rest of the main configuration file.
+    supervisor_conf="$(python3 - "$supervisor_config" <<'PY_SUPERVISOR_INCLUDE'
+import configparser, glob, os, re, shlex, shutil, sys
+config_path = os.path.abspath(sys.argv[1])
+base_dir = os.path.dirname(config_path)
+text = open(config_path, encoding="utf-8").read()
+parser = configparser.ConfigParser(interpolation=None, strict=False)
+parser.read_string(text)
+files = parser.get("include", "files", fallback="").strip()
+patterns = shlex.split(files) if files else []
 
-    # Select the first include glob whose directory can be created and whose
-    # filename wildcard can be represented by a .conf/.ini-style suffix.
-    while IFS= read -r config_candidate; do
-        config_candidate="${config_candidate//[[:space:]]/}"
-        [[ -n "$config_candidate" ]] || continue
-        if [[ "$config_candidate" != /* ]]; then
-            config_candidate="$(dirname "$supervisor_config")/$config_candidate"
-        fi
-        if [[ "$config_candidate" == *'*'* ]]; then
-            supervisor_conf_dir="$(dirname "$config_candidate")"
-            local include_base include_suffix
-            include_base="$(basename "$config_candidate")"
-            include_suffix="${include_base#*\*}"
-            [[ -n "$include_suffix" ]] || include_suffix=".conf"
-            if [[ "$include_suffix" == *'?'* || "$include_suffix" == *'['* ]]; then
-                include_suffix=".conf"
-            fi
-            supervisor_conf="${supervisor_conf_dir}/tailscaled${include_suffix}"
-            break
-        fi
-    done <<< "$supervisor_include_pattern"
+def absolute_pattern(p):
+    return p if os.path.isabs(p) else os.path.normpath(os.path.join(base_dir, p))
 
-    if [[ -z "$supervisor_conf" ]]; then
-        echo "FATAL: Supervisor [include] has no usable wildcard: ${supervisor_include_pattern}" >&2
-        echo "Cannot register a restart-managed Tailscale daemon safely." >&2
+for p in patterns:
+    p = absolute_pattern(p)
+    if glob.has_magic(p):
+        directory, name = os.path.split(p)
+        magic_positions = [i for i, ch in enumerate(name) if ch in "*?["]
+        first = min(magic_positions) if magic_positions else len(name)
+        prefix = name[:first]
+        suffix = name[first + 1:] if name[first:first+1] == "*" else ""
+        if any(ch in suffix for ch in "*?["):
+            suffix = ".conf"
+        if not suffix:
+            suffix = ".conf"
+        os.makedirs(directory, exist_ok=True)
+        print(os.path.join(directory, prefix + "tailscaled" + suffix))
+        raise SystemExit(0)
+
+# No usable wildcard was declared. Add a dedicated include glob safely.
+new_pattern = "/etc/supervisor/conf.d/*.conf"
+include_match = re.search(r"(?im)^[ \t]*\[include\][ \t]*$", text)
+if include_match:
+    section_start = include_match.start()
+    next_section = re.search(r"(?im)^[ \t]*\[[^]]+\][ \t]*$", text[include_match.end():])
+    section_end = include_match.end() + next_section.start() if next_section else len(text)
+    section = text[section_start:section_end]
+    files_line = re.search(r"(?im)^([ \t]*files[ \t]*=[ \t]*)([^\r\n]*)$", section)
+    if files_line:
+        existing = files_line.group(2).strip()
+        if new_pattern not in existing:
+            replacement = files_line.group(1) + (existing + " " if existing else "") + new_pattern
+            section = section[:files_line.start()] + replacement + section[files_line.end():]
+            text = text[:section_start] + section + text[section_end:]
+    else:
+        insertion = section_start + len(include_match.group(0))
+        text = text[:insertion] + "\nfiles = " + new_pattern + text[insertion:]
+else:
+    if text and not text.endswith("\n"):
+        text += "\n"
+    text += "\n[include]\nfiles = " + new_pattern + "\n"
+
+backup = config_path + ".bak.tailscale"
+if not os.path.exists(backup):
+    shutil.copy2(config_path, backup)
+with open(config_path, "w", encoding="utf-8") as f:
+    f.write(text)
+
+os.makedirs("/etc/supervisor/conf.d", exist_ok=True)
+print("/etc/supervisor/conf.d/tailscaled.conf")
+PY_SUPERVISOR_INCLUDE
+)" || {
+        echo "FATAL: could not configure a Supervisor include for tailscaled." >&2
         return 1
-    fi
-    mkdir -p "$supervisor_conf_dir"
+    }
 
-    mkdir -p "$ts_dir"
-    chmod 700 "$ts_dir"
-    touch "$ts_state"
-    chmod 600 "$ts_state"
+    supervisor_conf_dir="$(dirname "$supervisor_conf")"
+    mkdir -p "$supervisor_conf_dir" || return 1
 
-    # Hand ownership of this dedicated socket to Supervisor. Stop any older
-    # daemon using this exact socket (userspace or otherwise), but leave all
-    # unrelated Tailscale instances untouched.
-    while read -r pid cmdline; do
-        [[ -n "$pid" ]] || continue
-        if [[ "$cmdline" == *"$ts_socket"* && "$cmdline" == *tailscaled* ]]; then
-            echo "Stopping previous Tailscale daemon on ${ts_socket} (PID $pid)..."
+    manager_status="$(supervisorctl status tailscaled 2>&1 || true)"
+    if [[ "$manager_status" != *"RUNNING"* ]]; then
+        # Clean up only an unmanaged daemon already bound to our dedicated socket.
+        # If Supervisor already owns the program, let `supervisorctl update` restart
+        # it from the new config instead of racing Supervisor by killing it here.
+        while read -r pid process_args; do
+            [[ -n "$pid" && "$process_args" == *tailscaled* && "$process_args" == *"$ts_socket"* ]] || continue
+            echo "Stopping unmanaged tailscaled process ${pid} on ${ts_socket}..."
             kill -TERM "$pid" 2>/dev/null || true
-            for i in $(seq 1 10); do
+            for i in $(seq 1 15); do
                 kill -0 "$pid" 2>/dev/null || break
                 sleep 1
             done
             kill -KILL "$pid" 2>/dev/null || true
+        done < <(ps -eo pid=,args=)
+        if ! pgrep -f "[t]ailscaled.*${ts_socket}" >/dev/null 2>&1; then
+            rm -f "$ts_socket"
         fi
-    done < <(ps -eo pid=,args=)
-    rm -f "$ts_socket"
+    fi
 
-    cat > "$supervisor_conf" <<EOF
+    cat > "$supervisor_conf" <<EOF_SUPERVISOR
 [program:tailscaled]
-command=${tailscaled_bin} --tun=userspace-networking --state=${ts_state} --socket=${ts_socket}
+command=${tailscaled_bin} --tun=userspace-networking --state=${ts_state} --statedir=${ts_dir} --socket=${ts_socket}
 directory=/
 autostart=true
 autorestart=true
 startsecs=3
 startretries=20
 stopsignal=TERM
-stopwaitsecs=20
+stopwaitsecs=30
 stopasgroup=true
 killasgroup=true
 user=root
@@ -1020,17 +1119,26 @@ stdout_logfile_backups=2
 stderr_logfile=${ts_err_log}
 stderr_logfile_maxbytes=5MB
 stderr_logfile_backups=2
-EOF
-    chmod 644 "$supervisor_conf"
+EOF_SUPERVISOR
+    chmod 644 "$supervisor_conf" || return 1
 
-    echo "Registering Tailscale userspace daemon with Supervisor: ${supervisor_conf}"
-    supervisorctl reread || return 1
+    echo "Registering Tailscale daemon with Supervisor: ${supervisor_conf}"
+    supervisorctl reread || {
+        echo "Supervisor could not reread its configuration. Active config: ${supervisor_config}" >&2
+        return 1
+    }
     supervisorctl update || return 1
-    # If this is an already-known program, make sure it is actually running.
-    supervisorctl start tailscaled >/dev/null 2>&1 || true
 
-    # Wait for a valid local API response, not merely for the process to exist.
-    for i in $(seq 1 45); do
+    manager_status="$(supervisorctl status tailscaled 2>&1 || true)"
+    if [[ "$manager_status" != *"RUNNING"* && "$manager_status" != *"STARTING"* ]]; then
+        supervisorctl start tailscaled || {
+            supervisorctl status tailscaled >&2 || true
+            return 1
+        }
+    fi
+
+    # Wait for a real LocalAPI JSON response, not merely a process or socket file.
+    for i in $(seq 1 60); do
         status_json="$("$tailscale_bin" --socket="$ts_socket" status --json 2>/dev/null || true)"
         if [[ -n "$status_json" ]] && jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
             daemon_ready=1
@@ -1039,39 +1147,38 @@ EOF
         sleep 1
     done
     if (( daemon_ready == 0 )); then
-        echo "FATAL: Tailscale userspace daemon did not become ready under Supervisor." >&2
+        echo "FATAL: Tailscale LocalAPI did not become ready under Supervisor." >&2
         supervisorctl status tailscaled >&2 || true
-        tail -n 80 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
+        tail -n 100 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
         return 1
     fi
 
     backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json")"
     if [[ "$backend_state" != "Running" ]]; then
         if [[ -z "${TAILSCALE_AUTHKEY:-}" ]]; then
-            echo "FATAL: saved Tailscale identity is not authenticated (state: ${backend_state}) and no auth key is configured." >&2
+            echo "FATAL: saved Tailscale identity is not authenticated (state: ${backend_state}) and TAILSCALE_AUTHKEY is unset." >&2
             return 1
         fi
-        echo "Tailscale userspace daemon is ready (state: ${backend_state}); authenticating..."
+        echo "Tailscale daemon is ready (state: ${backend_state}); authenticating node..."
         if ! "$tailscale_bin" --socket="$ts_socket" up \
             --timeout=90s \
             --auth-key="$TAILSCALE_AUTHKEY" \
             --hostname="${TS_HOSTNAME:-comfyui-${HOSTNAME:0:12}}" \
             > /tmp/tailscale-up.log 2>&1; then
-            echo "Tailscale authentication failed:" >&2
-            cat /tmp/tailscale-up.log >&2 || true
-            tail -n 80 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
+            echo "Tailscale authentication failed; details follow:" >&2
+            cat /tmp/tailscale-up.log >&2 2>/dev/null || true
+            tail -n 100 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
             return 1
         fi
     fi
 
-    # Explicitly enable Tailscale SSH on EVERY boot, after authentication.
-    # This is idempotent and uses the same dedicated LocalAPI socket.
+    # Enable Tailscale SSH after authentication. Existing policy may still restrict
+    # who can connect; this only enables the node-side SSH service.
     if ! "$tailscale_bin" --socket="$ts_socket" set --ssh; then
-        echo "FATAL: 'tailscale set --ssh' failed; remote shell access is not ready." >&2
+        echo "FATAL: tailscale set --ssh failed." >&2
         return 1
     fi
 
-    # Confirm the node is online and that Supervisor owns the long-running daemon.
     for i in $(seq 1 45); do
         status_json="$("$tailscale_bin" --socket="$ts_socket" status --json 2>/dev/null || true)"
         backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json" 2>/dev/null || echo Unknown)"
@@ -1090,16 +1197,15 @@ EOF
         return 1
     fi
 
-    if ! ps -eo args= | grep -F -- "${tailscaled_bin} --tun=userspace-networking --state=${ts_state} --socket=${ts_socket}" | grep -v grep >/dev/null 2>&1; then
-        echo "FATAL: tailscaled is not running with the required userspace-networking arguments." >&2
-        supervisorctl status tailscaled >&2 || true
+    if ! ps -eo args= | grep -F -- "${tailscaled_bin} --tun=userspace-networking --state=${ts_state} --statedir=${ts_dir} --socket=${ts_socket}" | grep -v grep >/dev/null 2>&1; then
+        echo "FATAL: tailscaled is not running with the configured persistent userspace arguments." >&2
+        ps -eo pid,args | grep '[t]ailscaled' >&2 || true
         return 1
     fi
 
-    echo "Tailscale connected in userspace networking mode; 'tailscale set --ssh' succeeded."
+    echo "Tailscale connected; state directory: ${ts_dir}"
     "$tailscale_bin" --socket="$ts_socket" status || true
     "$tailscale_bin" --socket="$ts_socket" ip -4 || true
-    echo "Remote shell: ssh root@${TS_HOSTNAME:-comfyui-${HOSTNAME:0:12}}"
 }
 
 function provisioning_download_huggingface() {
