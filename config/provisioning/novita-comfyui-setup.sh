@@ -26,29 +26,47 @@
 #   COMFYUI_TORCH_INDEX_URL      Optional explicit PyTorch wheel index; otherwise selected from NVIDIA driver.
 #   COMFYUI_AUTO_FIX_TORCH       Automatically upgrade an older Torch to a compatible 2.7.1 build (default true).
 # https://github.com/MushroomFleet/Runpod-init
-: "${WORKSPACE:?WORKSPACE must be set by the container provider}"
-PROVISIONING_BUILD_ID="2026-10-31-r4"
+PROVISIONING_BUILD_ID="2026-10-31-r5"
 PROVISIONING_SCRIPT_PATH="${BASH_SOURCE[0]:-$0}"
 
-if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
-    echo "FATAL: this AI-Dock provisioning script must run with effective UID 0 (current EUID=${EUID}, uid=$(id -u))." >&2
-    exit 1
-fi
-
-# All privileged operations run as the already-root container process. This
-# helper deliberately executes the requested command directly; it never invokes
-# a privilege-escalation program.
-function as_root() {
-    if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
-        echo "FATAL: privileged command requested without effective UID 0 (EUID=${EUID}, uid=$(id -u))." >&2
-        return 1
-    fi
-    "$@"
-}
-
+# Print the digest of the exact file the provider just downloaded/sourced.
+# dos2unix runs before this script in the provider bootstrap, so this is the
+# checksum of the executable LF-normalized file on disk.
 echo "PROVISIONING_BUILD_ID=${PROVISIONING_BUILD_ID}"
 echo "PROVISIONING_SCRIPT_PATH=${PROVISIONING_SCRIPT_PATH}"
-echo "Provisioning identity: uid=$(id -u) euid=${EUID} user=$(id -un 2>/dev/null || echo unknown); privileged commands run directly."
+if command -v md5sum >/dev/null 2>&1 && [[ -f "$PROVISIONING_SCRIPT_PATH" ]]; then
+    PROVISIONING_MD5SUM="$(md5sum -- "$PROVISIONING_SCRIPT_PATH" | awk '{print $1}')"
+    echo "PROVISIONING_MD5SUM=${PROVISIONING_MD5SUM}  ${PROVISIONING_SCRIPT_PATH}"
+elif command -v openssl >/dev/null 2>&1 && [[ -f "$PROVISIONING_SCRIPT_PATH" ]]; then
+    PROVISIONING_MD5SUM="$(openssl dgst -md5 "$PROVISIONING_SCRIPT_PATH" | awk '{print $NF}')"
+    echo "PROVISIONING_MD5SUM=${PROVISIONING_MD5SUM}  ${PROVISIONING_SCRIPT_PATH}"
+elif command -v python3 >/dev/null 2>&1 && [[ -f "$PROVISIONING_SCRIPT_PATH" ]]; then
+    PROVISIONING_MD5SUM="$(python3 -c 'import hashlib,sys; print(hashlib.md5(open(sys.argv[1],"rb").read()).hexdigest())' "$PROVISIONING_SCRIPT_PATH")"
+    echo "PROVISIONING_MD5SUM=${PROVISIONING_MD5SUM}  ${PROVISIONING_SCRIPT_PATH}"
+else
+    echo "PROVISIONING_MD5SUM=unavailable (no md5sum/openssl/python3 or source file path)"
+fi
+
+PROVISIONING_UID="$(id -u)"
+PROVISIONING_IS_ROOT=0
+if [[ "$PROVISIONING_UID" == "0" && "$EUID" == "0" ]]; then
+    PROVISIONING_IS_ROOT=1
+fi
+
+# Never invoke sudo in this container: no-new-privileges can prevent it from
+# elevating. Run privileged commands directly only when the caller is root.
+# Callers that need system-level changes must handle the non-root case first.
+function as_root() {
+    if (( PROVISIONING_IS_ROOT == 1 )); then
+        "$@"
+        return $?
+    fi
+    echo "SKIP privileged command (uid=${PROVISIONING_UID}): $*; no privilege escalation is available in this container." >&2
+    return 126
+}
+
+echo "Provisioning identity: uid=${PROVISIONING_UID} euid=${EUID} user=$(id -un 2>/dev/null || echo unknown); root-only setup will be skipped when unavailable."
+: "${WORKSPACE:?WORKSPACE must be set by the container provider}"
 
 # Load AI-Dock's runtime paths before selecting the ComfyUI code and venv paths.
 # The provider's ComfyUI service normally runs /opt/ComfyUI with
@@ -404,9 +422,10 @@ function setup_syncthing_repository() {
         return 0
     }
 
-    if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
-        echo "Syncthing repository setup requires effective UID 0; current EUID=${EUID}, uid=$(id -u)." >&2
-        return 1
+    if (( PROVISIONING_IS_ROOT == 0 )); then
+        echo "SKIP: cannot add the system-wide Syncthing APT repository as uid ${PROVISIONING_UID}. No sudo escalation will be attempted."
+        echo "An already-installed Syncthing binary can still be used; otherwise Syncthing setup will be skipped."
+        return 0
     fi
 
     local keyring="/etc/apt/keyrings/syncthing-archive-keyring.gpg"
@@ -482,7 +501,14 @@ function setup_syncthing() {
         return 0
     }
     local syncthing_bin pid i ts_socket ts_name
-    syncthing_bin="$(command -v syncthing)" || { echo "Syncthing package is not installed." >&2; return 1; }
+    syncthing_bin="$(command -v syncthing)" || {
+        if (( PROVISIONING_IS_ROOT == 0 )); then
+            echo "SKIP: Syncthing is not installed and cannot be installed without root; ComfyUI provisioning will continue."
+            return 0
+        fi
+        echo "Syncthing package is not installed." >&2
+        return 1
+    }
     ts_socket="$TAILSCALE_SOCKET"
     mkdir -p "$SYNCTHING_HOME" "${WORKSPACE}/Sync"
     chmod 700 "$SYNCTHING_HOME"
@@ -596,6 +622,13 @@ function provisioning_get_apt_packages() {
             missing+=("$package")
         fi
     done
+    if (( ${#missing[@]} > 0 && PROVISIONING_IS_ROOT == 0 )); then
+        echo "WARNING: ${#missing[@]} OS package(s) are missing, but provisioning runs as uid ${PROVISIONING_UID} and cannot install system packages."
+        printf '  Missing: %s\n' "${missing[@]}"
+        echo "Continuing with packages already present in the AI-Dock image."
+        APT_PACKAGES_READY=1
+        return 0
+    fi
     if (( ${#missing[@]} == 0 )); then
         if (( SYNCTHING_REPO_CHANGED == 1 )); then
             echo "Refreshing APT metadata for the newly added Syncthing repository..."
@@ -925,30 +958,47 @@ function setup_tailscale() {
     local tailscaled_bin tailscale_bin status_json backend_state manager_status
     local i daemon_ready=0 pid process_args
 
-    if (( EUID != 0 )) || [[ "$(id -u)" != "0" ]]; then
-        echo "FATAL: Tailscale setup requires effective UID 0." >&2
-        return 1
+    # Prefer the configured persistent path. If a previous root-run daemon left
+    # it root-owned (0700), a uid-1000 init hook cannot reuse it; use a private
+    # per-user state directory instead of failing the entire ComfyUI startup.
+    if (( PROVISIONING_IS_ROOT == 0 )); then
+        if [[ -e "$ts_dir" && ( ! -r "$ts_dir" || ! -w "$ts_dir" || ! -x "$ts_dir" ) ]]; then
+            local user_state_base="${HOME:-$WORKSPACE}"
+            ts_dir="${user_state_base%/}/.tailscale"
+            ts_state="${ts_dir}/tailscaled.state"
+            TAILSCALE_STATE_DIR="$ts_dir"
+            TAILSCALE_STATE_FILE="$ts_state"
+            echo "Configured Tailscale state directory is not accessible; using ${ts_dir}."
+        fi
     fi
-
-    # On first boot, a key is required. Once state has been persisted, the
-    # existing node identity is reused and an auth key is not needed again.
-    if [[ -z "${TAILSCALE_AUTHKEY:-}" && ! -s "$ts_state" ]]; then
-        echo "FATAL: no saved Tailscale identity at ${ts_state} and TAILSCALE_AUTHKEY is unset." >&2
-        echo "Set TAILSCALE_AUTHKEY for the first login, then persist ${ts_dir} across container restarts." >&2
-        return 1
+    mkdir -p "$ts_dir" "$(dirname "$ts_state")" || {
+        echo "WARNING: cannot create Tailscale state directory ${ts_dir}; skipping Tailscale setup."
+        return 0
+    }
+    if (( PROVISIONING_IS_ROOT == 1 )); then
+        chmod 700 "$ts_dir" || return 1
+    else
+        chmod 700 "$ts_dir" 2>/dev/null || true
     fi
-
-    mkdir -p "$ts_dir" "$(dirname "$ts_state")" || return 1
-    chmod 700 "$ts_dir" || return 1
     # Older revisions created a zero-byte state file before tailscaled ran.
     # Remove only that invalid placeholder; never overwrite a non-empty identity.
     if [[ -f "$ts_state" && ! -s "$ts_state" ]]; then
         echo "Removing an empty placeholder Tailscale state file."
         rm -f "$ts_state" || return 1
     fi
-    [[ -f "$ts_state" ]] && chmod 600 "$ts_state"
+    if [[ -f "$ts_state" ]]; then
+        if (( PROVISIONING_IS_ROOT == 1 )); then
+            chmod 600 "$ts_state" || return 1
+        else
+            chmod 600 "$ts_state" 2>/dev/null || true
+        fi
+    fi
 
     if ! command -v tailscale >/dev/null 2>&1 || ! command -v tailscaled >/dev/null 2>&1; then
+        if (( PROVISIONING_IS_ROOT == 0 )); then
+            echo "WARNING: Tailscale binaries are not installed and cannot be installed system-wide as uid ${PROVISIONING_UID}; skipping Tailscale startup."
+            return 0
+        fi
         echo "Installing Tailscale package..."
         local installer="${WORKSPACE}/.tailscale-install.sh"
         curl -fsSL --retry 4 --retry-all-errors https://tailscale.com/install.sh -o "$installer" || return 1
@@ -957,6 +1007,70 @@ function setup_tailscale() {
     fi
     tailscale_bin="$(command -v tailscale)" || return 1
     tailscaled_bin="$(command -v tailscaled)" || return 1
+
+    # AI-Dock's init hook can source this script as uid 1000 (no-new-privileges).
+    # In that mode we cannot edit /etc/supervisor or control a root-owned program.
+    # Reuse an already-running daemon if available; otherwise run Tailscale in
+    # userspace networking under this user with state kept in WORKSPACE.
+    if (( PROVISIONING_IS_ROOT == 0 )); then
+        status_json="$("$tailscale_bin" --socket="$ts_socket" status --json 2>/dev/null || true)"
+        if [[ -z "$status_json" ]] || ! jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
+            if ! pgrep -f "[t]ailscaled.*${ts_socket}" >/dev/null 2>&1; then
+                echo "Starting unprivileged userspace Tailscale daemon (uid ${PROVISIONING_UID})..."
+                nohup "$tailscaled_bin" --tun=userspace-networking \
+                    --state="$ts_state" --statedir="$ts_dir" --socket="$ts_socket" \
+                    >>"$ts_log" 2>>"$ts_err_log" </dev/null &
+            else
+                echo "Tailscaled process exists; waiting for its LocalAPI socket..."
+            fi
+            daemon_ready=0
+            for i in $(seq 1 60); do
+                status_json="$("$tailscale_bin" --socket="$ts_socket" status --json 2>/dev/null || true)"
+                if [[ -n "$status_json" ]] && jq -e 'type == "object" and has("BackendState")' <<<"$status_json" >/dev/null 2>&1; then
+                    daemon_ready=1
+                    break
+                fi
+                sleep 1
+            done
+            if (( daemon_ready == 0 )); then
+                echo "WARNING: unprivileged Tailscale LocalAPI did not become ready; ComfyUI provisioning will continue."
+                tail -n 50 "$ts_log" "$ts_err_log" >&2 2>/dev/null || true
+                return 0
+            fi
+        fi
+        backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json")"
+        if [[ "$backend_state" != "Running" ]]; then
+            if [[ -z "${TAILSCALE_AUTHKEY:-}" && ! -s "$ts_state" ]]; then
+                echo "WARNING: Tailscale has no saved identity or TAILSCALE_AUTHKEY; daemon is running but not authenticated."
+                return 0
+            fi
+            if [[ -n "${TAILSCALE_AUTHKEY:-}" ]]; then
+                echo "Authenticating unprivileged Tailscale node..."
+                if ! "$tailscale_bin" --socket="$ts_socket" up --timeout=90s \
+                    --auth-key="$TAILSCALE_AUTHKEY" \
+                    --hostname="${TS_HOSTNAME:-comfyui-${HOSTNAME:0:12}}" \
+                    > /tmp/tailscale-up.log 2>&1; then
+                    echo "WARNING: Tailscale authentication failed; see /tmp/tailscale-up.log. Continuing ComfyUI setup."
+                    cat /tmp/tailscale-up.log >&2 2>/dev/null || true
+                    return 0
+                fi
+            else
+                echo "WARNING: saved Tailscale state is not authenticated and no TAILSCALE_AUTHKEY is set."
+                return 0
+            fi
+        fi
+        "$tailscale_bin" --socket="$ts_socket" set --ssh >/dev/null 2>&1 || echo "WARNING: could not enable Tailscale SSH in unprivileged mode."
+        status_json="$("$tailscale_bin" --socket="$ts_socket" status --json 2>/dev/null || true)"
+        backend_state="$(jq -r '.BackendState // "Unknown"' <<<"$status_json" 2>/dev/null || echo Unknown)"
+        if [[ "$backend_state" == "Running" ]]; then
+            echo "Tailscale connected in unprivileged userspace mode; state directory: ${ts_dir}"
+            "$tailscale_bin" --socket="$ts_socket" status || true
+            "$tailscale_bin" --socket="$ts_socket" ip -4 || true
+        else
+            echo "WARNING: Tailscale backend state is ${backend_state}; proceeding with ComfyUI provisioning."
+        fi
+        return 0
+    fi
 
     if ! command -v supervisorctl >/dev/null 2>&1; then
         echo "FATAL: supervisorctl is unavailable; refusing to run an unmanaged Tailscale daemon." >&2
@@ -1157,6 +1271,7 @@ EOF_SUPERVISOR
     if [[ "$backend_state" != "Running" ]]; then
         if [[ -z "${TAILSCALE_AUTHKEY:-}" ]]; then
             echo "FATAL: saved Tailscale identity is not authenticated (state: ${backend_state}) and TAILSCALE_AUTHKEY is unset." >&2
+            echo "Provide TAILSCALE_AUTHKEY for first login, or restore the persistent state directory ${ts_dir}." >&2
             return 1
         fi
         echo "Tailscale daemon is ready (state: ${backend_state}); authenticating node..."
@@ -1860,18 +1975,26 @@ if [[ -s "${WORKSPACE}/scripts/submit_prompt.sh" ]]; then
         "$WORKSPACE" "$WORKSPACE" "$WORKSPACE" > "$cron_tmp"
     crontab "$cron_tmp"
     rm -f "$cron_tmp"
-    as_root service cron start || service cron start || true
+    if (( PROVISIONING_IS_ROOT == 1 )); then
+        as_root service cron start || true
+    else
+        echo "Cron service start skipped (uid ${PROVISIONING_UID}); cron is managed by the container image."
+    fi
 fi
 
 # These services are provider-specific; tolerate absent supervisor groups.
-for service_name in \
-    'cf_quicktunnel:="cf_quicktunnel_0"' \
-    'cf_quicktunnel:="cf_quicktunnel_1"' \
-    'cf_quicktunnel:="cf_quicktunnel_2"' \
-    'cf_quicktunnel:="cf_quicktunnel_3"' \
-    'jupyter'; do
-    as_root supervisorctl stop "$service_name" >/dev/null 2>&1 || true
-done
+if (( PROVISIONING_IS_ROOT == 1 )); then
+    for service_name in \
+        'cf_quicktunnel:="cf_quicktunnel_0"' \
+        'cf_quicktunnel:="cf_quicktunnel_1"' \
+        'cf_quicktunnel:="cf_quicktunnel_2"' \
+        'cf_quicktunnel:="cf_quicktunnel_3"' \
+        'jupyter'; do
+        supervisorctl stop "$service_name" >/dev/null 2>&1 || true
+    done
+else
+    echo "Provider Supervisor service changes skipped (uid ${PROVISIONING_UID})."
+fi
 
 # Activate an explicitly requested replacement venv only after core and custom-node dependency installs succeeded.
 run_timed "finalize: activate ComfyUI Python ${COMFYUI_PYTHON_VERSION}" finalize_comfyui_python || { echo "Failed to activate the new ComfyUI Python environment." >&2; exit 1; }
