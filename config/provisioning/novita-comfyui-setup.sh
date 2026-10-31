@@ -201,7 +201,6 @@ CHECKPOINT_MODELS=(
 # leave them untouched.
 NODES=(
     "https://github.com/sk-palani/ComfyUI_Simpler"
-    "https://github.com/ClownsharkBatwing/RES4LYF"
 )
 
 
