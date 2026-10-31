@@ -273,8 +273,6 @@ MP3=(
 
 UNET_MODELS=(
   "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev.safetensors"
-  "https://civitai.com/api/download/models/2287992?fileId=2181185"
-
 )
 
 DIFFUSION_MODELS=(
