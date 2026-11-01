@@ -27,8 +27,10 @@
 
 set -Eeuo pipefail
 
-BUILD_ID="2026-11-01-model-downloader-r1"
-SCRIPT_PATH="${BASH_SOURCE[0]}"
+BUILD_ID="2026-11-01-model-downloader-r2"
+# BASH_SOURCE[0] is unset when this script is streamed to `bash -s` (curl | bash).
+# Use a safe stdin label in that mode instead of failing under `set -u`.
+SCRIPT_PATH="${BASH_SOURCE[0]:-<stdin>}"
 WORKSPACE="${WORKSPACE:-/opt}"
 COMFYUI_DIR="${COMFYUI_DIR:-/opt/ComfyUI}"
 TOOLS_DIR="${TOOLS_DIR:-${WORKSPACE}/.tools}"
@@ -55,10 +57,14 @@ export HF_HUB_DOWNLOAD_TIMEOUT HF_HUB_ETAG_TIMEOUT HF_XET_HIGH_PERFORMANCE
 log() { printf '[%s] %s\n' "$(date '+%F %T')" "$*"; }
 die() { echo "FATAL: $*" >&2; exit 1; }
 
+echo "MODEL_DOWNLOADER_BUILD_ID=${BUILD_ID}"
+echo "MODEL_DOWNLOADER_SCRIPT=${SCRIPT_PATH}"
 if command -v md5sum >/dev/null 2>&1; then
-    echo "MODEL_DOWNLOADER_BUILD_ID=${BUILD_ID}"
-    echo "MODEL_DOWNLOADER_SCRIPT=${SCRIPT_PATH}"
-    md5sum -- "$SCRIPT_PATH" 2>/dev/null || true
+    if [[ -f "$SCRIPT_PATH" ]]; then
+        md5sum -- "$SCRIPT_PATH"
+    else
+        echo "MODEL_DOWNLOADER_MD5=unavailable (script is being read from stdin)"
+    fi
 fi
 
 usage() {
