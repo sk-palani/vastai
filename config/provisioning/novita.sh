@@ -178,10 +178,10 @@ WORKFLOWS=(
 CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
-    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
+#    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
 #    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors"
     "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors"
-    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors"
+#    "https://huggingface.co/zer0int/CLIP-GmP-ViT-L-14/resolve/main/ViT-L-14-BEST-smooth-GmP-TE-only-HF-format.safetensors"
 
 )
 
@@ -197,13 +197,13 @@ TEXT_ENCODER_MODELS=(
 
 
 CLIPVISION_MODELS=(
-    "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors"
-    "https://huggingface.co/ostris/ComfyUI-Advanced-Vision/resolve/main/clip_vision/siglip2_so400m_patch16_512.safetensors"
+#    "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors"
+#    "https://huggingface.co/ostris/ComfyUI-Advanced-Vision/resolve/main/clip_vision/siglip2_so400m_patch16_512.safetensors"
 )
 
 STYLE_MODELS=(
-  "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors"
-  "https://huggingface.co/ostris/Flex.1-alpha-Redux/resolve/main/flex1_redux_siglip2_512.safetensors"
+#  "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors"
+#  "https://huggingface.co/ostris/Flex.1-alpha-Redux/resolve/main/flex1_redux_siglip2_512.safetensors"
 )
 
 LUTS=(
@@ -253,10 +253,12 @@ DIFFUSION_MODELS=(
   "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/resolve/main/flux-2-klein-9b.safetensors"
   "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors"
   # kreamania_variant7.safetensors
-  "https://civitai.com/api/download/models/3242185?fileId=3128871&token=${CIVITAI_TOKEN}"
+#  "https://civitai.com/api/download/models/3242185?fileId=3128871&token=${CIVITAI_TOKEN}"
+#  "https://civitai.com/api/download/models/3458135?fileId=3359514&token=${CIVITAI_TOKEN}"
+
   # kreamania_varian8.safetensors
-  "https://civitai.com/api/download/models/3292830?fileId=3177948&token=${CIVITAI_TOKEN}"
-  "https://civitai.com/api/download/models/3305034?fileId=3190059&token=${CIVITAI_TOKEN}"
+#  "https://civitai.com/api/download/models/3292830?fileId=3177948&token=${CIVITAI_TOKEN}"
+#  "https://civitai.com/api/download/models/3305034?fileId=3190059&token=${CIVITAI_TOKEN}"
   # fluxtraitFLUX2KleinFLUXZ_flux2Klein9bV2.safetensors
 #  "https://civitai.com/api/download/models/2805234?type=Model&format=SafeTensor&size=full&fp=bf16&token=${CIVITAI_TOKEN}"
 #  "https://civitai.com/api/download/models/2631758?type=Model&format=SafeTensor&size=pruned&fp=bf16&token=${CIVITAI_TOKEN}"
@@ -270,7 +272,7 @@ VAE_MODELS=(
     "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"
     "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors"
 
-    "https://civitai.red/api/download/models/3054852?fileId=2933547&token=${CIVITAI_TOKEN}"
+#    "https://civitai.red/api/download/models/3054852?fileId=2933547&token=${CIVITAI_TOKEN}"
 #    "https://civitai.com/api/download/models/2527939?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 #    # nightPhotoHDR_flux1.safetensors
 #    "https://civitai.com/api/download/models/2615379?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
@@ -286,6 +288,10 @@ LORA_MODELS=(
     # ------------------------------
     # Flux Krea 2
     # ------------------------------
+    "https://civitai.com/api/download/models/3473330?fileId=3378046&token=${CIVITAI_TOKEN}"
+
+"https://civitai.com/api/download/models/3423156?fileId=3317587&token=${CIVITAI_TOKEN}"
+  "https://civitai.com/api/download/models/2929259?fileId=2808291&token=${CIVITAI_TOKEN}"
 
 #    expression_slider_0ts-krea2-V1.safetensors
     "https://civitai.com/api/download/models/3349249?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
@@ -901,6 +907,9 @@ sleep 2
 nohup  socat TCP-LISTEN:8188,fork,reuseaddr TCP:127.0.0.1:18188 &
 sleep 2
 nohup  socat TCP-LISTEN:20000,fork,reuseaddr TCP:127.0.0.1:18384 &
+sleep 2
+
+nohup  socat TCP-LISTEN:21000,fork,reuseaddr TCP:127.0.0.1:18888 &
 sleep 2
 
 #
