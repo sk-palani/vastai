@@ -49,7 +49,7 @@ random_seed=$(( RANDOM * RANDOM ))
 random_seed=$(( random_seed % max_seed ))
 echo "[$LOG_TS] 🎲 Using random seed: $random_seed"
 
-target_mega_pixel="1.6"
+target_mega_pixel="1.2"
 vram_mb=0
 if command -v nvidia-smi >/dev/null 2>&1; then
   vram_mb=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits 2>/dev/null | sort -nr | head -n 1)
@@ -58,7 +58,7 @@ case "${vram_mb:-0}" in
   *[!0-9]*|"") vram_mb=0 ;;
 esac
 if [ "$vram_mb" -gt 24000 ]; then
-  target_mega_pixel="2.0"
+  target_mega_pixel="1.4"
 fi
 echo "[$LOG_TS] 🖼️  Using target megapixel: $target_mega_pixel (VRAM: ${vram_mb:-unknown} MiB)"
 
