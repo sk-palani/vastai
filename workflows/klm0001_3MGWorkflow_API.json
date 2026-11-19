@@ -354,35 +354,6 @@
       "ver": "0.45.2"
     }
   },
-  "1001": {
-    "inputs": {
-      "filename_prefix": "2026-11-19/km_202611190321_160110258833520",
-      "format": "png",
-      "save_metadata": true,
-      "exact_name": "",
-      "on_existing": "overwrite",
-      "output_dir": "",
-      "caption": "",
-      "name_counter": false,
-      "name_date": false,
-      "name_time": false,
-      "name_size": false,
-      "name_batch": false,
-      "preview": false,
-      "step_preview": false,
-      "autosave": true,
-      "images": [
-        "1050:918",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_SaveImage",
-    "_meta": {
-      "title": "Save Image 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.17.0"
-    }
-  },
   "1002": {
     "inputs": {
       "image_a": [
@@ -615,40 +586,11 @@
       "ver": "0.45.2"
     }
   },
-  "1029": {
-    "inputs": {
-      "filename_prefix": "2026-11-19/km_202611190321_160110258833520",
-      "format": "png",
-      "save_metadata": true,
-      "exact_name": "",
-      "on_existing": "overwrite",
-      "output_dir": "",
-      "caption": "",
-      "name_counter": false,
-      "name_date": false,
-      "name_time": false,
-      "name_size": false,
-      "name_batch": false,
-      "preview": false,
-      "step_preview": false,
-      "autosave": true,
-      "images": [
-        "1047:879",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_SaveImage",
-    "_meta": {
-      "title": "Save Image 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.17.0"
-    }
-  },
   "1030": {
     "inputs": {
       "image_a": [
-        "1029",
-        1
+        "1047:879",
+        0
       ],
       "image_b": [
         "1253",
@@ -1288,7 +1230,7 @@
   "1116": {
     "inputs": {
       "any_02": [
-        "1097",
+        "1280",
         0
       ]
     },
@@ -1513,7 +1455,7 @@
       "color_temperature": 0,
       "tint": -0.05,
       "atmosphere_enabled": true,
-      "haze_strength": 0.08,
+      "haze_strength": 0,
       "lift_blacks": 0,
       "depth_offset": 0,
       "f_stop": "Manual",
@@ -1634,35 +1576,6 @@
       "ver": "0.44.2"
     }
   },
-  "1139": {
-    "inputs": {
-      "filename_prefix": "2026-11-19/km_202611190321_160110258833520",
-      "format": "png",
-      "save_metadata": true,
-      "exact_name": "",
-      "on_existing": "overwrite",
-      "output_dir": "",
-      "caption": "",
-      "name_counter": false,
-      "name_date": false,
-      "name_time": false,
-      "name_size": false,
-      "name_batch": false,
-      "preview": false,
-      "step_preview": false,
-      "autosave": true,
-      "images": [
-        "1209",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_SaveImage",
-    "_meta": {
-      "title": "Save Image 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.17.0"
-    }
-  },
   "1140": {
     "inputs": {
       "output": "depth",
@@ -1724,7 +1637,7 @@
   },
   "1150": {
     "inputs": {
-      "expression": "a*0.35",
+      "expression": "a*0.3",
       "a": [
         "949",
         0
@@ -1984,7 +1897,7 @@
       "ordering_mode": "random",
       "include_subdirectories": "yes",
       "index": 0,
-      "seed": 165701303460982
+      "seed": 572624605202762
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -1995,7 +1908,7 @@
   },
   "1253": {
     "inputs": {
-      "megapixel": "1.8",
+      "megapixel": "1.2",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -2032,12 +1945,231 @@
     "inputs": {
       "solver_type": "ER-SDE",
       "max_stage": 3,
-      "eta": 1,
+      "eta": 0.95,
       "s_noise": 1.05
     },
     "class_type": "SamplerER_SDE",
     "_meta": {
       "title": "SamplerER_SDE",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.0"
+    }
+  },
+  "1262": {
+    "inputs": {
+      "file_prefix": "/km_",
+      "time_format": "%Y-%m-%d-%H%M%S",
+      "output_folder": "%Y-%m-%d",
+      "filetype": ""
+    },
+    "class_type": "FilePathCreator",
+    "_meta": {
+      "title": "File Path Creator",
+      "cnr_id": "comfyui-filepathcreator",
+      "ver": "1.0.2"
+    }
+  },
+  "1263": {
+    "inputs": {
+      "number": [
+        "933",
+        0
+      ]
+    },
+    "class_type": "Number to String",
+    "_meta": {
+      "title": "Number to String",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1264": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": true,
+      "text_a": [
+        "1267",
+        0
+      ],
+      "text_b": [
+        "1262",
+        0
+      ],
+      "text_c": [
+        "1263",
+        0
+      ],
+      "text_d": "",
+      "text_e": "",
+      "text_f": "",
+      "text_g": "",
+      "text_h": "",
+      "text_i": "",
+      "text_j": "",
+      "text_k": "",
+      "text_l": "",
+      "text_m": "",
+      "text_n": "",
+      "text_o": "",
+      "text_p": "",
+      "text_q": "",
+      "text_r": "",
+      "text_s": "",
+      "text_t": "",
+      "text_u": "",
+      "text_v": "",
+      "text_w": "",
+      "text_x": ""
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1266": {
+    "inputs": {
+      "text": [
+        "1264",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.26.2"
+    }
+  },
+  "1267": {
+    "inputs": {
+      "file_prefix": "",
+      "time_format": "%Y-%m-%d",
+      "output_folder": "",
+      "filetype": ""
+    },
+    "class_type": "FilePathCreator",
+    "_meta": {
+      "title": "File Path Creator",
+      "cnr_id": "comfyui-filepathcreator",
+      "ver": "1.0.2"
+    }
+  },
+  "1274": {
+    "inputs": {
+      "root": "output",
+      "filename_prefix": [
+        "1264",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": false,
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": false,
+      "lossless_webp": false,
+      "overwrite_mode": true,
+      "show_history": false,
+      "show_history_by_prefix": false,
+      "embed_workflow": true,
+      "show_previews": false,
+      "bit_depth": "8-bit",
+      "images": [
+        "1209",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1277": {
+    "inputs": {
+      "root": "output",
+      "filename_prefix": [
+        "1264",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": false,
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": false,
+      "lossless_webp": false,
+      "overwrite_mode": true,
+      "show_history": false,
+      "show_history_by_prefix": false,
+      "embed_workflow": true,
+      "show_previews": false,
+      "bit_depth": "8-bit",
+      "images": [
+        "1050:918",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1278": {
+    "inputs": {
+      "root": "output",
+      "filename_prefix": [
+        "1264",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": false,
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": false,
+      "lossless_webp": false,
+      "overwrite_mode": true,
+      "show_history": false,
+      "show_history_by_prefix": false,
+      "embed_workflow": true,
+      "show_previews": false,
+      "bit_depth": "8-bit",
+      "images": [
+        "1047:879",
+        0
+      ],
+      "captions": [
+        "1280",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1280": {
+    "inputs": {
+      "string": [
+        "1097",
+        0
+      ],
+      "mode": "Both"
+    },
+    "class_type": "StringTrim",
+    "_meta": {
+      "title": "Trim Text",
       "cnr_id": "comfy-core",
       "ver": "0.45.0"
     }
@@ -2156,7 +2288,7 @@
       "color_temperature": -0.1,
       "tint": -0.05,
       "atmosphere_enabled": true,
-      "haze_strength": 0.1,
+      "haze_strength": 0,
       "lift_blacks": 0.09999999999999999,
       "depth_offset": 0,
       "f_stop": "Manual",
