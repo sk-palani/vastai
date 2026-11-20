@@ -357,7 +357,7 @@
   "1002": {
     "inputs": {
       "image_a": [
-        "1050:918",
+        "1293",
         0
       ],
       "image_b": [
@@ -793,7 +793,7 @@
   },
   "1071": {
     "inputs": {
-      "value": true
+      "value": false
     },
     "class_type": "PrimitiveBoolean",
     "_meta": {
@@ -919,7 +919,7 @@
   "1090": {
     "inputs": {
       "text": [
-        "1097",
+        "1297",
         0
       ]
     },
@@ -956,10 +956,7 @@
         0
       ],
       "find": "{{TRIGGER_WORDS}}",
-      "replace": [
-        "1055",
-        0
-      ]
+      "replace": ""
     },
     "class_type": "StringReplace",
     "_meta": {
@@ -1077,7 +1074,7 @@
   },
   "1108": {
     "inputs": {
-      "text": "{{PROMPT}}  "
+      "text": "{{PROMPT}}  \n{{KREA_TRIGGER_WORDS}}"
     },
     "class_type": "AUSBOSS_NODES_Text",
     "_meta": {
@@ -1108,7 +1105,7 @@
   "1116": {
     "inputs": {
       "any_02": [
-        "1280",
+        "1297",
         0
       ]
     },
@@ -1351,20 +1348,6 @@
       "ver": "2.22.0"
     }
   },
-  "1138": {
-    "inputs": {
-      "source": [
-        "958",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text",
-      "cnr_id": "comfy-core",
-      "ver": "0.44.2"
-    }
-  },
   "1140": {
     "inputs": {
       "output": "depth",
@@ -1463,7 +1446,7 @@
   "1166": {
     "inputs": {
       "any_01": [
-        "1050:918",
+        "1293",
         0
       ],
       "any_02": [
@@ -1504,6 +1487,250 @@
       "ver": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e"
     }
   },
+  "1183": {
+    "inputs": {
+      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":0.8,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"dramatic_dark_lighting.safetensors\",\"strength\":0.05,\"strength_clip\":0,\"enabled\":false,\"triggers\":\"Make the lighting dramatic and slightly dark\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"\"}]",
+      "trigger_separator": ", ",
+      "on_missing": "error",
+      "model": [
+        "927",
+        0
+      ],
+      "clip": [
+        "928",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_LoraLoader",
+    "_meta": {
+      "title": "Klein_UpscaleLoRA Loader 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1186": {
+    "inputs": {
+      "text": "restore the image quality, remove any compression artefacts,   enrich the original with new intricate detail in all textures and surfaces createing a professional photorealistic photograph with natral lighting and skin texture of v1dhya5\nImprove clarity and realistic surface detail while maintaining natural lighting, believable reflections and the original artistic or photographic style.\n",
+      "clip": [
+        "1183",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP Text Encode (Positive Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1187": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1249",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP Text Encode ( Negative Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.9.1"
+    }
+  },
+  "1189": {
+    "inputs": {
+      "conditioning": [
+        "1188:1175",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1191": {
+    "inputs": {
+      "target_mode": "megapixels",
+      "width": 896,
+      "height": 1192,
+      "edge_length": 1024,
+      "megapixels": [
+        "952",
+        0
+      ],
+      "scale_factor": 1.6,
+      "keep_proportion": "fit",
+      "fill_color": "#000000",
+      "divisible_by": 16,
+      "interpolation": "lanczos",
+      "image": [
+        "1209",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ImageResize",
+    "_meta": {
+      "title": "Image Resize 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.0"
+    }
+  },
+  "1192": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1193": {
+    "inputs": {
+      "noise_seed": [
+        "933",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Klein_RandomNoise",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1194": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "1183",
+        0
+      ],
+      "positive": [
+        "1221",
+        0
+      ],
+      "negative": [
+        "1189",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG Guider",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1195": {
+    "inputs": {
+      "steps": 4,
+      "width": [
+        "1191",
+        2
+      ],
+      "height": [
+        "1191",
+        3
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1196": {
+    "inputs": {
+      "width": [
+        "1191",
+        2
+      ],
+      "height": [
+        "1191",
+        3
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1197": {
+    "inputs": {
+      "noise": [
+        "1193",
+        0
+      ],
+      "guider": [
+        "1194",
+        0
+      ],
+      "sampler": [
+        "1192",
+        0
+      ],
+      "sigmas": [
+        "1195",
+        0
+      ],
+      "latent_image": [
+        "1196",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1198": {
+    "inputs": {
+      "samples": [
+        "1197",
+        0
+      ],
+      "vae": [
+        "926",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Klein_VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1204": {
+    "inputs": {
+      "image_a": [
+        "1232",
+        0
+      ],
+      "image_b": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_Compare",
+    "_meta": {
+      "title": "Image Compare A/B 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.18.1"
+    }
+  },
   "1207": {
     "inputs": {
       "flip_method": "y-axis: horizontally",
@@ -1532,6 +1759,29 @@
       "title": "Flip Image",
       "cnr_id": "comfy-core",
       "ver": "0.45.3"
+    }
+  },
+  "1221": {
+    "inputs": {
+      "magnitude": 0.5,
+      "contrast": 0.1,
+      "normalize_strength": 0.1,
+      "preserve_original": 1,
+      "preserve_mode": "hybrid",
+      "edit_text_weight": 1,
+      "active_end_override": 0,
+      "skip_bos": true,
+      "debug": false,
+      "conditioning": [
+        "1188:1177",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinConditioningEnhancer",
+    "_meta": {
+      "title": "Klein Conditioning Enhancer",
+      "cnr_id": "flux2klein-conditioning-toolkit",
+      "ver": "0.1.1"
     }
   },
   "1222": {
@@ -1582,7 +1832,7 @@
   "1225": {
     "inputs": {
       "text": [
-        "1224",
+        "1296",
         0
       ]
     },
@@ -1591,6 +1841,28 @@
       "title": "Show Text 🆎",
       "cnr_id": "ausboss-nodes",
       "ver": "2.24.0"
+    }
+  },
+  "1232": {
+    "inputs": {
+      "strength": 0.6,
+      "method": "lab",
+      "invert_mask": false,
+      "reference_mode": "reference",
+      "image": [
+        "1200:1178",
+        0
+      ],
+      "reference": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ColorMatch",
+    "_meta": {
+      "title": "Color Match 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "9cc91ffba8e76b3e8a4505bea6c7c72d7a8856a2"
     }
   },
   "1240": {
@@ -1605,6 +1877,24 @@
       "title": "Preview Image",
       "cnr_id": "comfy-core",
       "ver": "0.45.3"
+    }
+  },
+  "1242": {
+    "inputs": {
+      "image_a": [
+        "1232",
+        0
+      ],
+      "image_b": [
+        "1198",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_Compare",
+    "_meta": {
+      "title": "Image Compare A/B 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.18.1"
     }
   },
   "1245": {
@@ -1644,7 +1934,7 @@
   },
   "1250": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1686,7 +1976,7 @@
       "ordering_mode": "random",
       "include_subdirectories": "yes",
       "index": 0,
-      "seed": -831129456832531
+      "seed": -1023887457554311
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -1886,7 +2176,7 @@
       "show_previews": false,
       "bit_depth": "8-bit",
       "images": [
-        "1050:918",
+        "1293",
         0
       ]
     },
@@ -1923,7 +2213,7 @@
         0
       ],
       "captions": [
-        "1280",
+        "1302",
         0
       ]
     },
@@ -1932,21 +2222,6 @@
       "title": "Image Save",
       "cnr_id": "was-node-suite-comfyui",
       "ver": "3.13.0"
-    }
-  },
-  "1280": {
-    "inputs": {
-      "string": [
-        "1097",
-        0
-      ],
-      "mode": "Both"
-    },
-    "class_type": "StringTrim",
-    "_meta": {
-      "title": "Trim Text",
-      "cnr_id": "comfy-core",
-      "ver": "0.45.0"
     }
   },
   "1283": {
@@ -2053,7 +2328,7 @@
   "1289": {
     "inputs": {
       "prompt": [
-        "1109",
+        "1308",
         0
       ],
       "negative_prompt": [
@@ -2092,6 +2367,145 @@
       "title": "Replace Text",
       "cnr_id": "comfy-core",
       "ver": "0.45.0"
+    }
+  },
+  "1292": {
+    "inputs": {
+      "brightness": 1,
+      "contrast": 1,
+      "saturation": 0.04,
+      "image": [
+        "1050:918",
+        0
+      ]
+    },
+    "class_type": "LayerColor: Brightness & Contrast",
+    "_meta": {
+      "title": "LayerColor: Brightness & Contrast",
+      "cnr_id": "comfyui_layerstyle",
+      "ver": "2.0.43"
+    }
+  },
+  "1293": {
+    "inputs": {
+      "switch": [
+        "1296",
+        0
+      ],
+      "on_false": [
+        "1292",
+        0
+      ],
+      "on_true": [
+        "1050:918",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Sketch / Photo Switch",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1296": {
+    "inputs": {
+      "boolean": [
+        "1224",
+        0
+      ]
+    },
+    "class_type": "Logic NOT",
+    "_meta": {
+      "title": "Logic NOT",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1297": {
+    "inputs": {
+      "text": [
+        "1097",
+        0
+      ],
+      "case": "keep",
+      "whitespace": true,
+      "line_breaks": "one line",
+      "punctuation": true,
+      "ending": "keep",
+      "quotes": true
+    },
+    "class_type": "WASTextCleanup",
+    "_meta": {
+      "title": "Text Cleanup",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1302": {
+    "inputs": {
+      "value": [
+        "1297",
+        0
+      ]
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.0"
+    }
+  },
+  "1306": {
+    "inputs": {
+      "root": "output",
+      "filename_prefix": [
+        "1264",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": false,
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": false,
+      "lossless_webp": false,
+      "overwrite_mode": true,
+      "show_history": false,
+      "show_history_by_prefix": false,
+      "embed_workflow": true,
+      "show_previews": false,
+      "bit_depth": "8-bit",
+      "images": [
+        "1232",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1308": {
+    "inputs": {
+      "string": [
+        "1109",
+        0
+      ],
+      "find": "{{KREA_TRIGGER_WORDS}}",
+      "replace": [
+        "1055",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
     }
   },
   "1020:857": {
@@ -2192,6 +2606,60 @@
       ],
       "latent": [
         "992:812",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1188:1175": {
+    "inputs": {
+      "conditioning": [
+        "1187",
+        0
+      ],
+      "latent": [
+        "1188:1176",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1188:1176": {
+    "inputs": {
+      "pixels": [
+        "1191",
+        0
+      ],
+      "vae": [
+        "926",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1188:1177": {
+    "inputs": {
+      "conditioning": [
+        "1186",
+        0
+      ],
+      "latent": [
+        "1188:1176",
         0
       ]
     },
@@ -2374,6 +2842,97 @@
       "output": "depth",
       "moge_geometry": [
         "1047:875",
+        0
+      ]
+    },
+    "class_type": "MoGeRender",
+    "_meta": {
+      "title": "Render MoGe Geometry",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1200:1178": {
+    "inputs": {
+      "lens_distortion": -0.01,
+      "color_temperature": -0.2,
+      "tint": -0.05,
+      "atmosphere_enabled": true,
+      "haze_strength": 0.39999999999999997,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "Manual",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0,
+      "promist_strength": 0.01,
+      "halation_strength": 0.1,
+      "chromatic_aberration": 0,
+      "vignette_intensity": 0.14,
+      "grain_power": 0.014,
+      "monochrome_grain": true,
+      "highlight_rolloff": 0.05,
+      "image": [
+        "1198",
+        0
+      ],
+      "depth_map": [
+        "1200:1180",
+        0
+      ]
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics",
+      "aux_id": "skatardude10/ComfyUI-Optical-Realism",
+      "ver": "8d6c1e0ab1f45851c9d7bd850f7c9023238e338d"
+    }
+  },
+  "1200:1179": {
+    "inputs": {
+      "resolution_level": 9,
+      "fov_x_degrees": 0,
+      "batch_size": 4,
+      "force_projection": true,
+      "apply_mask": true,
+      "refine_steps": 3,
+      "moge_model": [
+        "973",
+        0
+      ],
+      "image": [
+        "1198",
+        0
+      ]
+    },
+    "class_type": "MoGeInference",
+    "_meta": {
+      "title": "Klein_Run MoGe Inference",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1200:1180": {
+    "inputs": {
+      "image": [
+        "1200:1181",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors",
+      "cnr_id": "comfy-core",
+      "ver": "0.19.5"
+    }
+  },
+  "1200:1181": {
+    "inputs": {
+      "output": "depth",
+      "moge_geometry": [
+        "1200:1179",
         0
       ]
     },
