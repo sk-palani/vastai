@@ -1934,7 +1934,7 @@
   },
   "1250": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"}]",
+      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"inline-skin-lora, detailed skin texture\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"},{\"id\":\"rmwog0t924808\",\"name\":\"brightness_krea2_loraholic.safetensors\",\"strength\":4,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
