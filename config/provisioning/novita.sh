@@ -840,7 +840,7 @@ if [[ ! -f "${WORKSPACE}/.noprovisioning" ]]; then
 fi
 
 
-${WORKSPACE}/environments/python/comfyui/bin/python -m pip install -r "${WORKSPACE}/ComfyUI/requirements.txt"
+"${COMFYUI_VENV_PYTHON}" -m pip install -r "${COMFYUI_DIR}/requirements.txt"
 #opencv-contrib-python
 provisioning_get_default_workflow
 

@@ -1,0 +1,2387 @@
+{
+  "926": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "927": {
+    "inputs": {
+      "unet_name": "Flux2-Klein-9B-True-v2-fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.3.73"
+    }
+  },
+  "928": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP",
+      "cnr_id": "comfy-core",
+      "ver": "0.3.73"
+    }
+  },
+  "933": {
+    "inputs": {
+      "seed": 160110258833520
+    },
+    "class_type": "AUSBOSS_NODES_Seed",
+    "_meta": {
+      "title": "SeedGenerator",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "934": {
+    "inputs": {
+      "text": [
+        "939",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "939": {
+    "inputs": {
+      "separator": ",",
+      "text_1": [
+        "1249",
+        2
+      ],
+      "text_2": [
+        "940",
+        0
+      ]
+    },
+    "class_type": "TextConcatenate",
+    "_meta": {
+      "title": "TextConcatenate",
+      "cnr_id": "RES4LYF",
+      "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
+    }
+  },
+  "940": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.4"
+    }
+  },
+  "949": {
+    "inputs": {
+      "value": 0.75
+    },
+    "class_type": "AUSBOSS_NODES_Float",
+    "_meta": {
+      "title": "Default :: 0.64 or 0.78",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.23.0"
+    }
+  },
+  "952": {
+    "inputs": {
+      "value": 2
+    },
+    "class_type": "AUSBOSS_NODES_Float",
+    "_meta": {
+      "title": "Default :: 1.5",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.23.0"
+    }
+  },
+  "958": {
+    "inputs": {
+      "expression": "(1-a)*0.66",
+      "a": [
+        "949",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_MathExpression",
+    "_meta": {
+      "title": "Expression 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.23.0"
+    }
+  },
+  "960": {
+    "inputs": {
+      "source": [
+        "958",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "973": {
+    "inputs": {
+      "model_name": "moge_3_vitg_fp16.safetensors"
+    },
+    "class_type": "LoadMoGeModel",
+    "_meta": {
+      "title": "Load MoGe Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "989": {
+    "inputs": {
+      "text": "restore the image quality, remove any compression artefacts, remove any haze and soft edges, enrich the original with new intricate detail in all textures and surfaces createing a professional photorealistic photograph with natral lighting and skin textur of v1dhya5\n\nPreserve natural facial shadows, highlights, subtle pigmentation, realistic skin texture and fine pores. Avoid excessive lightening, whitening, bleaching, artificial golden tones or uniformly painted skin. The face and body should appear naturally consistent under the same lighting.\n\nNatural Rich dark-brown South Indian complexion with subtle warm-neutral undertones. Rich, naturally pigmented skin with realistic variations in tone, delicate facial pigmentation and authentic skin texture. The complexion remains consistent across the face, neck, shoulders, arms and other exposed skin, with natural variations caused by lighting and shadows. No artificial golden glow, orange cast, excessive tanning or skin whitening.\n\n**OUTFIT AND ACCESSORY DETAIL ENHANCEMENT**\n\nEnhance and restore the fine details of the existing clothing, fabric and accessories. Recover stitching, fabric weave, pleats, folds and realistic material textures. Improve the definition and craftsmanship of the original garment without changing its design.\n\nPreserve the exact original outfit, colours, patterns, transparency, draping, garment construction and accessory designs. Retain the original number, placement, shape and proportions of all jewellery. Do not add, remove, replace or redesign anything.\n\n**JEWELLERY AND ACCESSORY PRESERVATION**\n\nPreserve only the jewellery and accessories that are clearly visible in the original image. Maintain their exact number, design, shape, size, colour, material, placement and proportions.\n\nImprove clarity and definition only where genuine details already exist and are visible. Retain the original design without embellishment or reinterpretation.\n\nDo not add new jewellery, gemstones, chains, pendants, earrings, necklaces, bangles or decorative elements. Do not duplicate, replace, enlarge, redesign or invent accessories. Do not complete or infer partially obscured jewellery. If an accessory is absent or not clearly visible, leave it absent.\n\nThe original image is the authoritative reference for all jewellery and accessories..\n\n\nImprove clarity and realistic surface detail while maintaining natural lighting, believable reflections and the original artistic or photographic style.\n",
+      "clip": [
+        "1006",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP Text Encode (Positive Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "990": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "1249",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP Text Encode ( Negative Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.9.1"
+    }
+  },
+  "991": {
+    "inputs": {
+      "target_mode": "scale_factor",
+      "width": 896,
+      "height": 1192,
+      "edge_length": 1024,
+      "megapixels": 2.4,
+      "scale_factor": 1.3,
+      "keep_proportion": "fit",
+      "fill_color": "#000000",
+      "divisible_by": 16,
+      "interpolation": "lanczos",
+      "image": [
+        "1047:879",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ImageResize",
+    "_meta": {
+      "title": "Image Resize 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.0"
+    }
+  },
+  "993": {
+    "inputs": {
+      "conditioning": [
+        "992:811",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "994": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "995": {
+    "inputs": {
+      "noise_seed": [
+        "933",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Klein_RandomNoise",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "996": {
+    "inputs": {
+      "width": [
+        "991",
+        2
+      ],
+      "height": [
+        "991",
+        3
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "997": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "1006",
+        0
+      ],
+      "positive": [
+        "992:813",
+        0
+      ],
+      "negative": [
+        "993",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFG Guider",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "998": {
+    "inputs": {
+      "steps": 6,
+      "width": [
+        "991",
+        2
+      ],
+      "height": [
+        "991",
+        3
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "999": {
+    "inputs": {
+      "noise": [
+        "995",
+        0
+      ],
+      "guider": [
+        "997",
+        0
+      ],
+      "sampler": [
+        "994",
+        0
+      ],
+      "sigmas": [
+        "998",
+        0
+      ],
+      "latent_image": [
+        "996",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1000": {
+    "inputs": {
+      "samples": [
+        "999",
+        0
+      ],
+      "vae": [
+        "926",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Klein_VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1002": {
+    "inputs": {
+      "image_a": [
+        "1050:918",
+        0
+      ],
+      "image_b": [
+        "1047:879",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_Compare",
+    "_meta": {
+      "title": "Image Compare A/B 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.18.1"
+    }
+  },
+  "1006": {
+    "inputs": {
+      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"dramatic_dark_lighting.safetensors\",\"strength\":0.05,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Make the lighting dramatic and slightly dark\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "trigger_separator": ", ",
+      "on_missing": "error",
+      "model": [
+        "927",
+        0
+      ],
+      "clip": [
+        "928",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_LoraLoader",
+    "_meta": {
+      "title": "Klein_UpscaleLoRA Loader 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1017": {
+    "inputs": {
+      "text": [
+        "1031",
+        0
+      ],
+      "clip": [
+        "928",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Klein_CLIP Text Encode (Positive Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1019": {
+    "inputs": {
+      "target_mode": "megapixels",
+      "width": 896,
+      "height": 1192,
+      "edge_length": 1024,
+      "megapixels": [
+        "952",
+        0
+      ],
+      "scale_factor": 0.5,
+      "keep_proportion": "fit",
+      "fill_color": "#000000",
+      "divisible_by": 16,
+      "interpolation": "lanczos",
+      "image": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ImageResize",
+    "_meta": {
+      "title": "Image Resize 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.0"
+    }
+  },
+  "1021": {
+    "inputs": {
+      "conditioning": [
+        "1020:857",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1022": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1023": {
+    "inputs": {
+      "noise_seed": [
+        "933",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "Klein_RandomNoise",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1024": {
+    "inputs": {
+      "width": [
+        "1019",
+        2
+      ],
+      "height": [
+        "1019",
+        3
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1025": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "1249",
+        0
+      ],
+      "positive": [
+        "1048",
+        0
+      ],
+      "negative": [
+        "1021",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "Klein_CFG Guider",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1026": {
+    "inputs": {
+      "steps": 6,
+      "width": [
+        "1019",
+        2
+      ],
+      "height": [
+        "1019",
+        3
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "Flux2Scheduler",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1027": {
+    "inputs": {
+      "noise": [
+        "1023",
+        0
+      ],
+      "guider": [
+        "1025",
+        0
+      ],
+      "sampler": [
+        "1022",
+        0
+      ],
+      "sigmas": [
+        "1026",
+        0
+      ],
+      "latent_image": [
+        "1024",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1028": {
+    "inputs": {
+      "samples": [
+        "1027",
+        0
+      ],
+      "vae": [
+        "926",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Klein_VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1030": {
+    "inputs": {
+      "image_a": [
+        "1047:879",
+        0
+      ],
+      "image_b": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_Compare",
+    "_meta": {
+      "title": "Image Compare A/B 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.18.1"
+    }
+  },
+  "1031": {
+    "inputs": {
+      "text": " \nChange  hair to natural deep black while retaining the existing highlights, hairstyle, individual strands and hair texture.\nAdd some freckles in the face.\n\nRecreate the subject to match v1dhyas body proportions\n\nPreserve the subject's exact original facial expression . The input image's expression and eye state take precedence over the character's learned appearance.\n\n\n\nRemove people other than the main subject. Reconstruct only the areas they occupied, continuing the surrounding environment naturally.\n\n{{TRIGGER_WORDS}}\n\n\nRemove unwanted letterboxing, black or white borders, empty margins and screenshot interface elements, including Android status bars, navigation bars, icons and system overlays. Naturally extend the existing background into these areas, matching surrounding colours, textures, lighting and visual details.\n\n\nRemove visible text overlays, lettering and typography from the foreground. Reconstruct only the affected areas while preserving nearby scenery and objects.\n\n \nOnly perform the explicitly requested modifications. Everything else, including the original background and surrounding scene, must remain visually faithful to the input image."
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.4"
+    }
+  },
+  "1034": {
+    "inputs": {
+      "magnitude": 1.2,
+      "contrast": 1.2,
+      "normalize_strength": 0.8,
+      "preserve_original": 0,
+      "preserve_mode": "hybrid",
+      "edit_text_weight": 1.2,
+      "active_end_override": 0,
+      "skip_bos": true,
+      "debug": false,
+      "conditioning": [
+        "1020:859",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinConditioningEnhancer",
+    "_meta": {
+      "title": "Klein Conditioning Enhancer",
+      "cnr_id": "flux2klein-conditioning-toolkit",
+      "ver": "0.1.1"
+    }
+  },
+  "1048": {
+    "inputs": {
+      "balance": 0.1,
+      "replace_mode": "channel_mean",
+      "skip_bos": true,
+      "active_end_override": 0,
+      "target_reference_index": -1,
+      "debug": false,
+      "conditioning": [
+        "1034",
+        0
+      ]
+    },
+    "class_type": "Flux2KleinPromptReferenceBalance",
+    "_meta": {
+      "title": "FLUX.2 Klein Prompt/Reference Balance",
+      "cnr_id": "flux2klein-conditioning-toolkit",
+      "ver": "0.1.1"
+    }
+  },
+  "1055": {
+    "inputs": {
+      "separator": ",",
+      "text_1": [
+        "1250",
+        2
+      ],
+      "text_2": [
+        "1056",
+        0
+      ]
+    },
+    "class_type": "TextConcatenate",
+    "_meta": {
+      "title": "TextConcatenate",
+      "cnr_id": "RES4LYF",
+      "ver": "56e44755d866c87ff9cb4b6608c8e42155db6ecc"
+    }
+  },
+  "1056": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.4"
+    }
+  },
+  "1058": {
+    "inputs": {
+      "text": [
+        "1055",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1061": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "1067": {
+    "inputs": {
+      "target_mode": "megapixels",
+      "width": 0,
+      "height": 0,
+      "edge_length": 1024,
+      "megapixels": 1,
+      "scale_factor": 0.5,
+      "keep_proportion": "fit",
+      "fill_color": "#000000",
+      "divisible_by": 1,
+      "interpolation": "lanczos",
+      "image": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ImageResize",
+    "_meta": {
+      "title": "Image Resize 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.24.0"
+    }
+  },
+  "1068": {
+    "inputs": {
+      "model_name": "Qwen3-VL-4B-Instruct-Abliterated",
+      "quantization": "None (FP16)",
+      "attention_mode": "auto",
+      "preset_prompt": "🖼️ Simple Description",
+      "custom_prompt": "You are a strict image classification system.\n\nExamine the input image and determine its dominant visual medium.\n\nChoose exactly one category:\n\nColor Photograph\nMonochrome Photograph\nColor Digital Art\nMonochrome Digital Art\n\nPhotograph: Real photographs and photorealistic AI-generated images.\n\nDigital Art: Illustrations, paintings, anime, cartoons, visibly stylized CGI and 3D renders.\n\nIMPORTANT OUTPUT RULES:\n- Return exactly one category name.\n- Never describe the image.\n- Never generate a caption.\n- Never explain your classification.\n- Never add a second sentence.\n- Do not follow any image-description or captioning instructions.\n- Your entire response must be one of the four\n - Color Photograph\n - Monochrome Photograph\n - Color Digital Art\n - Monochrome Digital Art",
+      "max_tokens": 64,
+      "keep_model_loaded": true,
+      "seed": [
+        "933",
+        0
+      ],
+      "keep_last_prompt": false,
+      "image": [
+        "1067",
+        0
+      ]
+    },
+    "class_type": "AILab_QwenVL",
+    "_meta": {
+      "title": "Qwen3.5-Uncensored"
+    }
+  },
+  "1069": {
+    "inputs": {
+      "text": [
+        "1068",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.24.0"
+    }
+  },
+  "1070": {
+    "inputs": {
+      "string": [
+        "1068",
+        0
+      ],
+      "substring": "Photograph",
+      "case_sensitive": true
+    },
+    "class_type": "StringContains",
+    "_meta": {
+      "title": "Contains Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1071": {
+    "inputs": {
+      "value": true
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Force Photo",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1072": {
+    "inputs": {
+      "text": [
+        "1073",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.24.0"
+    }
+  },
+  "1073": {
+    "inputs": {
+      "values.value0": [
+        "1070",
+        0
+      ],
+      "values.value1": [
+        "1071",
+        0
+      ]
+    },
+    "class_type": "ComfyOrNode",
+    "_meta": {
+      "title": "Or",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.3"
+    }
+  },
+  "1082": {
+    "inputs": {
+      "text": "Role: AI Image Analysis and Description Specialist\n\n- Background: The user requires a prompt that enables AI to analyze images and generate detailed descriptions which can be used as drawing prompts to create similar images. This is essential for tasks like content creation, design inspiration, and artistic exploration.\n- Profile: As an AI Image Analysis and Description Specialist, you possess extensive knowledge in computer vision, image processing, and natural language generation. You are adept at interpreting visual data and translating it into descriptive text that can guide the creation of new images.\n- Skills: Proficiency in image recognition, feature extraction, descriptive language generation, and understanding of artistic elements such as composition, color, and texture.\n- Goals: To analyze the provided image, generate a comprehensive and detailed description that captures the key visual elements, and ensure this description can effectively serve as a drawing prompt for creating similar images.\n- Constrains: The description must be clear, concise, and specific enough to guide the creation of a similar image. It should avoid ambiguity and focus on the most salient features of the image. The output should only contain the   prompt.\n- OutputFormat: A detailed text description of the image, highlighting key visual elements such as objects, colors, composition, and any unique features.\n- Workflow:\n  1. Analyze the image to identify key visual elements including objects, colors, and composition.\n  2. Generate a detailed description that captures the essence of the image, ensuring it is specific and actionable.\n  3. Refine the description to ensure clarity and conciseness, making it suitable for use as a drawing prompt.\n\n\nThe subject's name is \"v1dhya5\" \n\nFollow this exact structure. Do not add introductions, explanations, conclusions or additional headings.\n \n\"Photo of beautiful [AGE] years old v1dhya5 with Naturally lively face, alert eyes, expressive eyebrows, genuine emotional expression.\"\n\n[Write one cohesive recreation paragraph of approximately 460-520 words. Include the name v1dhya5 exactly once in this paragraph. Describe the most distinctive visible details, giving particular attention to clothing, accessories, facial expression, pose and composition. Preserve the original visual style.]\n\n-- END --\n\nOutput only the final prompt as one cohesive paragraph. Do not include explanations, analysis, headings, bullet points, JSON, Markdown, or reasoning.\n"
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1083": {
+    "inputs": {
+      "text": "cndamiph\n{{PROMPT}}\n{{TRIGGER_WORDS}}"
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.4"
+    }
+  },
+  "1085": {
+    "inputs": {
+      "switch": [
+        "1073",
+        0
+      ],
+      "on_false": [
+        "1087",
+        0
+      ],
+      "on_true": [
+        "1082",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Sketch / Photo Switch",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1086": {
+    "inputs": {
+      "model_name": "Qwen3-VL-4B-Instruct-Abliterated",
+      "quantization": "None (FP16)",
+      "attention_mode": "auto",
+      "preset_prompt": "🖼️ Ultra Detailed Description",
+      "custom_prompt": [
+        "1085",
+        0
+      ],
+      "max_tokens": 520,
+      "keep_model_loaded": true,
+      "seed": [
+        "933",
+        0
+      ],
+      "keep_last_prompt": false,
+      "image": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "AILab_QwenVL",
+    "_meta": {
+      "title": "Qwen3.5-Uncensored"
+    }
+  },
+  "1087": {
+    "inputs": {
+      "text": "You are an expert digital artwork analyst and image-to-image prompt engineer. Examine the supplied image and produce one accurate, detailed English paragraph describing the artwork for image generation.\n\nDescribe only visually observable details. Preserve the original artistic style, character appearance, composition, colours and rendering techniques. Never reinterpret artwork as photography or introduce realistic photographic characteristics.\n\nANALYSIS PRIORITIES:\n\n1. CHARACTER AND IDENTITY: Describe the primary character, distinctive visible features, hairstyle and overall appearance. If the subject is the character represented by the Vidhya LoRA, use the trigger word v1dhya5 exactly once. Preserve the recognisable character design.\n\n2. FACIAL EXPRESSION: Carefully describe eye shape and direction, eyebrow position, mouth shape, smile intensity, visible teeth and emotional expression. Capture subtle expressive details. Do not automatically impose a neutral expression or smile.\n\n3. CLOTHING: Describe each garment separately, including construction, layering, fit, colours, patterns, decorative elements, fabric appearance and distinctive details. For sarees, describe the pallu, pleats, borders and blouse separately.\n\n4. ACCESSORIES: Describe visible earrings, necklaces, bangles, bindis, hair ornaments and other accessories individually.\n\n5. POSE AND COMPOSITION: Describe head orientation, body posture, hand positions, action, framing, camera perspective and subject placement.\n\n6. ARTISTIC STYLE: Carefully identify the actual rendering style, such as anime, semi-realistic illustration, digital painting, stylised character art, concept art or 3D rendering. Describe visible linework, outlines, brushwork, edge treatment, cel shading, gradients, highlights, shadows, surface texture and colour blending. Do not impose an artistic style that is not present.\n\n7. COLOUR AND SKIN APPEARANCE: Preserve the original colour palette and visible complexion. Describe stylised skin colours as they appear rather than converting them into realistic photographic skin tones. Maintain colour consistency across all visible skin areas.\n\n8. BACKGROUND AND LIGHTING: Describe the environment, background elements, depth, atmosphere, light direction, highlights, shadows and colour relationships.\n\nOUTPUT RULES:\n\n- Write one cohesive English paragraph of approximately 120–180 words.\n- Include v1dhya5 exactly once when the subject is Vidhya.\n- Describe the artwork rather than explaining how to recreate it.\n- Preserve the original medium and artistic rendering.\n- Do not introduce photorealism, DSLR terminology, photographic skin texture or camera specifications unless genuinely depicted.\n- Do not invent hidden details, accessories or background objects.\n- Avoid generic quality slogans and unnecessary embellishments.\n- Do not include age or gender classifications.\n- Do not include headings, metadata, analysis or explanations.\n\nReturn only the final image-generation prompt."
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1090": {
+    "inputs": {
+      "text": [
+        "1097",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1091": {
+    "inputs": {
+      "string": [
+        "1083",
+        0
+      ],
+      "find": "{{PROMPT}}",
+      "replace": [
+        "1086",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1093": {
+    "inputs": {
+      "string": [
+        "1091",
+        0
+      ],
+      "find": "{{TRIGGER_WORDS}}",
+      "replace": [
+        "1055",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1094": {
+    "inputs": {
+      "text": "inconsistent skin tone, face and body colour mismatch, lighter face than body, darker face than body, pale face, excessively light neck, different complexion on arms and hands, patchy skin colour, artificial tanning, orange skin, reddish colour cast, grey or ashy skin, overexposed skin, excessive warm colour grading, golden skin glow, artificial beauty filter, plastic skin, waxy skin, excessive skin smoothing, unrealistic skin texture, artificial facial features, altered facial identity, CGI appearance, oversharpening, excessive HDR."
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.4"
+    }
+  },
+  "1095": {
+    "inputs": {
+      "string": [
+        "1093",
+        0
+      ],
+      "regex_pattern": "\\r?\\n",
+      "replace": " ",
+      "case_insensitive": true,
+      "multiline": false,
+      "dotall": false,
+      "count": 0
+    },
+    "class_type": "RegexReplace",
+    "_meta": {
+      "title": "Replace Text (Regex)",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1097": {
+    "inputs": {
+      "string": [
+        "1095",
+        0
+      ],
+      "regex_pattern": "décolletage",
+      "replace": " deep cleavage",
+      "case_insensitive": true,
+      "multiline": false,
+      "dotall": false,
+      "count": 0
+    },
+    "class_type": "RegexReplace",
+    "_meta": {
+      "title": "Replace Text (Regex)",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1104": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 16,
+      "image": [
+        "1207",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1105": {
+    "inputs": {
+      "resolution_level": 9,
+      "fov_x_degrees": 0,
+      "batch_size": 4,
+      "force_projection": true,
+      "apply_mask": true,
+      "refine_steps": 3,
+      "moge_model": [
+        "973",
+        0
+      ],
+      "image": [
+        "1207",
+        0
+      ]
+    },
+    "class_type": "MoGeInference",
+    "_meta": {
+      "title": "krea_Run MoGe Inference",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1106": {
+    "inputs": {
+      "output": "depth",
+      "moge_geometry": [
+        "1105",
+        0
+      ]
+    },
+    "class_type": "MoGeRender",
+    "_meta": {
+      "title": "Render MoGe Geometry",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1108": {
+    "inputs": {
+      "text": "{{PROMPT}}  "
+    },
+    "class_type": "AUSBOSS_NODES_Text",
+    "_meta": {
+      "title": "Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.4"
+    }
+  },
+  "1109": {
+    "inputs": {
+      "string": [
+        "1108",
+        0
+      ],
+      "find": "{{PROMPT}}",
+      "replace": [
+        "1116",
+        0
+      ]
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1116": {
+    "inputs": {
+      "any_02": [
+        "1280",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e"
+    }
+  },
+  "1123": {
+    "inputs": {
+      "resize_to_input": "false",
+      "width": [
+        "1127",
+        2
+      ],
+      "height": [
+        "1127",
+        3
+      ],
+      "mask_channel": "red",
+      "invert_mask": false,
+      "latent_type": "16_channels",
+      "interpolation": "lanczos",
+      "method": "fill / crop",
+      "image_1": [
+        "1127",
+        0
+      ],
+      "vae": [
+        "1061",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeAdvanced",
+    "_meta": {
+      "title": "krea_VAEEncodeAdvanced",
+      "cnr_id": "RES4LYF",
+      "ver": "419de2d7c78f415dde9aa352a7231820ebfc17a4"
+    }
+  },
+  "1124": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 64,
+      "samples": [
+        "1288",
+        0
+      ],
+      "vae": [
+        "1061",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "krea_VAE Decode (Tiled)",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "1125": {
+    "inputs": {
+      "resolution_level": 9,
+      "fov_x_degrees": 0,
+      "batch_size": 4,
+      "force_projection": true,
+      "apply_mask": true,
+      "refine_steps": 3,
+      "moge_model": [
+        "973",
+        0
+      ],
+      "image": [
+        "1124",
+        0
+      ]
+    },
+    "class_type": "MoGeInference",
+    "_meta": {
+      "title": "krea_Run MoGe Inference",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1126": {
+    "inputs": {
+      "images": [
+        "1124",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1127": {
+    "inputs": {
+      "target_mode": "megapixels",
+      "width": 896,
+      "height": 1192,
+      "edge_length": 1024,
+      "megapixels": [
+        "952",
+        0
+      ],
+      "scale_factor": 0.5,
+      "keep_proportion": "stretch",
+      "fill_color": "#000000",
+      "divisible_by": 16,
+      "interpolation": "lanczos",
+      "image": [
+        "1207",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ImageResize",
+    "_meta": {
+      "title": "Image Resize 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.20.0"
+    }
+  },
+  "1130": {
+    "inputs": {
+      "lens_distortion": -0.01,
+      "color_temperature": 0,
+      "tint": -0.05,
+      "atmosphere_enabled": true,
+      "haze_strength": 0,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "Manual",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0,
+      "promist_strength": 0.01,
+      "halation_strength": 0.1,
+      "chromatic_aberration": 0,
+      "vignette_intensity": 0.16,
+      "grain_power": 0.015,
+      "monochrome_grain": true,
+      "highlight_rolloff": 0.05,
+      "image": [
+        "1137",
+        0
+      ],
+      "depth_map": [
+        "1134",
+        0
+      ]
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics",
+      "aux_id": "skatardude10/ComfyUI-Optical-Realism",
+      "ver": "8d6c1e0ab1f45851c9d7bd850f7c9023238e338d"
+    }
+  },
+  "1132": {
+    "inputs": {
+      "lut_name": "Presetpro  - Kodacrome 64.cube",
+      "strength": 0.18,
+      "log": false,
+      "image": [
+        "1124",
+        0
+      ]
+    },
+    "class_type": "ProPostApplyLUT",
+    "_meta": {
+      "title": "ProPostApplyLUT 0.23",
+      "cnr_id": "comfyui-propost",
+      "ver": "df6a6d122498f57ad7195d58e07701a501c9dcb6"
+    }
+  },
+  "1134": {
+    "inputs": {
+      "image": [
+        "1140",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors",
+      "cnr_id": "comfy-core",
+      "ver": "0.19.5"
+    }
+  },
+  "1135": {
+    "inputs": {
+      "switch": [
+        "1073",
+        0
+      ],
+      "on_false": [
+        "1124",
+        0
+      ],
+      "on_true": [
+        "1130",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Sketch / Photo Switch",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1137": {
+    "inputs": {
+      "strength": 0.4,
+      "method": "rgb",
+      "invert_mask": false,
+      "reference_mode": "reference",
+      "image": [
+        "1145",
+        0
+      ],
+      "reference": [
+        "1207",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ColorMatch",
+    "_meta": {
+      "title": "Color Match 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.22.0"
+    }
+  },
+  "1138": {
+    "inputs": {
+      "source": [
+        "958",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1140": {
+    "inputs": {
+      "output": "depth",
+      "moge_geometry": [
+        "1125",
+        0
+      ]
+    },
+    "class_type": "MoGeRender",
+    "_meta": {
+      "title": "Render MoGe Geometry",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1142": {
+    "inputs": {},
+    "class_type": "AUSBOSS_NODES_RunTimer",
+    "_meta": {
+      "title": "Run Timer 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.13.0"
+    }
+  },
+  "1144": {
+    "inputs": {
+      "image_a": [
+        "1209",
+        0
+      ],
+      "image_b": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_Compare",
+    "_meta": {
+      "title": "Image Compare A/B 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.18.1"
+    }
+  },
+  "1145": {
+    "inputs": {
+      "sharpen_radius": 1,
+      "sigma": 0.33,
+      "alpha": 0.5,
+      "image": [
+        "1132",
+        0
+      ]
+    },
+    "class_type": "ImageSharpen",
+    "_meta": {
+      "title": "Sharpen Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.0"
+    }
+  },
+  "1150": {
+    "inputs": {
+      "expression": "a*0.3",
+      "a": [
+        "949",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_MathExpression",
+    "_meta": {
+      "title": "Expression 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.23.0"
+    }
+  },
+  "1152": {
+    "inputs": {
+      "image": "example.png",
+      "pad_left": 0,
+      "pad_top": 0,
+      "pad_right": 0,
+      "pad_bottom": 0,
+      "mode": "pillarbox blur",
+      "fill_color": "#808080",
+      "backdrop_blur": 0.5,
+      "feather": 0,
+      "canvas_multiple": 16,
+      "target_megapixels": 2
+    },
+    "class_type": "AUSBOSS_NODES_LoadImagePad",
+    "_meta": {
+      "title": "Load Image + Pad 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1166": {
+    "inputs": {
+      "any_01": [
+        "1050:918",
+        0
+      ],
+      "any_02": [
+        "1047:879",
+        0
+      ],
+      "any_03": [
+        "1253",
+        0
+      ],
+      "any_04": [
+        "1152",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e"
+    }
+  },
+  "1172": {
+    "inputs": {
+      "any_01": [
+        "1253",
+        0
+      ],
+      "any_02": [
+        "1152",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e"
+    }
+  },
+  "1207": {
+    "inputs": {
+      "flip_method": "y-axis: horizontally",
+      "image": [
+        "1166",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.3"
+    }
+  },
+  "1209": {
+    "inputs": {
+      "flip_method": "y-axis: horizontally",
+      "image": [
+        "1135",
+        0
+      ]
+    },
+    "class_type": "ImageFlip",
+    "_meta": {
+      "title": "Flip Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.3"
+    }
+  },
+  "1222": {
+    "inputs": {
+      "string": [
+        "1068",
+        0
+      ],
+      "substring": "Monochrome",
+      "case_sensitive": true
+    },
+    "class_type": "StringContains",
+    "_meta": {
+      "title": "Contains Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1223": {
+    "inputs": {
+      "value": false
+    },
+    "class_type": "PrimitiveBoolean",
+    "_meta": {
+      "title": "Force Photo",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
+    }
+  },
+  "1224": {
+    "inputs": {
+      "values.value0": [
+        "1222",
+        0
+      ],
+      "values.value1": [
+        "1223",
+        0
+      ]
+    },
+    "class_type": "ComfyOrNode",
+    "_meta": {
+      "title": "Or",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.3"
+    }
+  },
+  "1225": {
+    "inputs": {
+      "text": [
+        "1224",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.24.0"
+    }
+  },
+  "1240": {
+    "inputs": {
+      "images": [
+        "1253",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.3"
+    }
+  },
+  "1245": {
+    "inputs": {
+      "any_03": [
+        "1252",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)",
+      "cnr_id": "rgthree-comfy",
+      "ver": "bc48c6aaeca87bedbc14245d89f9bc6be37a630e"
+    }
+  },
+  "1249": {
+    "inputs": {
+      "loras": "[{\"id\":\"rmwmkjp6s1085\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkjxmo1087\",\"name\":\"Flux2-Klein-9B-consistency-V2.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkk3921090\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "trigger_separator": ", ",
+      "on_missing": "error",
+      "model": [
+        "927",
+        0
+      ],
+      "clip": [
+        "928",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_LoraLoader",
+    "_meta": {
+      "title": "LoRA Loader 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1250": {
+    "inputs": {
+      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "trigger_separator": ", ",
+      "on_missing": "error",
+      "model": [
+        "1284",
+        0
+      ],
+      "clip": [
+        "1283",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_LoraLoader",
+    "_meta": {
+      "title": "LoRA Loader 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.17.0"
+    }
+  },
+  "1251": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "928",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.0"
+    }
+  },
+  "1252": {
+    "inputs": {
+      "directory_1": "Inputs/Next/Best",
+      "directory_2": "Inputs/Next",
+      "directory_3": "Inputs/Downloaded",
+      "ordering_mode": "random",
+      "include_subdirectories": "yes",
+      "index": 0,
+      "seed": -831129456832531
+    },
+    "class_type": "Input_Image",
+    "_meta": {
+      "title": "Input Image",
+      "aux_id": "sk-palani/ComfyUI_Simpler",
+      "ver": "46dffa39633fd3d1dc85162649f4a568bf8c722e"
+    }
+  },
+  "1253": {
+    "inputs": {
+      "megapixel": "1.2",
+      "divisible_by": "8",
+      "mode": "pad",
+      "delta_percent": 0,
+      "image": [
+        "1245",
+        0
+      ]
+    },
+    "class_type": "Image_Preparations",
+    "_meta": {
+      "title": "Image Preparations 1.8",
+      "aux_id": "sk-palani/ComfyUI_Simpler",
+      "ver": "4cbf62eebddaf9b20943d0b8ffb335dc70bd2211"
+    }
+  },
+  "1254": {
+    "inputs": {
+      "OutputDirectory": "processing",
+      "OverwriteFile": true,
+      "FilePaths": [
+        "1252",
+        3
+      ]
+    },
+    "class_type": "JDCN_FileMover",
+    "_meta": {
+      "title": "JDCN_FileMover",
+      "cnr_id": "comfyui-jdcn",
+      "aux_id": "daxcay/ComfyUI-JDCN",
+      "ver": "1.0.2"
+    }
+  },
+  "1262": {
+    "inputs": {
+      "file_prefix": "/kk_",
+      "time_format": "%Y-%m-%d-%H%M%S",
+      "output_folder": "%Y-%m-%d",
+      "filetype": ""
+    },
+    "class_type": "FilePathCreator",
+    "_meta": {
+      "title": "File Path Creator",
+      "cnr_id": "comfyui-filepathcreator",
+      "ver": "1.0.2"
+    }
+  },
+  "1263": {
+    "inputs": {
+      "number": [
+        "933",
+        0
+      ]
+    },
+    "class_type": "Number to String",
+    "_meta": {
+      "title": "Number to String",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1264": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": true,
+      "text_a": [
+        "1267",
+        0
+      ],
+      "text_b": [
+        "1262",
+        0
+      ],
+      "text_c": [
+        "1263",
+        0
+      ],
+      "text_d": "",
+      "text_e": "",
+      "text_f": "",
+      "text_g": "",
+      "text_h": "",
+      "text_i": "",
+      "text_j": "",
+      "text_k": "",
+      "text_l": "",
+      "text_m": "",
+      "text_n": "",
+      "text_o": "",
+      "text_p": "",
+      "text_q": "",
+      "text_r": "",
+      "text_s": "",
+      "text_t": "",
+      "text_u": "",
+      "text_v": "",
+      "text_w": "",
+      "text_x": ""
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1266": {
+    "inputs": {
+      "text": [
+        "1264",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.26.2"
+    }
+  },
+  "1267": {
+    "inputs": {
+      "file_prefix": "",
+      "time_format": "%Y-%m-%d",
+      "output_folder": "",
+      "filetype": ""
+    },
+    "class_type": "FilePathCreator",
+    "_meta": {
+      "title": "File Path Creator",
+      "cnr_id": "comfyui-filepathcreator",
+      "ver": "1.0.2"
+    }
+  },
+  "1274": {
+    "inputs": {
+      "root": "output",
+      "filename_prefix": [
+        "1264",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": false,
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": false,
+      "lossless_webp": false,
+      "overwrite_mode": true,
+      "show_history": false,
+      "show_history_by_prefix": false,
+      "embed_workflow": true,
+      "show_previews": false,
+      "bit_depth": "8-bit",
+      "images": [
+        "1209",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1277": {
+    "inputs": {
+      "root": "output",
+      "filename_prefix": [
+        "1264",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": false,
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": false,
+      "lossless_webp": false,
+      "overwrite_mode": true,
+      "show_history": false,
+      "show_history_by_prefix": false,
+      "embed_workflow": true,
+      "show_previews": false,
+      "bit_depth": "8-bit",
+      "images": [
+        "1050:918",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1278": {
+    "inputs": {
+      "root": "output",
+      "filename_prefix": [
+        "1264",
+        0
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": false,
+      "extension": "png",
+      "dpi": 300,
+      "quality": 100,
+      "optimize_image": false,
+      "lossless_webp": false,
+      "overwrite_mode": true,
+      "show_history": false,
+      "show_history_by_prefix": false,
+      "embed_workflow": true,
+      "show_previews": false,
+      "bit_depth": "8-bit",
+      "images": [
+        "1047:879",
+        0
+      ],
+      "captions": [
+        "1280",
+        0
+      ]
+    },
+    "class_type": "Image Save",
+    "_meta": {
+      "title": "Image Save",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.13.0"
+    }
+  },
+  "1280": {
+    "inputs": {
+      "string": [
+        "1097",
+        0
+      ],
+      "mode": "Both"
+    },
+    "class_type": "StringTrim",
+    "_meta": {
+      "title": "Trim Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.0"
+    }
+  },
+  "1283": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "1284": {
+    "inputs": {
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.3.26"
+    }
+  },
+  "1287": {
+    "inputs": {
+      "seed": [
+        "933",
+        0
+      ],
+      "steps": 9,
+      "cfg": 1,
+      "sampler_name": "er_sde",
+      "scheduler": "simple",
+      "denoise": [
+        "1150",
+        0
+      ],
+      "model": [
+        "1250",
+        0
+      ],
+      "positive": [
+        "1289",
+        0
+      ],
+      "negative": [
+        "1289",
+        1
+      ],
+      "latent_image": [
+        "1123",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "krea_KSampler",
+      "cnr_id": "comfy-core",
+      "ver": "0.25.0"
+    }
+  },
+  "1288": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": [
+        "933",
+        0
+      ],
+      "steps": 9,
+      "cfg": 1,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "simple",
+      "start_at_step": 5,
+      "end_at_step": 999,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "1250",
+        0
+      ],
+      "positive": [
+        "1289",
+        0
+      ],
+      "negative": [
+        "1289",
+        1
+      ],
+      "latent_image": [
+        "1287",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced",
+    "_meta": {
+      "title": "krea_KSampler (Advanced)",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "1289": {
+    "inputs": {
+      "prompt": [
+        "1109",
+        0
+      ],
+      "negative_prompt": [
+        "1094",
+        0
+      ],
+      "vlm_reference": false,
+      "clip": [
+        "1250",
+        1
+      ],
+      "vae": [
+        "1061",
+        0
+      ],
+      "reference": [
+        "1207",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_Krea2Encode",
+    "_meta": {
+      "title": "krea_ 2 Encode 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.26.2"
+    }
+  },
+  "1290": {
+    "inputs": {
+      "string": "",
+      "find": "",
+      "replace": ""
+    },
+    "class_type": "StringReplace",
+    "_meta": {
+      "title": "Replace Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.0"
+    }
+  },
+  "1020:857": {
+    "inputs": {
+      "conditioning": [
+        "1251",
+        0
+      ],
+      "latent": [
+        "1020:858",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1020:858": {
+    "inputs": {
+      "pixels": [
+        "1019",
+        0
+      ],
+      "vae": [
+        "926",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1020:859": {
+    "inputs": {
+      "conditioning": [
+        "1017",
+        0
+      ],
+      "latent": [
+        "1020:858",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "992:811": {
+    "inputs": {
+      "conditioning": [
+        "990",
+        0
+      ],
+      "latent": [
+        "992:812",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "992:812": {
+    "inputs": {
+      "pixels": [
+        "991",
+        0
+      ],
+      "vae": [
+        "926",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "992:813": {
+    "inputs": {
+      "conditioning": [
+        "989",
+        0
+      ],
+      "latent": [
+        "992:812",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent",
+      "cnr_id": "comfy-core",
+      "ver": "0.8.2"
+    }
+  },
+  "1050:918": {
+    "inputs": {
+      "lens_distortion": -0.01,
+      "color_temperature": -0.1,
+      "tint": -0.05,
+      "atmosphere_enabled": true,
+      "haze_strength": 0,
+      "lift_blacks": 0.09999999999999999,
+      "depth_offset": 0,
+      "f_stop": "Manual",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0,
+      "promist_strength": 0.01,
+      "halation_strength": 0.1,
+      "chromatic_aberration": 0,
+      "vignette_intensity": 0.21,
+      "grain_power": 0.021,
+      "monochrome_grain": true,
+      "highlight_rolloff": 0.05,
+      "image": [
+        "1000",
+        0
+      ],
+      "depth_map": [
+        "1050:920",
+        0
+      ]
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics",
+      "aux_id": "skatardude10/ComfyUI-Optical-Realism",
+      "ver": "8d6c1e0ab1f45851c9d7bd850f7c9023238e338d"
+    }
+  },
+  "1050:919": {
+    "inputs": {
+      "resolution_level": 9,
+      "fov_x_degrees": 0,
+      "batch_size": 4,
+      "force_projection": true,
+      "apply_mask": true,
+      "refine_steps": 3,
+      "moge_model": [
+        "973",
+        0
+      ],
+      "image": [
+        "1000",
+        0
+      ]
+    },
+    "class_type": "MoGeInference",
+    "_meta": {
+      "title": "Klein_Run MoGe Inference",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1050:920": {
+    "inputs": {
+      "image": [
+        "1050:921",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors",
+      "cnr_id": "comfy-core",
+      "ver": "0.19.5"
+    }
+  },
+  "1050:921": {
+    "inputs": {
+      "output": "depth",
+      "moge_geometry": [
+        "1050:919",
+        0
+      ]
+    },
+    "class_type": "MoGeRender",
+    "_meta": {
+      "title": "Render MoGe Geometry",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1047:879": {
+    "inputs": {
+      "lens_distortion": -0.01,
+      "color_temperature": -0.1,
+      "tint": -0.05,
+      "atmosphere_enabled": true,
+      "haze_strength": 0,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "Manual",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0,
+      "promist_strength": 0.01,
+      "halation_strength": 0.1,
+      "chromatic_aberration": 0,
+      "vignette_intensity": 0.21,
+      "grain_power": 0.021,
+      "monochrome_grain": false,
+      "highlight_rolloff": 0.05,
+      "image": [
+        "1028",
+        0
+      ],
+      "depth_map": [
+        "1047:876",
+        0
+      ]
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics",
+      "aux_id": "skatardude10/ComfyUI-Optical-Realism",
+      "ver": "8d6c1e0ab1f45851c9d7bd850f7c9023238e338d"
+    }
+  },
+  "1047:875": {
+    "inputs": {
+      "resolution_level": 9,
+      "fov_x_degrees": 0,
+      "batch_size": 4,
+      "force_projection": true,
+      "apply_mask": true,
+      "refine_steps": 3,
+      "moge_model": [
+        "973",
+        0
+      ],
+      "image": [
+        "1028",
+        0
+      ]
+    },
+    "class_type": "MoGeInference",
+    "_meta": {
+      "title": "Klein_Run MoGe Inference",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1047:876": {
+    "inputs": {
+      "image": [
+        "1047:877",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors",
+      "cnr_id": "comfy-core",
+      "ver": "0.19.5"
+    }
+  },
+  "1047:877": {
+    "inputs": {
+      "output": "depth",
+      "moge_geometry": [
+        "1047:875",
+        0
+      ]
+    },
+    "class_type": "MoGeRender",
+    "_meta": {
+      "title": "Render MoGe Geometry",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  }
+}
