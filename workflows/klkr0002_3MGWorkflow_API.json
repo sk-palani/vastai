@@ -1,7 +1,7 @@
 {
   "926": {
     "inputs": {
-      "vae_name": "flux2-vae.safetensors"
+      "vae_name": "FLUX2_HDR_Sharp.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
@@ -92,7 +92,7 @@
   },
   "949": {
     "inputs": {
-      "value": 0.78
+      "value": 0.75
     },
     "class_type": "AUSBOSS_NODES_Float",
     "_meta": {
@@ -345,7 +345,7 @@
   },
   "1006": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"v1dhya5\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"Light & Deep.safetensors\",\"strength\":2,\"strength_clip\":0,\"enabled\":false,\"triggers\":\"\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"srx_detail\"}]",
+      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"v1dhya5\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"dramatic_dark_lighting.safetensors\",\"strength\":0.05,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"RealSkin.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1123,30 +1123,6 @@
       "ver": "0.27.0"
     }
   },
-  "1125": {
-    "inputs": {
-      "resolution_level": 9,
-      "fov_x_degrees": 0,
-      "batch_size": 4,
-      "force_projection": true,
-      "apply_mask": true,
-      "refine_steps": 3,
-      "moge_model": [
-        "973",
-        0
-      ],
-      "image": [
-        "1124",
-        0
-      ]
-    },
-    "class_type": "MoGeInference",
-    "_meta": {
-      "title": "krea_Run MoGe Inference",
-      "cnr_id": "comfy-core",
-      "ver": "0.44.2"
-    }
-  },
   "1127": {
     "inputs": {
       "target_mode": "megapixels",
@@ -1174,75 +1150,6 @@
       "ver": "2.20.0"
     }
   },
-  "1130": {
-    "inputs": {
-      "lens_distortion": -0.01,
-      "color_temperature": 0,
-      "tint": -0.05,
-      "atmosphere_enabled": true,
-      "haze_strength": 0,
-      "lift_blacks": 0,
-      "depth_offset": 0,
-      "f_stop": "Manual",
-      "dof_intensity": 0,
-      "dof_auto_focus": false,
-      "dof_sharpness_radius": 0,
-      "dof_focus_point": 0,
-      "light_wrap_strength": 0,
-      "promist_strength": 0.01,
-      "halation_strength": 0.1,
-      "chromatic_aberration": 0,
-      "vignette_intensity": 0.16,
-      "grain_power": 0.015,
-      "monochrome_grain": true,
-      "highlight_rolloff": 0.05,
-      "image": [
-        "1137",
-        0
-      ],
-      "depth_map": [
-        "1134",
-        0
-      ]
-    },
-    "class_type": "OpticalRealism",
-    "_meta": {
-      "title": "Optical Realism & Physics",
-      "aux_id": "skatardude10/ComfyUI-Optical-Realism",
-      "ver": "8d6c1e0ab1f45851c9d7bd850f7c9023238e338d"
-    }
-  },
-  "1132": {
-    "inputs": {
-      "lut_name": "Presetpro  - Kodacrome 64.cube",
-      "strength": 0.18,
-      "log": false,
-      "image": [
-        "1124",
-        0
-      ]
-    },
-    "class_type": "ProPostApplyLUT",
-    "_meta": {
-      "title": "ProPostApplyLUT 0.23",
-      "cnr_id": "comfyui-propost",
-      "ver": "df6a6d122498f57ad7195d58e07701a501c9dcb6"
-    }
-  },
-  "1134": {
-    "inputs": {
-      "image": [
-        "1140",
-        0
-      ]
-    },
-    "class_type": "ImageInvert",
-    "_meta": {
-      "title": "Invert Image Colors",
-      "cnr_id": "comfy-core",
-      "ver": "0.19.5"
-    }
-  },
   "1135": {
     "inputs": {
       "switch": [
@@ -1254,7 +1161,7 @@
         0
       ],
       "on_true": [
-        "1130",
+        "1137",
         0
       ]
     },
@@ -1272,7 +1179,7 @@
       "invert_mask": false,
       "reference_mode": "reference",
       "image": [
-        "1145",
+        "1124",
         0
       ],
       "reference": [
@@ -1287,21 +1194,6 @@
       "ver": "2.22.0"
     }
   },
-  "1140": {
-    "inputs": {
-      "output": "depth",
-      "moge_geometry": [
-        "1125",
-        0
-      ]
-    },
-    "class_type": "MoGeRender",
-    "_meta": {
-      "title": "Render MoGe Geometry",
-      "cnr_id": "comfy-core",
-      "ver": "0.44.2"
-    }
-  },
   "1142": {
     "inputs": {},
     "class_type": "AUSBOSS_NODES_RunTimer",
@@ -1309,23 +1201,6 @@
       "title": "Run Timer 🆎",
       "cnr_id": "ausboss-nodes",
       "ver": "2.13.0"
-    }
-  },
-  "1145": {
-    "inputs": {
-      "sharpen_radius": 1,
-      "sigma": 0.33,
-      "alpha": 0.5,
-      "image": [
-        "1132",
-        0
-      ]
-    },
-    "class_type": "ImageSharpen",
-    "_meta": {
-      "title": "Sharpen Image",
-      "cnr_id": "comfy-core",
-      "ver": "0.8.0"
     }
   },
   "1150": {
@@ -1410,7 +1285,7 @@
   },
   "1183": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":0.8,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"dramatic_dark_lighting.safetensors\",\"strength\":0.05,\"strength_clip\":0,\"enabled\":false,\"triggers\":\"Make the lighting dramatic and slightly dark\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":0.8,\"strength_clip\":0,\"enabled\":false,\"triggers\":\"srx_detail\"}]",
+      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":0.8,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"dramatic_dark_lighting.safetensors\",\"strength\":0.05,\"strength_clip\":0,\"enabled\":false,\"triggers\":\"Make the lighting dramatic and slightly dark\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"RealSkin.safetensors\",\"strength\":0.5,\"strength_clip\":0,\"enabled\":false,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1431,7 +1306,7 @@
   },
   "1186": {
     "inputs": {
-      "text": "restore the image quality, remove any compression artefacts,   enrich the original with new intricate detail in all textures and surfaces createing a professional photorealistic photograph with natral lighting and skin texture of v1dhya5.\n\nImprove clarity and realistic surface detail while maintaining natural lighting and improve micro-contrast, believable reflections and the original artistic or photographic style.\n",
+      "text": "Perform a subtle, high-quality photographic restoration of the input image. Treat the original image as the authoritative reference and preserve the subject's exact identity, facial features, face shape, age, expression, eye state, gaze direction, hairstyle, pose and body proportions. Preserve the original clothing, colours, fabric patterns, jewellery, accessories, background, framing, composition and lighting without alteration.\n\nImprove image clarity and photographic fidelity by gently recovering fine details that are already present in the source. Refine natural skin texture, realistic hair strands, fabric texture and the surface details of existing objects. Reduce visible compression artefacts, mild haze and unwanted softness while retaining natural tonal transitions and fine photographic grain.\n\nKeep the original skin complexion and colour balance unchanged, with consistent natural skin tones across the face, neck and body. Preserve existing shadows, highlights, skin pigmentation and natural imperfections. Maintain realistic photographic detail without excessive sharpening, artificial smoothness or a glossy appearance.\n\nDo not beautify, reshape, retouch or reinterpret the subject. Do not change facial expression or eye openness. Do not add, remove or redesign jewellery, accessories, clothing details, hair features or background elements. Do not invent details in obscured or indistinct areas. The result must look like the same original photograph, carefully restored with cleaner detail and natural realism.",
       "clip": [
         "1183",
         1
@@ -1636,12 +1511,12 @@
   },
   "1221": {
     "inputs": {
-      "magnitude": 0.5,
+      "magnitude": 0.4,
       "contrast": 0.1,
       "normalize_strength": 0.1,
-      "preserve_original": 1,
+      "preserve_original": 0.8,
       "preserve_mode": "hybrid",
-      "edit_text_weight": 1,
+      "edit_text_weight": 1.2,
       "active_end_override": 0,
       "skip_bos": true,
       "debug": false,
@@ -1718,12 +1593,12 @@
   },
   "1232": {
     "inputs": {
-      "strength": 0.6,
+      "strength": 0.66,
       "method": "lab",
       "invert_mask": false,
       "reference_mode": "reference",
       "image": [
-        "1200:1178",
+        "1443",
         0
       ],
       "reference": [
@@ -1754,7 +1629,7 @@
   },
   "1249": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwmkjp6s1085\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkjxmo1087\",\"name\":\"Flux2-Klein-9B-consistency-V2.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkk3921090\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwrdyo6b9754\",\"name\":\"SlenderV4-KLEIN.safetensors\",\"strength\":-3,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwmkjp6s1085\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkjxmo1087\",\"name\":\"Flux2-Klein-9B-consistency-V2.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkk3921090\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwrdyo6b9754\",\"name\":\"SlenderV4-KLEIN.safetensors\",\"strength\":-3,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"\"},{\"id\":\"rmws4ohof2089\",\"name\":\"RealSkin.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1775,7 +1650,7 @@
   },
   "1250": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"Detailed Emotions and Expressions\"},{\"id\":\"rmwog0t924808\",\"name\":\"brightness_krea2_loraholic.safetensors\",\"strength\":4.5,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"inline-skin-lora, detailed skin texture\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"},{\"id\":\"rmwog0t924808\",\"name\":\"brightness_krea2_loraholic.safetensors\",\"strength\":4,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmws6m23s4287\",\"name\":\"Face_Details.safetensors\",\"strength\":2,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1828,7 +1703,7 @@
   },
   "1253": {
     "inputs": {
-      "megapixel": "1.2",
+      "megapixel": "2.0",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1982,7 +1857,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "8-bit",
+      "bit_depth": "16-bit",
       "images": [
         "1135",
         0
@@ -2015,7 +1890,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "8-bit",
+      "bit_depth": "16-bit",
       "images": [
         "1293",
         0
@@ -2048,7 +1923,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "8-bit",
+      "bit_depth": "16-bit",
       "images": [
         "1047:879",
         0
@@ -2096,7 +1971,7 @@
         "933",
         0
       ],
-      "steps": 9,
+      "steps": 8,
       "cfg": 1,
       "sampler_name": "er_sde",
       "scheduler": "simple",
@@ -2135,11 +2010,11 @@
         "933",
         0
       ],
-      "steps": 9,
+      "steps": 25,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 5,
+      "start_at_step": 21,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
@@ -2304,7 +2179,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "8-bit",
+      "bit_depth": "16-bit",
       "images": [
         "1232",
         0
@@ -2334,28 +2209,6 @@
       "title": "Replace Text",
       "cnr_id": "comfy-core",
       "ver": "0.44.2"
-    }
-  },
-  "1334": {
-    "inputs": {
-      "value": "Classic black-and-white photographic rendering with the tonal response of a well-exposed mid-2010s digital SLR monochrome photograph of v1dhya5.\n\nPreserve the original monochrome appearance exactly. Do not colorize or introduce any color tint. Maintain neutral grayscale tones, smooth tonal gradients, realistic dynamic range, natural highlight roll-off, rich shadow detail, balanced local contrast, subtle micro-contrast, and clean optical sharpness. Preserve the original photographic character, tonal relationships, and overall exposure while avoiding crushed blacks, clipped highlights, excessive contrast, or a flat, washed-out appearance.\n\nProduce a clean, natural monochrome photograph with realistic photographic texture, authentic tonal separation, smooth transitions, and accurate grayscale rendering.\n\n__INSTRUCTION_FROM_FILE__\n\nPreserve the natural luminance and tonal variation of the hair. Do not excessively darken, brighten, or alter its texture. Maintain realistic strand detail, subtle highlights, and natural tonal transitions.\n\nRemove all tattoos and mehendi while preserving the underlying skin texture, natural tonal variation, pores, shading, and surrounding details. Do not leave visible removal artifacts.\n\nIf the input image already contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing the underlying image. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, lighting direction, shadows, perspective, and background exactly. Apply only the requested corrections without introducing new objects, textures, patterns, or stylistic changes."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text (Multiline)",
-      "cnr_id": "comfy-core",
-      "ver": "0.27.1"
-    }
-  },
-  "1335": {
-    "inputs": {
-      "value": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
-    },
-    "class_type": "PrimitiveStringMultiline",
-    "_meta": {
-      "title": "Text (Multiline)",
-      "cnr_id": "comfy-core",
-      "ver": "0.27.1"
     }
   },
   "1336": {
@@ -2680,7 +2533,7 @@
   },
   "1380": {
     "inputs": {
-      "text": "restore the image quality, remove any compression artefacts, remove any haze and soft edges, enrich the original with new intricate detail in all textures and surfaces createing a professional photorealistic photograph with natral lighting and skin texture of v1dhya5.\n\nPreserve natural facial shadows, highlights, subtle pigmentation, realistic skin texture and fine pores. Avoid excessive lightening, whitening, bleaching, artificial golden tones or uniformly painted skin. The face and body should appear naturally consistent under the same lighting.\n\nNatural Rich dark-brown South Indian complexion with subtle warm-neutral undertones. Rich, naturally pigmented skin with realistic variations in tone, delicate facial pigmentation and authentic skin texture. The complexion remains consistent across the face, neck, shoulders, arms and other exposed skin, with natural variations caused by lighting and shadows. No artificial golden glow, orange cast, excessive tanning or skin whitening.\n\n**OUTFIT AND ACCESSORY DETAIL ENHANCEMENT**\n\nEnhance and restore the fine details of the existing clothing, fabric and accessories. Recover stitching, fabric weave, pleats, folds and realistic material textures. Improve the definition and craftsmanship of the original garment without changing its design.\n\nPreserve the exact original outfit, colours, patterns, transparency, draping, garment construction and accessory designs. Retain the original number, placement, shape and proportions of all jewellery. Do not add, remove, replace or redesign anything.\n\n**JEWELLERY AND ACCESSORY PRESERVATION**\n\nPreserve only the jewellery and accessories that are clearly visible in the original image. Maintain their exact number, design, shape, size, colour, material, placement and proportions.\n\nImprove clarity and definition only where genuine details already exist and are visible. Retain the original design without embellishment or reinterpretation.\n\nDo not add new jewellery, gemstones, chains, pendants, earrings, necklaces, bangles or decorative elements. Do not duplicate, replace, enlarge, redesign or invent accessories. Do not complete or infer partially obscured jewellery. If an accessory is absent or not clearly visible, leave it absent.\n\nThe original image is the authoritative reference for all jewellery and accessories..\n\n\nImprove clarity and realistic surface detail while maintaining natural lighting, believable reflections and the original artistic or photographic style.\n"
+      "text": "restore the image quality, remove any compression artefacts, remove any haze and soft edges, enrich the original with new intricate detail in all textures and surfaces createing a professional photorealistic photograph with natral lighting and skin texture of v1dhya5.\n\nPreserve natural facial shadows, highlights, subtle pigmentation, realistic skin texture and fine pores. Avoid excessive lightening, whitening, bleaching, artificial golden tones or uniformly painted skin. The face and body should appear naturally consistent under the same lighting.\n\nNatural Rich dark-brown South Indian complexion with subtle neutral undertones. Rich, naturally pigmented skin with realistic variations in tone, delicate facial pigmentation and authentic skin texture. The complexion remains consistent across the face, neck, shoulders, arms and other exposed skin, with natural variations caused by lighting and shadows. No artificial golden glow, orange cast, excessive tanning or skin whitening.\n\n**OUTFIT AND ACCESSORY DETAIL ENHANCEMENT**\n\nEnhance and restore the fine details of the existing clothing, fabric and accessories. Recover stitching, fabric weave, pleats, folds and realistic material textures. Improve the definition and craftsmanship of the original garment without changing its design.\n\nPreserve the exact original outfit, colours, patterns, transparency, draping, garment construction and accessory designs. Retain the original number, placement, shape and proportions of all jewellery. Do not add, remove, replace or redesign anything.\n\n**JEWELLERY AND ACCESSORY PRESERVATION**\n\nPreserve only the jewellery and accessories that are clearly visible in the original image. Maintain their exact number, design, shape, size, colour, material, placement and proportions.\n\nImprove clarity and definition only where genuine details already exist and are visible. Retain the original design without embellishment or reinterpretation.\n\nDo not add new jewellery, gemstones, chains, pendants, earrings, necklaces, bangles or decorative elements. Do not duplicate, replace, enlarge, redesign or invent accessories. Do not complete or infer partially obscured jewellery. If an accessory is absent or not clearly visible, leave it absent.\n\nThe original image is the authoritative reference for all jewellery and accessories..\n\n\nImprove clarity and realistic surface detail while maintaining natural lighting, believable reflections and the original artistic or photographic style.\n"
     },
     "class_type": "AUSBOSS_NODES_Text",
     "_meta": {
@@ -2701,6 +2554,45 @@
       "title": "Show Text 🆎",
       "cnr_id": "ausboss-nodes",
       "ver": "2.26.2"
+    }
+  },
+  "1441": {
+    "inputs": {
+      "brightness": 1,
+      "contrast": 1,
+      "saturation": 0,
+      "image": [
+        "1198",
+        0
+      ]
+    },
+    "class_type": "LayerColor: Brightness & Contrast",
+    "_meta": {
+      "title": "LayerColor: Brightness & Contrast",
+      "cnr_id": "comfyui_layerstyle",
+      "ver": "2.0.43"
+    }
+  },
+  "1443": {
+    "inputs": {
+      "switch": [
+        "1296",
+        0
+      ],
+      "on_false": [
+        "1441",
+        0
+      ],
+      "on_true": [
+        "1198",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Sketch / Photo Switch",
+      "cnr_id": "comfy-core",
+      "ver": "0.45.2"
     }
   },
   "1188:1175": {
@@ -2865,11 +2757,11 @@
       "ver": "0.8.2"
     }
   },
-  "1200:1178": {
+  "1050:918": {
     "inputs": {
       "lens_distortion": 0,
-      "color_temperature": 0,
-      "tint": 0,
+      "color_temperature": -0.2,
+      "tint": -0.05,
       "atmosphere_enabled": true,
       "haze_strength": 0,
       "lift_blacks": 0.09999999999999999,
@@ -2886,97 +2778,6 @@
       "vignette_intensity": 0.21,
       "grain_power": 0.021,
       "monochrome_grain": true,
-      "highlight_rolloff": 0.05,
-      "image": [
-        "1198",
-        0
-      ],
-      "depth_map": [
-        "1200:1180",
-        0
-      ]
-    },
-    "class_type": "OpticalRealism",
-    "_meta": {
-      "title": "Optical Realism & Physics",
-      "aux_id": "skatardude10/ComfyUI-Optical-Realism",
-      "ver": "8d6c1e0ab1f45851c9d7bd850f7c9023238e338d"
-    }
-  },
-  "1200:1179": {
-    "inputs": {
-      "resolution_level": 9,
-      "fov_x_degrees": 0,
-      "batch_size": 4,
-      "force_projection": true,
-      "apply_mask": true,
-      "refine_steps": 3,
-      "moge_model": [
-        "973",
-        0
-      ],
-      "image": [
-        "1198",
-        0
-      ]
-    },
-    "class_type": "MoGeInference",
-    "_meta": {
-      "title": "Klein_Run MoGe Inference",
-      "cnr_id": "comfy-core",
-      "ver": "0.44.2"
-    }
-  },
-  "1200:1180": {
-    "inputs": {
-      "image": [
-        "1200:1181",
-        0
-      ]
-    },
-    "class_type": "ImageInvert",
-    "_meta": {
-      "title": "Invert Image Colors",
-      "cnr_id": "comfy-core",
-      "ver": "0.19.5"
-    }
-  },
-  "1200:1181": {
-    "inputs": {
-      "output": "depth",
-      "moge_geometry": [
-        "1200:1179",
-        0
-      ]
-    },
-    "class_type": "MoGeRender",
-    "_meta": {
-      "title": "Render MoGe Geometry",
-      "cnr_id": "comfy-core",
-      "ver": "0.44.2"
-    }
-  },
-  "1050:918": {
-    "inputs": {
-      "lens_distortion": 0,
-      "color_temperature": -0.1,
-      "tint": -0.05,
-      "atmosphere_enabled": true,
-      "haze_strength": 0,
-      "lift_blacks": 0,
-      "depth_offset": 0,
-      "f_stop": "Manual",
-      "dof_intensity": 0,
-      "dof_auto_focus": false,
-      "dof_sharpness_radius": 0,
-      "dof_focus_point": 0,
-      "light_wrap_strength": 0,
-      "promist_strength": 0.01,
-      "halation_strength": 0.1,
-      "chromatic_aberration": 0,
-      "vignette_intensity": 0.21,
-      "grain_power": 0.021,
-      "monochrome_grain": false,
       "highlight_rolloff": 0.05,
       "image": [
         "1000",
@@ -3065,9 +2866,9 @@
       "promist_strength": 0.01,
       "halation_strength": 0.1,
       "chromatic_aberration": 0,
-      "vignette_intensity": 0.14,
-      "grain_power": 0.014,
-      "monochrome_grain": true,
+      "vignette_intensity": 0.21,
+      "grain_power": 0.021,
+      "monochrome_grain": false,
       "highlight_rolloff": 0.05,
       "image": [
         "1028",
