@@ -1,7 +1,7 @@
 {
   "926": {
     "inputs": {
-      "vae_name": "FLUX2_HDR_Sharp.safetensors"
+      "vae_name": "flux2-vae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
@@ -37,7 +37,7 @@
   },
   "933": {
     "inputs": {
-      "seed": 160110258833520
+      "seed": -1
     },
     "class_type": "AUSBOSS_NODES_Seed",
     "_meta": {
@@ -125,20 +125,6 @@
       "title": "Expression 🆎",
       "cnr_id": "ausboss-nodes",
       "ver": "2.23.0"
-    }
-  },
-  "960": {
-    "inputs": {
-      "source": [
-        "958",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text",
-      "cnr_id": "comfy-core",
-      "ver": "0.45.2"
     }
   },
   "973": {
@@ -357,24 +343,6 @@
       "ver": "0.45.2"
     }
   },
-  "1002": {
-    "inputs": {
-      "image_a": [
-        "1293",
-        0
-      ],
-      "image_b": [
-        "1047:879",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.18.1"
-    }
-  },
   "1006": {
     "inputs": {
       "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"v1dhya5\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"Light & Deep.safetensors\",\"strength\":2,\"strength_clip\":0,\"enabled\":false,\"triggers\":\"\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"srx_detail\"}]",
@@ -587,24 +555,6 @@
       "title": "Klein_VAE Decode",
       "cnr_id": "comfy-core",
       "ver": "0.45.2"
-    }
-  },
-  "1030": {
-    "inputs": {
-      "image_a": [
-        "1047:879",
-        0
-      ],
-      "image_b": [
-        "1253",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.18.1"
     }
   },
   "1031": {
@@ -1197,20 +1147,6 @@
       "ver": "0.44.2"
     }
   },
-  "1126": {
-    "inputs": {
-      "images": [
-        "1124",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image",
-      "cnr_id": "comfy-core",
-      "ver": "0.45.2"
-    }
-  },
   "1127": {
     "inputs": {
       "target_mode": "megapixels",
@@ -1373,24 +1309,6 @@
       "title": "Run Timer 🆎",
       "cnr_id": "ausboss-nodes",
       "ver": "2.13.0"
-    }
-  },
-  "1144": {
-    "inputs": {
-      "image_a": [
-        "1135",
-        0
-      ],
-      "image_b": [
-        "1253",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.18.1"
     }
   },
   "1145": {
@@ -1716,32 +1634,14 @@
       "ver": "0.45.2"
     }
   },
-  "1204": {
-    "inputs": {
-      "image_a": [
-        "1232",
-        0
-      ],
-      "image_b": [
-        "1253",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.18.1"
-    }
-  },
   "1221": {
     "inputs": {
-      "magnitude": 0.4,
+      "magnitude": 0.5,
       "contrast": 0.1,
       "normalize_strength": 0.1,
       "preserve_original": 1,
       "preserve_mode": "hybrid",
-      "edit_text_weight": 1.2,
+      "edit_text_weight": 1,
       "active_end_override": 0,
       "skip_bos": true,
       "debug": false,
@@ -1818,7 +1718,7 @@
   },
   "1232": {
     "inputs": {
-      "strength": 0.2,
+      "strength": 0.6,
       "method": "lab",
       "invert_mask": false,
       "reference_mode": "reference",
@@ -1836,38 +1736,6 @@
       "title": "Color Match 🆎",
       "cnr_id": "ausboss-nodes",
       "ver": "9cc91ffba8e76b3e8a4505bea6c7c72d7a8856a2"
-    }
-  },
-  "1240": {
-    "inputs": {
-      "images": [
-        "1253",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image",
-      "cnr_id": "comfy-core",
-      "ver": "0.45.3"
-    }
-  },
-  "1242": {
-    "inputs": {
-      "image_a": [
-        "1232",
-        0
-      ],
-      "image_b": [
-        "1135",
-        0
-      ]
-    },
-    "class_type": "AUSBOSS_NODES_Compare",
-    "_meta": {
-      "title": "Image Compare A/B 🆎",
-      "cnr_id": "ausboss-nodes",
-      "ver": "2.18.1"
     }
   },
   "1245": {
@@ -1949,7 +1817,7 @@
       "ordering_mode": "random",
       "include_subdirectories": "yes",
       "index": 0,
-      "seed": -1037887881337660
+      "seed": -1
     },
     "class_type": "Input_Image",
     "_meta": {
@@ -1960,7 +1828,7 @@
   },
   "1253": {
     "inputs": {
-      "megapixel": "2.0",
+      "megapixel": "1.2",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -2114,7 +1982,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1135",
         0
@@ -2147,7 +2015,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1293",
         0
@@ -2180,7 +2048,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1047:879",
         0
@@ -2212,7 +2080,7 @@
   },
   "1284": {
     "inputs": {
-      "unet_name": "CyberRealistic_Krea2_V4.0_fp8_e4m3.safetensors",
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -2267,11 +2135,11 @@
         "933",
         0
       ],
-      "steps": 19,
+      "steps": 9,
       "cfg": 1,
-      "sampler_name": "dpmpp_sde",
+      "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 15,
+      "start_at_step": 5,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
@@ -2436,7 +2304,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1232",
         0
@@ -2523,20 +2391,6 @@
       "ver": "2.20.4"
     }
   },
-  "1343": {
-    "inputs": {
-      "images": [
-        "1354",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image",
-      "cnr_id": "comfy-core",
-      "ver": "0.45.0"
-    }
-  },
   "1354": {
     "inputs": {
       "samples": [
@@ -2551,20 +2405,6 @@
     "class_type": "VAEDecode",
     "_meta": {
       "title": "krea_VAE Decode",
-      "cnr_id": "comfy-core",
-      "ver": "0.45.0"
-    }
-  },
-  "1364": {
-    "inputs": {
-      "images": [
-        "1375",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image",
       "cnr_id": "comfy-core",
       "ver": "0.45.0"
     }
@@ -2662,34 +2502,6 @@
       "title": "Rotate Image",
       "cnr_id": "comfy-core",
       "ver": "0.45.0"
-    }
-  },
-  "1370": {
-    "inputs": {
-      "source": [
-        "1367",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text",
-      "cnr_id": "comfy-core",
-      "ver": "0.3.67"
-    }
-  },
-  "1371": {
-    "inputs": {
-      "source": [
-        "1366",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview as Text",
-      "cnr_id": "comfy-core",
-      "ver": "0.3.67"
     }
   },
   "1372": {
@@ -3060,7 +2872,7 @@
       "tint": 0,
       "atmosphere_enabled": true,
       "haze_strength": 0,
-      "lift_blacks": 0,
+      "lift_blacks": 0.09999999999999999,
       "depth_offset": 0,
       "f_stop": "Manual",
       "dof_intensity": 0,
@@ -3071,8 +2883,8 @@
       "promist_strength": 0.01,
       "halation_strength": 0.1,
       "chromatic_aberration": 0,
-      "vignette_intensity": 0.14,
-      "grain_power": 0.014,
+      "vignette_intensity": 0.21,
+      "grain_power": 0.021,
       "monochrome_grain": true,
       "highlight_rolloff": 0.05,
       "image": [
@@ -3151,7 +2963,7 @@
       "tint": -0.05,
       "atmosphere_enabled": true,
       "haze_strength": 0,
-      "lift_blacks": 0.09999999999999999,
+      "lift_blacks": 0,
       "depth_offset": 0,
       "f_stop": "Manual",
       "dof_intensity": 0,
@@ -3164,7 +2976,7 @@
       "chromatic_aberration": 0,
       "vignette_intensity": 0.21,
       "grain_power": 0.021,
-      "monochrome_grain": true,
+      "monochrome_grain": false,
       "highlight_rolloff": 0.05,
       "image": [
         "1000",
@@ -3253,9 +3065,9 @@
       "promist_strength": 0.01,
       "halation_strength": 0.1,
       "chromatic_aberration": 0,
-      "vignette_intensity": 0.21,
-      "grain_power": 0.021,
-      "monochrome_grain": false,
+      "vignette_intensity": 0.14,
+      "grain_power": 0.014,
+      "monochrome_grain": true,
       "highlight_rolloff": 0.05,
       "image": [
         "1028",
