@@ -2562,7 +2562,7 @@
       "contrast": 1,
       "saturation": 0,
       "image": [
-        "1198",
+        "1200:1178",
         0
       ]
     },
@@ -2584,7 +2584,7 @@
         0
       ],
       "on_true": [
-        "1198",
+        "1200:1178",
         0
       ]
     },
@@ -2755,6 +2755,97 @@
       "title": "Set Reference Latent",
       "cnr_id": "comfy-core",
       "ver": "0.8.2"
+    }
+  },
+  "1200:1178": {
+    "inputs": {
+      "lens_distortion": 0,
+      "color_temperature": 0,
+      "tint": 0,
+      "atmosphere_enabled": true,
+      "haze_strength": 0,
+      "lift_blacks": 0,
+      "depth_offset": 0,
+      "f_stop": "Manual",
+      "dof_intensity": 0,
+      "dof_auto_focus": false,
+      "dof_sharpness_radius": 0,
+      "dof_focus_point": 0,
+      "light_wrap_strength": 0,
+      "promist_strength": 0.01,
+      "halation_strength": 0.1,
+      "chromatic_aberration": 0,
+      "vignette_intensity": 0.14,
+      "grain_power": 0.014,
+      "monochrome_grain": true,
+      "highlight_rolloff": 0.05,
+      "image": [
+        "1198",
+        0
+      ],
+      "depth_map": [
+        "1200:1180",
+        0
+      ]
+    },
+    "class_type": "OpticalRealism",
+    "_meta": {
+      "title": "Optical Realism & Physics",
+      "aux_id": "skatardude10/ComfyUI-Optical-Realism",
+      "ver": "8d6c1e0ab1f45851c9d7bd850f7c9023238e338d"
+    }
+  },
+  "1200:1179": {
+    "inputs": {
+      "resolution_level": 9,
+      "fov_x_degrees": 0,
+      "batch_size": 4,
+      "force_projection": true,
+      "apply_mask": true,
+      "refine_steps": 3,
+      "moge_model": [
+        "973",
+        0
+      ],
+      "image": [
+        "1198",
+        0
+      ]
+    },
+    "class_type": "MoGeInference",
+    "_meta": {
+      "title": "Klein_Run MoGe Inference",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
+    }
+  },
+  "1200:1180": {
+    "inputs": {
+      "image": [
+        "1200:1181",
+        0
+      ]
+    },
+    "class_type": "ImageInvert",
+    "_meta": {
+      "title": "Invert Image Colors",
+      "cnr_id": "comfy-core",
+      "ver": "0.19.5"
+    }
+  },
+  "1200:1181": {
+    "inputs": {
+      "output": "depth",
+      "moge_geometry": [
+        "1200:1179",
+        0
+      ]
+    },
+    "class_type": "MoGeRender",
+    "_meta": {
+      "title": "Render MoGe Geometry",
+      "cnr_id": "comfy-core",
+      "ver": "0.44.2"
     }
   },
   "1050:918": {
