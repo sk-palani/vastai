@@ -12,6 +12,17 @@ find "${WORKSPACE}ComfyUI/Inputs/Next/Park" -type f \( \
   -iname "*.webp" \
 \) -exec mv -vn -t "${WORKSPACE}ComfyUI/Inputs/Downloaded/Parked/" {} +
 
+find "${WORKSPACE}ComfyUI/Inputs" -type f -iname "*.heic" -exec sh -c '
+  for f; do
+    if file "$f" | grep -q "JPEG image data"; then
+      mv -n "$f" "${f%.*}.jpg"
+    else
+      heif-convert -q 95 "$f" "${f%.*}.jpg"
+    fi
+  done
+' _ {} +
+
+
 # --- Skip execution if .skip file exists ---
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 if [ -f "$SCRIPT_DIR/.skip" ]; then
