@@ -39,13 +39,8 @@ UPDATED_FILE="$SCRIPT_DIR/Workflow_API_updated.json"
 LOG_TS=$(date '+%Y-%m-%d %H:%M:%S')
 
 # -- Download latest workflow file
-#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/0011_3MWorkflow_API.json"
-#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/gm0009_3MGWorkflow_API.json"
 DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/klkr0001_3MGWorkflow_API.json"
-#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/0003_3MWorkflow_API.json"
-# DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/006_KRWorkflow_API.json"
-#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/004_KFWorkflow_API.json"
-#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/35_FULL_Workflow_API.json"
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/sk-palani/vastai/refs/heads/main/workflows/klkr0002_3MGWorkflow_API.json"
 
 wget -O "${WORKFLOW_FILE}" "${DEFAULT_WORKFLOW}"
 echo "Hash : " "$(md5sum ${WORKFLOW_FILE})"
