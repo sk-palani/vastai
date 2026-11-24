@@ -345,7 +345,7 @@
   },
   "1006": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"dramatic_dark_lighting.safetensors\",\"strength\":0.05,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Make the lighting dramatic and slightly dark\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwf73r08133\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwf742me134\",\"name\":\"Flux2-Klein-Image-RestoreV1.safetensors\",\"strength\":0.7,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"Restore the quality in this image, add back realistic fine detail\"},{\"id\":\"rmwf8a5f0154\",\"name\":\"dramatic_dark_lighting.safetensors\",\"strength\":0.05,\"strength_clip\":0,\"enabled\":true,\"triggers\":\"A photo with dramatic dark lighting featuring a\"},{\"id\":\"rmwg4bp6l32\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -559,7 +559,7 @@
   },
   "1031": {
     "inputs": {
-      "text": " \nChange  hair to natural deep black while retaining the existing highlights, hairstyle, individual strands and hair texture.\nAdd some freckles in the face.\n\nRecreate the subject to match v1dhyas body proportions\n\nPreserve the subject's exact original facial expression . The input image's expression and eye state take precedence over the character's learned appearance.\n\n\n\nRemove people other than the main subject. Reconstruct only the areas they occupied, continuing the surrounding environment naturally.\n\n{{TRIGGER_WORDS}}\n\n\nRemove unwanted letterboxing, black or white borders, empty margins and screenshot interface elements, including Android status bars, navigation bars, icons and system overlays. Naturally extend the existing background into these areas, matching surrounding colours, textures, lighting and visual details.\n\n\nRemove visible text overlays, lettering and typography from the foreground. Reconstruct only the affected areas while preserving nearby scenery and objects.\n\n \nOnly perform the explicitly requested modifications. Everything else, including the original background and surrounding scene, must remain visually faithful to the input image."
+      "text": "Canon EOS 5D / 5D Mark II color science with the tonal response of a well-exposed mid-2010s digital SLR photograph of v1dhya5.\n\nTreat the input image as already correctly photographed. Preserve the existing lighting, illumination, contrast, shadows, highlights, depth, dimensionality, and three-dimensional appearance exactly.\n\nPreserve the existing photographic color grading, overall exposure, tonal range, natural color relationships, local contrast, micro-contrast, and perceived optical sharpness. Correct only excessive warm, red, or magenta color casts while maintaining realistic photographic white balance, natural melanin-rich skin tones, and natural color separation.\n\nDo not flatten, equalize, normalize, soften, or redistribute the existing lighting. Preserve the original direction, intensity, falloff, and shape of highlights and shadows. Maintain natural light-to-shadow transitions, facial modelling, subject separation, ambient depth, and background depth. Do not lift shadows unnecessarily or reduce highlight contrast.\n\n__INSTRUCTION_FROM_FILE__\n\nIf the hair appears excessively warm or reddish, change it toward a natural dark tone while preserving the exact hairstyle, shape, volume, strand direction, texture, tonal variation, highlights, and reflected light. Do not make it flat, uniformly black, or unnaturally dark.\n\nRemove all tattoos and mehendi while preserving the underlying skin tone, shading, texture, pores, and surrounding details. Do not alter surrounding skin or lighting.\n\nIf the input image contains visible logos, watermarks, timestamps, signatures, or text overlays, remove them cleanly while reconstructing only the underlying area. Never introduce new text, logos, symbols, watermarks, signatures, captions, labels, or graphic overlays.\n\nPreserve the subject's identity, facial features, clothing, accessories, composition, perspective, lighting, shadows, highlights, and background exactly. Apply only the requested corrections.\n\nDo not introduce new objects, textures, patterns, lighting, shadows, highlights, or stylistic changes."
     },
     "class_type": "AUSBOSS_NODES_Text",
     "_meta": {
@@ -1629,7 +1629,7 @@
   },
   "1249": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwmkjp6s1085\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkjxmo1087\",\"name\":\"Flux2-Klein-9B-consistency-V2.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkk3921090\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwmkjp6s1085\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkjxmo1087\",\"name\":\"Flux2-Klein-9B-consistency-V2.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkk3921090\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwrdyo6b9754\",\"name\":\"SlenderV4-KLEIN.safetensors\",\"strength\":-3,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"\"},{\"id\":\"rmws4ohof2089\",\"name\":\"RealSkin.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1650,7 +1650,7 @@
   },
   "1250": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"inline-skin-lora, detailed skin texture\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"},{\"id\":\"rmwog0t924808\",\"name\":\"brightness_krea2_loraholic.safetensors\",\"strength\":4,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"inline-skin-lora, detailed skin texture\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"},{\"id\":\"rmwog0t924808\",\"name\":\"brightness_krea2_loraholic.safetensors\",\"strength\":4,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmws6m23s4287\",\"name\":\"Face_Details.safetensors\",\"strength\":2,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -2759,8 +2759,8 @@
   },
   "1200:1178": {
     "inputs": {
-      "lens_distortion": -0.01,
-      "color_temperature": -0.1,
+      "lens_distortion": -0.001,
+      "color_temperature": -0.01,
       "tint": -0.05,
       "atmosphere_enabled": true,
       "haze_strength": 0,
@@ -2775,8 +2775,8 @@
       "promist_strength": 0.01,
       "halation_strength": 0.1,
       "chromatic_aberration": 0,
-      "vignette_intensity": 0.21,
-      "grain_power": 0.021,
+      "vignette_intensity": 0.21000000000000008,
+      "grain_power": 0.021000000000000005,
       "monochrome_grain": true,
       "highlight_rolloff": 0.05,
       "image": [
