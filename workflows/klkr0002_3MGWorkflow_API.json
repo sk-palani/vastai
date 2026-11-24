@@ -1511,12 +1511,12 @@
   },
   "1221": {
     "inputs": {
-      "magnitude": 0.4,
+      "magnitude": 0.5,
       "contrast": 0.1,
       "normalize_strength": 0.1,
-      "preserve_original": 0.8,
+      "preserve_original": 1,
       "preserve_mode": "hybrid",
-      "edit_text_weight": 1.2,
+      "edit_text_weight": 1,
       "active_end_override": 0,
       "skip_bos": true,
       "debug": false,
@@ -1593,7 +1593,7 @@
   },
   "1232": {
     "inputs": {
-      "strength": 0.66,
+      "strength": 0.6,
       "method": "lab",
       "invert_mask": false,
       "reference_mode": "reference",
@@ -1629,7 +1629,7 @@
   },
   "1249": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwmkjp6s1085\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkjxmo1087\",\"name\":\"Flux2-Klein-9B-consistency-V2.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkk3921090\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwrdyo6b9754\",\"name\":\"SlenderV4-KLEIN.safetensors\",\"strength\":-3,\"strength_clip\":1,\"enabled\":false,\"triggers\":\"\"},{\"id\":\"rmws4ohof2089\",\"name\":\"RealSkin.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwmkjp6s1085\",\"name\":\"vidhyas_lora_v4_klein.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkjxmo1087\",\"name\":\"Flux2-Klein-9B-consistency-V2.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwmkk3921090\",\"name\":\"Flux2 Klein 9B Realistic Detail LoRA.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1650,7 +1650,7 @@
   },
   "1250": {
     "inputs": {
-      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"inline-skin-lora, detailed skin texture\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"},{\"id\":\"rmwog0t924808\",\"name\":\"brightness_krea2_loraholic.safetensors\",\"strength\":4,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmws6m23s4287\",\"name\":\"Face_Details.safetensors\",\"strength\":2,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
+      "loras": "[{\"id\":\"rmwod2jmq537\",\"name\":\"vidhyas_lora_v1_krea.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"},{\"id\":\"rmwod2p0n539\",\"name\":\"inline-skin-lora-krea-2-raw.safetensors\",\"strength\":0.52,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"inline-skin-lora, detailed skin texture\"},{\"id\":\"rmwofu7bu4285\",\"name\":\"Emotions V1.safetensors\",\"strength\":1,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"Detailed Emotions and Expressions\"},{\"id\":\"rmwog0t924808\",\"name\":\"brightness_krea2_loraholic.safetensors\",\"strength\":4,\"strength_clip\":1,\"enabled\":true,\"triggers\":\"\"}]",
       "trigger_separator": ", ",
       "on_missing": "error",
       "model": [
@@ -1703,7 +1703,7 @@
   },
   "1253": {
     "inputs": {
-      "megapixel": "2.0",
+      "megapixel": "1.2",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -1857,7 +1857,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1135",
         0
@@ -1890,7 +1890,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1293",
         0
@@ -1923,7 +1923,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1047:879",
         0
@@ -1971,7 +1971,7 @@
         "933",
         0
       ],
-      "steps": 8,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "er_sde",
       "scheduler": "simple",
@@ -2010,11 +2010,11 @@
         "933",
         0
       ],
-      "steps": 25,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 21,
+      "start_at_step": 5,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
@@ -2179,7 +2179,7 @@
       "show_history_by_prefix": false,
       "embed_workflow": true,
       "show_previews": false,
-      "bit_depth": "16-bit",
+      "bit_depth": "8-bit",
       "images": [
         "1232",
         0
@@ -2759,12 +2759,12 @@
   },
   "1200:1178": {
     "inputs": {
-      "lens_distortion": 0,
-      "color_temperature": 0,
-      "tint": 0,
+      "lens_distortion": -0.01,
+      "color_temperature": -0.1,
+      "tint": -0.05,
       "atmosphere_enabled": true,
       "haze_strength": 0,
-      "lift_blacks": 0,
+      "lift_blacks": 0.09999999999999999,
       "depth_offset": 0,
       "f_stop": "Manual",
       "dof_intensity": 0,
@@ -2775,8 +2775,8 @@
       "promist_strength": 0.01,
       "halation_strength": 0.1,
       "chromatic_aberration": 0,
-      "vignette_intensity": 0.14,
-      "grain_power": 0.014,
+      "vignette_intensity": 0.21,
+      "grain_power": 0.021,
       "monochrome_grain": true,
       "highlight_rolloff": 0.05,
       "image": [
@@ -2868,7 +2868,7 @@
       "chromatic_aberration": 0,
       "vignette_intensity": 0.21,
       "grain_power": 0.021,
-      "monochrome_grain": true,
+      "monochrome_grain": false,
       "highlight_rolloff": 0.05,
       "image": [
         "1000",
