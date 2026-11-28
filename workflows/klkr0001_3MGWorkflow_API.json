@@ -2008,7 +2008,7 @@
       "show_history": false,
       "show_history_by_prefix": false,
       "embed_workflow": true,
-      "show_previews": false,
+      "gallery": "off",
       "bit_depth": "8-bit",
       "images": [
         "1209",
@@ -2041,7 +2041,7 @@
       "show_history": false,
       "show_history_by_prefix": false,
       "embed_workflow": true,
-      "show_previews": false,
+      "gallery": "off",
       "bit_depth": "8-bit",
       "images": [
         "1293",
@@ -2074,7 +2074,7 @@
       "show_history": false,
       "show_history_by_prefix": false,
       "embed_workflow": true,
-      "show_previews": false,
+      "gallery": "off",
       "bit_depth": "8-bit",
       "images": [
         "1047:879",
@@ -2343,7 +2343,7 @@
       "show_history": false,
       "show_history_by_prefix": false,
       "embed_workflow": true,
-      "show_previews": false,
+      "gallery": "off",
       "bit_depth": "8-bit",
       "images": [
         "1232",
