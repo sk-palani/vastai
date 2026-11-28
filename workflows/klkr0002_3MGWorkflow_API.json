@@ -1703,7 +1703,7 @@
   },
   "1253": {
     "inputs": {
-      "megapixel": "1.2",
+      "megapixel": "1.8",
       "divisible_by": "8",
       "mode": "pad",
       "delta_percent": 0,
@@ -2764,6 +2764,20 @@
       "title": "Concatenate Text",
       "cnr_id": "comfy-core",
       "ver": "0.46.3"
+    }
+  },
+  "1468": {
+    "inputs": {
+      "images": [
+        "1245",
+        0
+      ]
+    },
+    "class_type": "Image to Seed",
+    "_meta": {
+      "title": "Image to Seed",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.14.10"
     }
   },
   "1188:1175": {
