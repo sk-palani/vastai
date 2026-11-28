@@ -92,7 +92,7 @@
   },
   "949": {
     "inputs": {
-      "value": 0.75
+      "value": 0.78
     },
     "class_type": "AUSBOSS_NODES_Float",
     "_meta": {
@@ -1205,7 +1205,7 @@
   },
   "1150": {
     "inputs": {
-      "expression": "a*0.3",
+      "expression": "a*0.2",
       "a": [
         "949",
         0
@@ -1242,7 +1242,7 @@
   "1166": {
     "inputs": {
       "any_01": [
-        "1293",
+        "1450",
         0
       ],
       "any_02": [
@@ -1721,7 +1721,7 @@
   },
   "1254": {
     "inputs": {
-      "OutputDirectory": "processing",
+      "OutputDirectory": "input/processing",
       "OverwriteFile": true,
       "FilePaths": [
         "1252",
@@ -1892,7 +1892,7 @@
       "gallery": "interface gallery",
       "bit_depth": "8-bit",
       "images": [
-        "1293",
+        "1450",
         0
       ]
     },
@@ -1971,7 +1971,7 @@
         "933",
         0
       ],
-      "steps": 10,
+      "steps": 9,
       "cfg": 1,
       "sampler_name": "er_sde",
       "scheduler": "beta57",
@@ -2010,11 +2010,11 @@
         "933",
         0
       ],
-      "steps": 9,
+      "steps": 12,
       "cfg": 1,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "simple",
-      "start_at_step": 5,
+      "start_at_step": 8,
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
@@ -2625,6 +2625,145 @@
       "title": "PHOTO PRO | original enabled finish",
       "aux_id": "Elevenheights/ComfyUI-FameGridPhotoPro",
       "ver": "1a2273ba4cb35c4fdf9f7e88f9e0748d97b5a675"
+    }
+  },
+  "1450": {
+    "inputs": {
+      "enabled": true,
+      "source_mode": "incoming image",
+      "input_file": "",
+      "settings_json": "{\"adjustments\":{\"exposure\":0,\"contrast\":0,\"highlights\":-20,\"shadows\":8,\"whites\":0,\"blacks\":10,\"temperature\":10,\"tint\":0,\"vibrance\":0,\"saturation\":-6,\"texture\":4,\"clarity\":0,\"dehaze\":0},\"crop\":{\"x\":0,\"y\":0,\"width\":1,\"height\":1},\"rotation\":0,\"resize\":null,\"format\":\"png\",\"quality\":95,\"bitDepth\":8,\"sharpening\":{\"enabled\":false,\"method\":\"usm\",\"amount\":40,\"radius\":0.75,\"threshold\":20,\"haloControl\":true,\"iterations\":20,\"damping\":20},\"grain\":{\"enabled\":true,\"strength\":12,\"iso\":400,\"gamma\":1},\"colorMixer\":{\"enabled\":false,\"channels\":{\"red\":{\"hue\":0,\"saturation\":0,\"lightness\":0},\"orange\":{\"hue\":0,\"saturation\":0,\"lightness\":0},\"yellow\":{\"hue\":0,\"saturation\":0,\"lightness\":0},\"green\":{\"hue\":0,\"saturation\":0,\"lightness\":0},\"aqua\":{\"hue\":0,\"saturation\":0,\"lightness\":0},\"blue\":{\"hue\":0,\"saturation\":0,\"lightness\":0},\"purple\":{\"hue\":0,\"saturation\":0,\"lightness\":0},\"magenta\":{\"hue\":0,\"saturation\":0,\"lightness\":0}}},\"skinTone\":{\"enabled\":false,\"hue\":0,\"saturation\":0,\"lightness\":0,\"center\":30,\"width\":30,\"feather\":15,\"minSaturation\":0.08,\"minLightness\":0.02,\"maxLightness\":0.98,\"region\":{\"x\":0,\"y\":0,\"width\":1,\"height\":1}}}",
+      "image": [
+        "1293",
+        0
+      ]
+    },
+    "class_type": "FameGridPhotoPro",
+    "_meta": {
+      "title": "PHOTO PRO | original enabled finish",
+      "aux_id": "Elevenheights/ComfyUI-FameGridPhotoPro",
+      "ver": "1a2273ba4cb35c4fdf9f7e88f9e0748d97b5a675"
+    }
+  },
+  "1452": {
+    "inputs": {
+      "zero_is_empty": false,
+      "value": [
+        "1375",
+        0
+      ]
+    },
+    "class_type": "WASAnyIsEmpty",
+    "_meta": {
+      "title": "Any Is Empty",
+      "cnr_id": "was-node-suite-comfyui",
+      "ver": "3.14.10"
+    }
+  },
+  "1454": {
+    "inputs": {
+      "value": [
+        "1452",
+        0
+      ]
+    },
+    "class_type": "ComfyNotNode",
+    "_meta": {
+      "title": "Not",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.3"
+    }
+  },
+  "1455": {
+    "inputs": {},
+    "class_type": "ComfyNotNode",
+    "_meta": {
+      "title": "Not",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.3"
+    }
+  },
+  "1456": {
+    "inputs": {
+      "OutputDirectory": [
+        "1462",
+        0
+      ],
+      "OverwriteFile": [
+        "1454",
+        0
+      ],
+      "FilePaths": [
+        "1461",
+        0
+      ]
+    },
+    "class_type": "JDCN_FileMover",
+    "_meta": {
+      "title": "JDCN_FileMover",
+      "cnr_id": "comfyui-jdcn",
+      "aux_id": "daxcay/ComfyUI-JDCN",
+      "ver": "1.0.2"
+    }
+  },
+  "1458": {
+    "inputs": {
+      "text": [
+        "1454",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.29.0"
+    }
+  },
+  "1460": {
+    "inputs": {
+      "text": [
+        "1461",
+        0
+      ]
+    },
+    "class_type": "AUSBOSS_NODES_ShowText",
+    "_meta": {
+      "title": "Show Text 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.29.0"
+    }
+  },
+  "1461": {
+    "inputs": {
+      "string_a": "input/processing/",
+      "string_b": [
+        "1252",
+        1
+      ],
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.3"
+    }
+  },
+  "1462": {
+    "inputs": {
+      "string_a": "Inputs/Processed/",
+      "string_b": [
+        "1267",
+        0
+      ],
+      "delimiter": ""
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "Concatenate Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.3"
     }
   },
   "1188:1175": {
