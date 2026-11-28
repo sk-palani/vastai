@@ -1955,7 +1955,7 @@
   },
   "1284": {
     "inputs": {
-      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "unet_name": "krea2_photographic_turbo_fp8_scaled.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -1980,7 +1980,7 @@
         0
       ],
       "model": [
-        "1250",
+        "1471",
         0
       ],
       "positive": [
@@ -2018,7 +2018,7 @@
       "end_at_step": 999,
       "return_with_leftover_noise": "enable",
       "model": [
-        "1250",
+        "1471",
         0
       ],
       "positive": [
@@ -2778,6 +2778,33 @@
       "title": "Image to Seed",
       "cnr_id": "was-node-suite-comfyui",
       "ver": "3.14.10"
+    }
+  },
+  "1470": {
+    "inputs": {
+      "text": "Krea 2 Step"
+    },
+    "class_type": "AUSBOSS_NODES_CalloutTile",
+    "_meta": {
+      "title": "Callout Tile 🆎",
+      "cnr_id": "ausboss-nodes",
+      "ver": "2.29.0"
+    }
+  },
+  "1471": {
+    "inputs": {
+      "sage_attention": "disabled",
+      "allow_compile": false,
+      "model": [
+        "1250",
+        0
+      ]
+    },
+    "class_type": "PathchSageAttentionKJ",
+    "_meta": {
+      "title": "Patch Sage Attention KJ",
+      "cnr_id": "comfyui-kjnodes",
+      "ver": "a7d0c7bb36652252554907589eb60826143c5848"
     }
   },
   "1188:1175": {
